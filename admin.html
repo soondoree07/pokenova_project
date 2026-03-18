@@ -4,10 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>관리자 패널 · 오늘의포켓몬은뭘까용?</title>
-
-  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 
   <style>
@@ -36,18 +32,100 @@
       flex-direction: column;
     }
 
-    /* ══ 풀스크린 상태 화면 ══ */
-    .state-screen {
+    /* ══ 로그인 화면 ══ */
+    #screen-login {
       position: fixed; inset: 0;
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
-      gap: 16px; background: var(--bg); z-index: 100;
+      background: var(--bg); z-index: 100;
+      gap: 0;
     }
-    .state-icon  { font-size: 3rem; }
-    .state-title { font-size: 1.4rem; font-weight: 700; color: var(--yellow); }
-    .state-sub   { font-size: 0.9rem; color: var(--muted); }
-    .spin { animation: spin 1s linear infinite; }
-    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .login-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 48px 40px 40px;
+      width: 100%;
+      max-width: 380px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .login-logo {
+      text-align: center;
+      font-size: 2.4rem;
+      margin-bottom: 4px;
+    }
+    .login-title {
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--yellow);
+      letter-spacing: 1px;
+    }
+    .login-sub {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: -8px;
+    }
+
+    .login-label {
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .login-input {
+      width: 100%;
+      padding: 12px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: var(--text);
+      font-size: 1rem;
+      outline: none;
+      transition: border-color .18s;
+      letter-spacing: 2px;
+    }
+    .login-input:focus { border-color: var(--yellow); }
+
+    .login-btn {
+      width: 100%;
+      padding: 13px;
+      border-radius: 12px;
+      border: none;
+      background: var(--yellow);
+      color: #0a0a16;
+      font-size: 0.95rem;
+      font-weight: 900;
+      cursor: pointer;
+      transition: opacity .18s;
+    }
+    .login-btn:hover { opacity: .88; }
+
+    .login-error {
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--red);
+      min-height: 18px;
+      margin-top: -8px;
+    }
+
+    .login-shake {
+      animation: shake .35s ease;
+    }
+    @keyframes shake {
+      0%,100% { transform: translateX(0); }
+      20%      { transform: translateX(-8px); }
+      40%      { transform: translateX(8px); }
+      60%      { transform: translateX(-5px); }
+      80%      { transform: translateX(5px); }
+    }
 
     /* ══ 상단 네비 바 ══ */
     .topbar {
@@ -84,13 +162,6 @@
       text-decoration: none; transition: all .18s;
     }
     .topbar-link:hover { border-color: var(--blue); color: var(--blue); }
-    .user-pill {
-      display: flex; align-items: center; gap: 8px;
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 20px; padding: 4px 12px 4px 4px;
-    }
-    .user-pill img { width: 26px; height: 26px; border-radius: 50%; object-fit: cover; }
-    .user-pill span { font-size: 0.82rem; color: #aaa; max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .btn-logout {
       padding: 5px 12px; border-radius: 8px; border: 1px solid var(--border);
       background: transparent; color: var(--muted); font-size: 0.78rem; cursor: pointer;
@@ -280,44 +351,38 @@
 
     .empty-row td { text-align: center; padding: 40px; color: var(--muted); }
 
-    /* ══ 기타 ══ */
     .divider { height: 1px; background: var(--border); }
-    .badge-new {
-      display: inline-block;
-      background: rgba(76,175,80,.15); color: var(--green);
-      border: 1px solid var(--green); border-radius: 20px;
-      font-size: 0.62rem; font-weight: 700; padding: 1px 7px;
-      margin-left: 6px; vertical-align: middle;
+
+    /* ══ 데이터 없음 안내 ══ */
+    .no-data-notice {
+      background: rgba(245,197,24,.05);
+      border: 1px dashed rgba(245,197,24,.2);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.83rem;
+      line-height: 1.7;
     }
+    .no-data-notice strong { color: var(--yellow); }
   </style>
 </head>
 <body>
 
-<!-- ══ 로딩 화면 ══ -->
-<div id="screen-loading" class="state-screen">
-  <div class="state-icon spin">⚙️</div>
-  <div class="state-title">관리자 패널 로딩 중</div>
-  <div class="state-sub">Firebase 연결 중...</div>
-</div>
-
-<!-- ══ 접근 거부 화면 ══ -->
-<div id="screen-denied" class="state-screen" style="display:none">
-  <div class="state-icon">🚫</div>
-  <div class="state-title">접근 권한이 없습니다</div>
-  <div class="state-sub">관리자 계정으로 로그인해주세요</div>
-  <button onclick="doSignIn()" style="margin-top:12px;padding:10px 24px;border-radius:12px;border:none;background:#f5c518;color:#0a0a16;font-weight:700;cursor:pointer;font-size:0.9rem">
-    구글로 로그인
-  </button>
-  <a href="pokemon-quiz.html" style="margin-top:8px;color:#555;font-size:0.8rem">← 메인 사이트로</a>
-</div>
-
-<!-- ══ Firebase 미설정 화면 ══ -->
-<div id="screen-noconfig" class="state-screen" style="display:none">
-  <div class="state-icon">⚠️</div>
-  <div class="state-title">Firebase 설정 필요</div>
-  <div class="state-sub" style="text-align:center;max-width:380px;line-height:1.7">
-    HTML 파일 하단의 <code style="background:#1e1e40;padding:2px 6px;border-radius:4px">FIREBASE_CONFIG</code>와
-    <code style="background:#1e1e40;padding:2px 6px;border-radius:4px">ADMIN_EMAILS</code>를 채워주세요.
+<!-- ══ 로그인 화면 ══ -->
+<div id="screen-login">
+  <div class="login-box" id="login-box">
+    <div class="login-logo">🛡️</div>
+    <div class="login-title">관리자 패널</div>
+    <div class="login-sub">오늘의포켓몬은뭘까용?</div>
+    <div>
+      <div class="login-label">비밀번호</div>
+      <input type="password" class="login-input" id="pw-input"
+        placeholder="••••••••"
+        onkeydown="if(event.key==='Enter') doLogin()">
+    </div>
+    <div class="login-error" id="login-error"></div>
+    <button class="login-btn" onclick="doLogin()">입장</button>
   </div>
 </div>
 
@@ -329,14 +394,8 @@
     <span class="topbar-logo">오늘의포켓몬은뭘까용?</span>
     <span class="topbar-badge">ADMIN</span>
     <div class="topbar-spacer"></div>
-    <span class="last-updated" id="last-updated"></span>
-    <button class="topbar-refresh" onclick="loadDashboard()">↺ 새로고침</button>
     <a href="pokemon-quiz.html" class="topbar-link">← 메인 사이트</a>
-    <div class="user-pill">
-      <img id="admin-photo" src="" alt="">
-      <span id="admin-name"></span>
-    </div>
-    <button class="btn-logout" onclick="auth.signOut().then(()=>location.reload())">로그아웃</button>
+    <button class="btn-logout" onclick="doLogout()">로그아웃</button>
   </nav>
 
   <div class="main">
@@ -387,7 +446,6 @@
       <div class="panel">
         <div class="section-title">퀴즈 현황</div>
 
-        <!-- 포켓몬 -->
         <div class="quiz-mode-header">
           <span class="quiz-mode-icon">🎴</span>
           <span class="quiz-mode-title">포켓몬 맞추기</span>
@@ -413,7 +471,6 @@
 
         <div class="divider" style="margin:16px 0"></div>
 
-        <!-- 기술 -->
         <div class="quiz-mode-header">
           <span class="quiz-mode-icon">⚔️</span>
           <span class="quiz-mode-title">기술 맞추기</span>
@@ -437,6 +494,12 @@
           <span class="qsr-value" id="qs-m-top">—</span>
         </div>
       </div>
+    </div>
+
+    <!-- ══ 데이터 연결 안내 ══ -->
+    <div class="no-data-notice">
+      📡 현재 데이터가 연결되어 있지 않습니다.<br>
+      데이터를 표시하려면 <strong>FIREBASE_CONFIG</strong> 또는 별도 백엔드를 연결해주세요.
     </div>
 
     <!-- ══ 섹션: 유저 목록 ══ -->
@@ -477,44 +540,52 @@
 </div><!-- /#screen-dashboard -->
 
 <script>
-/* ═══════════════════════════════════════════════════
-   ▼▼▼ 설정 — 본인 Firebase 프로젝트 값으로 교체 ▼▼▼
-═══════════════════════════════════════════════════ */
-const FIREBASE_CONFIG = {
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: ""
-};
+/* ═══════════════════════════════════════════
+   ▼▼▼ 관리자 비밀번호 — 여기서 변경하세요 ▼▼▼
+═══════════════════════════════════════════ */
+const ADMIN_PASSWORD = "qkrwjdgur07";
+/* ═══════════════════════════════════════════ */
 
-// 관리자 이메일 목록 — 여기에 본인 이메일 추가
-const ADMIN_EMAILS = [
-  // "admin@gmail.com"
-];
-/* ═══════════════════════════════════════════════════ */
-
-const cfgOk = FIREBASE_CONFIG.apiKey !== '';
-
-let auth, db;
-let allUsers   = [];
-let sortCol    = 'total';
-let sortDir    = -1; // -1 = 내림차순
+let allUsers = [];
+let sortCol  = 'total';
+let sortDir  = -1;
 let activityChart = null;
 
-/* ── 화면 전환 ── */
-function show(id) {
-  ['screen-loading','screen-denied','screen-noconfig','screen-dashboard']
-    .forEach(s => document.getElementById(s).style.display = s===id ? (id==='screen-dashboard'?'block':'flex') : 'none');
+/* ── 로그인 ── */
+function doLogin() {
+  const val = document.getElementById('pw-input').value;
+  const errEl = document.getElementById('login-error');
+  const box   = document.getElementById('login-box');
+
+  if (val === ADMIN_PASSWORD) {
+    sessionStorage.setItem('admin_auth', '1');
+    document.getElementById('screen-login').style.display = 'none';
+    document.getElementById('screen-dashboard').style.display = 'block';
+    renderActivityChart([], []);
+    renderTable();
+  } else {
+    errEl.textContent = '비밀번호가 올바르지 않습니다.';
+    box.classList.remove('login-shake');
+    void box.offsetWidth;
+    box.classList.add('login-shake');
+    document.getElementById('pw-input').value = '';
+    document.getElementById('pw-input').focus();
+  }
 }
 
-/* ── 로그인 ── */
-async function doSignIn() {
-  try {
-    const p = new firebase.auth.GoogleAuthProvider();
-    await auth.signInWithPopup(p);
-  } catch(e) { alert('로그인 실패: ' + e.message); }
+function doLogout() {
+  sessionStorage.removeItem('admin_auth');
+  document.getElementById('screen-dashboard').style.display = 'none';
+  document.getElementById('screen-login').style.display = 'flex';
+  document.getElementById('pw-input').value = '';
+  document.getElementById('login-error').textContent = '';
+}
+
+/* 세션 유지 */
+if (sessionStorage.getItem('admin_auth') === '1') {
+  document.getElementById('screen-login').style.display = 'none';
+  document.getElementById('screen-dashboard').style.display = 'block';
+  setTimeout(() => { renderActivityChart([], []); renderTable(); }, 0);
 }
 
 /* ── 시간 포맷 ── */
@@ -522,8 +593,8 @@ function fmtTime(ms) {
   if (!ms) return '—';
   const diff = Date.now() - ms;
   const sec = Math.floor(diff / 1000);
-  if (sec < 60)  return '방금';
-  if (sec < 3600) return Math.floor(sec/60) + '분 전';
+  if (sec < 60)    return '방금';
+  if (sec < 3600)  return Math.floor(sec/60) + '분 전';
   if (sec < 86400) return Math.floor(sec/3600) + '시간 전';
   if (sec < 604800) return Math.floor(sec/86400) + '일 전';
   return new Date(ms).toLocaleDateString('ko-KR');
@@ -535,11 +606,9 @@ function isWeek(ms)  { return ms && (Date.now()-ms) < 604800000; }
 function setSort(col) {
   if (sortCol === col) sortDir *= -1;
   else { sortCol = col; sortDir = -1; }
-  // 정렬 버튼 상태
   document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
   const sb = document.getElementById('sb-' + col);
   if (sb) sb.classList.add('active');
-  // 헤더 화살표
   document.querySelectorAll('thead th').forEach(th => {
     const id = th.id?.replace('th-','');
     const arrow = th.querySelector('.sort-arrow');
@@ -559,7 +628,7 @@ function getVal(u, col) {
 
 /* ── 테이블 렌더 ── */
 function renderTable() {
-  const query = document.getElementById('user-search').value.toLowerCase();
+  const query = (document.getElementById('user-search')?.value || '').toLowerCase();
   let rows = allUsers.filter(u =>
     !query || (u.name||'').toLowerCase().includes(query) || (u.email||'').toLowerCase().includes(query)
   );
@@ -569,11 +638,11 @@ function renderTable() {
     return sortDir * ((bv||0) - (av||0));
   });
 
-  document.getElementById('table-count').textContent = `${rows.length}명`;
+  document.getElementById('table-count').textContent = rows.length ? `${rows.length}명` : '';
   const tbody = document.getElementById('user-tbody');
 
   if (!rows.length) {
-    tbody.innerHTML = '<tr class="empty-row"><td colspan="8">유저 없음</td></tr>';
+    tbody.innerHTML = '<tr class="empty-row"><td colspan="8">데이터 없음</td></tr>';
     return;
   }
 
@@ -585,9 +654,7 @@ function renderTable() {
     const accWidth = Math.round(u.accuracy);
     return `<tr>
       <td>${avatar}</td>
-      <td>
-        <div class="td-name">${esc(u.name||'—')}</div>
-      </td>
+      <td><div class="td-name">${esc(u.name||'—')}</div></td>
       <td><span class="td-email">${esc(u.email||'—')}</span></td>
       <td><span class="num-badge green">${u.pokemon_correct||0}</span>
           ${u.pokemon_wrong ? `<span style="font-size:.7rem;color:var(--muted);margin-left:4px">/ ${u.pokemon_wrong} 오</span>` : ''}</td>
@@ -614,12 +681,12 @@ function renderActivityChart(labels, data) {
   activityChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels,
+      labels: labels.length ? labels : ['데이터 없음'],
       datasets: [{
         label: '방문자',
-        data,
-        backgroundColor: data.map((_,i) => i===data.length-1 ? '#f5c518' : 'rgba(245,197,24,.3)'),
-        borderColor:     data.map((_,i) => i===data.length-1 ? '#f5c518' : 'rgba(245,197,24,.5)'),
+        data: data.length ? data : [0],
+        backgroundColor: 'rgba(245,197,24,.3)',
+        borderColor:     'rgba(245,197,24,.5)',
         borderWidth: 1,
         borderRadius: 6,
       }]
@@ -643,132 +710,6 @@ function renderActivityChart(labels, data) {
         y: { ticks: { color: '#555570', stepSize: 1 }, grid: { color: 'rgba(30,30,64,.5)' }, beginAtZero: true }
       }
     }
-  });
-}
-
-/* ── 퀴즈 현황 렌더 ── */
-function renderQuizStats(users) {
-  function stats(getC, getW) {
-    const cs = users.map(getC).filter(v => v>0);
-    const ws = users.map(getW).filter(v => v>0);
-    const totalC = cs.reduce((a,b)=>a+b, 0);
-    const totalW = ws.reduce((a,b)=>a+b, 0);
-    const avg    = cs.length ? (totalC/cs.length).toFixed(1) : '—';
-    const topIdx = cs.length ? cs.indexOf(Math.max(...cs)) : -1;
-    const topUser = topIdx>=0 ? users.filter(u=>getC(u)>0)[topIdx] : null;
-    return { totalC, totalW, avg, topUser, topC: topIdx>=0 ? Math.max(...cs):0 };
-  }
-
-  const ps = stats(u=>u.pokemon_correct||0, u=>u.pokemon_wrong||0);
-  const ms = stats(u=>u.move_correct||0,    u=>u.move_wrong||0);
-  const maxC = Math.max(ps.totalC, ms.totalC, 1);
-  const maxW = Math.max(ps.totalW, ms.totalW, 1);
-
-  document.getElementById('qs-p-correct').textContent = ps.totalC.toLocaleString();
-  document.getElementById('qs-p-wrong').textContent   = ps.totalW.toLocaleString();
-  document.getElementById('qs-p-avg').textContent     = ps.avg;
-  document.getElementById('qs-p-top').textContent     = ps.topUser ? `${ps.topC}회 (${ps.topUser.name||ps.topUser.email})` : '—';
-  document.getElementById('qb-p-correct').style.width = Math.round(ps.totalC/maxC*100)+'%';
-  document.getElementById('qb-p-wrong').style.width   = Math.round(ps.totalW/maxW*100)+'%';
-
-  document.getElementById('qs-m-correct').textContent = ms.totalC.toLocaleString();
-  document.getElementById('qs-m-wrong').textContent   = ms.totalW.toLocaleString();
-  document.getElementById('qs-m-avg').textContent     = ms.avg;
-  document.getElementById('qs-m-top').textContent     = ms.topUser ? `${ms.topC}회 (${ms.topUser.name||ms.topUser.email})` : '—';
-  document.getElementById('qb-m-correct').style.width = Math.round(ms.totalC/maxC*100)+'%';
-  document.getElementById('qb-m-wrong').style.width   = Math.round(ms.totalW/maxW*100)+'%';
-}
-
-/* ── 대시보드 전체 로드 ── */
-async function loadDashboard() {
-  document.getElementById('last-updated').textContent = '업데이트 중...';
-
-  try {
-    // 1) 모든 유저 + 최근 7일 활동 병렬 fetch
-    const today  = new Date();
-    const dates  = Array.from({length:7}, (_,i) => {
-      const d = new Date(today); d.setDate(d.getDate() - (6-i));
-      return d.toISOString().slice(0,10);
-    });
-    const labels = dates.map(d => d.slice(5)); // "MM-DD"
-
-    const [usersSnap, ...dailySnaps] = await Promise.all([
-      db.collection('users').get(),
-      ...dates.map(date =>
-        db.collection('daily').doc(date).collection('visitors').get().catch(()=>({size:0}))
-      )
-    ]);
-
-    // 2) 유저 데이터 가공
-    const now = Date.now();
-    const DAY=86400000, WEEK=7*DAY, MONTH=30*DAY;
-    let dau=0, wau=0, mau=0;
-
-    allUsers = usersSnap.docs.map(doc => {
-      const d = doc.data();
-      const lsMs = d.lastSeen?.toMillis?.() || 0;
-      const pc   = d.pokemon_correct || 0;
-      const pw   = d.pokemon_wrong   || 0;
-      const mc   = d.move_correct    || 0;
-      const mw   = d.move_wrong      || 0;
-      const total   = pc + mc;
-      const totalTried = pc + pw + mc + mw;
-      const accuracy = totalTried > 0 ? Math.round((pc+mc)/totalTried*100) : 0;
-      if (now-lsMs < DAY)   dau++;
-      if (now-lsMs < WEEK)  wau++;
-      if (now-lsMs < MONTH) mau++;
-      return { ...d, uid: doc.id, lastSeenMs: lsMs, total, accuracy };
-    });
-
-    // 3) 개요 카드
-    document.getElementById('stat-total').textContent = allUsers.length;
-    document.getElementById('stat-dau').textContent   = dau;
-    document.getElementById('stat-wau').textContent   = wau;
-    document.getElementById('stat-mau').textContent   = mau;
-
-    // 4) 7일 차트 (daily subcollection 기반 정확한 수치)
-    const dailyCounts = dailySnaps.map(s => s.size);
-    renderActivityChart(labels, dailyCounts);
-
-    // 5) 퀴즈 현황
-    renderQuizStats(allUsers);
-
-    // 6) 테이블 (초기 정렬: 총 정답 내림차순)
-    setSort('total');
-
-    // 마지막 업데이트 시각
-    document.getElementById('last-updated').textContent =
-      '업데이트: ' + new Date().toLocaleTimeString('ko-KR');
-
-  } catch(e) {
-    console.error('Dashboard load error:', e);
-    document.getElementById('last-updated').textContent = '⚠️ 로드 실패';
-  }
-}
-
-/* ── 초기화 ── */
-if (!cfgOk || !ADMIN_EMAILS.length) {
-  show('screen-noconfig');
-} else {
-  firebase.initializeApp(FIREBASE_CONFIG);
-  auth = firebase.auth();
-  db   = firebase.firestore();
-
-  auth.onAuthStateChanged(user => {
-    if (!user) {
-      show('screen-denied');
-      return;
-    }
-    if (!ADMIN_EMAILS.includes(user.email)) {
-      show('screen-denied');
-      auth.signOut();
-      return;
-    }
-    // 관리자 확인됨
-    document.getElementById('admin-photo').src      = user.photoURL || '';
-    document.getElementById('admin-name').textContent = user.displayName || user.email;
-    show('screen-dashboard');
-    loadDashboard();
   });
 }
 </script>

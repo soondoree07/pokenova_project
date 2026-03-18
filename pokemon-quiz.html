@@ -821,13 +821,15 @@ bUpdateScore();
 function drawStrips(img, numStrips, stripH) {
   const cv = document.getElementById('pokemon-canvas'), ctx = cv.getContext('2d');
   const H = cv.height, W = cv.width;
+  const iW = img.naturalWidth, iH = img.naturalHeight;
+  const scaleY = iH / H;
   ctx.fillStyle = BG_COLOR;
   ctx.fillRect(0, 0, W, H);
   const segH = H / numStrips;
   for (let i = 0; i < numStrips; i++) {
     const y = Math.round(i * segH + (segH - stripH) / 2);
     const sy = Math.max(0, Math.min(H - stripH, y));
-    ctx.drawImage(img, 0, sy, W, stripH, 0, sy, W, stripH);
+    ctx.drawImage(img, 0, sy * scaleY, iW, stripH * scaleY, 0, sy, W, stripH);
   }
 }
 
@@ -975,7 +977,9 @@ function bShowHint() {
   document.getElementById('b-btn-hint').disabled  = true;
 }
 function bNextPokemon() { bLoadPokemon(); }
-document.getElementById('b-guess-input').addEventListener('keydown', e=>{ if(e.key==='Enter') bCheckGuess(); });
+document.getElementById('b-guess-input').addEventListener('keydown', e=>{
+  if (e.key==='Enter') bCheckGuess();
+});
 
 /* ═══════════════════════════════════════════════════════════
    탭2: 기술 맞추기
@@ -1178,7 +1182,18 @@ function mShowHint() {
   document.getElementById('m-btn-hint').disabled=true;
 }
 function mNextMove() { mLoadMove(); }
-document.getElementById('m-guess-input').addEventListener('keydown',e=>{ if(e.key==='Enter') mCheckGuess(); });
+document.getElementById('m-guess-input').addEventListener('keydown',e=>{
+  if (e.key==='Enter') mCheckGuess();
+});
+
+/* ══ 정답 후 Enter → 다음 문제 ══ */
+document.addEventListener('keydown', e => {
+  if (e.key !== 'Enter') return;
+  if (e.target.tagName === 'INPUT') return; // 입력창 Enter는 각자 리스너가 처리
+  const activeTab = document.getElementById('tab-barcode').style.display === 'none' ? 'move' : 'barcode';
+  if (activeTab === 'barcode' && bRevealed) bNextPokemon();
+  if (activeTab === 'move'    && mRevealed) mNextMove();
+});
 
 /* ══ 초기화 ══ */
 bLoadPokemon();
