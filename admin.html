@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>관리자 패널 · 오늘의포켓몬은뭘까용?</title>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+  <style>
+    :root {
+      --bg:      #0a0a16;
+      --surface: #10102a;
+      --card:    #14142e;
+      --border:  #1e1e40;
+      --text:    #e0e0f0;
+      --muted:   #555570;
+      --yellow:  #f5c518;
+      --green:   #4caf50;
+      --red:     #f44336;
+      --blue:    #4a9eff;
+      --purple:  #9c6fff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ══ 풀스크린 상태 화면 ══ */
+    .state-screen {
+      position: fixed; inset: 0;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 16px; background: var(--bg); z-index: 100;
+    }
+    .state-icon  { font-size: 3rem; }
+    .state-title { font-size: 1.4rem; font-weight: 700; color: var(--yellow); }
+    .state-sub   { font-size: 0.9rem; color: var(--muted); }
+    .spin { animation: spin 1s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ══ 상단 네비 바 ══ */
+    .topbar {
+      position: sticky; top: 0; z-index: 50;
+      height: 56px;
+      background: rgba(10,10,22,.97);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center;
+      padding: 0 28px;
+      gap: 16px;
+      backdrop-filter: blur(12px);
+      flex-shrink: 0;
+    }
+    .topbar-logo { font-weight: 900; color: var(--yellow); font-size: 0.95rem; letter-spacing: 1px; }
+    .topbar-badge {
+      background: rgba(156,111,255,.18); color: var(--purple);
+      border: 1px solid var(--purple); border-radius: 20px;
+      font-size: 0.68rem; font-weight: 700; padding: 2px 10px; letter-spacing: 1px;
+    }
+    .topbar-spacer { flex: 1; }
+    .topbar-refresh {
+      display: flex; align-items: center; gap: 6px;
+      padding: 6px 14px; border-radius: 8px;
+      border: 1px solid var(--border); background: transparent;
+      color: var(--muted); font-size: 0.8rem; cursor: pointer;
+      transition: all .18s;
+    }
+    .topbar-refresh:hover { border-color: var(--yellow); color: var(--yellow); }
+    .topbar-link {
+      display: flex; align-items: center; gap: 6px;
+      padding: 6px 14px; border-radius: 8px;
+      border: 1px solid var(--border); background: transparent;
+      color: var(--muted); font-size: 0.8rem; cursor: pointer;
+      text-decoration: none; transition: all .18s;
+    }
+    .topbar-link:hover { border-color: var(--blue); color: var(--blue); }
+    .user-pill {
+      display: flex; align-items: center; gap: 8px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 20px; padding: 4px 12px 4px 4px;
+    }
+    .user-pill img { width: 26px; height: 26px; border-radius: 50%; object-fit: cover; }
+    .user-pill span { font-size: 0.82rem; color: #aaa; max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .btn-logout {
+      padding: 5px 12px; border-radius: 8px; border: 1px solid var(--border);
+      background: transparent; color: var(--muted); font-size: 0.78rem; cursor: pointer;
+      transition: all .18s;
+    }
+    .btn-logout:hover { border-color: var(--red); color: var(--red); }
+    .last-updated { font-size: 0.72rem; color: var(--muted); }
+
+    /* ══ 메인 컨텐츠 ══ */
+    .main {
+      flex: 1;
+      padding: 28px;
+      max-width: 1300px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .section-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    /* ══ 개요 카드 그리드 ══ */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    @media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 500px) { .stats-grid { grid-template-columns: 1fr; } }
+
+    .stat-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px 22px 18px;
+      position: relative;
+      overflow: hidden;
+    }
+    .stat-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+    .stat-card.total::before  { background: linear-gradient(90deg, var(--yellow), #ffaa00); }
+    .stat-card.dau::before    { background: linear-gradient(90deg, var(--green), #00c853); }
+    .stat-card.wau::before    { background: linear-gradient(90deg, var(--blue), #00b4ff); }
+    .stat-card.mau::before    { background: linear-gradient(90deg, var(--purple), #e040fb); }
+
+    .stat-label { font-size: 0.7rem; color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 10px; }
+    .stat-value { font-size: 2.4rem; font-weight: 900; line-height: 1; }
+    .stat-card.total .stat-value  { color: var(--yellow); }
+    .stat-card.dau   .stat-value  { color: var(--green); }
+    .stat-card.wau   .stat-value  { color: var(--blue); }
+    .stat-card.mau   .stat-value  { color: var(--purple); }
+    .stat-sub { font-size: 0.75rem; color: var(--muted); margin-top: 6px; }
+    .stat-icon { position: absolute; right: 18px; top: 18px; font-size: 1.6rem; opacity: .15; }
+
+    /* ══ 2열 행 ══ */
+    .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width: 800px) { .row-2 { grid-template-columns: 1fr; } }
+
+    /* ══ 패널 ══ */
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px 24px;
+    }
+
+    /* ══ 차트 ══ */
+    .chart-wrap { position: relative; height: 220px; }
+
+    /* ══ 퀴즈 현황 ══ */
+    .quiz-stat-row {
+      display: flex; align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      gap: 12px;
+    }
+    .quiz-stat-row:last-child { border-bottom: none; }
+    .qsr-label  { font-size: 0.75rem; color: var(--muted); width: 80px; flex-shrink: 0; }
+    .qsr-value  { font-size: 1rem; font-weight: 700; color: var(--text); flex: 1; }
+    .qsr-bar-bg {
+      width: 80px; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; flex-shrink: 0;
+    }
+    .qsr-bar-fill { height: 100%; border-radius: 3px; transition: width .8s ease; }
+
+    .quiz-mode-header {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 16px;
+    }
+    .quiz-mode-icon { font-size: 1.2rem; }
+    .quiz-mode-title { font-size: 0.95rem; font-weight: 700; }
+
+    /* ══ 유저 테이블 ══ */
+    .table-controls {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 16px; flex-wrap: wrap;
+    }
+    .table-search {
+      flex: 1; min-width: 200px;
+      padding: 8px 14px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 10px; color: var(--text); font-size: 0.88rem; outline: none;
+      transition: border-color .18s;
+    }
+    .table-search:focus   { border-color: var(--yellow); }
+    .table-search::placeholder { color: var(--muted); }
+
+    .sort-btns { display: flex; gap: 6px; flex-wrap: wrap; }
+    .sort-btn {
+      padding: 6px 12px; border-radius: 8px;
+      border: 1px solid var(--border); background: transparent;
+      color: var(--muted); font-size: 0.78rem; cursor: pointer; transition: all .15s;
+    }
+    .sort-btn:hover   { border-color: var(--yellow); color: var(--yellow); }
+    .sort-btn.active  { background: var(--yellow); color: #0a0a16; border-color: var(--yellow); }
+
+    .table-count { font-size: 0.78rem; color: var(--muted); white-space: nowrap; }
+
+    .table-wrap { overflow-x: auto; }
+    table {
+      width: 100%; border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    thead th {
+      padding: 10px 12px;
+      text-align: left;
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+      cursor: pointer; user-select: none;
+    }
+    thead th:hover { color: var(--yellow); }
+    thead th.sorted { color: var(--yellow); }
+    thead th .sort-arrow { margin-left: 4px; opacity: .6; }
+
+    tbody tr { transition: background .12s; }
+    tbody tr:hover { background: rgba(255,255,255,.03); }
+    tbody td {
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(30,30,64,.6);
+      vertical-align: middle;
+    }
+    tbody tr:last-child td { border-bottom: none; }
+
+    .td-user { display: flex; align-items: center; gap: 10px; }
+    .td-avatar {
+      width: 30px; height: 30px; border-radius: 50%;
+      background: var(--border); object-fit: cover; flex-shrink: 0;
+    }
+    .td-avatar-fallback {
+      width: 30px; height: 30px; border-radius: 50%;
+      background: var(--border); display: flex; align-items: center;
+      justify-content: center; font-size: 0.8rem; color: var(--muted); flex-shrink: 0;
+    }
+    .td-name  { font-weight: 600; color: var(--text); max-width: 130px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .td-email { font-size: 0.75rem; color: var(--muted); }
+
+    .num-badge {
+      display: inline-block;
+      padding: 2px 10px; border-radius: 20px;
+      font-size: 0.82rem; font-weight: 700;
+      background: rgba(245,197,24,.1); color: var(--yellow);
+    }
+    .num-badge.blue   { background: rgba(74,158,255,.1); color: var(--blue); }
+    .num-badge.green  { background: rgba(76,175,80,.1);  color: var(--green); }
+    .num-badge.purple { background: rgba(156,111,255,.1); color: var(--purple); }
+
+    .accuracy-bar-bg {
+      width: 50px; height: 4px; background: var(--border); border-radius: 2px;
+      overflow: hidden; display: inline-block; margin-left: 6px; vertical-align: middle;
+    }
+    .accuracy-bar-fill { height: 100%; background: var(--green); border-radius: 2px; }
+
+    .time-chip { font-size: 0.75rem; color: var(--muted); white-space: nowrap; }
+    .time-chip.today { color: var(--green); }
+    .time-chip.week  { color: var(--blue); }
+
+    .empty-row td { text-align: center; padding: 40px; color: var(--muted); }
+
+    /* ══ 기타 ══ */
+    .divider { height: 1px; background: var(--border); }
+    .badge-new {
+      display: inline-block;
+      background: rgba(76,175,80,.15); color: var(--green);
+      border: 1px solid var(--green); border-radius: 20px;
+      font-size: 0.62rem; font-weight: 700; padding: 1px 7px;
+      margin-left: 6px; vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ 로딩 화면 ══ -->
+<div id="screen-loading" class="state-screen">
+  <div class="state-icon spin">⚙️</div>
+  <div class="state-title">관리자 패널 로딩 중</div>
+  <div class="state-sub">Firebase 연결 중...</div>
+</div>
+
+<!-- ══ 접근 거부 화면 ══ -->
+<div id="screen-denied" class="state-screen" style="display:none">
+  <div class="state-icon">🚫</div>
+  <div class="state-title">접근 권한이 없습니다</div>
+  <div class="state-sub">관리자 계정으로 로그인해주세요</div>
+  <button onclick="doSignIn()" style="margin-top:12px;padding:10px 24px;border-radius:12px;border:none;background:#f5c518;color:#0a0a16;font-weight:700;cursor:pointer;font-size:0.9rem">
+    구글로 로그인
+  </button>
+  <a href="pokemon-quiz.html" style="margin-top:8px;color:#555;font-size:0.8rem">← 메인 사이트로</a>
+</div>
+
+<!-- ══ Firebase 미설정 화면 ══ -->
+<div id="screen-noconfig" class="state-screen" style="display:none">
+  <div class="state-icon">⚠️</div>
+  <div class="state-title">Firebase 설정 필요</div>
+  <div class="state-sub" style="text-align:center;max-width:380px;line-height:1.7">
+    HTML 파일 하단의 <code style="background:#1e1e40;padding:2px 6px;border-radius:4px">FIREBASE_CONFIG</code>와
+    <code style="background:#1e1e40;padding:2px 6px;border-radius:4px">ADMIN_EMAILS</code>를 채워주세요.
+  </div>
+</div>
+
+<!-- ══ 대시보드 ══ -->
+<div id="screen-dashboard" style="display:none">
+
+  <!-- 탑바 -->
+  <nav class="topbar">
+    <span class="topbar-logo">오늘의포켓몬은뭘까용?</span>
+    <span class="topbar-badge">ADMIN</span>
+    <div class="topbar-spacer"></div>
+    <span class="last-updated" id="last-updated"></span>
+    <button class="topbar-refresh" onclick="loadDashboard()">↺ 새로고침</button>
+    <a href="pokemon-quiz.html" class="topbar-link">← 메인 사이트</a>
+    <div class="user-pill">
+      <img id="admin-photo" src="" alt="">
+      <span id="admin-name"></span>
+    </div>
+    <button class="btn-logout" onclick="auth.signOut().then(()=>location.reload())">로그아웃</button>
+  </nav>
+
+  <div class="main">
+
+    <!-- ══ 섹션: 개요 통계 ══ -->
+    <div>
+      <div class="section-title">개요</div>
+      <div class="stats-grid">
+        <div class="stat-card total">
+          <div class="stat-icon">👥</div>
+          <div class="stat-label">전체 유저</div>
+          <div class="stat-value" id="stat-total">—</div>
+          <div class="stat-sub">누적 가입자</div>
+        </div>
+        <div class="stat-card dau">
+          <div class="stat-icon">🌅</div>
+          <div class="stat-label">DAU · 오늘</div>
+          <div class="stat-value" id="stat-dau">—</div>
+          <div class="stat-sub">오늘 방문한 유저</div>
+        </div>
+        <div class="stat-card wau">
+          <div class="stat-icon">📅</div>
+          <div class="stat-label">WAU · 7일</div>
+          <div class="stat-value" id="stat-wau">—</div>
+          <div class="stat-sub">최근 7일 방문</div>
+        </div>
+        <div class="stat-card mau">
+          <div class="stat-icon">📆</div>
+          <div class="stat-label">MAU · 30일</div>
+          <div class="stat-value" id="stat-mau">—</div>
+          <div class="stat-sub">최근 30일 방문</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ 섹션: 차트 + 퀴즈 현황 ══ -->
+    <div class="row-2">
+
+      <!-- 7일 방문자 차트 -->
+      <div class="panel">
+        <div class="section-title">최근 7일 방문자 추이</div>
+        <div class="chart-wrap">
+          <canvas id="chart-activity"></canvas>
+        </div>
+      </div>
+
+      <!-- 퀴즈 현황 -->
+      <div class="panel">
+        <div class="section-title">퀴즈 현황</div>
+
+        <!-- 포켓몬 -->
+        <div class="quiz-mode-header">
+          <span class="quiz-mode-icon">🎴</span>
+          <span class="quiz-mode-title">포켓몬 맞추기</span>
+        </div>
+        <div class="quiz-stat-row">
+          <span class="qsr-label">총 정답</span>
+          <span class="qsr-value" id="qs-p-correct">—</span>
+          <div class="qsr-bar-bg"><div class="qsr-bar-fill" id="qb-p-correct" style="background:var(--green);width:0"></div></div>
+        </div>
+        <div class="quiz-stat-row">
+          <span class="qsr-label">총 오답</span>
+          <span class="qsr-value" id="qs-p-wrong">—</span>
+          <div class="qsr-bar-bg"><div class="qsr-bar-fill" id="qb-p-wrong" style="background:var(--red);width:0"></div></div>
+        </div>
+        <div class="quiz-stat-row">
+          <span class="qsr-label">평균 정답</span>
+          <span class="qsr-value" id="qs-p-avg">—</span>
+        </div>
+        <div class="quiz-stat-row">
+          <span class="qsr-label">최고 정답</span>
+          <span class="qsr-value" id="qs-p-top">—</span>
+        </div>
+
+        <div class="divider" style="margin:16px 0"></div>
+
+        <!-- 기술 -->
+        <div class="quiz-mode-header">
+          <span class="quiz-mode-icon">⚔️</span>
+          <span class="quiz-mode-title">기술 맞추기</span>
+        </div>
+        <div class="quiz-stat-row">
+          <span class="qsr-label">총 정답</span>
+          <span class="qsr-value" id="qs-m-correct">—</span>
+          <div class="qsr-bar-bg"><div class="qsr-bar-fill" id="qb-m-correct" style="background:var(--green);width:0"></div></div>
+        </div>
+        <div class="quiz-stat-row">
+          <span class="qsr-label">총 오답</span>
+          <span class="qsr-value" id="qs-m-wrong">—</span>
+          <div class="qsr-bar-bg"><div class="qsr-bar-fill" id="qb-m-wrong" style="background:var(--red);width:0"></div></div>
+        </div>
+        <div class="quiz-stat-row">
+          <span class="qsr-label">평균 정답</span>
+          <span class="qsr-value" id="qs-m-avg">—</span>
+        </div>
+        <div class="quiz-stat-row">
+          <span class="qsr-label">최고 정답</span>
+          <span class="qsr-value" id="qs-m-top">—</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ 섹션: 유저 목록 ══ -->
+    <div class="panel">
+      <div class="section-title">유저 목록</div>
+      <div class="table-controls">
+        <input type="text" class="table-search" id="user-search"
+          placeholder="🔍 이름 또는 이메일 검색..." oninput="renderTable()">
+        <div class="sort-btns">
+          <button class="sort-btn active" onclick="setSort('total')" id="sb-total">총 정답 ↓</button>
+          <button class="sort-btn" onclick="setSort('pokemon_correct')" id="sb-pokemon">포켓몬</button>
+          <button class="sort-btn" onclick="setSort('move_correct')" id="sb-move">기술</button>
+          <button class="sort-btn" onclick="setSort('lastSeen')" id="sb-lastSeen">최근 접속</button>
+          <button class="sort-btn" onclick="setSort('accuracy')" id="sb-accuracy">정확도</button>
+        </div>
+        <span class="table-count" id="table-count"></span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:44px"></th>
+              <th onclick="setSort('name')" id="th-name">이름 <span class="sort-arrow"></span></th>
+              <th>이메일</th>
+              <th onclick="setSort('pokemon_correct')" id="th-pokemon">포켓몬 정답 <span class="sort-arrow"></span></th>
+              <th onclick="setSort('move_correct')" id="th-move">기술 정답 <span class="sort-arrow"></span></th>
+              <th onclick="setSort('total')" id="th-total">합계 <span class="sort-arrow"></span></th>
+              <th onclick="setSort('accuracy')" id="th-accuracy">정확도 <span class="sort-arrow"></span></th>
+              <th onclick="setSort('lastSeen')" id="th-lastSeen">마지막 접속 <span class="sort-arrow"></span></th>
+            </tr>
+          </thead>
+          <tbody id="user-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </div><!-- /.main -->
+</div><!-- /#screen-dashboard -->
+
+<script>
+/* ═══════════════════════════════════════════════════
+   ▼▼▼ 설정 — 본인 Firebase 프로젝트 값으로 교체 ▼▼▼
+═══════════════════════════════════════════════════ */
+const FIREBASE_CONFIG = {
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
+};
+
+// 관리자 이메일 목록 — 여기에 본인 이메일 추가
+const ADMIN_EMAILS = [
+  // "admin@gmail.com"
+];
+/* ═══════════════════════════════════════════════════ */
+
+const cfgOk = FIREBASE_CONFIG.apiKey !== '';
+
+let auth, db;
+let allUsers   = [];
+let sortCol    = 'total';
+let sortDir    = -1; // -1 = 내림차순
+let activityChart = null;
+
+/* ── 화면 전환 ── */
+function show(id) {
+  ['screen-loading','screen-denied','screen-noconfig','screen-dashboard']
+    .forEach(s => document.getElementById(s).style.display = s===id ? (id==='screen-dashboard'?'block':'flex') : 'none');
+}
+
+/* ── 로그인 ── */
+async function doSignIn() {
+  try {
+    const p = new firebase.auth.GoogleAuthProvider();
+    await auth.signInWithPopup(p);
+  } catch(e) { alert('로그인 실패: ' + e.message); }
+}
+
+/* ── 시간 포맷 ── */
+function fmtTime(ms) {
+  if (!ms) return '—';
+  const diff = Date.now() - ms;
+  const sec = Math.floor(diff / 1000);
+  if (sec < 60)  return '방금';
+  if (sec < 3600) return Math.floor(sec/60) + '분 전';
+  if (sec < 86400) return Math.floor(sec/3600) + '시간 전';
+  if (sec < 604800) return Math.floor(sec/86400) + '일 전';
+  return new Date(ms).toLocaleDateString('ko-KR');
+}
+function isToday(ms) { return ms && (Date.now()-ms) < 86400000; }
+function isWeek(ms)  { return ms && (Date.now()-ms) < 604800000; }
+
+/* ── 정렬 ── */
+function setSort(col) {
+  if (sortCol === col) sortDir *= -1;
+  else { sortCol = col; sortDir = -1; }
+  // 정렬 버튼 상태
+  document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+  const sb = document.getElementById('sb-' + col);
+  if (sb) sb.classList.add('active');
+  // 헤더 화살표
+  document.querySelectorAll('thead th').forEach(th => {
+    const id = th.id?.replace('th-','');
+    const arrow = th.querySelector('.sort-arrow');
+    if (arrow) arrow.textContent = id === col ? (sortDir === -1 ? '↓' : '↑') : '';
+    th.classList.toggle('sorted', id === col);
+  });
+  renderTable();
+}
+
+function getVal(u, col) {
+  if (col==='total')    return u.total;
+  if (col==='accuracy') return u.accuracy;
+  if (col==='lastSeen') return u.lastSeenMs || 0;
+  if (col==='name')     return (u.name||'').toLowerCase();
+  return u[col] || 0;
+}
+
+/* ── 테이블 렌더 ── */
+function renderTable() {
+  const query = document.getElementById('user-search').value.toLowerCase();
+  let rows = allUsers.filter(u =>
+    !query || (u.name||'').toLowerCase().includes(query) || (u.email||'').toLowerCase().includes(query)
+  );
+  rows.sort((a,b) => {
+    const av = getVal(a, sortCol), bv = getVal(b, sortCol);
+    if (typeof av === 'string') return sortDir * av.localeCompare(bv);
+    return sortDir * ((bv||0) - (av||0));
+  });
+
+  document.getElementById('table-count').textContent = `${rows.length}명`;
+  const tbody = document.getElementById('user-tbody');
+
+  if (!rows.length) {
+    tbody.innerHTML = '<tr class="empty-row"><td colspan="8">유저 없음</td></tr>';
+    return;
+  }
+
+  tbody.innerHTML = rows.map(u => {
+    const avatar = u.photo
+      ? `<img class="td-avatar" src="${u.photo}" onerror="this.style.display='none'">`
+      : `<div class="td-avatar-fallback">${(u.name||'?')[0]}</div>`;
+    const tc  = isToday(u.lastSeenMs) ? 'today' : isWeek(u.lastSeenMs) ? 'week' : '';
+    const accWidth = Math.round(u.accuracy);
+    return `<tr>
+      <td>${avatar}</td>
+      <td>
+        <div class="td-name">${esc(u.name||'—')}</div>
+      </td>
+      <td><span class="td-email">${esc(u.email||'—')}</span></td>
+      <td><span class="num-badge green">${u.pokemon_correct||0}</span>
+          ${u.pokemon_wrong ? `<span style="font-size:.7rem;color:var(--muted);margin-left:4px">/ ${u.pokemon_wrong} 오</span>` : ''}</td>
+      <td><span class="num-badge blue">${u.move_correct||0}</span>
+          ${u.move_wrong ? `<span style="font-size:.7rem;color:var(--muted);margin-left:4px">/ ${u.move_wrong} 오</span>` : ''}</td>
+      <td><span class="num-badge">${u.total}</span></td>
+      <td>
+        <span style="font-size:.85rem;font-weight:700;color:${u.accuracy>=70?'var(--green)':u.accuracy>=40?'var(--yellow)':'var(--red)'}">${u.accuracy}%</span>
+        <div class="accuracy-bar-bg"><div class="accuracy-bar-fill" style="width:${accWidth}%"></div></div>
+      </td>
+      <td><span class="time-chip ${tc}">${fmtTime(u.lastSeenMs)}</span></td>
+    </tr>`;
+  }).join('');
+}
+
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+/* ── 차트 ── */
+function renderActivityChart(labels, data) {
+  const ctx = document.getElementById('chart-activity').getContext('2d');
+  if (activityChart) activityChart.destroy();
+  activityChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [{
+        label: '방문자',
+        data,
+        backgroundColor: data.map((_,i) => i===data.length-1 ? '#f5c518' : 'rgba(245,197,24,.3)'),
+        borderColor:     data.map((_,i) => i===data.length-1 ? '#f5c518' : 'rgba(245,197,24,.5)'),
+        borderWidth: 1,
+        borderRadius: 6,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: '#14142e',
+          borderColor: '#1e1e40',
+          borderWidth: 1,
+          titleColor: '#f5c518',
+          bodyColor: '#aaa',
+          callbacks: { label: ctx => ` ${ctx.raw}명` }
+        }
+      },
+      scales: {
+        x: { ticks: { color: '#555570' }, grid: { color: 'rgba(30,30,64,.5)' } },
+        y: { ticks: { color: '#555570', stepSize: 1 }, grid: { color: 'rgba(30,30,64,.5)' }, beginAtZero: true }
+      }
+    }
+  });
+}
+
+/* ── 퀴즈 현황 렌더 ── */
+function renderQuizStats(users) {
+  function stats(getC, getW) {
+    const cs = users.map(getC).filter(v => v>0);
+    const ws = users.map(getW).filter(v => v>0);
+    const totalC = cs.reduce((a,b)=>a+b, 0);
+    const totalW = ws.reduce((a,b)=>a+b, 0);
+    const avg    = cs.length ? (totalC/cs.length).toFixed(1) : '—';
+    const topIdx = cs.length ? cs.indexOf(Math.max(...cs)) : -1;
+    const topUser = topIdx>=0 ? users.filter(u=>getC(u)>0)[topIdx] : null;
+    return { totalC, totalW, avg, topUser, topC: topIdx>=0 ? Math.max(...cs):0 };
+  }
+
+  const ps = stats(u=>u.pokemon_correct||0, u=>u.pokemon_wrong||0);
+  const ms = stats(u=>u.move_correct||0,    u=>u.move_wrong||0);
+  const maxC = Math.max(ps.totalC, ms.totalC, 1);
+  const maxW = Math.max(ps.totalW, ms.totalW, 1);
+
+  document.getElementById('qs-p-correct').textContent = ps.totalC.toLocaleString();
+  document.getElementById('qs-p-wrong').textContent   = ps.totalW.toLocaleString();
+  document.getElementById('qs-p-avg').textContent     = ps.avg;
+  document.getElementById('qs-p-top').textContent     = ps.topUser ? `${ps.topC}회 (${ps.topUser.name||ps.topUser.email})` : '—';
+  document.getElementById('qb-p-correct').style.width = Math.round(ps.totalC/maxC*100)+'%';
+  document.getElementById('qb-p-wrong').style.width   = Math.round(ps.totalW/maxW*100)+'%';
+
+  document.getElementById('qs-m-correct').textContent = ms.totalC.toLocaleString();
+  document.getElementById('qs-m-wrong').textContent   = ms.totalW.toLocaleString();
+  document.getElementById('qs-m-avg').textContent     = ms.avg;
+  document.getElementById('qs-m-top').textContent     = ms.topUser ? `${ms.topC}회 (${ms.topUser.name||ms.topUser.email})` : '—';
+  document.getElementById('qb-m-correct').style.width = Math.round(ms.totalC/maxC*100)+'%';
+  document.getElementById('qb-m-wrong').style.width   = Math.round(ms.totalW/maxW*100)+'%';
+}
+
+/* ── 대시보드 전체 로드 ── */
+async function loadDashboard() {
+  document.getElementById('last-updated').textContent = '업데이트 중...';
+
+  try {
+    // 1) 모든 유저 + 최근 7일 활동 병렬 fetch
+    const today  = new Date();
+    const dates  = Array.from({length:7}, (_,i) => {
+      const d = new Date(today); d.setDate(d.getDate() - (6-i));
+      return d.toISOString().slice(0,10);
+    });
+    const labels = dates.map(d => d.slice(5)); // "MM-DD"
+
+    const [usersSnap, ...dailySnaps] = await Promise.all([
+      db.collection('users').get(),
+      ...dates.map(date =>
+        db.collection('daily').doc(date).collection('visitors').get().catch(()=>({size:0}))
+      )
+    ]);
+
+    // 2) 유저 데이터 가공
+    const now = Date.now();
+    const DAY=86400000, WEEK=7*DAY, MONTH=30*DAY;
+    let dau=0, wau=0, mau=0;
+
+    allUsers = usersSnap.docs.map(doc => {
+      const d = doc.data();
+      const lsMs = d.lastSeen?.toMillis?.() || 0;
+      const pc   = d.pokemon_correct || 0;
+      const pw   = d.pokemon_wrong   || 0;
+      const mc   = d.move_correct    || 0;
+      const mw   = d.move_wrong      || 0;
+      const total   = pc + mc;
+      const totalTried = pc + pw + mc + mw;
+      const accuracy = totalTried > 0 ? Math.round((pc+mc)/totalTried*100) : 0;
+      if (now-lsMs < DAY)   dau++;
+      if (now-lsMs < WEEK)  wau++;
+      if (now-lsMs < MONTH) mau++;
+      return { ...d, uid: doc.id, lastSeenMs: lsMs, total, accuracy };
+    });
+
+    // 3) 개요 카드
+    document.getElementById('stat-total').textContent = allUsers.length;
+    document.getElementById('stat-dau').textContent   = dau;
+    document.getElementById('stat-wau').textContent   = wau;
+    document.getElementById('stat-mau').textContent   = mau;
+
+    // 4) 7일 차트 (daily subcollection 기반 정확한 수치)
+    const dailyCounts = dailySnaps.map(s => s.size);
+    renderActivityChart(labels, dailyCounts);
+
+    // 5) 퀴즈 현황
+    renderQuizStats(allUsers);
+
+    // 6) 테이블 (초기 정렬: 총 정답 내림차순)
+    setSort('total');
+
+    // 마지막 업데이트 시각
+    document.getElementById('last-updated').textContent =
+      '업데이트: ' + new Date().toLocaleTimeString('ko-KR');
+
+  } catch(e) {
+    console.error('Dashboard load error:', e);
+    document.getElementById('last-updated').textContent = '⚠️ 로드 실패';
+  }
+}
+
+/* ── 초기화 ── */
+if (!cfgOk || !ADMIN_EMAILS.length) {
+  show('screen-noconfig');
+} else {
+  firebase.initializeApp(FIREBASE_CONFIG);
+  auth = firebase.auth();
+  db   = firebase.firestore();
+
+  auth.onAuthStateChanged(user => {
+    if (!user) {
+      show('screen-denied');
+      return;
+    }
+    if (!ADMIN_EMAILS.includes(user.email)) {
+      show('screen-denied');
+      auth.signOut();
+      return;
+    }
+    // 관리자 확인됨
+    document.getElementById('admin-photo').src      = user.photoURL || '';
+    document.getElementById('admin-name').textContent = user.displayName || user.email;
+    show('screen-dashboard');
+    loadDashboard();
+  });
+}
+</script>
+</body>
+</html>

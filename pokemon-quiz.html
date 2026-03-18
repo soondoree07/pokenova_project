@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오늘의포켓몬은뭘까용?</title>
+
+  <!-- Firebase SDK (compat) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #0d0d1a;
+      color: #eee;
+      font-family: 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 72px 16px 48px; /* top: auth-bar 높이 */
+    }
+
+    /* ══ 상단 인증 바 ══ */
+    .auth-bar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 52px;
+      background: rgba(10,10,22,0.97);
+      border-bottom: 1px solid #1e1e40;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 20px;
+      gap: 10px;
+      z-index: 200;
+      backdrop-filter: blur(12px);
+    }
+
+    .btn-login-top {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      border-radius: 20px;
+      border: 1px solid #2a2a5a;
+      background: #13132a;
+      color: #aaa;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: border-color .2s, color .2s;
+    }
+    .btn-login-top:hover { border-color: #f5c518; color: #f5c518; }
+    .btn-login-top img  { width: 16px; height: 16px; border-radius: 50%; }
+
+    .user-chip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .user-photo {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      border: 2px solid #f5c518;
+      object-fit: cover;
+    }
+    .user-name {
+      font-size: 0.82rem;
+      color: #ccc;
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .btn-logout {
+      padding: 5px 11px;
+      border-radius: 20px;
+      border: 1px solid #2a2a5a;
+      background: transparent;
+      color: #555;
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .btn-logout:hover { border-color: #f44336; color: #f44336; }
+
+    /* ══ 로그인 모달 ══ */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.75);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 500;
+      backdrop-filter: blur(6px);
+    }
+    .modal {
+      background: #13132a;
+      border: 1px solid #2a2a5a;
+      border-radius: 24px;
+      padding: 40px 44px;
+      width: 90%;
+      max-width: 380px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      box-shadow: 0 30px 80px rgba(0,0,0,.8);
+    }
+    .modal-icon { font-size: 2.8rem; }
+    .modal-title { font-size: 1.3rem; font-weight: 900; color: #f5c518; }
+    .modal-sub { font-size: 0.88rem; color: #666; text-align: center; line-height: 1.6; }
+
+    .btn-google {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 22px;
+      border-radius: 14px;
+      border: none;
+      background: #fff;
+      color: #333;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      width: 100%;
+      justify-content: center;
+      transition: background .15s, transform .1s;
+    }
+    .btn-google:hover  { background: #f0f0f0; }
+    .btn-google:active { transform: scale(.97); }
+    .btn-google-logo   { width: 20px; height: 20px; }
+
+    .btn-modal-close {
+      background: transparent;
+      border: none;
+      color: #444;
+      font-size: 0.82rem;
+      cursor: pointer;
+      text-decoration: underline;
+      padding: 4px;
+    }
+    .btn-modal-close:hover { color: #888; }
+
+    /* Firebase 미설정 안내 */
+    .setup-notice {
+      background: rgba(255,152,0,.08);
+      border: 1px solid rgba(255,152,0,.25);
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-size: 0.78rem;
+      color: #ff9800;
+      line-height: 1.6;
+      width: 100%;
+    }
+    .setup-notice b { display: block; margin-bottom: 4px; }
+    .setup-notice code { background: rgba(255,255,255,.06); padding: 1px 5px; border-radius: 4px; font-size: 0.75rem; }
+
+    /* ══ 사이트 헤더 ══ */
+    .site-title {
+      font-size: 1.45rem;
+      font-weight: 900;
+      color: #f5c518;
+      letter-spacing: 3px;
+      text-shadow: 0 0 22px rgba(245,197,24,.5);
+      margin-bottom: 18px;
+      text-align: center;
+    }
+
+    /* ══ 탭 네비게이션 ══ */
+    .nav-tabs {
+      display: flex;
+      gap: 6px;
+      background: #13132a;
+      border: 1px solid #1e1e40;
+      border-radius: 14px;
+      padding: 5px;
+      margin-bottom: 28px;
+    }
+    .nav-tab {
+      padding: 9px 22px;
+      border-radius: 10px;
+      border: none;
+      background: transparent;
+      color: #555;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .18s, color .18s;
+    }
+    .nav-tab.active { background: #f5c518; color: #0d0d1a; }
+
+    /* ══ 공통 카드 ══ */
+    .card {
+      background: #13132a;
+      border: 1px solid #1e1e40;
+      border-radius: 24px;
+      padding: 32px 36px;
+      width: 100%;
+      max-width: 460px;
+      box-shadow: 0 24px 80px rgba(0,0,0,.7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .section { width: 100%; max-width: 460px; }
+
+    /* ══ 랭킹 카드 ══ */
+    .rank-card {
+      width: 100%;
+      background: linear-gradient(135deg, #16163a 0%, #0d0d20 100%);
+      border: 1px solid #2e2e60;
+      border-radius: 14px;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity .4s ease, transform .4s ease;
+      overflow: hidden;
+      position: relative;
+    }
+    .rank-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #f5c518, transparent);
+    }
+    .rank-card.show { opacity: 1; transform: translateY(0); }
+    .rank-card.loading-rank .rank-percent { opacity: .4; animation: pulse 1s infinite; }
+
+    .rank-trophy { font-size: 1.8rem; flex-shrink: 0; }
+    .rank-info   { flex: 1; }
+    .rank-mode-label { font-size: 0.66rem; color: #444; letter-spacing: 1px; text-transform: uppercase; }
+    .rank-percent    { font-size: 1.4rem; font-weight: 900; color: #f5c518; line-height: 1.2; }
+    .rank-percent span { font-size: 0.9rem; font-weight: 400; color: #888; }
+    .rank-total      { font-size: 0.7rem; color: #444; margin-top: 2px; }
+
+    .rank-bar-wrap {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+    }
+    .rank-bar-bg {
+      width: 70px; height: 6px;
+      background: #1e1e40;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .rank-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #f5c518, #ff9800);
+      border-radius: 3px;
+      transition: width .8s ease;
+    }
+    .rank-login-prompt {
+      font-size: 0.75rem;
+      color: #333;
+      cursor: pointer;
+      transition: color .2s;
+    }
+    .rank-login-prompt:hover { color: #f5c518; }
+
+    /* ══ 점수 행 ══ */
+    .score-row { display: flex; gap: 18px; font-size: 0.82rem; color: #555; }
+    .score-row span { display: flex; align-items: center; gap: 5px; }
+    .score-row b    { color: #ccc; font-size: 0.9rem; }
+
+    /* ══ 상태 텍스트 ══ */
+    .status { font-size: 0.9rem; color: #666; min-height: 20px; text-align: center; transition: color .2s; }
+    .status.correct { color: #4caf50; font-weight: 700; font-size: 0.98rem; }
+    .status.wrong   { color: #f44336; }
+    .status.hint    { color: #ff9800; }
+
+    /* ══ 입력 행 ══ */
+    .input-row { display: flex; gap: 9px; width: 100%; }
+    input[type="text"] {
+      flex: 1; padding: 11px 16px; border-radius: 12px;
+      border: 2px solid #1e1e40; background: #0a0a20;
+      color: #fff; font-size: 1rem; outline: none; transition: border-color .2s;
+    }
+    input[type="text"]:focus    { border-color: #f5c518; }
+    input[type="text"]:disabled { opacity: .4; }
+
+    button {
+      padding: 10px 17px; border-radius: 12px; border: none;
+      cursor: pointer; font-size: 0.88rem; font-weight: 700;
+      transition: transform .1s, background .15s;
+    }
+    button:active   { transform: scale(.96); }
+    button:disabled { opacity: .4; cursor: not-allowed; }
+
+    .btn-primary { background: #f5c518; color: #0d0d1a; }
+    .btn-primary:hover:not(:disabled) { background: #ffd740; }
+
+    .btn-outline {
+      width: 100%; background: #0d0d1a; color: #f5c518;
+      border: 2px solid #f5c518; padding: 12px; font-size: 0.9rem;
+    }
+    .btn-outline:hover:not(:disabled) { background: #f5c518; color: #0d0d1a; }
+
+    .btn-ghost {
+      width: 100%; background: transparent; color: #ff9800;
+      border: 2px solid #2a1a00; padding: 9px; font-size: 0.82rem;
+    }
+    .btn-ghost:hover:not(:disabled) { border-color: #ff9800; }
+
+    .btn-danger {
+      width: 100%; background: transparent; color: #f44336;
+      border: 2px solid #2a0a0a; padding: 9px; font-size: 0.82rem;
+    }
+    .btn-danger:hover:not(:disabled) { border-color: #f44336; }
+
+    /* ══ 이름 공개 ══ */
+    .name-revealed {
+      font-size: 1.35rem; font-weight: 700; color: #f5c518;
+      letter-spacing: 1px; opacity: 0; transition: opacity .45s; min-height: 1.7rem;
+    }
+    .name-revealed.show { opacity: 1; }
+    .pokemon-number     { color: #333; font-size: 0.78rem; }
+
+    /* ══ 색종이 ══ */
+    .confetti-wrapper { position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 999; }
+    .confetti-piece   { position: absolute; animation: fall linear forwards; }
+    @keyframes fall {
+      0%   { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+    }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+    /* ══ 바코드 퀴즈 ══ */
+    .pokemon-container {
+      position: relative; width: 240px; height: 240px;
+      display: flex; align-items: center; justify-content: center;
+      background: #0a0a18; border-radius: 16px; overflow: hidden;
+    }
+    canvas { width: 220px; height: 220px; display: block; }
+    .scan-line {
+      position: absolute; left: 0; right: 0; height: 2px;
+      background: rgba(245,197,24,.35); animation: scan 2.5s linear infinite;
+      pointer-events: none; display: none;
+    }
+    .scan-line.active { display: block; }
+    @keyframes scan { 0%{top:0} 100%{top:100%} }
+    .loading-text { position: absolute; color: #555; font-size: 0.88rem; animation: pulse 1.2s infinite; }
+    .barcode-label {
+      position: absolute; bottom: 6px; left: 50%; transform: translateX(-50%);
+      display: flex; gap: 1px; opacity: .22; pointer-events: none;
+    }
+    .barcode-label span { display: block; width: 2px; background: #f5c518; }
+
+    /* ══ 기술 맞추기 ══ */
+    .diff-selector { display: flex; gap: 8px; width: 100%; }
+    .diff-btn {
+      flex: 1; padding: 11px 6px; border-radius: 12px;
+      border: 2px solid #1e1e40; background: #0a0a20; color: #555;
+      font-size: 0.85rem; font-weight: 700; cursor: pointer; transition: all .18s; text-align: center;
+    }
+    .diff-btn:hover { border-color: #f5c518; color: #f5c518; }
+    .diff-btn.selected { background: #f5c518; color: #0d0d1a; border-color: #f5c518; }
+    .diff-btn .diff-label { font-size: 0.95rem; }
+    .diff-btn .diff-sub   { font-size: 0.67rem; font-weight: 400; margin-top: 3px; opacity: .8; }
+
+    .move-info-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 9px; width: 100%; }
+    .move-info-card {
+      background: #0a0a20; border: 1px solid #1e1e40; border-radius: 12px;
+      padding: 10px; display: flex; flex-direction: column; align-items: center; gap: 4px;
+    }
+    .mic-label { font-size: 0.65rem; color: #555; letter-spacing: 1px; text-transform: uppercase; }
+    .mic-value { font-size: 1.05rem; font-weight: 700; color: #eee; }
+    .mic-value.hidden-val { color: #2a2a4a; font-size: 1.2rem; letter-spacing: 2px; }
+
+    .type-badge {
+      display: inline-block; padding: 3px 11px; border-radius: 20px;
+      font-size: 0.85rem; font-weight: 700; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,.4);
+    }
+    .dmg-badge { display: inline-block; padding: 3px 10px; border-radius: 8px; font-size: 0.8rem; font-weight: 700; }
+    .dmg-physical { background: #c03028; color: #fff; }
+    .dmg-special  { background: #7038f8; color: #fff; }
+    .dmg-status   { background: #6890f0; color: #fff; }
+
+    .move-desc-card {
+      background: #0a0a20; border: 1px solid #1e1e40; border-radius: 12px;
+      padding: 13px 15px; width: 100%; font-size: 0.86rem; color: #aaa; line-height: 1.65;
+    }
+    .move-desc-label { font-size: 0.65rem; color: #444; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 5px; }
+
+    .active-diff-badge { font-size: 0.75rem; padding: 3px 11px; border-radius: 20px; font-weight: 700; }
+    .diff-easy   { background: rgba(76,175,80,.18);  color: #4caf50; border: 1px solid #4caf50; }
+    .diff-normal { background: rgba(245,197,24,.12); color: #f5c518; border: 1px solid #f5c518; }
+    .diff-hard   { background: rgba(244,67,54,.15);  color: #f44336; border: 1px solid #f44336; }
+
+    .move-header { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+    .divider     { width: 100%; height: 1px; background: #1e1e40; }
+  </style>
+</head>
+<body>
+
+<!-- ══ 상단 인증 바 ══ -->
+<div class="auth-bar">
+  <!-- 로그인 전 -->
+  <div id="auth-loggedout">
+    <button class="btn-login-top" onclick="openLoginModal()">
+      <svg width="16" height="16" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.08 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.36-8.16 2.36-6.26 0-11.57-3.59-13.46-8.83l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+      구글로 로그인
+    </button>
+  </div>
+  <!-- 로그인 후 -->
+  <div id="auth-loggedin" class="user-chip" style="display:none">
+    <img id="user-photo" class="user-photo" src="" alt="">
+    <span id="user-name" class="user-name"></span>
+    <button class="btn-logout" onclick="fbSignOut()">로그아웃</button>
+  </div>
+</div>
+
+<!-- ══ 로그인 모달 ══ -->
+<div id="login-modal" class="modal-overlay" style="display:none" onclick="closeLoginModalBg(event)">
+  <div class="modal">
+    <div class="modal-icon">🎮</div>
+    <div class="modal-title">로그인</div>
+    <div class="modal-sub">구글 계정으로 로그인하면<br>점수가 저장되고 <b style="color:#f5c518">랭킹</b>을 확인할 수 있어요!</div>
+
+    <div id="firebase-setup-notice" class="setup-notice" style="display:none">
+      <b>⚠️ Firebase 설정 필요</b>
+      이 기능을 사용하려면 Firebase 프로젝트를 연결해야 합니다.<br>
+      HTML 파일 하단 스크립트의 <code>FIREBASE_CONFIG</code> 값을 채워주세요.
+    </div>
+
+    <button class="btn-google" id="btn-google-signin" onclick="fbSignIn()">
+      <svg class="btn-google-logo" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.08 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.36-8.16 2.36-6.26 0-11.57-3.59-13.46-8.83l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+      구글 계정으로 로그인
+    </button>
+    <button class="btn-modal-close" onclick="closeLoginModal()">닫기 (로그인 없이 플레이)</button>
+  </div>
+</div>
+
+<!-- ══ 사이트 타이틀 ══ -->
+<div class="site-title">오늘의포켓몬은뭘까용?</div>
+
+<!-- ══ 탭 네비게이션 ══ -->
+<div class="nav-tabs">
+  <button class="nav-tab active" id="tab-btn-barcode" onclick="showTab('barcode')">🎴 포켓몬 맞추기</button>
+  <button class="nav-tab"        id="tab-btn-move"    onclick="showTab('move')">⚔️ 기술 맞추기</button>
+</div>
+
+<!-- ══ 탭 1: 바코드 포켓몬 퀴즈 ══ -->
+<div id="tab-barcode" class="section">
+  <div class="card">
+    <div class="score-row">
+      <span>정답 <b id="b-score-correct">0</b></span>
+      <span>오답 <b id="b-score-wrong">0</b></span>
+      <span>연속 <b id="b-score-streak">0</b> 🔥</span>
+    </div>
+
+    <!-- 바코드 난이도 -->
+    <div class="diff-selector">
+      <button class="diff-btn" id="b-diff-easy" onclick="bSetDifficulty('easy')">
+        <div class="diff-label">쉬움</div>
+        <div class="diff-sub">가로선 8줄</div>
+      </button>
+      <button class="diff-btn selected" id="b-diff-normal" onclick="bSetDifficulty('normal')">
+        <div class="diff-label">보통</div>
+        <div class="diff-sub">가로선 4줄</div>
+      </button>
+      <button class="diff-btn" id="b-diff-hard" onclick="bSetDifficulty('hard')">
+        <div class="diff-label">어려움</div>
+        <div class="diff-sub">가로선 1줄</div>
+      </button>
+    </div>
+
+    <div class="pokemon-container">
+      <div class="loading-text" id="b-loading">불러오는 중...</div>
+      <canvas id="pokemon-canvas" width="220" height="220" style="display:none"></canvas>
+      <div class="scan-line" id="scan-line"></div>
+      <div class="barcode-label" id="barcode-label"></div>
+    </div>
+
+    <div class="pokemon-number" id="b-pokemon-number"></div>
+    <div class="name-revealed"  id="b-name-revealed"></div>
+    <div class="status"         id="b-status">이름을 입력하고 확인 버튼을 누르세요</div>
+
+    <!-- 랭킹 카드 -->
+    <div class="rank-card" id="b-rank-card">
+      <div class="rank-trophy">🏆</div>
+      <div class="rank-info">
+        <div class="rank-mode-label">포켓몬 맞추기 랭킹</div>
+        <div class="rank-percent" id="b-rank-percent">—</div>
+        <div class="rank-total"   id="b-rank-total"></div>
+      </div>
+      <div class="rank-bar-wrap">
+        <div class="rank-bar-bg"><div class="rank-bar-fill" id="b-rank-bar" style="width:0%"></div></div>
+        <div class="rank-login-prompt" id="b-rank-login" onclick="openLoginModal()" style="display:none">로그인하면 랭킹을 확인할 수 있어요 →</div>
+      </div>
+    </div>
+
+    <div class="input-row">
+      <input type="text" id="b-guess-input" placeholder="포켓몬 이름 입력..." autocomplete="off" />
+      <button class="btn-primary" id="b-btn-guess" onclick="bCheckGuess()">확인</button>
+    </div>
+
+    <button class="btn-ghost"   id="b-btn-hint" onclick="bShowHint()">힌트 보기 (첫 글자)</button>
+    <button class="btn-outline" id="b-btn-next" onclick="bNextPokemon()" style="display:none">다음 포켓몬 →</button>
+  </div>
+</div>
+
+<!-- ══ 탭 2: 기술 맞추기 ══ -->
+<div id="tab-move" class="section" style="display:none">
+  <div class="card">
+    <div class="score-row">
+      <span>정답 <b id="m-score-correct">0</b></span>
+      <span>오답 <b id="m-score-wrong">0</b></span>
+      <span>연속 <b id="m-score-streak">0</b> 🔥</span>
+    </div>
+
+    <div class="divider"></div>
+
+    <div style="font-size:.75rem;color:#444;letter-spacing:1px;align-self:flex-start">DIFFICULTY</div>
+    <div class="diff-selector">
+      <button class="diff-btn selected" id="diff-easy"   onclick="setDifficulty('easy')">
+        <div class="diff-label">쉬움</div>
+        <div class="diff-sub">전체 정보</div>
+      </button>
+      <button class="diff-btn" id="diff-normal" onclick="setDifficulty('normal')">
+        <div class="diff-label">보통</div>
+        <div class="diff-sub">명중률·설명 숨김</div>
+      </button>
+      <button class="diff-btn" id="diff-hard" onclick="setDifficulty('hard')">
+        <div class="diff-label">어려움</div>
+        <div class="diff-sub">타입·위력·명중률 숨김</div>
+      </button>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="move-header">
+      <span style="font-size:.75rem;color:#444;letter-spacing:1px">MOVE INFO</span>
+      <span class="active-diff-badge" id="m-diff-badge" style="display:none"></span>
+    </div>
+
+    <div class="loading-text" id="m-loading" style="position:relative;padding:20px 0">불러오는 중...</div>
+
+    <div id="m-info-panel" style="display:none;width:100%;flex-direction:column;gap:9px">
+      <div class="move-info-grid">
+        <div class="move-info-card">
+          <span class="mic-label">타입</span>
+          <span class="mic-value" id="mv-type">—</span>
+        </div>
+        <div class="move-info-card">
+          <span class="mic-label">분류</span>
+          <span class="mic-value" id="mv-class">—</span>
+        </div>
+        <div class="move-info-card">
+          <span class="mic-label">PP</span>
+          <span class="mic-value" id="mv-pp">—</span>
+        </div>
+        <div class="move-info-card">
+          <span class="mic-label">위력</span>
+          <span class="mic-value" id="mv-power">—</span>
+        </div>
+        <div class="move-info-card">
+          <span class="mic-label">명중률</span>
+          <span class="mic-value" id="mv-accuracy">—</span>
+        </div>
+        <div class="move-info-card">
+          <span class="mic-label">첫 등장</span>
+          <span class="mic-value" id="mv-gen">—</span>
+        </div>
+      </div>
+      <div class="move-desc-card" id="mc-desc" style="display:none">
+        <div class="move-desc-label">설명</div>
+        <div id="mv-desc">—</div>
+      </div>
+    </div>
+
+    <div class="name-revealed" id="m-name-revealed"></div>
+    <div class="status"        id="m-status">난이도를 선택하고 기술 이름을 맞춰보세요</div>
+
+    <!-- 랭킹 카드 -->
+    <div class="rank-card" id="m-rank-card">
+      <div class="rank-trophy">🏆</div>
+      <div class="rank-info">
+        <div class="rank-mode-label">기술 맞추기 랭킹</div>
+        <div class="rank-percent" id="m-rank-percent">—</div>
+        <div class="rank-total"   id="m-rank-total"></div>
+      </div>
+      <div class="rank-bar-wrap">
+        <div class="rank-bar-bg"><div class="rank-bar-fill" id="m-rank-bar" style="width:0%"></div></div>
+        <div class="rank-login-prompt" id="m-rank-login" onclick="openLoginModal()" style="display:none">로그인하면 랭킹을 확인할 수 있어요 →</div>
+      </div>
+    </div>
+
+    <div class="input-row">
+      <input type="text" id="m-guess-input" placeholder="기술 이름 입력..." autocomplete="off" />
+      <button class="btn-primary" id="m-btn-guess" onclick="mCheckGuess()">확인</button>
+    </div>
+
+    <button class="btn-ghost"   id="m-btn-hint" onclick="mShowHint()">힌트 보기 (첫 글자)</button>
+    <button class="btn-danger"  id="m-btn-skip" onclick="mReveal(false)">포기하기 (정답 보기)</button>
+    <button class="btn-outline" id="m-btn-next" onclick="mNextMove()" style="display:none">다음 기술 →</button>
+  </div>
+</div>
+
+<div class="confetti-wrapper" id="confetti-wrapper"></div>
+
+<script>
+/* ═══════════════════════════════════════════════════════════
+   ▼ Firebase 설정 ─ 아래 값을 본인의 Firebase 프로젝트로 교체하세요
+   설정 방법: https://console.firebase.google.com/
+   1) 프로젝트 생성 → 웹 앱 추가 → 아래 값 붙여넣기
+   2) Authentication → 로그인 방법 → Google 활성화
+   3) Firestore Database → 프로덕션 모드로 생성
+   4) Firestore 규칙:
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.uid == userId;
+═══════════════════════════════════════════════════════════ */
+const FIREBASE_CONFIG = {
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
+};
+
+/* ═══════════════════════════════════════════════════════════
+   Firebase 초기화
+═══════════════════════════════════════════════════════════ */
+let db = null, auth = null, currentUser = null;
+const fbReady = FIREBASE_CONFIG.apiKey !== '';
+
+if (fbReady) {
+  try {
+    firebase.initializeApp(FIREBASE_CONFIG);
+    auth = firebase.auth();
+    db   = firebase.firestore();
+
+    auth.onAuthStateChanged(user => {
+      currentUser = user;
+      if (user) {
+        document.getElementById('auth-loggedout').style.display = 'none';
+        document.getElementById('auth-loggedin').style.display  = 'flex';
+        document.getElementById('user-photo').src  = user.photoURL || '';
+        document.getElementById('user-name').textContent = user.displayName || user.email;
+        // Firestore에 유저 등록/업데이트
+        db.collection('users').doc(user.uid).set({
+          name: user.displayName || '',
+          email: user.email || '',
+          photo: user.photoURL || '',
+          lastSeen: firebase.firestore.FieldValue.serverTimestamp()
+        }, { merge: true });
+        // 일별 방문 기록 (관리자 통계용)
+        const _today = new Date().toISOString().slice(0,10);
+        db.collection('daily').doc(_today).collection('visitors').doc(user.uid)
+          .set({ name: user.displayName||'', ts: firebase.firestore.FieldValue.serverTimestamp() })
+          .catch(()=>{});
+      } else {
+        document.getElementById('auth-loggedout').style.display = 'flex';
+        document.getElementById('auth-loggedin').style.display  = 'none';
+      }
+    });
+  } catch(e) {
+    console.warn('Firebase init error:', e);
+  }
+}
+
+function openLoginModal() {
+  document.getElementById('login-modal').style.display = 'flex';
+  if (!fbReady) {
+    document.getElementById('firebase-setup-notice').style.display = 'block';
+    document.getElementById('btn-google-signin').disabled = true;
+  }
+}
+function closeLoginModal()        { document.getElementById('login-modal').style.display = 'none'; }
+function closeLoginModalBg(e)     { if (e.target === document.getElementById('login-modal')) closeLoginModal(); }
+
+async function fbSignIn() {
+  if (!fbReady || !auth) return;
+  try {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    await auth.signInWithPopup(provider);
+    closeLoginModal();
+  } catch(e) { console.warn('Sign in error:', e); }
+}
+
+async function fbSignOut() {
+  if (!auth) return;
+  await auth.signOut();
+}
+
+/* 점수를 Firestore에 업데이트하고 랭킹 반환 */
+async function fbUpdateAndShowRank(mode, correct, wrong) {
+  const rankCard    = document.getElementById(`${mode[0]}-rank-card`);
+  const percentEl   = document.getElementById(`${mode[0]}-rank-percent`);
+  const totalEl     = document.getElementById(`${mode[0]}-rank-total`);
+  const barEl       = document.getElementById(`${mode[0]}-rank-bar`);
+  const loginPrompt = document.getElementById(`${mode[0]}-rank-login`);
+
+  // 랭킹 카드 표시 (로그인 여부와 무관하게 카드는 보여줌)
+  rankCard.classList.add('show', 'loading-rank');
+  loginPrompt.style.display = 'none';
+
+  if (!fbReady || !currentUser || !db) {
+    // 로그인 안된 경우
+    percentEl.innerHTML = '—';
+    totalEl.textContent  = '';
+    barEl.style.width    = '0%';
+    loginPrompt.style.display = 'block';
+    rankCard.classList.remove('loading-rank');
+    return;
+  }
+
+  const field = mode + '_correct'; // 'pokemon_correct' or 'move_correct'
+  try {
+    // 1) 내 점수 저장 (정답 + 오답 + lastSeen)
+    await db.collection('users').doc(currentUser.uid).set(
+      { [field]: correct, [mode + '_wrong']: wrong||0, lastSeen: firebase.firestore.FieldValue.serverTimestamp() },
+      { merge: true }
+    );
+
+    // 2) 나보다 낮은 점수 유저 수 & 전체 유저 수
+    const [belowSnap, totalSnap] = await Promise.all([
+      db.collection('users').where(field, '<', correct).get(),
+      db.collection('users').get()
+    ]);
+
+    const below = belowSnap.size;
+    const total = totalSnap.size;
+
+    if (total <= 1) {
+      percentEl.innerHTML  = `1위 <span>🥇</span>`;
+      totalEl.textContent  = '첫 번째 플레이어!';
+      barEl.style.width    = '100%';
+    } else {
+      const topPct = Math.ceil(((total - below) / total) * 100);
+      percentEl.innerHTML  = `상위 <b style="font-size:1.6rem">${topPct}</b>%`;
+      totalEl.textContent  = `전체 ${total}명 기준`;
+      barEl.style.width    = Math.max(4, 100 - topPct) + '%';
+    }
+  } catch(e) {
+    console.warn('Rank error:', e);
+    percentEl.innerHTML  = '—';
+    totalEl.textContent  = '랭킹 불러오기 실패';
+  }
+
+  rankCard.classList.remove('loading-rank');
+}
+
+/* ═══════════════════════════════════════════════════════════
+   공통 유틸
+═══════════════════════════════════════════════════════════ */
+function normalize(s) {
+  return s.toLowerCase().replace(/[\s\-\.·]/g,'').replace(/♂/g,'m').replace(/♀/g,'f');
+}
+
+function launchConfetti() {
+  const wrapper = document.getElementById('confetti-wrapper');
+  wrapper.innerHTML = '';
+  const colors = ['#f5c518','#4caf50','#2196f3','#e91e63','#ff9800','#9c27b0','#00bcd4'];
+  for (let i = 0; i < 90; i++) {
+    const el = document.createElement('div');
+    el.className = 'confetti-piece';
+    el.style.cssText = `left:${Math.random()*100}vw;top:-12px;background:${colors[i%colors.length]};
+      width:${Math.random()*9+5}px;height:${Math.random()*9+5}px;
+      border-radius:${Math.random()>.5?'50%':'3px'};
+      animation-duration:${Math.random()*2+1.4}s;
+      animation-delay:${Math.random()*.6}s`;
+    wrapper.appendChild(el);
+  }
+  setTimeout(() => { wrapper.innerHTML = ''; }, 3200);
+}
+
+function hideRankCard(prefix) {
+  const card = document.getElementById(`${prefix}-rank-card`);
+  card.classList.remove('show');
+}
+
+function showTab(name) {
+  document.getElementById('tab-barcode').style.display = name === 'barcode' ? '' : 'none';
+  document.getElementById('tab-move').style.display    = name === 'move'    ? '' : 'none';
+  document.getElementById('tab-btn-barcode').className = 'nav-tab' + (name==='barcode'?' active':'');
+  document.getElementById('tab-btn-move').className    = 'nav-tab' + (name==='move'?' active':'');
+}
+
+/* ═══════════════════════════════════════════════════════════
+   탭1: 바코드 포켓몬 퀴즈
+═══════════════════════════════════════════════════════════ */
+const TOTAL_POKEMON = 1025;
+const BG_COLOR = '#0a0a18';
+// 난이도별 가로선 수 / 선 두께
+const BARCODE_DIFF = {
+  easy:   { strips: 8, stripH: 5 },
+  normal: { strips: 4, stripH: 4 },
+  hard:   { strips: 1, stripH: 3 }
+};
+let bDifficulty = 'normal';
+
+let bPokemon = null, bKoName = '', bEnName = '', bRevealed = false, bLoadedImg = null;
+let bScoreC = parseInt(localStorage.getItem('bc')||'0');
+let bScoreW = parseInt(localStorage.getItem('bw')||'0');
+let bScoreS = parseInt(localStorage.getItem('bs')||'0');
+
+function bUpdateScore() {
+  document.getElementById('b-score-correct').textContent = bScoreC;
+  document.getElementById('b-score-wrong').textContent   = bScoreW;
+  document.getElementById('b-score-streak').textContent  = bScoreS;
+  localStorage.setItem('bc',bScoreC); localStorage.setItem('bw',bScoreW); localStorage.setItem('bs',bScoreS);
+}
+bUpdateScore();
+
+// numStrips개의 가로선을 이미지 높이에 균등 배분하여 그림
+function drawStrips(img, numStrips, stripH) {
+  const cv = document.getElementById('pokemon-canvas'), ctx = cv.getContext('2d');
+  const H = cv.height, W = cv.width;
+  ctx.fillStyle = BG_COLOR;
+  ctx.fillRect(0, 0, W, H);
+  const segH = H / numStrips;
+  for (let i = 0; i < numStrips; i++) {
+    const y = Math.round(i * segH + (segH - stripH) / 2);
+    const sy = Math.max(0, Math.min(H - stripH, y));
+    ctx.drawImage(img, 0, sy, W, stripH, 0, sy, W, stripH);
+  }
+}
+
+// 공개 시: 선 두께를 점점 늘려 전체 이미지를 채움
+function animateReveal(img) {
+  const cfg = BARCODE_DIFF[bDifficulty];
+  const cv  = document.getElementById('pokemon-canvas'), ctx = cv.getContext('2d');
+  const segH = cv.height / cfg.strips;
+  let sh = cfg.stripH;
+  (function frame() {
+    sh += 2.2;
+    if (sh >= segH) {
+      ctx.clearRect(0, 0, cv.width, cv.height);
+      ctx.drawImage(img, 0, 0, cv.width, cv.height);
+      return;
+    }
+    drawStrips(img, cfg.strips, sh);
+    requestAnimationFrame(frame);
+  })();
+}
+
+function bSetDifficulty(d) {
+  bDifficulty = d;
+  ['easy','normal','hard'].forEach(x => {
+    document.getElementById('b-diff-' + x).className = 'diff-btn' + (x === d ? ' selected' : '');
+  });
+  // 현재 포켓몬이 로드된 상태면 즉시 재렌더
+  if (bLoadedImg && !bRevealed) {
+    const cfg = BARCODE_DIFF[d];
+    drawStrips(bLoadedImg, cfg.strips, cfg.stripH);
+  }
+}
+
+function renderBarcodeDecoration() {
+  const el = document.getElementById('barcode-label');
+  el.innerHTML = '';
+  for (let i=0;i<28;i++) {
+    const s = document.createElement('span');
+    s.style.height = (4+Math.floor(Math.random()*10))+'px';
+    s.style.width  = (Math.random()>.4?2:1)+'px';
+    el.appendChild(s);
+  }
+}
+
+async function bLoadPokemon() {
+  bRevealed = false; bLoadedImg = null; bKoName = ''; bEnName = '';
+  const cv = document.getElementById('pokemon-canvas');
+  cv.style.display = 'none';
+  document.getElementById('b-loading').style.display = 'block';
+  document.getElementById('b-status').textContent = '이름을 입력하고 확인 버튼을 누르세요';
+  document.getElementById('b-status').className   = 'status';
+  document.getElementById('b-guess-input').value   = '';
+  document.getElementById('b-guess-input').disabled = false;
+  document.getElementById('b-btn-guess').disabled  = false;
+  document.getElementById('b-btn-next').style.display = 'none';
+  document.getElementById('b-btn-hint').style.display = 'block';
+  document.getElementById('b-btn-hint').disabled      = false;
+  document.getElementById('b-name-revealed').textContent = '';
+  document.getElementById('b-name-revealed').className   = 'name-revealed';
+  document.getElementById('scan-line').className = 'scan-line';
+  hideRankCard('b');
+
+  let pokemonData, speciesId;
+  while (true) {
+    const id = Math.floor(Math.random()*TOTAL_POKEMON)+1;
+    try {
+      const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+      if (!res.ok) continue;
+      pokemonData = await res.json();
+      const art = pokemonData.sprites.other?.['official-artwork']?.front_default || pokemonData.sprites.front_default;
+      if (!art) continue;
+      speciesId = pokemonData.species.url.split('/').filter(Boolean).pop();
+      document.getElementById('b-pokemon-number').textContent = `#${String(id).padStart(4,'0')}`;
+      break;
+    } catch { continue; }
+  }
+  try {
+    const sd = await (await fetch(`https://pokeapi.co/api/v2/pokemon-species/${speciesId}`)).json();
+    bKoName = sd.names.find(n=>n.language.name==='ko')?.name || '';
+    bEnName = (sd.names.find(n=>n.language.name==='en')?.name || pokemonData.name).toLowerCase();
+  } catch { bEnName = pokemonData.name.toLowerCase(); }
+
+  bPokemon = pokemonData;
+  const img = new Image(); img.crossOrigin = 'anonymous';
+  img.onload = () => {
+    bLoadedImg = img;
+    document.getElementById('b-loading').style.display = 'none';
+    cv.style.display = 'block';
+    const cfg = BARCODE_DIFF[bDifficulty];
+    drawStrips(img, cfg.strips, cfg.stripH);
+    document.getElementById('scan-line').className = 'scan-line active';
+    renderBarcodeDecoration();
+  };
+  img.onerror = () => { document.getElementById('b-loading').textContent='재시도...'; setTimeout(bLoadPokemon,800); };
+  img.src = pokemonData.sprites.other?.['official-artwork']?.front_default || pokemonData.sprites.front_default;
+}
+
+function bCheckGuess() {
+  if (bRevealed || !bPokemon) return;
+  const input = document.getElementById('b-guess-input');
+  const guess = input.value.trim(); if (!guess) return;
+  if (normalize(guess)===normalize(bKoName) || (bEnName&&normalize(guess)===normalize(bEnName))) {
+    bReveal(true);
+  } else {
+    bScoreW++; bScoreS=0; bUpdateScore();
+    document.getElementById('b-status').textContent = `"${guess}" 은(는) 틀렸습니다!`;
+    document.getElementById('b-status').className   = 'status wrong';
+    input.value=''; input.focus();
+    const cv = document.getElementById('pokemon-canvas');
+    cv.style.transition='none'; cv.style.transform='translateX(-7px)';
+    setTimeout(()=>{cv.style.transform='translateX(7px)';},80);
+    setTimeout(()=>{cv.style.transform='translateX(-4px)';},160);
+    setTimeout(()=>{cv.style.transform='translateX(0)';cv.style.transition='';},240);
+  }
+}
+
+function bReveal(isCorrect) {
+  bRevealed = true;
+  document.getElementById('scan-line').className = 'scan-line';
+  document.getElementById('b-guess-input').disabled = true;
+  document.getElementById('b-btn-guess').disabled   = true;
+  document.getElementById('b-btn-hint').style.display = 'none';
+  document.getElementById('b-btn-next').style.display = 'block';
+  const displayName = bKoName || bEnName;
+  const nameEl = document.getElementById('b-name-revealed');
+  nameEl.textContent = displayName;
+  setTimeout(()=>nameEl.classList.add('show'), 80);
+  animateReveal(bLoadedImg);
+  if (isCorrect) {
+    bScoreC++; bScoreS++; bUpdateScore();
+    document.getElementById('b-status').textContent = `정답! 🎉 ${displayName}`;
+    document.getElementById('b-status').className   = 'status correct';
+    launchConfetti();
+    fbUpdateAndShowRank('pokemon', bScoreC, bScoreW);
+  } else {
+    document.getElementById('b-status').textContent = `정답: ${displayName}`;
+    document.getElementById('b-status').className   = 'status hint';
+  }
+}
+
+function bShowHint() {
+  if (bRevealed||!bKoName) return;
+  document.getElementById('b-status').textContent = `힌트: ${bKoName[0]}${'＿'.repeat(bKoName.length-1)}  (${bKoName.length}글자)`;
+  document.getElementById('b-status').className   = 'status hint';
+  document.getElementById('b-btn-hint').disabled  = true;
+}
+function bNextPokemon() { bLoadPokemon(); }
+document.getElementById('b-guess-input').addEventListener('keydown', e=>{ if(e.key==='Enter') bCheckGuess(); });
+
+/* ═══════════════════════════════════════════════════════════
+   탭2: 기술 맞추기
+═══════════════════════════════════════════════════════════ */
+const TOTAL_MOVES = 850;
+const TYPE_KO = { normal:'노말',fire:'불꽃',water:'물',electric:'전기',grass:'풀',ice:'얼음',
+  fighting:'격투',poison:'독',ground:'땅',flying:'비행',psychic:'에스퍼',bug:'벌레',
+  rock:'바위',ghost:'고스트',dragon:'드래곤',dark:'악',steel:'강철',fairy:'페어리' };
+const TYPE_COLOR = { normal:'#9099A1',fire:'#F08030',water:'#6890F0',electric:'#F8D030',
+  grass:'#78C850',ice:'#98D8D8',fighting:'#C03028',poison:'#A040A0',ground:'#E0C068',
+  flying:'#A890F0',psychic:'#F85888',bug:'#A8B820',rock:'#B8A038',ghost:'#705898',
+  dragon:'#7038F8',dark:'#705848',steel:'#B8B8D0',fairy:'#EE99AC' };
+const CLASS_KO  = { physical:'물리', special:'특수', status:'변화' };
+const CLASS_CLS = { physical:'dmg-physical', special:'dmg-special', status:'dmg-status' };
+const GEN_NAME  = { 'generation-i':'1세대','generation-ii':'2세대','generation-iii':'3세대',
+  'generation-iv':'4세대','generation-v':'5세대','generation-vi':'6세대',
+  'generation-vii':'7세대','generation-viii':'8세대','generation-ix':'9세대' };
+
+const VERS_ORDER = [
+  'scarlet-violet','legends-arceus','brilliant-diamond-and-shining-pearl','sword-shield',
+  'lets-go-pikachu-lets-go-eevee','ultra-sun-ultra-moon','sun-moon',
+  'omega-ruby-alpha-sapphire','x-y','black-2-white-2','black-white',
+  'heartgold-soulsilver','platinum','diamond-pearl','emerald',
+  'firered-leafgreen','ruby-sapphire','crystal','gold-silver','red-blue','yellow'
+];
+
+function getLatestFlavorText(entries, lang) {
+  const f = (entries||[]).filter(e=>e.language.name===lang);
+  if (!f.length) return null;
+  f.sort((a,b)=>{
+    const ai=VERS_ORDER.indexOf(a.version_group?.name||''), bi=VERS_ORDER.indexOf(b.version_group?.name||'');
+    if(ai===-1&&bi===-1) return 0; if(ai===-1) return 1; if(bi===-1) return -1; return ai-bi;
+  });
+  return f[0].flavor_text.replace(/\f/g,' ');
+}
+
+const DIFF_CONFIG = {
+  easy:   { type:true,  power:true,  accuracy:true,  pp:true, desc:true  },
+  normal: { type:true,  power:true,  accuracy:false, pp:true, desc:false },
+  hard:   { type:false, power:false, accuracy:false, pp:true, desc:true  }
+};
+
+let mDifficulty='easy', mMove=null, mKoName='', mEnName='', mRevealed=false;
+let mScoreC=parseInt(localStorage.getItem('mc')||'0');
+let mScoreW=parseInt(localStorage.getItem('mw')||'0');
+let mScoreS=parseInt(localStorage.getItem('ms')||'0');
+
+function mUpdateScore() {
+  document.getElementById('m-score-correct').textContent = mScoreC;
+  document.getElementById('m-score-wrong').textContent   = mScoreW;
+  document.getElementById('m-score-streak').textContent  = mScoreS;
+  localStorage.setItem('mc',mScoreC); localStorage.setItem('mw',mScoreW); localStorage.setItem('ms',mScoreS);
+}
+mUpdateScore();
+
+function setDifficulty(d) {
+  mDifficulty=d;
+  ['easy','normal','hard'].forEach(x=>{ document.getElementById('diff-'+x).className='diff-btn'+(x===d?' selected':''); });
+  if (mMove) renderMovePanel();
+}
+
+function renderMovePanel(forceReveal) {
+  const cfg = forceReveal ? { type:true,power:true,accuracy:true,pp:true,desc:true } : DIFF_CONFIG[mDifficulty];
+  const m   = mMove;
+  const tn  = m.type.name;
+
+  // 타입
+  const typeEl = document.getElementById('mv-type');
+  if (cfg.type) {
+    typeEl.innerHTML = `<span class="type-badge" style="background:${TYPE_COLOR[tn]||'#888'}">${TYPE_KO[tn]||tn}</span>`;
+    typeEl.className = 'mic-value';
+  } else { typeEl.textContent='???'; typeEl.className='mic-value hidden-val'; }
+
+  // 분류 (항상 공개)
+  const cn=m.damage_class.name;
+  document.getElementById('mv-class').innerHTML = `<span class="dmg-badge ${CLASS_CLS[cn]||''}">${CLASS_KO[cn]||cn}</span>`;
+  document.getElementById('mv-class').className = 'mic-value';
+
+  // PP (항상 공개)
+  document.getElementById('mv-pp').textContent = m.pp ?? '—';
+  document.getElementById('mv-pp').className   = 'mic-value';
+
+  // 위력
+  const pwEl = document.getElementById('mv-power');
+  if (cfg.power) { pwEl.textContent=m.power!=null?m.power:'—'; pwEl.className='mic-value'; }
+  else           { pwEl.textContent='???'; pwEl.className='mic-value hidden-val'; }
+
+  // 명중률
+  const acEl = document.getElementById('mv-accuracy');
+  if (cfg.accuracy) { acEl.textContent=m.accuracy!=null?m.accuracy+'%':'—'; acEl.className='mic-value'; }
+  else              { acEl.textContent='???'; acEl.className='mic-value hidden-val'; }
+
+  // 첫 등장 세대 (항상 공개)
+  document.getElementById('mv-gen').textContent = GEN_NAME[m.generation?.name||''] || '—';
+
+  // 설명
+  const descCard = document.getElementById('mc-desc');
+  if (cfg.desc) {
+    const txt = getLatestFlavorText(m.flavor_text_entries,'ko')
+             || getLatestFlavorText(m.flavor_text_entries,'en')
+             || m.effect_entries?.find(e=>e.language.name==='en')?.short_effect
+             || '설명 없음';
+    document.getElementById('mv-desc').textContent = txt;
+    descCard.style.display = 'block';
+  } else { descCard.style.display='none'; }
+
+  // 난이도 배지
+  const badge = document.getElementById('m-diff-badge');
+  const bMap={easy:'쉬움',normal:'보통',hard:'어려움'}, cMap={easy:'diff-easy',normal:'diff-normal',hard:'diff-hard'};
+  badge.textContent=bMap[mDifficulty]; badge.className='active-diff-badge '+cMap[mDifficulty]; badge.style.display='';
+
+  document.getElementById('m-info-panel').style.display='flex';
+  document.getElementById('m-loading').style.display='none';
+}
+
+async function mLoadMove() {
+  mRevealed=false; mKoName=''; mEnName=''; mMove=null;
+  document.getElementById('m-loading').style.display='block';
+  document.getElementById('m-loading').textContent='불러오는 중...';
+  document.getElementById('m-info-panel').style.display='none';
+  document.getElementById('m-status').textContent='기술 정보를 보고 이름을 맞춰보세요';
+  document.getElementById('m-status').className='status';
+  document.getElementById('m-guess-input').value='';
+  document.getElementById('m-guess-input').disabled=false;
+  document.getElementById('m-btn-guess').disabled=false;
+  document.getElementById('m-btn-hint').style.display='block';
+  document.getElementById('m-btn-hint').disabled=false;
+  document.getElementById('m-btn-skip').style.display='block';
+  document.getElementById('m-btn-next').style.display='none';
+  document.getElementById('m-name-revealed').textContent='';
+  document.getElementById('m-name-revealed').className='name-revealed';
+  document.getElementById('m-diff-badge').style.display='none';
+  hideRankCard('m');
+
+  while (true) {
+    const id=Math.floor(Math.random()*TOTAL_MOVES)+1;
+    try {
+      const res=await fetch(`https://pokeapi.co/api/v2/move/${id}`);
+      if(!res.ok) continue;
+      const data=await res.json();
+      const koN=data.names.find(n=>n.language.name==='ko');
+      if(!koN) continue;
+      mKoName=koN.name;
+      mEnName=(data.names.find(n=>n.language.name==='en')?.name||data.name).toLowerCase();
+      mMove=data; break;
+    } catch { continue; }
+  }
+  renderMovePanel();
+  document.getElementById('m-guess-input').focus();
+}
+
+function mCheckGuess() {
+  if (mRevealed||!mMove) return;
+  const input=document.getElementById('m-guess-input');
+  const guess=input.value.trim(); if(!guess) return;
+  const g=normalize(guess);
+  if (g===normalize(mKoName)||(mEnName&&g===normalize(mEnName))) {
+    mReveal(true);
+  } else {
+    mScoreW++; mScoreS=0; mUpdateScore();
+    document.getElementById('m-status').textContent=`"${guess}" 은(는) 틀렸습니다!`;
+    document.getElementById('m-status').className='status wrong';
+    input.value=''; input.focus();
+    const panel=document.getElementById('m-info-panel');
+    panel.style.transition='none'; panel.style.transform='translateX(-6px)';
+    setTimeout(()=>{panel.style.transform='translateX(6px)';},70);
+    setTimeout(()=>{panel.style.transform='translateX(-3px)';},140);
+    setTimeout(()=>{panel.style.transform='translateX(0)';panel.style.transition='';},210);
+  }
+}
+
+function mReveal(isCorrect) {
+  mRevealed=true;
+  document.getElementById('m-guess-input').disabled=true;
+  document.getElementById('m-btn-guess').disabled=true;
+  document.getElementById('m-btn-hint').style.display='none';
+  document.getElementById('m-btn-skip').style.display='none';
+  document.getElementById('m-btn-next').style.display='block';
+  renderMovePanel(true); // 모든 정보 공개
+  const displayName=mKoName||mEnName;
+  const nameEl=document.getElementById('m-name-revealed');
+  nameEl.textContent=displayName;
+  setTimeout(()=>nameEl.classList.add('show'),80);
+  if (isCorrect) {
+    mScoreC++; mScoreS++; mUpdateScore();
+    document.getElementById('m-status').textContent=`정답! 🎉 ${displayName}`;
+    document.getElementById('m-status').className='status correct';
+    launchConfetti();
+    fbUpdateAndShowRank('move', mScoreC, mScoreW);
+  } else {
+    document.getElementById('m-status').textContent=`정답: ${displayName}`;
+    document.getElementById('m-status').className='status hint';
+  }
+}
+
+function mShowHint() {
+  if(mRevealed||!mKoName) return;
+  document.getElementById('m-status').textContent=`힌트: ${mKoName[0]}${'＿'.repeat(mKoName.length-1)}  (${mKoName.length}글자)`;
+  document.getElementById('m-status').className='status hint';
+  document.getElementById('m-btn-hint').disabled=true;
+}
+function mNextMove() { mLoadMove(); }
+document.getElementById('m-guess-input').addEventListener('keydown',e=>{ if(e.key==='Enter') mCheckGuess(); });
+
+/* ══ 초기화 ══ */
+bLoadPokemon();
+mLoadMove();
+</script>
+</body>
+</html>
