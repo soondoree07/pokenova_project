@@ -404,6 +404,7 @@
       padding: 13px 15px; width: 100%; font-size: 0.86rem; color: #aaa; line-height: 1.65;
     }
     .move-desc-label { font-size: 0.65rem; color: #444; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 5px; }
+    .move-discontinued { font-size: 0.75rem; color: #f87171; margin-top: 8px; padding-top: 8px; border-top: 1px solid #2a1a1a; }
 
     .active-diff-badge { font-size: 0.75rem; padding: 3px 11px; border-radius: 20px; font-weight: 700; }
     .diff-easy   { background: rgba(76,175,80,.18);  color: #4caf50; border: 1px solid #4caf50; }
@@ -603,6 +604,7 @@
       <div class="move-desc-card" id="mc-desc" style="display:none">
         <div class="move-desc-label">설명</div>
         <div id="mv-desc">—</div>
+        <div id="mv-discontinued" class="move-discontinued" style="display:none"></div>
       </div>
     </div>
 
@@ -1084,15 +1086,45 @@ const VERS_ORDER = [
   'heartgold-soulsilver','platinum','diamond-pearl','emerald',
   'firered-leafgreen','ruby-sapphire','crystal','gold-silver','red-blue','yellow'
 ];
+const VERS_TO_GEN = {
+  'scarlet-violet':9,
+  'legends-arceus':8,'brilliant-diamond-and-shining-pearl':8,'sword-shield':8,
+  'lets-go-pikachu-lets-go-eevee':7,'ultra-sun-ultra-moon':7,'sun-moon':7,
+  'omega-ruby-alpha-sapphire':6,'x-y':6,
+  'black-2-white-2':5,'black-white':5,
+  'heartgold-soulsilver':4,'platinum':4,'diamond-pearl':4,
+  'emerald':3,'firered-leafgreen':3,'ruby-sapphire':3,
+  'crystal':2,'gold-silver':2,
+  'red-blue':1,'yellow':1
+};
 
-function getLatestFlavorText(entries, lang) {
+function sortFlavorEntries(entries, lang) {
   const f = (entries||[]).filter(e=>e.language.name===lang);
-  if (!f.length) return null;
-  f.sort((a,b)=>{
+  if (!f.length) return [];
+  return f.sort((a,b)=>{
     const ai=VERS_ORDER.indexOf(a.version_group?.name||''), bi=VERS_ORDER.indexOf(b.version_group?.name||'');
     if(ai===-1&&bi===-1) return 0; if(ai===-1) return 1; if(bi===-1) return -1; return ai-bi;
   });
-  return f[0].flavor_text.replace(/\f/g,' ');
+}
+
+function isDiscontinuedText(txt) {
+  return /사용할 수 없|can'?t be used|cannot be used/i.test(txt);
+}
+
+// { text, isDiscontinued, lastGen } 반환. 없으면 null.
+function getMoveFlavorInfo(entries, lang) {
+  const sorted = sortFlavorEntries(entries, lang);
+  if (!sorted.length) return null;
+  const latestTxt = sorted[0].flavor_text.replace(/\f/g,' ');
+  if (!isDiscontinuedText(latestTxt)) {
+    return { text: latestTxt, isDiscontinued: false, lastGen: null };
+  }
+  // 사라진 기술 — 마지막 정상 설명 찾기
+  const validEntries = sorted.filter(e => !isDiscontinuedText(e.flavor_text));
+  if (!validEntries.length) return { text: latestTxt, isDiscontinued: true, lastGen: null };
+  const lastEntry = validEntries[0];
+  const lastGen = VERS_TO_GEN[lastEntry.version_group?.name||''] || null;
+  return { text: lastEntry.flavor_text.replace(/\f/g,' '), isDiscontinued: true, lastGen };
 }
 
 const DIFF_CONFIG = {
@@ -1157,11 +1189,22 @@ function renderMovePanel(forceReveal) {
   // 설명
   const descCard = document.getElementById('mc-desc');
   if (cfg.desc) {
-    const txt = getLatestFlavorText(m.flavor_text_entries,'ko')
-             || getLatestFlavorText(m.flavor_text_entries,'en')
+    const info = getMoveFlavorInfo(m.flavor_text_entries,'ko')
+              || getMoveFlavorInfo(m.flavor_text_entries,'en')
+              || null;
+    const txt = info?.text
              || m.effect_entries?.find(e=>e.language.name==='en')?.short_effect
              || '설명 없음';
     document.getElementById('mv-desc').textContent = txt;
+    const noticeEl = document.getElementById('mv-discontinued');
+    if (info?.isDiscontinued) {
+      noticeEl.textContent = info.lastGen
+        ? `⚠ ${info.lastGen}세대까지 등장한 기술 · 현재는 사용불가한 기술입니다.`
+        : '⚠ 현재는 사용불가한 기술입니다.';
+      noticeEl.style.display = '';
+    } else {
+      noticeEl.style.display = 'none';
+    }
     descCard.style.display = 'block';
   } else { descCard.style.display='none'; }
 
