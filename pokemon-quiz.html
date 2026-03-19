@@ -1244,6 +1244,12 @@ async function mLoadMove() {
       const data=await res.json();
       const koN=data.names.find(n=>n.language.name==='ko');
       if(!koN) continue;
+      // 어려움이 아니면 사라진 기술 제외
+      if (mDifficulty !== 'hard') {
+        const info = getMoveFlavorInfo(data.flavor_text_entries,'ko')
+                  || getMoveFlavorInfo(data.flavor_text_entries,'en');
+        if (info?.isDiscontinued) continue;
+      }
       mKoName=koN.name;
       mEnName=(data.names.find(n=>n.language.name==='en')?.name||data.name).toLowerCase();
       mMove=data; break;
