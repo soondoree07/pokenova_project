@@ -371,6 +371,16 @@
     .diff-btn .diff-label { font-size: 0.95rem; }
     .diff-btn .diff-sub   { font-size: 0.67rem; font-weight: 400; margin-top: 3px; opacity: .8; }
 
+    .gen-selector { display: flex; flex-wrap: wrap; gap: 6px; width: 100%; margin-top: 8px; }
+    .gen-btn {
+      padding: 7px 0; border-radius: 10px; flex: 1 0 calc(11.11% - 6px); min-width: 40px;
+      border: 2px solid #1e1e40; background: #0a0a20; color: #555;
+      font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all .18s; text-align: center;
+    }
+    .gen-btn:hover { border-color: #a78bfa; color: #a78bfa; }
+    .gen-btn.selected { background: #a78bfa; color: #0d0d1a; border-color: #a78bfa; }
+    .gen-btn.all-btn { flex: 1 0 100%; font-size: 0.85rem; padding: 8px; }
+
     .move-info-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 9px; width: 100%; }
     .move-info-card {
       background: #0a0a20; border: 1px solid #1e1e40; border-radius: 12px;
@@ -476,6 +486,20 @@
         <div class="diff-label">어려움</div>
         <div class="diff-sub">가로선 1줄</div>
       </button>
+    </div>
+
+    <!-- 세대 선택 -->
+    <div class="gen-selector" id="gen-selector">
+      <button class="gen-btn all-btn selected" id="gen-btn-all" onclick="bToggleGenAll()">전체</button>
+      <button class="gen-btn selected" id="gen-btn-1" onclick="bToggleGen(1)">1세대</button>
+      <button class="gen-btn selected" id="gen-btn-2" onclick="bToggleGen(2)">2세대</button>
+      <button class="gen-btn selected" id="gen-btn-3" onclick="bToggleGen(3)">3세대</button>
+      <button class="gen-btn selected" id="gen-btn-4" onclick="bToggleGen(4)">4세대</button>
+      <button class="gen-btn selected" id="gen-btn-5" onclick="bToggleGen(5)">5세대</button>
+      <button class="gen-btn selected" id="gen-btn-6" onclick="bToggleGen(6)">6세대</button>
+      <button class="gen-btn selected" id="gen-btn-7" onclick="bToggleGen(7)">7세대</button>
+      <button class="gen-btn selected" id="gen-btn-8" onclick="bToggleGen(8)">8세대</button>
+      <button class="gen-btn selected" id="gen-btn-9" onclick="bToggleGen(9)">9세대</button>
     </div>
 
     <div class="pokemon-container">
@@ -796,6 +820,61 @@ function showTab(name) {
 ═══════════════════════════════════════════════════════════ */
 const TOTAL_POKEMON = 1025;
 const BG_COLOR = '#0a0a18';
+
+// 세대별 포켓몬 번호 범위
+const GEN_RANGES = {
+  1: [1,   151],
+  2: [152, 251],
+  3: [252, 386],
+  4: [387, 493],
+  5: [494, 649],
+  6: [650, 721],
+  7: [722, 809],
+  8: [810, 905],
+  9: [906, 1025]
+};
+let bSelectedGens = new Set([1,2,3,4,5,6,7,8,9]);
+
+function bGetRandomPokemonId() {
+  const ranges = [];
+  bSelectedGens.forEach(g => ranges.push(GEN_RANGES[g]));
+  const total = ranges.reduce((s, [mn, mx]) => s + (mx - mn + 1), 0);
+  let r = Math.floor(Math.random() * total);
+  for (const [mn, mx] of ranges) {
+    const size = mx - mn + 1;
+    if (r < size) return mn + r;
+    r -= size;
+  }
+  return ranges[0][0];
+}
+
+function bToggleGen(gen) {
+  if (bSelectedGens.has(gen)) {
+    if (bSelectedGens.size > 1) bSelectedGens.delete(gen);
+  } else {
+    bSelectedGens.add(gen);
+  }
+  bUpdateGenUI();
+}
+
+function bToggleGenAll() {
+  if (bSelectedGens.size === 9) {
+    // 이미 전체 선택 상태면 모두 해제 (최소 1개 유지)
+    bSelectedGens = new Set([1]);
+  } else {
+    bSelectedGens = new Set([1,2,3,4,5,6,7,8,9]);
+  }
+  bUpdateGenUI();
+}
+
+function bUpdateGenUI() {
+  const allSelected = bSelectedGens.size === 9;
+  document.getElementById('gen-btn-all').className = 'gen-btn all-btn' + (allSelected ? ' selected' : '');
+  for (let i = 1; i <= 9; i++) {
+    document.getElementById('gen-btn-' + i).className = 'gen-btn' + (bSelectedGens.has(i) ? ' selected' : '');
+  }
+}
+
 // 난이도별 가로선 수 / 선 두께
 const BARCODE_DIFF = {
   easy:   { strips: 8, stripH: 5 },
@@ -894,7 +973,7 @@ async function bLoadPokemon() {
 
   let pokemonData, speciesId;
   while (true) {
-    const id = Math.floor(Math.random()*TOTAL_POKEMON)+1;
+    const id = bGetRandomPokemonId();
     try {
       const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
       if (!res.ok) continue;
