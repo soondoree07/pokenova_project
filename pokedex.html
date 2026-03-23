@@ -351,6 +351,57 @@
     .t-강철  { background: #B7B7CE; color: #555 !important; }
     .t-페어리{ background: #D685AD; }
 
+    /* ─── FILTER BAR ─── */
+    .filter-bar {
+      background: white;
+      border-bottom: 1px solid #e8e8e8;
+      padding: 12px 24px;
+    }
+    .filter-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .filter-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .filter-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      min-width: 36px;
+      flex-shrink: 0;
+    }
+    .filter-group {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1.5px solid #ddd;
+      background: white;
+      color: #555;
+      cursor: pointer;
+      transition: all 0.12s;
+      white-space: nowrap;
+    }
+    .filter-btn:hover { border-color: #aaa; color: #333; }
+    .filter-btn.active-cat { background: #1a1a2e; color: white; border-color: #1a1a2e; }
+    .filter-btn.active-gen { background: #2563eb; color: white; border-color: #2563eb; }
+    .filter-btn.active-type { color: white; border-color: transparent; }
+
     /* ─── SECTION HEADER ─── */
     .section-divider {
       max-width: 1400px;
@@ -452,6 +503,39 @@
   </div>
 </header>
 
+<!-- ─── FILTER BAR ─── -->
+<div class="filter-bar">
+  <div class="filter-inner">
+    <div class="filter-row">
+      <span class="filter-label">분류</span>
+      <div class="filter-group" id="cat-group">
+        <button class="filter-btn active-cat" data-cat="all">전체</button>
+        <button class="filter-btn" data-cat="normal">일반</button>
+        <button class="filter-btn" data-cat="mega">메가진화</button>
+        <button class="filter-btn" data-cat="gmax">거다이맥스</button>
+      </div>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">세대</span>
+      <div class="filter-group" id="gen-group">
+        <button class="filter-btn" data-gen="1">1세대</button>
+        <button class="filter-btn" data-gen="2">2세대</button>
+        <button class="filter-btn" data-gen="3">3세대</button>
+        <button class="filter-btn" data-gen="4">4세대</button>
+        <button class="filter-btn" data-gen="5">5세대</button>
+        <button class="filter-btn" data-gen="6">6세대</button>
+        <button class="filter-btn" data-gen="7">7세대</button>
+        <button class="filter-btn" data-gen="8">8세대</button>
+        <button class="filter-btn" data-gen="9">9세대</button>
+      </div>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">타입</span>
+      <div class="filter-group" id="type-group"></div>
+    </div>
+  </div>
+</div>
+
 <!-- ─── GRID ─── -->
 <main class="grid-section">
   <div class="pokemon-grid" id="pokemon-grid">
@@ -527,6 +611,13 @@ function shadeColor(hex, p) {
 }
 function padId(id) { return 'No.' + String(id).padStart(4,'0'); }
 
+// ─── 세대 ID 범위 ───
+const GEN_RANGE = {1:[1,151],2:[152,251],3:[252,386],4:[387,493],5:[494,649],6:[650,721],7:[722,809],8:[810,905],9:[906,1025]};
+function getGen(id) {
+  for (const [g,[lo,hi]] of Object.entries(GEN_RANGE)) if (id>=lo && id<=hi) return +g;
+  return 0;
+}
+
 // ─── 실제 게임 메가진화 목록 (PokeAPI에 가짜 메가 다수 포함) ───
 const CANONICAL_MEGA = new Set([
   'venusaur-mega','charizard-mega-x','charizard-mega-y','blastoise-mega',
@@ -588,14 +679,18 @@ const GMAX_NAME_OVERRIDE = {
 const GMAX_SKIP = new Set(['toxtricity-low-key-gmax']);
 
 let DB = [], totalAll = 0;
+let activeType = null, activeGen = null, activeCat = 'all';
 
 // ─── CARD 생성 ───
 function buildCard(p) {
   const card = document.createElement('div');
   card.className = 'pokemon-card';
-  card.dataset.ko = p.ko.toLowerCase();
-  card.dataset.en = (p.en || '').toLowerCase();
+  card.dataset.ko  = p.ko.toLowerCase();
+  card.dataset.en  = (p.en || '').toLowerCase();
+  card.dataset.gen = getGen(p.id);
+  card.dataset.cat = p.formType || 'normal';
   const types = p.types || [];
+  card.dataset.types = types.join(',');
   const bg = typeColor(types[0] || '노말');
   const badge = p.formType === 'mega'
     ? '<span class="card-badge mega">MEGA</span>'
@@ -661,30 +756,93 @@ function renderForms(data) {
   return megaCount + gmaxCount;
 }
 
-// ─── SEARCH ───
+// ─── 필터 적용 ───
 function updateCount(shown) {
   document.getElementById('count-label').textContent =
     shown === totalAll ? `총 ${totalAll}마리` : `${shown} / ${totalAll}마리`;
 }
 
-document.getElementById('search-input').addEventListener('input', function() {
-  const q = this.value.trim().toLowerCase();
+function applyFilters() {
+  const q = document.getElementById('search-input').value.trim().toLowerCase();
   const cards = document.querySelectorAll('.pokemon-card');
   let shown = 0;
+
   cards.forEach(c => {
-    const match = !q || c.dataset.ko.includes(q) || c.dataset.en.includes(q);
-    c.classList.toggle('hidden', !match);
-    if (match) shown++;
+    const matchText = !q || c.dataset.ko.includes(q) || c.dataset.en.includes(q);
+    const matchType = !activeType || c.dataset.types.split(',').includes(activeType);
+    const matchGen  = !activeGen  || +c.dataset.gen === activeGen;
+    const matchCat  = activeCat === 'all'
+      || (activeCat === 'normal' && c.dataset.cat === 'normal')
+      || (activeCat === 'mega'   && c.dataset.cat === 'mega')
+      || (activeCat === 'gmax'   && c.dataset.cat === 'gmax');
+
+    const visible = matchText && matchType && matchGen && matchCat;
+    c.classList.toggle('hidden', !visible);
+    if (visible) shown++;
   });
-  // 섹션 헤더 숨기기
+
+  // 섹션 헤더 - 해당 섹션에 보이는 카드 없으면 숨김
   ['mega','gmax'].forEach(type => {
-    const grid = document.getElementById(type + '-grid');
+    const grid   = document.getElementById(type + '-grid');
     const header = document.getElementById(type + '-section-header');
-    const visible = [...grid.querySelectorAll('.pokemon-card')].some(c => !c.classList.contains('hidden'));
-    header.style.display = (q && !visible) ? 'none' : '';
+    const hasVisible = [...grid.querySelectorAll('.pokemon-card')].some(c => !c.classList.contains('hidden'));
+    header.style.display = hasVisible ? '' : 'none';
   });
-  document.getElementById('no-results').style.display = (shown === 0 && q) ? 'block' : 'none';
+
+  const hasAnyFilter = q || activeType || activeGen || activeCat !== 'all';
+  document.getElementById('no-results').style.display = (shown === 0 && hasAnyFilter) ? 'block' : 'none';
   updateCount(shown);
+}
+
+document.getElementById('search-input').addEventListener('input', applyFilters);
+
+// 분류 필터
+document.getElementById('cat-group').addEventListener('click', e => {
+  const btn = e.target.closest('[data-cat]');
+  if (!btn) return;
+  activeCat = btn.dataset.cat;
+  document.querySelectorAll('#cat-group .filter-btn').forEach(b => b.classList.toggle('active-cat', b===btn));
+  applyFilters();
+});
+
+// 세대 필터
+document.getElementById('gen-group').addEventListener('click', e => {
+  const btn = e.target.closest('[data-gen]');
+  if (!btn) return;
+  const g = +btn.dataset.gen;
+  if (activeGen === g) { activeGen = null; btn.classList.remove('active-gen'); }
+  else {
+    activeGen = g;
+    document.querySelectorAll('#gen-group .filter-btn').forEach(b => b.classList.remove('active-gen'));
+    btn.classList.add('active-gen');
+  }
+  applyFilters();
+});
+
+// 타입 필터
+document.getElementById('type-group').addEventListener('click', e => {
+  const btn = e.target.closest('[data-type]');
+  if (!btn) return;
+  const t = btn.dataset.type;
+  if (activeType === t) {
+    activeType = null;
+    btn.classList.remove('active-type');
+    btn.style.background = '';
+    btn.style.borderColor = '';
+  } else {
+    activeType = t;
+    document.querySelectorAll('#type-group .filter-btn').forEach(b => {
+      b.classList.remove('active-type');
+      b.style.background = '';
+      b.style.borderColor = '';
+      b.style.color = '';
+    });
+    btn.classList.add('active-type');
+    btn.style.background = TYPE_BG[t] || '#888';
+    btn.style.borderColor = 'transparent';
+    btn.style.color = TYPE_LIGHT.has(t) ? '#555' : 'white';
+  }
+  applyFilters();
 });
 
 // ─── MODAL ───
@@ -774,7 +932,21 @@ document.getElementById('modal-overlay').addEventListener('click', e => {
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 function closeModal() { document.getElementById('modal-overlay').classList.remove('open'); }
 
+// ─── 타입 버튼 초기화 ───
+function buildTypeButtons() {
+  const types = ['노말','불꽃','물','전기','풀','얼음','격투','독','땅','비행','에스퍼','벌레','바위','유령','드래곤','악','강철','페어리'];
+  const group = document.getElementById('type-group');
+  types.forEach(t => {
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn';
+    btn.dataset.type = t;
+    btn.textContent = t;
+    group.appendChild(btn);
+  });
+}
+
 // ─── LOAD ───
+buildTypeButtons();
 fetch('data/quiz_pokemon.json')
   .then(r => r.json())
   .then(data => {
