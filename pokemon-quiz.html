@@ -600,14 +600,17 @@
       </button>
     </div>
 
-    <div class="divider"></div>
+    <!-- 게임 시작 버튼 -->
+    <button class="btn-primary" id="m-btn-start" onclick="mStartGame()" style="width:100%;margin-top:4px">게임 시작</button>
 
-    <div class="move-header">
+    <div class="divider" id="m-game-divider" style="display:none"></div>
+
+    <div class="move-header" id="m-move-header" style="display:none">
       <span style="font-size:.75rem;color:#444;letter-spacing:1px">MOVE INFO</span>
       <span class="active-diff-badge" id="m-diff-badge" style="display:none"></span>
     </div>
 
-    <div class="loading-text" id="m-loading" style="position:relative;padding:20px 0">불러오는 중...</div>
+    <div class="loading-text" id="m-loading" style="position:relative;padding:20px 0;display:none">불러오는 중...</div>
 
     <div id="m-info-panel" style="display:none;width:100%;flex-direction:column;gap:9px">
       <div class="move-info-grid">
@@ -643,7 +646,7 @@
     </div>
 
     <div class="name-revealed" id="m-name-revealed"></div>
-    <div class="status"        id="m-status">난이도를 선택하고 기술 이름을 맞춰보세요</div>
+    <div class="status"        id="m-status" style="display:none"></div>
 
     <!-- 랭킹 카드 -->
     <div class="rank-card" id="m-rank-card">
@@ -659,13 +662,13 @@
       </div>
     </div>
 
-    <div class="input-row">
+    <div class="input-row" id="m-input-row" style="display:none">
       <input type="text" id="m-guess-input" placeholder="기술 이름 입력..." autocomplete="off" />
       <button class="btn-primary" id="m-btn-guess" onclick="mCheckGuess()">확인</button>
     </div>
 
-    <button class="btn-ghost"   id="m-btn-hint" onclick="mShowHint()">힌트 보기 (첫 글자)</button>
-    <button class="btn-danger"  id="m-btn-skip" onclick="mReveal(false)">포기하기 (정답 보기)</button>
+    <button class="btn-ghost"   id="m-btn-hint" onclick="mShowHint()" style="display:none">힌트 보기 (첫 글자)</button>
+    <button class="btn-danger"  id="m-btn-skip" onclick="mReveal(false)" style="display:none">포기하기 (정답 보기)</button>
     <button class="btn-outline" id="m-btn-next" onclick="mNextMove()" style="display:none">다음 기술 →</button>
   </div>
 </div>
@@ -1296,7 +1299,7 @@ function mGetNextId() {
   return mPool[mPoolIdx++];
 }
 
-let mDifficulty='easy', mMove=null, mKoName='', mEnName='', mRevealed=false;
+let mDifficulty='easy', mMove=null, mKoName='', mEnName='', mRevealed=false, mGameStarted=false;
 let mScoreC=parseInt(localStorage.getItem('mc')||'0');
 let mScoreW=parseInt(localStorage.getItem('mw')||'0');
 let mScoreS=parseInt(localStorage.getItem('ms')||'0');
@@ -1310,9 +1313,20 @@ function mUpdateScore() {
 mUpdateScore();
 
 function setDifficulty(d) {
+  if (mGameStarted) return;
   mDifficulty=d;
   ['easy','normal','hard'].forEach(x=>{ document.getElementById('diff-'+x).className='diff-btn'+(x===d?' selected':''); });
-  if (mMove) renderMovePanel();
+}
+
+function mStartGame() {
+  mGameStarted = true;
+  ['easy','normal','hard'].forEach(x => document.getElementById('diff-'+x).classList.add('locked'));
+  document.getElementById('m-btn-start').style.display   = 'none';
+  document.getElementById('m-game-divider').style.display = '';
+  document.getElementById('m-move-header').style.display  = '';
+  document.getElementById('m-input-row').style.display    = 'flex';
+  document.getElementById('m-status').style.display       = '';
+  mLoadMove();
 }
 
 function renderMovePanel(forceReveal) {
@@ -1710,7 +1724,7 @@ document.getElementById('i-guess-input').addEventListener('keydown', e => {
 });
 
 /* ══ 초기화 ══ */
-loadAllData().then(() => { mLoadMove(); });
+loadAllData();
 </script>
 </body>
 </html>
