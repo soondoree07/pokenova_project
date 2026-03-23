@@ -941,6 +941,24 @@ function hideRankCard(prefix) {
 const ALL_TABS = ['barcode','move','ability','item'];
 let aInitialized = false, iInitialized = false;
 
+/* ── 로컬 데이터 ── */
+const DB = { pokemon: [], moves: [], abilities: [], items: [] };
+
+function hasKorean(str) { return /[\uAC00-\uD7A3]/.test(str); }
+
+async function loadAllData() {
+  const [p, m, a, i] = await Promise.all([
+    fetch('data/quiz_pokemon.json').then(r => r.json()),
+    fetch('data/quiz_moves.json').then(r => r.json()),
+    fetch('data/quiz_abilities.json').then(r => r.json()),
+    fetch('data/quiz_items.json').then(r => r.json()),
+  ]);
+  DB.pokemon   = p;
+  DB.moves     = m.filter(x => hasKorean(x.ko));
+  DB.abilities = a.filter(x => hasKorean(x.ko));
+  DB.items     = i.filter(x => hasKorean(x.ko));
+}
+
 function showTab(name) {
   ALL_TABS.forEach(t => {
     document.getElementById('tab-' + t).style.display = t === name ? '' : 'none';
@@ -970,7 +988,7 @@ let bSessionC = 0, bSessionW = 0;
 let bPool = [], bPoolIdx = 0;
 function bGetNextId() {
   if (bPoolIdx >= bPool.length) {
-    bPool = Array.from({length: TOTAL_POKEMON}, (_,i)=>i+1).sort(()=>Math.random()-.5);
+    bPool = Array.from({length: DB.pokemon.length}, (_,i)=>i).sort(()=>Math.random()-.5);
     bPoolIdx = 0;
   }
   return bPool[bPoolIdx++];
@@ -1115,7 +1133,7 @@ function renderBarcodeDecoration() {
   }
 }
 
-async function bLoadPokemon() {
+function bLoadPokemon() {
   bRevealed = false; bLoadedImg = null; bKoName = ''; bEnName = ''; bHintText = '';
   const cv = document.getElementById('pokemon-canvas');
   cv.style.display = 'none';
@@ -1134,27 +1152,12 @@ async function bLoadPokemon() {
   document.getElementById('scan-line').className = 'scan-line';
   hideRankCard('b');
 
-  let pokemonData, speciesId;
-  while (true) {
-    const id = bGetNextId();
-    try {
-      const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
-      if (!res.ok) continue;
-      pokemonData = await res.json();
-      const art = pokemonData.sprites.other?.['official-artwork']?.front_default || pokemonData.sprites.front_default;
-      if (!art) continue;
-      speciesId = pokemonData.species.url.split('/').filter(Boolean).pop();
-      document.getElementById('b-pokemon-number').textContent = `#${String(id).padStart(4,'0')}`;
-      break;
-    } catch { continue; }
-  }
-  try {
-    const sd = await (await fetch(`https://pokeapi.co/api/v2/pokemon-species/${speciesId}`)).json();
-    bKoName = sd.names.find(n=>n.language.name==='ko')?.name || '';
-    bEnName = (sd.names.find(n=>n.language.name==='en')?.name || pokemonData.name).toLowerCase();
-  } catch { bEnName = pokemonData.name.toLowerCase(); }
+  const p = DB.pokemon[bGetNextId()];
+  bKoName  = p.ko;
+  bEnName  = p.en.toLowerCase();
+  bPokemon = p;
+  document.getElementById('b-pokemon-number').textContent = `#${String(p.id).padStart(4,'0')}`;
 
-  bPokemon = pokemonData;
   const img = new Image(); img.crossOrigin = 'anonymous';
   img.onload = () => {
     bLoadedImg = img;
@@ -1166,7 +1169,7 @@ async function bLoadPokemon() {
     renderBarcodeDecoration();
   };
   img.onerror = () => { document.getElementById('b-loading').textContent='재시도...'; setTimeout(bLoadPokemon,800); };
-  img.src = pokemonData.sprites.other?.['official-artwork']?.front_default || pokemonData.sprites.front_default;
+  img.src = p.sprite;
 }
 
 function bCheckGuess() {
@@ -1253,8 +1256,8 @@ const TYPE_COLOR = { normal:'#9099A1',fire:'#F08030',water:'#6890F0',electric:'#
   grass:'#78C850',ice:'#98D8D8',fighting:'#C03028',poison:'#A040A0',ground:'#E0C068',
   flying:'#A890F0',psychic:'#F85888',bug:'#A8B820',rock:'#B8A038',ghost:'#705898',
   dragon:'#7038F8',dark:'#705848',steel:'#B8B8D0',fairy:'#EE99AC' };
-const CLASS_KO  = { physical:'물리', special:'특수', status:'변화' };
-const CLASS_CLS = { physical:'dmg-physical', special:'dmg-special', status:'dmg-status' };
+const CLASS_KO  = { physical:'물리', special:'특수', status:'변화', '물리':'물리', '특수':'특수', '변화':'변화' };
+const CLASS_CLS = { physical:'dmg-physical', special:'dmg-special', status:'dmg-status', '물리':'dmg-physical', '특수':'dmg-special', '변화':'dmg-status' };
 const GEN_NAME  = { 'generation-i':'1세대','generation-ii':'2세대','generation-iii':'3세대',
   'generation-iv':'4세대','generation-v':'5세대','generation-vi':'6세대',
   'generation-vii':'7세대','generation-viii':'8세대','generation-ix':'9세대' };
@@ -1287,7 +1290,7 @@ const DIFF_CONFIG = {
 let mPool = [], mPoolIdx = 0;
 function mGetNextId() {
   if (mPoolIdx >= mPool.length) {
-    mPool = Array.from({length: TOTAL_MOVES}, (_,i)=>i+1).sort(()=>Math.random()-.5);
+    mPool = Array.from({length: DB.moves.length}, (_,i)=>i).sort(()=>Math.random()-.5);
     mPoolIdx = 0;
   }
   return mPool[mPoolIdx++];
@@ -1315,7 +1318,7 @@ function setDifficulty(d) {
 function renderMovePanel(forceReveal) {
   const cfg = forceReveal ? { type:true,power:true,accuracy:true,pp:true,desc:true } : DIFF_CONFIG[mDifficulty];
   const m   = mMove;
-  const tn  = m.type.name;
+  const tn  = m.type_en || m.type?.name || '';
 
   // 타입
   const typeEl = document.getElementById('mv-type');
@@ -1325,7 +1328,7 @@ function renderMovePanel(forceReveal) {
   } else { typeEl.textContent='???'; typeEl.className='mic-value hidden-val'; }
 
   // 분류 (항상 공개)
-  const cn=m.damage_class.name;
+  const cn = m.class || m.damage_class?.name || '';
   document.getElementById('mv-class').innerHTML = `<span class="dmg-badge ${CLASS_CLS[cn]||''}">${CLASS_KO[cn]||cn}</span>`;
   document.getElementById('mv-class').className = 'mic-value';
 
@@ -1344,14 +1347,13 @@ function renderMovePanel(forceReveal) {
   else              { acEl.textContent='???'; acEl.className='mic-value hidden-val'; }
 
   // 첫 등장 세대 (항상 공개)
-  document.getElementById('mv-gen').textContent = GEN_NAME[m.generation?.name||''] || '—';
+  document.getElementById('mv-gen').textContent = m.gen || GEN_NAME[m.generation?.name||''] || '—';
 
   // 설명
   const descCard = document.getElementById('mc-desc');
   if (cfg.desc) {
-    const txt = getLatestFlavorText(m.flavor_text_entries,'ko')
+    const txt = m.desc || getLatestFlavorText(m.flavor_text_entries,'ko')
              || getLatestFlavorText(m.flavor_text_entries,'en')
-             || m.effect_entries?.find(e=>e.language.name==='en')?.short_effect
              || '설명 없음';
     document.getElementById('mv-desc').textContent = txt;
     descCard.style.display = 'block';
@@ -1366,7 +1368,7 @@ function renderMovePanel(forceReveal) {
   document.getElementById('m-loading').style.display='none';
 }
 
-async function mLoadMove() {
+function mLoadMove() {
   mRevealed=false; mKoName=''; mEnName=''; mMove=null;
   document.getElementById('m-loading').style.display='block';
   document.getElementById('m-loading').textContent='불러오는 중...';
@@ -1385,20 +1387,10 @@ async function mLoadMove() {
   document.getElementById('m-diff-badge').style.display='none';
   hideRankCard('m');
 
-  while (true) {
-    const id=mGetNextId();
-    try {
-      const res=await fetch(`https://pokeapi.co/api/v2/move/${id}`);
-      if(!res.ok) continue;
-      const data=await res.json();
-      if(data.meta?.category?.name==='z-move') continue;
-      const koN=data.names.find(n=>n.language.name==='ko');
-      if(!koN) continue;
-      mKoName=koN.name;
-      mEnName=(data.names.find(n=>n.language.name==='en')?.name||data.name).toLowerCase();
-      mMove=data; break;
-    } catch { continue; }
-  }
+  const m = DB.moves[mGetNextId()];
+  mKoName = m.ko;
+  mEnName = m.en;
+  mMove   = m;
   renderMovePanel();
   document.getElementById('m-guess-input').focus();
 }
@@ -1472,11 +1464,10 @@ document.addEventListener('keydown', e => {
 /* ═══════════════════════════════════════════════════════════
    탭3: 특성 맞추기
 ═══════════════════════════════════════════════════════════ */
-const TOTAL_ABILITIES = 307;
 let aPool = [], aPoolIdx = 0;
 function aGetNextId() {
   if (aPoolIdx >= aPool.length) {
-    aPool = Array.from({length: TOTAL_ABILITIES}, (_,i)=>i+1).sort(()=>Math.random()-.5);
+    aPool = Array.from({length: DB.abilities.length}, (_,i)=>i).sort(()=>Math.random()-.5);
     aPoolIdx = 0;
   }
   return aPool[aPoolIdx++];
@@ -1502,7 +1493,7 @@ function aUpdateLives() {
   document.getElementById('a-lives').textContent = '❤️'.repeat(aLives) + '🖤'.repeat(3 - aLives);
 }
 
-async function aLoadAbility() {
+function aLoadAbility() {
   aRevealed = false; aKoName = ''; aEnName = ''; aAbility = null;
   document.getElementById('a-loading').style.display = 'block';
   document.getElementById('a-loading').textContent = '불러오는 중...';
@@ -1517,45 +1508,16 @@ async function aLoadAbility() {
   document.getElementById('a-name-revealed').textContent = '';
   document.getElementById('a-name-revealed').className = 'name-revealed';
 
-  while (true) {
-    const id = aGetNextId();
-    try {
-      const res = await fetch(`https://pokeapi.co/api/v2/ability/${id}`);
-      if (!res.ok) continue;
-      const data = await res.json();
-      const koN = data.names.find(n => n.language.name === 'ko');
-      if (!koN) continue;
-      const desc = getLatestFlavorText(data.flavor_text_entries, 'ko')
-                || getLatestFlavorText(data.flavor_text_entries, 'en');
-      if (!desc) continue;
-      aKoName = koN.name;
-      aEnName = (data.names.find(n => n.language.name === 'en')?.name || data.name).toLowerCase();
-      aAbility = data;
-      document.getElementById('a-desc').textContent = desc;
-      // 포켓몬 목록 비동기 로딩
-      const pokemonList = data.pokemon.filter(p => !p.is_hidden).slice(0, 6);
-      document.getElementById('a-pokemon-list').innerHTML = '<span style="color:#555;font-size:.75rem">로딩 중...</span>';
-      document.getElementById('a-info-panel').style.display = 'flex';
-      document.getElementById('a-loading').style.display = 'none';
-      document.getElementById('a-guess-input').focus();
-      aFetchPokemonNames(pokemonList);
-      break;
-    } catch { continue; }
-  }
-}
-
-async function aFetchPokemonNames(pokemonList) {
-  const listEl = document.getElementById('a-pokemon-list');
-  try {
-    const names = await Promise.all(pokemonList.map(async p => {
-      try {
-        const id = p.pokemon.url.split('/').filter(Boolean).pop();
-        const sd = await (await fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}`)).json();
-        return sd.names.find(n => n.language.name === 'ko')?.name || p.pokemon.name;
-      } catch { return p.pokemon.name; }
-    }));
-    listEl.innerHTML = names.map(n => `<span class="pokemon-chip">${n}</span>`).join('');
-  } catch { listEl.innerHTML = '<span style="color:#555">—</span>'; }
+  const a = DB.abilities[aGetNextId()];
+  aKoName  = a.ko;
+  aEnName  = a.en;
+  aAbility = a;
+  document.getElementById('a-desc').textContent = a.desc;
+  document.getElementById('a-pokemon-list').innerHTML =
+    (a.pokemon || []).map(n => `<span class="pokemon-chip">${n}</span>`).join('') || '<span style="color:#555">—</span>';
+  document.getElementById('a-info-panel').style.display = 'flex';
+  document.getElementById('a-loading').style.display = 'none';
+  document.getElementById('a-guess-input').focus();
 }
 
 function aCheckGuess() {
@@ -1616,11 +1578,10 @@ document.getElementById('a-guess-input').addEventListener('keydown', e => {
 /* ═══════════════════════════════════════════════════════════
    탭4: 도구 맞추기
 ═══════════════════════════════════════════════════════════ */
-const TOTAL_ITEMS = 1700;
 let iPool = [], iPoolIdx = 0;
 function iGetNextId() {
   if (iPoolIdx >= iPool.length) {
-    iPool = Array.from({length: TOTAL_ITEMS}, (_,i)=>i+1).sort(()=>Math.random()-.5);
+    iPool = Array.from({length: DB.items.length}, (_,i)=>i).sort(()=>Math.random()-.5);
     iPoolIdx = 0;
   }
   return iPool[iPoolIdx++];
@@ -1646,7 +1607,7 @@ function iUpdateLives() {
   document.getElementById('i-lives').textContent = '❤️'.repeat(iLives) + '🖤'.repeat(3 - iLives);
 }
 
-async function iLoadItem() {
+function iLoadItem() {
   iRevealed = false; iKoName = ''; iEnName = ''; iItem = null; iHintText = '';
   document.getElementById('i-loading').style.display = 'block';
   document.getElementById('i-loading').textContent = '불러오는 중...';
@@ -1664,27 +1625,14 @@ async function iLoadItem() {
   document.getElementById('i-name-revealed').textContent = '';
   document.getElementById('i-name-revealed').className = 'name-revealed';
 
-  while (true) {
-    const id = iGetNextId();
-    try {
-      const res = await fetch(`https://pokeapi.co/api/v2/item/${id}`);
-      if (!res.ok) continue;
-      const data = await res.json();
-      const koN = data.names.find(n => n.language.name === 'ko');
-      if (!koN) continue;
-      const effect = data.effect_entries.find(e => e.language.name === 'ko')?.short_effect
-                  || data.effect_entries.find(e => e.language.name === 'en')?.short_effect;
-      if (!effect) continue;
-      iKoName = koN.name;
-      iEnName = (data.names.find(n => n.language.name === 'en')?.name || data.name).toLowerCase();
-      iItem = data;
-      document.getElementById('i-effect').textContent = effect;
-      document.getElementById('i-info-panel').style.display = 'flex';
-      document.getElementById('i-loading').style.display = 'none';
-      document.getElementById('i-guess-input').focus();
-      break;
-    } catch { continue; }
-  }
+  const item = DB.items[iGetNextId()];
+  iKoName = item.ko;
+  iEnName = item.en;
+  iItem   = item;
+  document.getElementById('i-effect').textContent = item.desc;
+  document.getElementById('i-info-panel').style.display = 'flex';
+  document.getElementById('i-loading').style.display = 'none';
+  document.getElementById('i-guess-input').focus();
 }
 
 function iCheckGuess() {
@@ -1720,8 +1668,8 @@ function iReveal(isCorrect) {
   const nameEl = document.getElementById('i-name-revealed');
   nameEl.textContent = displayName;
   setTimeout(() => nameEl.classList.add('show'), 80);
-  if (iItem?.sprites?.default) {
-    document.getElementById('i-sprite').src = iItem.sprites.default;
+  if (iItem?.sprite) {
+    document.getElementById('i-sprite').src = iItem.sprite;
     document.getElementById('i-sprite-box').style.display = 'flex';
   }
   if (isCorrect) {
@@ -1762,7 +1710,7 @@ document.getElementById('i-guess-input').addEventListener('keydown', e => {
 });
 
 /* ══ 초기화 ══ */
-mLoadMove();
+loadAllData().then(() => { mLoadMove(); });
 </script>
 </body>
 </html>
