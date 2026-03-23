@@ -1171,6 +1171,7 @@ function bLoadPokemon() {
     drawStrips(img, cfg.strips, cfg.stripH);
     document.getElementById('scan-line').className = 'scan-line active';
     renderBarcodeDecoration();
+    document.getElementById('b-guess-input').focus();
   };
   img.onerror = () => { document.getElementById('b-loading').textContent='재시도...'; setTimeout(bLoadPokemon,800); };
   img.src = p.sprite;
