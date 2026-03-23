@@ -351,6 +351,75 @@
     .t-강철  { background: #B7B7CE; color: #555 !important; }
     .t-페어리{ background: #D685AD; }
 
+    /* ─── SECTION HEADER ─── */
+    .section-divider {
+      max-width: 1400px;
+      margin: 32px auto 16px;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .section-divider h2 {
+      font-size: 20px;
+      font-weight: 900;
+      color: #1a1a2e;
+      white-space: nowrap;
+    }
+    .section-badge {
+      font-size: 12px;
+      font-weight: 700;
+      color: white;
+      padding: 3px 12px;
+      border-radius: 20px;
+    }
+    .section-badge.mega { background: #b8860b; }
+    .section-badge.gmax { background: #8b0000; }
+    .section-line {
+      flex: 1;
+      height: 2px;
+      background: #e0e0e0;
+      border-radius: 2px;
+    }
+    .card-badge {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      font-size: 9px;
+      font-weight: 700;
+      color: white;
+      padding: 1px 6px;
+      border-radius: 8px;
+      line-height: 1.4;
+    }
+    .card-badge.mega { background: #b8860b; }
+    .card-badge.gmax { background: #8b0000; }
+
+    /* 거다이 전용기 */
+    .gmax-move-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      background: linear-gradient(135deg, #1a0a0a 0%, #3a0a0a 100%);
+      border-radius: 10px;
+      border: 1px solid #8b0000;
+    }
+    .gmax-move-icon {
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+    .gmax-move-name {
+      font-weight: 700;
+      font-size: 15px;
+      color: #ff6b6b;
+    }
+    .gmax-move-label {
+      font-size: 11px;
+      color: #888;
+      margin-top: 1px;
+    }
+
     /* ─── SCROLL ─── */
     .modal-box::-webkit-scrollbar { width: 5px; }
     .modal-box::-webkit-scrollbar-track { background: transparent; }
@@ -393,6 +462,26 @@
   </div>
 </main>
 
+<!-- ─── 메가진화 ─── -->
+<div class="section-divider" id="mega-section-header">
+  <h2>메가진화</h2>
+  <span class="section-badge mega" id="mega-count"></span>
+  <div class="section-line"></div>
+</div>
+<div class="grid-section">
+  <div class="pokemon-grid" id="mega-grid"></div>
+</div>
+
+<!-- ─── 거다이맥스 ─── -->
+<div class="section-divider" id="gmax-section-header">
+  <h2>거다이맥스</h2>
+  <span class="section-badge gmax" id="gmax-count"></span>
+  <div class="section-line"></div>
+</div>
+<div class="grid-section">
+  <div class="pokemon-grid" id="gmax-grid"></div>
+</div>
+
 <!-- ─── MODAL ─── -->
 <div class="modal-overlay" id="modal-overlay">
   <div class="modal-box" id="modal-box">
@@ -420,35 +509,87 @@ const TYPE_BG = {
 };
 const TYPE_LIGHT = new Set(['전기','얼음','땅','강철']);
 
-function typeClass(t) {
-  return `t-${t}`;
-}
 function typeBadge(t, cls='type-tag') {
   const light = TYPE_LIGHT.has(t) ? 'color:#555;' : '';
   return `<span class="${cls} t-${t}" style="${light}">${t}</span>`;
 }
 function typeColor(t) { return TYPE_BG[t] || '#888'; }
-
-// Header gradient based on first type
 function typeGradient(types) {
-  if (!types || !types.length) return 'linear-gradient(135deg, #888 0%, #555 100%)';
+  if (!types || !types.length) return 'linear-gradient(135deg,#888,#555)';
   const c1 = typeColor(types[0]);
   const c2 = types[1] ? typeColor(types[1]) : shadeColor(c1, -20);
-  return `linear-gradient(135deg, ${c1} 0%, ${c2} 100%)`;
+  return `linear-gradient(135deg,${c1},${c2})`;
 }
-function shadeColor(hex, pct) {
-  const num = parseInt(hex.replace('#',''), 16);
-  const r = Math.min(255, Math.max(0, (num >> 16) + pct));
-  const g = Math.min(255, Math.max(0, ((num >> 8) & 0xff) + pct));
-  const b = Math.min(255, Math.max(0, (num & 0xff) + pct));
+function shadeColor(hex, p) {
+  const n = parseInt(hex.replace('#',''),16);
+  const r=Math.min(255,Math.max(0,(n>>16)+p)), g=Math.min(255,Math.max(0,((n>>8)&0xff)+p)), b=Math.min(255,Math.max(0,(n&0xff)+p));
   return `rgb(${r},${g},${b})`;
 }
+function padId(id) { return 'No.' + String(id).padStart(4,'0'); }
 
-function padId(id) { return 'No.' + String(id).padStart(4, '0'); }
+// ─── 실제 게임 메가진화 목록 (PokeAPI에 가짜 메가 다수 포함) ───
+const CANONICAL_MEGA = new Set([
+  'venusaur-mega','charizard-mega-x','charizard-mega-y','blastoise-mega',
+  'beedrill-mega','pidgeot-mega','alakazam-mega','slowbro-mega','gengar-mega',
+  'kangaskhan-mega','pinsir-mega','gyarados-mega','aerodactyl-mega',
+  'mewtwo-mega-x','mewtwo-mega-y','ampharos-mega','steelix-mega','scizor-mega',
+  'heracross-mega','houndoom-mega','tyranitar-mega','sceptile-mega','blaziken-mega',
+  'swampert-mega','gardevoir-mega','sableye-mega','mawile-mega','aggron-mega',
+  'medicham-mega','manectric-mega','sharpedo-mega','camerupt-mega','altaria-mega',
+  'banette-mega','absol-mega','glalie-mega','salamence-mega','metagross-mega',
+  'latias-mega','latios-mega','rayquaza-mega','lopunny-mega','garchomp-mega',
+  'lucario-mega','abomasnow-mega','gallade-mega','audino-mega','diancie-mega'
+]);
 
-let DB = [];
+// ─── 거다이맥스 전용기 (공식 한국어 이름) ───
+const GMAX_MOVES = {
+  'venusaur-gmax':              { ko: '거다이넝쿨매질', en: 'G-Max Vine Lash' },
+  'charizard-gmax':             { ko: '거다이야화',      en: 'G-Max Wildfire' },
+  'blastoise-gmax':             { ko: '거다이연격포',    en: 'G-Max Cannonade' },
+  'butterfree-gmax':            { ko: '거다이접가루',    en: 'G-Max Befuddle' },
+  'pikachu-gmax':               { ko: '거다이볼트택',    en: 'G-Max Volt Crash' },
+  'meowth-gmax':                { ko: '거다이냥골드',    en: 'G-Max Gold Rush' },
+  'machamp-gmax':               { ko: '거다이넘치는힘',  en: 'G-Max Chi Strike' },
+  'gengar-gmax':                { ko: '거다이공포',      en: 'G-Max Terror' },
+  'kingler-gmax':               { ko: '거다이거품공세',  en: 'G-Max Foam Burst' },
+  'lapras-gmax':                { ko: '거다이오로라',    en: 'G-Max Resonance' },
+  'eevee-gmax':                 { ko: '거다이안기기',    en: 'G-Max Cuddle' },
+  'snorlax-gmax':               { ko: '거다이재생',      en: 'G-Max Replenish' },
+  'garbodor-gmax':              { ko: '거다이악취',      en: 'G-Max Malodor' },
+  'melmetal-gmax':              { ko: '거다이멜트다운',  en: 'G-Max Meltdown' },
+  'rillaboom-gmax':             { ko: '거다이드럼솔로',  en: 'G-Max Drum Solo' },
+  'cinderace-gmax':             { ko: '거다이파이어볼',  en: 'G-Max Fireball' },
+  'inteleon-gmax':              { ko: '거다이스나이프',  en: 'G-Max Hydrosnipe' },
+  'corviknight-gmax':           { ko: '거다이폭풍날개',  en: 'G-Max Wind Rage' },
+  'orbeetle-gmax':              { ko: '거다이그라비티',  en: 'G-Max Gravitas' },
+  'drednaw-gmax':               { ko: '거다이스톤샤워',  en: 'G-Max Stonesurge' },
+  'coalossal-gmax':             { ko: '거다이폭렬암',    en: 'G-Max Volcalith' },
+  'flapple-gmax':               { ko: '거다이신맛',      en: 'G-Max Tartness' },
+  'appletun-gmax':              { ko: '거다이단맛',      en: 'G-Max Sweetness' },
+  'sandaconda-gmax':            { ko: '거다이모래폭풍',  en: 'G-Max Sandblast' },
+  'toxtricity-amped-gmax':      { ko: '거다이전격탄',    en: 'G-Max Stun Shock' },
+  'toxtricity-low-key-gmax':    { ko: '거다이전격탄',    en: 'G-Max Stun Shock' },
+  'centiskorch-gmax':           { ko: '거다이화염소용돌이', en: 'G-Max Centiferno' },
+  'hatterene-gmax':             { ko: '거다이신비의힘',  en: 'G-Max Smite' },
+  'grimmsnarl-gmax':            { ko: '거다이코자장가',  en: 'G-Max Snooze' },
+  'alcremie-gmax':              { ko: '거다이파티날',    en: 'G-Max Finale' },
+  'copperajah-gmax':            { ko: '거다이스틸스파이크', en: 'G-Max Steelsurge' },
+  'duraludon-gmax':             { ko: '거다이드래곤붕괴', en: 'G-Max Depletion' },
+  'urshifu-single-strike-gmax': { ko: '거다이단격',      en: 'G-Max One Blow' },
+  'urshifu-rapid-strike-gmax':  { ko: '거다이연격',      en: 'G-Max Rapid Flow' },
+};
 
-// ─── RENDER CARDS ───
+// 우라오스 두 폼 구분 이름
+const GMAX_NAME_OVERRIDE = {
+  'urshifu-single-strike-gmax': '거다이맥스 우라오스 (일격)',
+  'urshifu-rapid-strike-gmax':  '거다이맥스 우라오스 (연격)',
+};
+// 중복 제거 (Toxtricity low-key는 amped와 동일)
+const GMAX_SKIP = new Set(['toxtricity-low-key-gmax']);
+
+let DB = [], totalAll = 0;
+
+// ─── CARD 생성 ───
 function buildCard(p) {
   const card = document.createElement('div');
   card.className = 'pokemon-card';
@@ -456,12 +597,17 @@ function buildCard(p) {
   card.dataset.en = (p.en || '').toLowerCase();
   const types = p.types || [];
   const bg = typeColor(types[0] || '노말');
-
+  const badge = p.formType === 'mega'
+    ? '<span class="card-badge mega">MEGA</span>'
+    : p.formType === 'gmax'
+    ? '<span class="card-badge gmax">거다이</span>'
+    : '';
   card.innerHTML = `
+    ${badge}
     <img class="card-img" src="${p.sprite}" alt="${p.ko}" loading="lazy">
     <div class="card-number">${padId(p.id)}</div>
     <div class="card-name">${p.ko}</div>
-    <div class="card-types">${types.map(t => typeBadge(t)).join('')}</div>
+    <div class="card-types">${types.map(t=>typeBadge(t)).join('')}</div>
   `;
   card.style.borderColor = bg + '44';
   card.addEventListener('click', () => openModal(p));
@@ -474,13 +620,51 @@ function renderAll(data) {
   const frag = document.createDocumentFragment();
   data.forEach(p => frag.appendChild(buildCard(p)));
   grid.insertBefore(frag, noRes);
-  updateCount(data.length, data.length);
+}
+
+function renderForms(data) {
+  const megaGrid = document.getElementById('mega-grid');
+  const gmaxGrid = document.getElementById('gmax-grid');
+  let megaCount = 0, gmaxCount = 0;
+
+  data.forEach(base => {
+    if (!base.forms) return;
+    base.forms.forEach(f => {
+      if (!f.sprite || !f.name_ko) return;
+
+      if (f.type === 'mega') {
+        if (!CANONICAL_MEGA.has(f.name_en)) return;
+        const entry = {
+          id: base.id, ko: f.name_ko, en: f.name_en,
+          sprite: f.sprite, types: f.types || base.types,
+          abilities: f.abilities || base.abilities, formType: 'mega'
+        };
+        megaGrid.appendChild(buildCard(entry));
+        megaCount++;
+      } else if (f.type === 'gmax') {
+        if (GMAX_SKIP.has(f.name_en)) return;
+        const ko = GMAX_NAME_OVERRIDE[f.name_en] || f.name_ko;
+        const entry = {
+          id: base.id, ko, en: f.name_en,
+          sprite: f.sprite, types: f.types || base.types,
+          abilities: f.abilities || base.abilities,
+          gmaxMove: GMAX_MOVES[f.name_en], formType: 'gmax'
+        };
+        gmaxGrid.appendChild(buildCard(entry));
+        gmaxCount++;
+      }
+    });
+  });
+
+  document.getElementById('mega-count').textContent = megaCount + '종';
+  document.getElementById('gmax-count').textContent = gmaxCount + '종';
+  return megaCount + gmaxCount;
 }
 
 // ─── SEARCH ───
-function updateCount(shown, total) {
+function updateCount(shown) {
   document.getElementById('count-label').textContent =
-    shown === total ? `총 ${total}마리` : `${shown} / ${total}마리`;
+    shown === totalAll ? `총 ${totalAll}마리` : `${shown} / ${totalAll}마리`;
 }
 
 document.getElementById('search-input').addEventListener('input', function() {
@@ -492,15 +676,20 @@ document.getElementById('search-input').addEventListener('input', function() {
     c.classList.toggle('hidden', !match);
     if (match) shown++;
   });
+  // 섹션 헤더 숨기기
+  ['mega','gmax'].forEach(type => {
+    const grid = document.getElementById(type + '-grid');
+    const header = document.getElementById(type + '-section-header');
+    const visible = [...grid.querySelectorAll('.pokemon-card')].some(c => !c.classList.contains('hidden'));
+    header.style.display = (q && !visible) ? 'none' : '';
+  });
   document.getElementById('no-results').style.display = (shown === 0 && q) ? 'block' : 'none';
-  updateCount(shown, DB.length);
+  updateCount(shown);
 });
 
 // ─── MODAL ───
 function openModal(p) {
   const types = p.types || [];
-
-  // header gradient
   document.getElementById('modal-header').style.background = typeGradient(types);
   document.getElementById('modal-sprite').src = p.sprite;
   document.getElementById('modal-sprite').alt = p.ko;
@@ -511,19 +700,31 @@ function openModal(p) {
     `<span class="modal-type-tag">${t}</span>`
   ).join('');
 
-  // body
   const body = document.getElementById('modal-body');
   body.innerHTML = '';
 
-  // Abilities
-  if (p.abilities && p.abilities.length) {
+  // 거다이맥스: 전용기술 표시
+  if (p.formType === 'gmax' && p.gmaxMove) {
+    const sec = document.createElement('div');
+    sec.className = 'info-section';
+    sec.innerHTML = `<div class="section-title">전용기술</div>
+      <div class="gmax-move-box">
+        <div class="gmax-move-icon">⚡</div>
+        <div>
+          <div class="gmax-move-name">${p.gmaxMove.ko}</div>
+          <div class="gmax-move-label">${p.gmaxMove.en}</div>
+        </div>
+      </div>`;
+    body.appendChild(sec);
+  } else if (p.abilities && p.abilities.length) {
+    // 일반/메가: 특성 표시
     const sec = document.createElement('div');
     sec.className = 'info-section';
     sec.innerHTML = `<div class="section-title">특성</div>`;
     const list = document.createElement('div');
     list.className = 'ability-list';
     p.abilities.forEach(a => {
-      const name = typeof a === 'string' ? a : (a.ko || a.en || a);
+      const name = typeof a === 'string' ? a : (a.ko || a.en || '');
       const en   = typeof a === 'object' ? (a.en || '') : '';
       const hidden = typeof a === 'object' ? a.hidden : false;
       list.innerHTML += `
@@ -539,25 +740,27 @@ function openModal(p) {
     body.appendChild(sec);
   }
 
-  // Forms
-  const showForms = (p.forms || []).filter(f => f.name_ko && f.sprite);
-  if (showForms.length) {
-    const sec = document.createElement('div');
-    sec.className = 'info-section';
-    sec.innerHTML = `<div class="section-title">다른 폼</div>`;
-    const grid = document.createElement('div');
-    grid.className = 'forms-grid';
-    showForms.forEach(f => {
-      const ft = f.types || [];
-      grid.innerHTML += `
-        <div class="form-card">
-          <img src="${f.sprite}" alt="${f.name_ko}" loading="lazy">
-          <div class="form-card-name">${f.name_ko}</div>
-          <div class="form-types">${ft.map(t=>`<span class="form-type t-${t}">${t}</span>`).join('')}</div>
-        </div>`;
-    });
-    sec.appendChild(grid);
-    body.appendChild(sec);
+  // 일반 포켓몬만 폼 보여주기
+  if (!p.formType) {
+    const showForms = (p.forms || []).filter(f => f.name_ko && f.sprite);
+    if (showForms.length) {
+      const sec = document.createElement('div');
+      sec.className = 'info-section';
+      sec.innerHTML = `<div class="section-title">다른 폼</div>`;
+      const grid = document.createElement('div');
+      grid.className = 'forms-grid';
+      showForms.forEach(f => {
+        const ft = f.types || [];
+        grid.innerHTML += `
+          <div class="form-card">
+            <img src="${f.sprite}" alt="${f.name_ko}" loading="lazy">
+            <div class="form-card-name">${f.name_ko}</div>
+            <div class="form-types">${ft.map(t=>`<span class="form-type t-${t}">${t}</span>`).join('')}</div>
+          </div>`;
+      });
+      sec.appendChild(grid);
+      body.appendChild(sec);
+    }
   }
 
   document.getElementById('modal-overlay').classList.add('open');
@@ -569,10 +772,7 @@ document.getElementById('modal-overlay').addEventListener('click', e => {
   if (e.target === document.getElementById('modal-overlay')) closeModal();
 });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-
-function closeModal() {
-  document.getElementById('modal-overlay').classList.remove('open');
-}
+function closeModal() { document.getElementById('modal-overlay').classList.remove('open'); }
 
 // ─── LOAD ───
 fetch('data/quiz_pokemon.json')
@@ -580,6 +780,9 @@ fetch('data/quiz_pokemon.json')
   .then(data => {
     DB = data;
     renderAll(DB);
+    const formCount = renderForms(data);
+    totalAll = DB.length + formCount;
+    updateCount(totalAll);
   })
   .catch(() => {
     document.getElementById('pokemon-grid').innerHTML =
