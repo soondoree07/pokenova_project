@@ -345,7 +345,7 @@
     .t-에스퍼{ background: #F95587; }
     .t-벌레  { background: #A6B91A; }
     .t-바위  { background: #B6A136; }
-    .t-유령  { background: #1a1a6e; }
+    .t-유령  { background: #1a1a6e; color: white !important; }
     .t-드래곤{ background: #6F35FC; }
     .t-악    { background: #705746; }
     .t-강철  { background: #B7B7CE; color: #555 !important; }
@@ -826,21 +826,13 @@ document.getElementById('type-group').addEventListener('click', e => {
   const t = btn.dataset.type;
   if (activeType === t) {
     activeType = null;
-    btn.classList.remove('active-type');
-    btn.style.background = '';
-    btn.style.borderColor = '';
+    document.querySelectorAll('#type-group .filter-btn').forEach(b => b.style.opacity = '0.55');
   } else {
     activeType = t;
-    document.querySelectorAll('#type-group .filter-btn').forEach(b => {
-      b.classList.remove('active-type');
-      b.style.background = '';
-      b.style.borderColor = '';
-      b.style.color = '';
-    });
-    btn.classList.add('active-type');
-    btn.style.background = TYPE_BG[t] || '#888';
-    btn.style.borderColor = 'transparent';
-    btn.style.color = TYPE_LIGHT.has(t) ? '#555' : 'white';
+    document.querySelectorAll('#type-group .filter-btn').forEach(b => b.style.opacity = '0.55');
+    btn.style.opacity = '1';
+    btn.style.boxShadow = '0 0 0 3px rgba(0,0,0,0.25)';
+    setTimeout(() => btn.style.boxShadow = '', 200);
   }
   applyFilters();
 });
@@ -938,9 +930,14 @@ function buildTypeButtons() {
   const group = document.getElementById('type-group');
   types.forEach(t => {
     const btn = document.createElement('button');
-    btn.className = 'filter-btn';
+    btn.className = 'filter-btn t-' + t;
     btn.dataset.type = t;
     btn.textContent = t;
+    // 타입 색상을 기본 배경으로 적용
+    btn.style.background = TYPE_BG[t] || '#888';
+    btn.style.borderColor = 'transparent';
+    btn.style.color = TYPE_LIGHT.has(t) ? '#555' : 'white';
+    btn.style.opacity = '0.55';
     group.appendChild(btn);
   });
 }
