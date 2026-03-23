@@ -747,7 +747,7 @@
   <div class="gameover-box">
     <div class="gameover-title">💀 게임 오버</div>
     <div class="gameover-score" id="b-gameover-score"></div>
-    <button class="btn-primary" onclick="bResetGame()" style="width:100%;margin-top:8px">다시 시작</button>
+    <button class="btn-primary" onclick="bResetGame()" style="width:100%;margin-top:8px">완료</button>
   </div>
 </div>
 
@@ -1154,6 +1154,7 @@ function bLoadPokemon() {
   document.getElementById('b-name-revealed').className   = 'name-revealed';
   document.getElementById('scan-line').className = 'scan-line';
   hideRankCard('b');
+  bUpdateLives();
 
   const p = DB.pokemon[bGetNextId()];
   bKoName  = p.ko;
@@ -1238,7 +1239,7 @@ function bShowHint() {
 }
 function bNextPokemon() {
   bQuestionsPlayed++;
-  if (bDifficulty === 'normal' && bQuestionsPlayed % 3 === 0) {
+  if (bDifficulty === 'normal' && bQuestionsPlayed % 5 === 0) {
     bHints++;
     bUpdateHintBadge();
   }
