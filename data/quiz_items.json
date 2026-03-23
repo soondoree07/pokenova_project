@@ -39,7 +39,7 @@
     "id": 5,
     "ko": "사파리볼",
     "en": "safari ball",
-    "desc": "Tries to catch a wild Pokémon in the Great Marsh or Safari Zone. Success rate is 1.5×.",
+    "desc": "사파리존·그랜드마쉬에서만 사용할 수 있는 볼.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/safari-ball.png",
     "category": "standard-balls"
@@ -75,7 +75,7 @@
     "id": 9,
     "ko": "리피드볼",
     "en": "repeat ball",
-    "desc": "Tries to catch a wild Pokémon. Success rate is 3× for previously-caught Pokémon.",
+    "desc": "이전에 잡은 적 있는 포켓몬에게 포획률 3.5배.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/repeat-ball.png",
     "category": "special-balls"
@@ -147,7 +147,7 @@
     "id": 17,
     "ko": "상처약",
     "en": "potion",
-    "desc": "Restores 20 HP.",
+    "desc": "HP를 20 회복한다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/potion.png",
     "category": "healing"
@@ -201,7 +201,7 @@
     "id": 23,
     "ko": "회복약",
     "en": "full restore",
-    "desc": "Restores HP to full and cures any status ailment and confusion.",
+    "desc": "HP를 최대로 회복하고 상태이상과 혼란을 치료한다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/full-restore.png",
     "category": "healing"
@@ -210,7 +210,7 @@
     "id": 24,
     "ko": "풀회복약",
     "en": "max potion",
-    "desc": "Restores HP to full.",
+    "desc": "HP를 최대로 회복한다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-potion.png",
     "category": "healing"
@@ -228,7 +228,7 @@
     "id": 26,
     "ko": "좋은상처약",
     "en": "super potion",
-    "desc": "Restores 50 HP.",
+    "desc": "HP를 50 회복한다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/super-potion.png",
     "category": "healing"
@@ -1758,7 +1758,7 @@
     "id": 197,
     "ko": "구애머리띠",
     "en": "choice band",
-    "desc": "Held: Increases Attack by 50%, but restricts the holder to only one move.",
+    "desc": "지니면 공격이 1.5배가 되지만 처음 사용한 기술만 쓸 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/choice-band.png",
     "category": "choice"
@@ -2118,7 +2118,7 @@
     "id": 237,
     "ko": "빨강밴드",
     "en": "red scarf",
-    "desc": "Raises the holder’s Coolness while in a contest.",
+    "desc": "콘테스트에서 지니면 멋짐이 오른다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/red-scarf.png",
     "category": "scarves"
@@ -2127,7 +2127,7 @@
     "id": 238,
     "ko": "파랑밴드",
     "en": "blue scarf",
-    "desc": "Raises the holder’s Beauty while in a contest.",
+    "desc": "콘테스트에서 지니면 아름다움이 오른다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/blue-scarf.png",
     "category": "scarves"
@@ -2136,7 +2136,7 @@
     "id": 239,
     "ko": "분홍밴드",
     "en": "pink scarf",
-    "desc": "Raises the holder’s Cuteness while in a contest.",
+    "desc": "콘테스트에서 지니면 귀여움이 오른다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pink-scarf.png",
     "category": "scarves"
@@ -2154,7 +2154,7 @@
     "id": 241,
     "ko": "노랑밴드",
     "en": "yellow scarf",
-    "desc": "Raises the holder’s Toughness while in a contest.",
+    "desc": "콘테스트에서 지니면 강함이 오른다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/yellow-scarf.png",
     "category": "scarves"
@@ -2226,7 +2226,7 @@
     "id": 249,
     "ko": "맹독구슬",
     "en": "toxic orb",
-    "desc": "Held: Inflicts Toxic on the holder at the end of the turn. Activates after Poison damage would occur.",
+    "desc": "지니면 매 턴 마지막에 독독독 상태가 된다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/toxic-orb.png",
     "category": "bad-held-items"
@@ -2235,7 +2235,7 @@
     "id": 250,
     "ko": "화염구슬",
     "en": "flame orb",
-    "desc": "Held: Inflicts Burn on the holder at the end of the turn. Activates after Burn damage would occur.",
+    "desc": "지니면 매 턴 마지막에 화상 상태가 된다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/flame-orb.png",
     "category": "bad-held-items"
@@ -2280,7 +2280,7 @@
     "id": 255,
     "ko": "검은철구",
     "en": "iron ball",
-    "desc": "Held: Holder’s Speed is halved. Negates all Ground-type immunities, and makes Flying-types take neutral damage from Ground-type moves. Arena Trap. Spikes, and Toxic Spikes affect the holder.",
+    "desc": "지니면 스피드가 절반이 된다. 땅 타입 기술에 대한 내성이 없어진다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/iron-ball.png",
     "category": "bad-held-items"
@@ -2361,7 +2361,7 @@
     "id": 264,
     "ko": "구애스카프",
     "en": "choice scarf",
-    "desc": "Held: Increases Speed by 50%, but restricts the holder to only one move.",
+    "desc": "지니면 스피드가 1.5배가 되지만 처음 사용한 기술만 쓸 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/choice-scarf.png",
     "category": "choice"
@@ -2451,7 +2451,7 @@
     "id": 274,
     "ko": "구애안경",
     "en": "choice specs",
-    "desc": "Held: Increases Special Attack by 50%, but restricts the holder to only one move.",
+    "desc": "지니면 특공이 1.5배가 되지만 처음 사용한 기술만 쓸 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/choice-specs.png",
     "category": "choice"
@@ -7614,7 +7614,7 @@
     "id": 887,
     "ko": "울트라볼",
     "en": "beast ball",
-    "desc": "Tries to catch a wild Pokémon. Success rate is 5× for Ultra Beasts and 0.1× for all other Pokémon.",
+    "desc": "울트라비스트에게 포획률 5배. 일반 포켓몬에게는 포획률 0.1배.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/beast-ball.png",
     "category": "special-balls"
