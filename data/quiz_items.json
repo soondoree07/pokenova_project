@@ -1009,108 +1009,108 @@
   },
   {
     "id": 114,
-    "ko": "Grass Mail",
+    "ko": "잔디메일",
     "en": "grass mail",
-    "desc": "Lets a Trainer write a message and send it via Pokémon trade.",
+    "desc": "메시지를 담아 교환할 수 있는 편지.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/grass-mail.png",
     "category": "all-mail"
   },
   {
     "id": 115,
-    "ko": "Flame Mail",
+    "ko": "플레임메일",
     "en": "flame mail",
-    "desc": "Lets a Trainer write a message and send it via Pokémon trade.",
+    "desc": "메시지를 담아 교환할 수 있는 편지.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/flame-mail.png",
     "category": "all-mail"
   },
   {
     "id": 116,
-    "ko": "Bubble Mail",
+    "ko": "블루메일",
     "en": "bubble mail",
-    "desc": "Lets a Trainer write a message and send it via Pokémon trade.",
+    "desc": "메시지를 담아 교환할 수 있는 편지.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/bubble-mail.png",
     "category": "all-mail"
   },
   {
     "id": 117,
-    "ko": "Bloom Mail",
+    "ko": "블룸메일",
     "en": "bloom mail",
-    "desc": "Lets a Trainer write a message and send it via Pokémon trade.",
+    "desc": "메시지를 담아 교환할 수 있는 편지.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/bloom-mail.png",
     "category": "all-mail"
   },
   {
     "id": 118,
-    "ko": "Tunnel Mail",
+    "ko": "터널메일",
     "en": "tunnel mail",
-    "desc": "Lets a Trainer write a message and send it via Pokémon trade.",
+    "desc": "메시지를 담아 교환할 수 있는 편지.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tunnel-mail.png",
     "category": "all-mail"
   },
   {
     "id": 119,
-    "ko": "Steel Mail",
+    "ko": "스틸메일",
     "en": "steel mail",
-    "desc": "Lets a Trainer write a message and send it via Pokémon trade.",
+    "desc": "메시지를 담아 교환할 수 있는 편지.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/steel-mail.png",
     "category": "all-mail"
   },
   {
     "id": 120,
-    "ko": "Heart Mail",
+    "ko": "러브러브메일",
     "en": "heart mail",
-    "desc": "Lets a Trainer write a message and send it via Pokémon trade.",
+    "desc": "메시지를 담아 교환할 수 있는 편지.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heart-mail.png",
     "category": "all-mail"
   },
   {
     "id": 121,
-    "ko": "Snow Mail",
+    "ko": "블리자드메일",
     "en": "snow mail",
-    "desc": "Lets a Trainer write a message and send it via Pokémon trade.",
+    "desc": "메시지를 담아 교환할 수 있는 편지.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/snow-mail.png",
     "category": "all-mail"
   },
   {
     "id": 122,
-    "ko": "Space Mail",
+    "ko": "스페이스메일",
     "en": "space mail",
-    "desc": "Lets a Trainer write a message and send it via Pokémon trade.",
+    "desc": "메시지를 담아 교환할 수 있는 편지.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/space-mail.png",
     "category": "all-mail"
   },
   {
     "id": 123,
-    "ko": "Air Mail",
+    "ko": "에어메일",
     "en": "air mail",
-    "desc": "Lets a Trainer write a message and send it via Pokémon trade.",
+    "desc": "메시지를 담아 교환할 수 있는 편지.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/air-mail.png",
     "category": "all-mail"
   },
   {
     "id": 124,
-    "ko": "Mosaic Mail",
+    "ko": "모자이크메일",
     "en": "mosaic mail",
-    "desc": "Lets a Trainer write a message and send it via Pokémon trade.",
+    "desc": "메시지를 담아 교환할 수 있는 편지.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mosaic-mail.png",
     "category": "all-mail"
   },
   {
     "id": 125,
-    "ko": "Brick Mail",
+    "ko": "브릭메일",
     "en": "brick mail",
-    "desc": "Lets a Trainer write a message and send it via Pokémon trade.",
+    "desc": "메시지를 담아 교환할 수 있는 편지.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/brick-mail.png",
     "category": "all-mail"
@@ -4797,13 +4797,12 @@
   },
   {
     "id": 530,
-    "ko": "Devon Goods",
+    "ko": "데봉화물",
     "en": "devon goods",
-    "desc": "Contains mechanical parts to be delivered to Captain Stern.",
-    "desc_lang": "en",
+    "desc": "루비/사파이어에서 데봉코퍼레이션의 화물.",
+    "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/devon-goods.png",
-    "category": "plot-advancement",
-    "needs_ko": true
+    "category": "plot-advancement"
   },
   {
     "id": 531,
@@ -4816,13 +4815,12 @@
   },
   {
     "id": 532,
-    "ko": "Pokéblock Case",
+    "ko": "포켓몬스넥케이스",
     "en": "pokéblock case",
-    "desc": "Holds Pokéblocks.",
-    "desc_lang": "en",
+    "desc": "포켓몬스넥을 보관하는 케이스.",
+    "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pokeblock-case.png",
-    "category": "gameplay",
-    "needs_ko": true
+    "category": "gameplay"
   },
   {
     "id": 533,
@@ -4874,43 +4872,39 @@
   },
   {
     "id": 538,
-    "ko": "Rm. 1 Key",
+    "ko": "1호실열쇠",
     "en": "rm. 1 key",
-    "desc": "Unlocks room 1 on the Abandoned Ship.",
-    "desc_lang": "en",
+    "desc": "배틀파크 호텔 1호실 열쇠.",
+    "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rm-1-key.png",
-    "category": "plot-advancement",
-    "needs_ko": true
+    "category": "plot-advancement"
   },
   {
     "id": 539,
-    "ko": "Rm. 2 Key",
+    "ko": "2호실열쇠",
     "en": "rm. 2 key",
-    "desc": "Unlocks room 2 on the Abandoned Ship.",
-    "desc_lang": "en",
+    "desc": "배틀파크 호텔 2호실 열쇠.",
+    "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rm-2-key.png",
-    "category": "plot-advancement",
-    "needs_ko": true
+    "category": "plot-advancement"
   },
   {
     "id": 540,
-    "ko": "Rm. 4 Key",
+    "ko": "4호실열쇠",
     "en": "rm. 4 key",
-    "desc": "Unlocks room 4 on the Abandoned Ship.",
-    "desc_lang": "en",
+    "desc": "배틀파크 호텔 4호실 열쇠.",
+    "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rm-4-key.png",
-    "category": "plot-advancement",
-    "needs_ko": true
+    "category": "plot-advancement"
   },
   {
     "id": 541,
-    "ko": "Rm. 6 Key",
+    "ko": "6호실열쇠",
     "en": "rm. 6 key",
-    "desc": "Unlocks room 6 on the Abandoned Ship.",
-    "desc_lang": "en",
+    "desc": "배틀파크 호텔 6호실 열쇠.",
+    "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rm-6-key.png",
-    "category": "plot-advancement",
-    "needs_ko": true
+    "category": "plot-advancement"
   },
   {
     "id": 542,
@@ -4923,13 +4917,12 @@
   },
   {
     "id": 543,
-    "ko": "Oak’s Parcel",
+    "ko": "전해줄물건",
     "en": "oak’s parcel",
-    "desc": "Trade to Prof. Oak for a Pokédex.",
-    "desc_lang": "en",
+    "desc": "오박사에게 전해달라는 물건.",
+    "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/oaks-parcel.png",
-    "category": "plot-advancement",
-    "needs_ko": true
+    "category": "plot-advancement"
   },
   {
     "id": 544,
@@ -5012,13 +5005,12 @@
   },
   {
     "id": 552,
-    "ko": "Teachy TV",
+    "ko": "가르침TV",
     "en": "teachy tv",
-    "desc": "Teachers basic trainer advice.",
-    "desc_lang": "en",
+    "desc": "기술을 가르쳐주는 TV 프로그램.",
+    "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/teachy-tv.png",
-    "category": "gameplay",
-    "needs_ko": true
+    "category": "gameplay"
   },
   {
     "id": 553,
