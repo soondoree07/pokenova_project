@@ -11565,7 +11565,7 @@
   },
   {
     "id": 827,
-    "ko": "Dire Claw",
+    "ko": "페이탈클로",
     "en": "dire claw",
     "type": "독",
     "type_en": "poison",
@@ -11575,12 +11575,11 @@
     "accuracy": 100,
     "gen": "8세대",
     "desc": "The user lashes out at the target with ruinous claws, aiming to land a critical hit. This may also leave the target poisoned, paralyzed, or drowsy.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc_lang": "en"
   },
   {
     "id": 828,
-    "ko": "Psyshield Bash",
+    "ko": "배리어러시",
     "en": "psyshield bash",
     "type": "에스퍼",
     "type_en": "psychic",
@@ -11590,12 +11589,11 @@
     "accuracy": 90,
     "gen": "8세대",
     "desc": "Cloaking itself in psychic energy, the user slams into the target. This may also raise the user’s defensive stats.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc_lang": "en"
   },
   {
     "id": 829,
-    "ko": "Power Shift",
+    "ko": "파워시프트",
     "en": "power shift",
     "type": "노말",
     "type_en": "normal",
@@ -11605,12 +11603,11 @@
     "accuracy": null,
     "gen": "8세대",
     "desc": "The user swaps its offensive and defensive stats.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc_lang": "en"
   },
   {
     "id": 830,
-    "ko": "Stone Axe",
+    "ko": "암석액스",
     "en": "stone axe",
     "type": "바위",
     "type_en": "rock",
@@ -11620,12 +11617,11 @@
     "accuracy": 90,
     "gen": "8세대",
     "desc": "The user swings its stone axes at the target, aiming to land a critical hit. Stone splinters left behind by this attack continue to damage the target for several turns.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc_lang": "en"
   },
   {
     "id": 831,
-    "ko": "Springtide Storm",
+    "ko": "봄의폭풍",
     "en": "springtide storm",
     "type": "페어리",
     "type_en": "fairy",
@@ -11635,12 +11631,11 @@
     "accuracy": 80,
     "gen": "8세대",
     "desc": "The user attacks by wrapping the target in fierce winds brimming with love and hate. This move’s additional effects depend on the user’s form.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc_lang": "en"
   },
   {
     "id": 832,
-    "ko": "Mystical Power",
+    "ko": "신비의힘",
     "en": "mystical power",
     "type": "에스퍼",
     "type_en": "psychic",
@@ -11650,12 +11645,11 @@
     "accuracy": 90,
     "gen": "8세대",
     "desc": "The user strengthens itself with a mysterious power. If it excels in offense, its offensive stats are raised. If it excels in defense, its defensive stats are raised.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc_lang": "en"
   },
   {
     "id": 833,
-    "ko": "Raging Fury",
+    "ko": "대격분",
     "en": "raging fury",
     "type": "불꽃",
     "type_en": "fire",
@@ -11665,12 +11659,11 @@
     "accuracy": 100,
     "gen": "8세대",
     "desc": "The user rampages and spews vicious flames to inflict damage on the target, then becomes fixated on using this move.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc_lang": "en"
   },
   {
     "id": 834,
-    "ko": "Wave Crash",
+    "ko": "웨이브태클",
     "en": "wave crash",
     "type": "물",
     "type_en": "water",
@@ -11680,12 +11673,11 @@
     "accuracy": 100,
     "gen": "8세대",
     "desc": "The user shrouds itself in water and slams into the target with its whole body to inflict damage. This also damages the user and raises the user’s action speed.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc_lang": "en"
   },
   {
     "id": 835,
-    "ko": "Chloroblast",
+    "ko": "클로로블라스트",
     "en": "chloroblast",
     "type": "풀",
     "type_en": "grass",
@@ -11695,12 +11687,11 @@
     "accuracy": 95,
     "gen": "8세대",
     "desc": "The user launches its amassed chlorophyll to inflict damage on the target. This also damages the user and lowers the user's action speed.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc_lang": "en"
   },
   {
     "id": 836,
-    "ko": "Mountain Gale",
+    "ko": "빙산바람",
     "en": "mountain gale",
     "type": "얼음",
     "type_en": "ice",
@@ -11710,12 +11701,11 @@
     "accuracy": 85,
     "gen": "8세대",
     "desc": "The user hurls giant chunks of ice at the target to inflict damage.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc_lang": "en"
   },
   {
     "id": 837,
-    "ko": "Victory Dance",
+    "ko": "승리의춤",
     "en": "victory dance",
     "type": "격투",
     "type_en": "fighting",
@@ -11725,12 +11715,11 @@
     "accuracy": null,
     "gen": "8세대",
     "desc": "The user performs a dance to usher in victory. This raises the user’s offensive and defensive stats and increases the damage dealt by the user’s moves by 50 percent.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc_lang": "en"
   },
   {
     "id": 838,
-    "ko": "Headlong Rush",
+    "ko": "들이받기",
     "en": "headlong rush",
     "type": "땅",
     "type_en": "ground",
@@ -11740,12 +11729,11 @@
     "accuracy": 100,
     "gen": "8세대",
     "desc": "The user smashes into the target in a full-body tackle. This also lowers the user’s defensive stats.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc_lang": "en"
   },
   {
     "id": 839,
-    "ko": "Barb Barrage",
+    "ko": "독침천발",
     "en": "barb barrage",
     "type": "독",
     "type_en": "poison",
@@ -11755,12 +11743,11 @@
     "accuracy": 100,
     "gen": "8세대",
     "desc": "The user launches countless toxic barbs to inflict damage. This may also poison the target. This move’s power is doubled if the target has a status condition.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc_lang": "en"
   },
   {
     "id": 840,
-    "ko": "Esper Wing",
+    "ko": "오라윙",
     "en": "esper wing",
     "type": "에스퍼",
     "type_en": "psychic",
@@ -11770,12 +11757,11 @@
     "accuracy": 100,
     "gen": "8세대",
     "desc": "The user slashes the target with aura-enriched wings. This also raises the user's action speed. This move has a heightened chance of landing a critical hit.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc_lang": "en"
   },
   {
     "id": 841,
-    "ko": "Bitter Malice",
+    "ko": "천추지한",
     "en": "bitter malice",
     "type": "고스트",
     "type_en": "ghost",
@@ -11785,12 +11771,11 @@
     "accuracy": 100,
     "gen": "8세대",
     "desc": "The user attacks its target with spine-chilling resentment. This may also leave the target with frostbite. This move's power is doubled if the target has a status condition.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc_lang": "en"
   },
   {
     "id": 842,
-    "ko": "Shelter",
+    "ko": "농성",
     "en": "shelter",
     "type": "강철",
     "type_en": "steel",
@@ -11800,12 +11785,11 @@
     "accuracy": null,
     "gen": "8세대",
     "desc": "The user makes its skin as hard as an iron shield, raising its defensive stats. Incoming moves also become more likely to miss.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc_lang": "en"
   },
   {
     "id": 843,
-    "ko": "Triple Arrows",
+    "ko": "3연화살",
     "en": "triple arrows",
     "type": "격투",
     "type_en": "fighting",
@@ -11815,12 +11799,11 @@
     "accuracy": 100,
     "gen": "8세대",
     "desc": "The user delivers an axe kick, then fires three arrows. This raises the chance of its future attacks landing critical hits and also lowers the target's defensive stats.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc_lang": "en"
   },
   {
     "id": 844,
-    "ko": "Infernal Parade",
+    "ko": "백귀야행",
     "en": "infernal parade",
     "type": "고스트",
     "type_en": "ghost",
@@ -11830,12 +11813,11 @@
     "accuracy": 100,
     "gen": "8세대",
     "desc": "The user attacks with myriad fireballs. This may also leave the target with a burn. This move's power is doubled if the target has a status condition.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc_lang": "en"
   },
   {
     "id": 845,
-    "ko": "Ceaseless Edge",
+    "ko": "비검천중파",
     "en": "ceaseless edge",
     "type": "악",
     "type_en": "dark",
@@ -11845,12 +11827,11 @@
     "accuracy": 90,
     "gen": "8세대",
     "desc": "The user slashes its shell blade at the target, aiming to land a critical hit. Shell splinters left behind by this attack will continue to damage the target for several turns.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc_lang": "en"
   },
   {
     "id": 846,
-    "ko": "Bleakwind Storm",
+    "ko": "찬바람폭풍",
     "en": "bleakwind storm",
     "type": "비행",
     "type_en": "flying",
@@ -11860,12 +11841,11 @@
     "accuracy": 80,
     "gen": "8세대",
     "desc": "The user attacks with savagely cold winds that cause both body and spirit to tremble. This may also leave the target with frostbite.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc_lang": "en"
   },
   {
     "id": 847,
-    "ko": "Wildbolt Storm",
+    "ko": "번개폭풍",
     "en": "wildbolt storm",
     "type": "전기",
     "type_en": "electric",
@@ -11875,12 +11855,11 @@
     "accuracy": 80,
     "gen": "8세대",
     "desc": "The user summons a thunderous tempest and savagely attacks with lightning and wind. This may also leave the target with paralysis.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc_lang": "en"
   },
   {
     "id": 848,
-    "ko": "Sandsear Storm",
+    "ko": "열사의폭풍",
     "en": "sandsear storm",
     "type": "땅",
     "type_en": "ground",
@@ -11890,12 +11869,11 @@
     "accuracy": 80,
     "gen": "8세대",
     "desc": "The user attacks by wrapping the target in fierce winds and searingly hot sand. This also leaves the target with a burn.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc_lang": "en"
   },
   {
     "id": 849,
-    "ko": "Lunar Blessing",
+    "ko": "초승달의기도",
     "en": "lunar blessing",
     "type": "에스퍼",
     "type_en": "psychic",
@@ -11905,12 +11883,11 @@
     "accuracy": null,
     "gen": "8세대",
     "desc": "The user heals its own status conditions and restores its HP. Incoming moves also become more likely to miss.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc_lang": "en"
   },
   {
     "id": 850,
-    "ko": "Take Heart",
+    "ko": "브레이브차지",
     "en": "take heart",
     "type": "에스퍼",
     "type_en": "psychic",
@@ -11920,7 +11897,6 @@
     "accuracy": null,
     "gen": "8세대",
     "desc": "The user lifts its spirits, healing its own status conditions and raising its offensive and defensive stats.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc_lang": "en"
   }
 ]

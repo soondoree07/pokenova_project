@@ -959,7 +959,7 @@ async function loadAllData() {
   DB.pokemon   = p;
   DB.moves     = m.filter(x => hasKorean(x.ko));
   DB.abilities = a.filter(x => hasKorean(x.ko));
-  DB.items     = i.filter(x => hasKorean(x.ko));
+  DB.items     = i.filter(x => hasKorean(x.ko) && hasKorean(x.desc || ''));
 }
 
 function showTab(name) {
