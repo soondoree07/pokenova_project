@@ -35,7 +35,7 @@
       "왕자리",
       "아이스크",
       "메가자리",
-      "blaziken-mega"
+      "메가번치코"
     ]
   },
   {
@@ -233,7 +233,7 @@
     "pokemon": [
       "잠만보",
       "쟝고",
-      "snorlax-gmax"
+      "거다이맥스 잠만보"
     ]
   },
   {
@@ -319,7 +319,7 @@
     "pokemon": [
       "마자용",
       "마자",
-      "gengar-mega"
+      "메가팬텀"
     ]
   },
   {
@@ -506,7 +506,7 @@
       "랄토스",
       "킬리아",
       "가디안",
-      "alakazam-mega"
+      "메가후딘"
     ]
   },
   {
@@ -519,7 +519,7 @@
       "마릴",
       "마릴리",
       "루리리",
-      "mawile-mega"
+      "메가입치트"
     ]
   },
   {
@@ -631,7 +631,7 @@
       "히포포타스",
       "하마돈",
       "기가이어스",
-      "tyranitar-mega"
+      "메가마기라스"
     ]
   },
   {
@@ -807,7 +807,7 @@
       "기기어르",
       "기기기어르",
       "스트린더",
-      "toxtricity-amped-gmax"
+      "거다이맥스 독전기 (앰프)"
     ]
   },
   {
@@ -821,8 +821,8 @@
       "기어르",
       "기기어르",
       "기기기어르",
-      "toxtricity-low-key",
-      "toxtricity-low-key-gmax"
+      "독전기 (로우키)",
+      "거다이맥스 독전기 (로우키)"
     ]
   },
   {
@@ -833,9 +833,9 @@
     "desc_lang": "ko",
     "pokemon": [
       "캐스퐁",
-      "castform-sunny",
-      "castform-rainy",
-      "castform-snowy"
+      "캐스퐁 (맑음폼)",
+      "캐스퐁 (비폼)",
+      "캐스퐁 (눈폼)"
     ]
   },
   {
@@ -990,7 +990,7 @@
     "pokemon": [
       "코터스",
       "그란돈",
-      "charizard-mega-y"
+      "메가리자몽 Y"
     ]
   },
   {
@@ -1030,7 +1030,7 @@
       "코터스",
       "태우지네",
       "다태우지네",
-      "centiskorch-gmax"
+      "거다이맥스 다태우지네"
     ]
   },
   {
@@ -1042,7 +1042,7 @@
     "pokemon": [
       "요가랑",
       "요가램",
-      "medicham-mega"
+      "메가요가램"
     ]
   },
   {
@@ -1167,9 +1167,9 @@
       "망키",
       "성원숭",
       "켄타로스",
-      "tauros-paldea-combat-breed",
-      "tauros-paldea-blaze-breed",
-      "tauros-paldea-aqua-breed"
+      "팔데아 케르마",
+      "팔데아 케르마 (파이어)",
+      "팔데아 케르마 (워터)"
     ]
   },
   {
@@ -1276,8 +1276,8 @@
       "폴리곤Z",
       "배쓰나이",
       "대쓰여너",
-      "basculin-blue-striped",
-      "lucario-mega"
+      "배스라오 (파랑줄)",
+      "메가루카리오"
     ]
   },
   {
@@ -1292,7 +1292,7 @@
       "콕코구리",
       "크라파",
       "왕큰부리",
-      "heracross-mega"
+      "메가헤라크로스"
     ]
   },
   {
@@ -1320,7 +1320,7 @@
       "해너츠",
       "해루미",
       "트로피우스",
-      "houndoom-mega"
+      "메가헬가"
     ]
   },
   {
@@ -1390,7 +1390,7 @@
       "괴력몬",
       "단칼빙",
       "쌍검킬",
-      "pidgeot-mega"
+      "메가피죤투"
     ]
   },
   {
@@ -1558,7 +1558,7 @@
     "pokemon": [
       "마임맨",
       "흉내내",
-      "aggron-mega"
+      "메가보스로라"
     ]
   },
   {
@@ -1581,7 +1581,7 @@
       "캥카",
       "밀탱크",
       "꼬이밍고",
-      "lopunny-mega"
+      "메가이어롭"
     ]
   },
   {
@@ -1635,7 +1635,7 @@
       "눈쓰개",
       "눈설왕",
       "배바닐라",
-      "abomasnow-mega"
+      "메가눈설왕"
     ]
   },
   {
@@ -1648,7 +1648,7 @@
       "세꿀버리",
       "에블리",
       "에리본",
-      "ribombee-totem"
+      "어리버리 (토템)"
     ]
   },
   {
@@ -1771,7 +1771,7 @@
       "절각참",
       "대도각참",
       "오거폰",
-      "zapdos-galar"
+      "가라르 썬더"
     ]
   },
   {
@@ -1795,9 +1795,9 @@
       "팬텀",
       "탱그릴",
       "탱탱겔",
-      "marowak-alola",
-      "marowak-totem",
-      "gengar-gmax"
+      "알로라 텅구리",
+      "텅구리 (토템)",
+      "거다이맥스 팬텀"
     ]
   },
   {
@@ -1823,7 +1823,7 @@
     "desc_lang": "ko",
     "pokemon": [
       "파밀리쥐",
-      "maushold-family-of-three"
+      "헬가이저 (3인 가족)"
     ]
   },
   {
@@ -1849,7 +1849,7 @@
     "desc_lang": "ko",
     "pokemon": [
       "두랄루돈",
-      "duraludon-gmax"
+      "거다이맥스 두랄루돈"
     ]
   },
   {
@@ -1860,7 +1860,7 @@
     "desc_lang": "ko",
     "pokemon": [
       "두랄루돈",
-      "duraludon-gmax"
+      "거다이맥스 두랄루돈"
     ]
   },
   {
@@ -1941,8 +1941,8 @@
       "수레기",
       "드래캄",
       "태깅구르",
-      "grimer-alola",
-      "muk-alola"
+      "알로라 질퍽이",
+      "알로라 질뻐기"
     ]
   },
   {
@@ -2017,8 +2017,8 @@
     "pokemon": [
       "조로아",
       "조로아크",
-      "zorua-hisui",
-      "zoroark-hisui"
+      "히스이 조로아",
+      "히스이 조로아크"
     ]
   },
   {
@@ -2080,7 +2080,7 @@
       "테라키온",
       "비리디온",
       "케르디오",
-      "keldeo-resolute"
+      "케르디오 (각오폼)"
     ]
   },
   {
@@ -2094,7 +2094,7 @@
       "바다그다",
       "바닥트리오",
       "모으령",
-      "basculin-white-striped"
+      "배스라오 (하양줄)"
     ]
   },
   {
@@ -2104,9 +2104,9 @@
     "desc": "변화 기술을 되받아칠 수 있다.",
     "desc_lang": "ko",
     "pokemon": [
-      "absol-mega",
-      "sableye-mega",
-      "diancie-mega"
+      "메가앱솔",
+      "메가깜까미",
+      "메가디안시"
     ]
   },
   {
@@ -2149,8 +2149,8 @@
       "두더류",
       "몰드류",
       "랜드로스",
-      "garchomp-mega",
-      "steelix-mega"
+      "메가한카리아스",
+      "메가강철톤"
     ]
   },
   {
@@ -2163,7 +2163,7 @@
       "철시드",
       "너트령",
       "토게데마루",
-      "togedemaru-totem"
+      "토게데마루 (토템)"
     ]
   },
   {
@@ -2192,7 +2192,7 @@
     "desc_lang": "ko",
     "pokemon": [
       "레시라무",
-      "kyurem-white"
+      "큐레무 (화이트)"
     ]
   },
   {
@@ -2203,7 +2203,7 @@
     "desc_lang": "ko",
     "pokemon": [
       "제크로무",
-      "kyurem-black"
+      "큐레무 (블랙)"
     ]
   },
   {
@@ -2214,7 +2214,7 @@
     "desc_lang": "ko",
     "pokemon": [
       "맛보돈",
-      "oinkologne-female"
+      "킹돈가 (암컷)"
     ]
   },
   {
@@ -2228,7 +2228,7 @@
       "플라엣테",
       "플라제스",
       "큐아링",
-      "floette-eternal"
+      "플라베베 (영원의꽃)"
     ]
   },
   {
@@ -2262,7 +2262,7 @@
     "desc_lang": "ko",
     "pokemon": [
       "트리미앙",
-      "persian-alola"
+      "알로라 페르시온"
     ]
   },
   {
@@ -2273,7 +2273,7 @@
     "desc_lang": "ko",
     "pokemon": [
       "후파",
-      "hoopa-unbound"
+      "후파 (언바운드)"
     ]
   },
   {
@@ -2287,7 +2287,7 @@
       "짜랑고우",
       "짜랑고우거",
       "다투곰",
-      "kommo-o-totem"
+      "짜랑짜랑 (토템)"
     ]
   },
   {
@@ -2329,7 +2329,7 @@
     "pokemon": [
       "아마루스",
       "아마루르가",
-      "glalie-mega"
+      "메가얼음귀신"
     ]
   },
   {
@@ -2343,7 +2343,7 @@
       "나루림",
       "마빌크",
       "마휘핑",
-      "alcremie-gmax"
+      "거다이맥스 마휘핑"
     ]
   },
   {
@@ -2354,7 +2354,7 @@
     "desc_lang": "ko",
     "pokemon": [
       "킬가르도",
-      "aegislash-blade"
+      "기기기어르 (블레이드폼)"
     ]
   },
   {
@@ -2374,7 +2374,7 @@
     "pokemon": [
       "완철포",
       "블로스터",
-      "blastoise-mega"
+      "메가거북왕"
     ]
   },
   {
@@ -2403,9 +2403,9 @@
       "거북손손",
       "거북손데스",
       "나이킹",
-      "charizard-mega-x",
-      "aerodactyl-mega",
-      "metagross-mega"
+      "메가리자몽 X",
+      "메가프테라",
+      "메가메타그로스"
     ]
   },
   {
@@ -2415,8 +2415,8 @@
     "desc": "노말타입의 기술이 페어리타입이 된다.",
     "desc_lang": "ko",
     "pokemon": [
-      "gardevoir-mega",
-      "altaria-mega"
+      "메가가디안",
+      "메가파비코리"
     ]
   },
   {
@@ -2437,8 +2437,8 @@
     "desc": "노말타입의 기술이 비행타입이 된다.",
     "desc_lang": "ko",
     "pokemon": [
-      "pinsir-mega",
-      "salamence-mega"
+      "메가쁘사이저",
+      "메가보만다"
     ]
   },
   {
@@ -2448,7 +2448,7 @@
     "desc": "부모와 자식 2마리가 공격한다.",
     "desc_lang": "ko",
     "pokemon": [
-      "kangaskhan-mega"
+      "메가캥카"
     ]
   },
   {
@@ -2479,7 +2479,7 @@
     "desc_lang": "ko",
     "pokemon": [
       "지가르데",
-      "zygarde-10"
+      "지가르데 (10% 폼)"
     ]
   },
   {
@@ -2489,7 +2489,7 @@
     "desc": "불꽃타입의 공격을 받지 않는 날씨로 만든다.",
     "desc_lang": "ko",
     "pokemon": [
-      "kyogre-primal"
+      "원시가이오가"
     ]
   },
   {
@@ -2499,7 +2499,7 @@
     "desc": "물타입의 공격을 받지 않는 날씨로 만든다.",
     "desc_lang": "ko",
     "pokemon": [
-      "groudon-primal"
+      "원시그란돈"
     ]
   },
   {
@@ -2509,7 +2509,7 @@
     "desc": "비행타입의 약점이 없어지는 날씨로 만든다.",
     "desc_lang": "ko",
     "pokemon": [
-      "rayquaza-mega"
+      "메가레쿠쟈"
     ]
   },
   {
@@ -2574,11 +2574,11 @@
     "desc_lang": "ko",
     "pokemon": [
       "메테노",
-      "minior-orange-meteor",
-      "minior-yellow-meteor",
-      "minior-green-meteor",
-      "minior-blue-meteor",
-      "minior-indigo-meteor"
+      "메테노 (주황 운석폼)",
+      "메테노 (노랑 운석폼)",
+      "메테노 (초록 운석폼)",
+      "메테노 (파랑 운석폼)",
+      "메테노 (남색 운석폼)"
     ]
   },
   {
@@ -2590,7 +2590,7 @@
     "pokemon": [
       "영구스",
       "형사구스",
-      "gumshoos-totem"
+      "마타도가스 (토템)"
     ]
   },
   {
@@ -2602,7 +2602,7 @@
     "pokemon": [
       "물거미",
       "깨비물거미",
-      "araquanid-totem"
+      "아쿠아토드 (토템)"
     ]
   },
   {
@@ -2623,7 +2623,7 @@
     "desc_lang": "ko",
     "pokemon": [
       "할비롱",
-      "moltres-galar"
+      "가라르 파이어"
     ]
   },
   {
@@ -2679,7 +2679,7 @@
     "desc": "일렉트릭필드일 때 스피드가 2배가 된다.",
     "desc_lang": "ko",
     "pokemon": [
-      "raichu-alola"
+      "알로라 라이츄"
     ]
   },
   {
@@ -2690,7 +2690,7 @@
     "desc_lang": "ko",
     "pokemon": [
       "약어리",
-      "wishiwashi-school"
+      "물무기 (군생폼)"
     ]
   },
   {
@@ -2701,9 +2701,9 @@
     "desc_lang": "ko",
     "pokemon": [
       "따라큐",
-      "mimikyu-busted",
-      "mimikyu-totem-disguised",
-      "mimikyu-totem-busted"
+      "따라큐 (정체폼)",
+      "따라큐 (토템 변장폼)",
+      "따라큐 (토템 정체폼)"
     ]
   },
   {
@@ -2713,8 +2713,8 @@
     "desc": "상대를 쓰러뜨리면 트레이너와의 유대감이 깊어져서 지우개굴닌자로 변한다. 물수리검이 강해진다.",
     "desc_lang": "ko",
     "pokemon": [
-      "greninja-battle-bond",
-      "greninja-ash"
+      "개굴닌자 (배틀본드)",
+      "개굴닌자 (애쉬)"
     ]
   },
   {
@@ -2724,9 +2724,9 @@
     "desc": "HP가 절반이 되면 셀들이 응원하러 달려와 퍼펙트폼으로 모습이 변한다.",
     "desc_lang": "ko",
     "pokemon": [
-      "zygarde-10-power-construct",
-      "zygarde-50-power-construct",
-      "zygarde-complete"
+      "지가르데 (10% 폼)",
+      "지가르데 (50% 폼)",
+      "지가르데 (컴플리트폼)"
     ]
   },
   {
@@ -2738,7 +2738,7 @@
     "pokemon": [
       "야도뇽",
       "염뉴트",
-      "salazzle-totem"
+      "독독마녀 (토템)"
     ]
   },
   {
@@ -2779,9 +2779,9 @@
     "desc_lang": "ko",
     "pokemon": [
       "춤추새",
-      "oricorio-pom-pom",
-      "oricorio-pau",
-      "oricorio-sensu"
+      "오리코리오 (폼폼)",
+      "오리코리오 (파우)",
+      "오리코리오 (한들한들)"
     ]
   },
   {
@@ -2825,7 +2825,7 @@
     "desc_lang": "ko",
     "pokemon": [
       "마기아나",
-      "magearna-original"
+      "마ギ아나 (오리지널폼)"
     ]
   },
   {
@@ -2835,8 +2835,8 @@
     "desc": "공격으로 자신과 접촉한 상대의 스피드를 떨어뜨린다.",
     "desc_lang": "ko",
     "pokemon": [
-      "diglett-alola",
-      "dugtrio-alola"
+      "알로라 디그다",
+      "알로라 닥트리오"
     ]
   },
   {
@@ -2950,8 +2950,8 @@
     "desc_lang": "ko",
     "pokemon": [
       "네크로즈마",
-      "necrozma-dusk",
-      "necrozma-dawn"
+      "네크로즈마 (황혼의갈기)",
+      "네크로즈마 (여명의날개)"
     ]
   },
   {
@@ -2961,7 +2961,7 @@
     "desc": "효과가 굉장한 공격의 위력이 더욱 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
-      "necrozma-ultra"
+      "네크로즈마 (울트라)"
     ]
   },
   {
@@ -2972,7 +2972,7 @@
     "desc_lang": "ko",
     "pokemon": [
       "자시안",
-      "zacian-crowned"
+      "자시안 (왕검폼)"
     ]
   },
   {
@@ -2983,7 +2983,7 @@
     "desc_lang": "ko",
     "pokemon": [
       "자마젠타",
-      "zamazenta-crowned"
+      "자마젠타 (왕방패폼)"
     ]
   },
   {
@@ -3039,8 +3039,8 @@
     "desc_lang": "ko",
     "pokemon": [
       "윽우지",
-      "cramorant-gulping",
-      "cramorant-gorging"
+      "가마우치 (꿀꺽폼)",
+      "가마우치 (포식폼)"
     ]
   },
   {
@@ -3061,7 +3061,7 @@
       "탄동",
       "탄차곤",
       "석탄산",
-      "coalossal-gmax"
+      "거다이맥스 석탄산"
     ]
   },
   {
@@ -3072,9 +3072,9 @@
     "desc_lang": "ko",
     "pokemon": [
       "스트린더",
-      "toxtricity-low-key",
-      "toxtricity-amped-gmax",
-      "toxtricity-low-key-gmax"
+      "독전기 (로우키)",
+      "거다이맥스 독전기 (앰프)",
+      "거다이맥스 독전기 (로우키)"
     ]
   },
   {
@@ -3086,7 +3086,7 @@
     "pokemon": [
       "모래뱀",
       "사다이사",
-      "sandaconda-gmax"
+      "거다이맥스 사다이사"
     ]
   },
   {
@@ -3107,8 +3107,8 @@
       "과사삭벌레",
       "애프룡",
       "단지래플",
-      "flapple-gmax",
-      "appletun-gmax"
+      "거다이맥스 애프룡",
+      "거다이맥스 단지래플"
     ]
   },
   {
@@ -3119,7 +3119,7 @@
     "desc_lang": "ko",
     "pokemon": [
       "빙큐보",
-      "eiscue-noice"
+      "에이스번 (얼음해제폼)"
     ]
   },
   {
@@ -3139,7 +3139,7 @@
     "desc": "필드의 상태에 따라 포켓몬의 타입이 바뀐다.",
     "desc_lang": "ko",
     "pokemon": [
-      "stunfisk-galar"
+      "맘복치 (가라르)"
     ]
   },
   {
@@ -3150,7 +3150,7 @@
     "desc_lang": "ko",
     "pokemon": [
       "마임꽁꽁",
-      "mr-mime-galar"
+      "마임맨 (가라르)"
     ]
   },
   {
@@ -3177,7 +3177,7 @@
     "desc_lang": "ko",
     "pokemon": [
       "데스판",
-      "yamask-galar"
+      "데스마스 (가라르)"
     ]
   },
   {
@@ -3187,8 +3187,8 @@
     "desc": "공격이 올라가지만 처음에 선택한 기술 외에는 쓸 수 없게 된다.",
     "desc_lang": "ko",
     "pokemon": [
-      "darmanitan-galar-standard",
-      "darmanitan-galar-zen"
+      "불비달마 (가라르 표준폼)",
+      "불비달마 (가라르 달마폼)"
     ]
   },
   {
@@ -3200,7 +3200,7 @@
     "pokemon": [
       "또가스",
       "또도가스",
-      "weezing-galar"
+      "가라르 또도가스"
     ]
   },
   {
@@ -3210,8 +3210,8 @@
     "desc": "자신과 같은 편이 독의 상태 이상 효과를 받지 않게 된다.",
     "desc_lang": "ko",
     "pokemon": [
-      "ponyta-galar",
-      "rapidash-galar"
+      "가라르 포니타",
+      "가라르 날쌩마"
     ]
   },
   {
@@ -3222,7 +3222,7 @@
     "desc_lang": "ko",
     "pokemon": [
       "모르페코",
-      "morpeko-hangry"
+      "모르페코 (공복폼)"
     ]
   },
   {
@@ -3232,7 +3232,7 @@
     "desc": "상대보다 먼저 행동할 수도 있다.",
     "desc_lang": "ko",
     "pokemon": [
-      "slowbro-galar"
+      "야돈킹 (가라르)"
     ]
   },
   {
@@ -3243,9 +3243,9 @@
     "desc_lang": "ko",
     "pokemon": [
       "우라오스",
-      "urshifu-rapid-strike",
-      "urshifu-single-strike-gmax",
-      "urshifu-rapid-strike-gmax"
+      "우라오스 (연격)",
+      "거다이맥스 우라오스",
+      "거다이맥스 우라오스"
     ]
   },
   {
@@ -3255,7 +3255,7 @@
     "desc": "등장했을 때 조개껍질에서 약을 흩뿌려서 능력 변화를 원래대로 되돌린다.",
     "desc_lang": "ko",
     "pokemon": [
-      "slowking-galar"
+      "야돈왕 (가라르)"
     ]
   },
   {
@@ -3305,7 +3305,7 @@
     "desc": "버드렉스의 긴장감과 블리자포스의 백의울음 두 가지 특성을 겸비한다.",
     "desc_lang": "ko",
     "pokemon": [
-      "calyrex-ice"
+      "바드렉스 (얼음말)"
     ]
   },
   {
@@ -3315,7 +3315,7 @@
     "desc": "버드렉스의 긴장감과 레이스포스의 흑의울음 두 가지 특성을 겸비한다.",
     "desc_lang": "ko",
     "pokemon": [
-      "calyrex-shadow"
+      "바드렉스 (그림자말)"
     ]
   },
   {
@@ -3431,7 +3431,7 @@
     "desc_lang": "ko",
     "pokemon": [
       "돌핀맨",
-      "palafin-hero"
+      "돌고래맨 (히어로폼)"
     ]
   },
   {
@@ -3442,8 +3442,8 @@
     "desc_lang": "ko",
     "pokemon": [
       "싸리용",
-      "tatsugiri-droopy",
-      "tatsugiri-stretchy"
+      "다파장어 (드루피)",
+      "다파장어 (스트레치)"
     ]
   },
   {
@@ -3544,10 +3544,10 @@
     "desc_lang": "ko",
     "pokemon": [
       "코라이돈",
-      "koraidon-limited-build",
-      "koraidon-sprinting-build",
-      "koraidon-swimming-build",
-      "koraidon-gliding-build"
+      "코라이돈 (리미티드 빌드)",
+      "코라이돈 (스프린팅 빌드)",
+      "코라이돈 (스위밍 빌드)",
+      "코라이돈 (글라이딩 빌드)"
     ]
   },
   {
@@ -3558,10 +3558,10 @@
     "desc_lang": "ko",
     "pokemon": [
       "미라이돈",
-      "miraidon-low-power-mode",
-      "miraidon-drive-mode",
-      "miraidon-aquatic-mode",
-      "miraidon-glide-mode"
+      "미라이돈 (로우파워 모드)",
+      "미라이돈 (드라이브 모드)",
+      "미라이돈 (아쿠아틱 모드)",
+      "미라이돈 (글라이드 모드)"
     ]
   },
   {
@@ -3661,7 +3661,7 @@
     "desc": "The Pokémon ignores changes to opponents' evasiveness, its accuracy can't be lowered, and it can hit Ghost types with Normal-type and Fighting-type moves",
     "desc_lang": "ko",
     "pokemon": [
-      "ursaluna-bloodmoon"
+      "이어롤루나 (블러드문폼)"
     ]
   },
   {
@@ -3723,7 +3723,7 @@
     "desc": "The Pokémon's shell contains the powers of each type. All damage-dealing moves that hit the Pokémon when its HP is full will not be very effective.",
     "desc_lang": "ko",
     "pokemon": [
-      "terapagos-terastal"
+      "테라파고스 (테라스탈폼)"
     ]
   },
   {
@@ -3733,7 +3733,7 @@
     "desc": "When Terapagos changes into its Stellar Form, it uses its hidden powers to eliminate all effects of weather and terrain, reducing them to zero.",
     "desc_lang": "ko",
     "pokemon": [
-      "terapagos-stellar"
+      "테라파고스 (스텔라폼)"
     ]
   },
   {
