@@ -11606,7 +11606,25 @@
         "hidden": false
       }
     ],
-    "is_legendary": true
+    "is_legendary": true,
+    "forms": [
+      {
+        "type": "primal",
+        "name_ko": "원시가이오가",
+        "name_en": "kyogre-primal",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10077.png",
+        "types": [
+          "물"
+        ],
+        "abilities": [
+          {
+            "ko": "극우화",
+            "en": "primordial-sea",
+            "hidden": false
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 383,
@@ -11623,7 +11641,26 @@
         "hidden": false
       }
     ],
-    "is_legendary": true
+    "is_legendary": true,
+    "forms": [
+      {
+        "type": "primal",
+        "name_ko": "원시그란돈",
+        "name_en": "groudon-primal",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10078.png",
+        "types": [
+          "땅",
+          "불꽃"
+        ],
+        "abilities": [
+          {
+            "ko": "극건화",
+            "en": "desolate-land",
+            "hidden": false
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 384,

@@ -727,8 +727,8 @@ function renderForms(data) {
     base.forms.forEach(f => {
       if (!f.sprite || !f.name_ko) return;
 
-      if (f.type === 'mega') {
-        if (!CANONICAL_MEGA.has(f.name_en)) return;
+      if (f.type === 'mega' || f.type === 'primal') {
+        if (f.type === 'mega' && !CANONICAL_MEGA.has(f.name_en)) return;
         const entry = {
           id: base.id, ko: f.name_ko, en: f.name_en,
           sprite: f.sprite, types: f.types || base.types,
