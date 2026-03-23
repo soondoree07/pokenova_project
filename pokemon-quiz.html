@@ -964,7 +964,40 @@ async function loadAllData() {
     fetch('data/quiz_abilities.json').then(r => r.json()),
     fetch('data/quiz_items.json').then(r => r.json()),
   ]);
-  DB.pokemon   = p;
+  // 실제 게임에 존재하는 메가진화 목록 (PokeAPI에 가짜 메가가 다수 포함되어 있어 화이트리스트 사용)
+  const CANONICAL_MEGA = new Set([
+    'venusaur-mega','charizard-mega-x','charizard-mega-y','blastoise-mega',
+    'beedrill-mega','pidgeot-mega','alakazam-mega','slowbro-mega','gengar-mega',
+    'kangaskhan-mega','pinsir-mega','gyarados-mega','aerodactyl-mega',
+    'mewtwo-mega-x','mewtwo-mega-y','ampharos-mega','steelix-mega','scizor-mega',
+    'heracross-mega','houndoom-mega','tyranitar-mega','sceptile-mega','blaziken-mega',
+    'swampert-mega','gardevoir-mega','sableye-mega','mawile-mega','aggron-mega',
+    'medicham-mega','manectric-mega','sharpedo-mega','camerupt-mega','altaria-mega',
+    'banette-mega','absol-mega','glalie-mega','salamence-mega','metagross-mega',
+    'latias-mega','latios-mega','rayquaza-mega','lopunny-mega','garchomp-mega',
+    'lucario-mega','abomasnow-mega','gallade-mega','audino-mega','diancie-mega'
+  ]);
+  const seenFormKo = new Set();
+  const formEntries = [];
+  p.forEach(base => {
+    if (!base.forms) return;
+    base.forms.forEach(f => {
+      if (!f.sprite || !f.name_ko) return;
+      if (f.type === 'mega' && !CANONICAL_MEGA.has(f.name_en)) return;
+      if (f.type !== 'mega' && f.type !== 'gmax') return;
+      if (seenFormKo.has(f.name_ko)) return;
+      seenFormKo.add(f.name_ko);
+      let en = f.name_en;
+      if (f.type === 'mega') {
+        const sx = f.name_en.match(/-mega-(.+)$/);
+        en = sx ? `Mega ${base.en} ${sx[1].toUpperCase()}` : `Mega ${base.en}`;
+      } else {
+        en = `Gigantamax ${base.en}`;
+      }
+      formEntries.push({ id: base.id, ko: f.name_ko, en, sprite: f.sprite, types: f.types || base.types, isForm: true });
+    });
+  });
+  DB.pokemon = p.concat(formEntries);
   DB.moves     = m.filter(x => hasKorean(x.ko));
   DB.abilities = a.filter(x => hasKorean(x.ko));
   DB.items     = i.filter(x => hasKorean(x.ko) && hasKorean(x.desc || ''));
