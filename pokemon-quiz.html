@@ -181,6 +181,8 @@
       border-radius: 14px;
       padding: 5px;
       margin-bottom: 28px;
+      overflow-x: auto;
+      flex-wrap: wrap;
     }
     .nav-tab {
       padding: 9px 22px;
@@ -402,6 +404,52 @@
 
     .move-header { display: flex; align-items: center; justify-content: space-between; width: 100%; }
     .divider     { width: 100%; height: 1px; background: #1e1e40; }
+
+    /* ══ 목숨·힌트 게임 정보 바 ══ */
+    .b-game-info {
+      display: flex; align-items: center; justify-content: space-between;
+      width: 100%; padding: 6px 0;
+    }
+    .b-lives { font-size: 1.3rem; letter-spacing: 3px; }
+    .b-hint-badge {
+      font-size: 0.8rem; font-weight: 700;
+      background: rgba(255,255,255,.07); border: 1px solid #2a2a5a;
+      border-radius: 20px; padding: 4px 12px; color: #aaa;
+    }
+    .diff-btn.locked { opacity: 0.45; cursor: not-allowed; pointer-events: none; }
+
+    /* ══ 특성 포켓몬 칩 ══ */
+    .pokemon-chip-list { display: flex; flex-wrap: wrap; gap: 6px; width: 100%; }
+    .pokemon-chip {
+      padding: 4px 10px; border-radius: 20px;
+      background: rgba(255,255,255,.07); border: 1px solid #2a2a5a;
+      font-size: 0.78rem; color: #bbb;
+    }
+
+    /* ══ 도구 이미지 박스 ══ */
+    .item-sprite-box {
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(255,255,255,.05); border: 1px solid #2a2a5a;
+      border-radius: 14px; padding: 16px; width: 100%;
+    }
+    .item-sprite-box img { image-rendering: pixelated; width: 64px; height: 64px; }
+
+    /* ══ 게임오버 오버레이 ══ */
+    .gameover-overlay {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,.85);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 600; backdrop-filter: blur(8px);
+    }
+    .gameover-box {
+      background: #13132a; border: 1px solid #2a2a5a;
+      border-radius: 20px; padding: 36px 32px;
+      display: flex; flex-direction: column; align-items: center; gap: 14px;
+      min-width: 280px; text-align: center;
+    }
+    .gameover-title { font-size: 2rem; font-weight: 900; color: #f44336; }
+    .gameover-score { font-size: 1rem; color: #ccc; line-height: 1.8; }
+    .gameover-score b { color: #f5c518; }
   </style>
 </head>
 <body>
@@ -449,8 +497,10 @@
 
 <!-- ══ 탭 네비게이션 ══ -->
 <div class="nav-tabs">
-  <button class="nav-tab active" id="tab-btn-barcode" onclick="showTab('barcode')">🎴 포켓몬 맞추기</button>
-  <button class="nav-tab"        id="tab-btn-move"    onclick="showTab('move')">⚔️ 기술 맞추기</button>
+  <button class="nav-tab active" id="tab-btn-barcode"  onclick="showTab('barcode')">🎴 포켓몬 맞추기</button>
+  <button class="nav-tab"        id="tab-btn-move"     onclick="showTab('move')">⚔️ 기술 맞추기</button>
+  <button class="nav-tab"        id="tab-btn-ability"  onclick="showTab('ability')">✨ 특성 맞추기</button>
+  <button class="nav-tab"        id="tab-btn-item"     onclick="showTab('item')">🎒 도구 맞추기</button>
 </div>
 
 <!-- ══ 탭 1: 바코드 포켓몬 퀴즈 ══ -->
@@ -478,16 +528,25 @@
       </button>
     </div>
 
-    <div class="pokemon-container">
+    <!-- 게임 시작 버튼 -->
+    <button class="btn-primary" id="b-btn-start" onclick="bStartGame()" style="width:100%;margin-top:4px">게임 시작</button>
+
+    <!-- 목숨 & 힌트 정보 (게임 중) -->
+    <div class="b-game-info" id="b-game-info" style="display:none">
+      <div class="b-lives" id="b-lives">❤️❤️❤️</div>
+      <div class="b-hint-badge" id="b-hint-badge">힌트 ∞</div>
+    </div>
+
+    <div class="pokemon-container" id="b-pokemon-container" style="display:none">
       <div class="loading-text" id="b-loading">불러오는 중...</div>
       <canvas id="pokemon-canvas" width="220" height="220" style="display:none"></canvas>
       <div class="scan-line" id="scan-line"></div>
       <div class="barcode-label" id="barcode-label"></div>
     </div>
 
-    <div class="pokemon-number" id="b-pokemon-number"></div>
-    <div class="name-revealed"  id="b-name-revealed"></div>
-    <div class="status"         id="b-status">이름을 입력하고 확인 버튼을 누르세요</div>
+    <div class="pokemon-number" id="b-pokemon-number" style="display:none"></div>
+    <div class="name-revealed"  id="b-name-revealed" style="display:none"></div>
+    <div class="status"         id="b-status" style="display:none">이름을 입력하고 확인 버튼을 누르세요</div>
 
     <!-- 랭킹 카드 -->
     <div class="rank-card" id="b-rank-card">
@@ -503,12 +562,13 @@
       </div>
     </div>
 
-    <div class="input-row">
+    <div class="input-row" id="b-input-row" style="display:none">
       <input type="text" id="b-guess-input" placeholder="포켓몬 이름 입력..." autocomplete="off" />
       <button class="btn-primary" id="b-btn-guess" onclick="bCheckGuess()">확인</button>
     </div>
 
-    <button class="btn-ghost"   id="b-btn-hint" onclick="bShowHint()">힌트 보기 (첫 글자)</button>
+    <button class="btn-ghost"   id="b-btn-hint" onclick="bShowHint()" style="display:none">힌트 보기 (첫 글자)</button>
+    <button class="btn-danger"  id="b-btn-skip" onclick="bReveal(false)" style="display:none">포기하기 (정답 보기)</button>
     <button class="btn-outline" id="b-btn-next" onclick="bNextPokemon()" style="display:none">다음 포켓몬 →</button>
   </div>
 </div>
@@ -607,6 +667,100 @@
     <button class="btn-ghost"   id="m-btn-hint" onclick="mShowHint()">힌트 보기 (첫 글자)</button>
     <button class="btn-danger"  id="m-btn-skip" onclick="mReveal(false)">포기하기 (정답 보기)</button>
     <button class="btn-outline" id="m-btn-next" onclick="mNextMove()" style="display:none">다음 기술 →</button>
+  </div>
+</div>
+
+<!-- ══ 탭 3: 특성 맞추기 ══ -->
+<div id="tab-ability" class="section" style="display:none">
+  <div class="card">
+    <div class="score-row">
+      <span>정답 <b id="a-score-correct">0</b></span>
+      <span>오답 <b id="a-score-wrong">0</b></span>
+      <span>연속 <b id="a-score-streak">0</b> 🔥</span>
+    </div>
+    <div class="b-game-info" style="display:flex">
+      <div class="b-lives" id="a-lives">❤️❤️❤️</div>
+      <div style="font-size:0.75rem;color:#444">힌트 없음</div>
+    </div>
+    <div class="divider"></div>
+    <div class="loading-text" id="a-loading" style="position:relative;padding:20px 0">불러오는 중...</div>
+    <div id="a-info-panel" style="display:none;width:100%;flex-direction:column;gap:9px">
+      <div class="move-desc-card">
+        <div class="move-desc-label">특성 설명</div>
+        <div id="a-desc">—</div>
+      </div>
+      <div style="width:100%">
+        <div style="font-size:0.7rem;color:#444;letter-spacing:1px;margin-bottom:6px">이 특성을 가진 포켓몬</div>
+        <div class="pokemon-chip-list" id="a-pokemon-list"></div>
+      </div>
+    </div>
+    <div class="name-revealed" id="a-name-revealed"></div>
+    <div class="status" id="a-status">특성 설명을 보고 이름을 맞춰보세요</div>
+    <div class="input-row">
+      <input type="text" id="a-guess-input" placeholder="특성 이름 입력..." autocomplete="off" />
+      <button class="btn-primary" id="a-btn-guess" onclick="aCheckGuess()">확인</button>
+    </div>
+    <button class="btn-danger"  id="a-btn-skip" onclick="aReveal(false)">포기하기 (정답 보기)</button>
+    <button class="btn-outline" id="a-btn-next" onclick="aNextAbility()" style="display:none">다음 특성 →</button>
+  </div>
+</div>
+
+<!-- ══ 탭 4: 도구 맞추기 ══ -->
+<div id="tab-item" class="section" style="display:none">
+  <div class="card">
+    <div class="score-row">
+      <span>정답 <b id="i-score-correct">0</b></span>
+      <span>오답 <b id="i-score-wrong">0</b></span>
+      <span>연속 <b id="i-score-streak">0</b> 🔥</span>
+    </div>
+    <div class="b-game-info" style="display:flex">
+      <div class="b-lives" id="i-lives">❤️❤️❤️</div>
+    </div>
+    <div class="divider"></div>
+    <div class="loading-text" id="i-loading" style="position:relative;padding:20px 0">불러오는 중...</div>
+    <div id="i-info-panel" style="display:none;width:100%;flex-direction:column;gap:9px">
+      <div class="move-desc-card">
+        <div class="move-desc-label">도구 효과</div>
+        <div id="i-effect">—</div>
+      </div>
+    </div>
+    <div id="i-sprite-box" class="item-sprite-box" style="display:none">
+      <img id="i-sprite" src="" alt="도구 이미지" />
+    </div>
+    <div class="name-revealed" id="i-name-revealed"></div>
+    <div class="status" id="i-status">도구 효과를 보고 이름을 맞춰보세요</div>
+    <div class="input-row">
+      <input type="text" id="i-guess-input" placeholder="도구 이름 입력..." autocomplete="off" />
+      <button class="btn-primary" id="i-btn-guess" onclick="iCheckGuess()">확인</button>
+    </div>
+    <button class="btn-ghost"   id="i-btn-hint" onclick="iShowHint()">힌트 보기 (첫 글자)</button>
+    <button class="btn-danger"  id="i-btn-skip" onclick="iReveal(false)">포기하기 (정답 보기)</button>
+    <button class="btn-outline" id="i-btn-next" onclick="iNextItem()" style="display:none">다음 도구 →</button>
+  </div>
+</div>
+
+<!-- ══ 게임오버 오버레이 ══ -->
+<div id="b-gameover" class="gameover-overlay" style="display:none">
+  <div class="gameover-box">
+    <div class="gameover-title">💀 게임 오버</div>
+    <div class="gameover-score" id="b-gameover-score"></div>
+    <button class="btn-primary" onclick="bResetGame()" style="width:100%;margin-top:8px">다시 시작</button>
+  </div>
+</div>
+
+<div id="a-gameover" class="gameover-overlay" style="display:none">
+  <div class="gameover-box">
+    <div class="gameover-title">💀 게임 오버</div>
+    <div class="gameover-score" id="a-gameover-score"></div>
+    <button class="btn-primary" onclick="aResetGame()" style="width:100%;margin-top:8px">다시 시작</button>
+  </div>
+</div>
+
+<div id="i-gameover" class="gameover-overlay" style="display:none">
+  <div class="gameover-box">
+    <div class="gameover-title">💀 게임 오버</div>
+    <div class="gameover-score" id="i-gameover-score"></div>
+    <button class="btn-primary" onclick="iResetGame()" style="width:100%;margin-top:8px">다시 시작</button>
   </div>
 </div>
 
@@ -784,11 +938,16 @@ function hideRankCard(prefix) {
   card.classList.remove('show');
 }
 
+const ALL_TABS = ['barcode','move','ability','item'];
+let aInitialized = false, iInitialized = false;
+
 function showTab(name) {
-  document.getElementById('tab-barcode').style.display = name === 'barcode' ? '' : 'none';
-  document.getElementById('tab-move').style.display    = name === 'move'    ? '' : 'none';
-  document.getElementById('tab-btn-barcode').className = 'nav-tab' + (name==='barcode'?' active':'');
-  document.getElementById('tab-btn-move').className    = 'nav-tab' + (name==='move'?' active':'');
+  ALL_TABS.forEach(t => {
+    document.getElementById('tab-' + t).style.display = t === name ? '' : 'none';
+    document.getElementById('tab-btn-' + t).className = 'nav-tab' + (t === name ? ' active' : '');
+  });
+  if (name === 'ability' && !aInitialized) { aInitialized = true; aLoadAbility(); }
+  if (name === 'item'    && !iInitialized) { iInitialized = true; iLoadItem(); }
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -803,8 +962,21 @@ const BARCODE_DIFF = {
   hard:   { strips: 1, stripH: 3 }
 };
 let bDifficulty = 'normal';
+let bGameStarted = false;
+let bLives = 3, bHints = 0, bQuestionsPlayed = 0;
+let bSessionC = 0, bSessionW = 0;
 
-let bPokemon = null, bKoName = '', bEnName = '', bRevealed = false, bLoadedImg = null;
+// 중복 방지: 셔플 풀
+let bPool = [], bPoolIdx = 0;
+function bGetNextId() {
+  if (bPoolIdx >= bPool.length) {
+    bPool = Array.from({length: TOTAL_POKEMON}, (_,i)=>i+1).sort(()=>Math.random()-.5);
+    bPoolIdx = 0;
+  }
+  return bPool[bPoolIdx++];
+}
+
+let bPokemon = null, bKoName = '', bEnName = '', bRevealed = false, bLoadedImg = null, bHintText = '';
 let bScoreC = parseInt(localStorage.getItem('bc')||'0');
 let bScoreW = parseInt(localStorage.getItem('bw')||'0');
 let bScoreS = parseInt(localStorage.getItem('bs')||'0');
@@ -816,6 +988,79 @@ function bUpdateScore() {
   localStorage.setItem('bc',bScoreC); localStorage.setItem('bw',bScoreW); localStorage.setItem('bs',bScoreS);
 }
 bUpdateScore();
+
+function bUpdateLives() {
+  document.getElementById('b-lives').textContent = '❤️'.repeat(bLives) + '🖤'.repeat(3 - bLives);
+}
+
+function bUpdateHintBadge() {
+  const badge = document.getElementById('b-hint-badge');
+  if (bDifficulty === 'easy') {
+    badge.textContent = '힌트 ∞';
+  } else {
+    badge.textContent = `힌트 ${bHints}개`;
+    document.getElementById('b-btn-hint').disabled = (bHints <= 0);
+  }
+}
+
+function bStartGame() {
+  bGameStarted = true;
+  bLives = 3; bSessionC = 0; bSessionW = 0; bQuestionsPlayed = 0;
+  bPool = []; bPoolIdx = 0;
+
+  // 힌트 초기화
+  if (bDifficulty === 'easy')        bHints = Infinity;
+  else if (bDifficulty === 'normal') bHints = 3;
+  else                               bHints = 3;
+
+  // 난이도 버튼 잠금
+  ['easy','normal','hard'].forEach(x =>
+    document.getElementById('b-diff-' + x).classList.add('locked')
+  );
+
+  // 시작 버튼 숨기고 게임 UI 표시
+  document.getElementById('b-btn-start').style.display = 'none';
+  document.getElementById('b-game-info').style.display = 'flex';
+  document.getElementById('b-pokemon-container').style.display = '';
+  document.getElementById('b-pokemon-number').style.display = '';
+  document.getElementById('b-name-revealed').style.display = '';
+  document.getElementById('b-status').style.display = '';
+  document.getElementById('b-input-row').style.display = 'flex';
+
+  bUpdateLives();
+  bUpdateHintBadge();
+  bLoadPokemon();
+}
+
+function bGameOver() {
+  bGameStarted = false;
+  document.getElementById('b-gameover-score').innerHTML =
+    `이번 게임 결과<br><b>${bSessionC}</b>개 정답 &nbsp;/&nbsp; <b>${bSessionW}</b>개 오답<br><br>` +
+    `누적 정답: <b>${bScoreC}</b>개`;
+  document.getElementById('b-gameover').style.display = 'flex';
+}
+
+function bResetGame() {
+  document.getElementById('b-gameover').style.display = 'none';
+
+  // 난이도 버튼 잠금 해제
+  ['easy','normal','hard'].forEach(x =>
+    document.getElementById('b-diff-' + x).classList.remove('locked')
+  );
+
+  // 게임 UI 숨기고 시작 버튼 표시
+  document.getElementById('b-btn-start').style.display = '';
+  document.getElementById('b-game-info').style.display = 'none';
+  document.getElementById('b-pokemon-container').style.display = 'none';
+  document.getElementById('b-pokemon-number').style.display = 'none';
+  document.getElementById('b-name-revealed').style.display = 'none';
+  document.getElementById('b-status').style.display = 'none';
+  document.getElementById('b-input-row').style.display = 'none';
+  document.getElementById('b-btn-hint').style.display = 'none';
+  document.getElementById('b-btn-skip').style.display = 'none';
+  document.getElementById('b-btn-next').style.display = 'none';
+  hideRankCard('b');
+}
 
 // numStrips개의 가로선을 이미지 높이에 균등 배분하여 그림
 function drawStrips(img, numStrips, stripH) {
@@ -852,15 +1097,11 @@ function animateReveal(img) {
 }
 
 function bSetDifficulty(d) {
+  if (bGameStarted) return;
   bDifficulty = d;
   ['easy','normal','hard'].forEach(x => {
     document.getElementById('b-diff-' + x).className = 'diff-btn' + (x === d ? ' selected' : '');
   });
-  // 현재 포켓몬이 로드된 상태면 즉시 재렌더
-  if (bLoadedImg && !bRevealed) {
-    const cfg = BARCODE_DIFF[d];
-    drawStrips(bLoadedImg, cfg.strips, cfg.stripH);
-  }
 }
 
 function renderBarcodeDecoration() {
@@ -875,7 +1116,7 @@ function renderBarcodeDecoration() {
 }
 
 async function bLoadPokemon() {
-  bRevealed = false; bLoadedImg = null; bKoName = ''; bEnName = '';
+  bRevealed = false; bLoadedImg = null; bKoName = ''; bEnName = ''; bHintText = '';
   const cv = document.getElementById('pokemon-canvas');
   cv.style.display = 'none';
   document.getElementById('b-loading').style.display = 'block';
@@ -886,7 +1127,8 @@ async function bLoadPokemon() {
   document.getElementById('b-btn-guess').disabled  = false;
   document.getElementById('b-btn-next').style.display = 'none';
   document.getElementById('b-btn-hint').style.display = 'block';
-  document.getElementById('b-btn-hint').disabled      = false;
+  document.getElementById('b-btn-hint').disabled = (bDifficulty !== 'easy' && bHints <= 0);
+  document.getElementById('b-btn-skip').style.display = 'block';
   document.getElementById('b-name-revealed').textContent = '';
   document.getElementById('b-name-revealed').className   = 'name-revealed';
   document.getElementById('scan-line').className = 'scan-line';
@@ -894,7 +1136,7 @@ async function bLoadPokemon() {
 
   let pokemonData, speciesId;
   while (true) {
-    const id = Math.floor(Math.random()*TOTAL_POKEMON)+1;
+    const id = bGetNextId();
     try {
       const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
       if (!res.ok) continue;
@@ -934,15 +1176,23 @@ function bCheckGuess() {
   if (normalize(guess)===normalize(bKoName) || (bEnName&&normalize(guess)===normalize(bEnName))) {
     bReveal(true);
   } else {
-    bScoreW++; bScoreS=0; bUpdateScore();
-    document.getElementById('b-status').textContent = `"${guess}" 은(는) 틀렸습니다!`;
+    bScoreW++; bScoreS=0; bSessionW++; bUpdateScore();
+    bLives--; bUpdateLives();
+    document.getElementById('b-status').textContent = `"${guess}" 은(는) 틀렸습니다!  (목숨 ${bLives}개 남음)`;
     document.getElementById('b-status').className   = 'status wrong';
     input.value=''; input.focus();
     const cv = document.getElementById('pokemon-canvas');
     cv.style.transition='none'; cv.style.transform='translateX(-7px)';
     setTimeout(()=>{cv.style.transform='translateX(7px)';},80);
     setTimeout(()=>{cv.style.transform='translateX(-4px)';},160);
-    setTimeout(()=>{cv.style.transform='translateX(0)';cv.style.transition='';},240);
+    setTimeout(()=>{
+      cv.style.transform='translateX(0)'; cv.style.transition='';
+      if (bLives <= 0) { bReveal(false); setTimeout(bGameOver, 1200); return; }
+      if (bHintText) {
+        document.getElementById('b-status').textContent = bHintText;
+        document.getElementById('b-status').className   = 'status hint';
+      }
+    },240);
   }
 }
 
@@ -952,6 +1202,7 @@ function bReveal(isCorrect) {
   document.getElementById('b-guess-input').disabled = true;
   document.getElementById('b-btn-guess').disabled   = true;
   document.getElementById('b-btn-hint').style.display = 'none';
+  document.getElementById('b-btn-skip').style.display = 'none';
   document.getElementById('b-btn-next').style.display = 'block';
   const displayName = bKoName || bEnName;
   const nameEl = document.getElementById('b-name-revealed');
@@ -959,7 +1210,7 @@ function bReveal(isCorrect) {
   setTimeout(()=>nameEl.classList.add('show'), 80);
   animateReveal(bLoadedImg);
   if (isCorrect) {
-    bScoreC++; bScoreS++; bUpdateScore();
+    bScoreC++; bScoreS++; bSessionC++; bUpdateScore();
     document.getElementById('b-status').textContent = `정답! 🎉 ${displayName}`;
     document.getElementById('b-status').className   = 'status correct';
     launchConfetti();
@@ -972,11 +1223,21 @@ function bReveal(isCorrect) {
 
 function bShowHint() {
   if (bRevealed||!bKoName) return;
-  document.getElementById('b-status').textContent = `힌트: ${bKoName[0]}${'＿'.repeat(bKoName.length-1)}  (${bKoName.length}글자)`;
+  if (bDifficulty !== 'easy' && bHints <= 0) return;
+  if (bDifficulty !== 'easy') { bHints--; bUpdateHintBadge(); }
+  bHintText = `힌트: ${bKoName[0]}${'＿'.repeat(bKoName.length-1)}  (${bKoName.length}글자)`;
+  document.getElementById('b-status').textContent = bHintText;
   document.getElementById('b-status').className   = 'status hint';
   document.getElementById('b-btn-hint').disabled  = true;
 }
-function bNextPokemon() { bLoadPokemon(); }
+function bNextPokemon() {
+  bQuestionsPlayed++;
+  if (bDifficulty === 'normal' && bQuestionsPlayed % 3 === 0) {
+    bHints++;
+    bUpdateHintBadge();
+  }
+  bLoadPokemon();
+}
 document.getElementById('b-guess-input').addEventListener('keydown', e=>{
   if (e.key==='Enter') bCheckGuess();
 });
@@ -1011,7 +1272,7 @@ function getLatestFlavorText(entries, lang) {
   if (!f.length) return null;
   f.sort((a,b)=>{
     const ai=VERS_ORDER.indexOf(a.version_group?.name||''), bi=VERS_ORDER.indexOf(b.version_group?.name||'');
-    if(ai===-1&&bi===-1) return 0; if(ai===-1) return 1; if(bi===-1) return -1; return ai-bi;
+    if(ai===-1&&bi===-1) return 0; if(ai===-1) return -1; if(bi===-1) return 1; return bi-ai;
   });
   return f[0].flavor_text.replace(/\f/g,' ');
 }
@@ -1021,6 +1282,16 @@ const DIFF_CONFIG = {
   normal: { type:true,  power:true,  accuracy:false, pp:true, desc:false },
   hard:   { type:false, power:false, accuracy:false, pp:true, desc:true  }
 };
+
+// 중복 방지: 기술 셔플 풀
+let mPool = [], mPoolIdx = 0;
+function mGetNextId() {
+  if (mPoolIdx >= mPool.length) {
+    mPool = Array.from({length: TOTAL_MOVES}, (_,i)=>i+1).sort(()=>Math.random()-.5);
+    mPoolIdx = 0;
+  }
+  return mPool[mPoolIdx++];
+}
 
 let mDifficulty='easy', mMove=null, mKoName='', mEnName='', mRevealed=false;
 let mScoreC=parseInt(localStorage.getItem('mc')||'0');
@@ -1115,11 +1386,12 @@ async function mLoadMove() {
   hideRankCard('m');
 
   while (true) {
-    const id=Math.floor(Math.random()*TOTAL_MOVES)+1;
+    const id=mGetNextId();
     try {
       const res=await fetch(`https://pokeapi.co/api/v2/move/${id}`);
       if(!res.ok) continue;
       const data=await res.json();
+      if(data.meta?.category?.name==='z-move') continue;
       const koN=data.names.find(n=>n.language.name==='ko');
       if(!koN) continue;
       mKoName=koN.name;
@@ -1189,14 +1461,307 @@ document.getElementById('m-guess-input').addEventListener('keydown',e=>{
 /* ══ 정답 후 Enter → 다음 문제 ══ */
 document.addEventListener('keydown', e => {
   if (e.key !== 'Enter') return;
-  if (e.target.tagName === 'INPUT') return; // 입력창 Enter는 각자 리스너가 처리
-  const activeTab = document.getElementById('tab-barcode').style.display === 'none' ? 'move' : 'barcode';
+  if (e.target.tagName === 'INPUT') return;
+  const activeTab = ALL_TABS.find(t => document.getElementById('tab-' + t).style.display !== 'none') || 'barcode';
   if (activeTab === 'barcode' && bRevealed) bNextPokemon();
   if (activeTab === 'move'    && mRevealed) mNextMove();
+  if (activeTab === 'ability' && aRevealed) aNextAbility();
+  if (activeTab === 'item'    && iRevealed) iNextItem();
+});
+
+/* ═══════════════════════════════════════════════════════════
+   탭3: 특성 맞추기
+═══════════════════════════════════════════════════════════ */
+const TOTAL_ABILITIES = 307;
+let aPool = [], aPoolIdx = 0;
+function aGetNextId() {
+  if (aPoolIdx >= aPool.length) {
+    aPool = Array.from({length: TOTAL_ABILITIES}, (_,i)=>i+1).sort(()=>Math.random()-.5);
+    aPoolIdx = 0;
+  }
+  return aPool[aPoolIdx++];
+}
+
+let aAbility = null, aKoName = '', aEnName = '', aRevealed = false;
+let aLives = 3, aSessionC = 0, aSessionW = 0;
+let aScoreC = parseInt(localStorage.getItem('ac')||'0');
+let aScoreW_total = parseInt(localStorage.getItem('aw')||'0');
+let aScoreS = parseInt(localStorage.getItem('as')||'0');
+
+function aUpdateScore() {
+  document.getElementById('a-score-correct').textContent = aScoreC;
+  document.getElementById('a-score-wrong').textContent   = aScoreW_total;
+  document.getElementById('a-score-streak').textContent  = aScoreS;
+  localStorage.setItem('ac', aScoreC);
+  localStorage.setItem('aw', aScoreW_total);
+  localStorage.setItem('as', aScoreS);
+}
+aUpdateScore();
+
+function aUpdateLives() {
+  document.getElementById('a-lives').textContent = '❤️'.repeat(aLives) + '🖤'.repeat(3 - aLives);
+}
+
+async function aLoadAbility() {
+  aRevealed = false; aKoName = ''; aEnName = ''; aAbility = null;
+  document.getElementById('a-loading').style.display = 'block';
+  document.getElementById('a-loading').textContent = '불러오는 중...';
+  document.getElementById('a-info-panel').style.display = 'none';
+  document.getElementById('a-status').textContent = '특성 설명을 보고 이름을 맞춰보세요';
+  document.getElementById('a-status').className = 'status';
+  document.getElementById('a-guess-input').value = '';
+  document.getElementById('a-guess-input').disabled = false;
+  document.getElementById('a-btn-guess').disabled = false;
+  document.getElementById('a-btn-skip').style.display = 'block';
+  document.getElementById('a-btn-next').style.display = 'none';
+  document.getElementById('a-name-revealed').textContent = '';
+  document.getElementById('a-name-revealed').className = 'name-revealed';
+
+  while (true) {
+    const id = aGetNextId();
+    try {
+      const res = await fetch(`https://pokeapi.co/api/v2/ability/${id}`);
+      if (!res.ok) continue;
+      const data = await res.json();
+      const koN = data.names.find(n => n.language.name === 'ko');
+      if (!koN) continue;
+      const desc = getLatestFlavorText(data.flavor_text_entries, 'ko')
+                || getLatestFlavorText(data.flavor_text_entries, 'en');
+      if (!desc) continue;
+      aKoName = koN.name;
+      aEnName = (data.names.find(n => n.language.name === 'en')?.name || data.name).toLowerCase();
+      aAbility = data;
+      document.getElementById('a-desc').textContent = desc;
+      // 포켓몬 목록 비동기 로딩
+      const pokemonList = data.pokemon.filter(p => !p.is_hidden).slice(0, 6);
+      document.getElementById('a-pokemon-list').innerHTML = '<span style="color:#555;font-size:.75rem">로딩 중...</span>';
+      document.getElementById('a-info-panel').style.display = 'flex';
+      document.getElementById('a-loading').style.display = 'none';
+      document.getElementById('a-guess-input').focus();
+      aFetchPokemonNames(pokemonList);
+      break;
+    } catch { continue; }
+  }
+}
+
+async function aFetchPokemonNames(pokemonList) {
+  const listEl = document.getElementById('a-pokemon-list');
+  try {
+    const names = await Promise.all(pokemonList.map(async p => {
+      try {
+        const id = p.pokemon.url.split('/').filter(Boolean).pop();
+        const sd = await (await fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}`)).json();
+        return sd.names.find(n => n.language.name === 'ko')?.name || p.pokemon.name;
+      } catch { return p.pokemon.name; }
+    }));
+    listEl.innerHTML = names.map(n => `<span class="pokemon-chip">${n}</span>`).join('');
+  } catch { listEl.innerHTML = '<span style="color:#555">—</span>'; }
+}
+
+function aCheckGuess() {
+  if (aRevealed || !aAbility) return;
+  const input = document.getElementById('a-guess-input');
+  const guess = input.value.trim(); if (!guess) return;
+  if (normalize(guess) === normalize(aKoName) || (aEnName && normalize(guess) === normalize(aEnName))) {
+    aReveal(true);
+  } else {
+    aScoreW_total++; aScoreS = 0; aSessionW++; aUpdateScore();
+    aLives--; aUpdateLives();
+    document.getElementById('a-status').textContent = `"${guess}" 은(는) 틀렸습니다! (목숨 ${aLives}개 남음)`;
+    document.getElementById('a-status').className = 'status wrong';
+    input.value = ''; input.focus();
+    if (aLives <= 0) { aReveal(false); setTimeout(aGameOver, 1200); }
+  }
+}
+
+function aReveal(isCorrect) {
+  aRevealed = true;
+  document.getElementById('a-guess-input').disabled = true;
+  document.getElementById('a-btn-guess').disabled = true;
+  document.getElementById('a-btn-skip').style.display = 'none';
+  document.getElementById('a-btn-next').style.display = 'block';
+  const displayName = aKoName || aEnName;
+  const nameEl = document.getElementById('a-name-revealed');
+  nameEl.textContent = displayName;
+  setTimeout(() => nameEl.classList.add('show'), 80);
+  if (isCorrect) {
+    aScoreC++; aScoreS++; aSessionC++; aUpdateScore();
+    document.getElementById('a-status').textContent = `정답! 🎉 ${displayName}`;
+    document.getElementById('a-status').className = 'status correct';
+    launchConfetti();
+  } else {
+    document.getElementById('a-status').textContent = `정답: ${displayName}`;
+    document.getElementById('a-status').className = 'status hint';
+  }
+}
+
+function aGameOver() {
+  document.getElementById('a-gameover-score').innerHTML =
+    `이번 게임 결과<br><b>${aSessionC}</b>개 정답 &nbsp;/&nbsp; <b>${aSessionW}</b>개 오답<br><br>누적 정답: <b>${aScoreC}</b>개`;
+  document.getElementById('a-gameover').style.display = 'flex';
+}
+
+function aResetGame() {
+  aLives = 3; aSessionC = 0; aSessionW = 0;
+  aUpdateLives();
+  document.getElementById('a-gameover').style.display = 'none';
+  aLoadAbility();
+}
+
+function aNextAbility() { aLoadAbility(); }
+document.getElementById('a-guess-input').addEventListener('keydown', e => {
+  if (e.key === 'Enter') aCheckGuess();
+});
+
+/* ═══════════════════════════════════════════════════════════
+   탭4: 도구 맞추기
+═══════════════════════════════════════════════════════════ */
+const TOTAL_ITEMS = 1700;
+let iPool = [], iPoolIdx = 0;
+function iGetNextId() {
+  if (iPoolIdx >= iPool.length) {
+    iPool = Array.from({length: TOTAL_ITEMS}, (_,i)=>i+1).sort(()=>Math.random()-.5);
+    iPoolIdx = 0;
+  }
+  return iPool[iPoolIdx++];
+}
+
+let iItem = null, iKoName = '', iEnName = '', iRevealed = false, iHintText = '';
+let iLives = 3, iSessionC = 0, iSessionW = 0;
+let iScoreC = parseInt(localStorage.getItem('ic')||'0');
+let iScoreW_total = parseInt(localStorage.getItem('iw')||'0');
+let iScoreS = parseInt(localStorage.getItem('is')||'0');
+
+function iUpdateScore() {
+  document.getElementById('i-score-correct').textContent = iScoreC;
+  document.getElementById('i-score-wrong').textContent   = iScoreW_total;
+  document.getElementById('i-score-streak').textContent  = iScoreS;
+  localStorage.setItem('ic', iScoreC);
+  localStorage.setItem('iw', iScoreW_total);
+  localStorage.setItem('is', iScoreS);
+}
+iUpdateScore();
+
+function iUpdateLives() {
+  document.getElementById('i-lives').textContent = '❤️'.repeat(iLives) + '🖤'.repeat(3 - iLives);
+}
+
+async function iLoadItem() {
+  iRevealed = false; iKoName = ''; iEnName = ''; iItem = null; iHintText = '';
+  document.getElementById('i-loading').style.display = 'block';
+  document.getElementById('i-loading').textContent = '불러오는 중...';
+  document.getElementById('i-info-panel').style.display = 'none';
+  document.getElementById('i-sprite-box').style.display = 'none';
+  document.getElementById('i-status').textContent = '도구 효과를 보고 이름을 맞춰보세요';
+  document.getElementById('i-status').className = 'status';
+  document.getElementById('i-guess-input').value = '';
+  document.getElementById('i-guess-input').disabled = false;
+  document.getElementById('i-btn-guess').disabled = false;
+  document.getElementById('i-btn-hint').style.display = 'block';
+  document.getElementById('i-btn-hint').disabled = false;
+  document.getElementById('i-btn-skip').style.display = 'block';
+  document.getElementById('i-btn-next').style.display = 'none';
+  document.getElementById('i-name-revealed').textContent = '';
+  document.getElementById('i-name-revealed').className = 'name-revealed';
+
+  while (true) {
+    const id = iGetNextId();
+    try {
+      const res = await fetch(`https://pokeapi.co/api/v2/item/${id}`);
+      if (!res.ok) continue;
+      const data = await res.json();
+      const koN = data.names.find(n => n.language.name === 'ko');
+      if (!koN) continue;
+      const effect = data.effect_entries.find(e => e.language.name === 'ko')?.short_effect
+                  || data.effect_entries.find(e => e.language.name === 'en')?.short_effect;
+      if (!effect) continue;
+      iKoName = koN.name;
+      iEnName = (data.names.find(n => n.language.name === 'en')?.name || data.name).toLowerCase();
+      iItem = data;
+      document.getElementById('i-effect').textContent = effect;
+      document.getElementById('i-info-panel').style.display = 'flex';
+      document.getElementById('i-loading').style.display = 'none';
+      document.getElementById('i-guess-input').focus();
+      break;
+    } catch { continue; }
+  }
+}
+
+function iCheckGuess() {
+  if (iRevealed || !iItem) return;
+  const input = document.getElementById('i-guess-input');
+  const guess = input.value.trim(); if (!guess) return;
+  if (normalize(guess) === normalize(iKoName) || (iEnName && normalize(guess) === normalize(iEnName))) {
+    iReveal(true);
+  } else {
+    iScoreW_total++; iScoreS = 0; iSessionW++; iUpdateScore();
+    iLives--; iUpdateLives();
+    document.getElementById('i-status').textContent = `"${guess}" 은(는) 틀렸습니다! (목숨 ${iLives}개 남음)`;
+    document.getElementById('i-status').className = 'status wrong';
+    input.value = ''; input.focus();
+    if (iLives <= 0) { iReveal(false); setTimeout(iGameOver, 1200); return; }
+    if (iHintText) {
+      setTimeout(() => {
+        document.getElementById('i-status').textContent = iHintText;
+        document.getElementById('i-status').className = 'status hint';
+      }, 300);
+    }
+  }
+}
+
+function iReveal(isCorrect) {
+  iRevealed = true;
+  document.getElementById('i-guess-input').disabled = true;
+  document.getElementById('i-btn-guess').disabled = true;
+  document.getElementById('i-btn-hint').style.display = 'none';
+  document.getElementById('i-btn-skip').style.display = 'none';
+  document.getElementById('i-btn-next').style.display = 'block';
+  const displayName = iKoName || iEnName;
+  const nameEl = document.getElementById('i-name-revealed');
+  nameEl.textContent = displayName;
+  setTimeout(() => nameEl.classList.add('show'), 80);
+  if (iItem?.sprites?.default) {
+    document.getElementById('i-sprite').src = iItem.sprites.default;
+    document.getElementById('i-sprite-box').style.display = 'flex';
+  }
+  if (isCorrect) {
+    iScoreC++; iScoreS++; iSessionC++; iUpdateScore();
+    document.getElementById('i-status').textContent = `정답! 🎉 ${displayName}`;
+    document.getElementById('i-status').className = 'status correct';
+    launchConfetti();
+  } else {
+    document.getElementById('i-status').textContent = `정답: ${displayName}`;
+    document.getElementById('i-status').className = 'status hint';
+  }
+}
+
+function iShowHint() {
+  if (iRevealed || !iKoName) return;
+  iHintText = `힌트: ${iKoName[0]}${'＿'.repeat(iKoName.length-1)}  (${iKoName.length}글자)`;
+  document.getElementById('i-status').textContent = iHintText;
+  document.getElementById('i-status').className = 'status hint';
+  document.getElementById('i-btn-hint').disabled = true;
+}
+
+function iGameOver() {
+  document.getElementById('i-gameover-score').innerHTML =
+    `이번 게임 결과<br><b>${iSessionC}</b>개 정답 &nbsp;/&nbsp; <b>${iSessionW}</b>개 오답<br><br>누적 정답: <b>${iScoreC}</b>개`;
+  document.getElementById('i-gameover').style.display = 'flex';
+}
+
+function iResetGame() {
+  iLives = 3; iSessionC = 0; iSessionW = 0;
+  iUpdateLives();
+  document.getElementById('i-gameover').style.display = 'none';
+  iLoadItem();
+}
+
+function iNextItem() { iLoadItem(); }
+document.getElementById('i-guess-input').addEventListener('keydown', e => {
+  if (e.key === 'Enter') iCheckGuess();
 });
 
 /* ══ 초기화 ══ */
-bLoadPokemon();
 mLoadMove();
 </script>
 </body>
