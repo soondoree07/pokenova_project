@@ -4517,7 +4517,7 @@
     "forms": [
       {
         "type": "paldea",
-        "name_ko": "팔데아 켄타로스",
+        "name_ko": "팔데아 켄타로스 (컴뱃종)",
         "name_en": "tauros-paldea-combat-breed",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10250.png",
         "types": [
@@ -4535,7 +4535,7 @@
             "hidden": false
           },
           {
-            "ko": "Cud Chew",
+            "ko": "되새김질",
             "en": "cud chew",
             "hidden": true
           }
@@ -4543,7 +4543,7 @@
       },
       {
         "type": "paldea",
-        "name_ko": "팔데아 켄타로스",
+        "name_ko": "팔데아 켄타로스 (블레이즈종)",
         "name_en": "tauros-paldea-blaze-breed",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10251.png",
         "types": [
@@ -4562,7 +4562,7 @@
             "hidden": false
           },
           {
-            "ko": "Cud Chew",
+            "ko": "되새김질",
             "en": "cud chew",
             "hidden": true
           }
@@ -4570,7 +4570,7 @@
       },
       {
         "type": "paldea",
-        "name_ko": "팔데아 켄타로스",
+        "name_ko": "팔데아 켄타로스 (워터종)",
         "name_en": "tauros-paldea-aqua-breed",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10252.png",
         "types": [
@@ -4589,7 +4589,7 @@
             "hidden": false
           },
           {
-            "ko": "Cud Chew",
+            "ko": "되새김질",
             "en": "cud chew",
             "hidden": true
           }
@@ -22258,7 +22258,60 @@
         "hidden": false
       }
     ],
-    "is_legendary": true
+    "is_legendary": true,
+    "forms": [
+      {
+        "type": "primal",
+        "name_ko": "황혼의갈기",
+        "name_en": "necrozma-dusk-mane",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10153.png",
+        "types": [
+          "에스퍼",
+          "강철"
+        ],
+        "abilities": [
+          {
+            "ko": "프리즘아머",
+            "en": "prism armor",
+            "hidden": false
+          }
+        ]
+      },
+      {
+        "type": "primal",
+        "name_ko": "새벽의날개",
+        "name_en": "necrozma-dawn-wings",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10154.png",
+        "types": [
+          "에스퍼",
+          "고스트"
+        ],
+        "abilities": [
+          {
+            "ko": "프리즘아머",
+            "en": "prism armor",
+            "hidden": false
+          }
+        ]
+      },
+      {
+        "type": "primal",
+        "name_ko": "울트라네크로즈마",
+        "name_en": "necrozma-ultra",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10155.png",
+        "types": [
+          "에스퍼",
+          "드래곤"
+        ],
+        "abilities": [
+          {
+            "ko": "뉴트론포스",
+            "en": "neuroforce",
+            "hidden": false
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 801,
