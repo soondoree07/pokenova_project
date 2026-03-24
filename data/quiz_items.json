@@ -660,7 +660,7 @@
     "id": 80,
     "ko": "태양의돌",
     "en": "sun stone",
-    "desc": "소미안→엘풍로 진화시킨다.",
+    "desc": "어떤 포켓몬을 진화시키는 이상한 돌. 저녁노을처럼 새빨갛게 타오른다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sun-stone.png",
     "category": "evolution"
@@ -669,7 +669,7 @@
     "id": 81,
     "ko": "달의돌",
     "en": "moon stone",
-    "desc": "삐삐→픽시로 진화시킨다.",
+    "desc": "어떤 포켓몬을 진화시키는 이상한 돌. 밤하늘처럼 새까맣다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/moon-stone.png",
     "category": "evolution"
@@ -678,7 +678,7 @@
     "id": 82,
     "ko": "불꽃의돌",
     "en": "fire stone",
-    "desc": "이브이→부스터로 진화시킨다.",
+    "desc": "어떤 포켓몬을 진화시키는 이상한 돌. 불꽃 같은 오렌지빛 결정이 박혀 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fire-stone.png",
     "category": "evolution"
@@ -687,7 +687,7 @@
     "id": 83,
     "ko": "천둥의돌",
     "en": "thunder stone",
-    "desc": "저리릴→저리더프로 진화시킨다.",
+    "desc": "어떤 포켓몬을 진화시키는 이상한 돌. 번갯불 무늬가 선명하게 새겨져 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/thunder-stone.png",
     "category": "evolution"
@@ -696,7 +696,7 @@
     "id": 84,
     "ko": "물의돌",
     "en": "water stone",
-    "desc": "이브이→샤미드로 진화시킨다.",
+    "desc": "어떤 포켓몬을 진화시키는 이상한 돌. 맑은 샘처럼 투명한 파란빛이다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/water-stone.png",
     "category": "evolution"
@@ -705,7 +705,7 @@
     "id": 85,
     "ko": "리프의돌",
     "en": "leaf stone",
-    "desc": "아라리→나시로 진화시킨다.",
+    "desc": "어떤 포켓몬을 진화시키는 이상한 돌. 나뭇잎 무늬가 선명하게 새겨져 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leaf-stone.png",
     "category": "evolution"
@@ -714,7 +714,7 @@
     "id": 107,
     "ko": "빛의돌",
     "en": "shiny stone",
-    "desc": "치라미→치라치노로 진화시킨다.",
+    "desc": "어떤 포켓몬을 진화시키는 이상한 돌. 눈이 부시게 반짝반짝 빛난다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shiny-stone.png",
     "category": "evolution"
@@ -723,7 +723,7 @@
     "id": 108,
     "ko": "어둠의돌",
     "en": "dusk stone",
-    "desc": "램프라→샹델라로 진화시킨다.",
+    "desc": "어떤 포켓몬을 진화시키는 이상한 돌. 짙은 어둠을 품고 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dusk-stone.png",
     "category": "evolution"
@@ -732,7 +732,7 @@
     "id": 109,
     "ko": "각성의돌",
     "en": "dawn stone",
-    "desc": "수컷 킬리아를 엘레이드로, 암컷 눈바라를 후리쥐로 진화시킨다.",
+    "desc": "어떤 포켓몬을 진화시키는 이상한 돌. 눈동자처럼 반짝반짝 빛난다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dawn-stone.png",
     "category": "evolution"
@@ -741,7 +741,7 @@
     "id": 110,
     "ko": "동글동글돌",
     "en": "oval stone",
-    "desc": "낮에 레벨업 시 하피나스를 럭키로 진화시킨다.",
+    "desc": "어떤 포켓몬을 진화시키는 이상한 돌. 알처럼 동글동글하고 매끄럽다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/oval-stone.png",
     "category": "evolution"
@@ -759,7 +759,7 @@
     "id": 113,
     "ko": "백옥",
     "en": "lustrous orb",
-    "desc": "편지지 아이템. 메시지를 담아 교환할 수 있다.",
+    "desc": "지니면 팔키아의 드래곤·물 타입 기술 위력이 20% 올라간다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lustrous-orb.png",
     "category": "species-specific"
@@ -1416,7 +1416,7 @@
     "id": 212,
     "ko": "용의비늘",
     "en": "dragon scale",
-    "desc": "시드라→킹드라로 진화시킨다. (교환 필요)",
+    "desc": "두껍고 질긴 비늘. 야생에서 드래곤 타입 포켓몬이 지니고 있는 경우가 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dragon-scale.png",
     "category": "evolution"
@@ -1569,7 +1569,7 @@
     "id": 229,
     "ko": "업그레이드",
     "en": "upgrade",
-    "desc": "폴리곤→폴리곤2로 진화시킨다. (교환 필요)",
+    "desc": "실프주식회사가 만든 투명한 장치. 각종 데이터가 가득 담겨 있다. 어떤 포켓몬이 좋아하는 물건이다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/up-grade.png",
     "category": "evolution"
@@ -2190,7 +2190,7 @@
     "id": 298,
     "ko": "프로텍터",
     "en": "protector",
-    "desc": "코뿌리→거대코뿌리로 진화시킨다. (교환 필요)",
+    "desc": "무언가의 프로텍터. 매우 단단하고 무겁다. 어떤 포켓몬이 좋아하는 물건이다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/protector.png",
     "category": "evolution"
@@ -2199,7 +2199,7 @@
     "id": 299,
     "ko": "에레키부스터",
     "en": "electirizer",
-    "desc": "에레브→에레키블로 진화시킨다. (교환 필요)",
+    "desc": "엄청난 양의 전기 에너지가 담긴 상자. 어떤 포켓몬이 좋아하는 물건이다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/electirizer.png",
     "category": "evolution"
@@ -2208,7 +2208,7 @@
     "id": 300,
     "ko": "마그마부스터",
     "en": "magmarizer",
-    "desc": "마그마→마그마번로 진화시킨다. (교환 필요)",
+    "desc": "엄청난 양의 마그마 에너지가 담긴 상자. 어떤 포켓몬이 좋아하는 물건이다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/magmarizer.png",
     "category": "evolution"
@@ -2217,7 +2217,7 @@
     "id": 301,
     "ko": "괴상한패치",
     "en": "dubious disc",
-    "desc": "폴리곤2→폴리곤Z로 진화시킨다. (교환 필요)",
+    "desc": "수상한 데이터가 넘쳐 흐르는 투명한 장치. 제조자는 불명이다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dubious-disc.png",
     "category": "evolution"
@@ -2226,7 +2226,7 @@
     "id": 302,
     "ko": "영계의천",
     "en": "reaper cloth",
-    "desc": "미라몽→야느와르몽로 진화시킨다. (교환 필요)",
+    "desc": "강렬한 영적 에너지가 깃든 천. 어떤 포켓몬이 좋아하는 물건이다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/reaper-cloth.png",
     "category": "evolution"
@@ -3289,7 +3289,7 @@
     "id": 580,
     "ko": "고운비늘",
     "en": "prism scale",
-    "desc": "빈티나→밀로틱로 진화시킨다. (교환 필요)",
+    "desc": "어떤 포켓몬을 진화시키는 신비한 비늘. 무지개색으로 아름답게 빛난다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/prism-scale.png",
     "category": "evolution"
@@ -3694,7 +3694,7 @@
     "id": 686,
     "ko": "휘핑팝",
     "en": "whipped dream",
-    "desc": "나룸퍼프→나루림로 진화시킨다. (교환 필요)",
+    "desc": "솜사탕처럼 부드럽고 달콤한 크림 과자. 어떤 포켓몬이 좋아하는 물건이다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/whipped-dream.png",
     "category": "evolution"
@@ -3703,7 +3703,7 @@
     "id": 687,
     "ko": "향기주머니",
     "en": "sachet",
-    "desc": "슈쁘→프레프티르로 진화시킨다. (교환 필요)",
+    "desc": "조금 자극적인 향수를 채운 향기 주머니. 어떤 포켓몬이 좋아하는 물건이다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sachet.png",
     "category": "evolution"
@@ -4531,7 +4531,7 @@
     "id": 885,
     "ko": "얼음의돌",
     "en": "ice stone",
-    "desc": "알로라 모래두지, 알로라 식스테일을 진화시킨다.",
+    "desc": "어떤 포켓몬을 진화시키는 이상한 돌. 눈의 결정 같은 무늬가 새겨져 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ice-stone.png",
     "category": "evolution"
