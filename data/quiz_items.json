@@ -4558,7 +4558,7 @@
     "id": 889,
     "ko": "다홍꿀",
     "en": "red nectar",
-    "desc": "오리코리오가 불꽃 배틀 스타일로 변한다.",
+    "desc": "춤추새가 불꽃 배틀 스타일로 변한다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/red-nectar.png",
     "category": "species-specific"
@@ -4567,7 +4567,7 @@
     "id": 890,
     "ko": "진노랑꿀",
     "en": "yellow nectar",
-    "desc": "오리코리오가 전기 배틀 스타일로 변한다.",
+    "desc": "춤추새가 전기 배틀 스타일로 변한다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/yellow-nectar.png",
     "category": "species-specific"
@@ -4576,7 +4576,7 @@
     "id": 891,
     "ko": "연분홍꿀",
     "en": "pink nectar",
-    "desc": "오리코리오가 에스퍼 배틀 스타일로 변한다.",
+    "desc": "춤추새가 에스퍼 배틀 스타일로 변한다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pink-nectar.png",
     "category": "species-specific"
@@ -4585,7 +4585,7 @@
     "id": 892,
     "ko": "보라꿀",
     "en": "purple nectar",
-    "desc": "오리코리오가 고스트 배틀 스타일로 변한다.",
+    "desc": "춤추새가 고스트 배틀 스타일로 변한다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/purple-nectar.png",
     "category": "species-specific"
