@@ -297,7 +297,7 @@
       border-radius: 10px;
     }
     .ability-name { font-weight: 700; font-size: 14px; color: #1a1a2e; }
-    .ability-en { font-size: 12px; color: #888; }
+    .ability-en { font-size: 12px; color: #888; line-height: 1.4; }
     .ability-hidden {
       margin-left: auto;
       font-size: 10px;
@@ -345,7 +345,7 @@
     .t-에스퍼{ background: #F95587; }
     .t-벌레  { background: #A6B91A; }
     .t-바위  { background: #B6A136; }
-    .t-유령  { background: #4b0082; color: white !important; }
+    .t-고스트 { background: #4b0082; color: white !important; }
     .t-드래곤{ background: #6F35FC; }
     .t-악    { background: #705746; }
     .t-강철  { background: #B7B7CE; color: #555 !important; }
@@ -443,8 +443,12 @@
       border-radius: 8px;
       line-height: 1.4;
     }
-    .card-badge.mega { background: #b8860b; }
-    .card-badge.gmax { background: #8b0000; }
+    .card-badge.mega   { background: #b8860b; }
+    .card-badge.gmax   { background: #8b0000; }
+    .card-badge.alola  { background: #1a6b2b; }
+    .card-badge.galar  { background: #1a3a7a; }
+    .card-badge.hisui  { background: #6b3a1a; }
+    .card-badge.paldea { background: #5a1a6b; }
 
     /* 거다이 전용기 */
     .gmax-move-box {
@@ -469,6 +473,12 @@
       font-size: 11px;
       color: #888;
       margin-top: 1px;
+    }
+    .gmax-move-desc {
+      font-size: 12px;
+      color: #ccc;
+      margin-top: 5px;
+      line-height: 1.5;
     }
 
     /* ─── SCROLL ─── */
@@ -511,6 +521,7 @@
       <div class="filter-group" id="cat-group">
         <button class="filter-btn active-cat" data-cat="all">전체</button>
         <button class="filter-btn" data-cat="normal">일반</button>
+        <button class="filter-btn" data-cat="region">리전폼</button>
         <button class="filter-btn" data-cat="mega">메가진화</button>
         <button class="filter-btn" data-cat="gmax">거다이맥스</button>
       </div>
@@ -588,7 +599,7 @@ const TYPE_BG = {
   '노말':'#A8A77A','불꽃':'#EE8130','물':'#6390F0','전기':'#F7D02C',
   '풀':'#7AC74C','얼음':'#96D9D6','격투':'#C22E28','독':'#A33EA1',
   '땅':'#E2BF65','비행':'#A98FF3','에스퍼':'#F95587','벌레':'#A6B91A',
-  '바위':'#B6A136','유령':'#4b0082','드래곤':'#6F35FC','악':'#705746',
+  '바위':'#B6A136','고스트':'#4b0082','드래곤':'#6F35FC','악':'#705746',
   '강철':'#B7B7CE','페어리':'#D685AD'
 };
 const TYPE_LIGHT = new Set(['전기','얼음','땅','강철']);
@@ -629,45 +640,51 @@ const CANONICAL_MEGA = new Set([
   'medicham-mega','manectric-mega','sharpedo-mega','camerupt-mega','altaria-mega',
   'banette-mega','absol-mega','glalie-mega','salamence-mega','metagross-mega',
   'latias-mega','latios-mega','rayquaza-mega','lopunny-mega','garchomp-mega',
-  'lucario-mega','abomasnow-mega','gallade-mega','audino-mega','diancie-mega'
+  'lucario-mega','abomasnow-mega','gallade-mega','audino-mega','diancie-mega',
+  // 레전드 Z-A 신규 메가진화 (26종)
+  'clefable-mega','victreebel-mega','starmie-mega','dragonite-mega','meganium-mega',
+  'feraligatr-mega','skarmory-mega','froslass-mega','emboar-mega','excadrill-mega',
+  'scolipede-mega','scrafty-mega','eelektross-mega','chandelure-mega','chesnaught-mega',
+  'delphox-mega','greninja-mega','pyroar-mega','floette-mega','malamar-mega',
+  'barbaracle-mega','dragalge-mega','hawlucha-mega','zygarde-mega','drampa-mega','falinks-mega'
 ]);
 
 // ─── 거다이맥스 전용기 (공식 한국어 이름) ───
 const GMAX_MOVES = {
-  'venusaur-gmax':              { ko: '거다이넝쿨매질', en: 'G-Max Vine Lash' },
-  'charizard-gmax':             { ko: '거다이야화',      en: 'G-Max Wildfire' },
-  'blastoise-gmax':             { ko: '거다이연격포',    en: 'G-Max Cannonade' },
-  'butterfree-gmax':            { ko: '거다이접가루',    en: 'G-Max Befuddle' },
-  'pikachu-gmax':               { ko: '거다이볼트택',    en: 'G-Max Volt Crash' },
-  'meowth-gmax':                { ko: '거다이냥골드',    en: 'G-Max Gold Rush' },
-  'machamp-gmax':               { ko: '거다이넘치는힘',  en: 'G-Max Chi Strike' },
-  'gengar-gmax':                { ko: '거다이공포',      en: 'G-Max Terror' },
-  'kingler-gmax':               { ko: '거다이거품공세',  en: 'G-Max Foam Burst' },
-  'lapras-gmax':                { ko: '거다이오로라',    en: 'G-Max Resonance' },
-  'eevee-gmax':                 { ko: '거다이안기기',    en: 'G-Max Cuddle' },
-  'snorlax-gmax':               { ko: '거다이재생',      en: 'G-Max Replenish' },
-  'garbodor-gmax':              { ko: '거다이악취',      en: 'G-Max Malodor' },
-  'melmetal-gmax':              { ko: '거다이멜트다운',  en: 'G-Max Meltdown' },
-  'rillaboom-gmax':             { ko: '거다이드럼솔로',  en: 'G-Max Drum Solo' },
-  'cinderace-gmax':             { ko: '거다이파이어볼',  en: 'G-Max Fireball' },
-  'inteleon-gmax':              { ko: '거다이스나이프',  en: 'G-Max Hydrosnipe' },
-  'corviknight-gmax':           { ko: '거다이폭풍날개',  en: 'G-Max Wind Rage' },
-  'orbeetle-gmax':              { ko: '거다이그라비티',  en: 'G-Max Gravitas' },
-  'drednaw-gmax':               { ko: '거다이스톤샤워',  en: 'G-Max Stonesurge' },
-  'coalossal-gmax':             { ko: '거다이폭렬암',    en: 'G-Max Volcalith' },
-  'flapple-gmax':               { ko: '거다이신맛',      en: 'G-Max Tartness' },
-  'appletun-gmax':              { ko: '거다이단맛',      en: 'G-Max Sweetness' },
-  'sandaconda-gmax':            { ko: '거다이모래폭풍',  en: 'G-Max Sandblast' },
-  'toxtricity-amped-gmax':      { ko: '거다이전격탄',    en: 'G-Max Stun Shock' },
-  'toxtricity-low-key-gmax':    { ko: '거다이전격탄',    en: 'G-Max Stun Shock' },
-  'centiskorch-gmax':           { ko: '거다이화염소용돌이', en: 'G-Max Centiferno' },
-  'hatterene-gmax':             { ko: '거다이신비의힘',  en: 'G-Max Smite' },
-  'grimmsnarl-gmax':            { ko: '거다이코자장가',  en: 'G-Max Snooze' },
-  'alcremie-gmax':              { ko: '거다이파티날',    en: 'G-Max Finale' },
-  'copperajah-gmax':            { ko: '거다이스틸스파이크', en: 'G-Max Steelsurge' },
-  'duraludon-gmax':             { ko: '거다이드래곤붕괴', en: 'G-Max Depletion' },
-  'urshifu-single-strike-gmax': { ko: '거다이단격',      en: 'G-Max One Blow' },
-  'urshifu-rapid-strike-gmax':  { ko: '거다이연격',      en: 'G-Max Rapid Flow' },
+  'venusaur-gmax':              { ko: '거다이넝쿨매질',    en: 'G-Max Vine Lash',    desc: '풀 타입 기술. 4턴간 상대 비거다이맥스 포켓몬에게 매 턴 최대HP의 1/6 피해.' },
+  'charizard-gmax':             { ko: '거다이야화',        en: 'G-Max Wildfire',     desc: '불꽃 타입 기술. 4턴간 불꽃 타입이 아닌 상대에게 매 턴 최대HP의 1/6 피해.' },
+  'blastoise-gmax':             { ko: '거다이연격포',      en: 'G-Max Cannonade',    desc: '물 타입 기술. 4턴간 물 타입이 아닌 상대에게 매 턴 최대HP의 1/6 피해.' },
+  'butterfree-gmax':            { ko: '거다이접가루',      en: 'G-Max Befuddle',     desc: '벌레 타입 기술. 상대 전원에게 마비·수면·독 중 하나를 랜덤으로 부여.' },
+  'pikachu-gmax':               { ko: '거다이볼트택',      en: 'G-Max Volt Crash',   desc: '전기 타입 기술. 상대 전원을 마비 상태로 만든다.' },
+  'meowth-gmax':                { ko: '거다이냥골드',      en: 'G-Max Gold Rush',    desc: '노말 타입 기술. 상대를 혼란 상태로 만들고 전투 후 돈을 추가 획득.' },
+  'machamp-gmax':               { ko: '거다이넘치는힘',    en: 'G-Max Chi Strike',   desc: '격투 타입 기술. 아군 전원의 급소율을 올린다.' },
+  'gengar-gmax':                { ko: '거다이공포',        en: 'G-Max Terror',       desc: '고스트 타입 기술. 상대가 도주·교대를 할 수 없게 만든다.' },
+  'kingler-gmax':               { ko: '거다이거품공세',    en: 'G-Max Foam Burst',   desc: '물 타입 기술. 상대 전원의 스피드를 2단계 낮춘다.' },
+  'lapras-gmax':                { ko: '거다이오로라',      en: 'G-Max Resonance',    desc: '얼음 타입 기술. 5턴간 아군이 받는 피해를 반감하는 오로라베일을 펼친다.' },
+  'eevee-gmax':                 { ko: '거다이안기기',      en: 'G-Max Cuddle',       desc: '노말 타입 기술. 이성인 상대를 헤롱헤롱 상태로 만든다.' },
+  'snorlax-gmax':               { ko: '거다이재생',        en: 'G-Max Replenish',    desc: '노말 타입 기술. 아군 전원이 이미 사용한 나무열매를 복구한다.' },
+  'garbodor-gmax':              { ko: '거다이악취',        en: 'G-Max Malodor',      desc: '독 타입 기술. 상대 전원을 독 상태로 만든다.' },
+  'melmetal-gmax':              { ko: '거다이멜트다운',    en: 'G-Max Meltdown',     desc: '강철 타입 기술. 상대 전원에게 기술잠금을 부여해 같은 기술 반복 사용을 막는다.' },
+  'rillaboom-gmax':             { ko: '거다이드럼솔로',    en: 'G-Max Drum Solo',    desc: '풀 타입 기술. 상대의 특성을 무시하고 데미지를 준다.' },
+  'cinderace-gmax':             { ko: '거다이파이어볼',    en: 'G-Max Fireball',     desc: '불꽃 타입 기술. 상대의 특성을 무시하고 데미지를 준다.' },
+  'inteleon-gmax':              { ko: '거다이스나이프',    en: 'G-Max Hydrosnipe',   desc: '물 타입 기술. 상대의 특성을 무시하고 데미지를 준다.' },
+  'corviknight-gmax':           { ko: '거다이폭풍날개',    en: 'G-Max Wind Rage',    desc: '비행 타입 기술. 필드 효과·장치(빛의장막 등)를 모두 제거한다.' },
+  'orbeetle-gmax':              { ko: '거다이그라비티',    en: 'G-Max Gravitas',     desc: '에스퍼 타입 기술. 중력 효과를 발생시켜 날기·부유 등을 무효화한다.' },
+  'drednaw-gmax':               { ko: '거다이스톤샤워',    en: 'G-Max Stonesurge',   desc: '물 타입 기술. 상대 필드에 스텔스록을 전개한다.' },
+  'coalossal-gmax':             { ko: '거다이폭렬암',      en: 'G-Max Volcalith',    desc: '바위 타입 기술. 4턴간 바위 타입이 아닌 상대에게 매 턴 최대HP의 1/6 피해.' },
+  'flapple-gmax':               { ko: '거다이신맛',        en: 'G-Max Tartness',     desc: '풀 타입 기술. 상대 전원의 회피율을 낮춘다.' },
+  'appletun-gmax':              { ko: '거다이단맛',        en: 'G-Max Sweetness',    desc: '풀 타입 기술. 아군 전원의 상태이상을 회복시킨다.' },
+  'sandaconda-gmax':            { ko: '거다이모래폭풍',    en: 'G-Max Sandblast',    desc: '땅 타입 기술. 모래바람을 일으키고 4~5턴간 상대를 빠져나갈 수 없게 만든다.' },
+  'toxtricity-amped-gmax':      { ko: '거다이전격탄',      en: 'G-Max Stun Shock',   desc: '전기 타입 기술. 상대에게 마비 또는 독 상태 중 하나를 랜덤으로 부여.' },
+  'toxtricity-low-key-gmax':    { ko: '거다이전격탄',      en: 'G-Max Stun Shock',   desc: '전기 타입 기술. 상대에게 마비 또는 독 상태 중 하나를 랜덤으로 부여.' },
+  'centiskorch-gmax':           { ko: '거다이화염소용돌이', en: 'G-Max Centiferno',   desc: '불꽃 타입 기술. 4~5턴간 상대를 화염소용돌이로 가두어 매 턴 피해.' },
+  'hatterene-gmax':             { ko: '거다이신비의힘',    en: 'G-Max Smite',        desc: '페어리 타입 기술. 상대 전원을 혼란 상태로 만든다.' },
+  'grimmsnarl-gmax':            { ko: '거다이코자장가',    en: 'G-Max Snooze',       desc: '악 타입 기술. 상대를 하품 상태로 만들어 다음 턴에 잠들게 한다.' },
+  'alcremie-gmax':              { ko: '거다이파티날',      en: 'G-Max Finale',       desc: '페어리 타입 기술. 아군 전원의 HP를 회복시킨다.' },
+  'copperajah-gmax':            { ko: '거다이스틸스파이크', en: 'G-Max Steelsurge',  desc: '강철 타입 기술. 상대 필드에 철가시를 전개해 교체 시 피해를 준다.' },
+  'duraludon-gmax':             { ko: '거다이드래곤붕괴',  en: 'G-Max Depletion',    desc: '드래곤 타입 기술. 상대가 마지막으로 사용한 기술의 PP를 2 감소시킨다.' },
+  'urshifu-single-strike-gmax': { ko: '거다이단격',        en: 'G-Max One Blow',     desc: '악 타입 기술. 방어·방어막 등을 무시하고 공격한다.' },
+  'urshifu-rapid-strike-gmax':  { ko: '거다이연격',        en: 'G-Max Rapid Flow',   desc: '물 타입 기술. 방어·방어막 등을 무시하고 공격한다.' },
 };
 
 // 우라오스 두 폼 구분 이름
@@ -687,15 +704,18 @@ function buildCard(p) {
   card.className = 'pokemon-card';
   card.dataset.ko  = p.ko.toLowerCase();
   card.dataset.en  = (p.en || '').toLowerCase();
-  card.dataset.gen = getGen(p.id);
+  card.dataset.gen = p.genNum !== undefined ? p.genNum : getGen(p.id);
   card.dataset.cat = p.formType || 'normal';
   const types = p.types || [];
   card.dataset.types = types.join(',');
   const bg = typeColor(types[0] || '노말');
+  const REGION_LABEL = { alola:'알로라', galar:'가라르', hisui:'히스이', paldea:'팔데아' };
   const badge = p.formType === 'mega'
     ? '<span class="card-badge mega">MEGA</span>'
     : p.formType === 'gmax'
     ? '<span class="card-badge gmax">거다이</span>'
+    : p.formType === 'region'
+    ? `<span class="card-badge ${p.regionType}">${REGION_LABEL[p.regionType] || p.regionType}</span>`
     : '';
   card.innerHTML = `
     ${badge}
@@ -712,8 +732,39 @@ function buildCard(p) {
 function renderAll(data) {
   const grid = document.getElementById('pokemon-grid');
   const noRes = document.getElementById('no-results');
+  const SKIP_EN = new Set(['pikachu-alola-cap']);
+  // 각 리전그룹의 시작 displayId (해당 세대 마지막 번호 이후)
+  const REGION_BASE = { alola: 809.001, galar: 905.001, hisui: 905.201, paldea: 1025.001 };
+  const REGION_GEN  = { alola: 7, galar: 8, hisui: 8, paldea: 9 };
+  const counters    = { alola: 0, galar: 0, hisui: 0, paldea: 0 };
+
+  const entries = [];
+
+  data.forEach(p => {
+    entries.push({ ...p, displayId: p.id });
+    if (!p.forms) return;
+    const seenKo = new Set();
+    p.forms.forEach(f => {
+      if (!REGION_BASE[f.type]) return;
+      if (!f.name_ko || !f.sprite) return;
+      if (f.name_en && (f.name_en.includes('totem') || SKIP_EN.has(f.name_en))) return;
+      if (seenKo.has(f.name_ko)) return;
+      seenKo.add(f.name_ko);
+      entries.push({
+        id: p.id, ko: f.name_ko, en: f.name_en,
+        sprite: f.sprite, types: f.types || p.types,
+        abilities: f.abilities || p.abilities,
+        formType: 'region', regionType: f.type,
+        genNum: REGION_GEN[f.type],
+        displayId: REGION_BASE[f.type] + counters[f.type]++ * 0.001
+      });
+    });
+  });
+
+  entries.sort((a, b) => a.displayId - b.displayId);
+
   const frag = document.createDocumentFragment();
-  data.forEach(p => frag.appendChild(buildCard(p)));
+  entries.forEach(e => frag.appendChild(buildCard(e)));
   grid.insertBefore(frag, noRes);
 }
 
@@ -773,6 +824,7 @@ function applyFilters() {
     const matchGen  = !activeGen  || +c.dataset.gen === activeGen;
     const matchCat  = activeCat === 'all'
       || (activeCat === 'normal' && c.dataset.cat === 'normal')
+      || (activeCat === 'region' && c.dataset.cat === 'region')
       || (activeCat === 'mega'   && c.dataset.cat === 'mega')
       || (activeCat === 'gmax'   && c.dataset.cat === 'gmax');
 
@@ -863,6 +915,7 @@ function openModal(p) {
         <div>
           <div class="gmax-move-name">${p.gmaxMove.ko}</div>
           <div class="gmax-move-label">${p.gmaxMove.en}</div>
+          ${p.gmaxMove.desc ? `<div class="gmax-move-desc">${p.gmaxMove.desc}</div>` : ''}
         </div>
       </div>`;
     body.appendChild(sec);
@@ -874,14 +927,18 @@ function openModal(p) {
     const list = document.createElement('div');
     list.className = 'ability-list';
     p.abilities.forEach(a => {
-      const name = typeof a === 'string' ? a : (a.ko || a.en || '');
-      const en   = typeof a === 'object' ? (a.en || '') : '';
+      const name   = typeof a === 'string' ? a : (a.ko || a.en || '');
+      const en     = typeof a === 'object' ? (a.en || '') : '';
       const hidden = typeof a === 'object' ? a.hidden : false;
+      const koDesc = ABILITY_DESC[name] || '';
+      const subLine = koDesc
+        ? `<div class="ability-en">${koDesc}</div>`
+        : (en ? `<div class="ability-en">${en}</div>` : '');
       list.innerHTML += `
         <div class="ability-item">
           <div>
             <div class="ability-name">${name}</div>
-            ${en ? `<div class="ability-en">${en}</div>` : ''}
+            ${subLine}
           </div>
           ${hidden ? '<span class="ability-hidden">숨겨진 특성</span>' : ''}
         </div>`;
@@ -926,7 +983,7 @@ function closeModal() { document.getElementById('modal-overlay').classList.remov
 
 // ─── 타입 버튼 초기화 ───
 function buildTypeButtons() {
-  const types = ['노말','불꽃','물','전기','풀','얼음','격투','독','땅','비행','에스퍼','벌레','바위','유령','드래곤','악','강철','페어리'];
+  const types = ['노말','불꽃','물','전기','풀','얼음','격투','독','땅','비행','에스퍼','벌레','바위','고스트','드래곤','악','강철','페어리'];
   const group = document.getElementById('type-group');
   types.forEach(t => {
     const btn = document.createElement('button');
@@ -944,13 +1001,24 @@ function buildTypeButtons() {
 
 // ─── LOAD ───
 buildTypeButtons();
-fetch('data/quiz_pokemon.json')
-  .then(r => r.json())
-  .then(data => {
-    DB = data;
+let ABILITY_DESC = {};
+
+Promise.all([
+  fetch('data/quiz_pokemon.json').then(r => r.json()),
+  fetch('data/quiz_abilities.json').then(r => r.json())
+])
+  .then(([pokemonData, abilitiesData]) => {
+    abilitiesData.forEach(a => {
+      const name = a.ko || a.en || '';
+      if (name && a.desc && /[\uAC00-\uD7A3]/.test(a.desc)) {
+        ABILITY_DESC[name] = a.desc;
+      }
+    });
+    DB = pokemonData;
     renderAll(DB);
-    const formCount = renderForms(data);
-    totalAll = DB.length + formCount;
+    const formCount = renderForms(pokemonData);
+    const regionCount = document.querySelectorAll('.pokemon-card[data-cat="region"]').length;
+    totalAll = DB.length + formCount + regionCount;
     updateCount(totalAll);
   })
   .catch(() => {
