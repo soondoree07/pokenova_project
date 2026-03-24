@@ -957,7 +957,7 @@
     "id": 161,
     "ko": "오카열매",
     "en": "occa berry",
-    "desc": "포핀 재료로 쓰이는 열매.",
+    "desc": "지니면 불꽃 타입의 기술로 상성상 효과가 굉장한 피해를 받을 때 소비되어 데미지를 반감한다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/occa-berry.png",
     "category": "type-protection"
@@ -966,7 +966,7 @@
     "id": 162,
     "ko": "꼬시개열매",
     "en": "passho berry",
-    "desc": "포핀 재료로 쓰이는 열매.",
+    "desc": "지니면 물 타입의 기술로 상성상 효과가 굉장한 피해를 받을 때 소비되어 데미지를 반감한다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/passho-berry.png",
     "category": "type-protection"
@@ -975,7 +975,7 @@
     "id": 163,
     "ko": "초나열매",
     "en": "wacan berry",
-    "desc": "포핀 재료로 쓰이는 열매.",
+    "desc": "지니면 풀 타입의 기술로 상성상 효과가 굉장한 피해를 받을 때 소비되어 데미지를 반감한다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wacan-berry.png",
     "category": "type-protection"
@@ -984,7 +984,7 @@
     "id": 164,
     "ko": "린드열매",
     "en": "rindo berry",
-    "desc": "포핀 재료로 쓰이는 열매.",
+    "desc": "지니면 전기 타입의 기술로 상성상 효과가 굉장한 피해를 받을 때 소비되어 데미지를 반감한다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rindo-berry.png",
     "category": "type-protection"
@@ -993,7 +993,7 @@
     "id": 165,
     "ko": "플카열매",
     "en": "yache berry",
-    "desc": "포핀 재료로 쓰이는 열매.",
+    "desc": "지니면 얼음 타입의 기술로 상성상 효과가 굉장한 피해를 받을 때 소비되어 데미지를 반감한다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/yache-berry.png",
     "category": "type-protection"
@@ -1002,7 +1002,7 @@
     "id": 166,
     "ko": "로플열매",
     "en": "chople berry",
-    "desc": "포핀 재료로 쓰이는 열매.",
+    "desc": "지니면 격투 타입의 기술로 상성상 효과가 굉장한 피해를 받을 때 소비되어 데미지를 반감한다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chople-berry.png",
     "category": "type-protection"
@@ -1011,7 +1011,7 @@
     "id": 167,
     "ko": "으름열매",
     "en": "kebia berry",
-    "desc": "포핀 재료로 쓰이는 열매.",
+    "desc": "지니면 독 타입의 기술로 상성상 효과가 굉장한 피해를 받을 때 소비되어 데미지를 반감한다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kebia-berry.png",
     "category": "type-protection"
@@ -1020,7 +1020,7 @@
     "id": 168,
     "ko": "슈캐열매",
     "en": "shuca berry",
-    "desc": "포핀 재료로 쓰이는 열매.",
+    "desc": "지니면 땅 타입의 기술로 상성상 효과가 굉장한 피해를 받을 때 소비되어 데미지를 반감한다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shuca-berry.png",
     "category": "type-protection"
@@ -1110,7 +1110,7 @@
     "id": 178,
     "ko": "치리열매",
     "en": "liechi berry",
-    "desc": "HP가 1/4 이하가 되면 소비되어 공격이(가) 올라간다.",
+    "desc": "HP가 1/4 이하가 되면 소비되어 공격이 올라간다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/liechi-berry.png",
     "category": "in-a-pinch"
@@ -1119,7 +1119,7 @@
     "id": 179,
     "ko": "용아열매",
     "en": "ganlon berry",
-    "desc": "HP가 1/4 이하가 되면 소비되어 방어이(가) 올라간다.",
+    "desc": "HP가 1/4 이하가 되면 소비되어 방어가 올라간다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ganlon-berry.png",
     "category": "in-a-pinch"
@@ -1128,7 +1128,7 @@
     "id": 180,
     "ko": "캄라열매",
     "en": "salac berry",
-    "desc": "HP가 1/4 이하가 되면 소비되어 스피드이(가) 올라간다.",
+    "desc": "HP가 1/4 이하가 되면 소비되어 스피드가 올라간다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/salac-berry.png",
     "category": "in-a-pinch"
@@ -1137,7 +1137,7 @@
     "id": 181,
     "ko": "야타비열매",
     "en": "petaya berry",
-    "desc": "HP가 1/4 이하가 되면 소비되어 특수공격이(가) 올라간다.",
+    "desc": "HP가 1/4 이하가 되면 소비되어 특수공격이 올라간다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/petaya-berry.png",
     "category": "in-a-pinch"
@@ -1146,7 +1146,7 @@
     "id": 182,
     "ko": "규살열매",
     "en": "apicot berry",
-    "desc": "HP가 1/4 이하가 되면 소비되어 특수방어이(가) 올라간다.",
+    "desc": "HP가 1/4 이하가 되면 소비되어 특수방어가 올라간다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/apicot-berry.png",
     "category": "in-a-pinch"
@@ -1155,7 +1155,7 @@
     "id": 183,
     "ko": "랑사열매",
     "en": "lansat berry",
-    "desc": "HP가 1/4 이하가 되면 소비되어 critical hit ratio by two stages이(가) 올라간다.",
+    "desc": "HP가 1/4 이하가 되면 소비되어 급소율이 2단계 올라간다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lansat-berry.png",
     "category": "in-a-pinch"
@@ -1164,7 +1164,7 @@
     "id": 184,
     "ko": "스타열매",
     "en": "starf berry",
-    "desc": "HP가 1/4 이하가 되면 소비되어 a random stat by two stages이(가) 올라간다.",
+    "desc": "HP가 1/4 이하가 되면 소비되어 랜덤한 능력치가 2단계 올라간다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/starf-berry.png",
     "category": "in-a-pinch"
@@ -1182,7 +1182,7 @@
     "id": 186,
     "ko": "미클열매",
     "en": "micle berry",
-    "desc": "HP가 1/4 이하가 되면 소비되어 다음 기술의 명중률이 20% 올라간다.",
+    "desc": "HP가 1/4 이하가 되면 소비되어 명중률이 올라간다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/micle-berry.png",
     "category": "in-a-pinch"
@@ -1191,7 +1191,7 @@
     "id": 187,
     "ko": "애슈열매",
     "en": "custap berry",
-    "desc": "HP가 1/4 이하가 되면 소비되어 행동 순서가 가장 빨라진다.",
+    "desc": "HP가 1/2 이하가 되면 소비되어 HP를 1/4 회복한다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/custap-berry.png",
     "category": "in-a-pinch"
@@ -2253,7 +2253,7 @@
     "id": 305,
     "ko": "기술머신01",
     "en": "tm01",
-    "desc": "호환되는 포켓몬에게 손톱갈기을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 손톱갈기를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2262,7 +2262,7 @@
     "id": 306,
     "ko": "기술머신02",
     "en": "tm02",
-    "desc": "호환되는 포켓몬에게 드래곤크루을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 드래곤크루를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2271,7 +2271,7 @@
     "id": 307,
     "ko": "기술머신03",
     "en": "tm03",
-    "desc": "호환되는 포켓몬에게 사이코쇼크을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 사이코쇼크를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2280,7 +2280,7 @@
     "id": 308,
     "ko": "기술머신04",
     "en": "tm04",
-    "desc": "호환되는 포켓몬에게 명상을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 명상을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2289,7 +2289,7 @@
     "id": 309,
     "ko": "기술머신05",
     "en": "tm05",
-    "desc": "호환되는 포켓몬에게 울부짖기을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 울부짖기를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2298,7 +2298,7 @@
     "id": 310,
     "ko": "기술머신06",
     "en": "tm06",
-    "desc": "호환되는 포켓몬에게 맹독을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 맹독을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2307,7 +2307,7 @@
     "id": 311,
     "ko": "기술머신07",
     "en": "tm07",
-    "desc": "호환되는 포켓몬에게 싸라기눈을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 싸라기눈을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2316,7 +2316,7 @@
     "id": 312,
     "ko": "기술머신08",
     "en": "tm08",
-    "desc": "호환되는 포켓몬에게 벌크업을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 벌크업을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2325,7 +2325,7 @@
     "id": 313,
     "ko": "기술머신09",
     "en": "tm09",
-    "desc": "호환되는 포켓몬에게 베놈쇼크을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 베놈쇼크를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2334,7 +2334,7 @@
     "id": 314,
     "ko": "기술머신10",
     "en": "tm10",
-    "desc": "호환되는 포켓몬에게 잠재파워을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 잠재파워를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2343,7 +2343,7 @@
     "id": 315,
     "ko": "기술머신11",
     "en": "tm11",
-    "desc": "호환되는 포켓몬에게 쾌청을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 쾌청을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2352,7 +2352,7 @@
     "id": 316,
     "ko": "기술머신12",
     "en": "tm12",
-    "desc": "호환되는 포켓몬에게 도발을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 도발을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2361,7 +2361,7 @@
     "id": 317,
     "ko": "기술머신13",
     "en": "tm13",
-    "desc": "호환되는 포켓몬에게 냉동빔을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 냉동빔을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2370,7 +2370,7 @@
     "id": 318,
     "ko": "기술머신14",
     "en": "tm14",
-    "desc": "호환되는 포켓몬에게 눈보라을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 눈보라를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2379,7 +2379,7 @@
     "id": 319,
     "ko": "기술머신15",
     "en": "tm15",
-    "desc": "호환되는 포켓몬에게 파괴광선을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 파괴광선을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2388,7 +2388,7 @@
     "id": 320,
     "ko": "기술머신16",
     "en": "tm16",
-    "desc": "호환되는 포켓몬에게 빛의장막을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 빛의장막을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2397,7 +2397,7 @@
     "id": 321,
     "ko": "기술머신17",
     "en": "tm17",
-    "desc": "호환되는 포켓몬에게 방어을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 방어를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2406,7 +2406,7 @@
     "id": 322,
     "ko": "기술머신18",
     "en": "tm18",
-    "desc": "호환되는 포켓몬에게 비바라기을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 비바라기를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2415,7 +2415,7 @@
     "id": 323,
     "ko": "기술머신19",
     "en": "tm19",
-    "desc": "호환되는 포켓몬에게 텔레키네시스을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 텔레키네시스를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2424,7 +2424,7 @@
     "id": 324,
     "ko": "기술머신20",
     "en": "tm20",
-    "desc": "호환되는 포켓몬에게 신비의부적을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 신비의부적을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2433,7 +2433,7 @@
     "id": 325,
     "ko": "기술머신21",
     "en": "tm21",
-    "desc": "호환되는 포켓몬에게 화풀이을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 화풀이를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2442,7 +2442,7 @@
     "id": 326,
     "ko": "기술머신22",
     "en": "tm22",
-    "desc": "호환되는 포켓몬에게 SolarBeam을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 솔라빔을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2451,7 +2451,7 @@
     "id": 327,
     "ko": "기술머신23",
     "en": "tm23",
-    "desc": "호환되는 포켓몬에게 떨어뜨리기을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 떨어뜨리기를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2460,7 +2460,7 @@
     "id": 328,
     "ko": "기술머신24",
     "en": "tm24",
-    "desc": "호환되는 포켓몬에게 10만볼트을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 10만볼트를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2469,7 +2469,7 @@
     "id": 329,
     "ko": "기술머신25",
     "en": "tm25",
-    "desc": "호환되는 포켓몬에게 번개을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 번개를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2478,7 +2478,7 @@
     "id": 330,
     "ko": "기술머신26",
     "en": "tm26",
-    "desc": "호환되는 포켓몬에게 지진을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 지진을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2487,7 +2487,7 @@
     "id": 331,
     "ko": "기술머신27",
     "en": "tm27",
-    "desc": "호환되는 포켓몬에게 은혜갚기을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 은혜갚기를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2496,7 +2496,7 @@
     "id": 332,
     "ko": "기술머신28",
     "en": "tm28",
-    "desc": "호환되는 포켓몬에게 구멍파기을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 구멍파기를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2505,7 +2505,7 @@
     "id": 333,
     "ko": "기술머신29",
     "en": "tm29",
-    "desc": "호환되는 포켓몬에게 사이코키네시스을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 사이코키네시스를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2514,7 +2514,7 @@
     "id": 334,
     "ko": "기술머신30",
     "en": "tm30",
-    "desc": "호환되는 포켓몬에게 섀도볼을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 섀도볼을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2523,7 +2523,7 @@
     "id": 335,
     "ko": "기술머신31",
     "en": "tm31",
-    "desc": "호환되는 포켓몬에게 깨트리다을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 깨트리다를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2532,7 +2532,7 @@
     "id": 336,
     "ko": "기술머신32",
     "en": "tm32",
-    "desc": "호환되는 포켓몬에게 그림자분신을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 그림자분신을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2541,7 +2541,7 @@
     "id": 337,
     "ko": "기술머신33",
     "en": "tm33",
-    "desc": "호환되는 포켓몬에게 리플렉터을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 리플렉터를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2550,7 +2550,7 @@
     "id": 338,
     "ko": "기술머신34",
     "en": "tm34",
-    "desc": "호환되는 포켓몬에게 오물웨이브을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 오물웨이브를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2559,7 +2559,7 @@
     "id": 339,
     "ko": "기술머신35",
     "en": "tm35",
-    "desc": "호환되는 포켓몬에게 화염방사을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 화염방사를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2568,7 +2568,7 @@
     "id": 340,
     "ko": "기술머신36",
     "en": "tm36",
-    "desc": "호환되는 포켓몬에게 오물폭탄을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 오물폭탄을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2577,7 +2577,7 @@
     "id": 341,
     "ko": "기술머신37",
     "en": "tm37",
-    "desc": "호환되는 포켓몬에게 모래바람을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 모래바람을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2586,7 +2586,7 @@
     "id": 342,
     "ko": "기술머신38",
     "en": "tm38",
-    "desc": "호환되는 포켓몬에게 불대문자을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 불대문자를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2595,7 +2595,7 @@
     "id": 343,
     "ko": "기술머신39",
     "en": "tm39",
-    "desc": "호환되는 포켓몬에게 암석봉인을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 암석봉인을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2604,7 +2604,7 @@
     "id": 344,
     "ko": "기술머신40",
     "en": "tm40",
-    "desc": "호환되는 포켓몬에게 제비반환을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 제비반환을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2613,7 +2613,7 @@
     "id": 345,
     "ko": "기술머신41",
     "en": "tm41",
-    "desc": "호환되는 포켓몬에게 트집을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 트집을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2622,7 +2622,7 @@
     "id": 346,
     "ko": "기술머신42",
     "en": "tm42",
-    "desc": "호환되는 포켓몬에게 객기을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 객기를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2631,7 +2631,7 @@
     "id": 347,
     "ko": "기술머신43",
     "en": "tm43",
-    "desc": "호환되는 포켓몬에게 니트로차지을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 니트로차지를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2640,7 +2640,7 @@
     "id": 348,
     "ko": "기술머신44",
     "en": "tm44",
-    "desc": "호환되는 포켓몬에게 잠자기을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 잠자기를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2649,7 +2649,7 @@
     "id": 349,
     "ko": "기술머신45",
     "en": "tm45",
-    "desc": "호환되는 포켓몬에게 헤롱헤롱을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 헤롱헤롱을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2658,7 +2658,7 @@
     "id": 350,
     "ko": "기술머신46",
     "en": "tm46",
-    "desc": "호환되는 포켓몬에게 도둑질을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 도둑질을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2667,7 +2667,7 @@
     "id": 351,
     "ko": "기술머신47",
     "en": "tm47",
-    "desc": "호환되는 포켓몬에게 로킥을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 로킥을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2676,7 +2676,7 @@
     "id": 352,
     "ko": "기술머신48",
     "en": "tm48",
-    "desc": "호환되는 포켓몬에게 돌림노래을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 돌림노래를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2685,7 +2685,7 @@
     "id": 353,
     "ko": "기술머신49",
     "en": "tm49",
-    "desc": "호환되는 포켓몬에게 에코보이스을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 에코보이스를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2694,7 +2694,7 @@
     "id": 354,
     "ko": "기술머신50",
     "en": "tm50",
-    "desc": "호환되는 포켓몬에게 오버히트을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 오버히트를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2703,7 +2703,7 @@
     "id": 355,
     "ko": "기술머신51",
     "en": "tm51",
-    "desc": "호환되는 포켓몬에게 사이드체인지을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 사이드체인지를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2712,7 +2712,7 @@
     "id": 356,
     "ko": "기술머신52",
     "en": "tm52",
-    "desc": "호환되는 포켓몬에게 기합구슬을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 기합구슬을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2721,7 +2721,7 @@
     "id": 357,
     "ko": "기술머신53",
     "en": "tm53",
-    "desc": "호환되는 포켓몬에게 에너지볼을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 에너지볼을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2730,7 +2730,7 @@
     "id": 358,
     "ko": "기술머신54",
     "en": "tm54",
-    "desc": "호환되는 포켓몬에게 칼등치기을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 칼등치기를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2739,7 +2739,7 @@
     "id": 359,
     "ko": "기술머신55",
     "en": "tm55",
-    "desc": "호환되는 포켓몬에게 열탕을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 열탕을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2748,7 +2748,7 @@
     "id": 360,
     "ko": "기술머신56",
     "en": "tm56",
-    "desc": "호환되는 포켓몬에게 내던지기을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 내던지기를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2757,7 +2757,7 @@
     "id": 361,
     "ko": "기술머신57",
     "en": "tm57",
-    "desc": "호환되는 포켓몬에게 차지빔을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 차지빔을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2766,7 +2766,7 @@
     "id": 362,
     "ko": "기술머신58",
     "en": "tm58",
-    "desc": "호환되는 포켓몬에게 프리폴을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 프리폴을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2775,7 +2775,7 @@
     "id": 363,
     "ko": "기술머신59",
     "en": "tm59",
-    "desc": "호환되는 포켓몬에게 불태우기을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 불태우기를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2784,7 +2784,7 @@
     "id": 364,
     "ko": "기술머신60",
     "en": "tm60",
-    "desc": "호환되는 포켓몬에게 순서미루기을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 순서미루기를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2793,7 +2793,7 @@
     "id": 365,
     "ko": "기술머신61",
     "en": "tm61",
-    "desc": "호환되는 포켓몬에게 도깨비불을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 도깨비불을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2802,7 +2802,7 @@
     "id": 366,
     "ko": "기술머신62",
     "en": "tm62",
-    "desc": "호환되는 포켓몬에게 애크러뱃을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 애크러뱃을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2811,7 +2811,7 @@
     "id": 367,
     "ko": "기술머신63",
     "en": "tm63",
-    "desc": "호환되는 포켓몬에게 금제을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 금제를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2820,7 +2820,7 @@
     "id": 368,
     "ko": "기술머신64",
     "en": "tm64",
-    "desc": "호환되는 포켓몬에게 대폭발을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 대폭발을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2829,7 +2829,7 @@
     "id": 369,
     "ko": "기술머신65",
     "en": "tm65",
-    "desc": "호환되는 포켓몬에게 섀도크루을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 섀도크루를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2838,7 +2838,7 @@
     "id": 370,
     "ko": "기술머신66",
     "en": "tm66",
-    "desc": "호환되는 포켓몬에게 보복을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 보복을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2847,7 +2847,7 @@
     "id": 371,
     "ko": "기술머신67",
     "en": "tm67",
-    "desc": "호환되는 포켓몬에게 원수갚기을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 원수갚기를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2856,7 +2856,7 @@
     "id": 372,
     "ko": "기술머신68",
     "en": "tm68",
-    "desc": "호환되는 포켓몬에게 기가임팩트을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 기가임팩트를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2865,7 +2865,7 @@
     "id": 373,
     "ko": "기술머신69",
     "en": "tm69",
-    "desc": "호환되는 포켓몬에게 록커트을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 록커트를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2874,7 +2874,7 @@
     "id": 374,
     "ko": "기술머신70",
     "en": "tm70",
-    "desc": "호환되는 포켓몬에게 플래시을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 플래시를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2883,7 +2883,7 @@
     "id": 375,
     "ko": "기술머신71",
     "en": "tm71",
-    "desc": "호환되는 포켓몬에게 스톤에지을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 스톤에지를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2892,7 +2892,7 @@
     "id": 376,
     "ko": "기술머신72",
     "en": "tm72",
-    "desc": "호환되는 포켓몬에게 볼트체인지을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 볼트체인지를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2901,7 +2901,7 @@
     "id": 377,
     "ko": "기술머신73",
     "en": "tm73",
-    "desc": "호환되는 포켓몬에게 전기자석파을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 전기자석파를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2910,7 +2910,7 @@
     "id": 378,
     "ko": "기술머신74",
     "en": "tm74",
-    "desc": "호환되는 포켓몬에게 자이로볼을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 자이로볼을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2919,7 +2919,7 @@
     "id": 379,
     "ko": "기술머신75",
     "en": "tm75",
-    "desc": "호환되는 포켓몬에게 칼춤을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 칼춤을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2928,7 +2928,7 @@
     "id": 380,
     "ko": "기술머신76",
     "en": "tm76",
-    "desc": "호환되는 포켓몬에게 벌레의저항을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 벌레의저항을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2937,7 +2937,7 @@
     "id": 381,
     "ko": "기술머신77",
     "en": "tm77",
-    "desc": "호환되는 포켓몬에게 자기암시을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 자기암시를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2946,7 +2946,7 @@
     "id": 382,
     "ko": "기술머신78",
     "en": "tm78",
-    "desc": "호환되는 포켓몬에게 땅고르기을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 땅고르기를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2955,7 +2955,7 @@
     "id": 383,
     "ko": "기술머신79",
     "en": "tm79",
-    "desc": "호환되는 포켓몬에게 얼음숨결을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 얼음숨결을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2964,7 +2964,7 @@
     "id": 384,
     "ko": "기술머신80",
     "en": "tm80",
-    "desc": "호환되는 포켓몬에게 스톤샤워을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 스톤샤워를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2973,7 +2973,7 @@
     "id": 385,
     "ko": "기술머신81",
     "en": "tm81",
-    "desc": "호환되는 포켓몬에게 시저크로스을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 시저크로스를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2982,7 +2982,7 @@
     "id": 386,
     "ko": "기술머신82",
     "en": "tm82",
-    "desc": "호환되는 포켓몬에게 드래곤테일을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 드래곤테일을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -2991,7 +2991,7 @@
     "id": 387,
     "ko": "기술머신83",
     "en": "tm83",
-    "desc": "호환되는 포켓몬에게 분발을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 분발을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -3000,7 +3000,7 @@
     "id": 388,
     "ko": "기술머신84",
     "en": "tm84",
-    "desc": "호환되는 포켓몬에게 독찌르기을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 독찌르기를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -3009,7 +3009,7 @@
     "id": 389,
     "ko": "기술머신85",
     "en": "tm85",
-    "desc": "호환되는 포켓몬에게 꿈먹기을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 꿈먹기를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -3018,7 +3018,7 @@
     "id": 390,
     "ko": "기술머신86",
     "en": "tm86",
-    "desc": "호환되는 포켓몬에게 풀묶기을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 풀묶기를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -3027,7 +3027,7 @@
     "id": 391,
     "ko": "기술머신87",
     "en": "tm87",
-    "desc": "호환되는 포켓몬에게 뽐내기을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 뽐내기를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -3036,7 +3036,7 @@
     "id": 392,
     "ko": "기술머신88",
     "en": "tm88",
-    "desc": "호환되는 포켓몬에게 쪼아대기을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 쪼아대기를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -3045,7 +3045,7 @@
     "id": 393,
     "ko": "기술머신89",
     "en": "tm89",
-    "desc": "호환되는 포켓몬에게 유턴을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 유턴을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -3054,7 +3054,7 @@
     "id": 394,
     "ko": "기술머신90",
     "en": "tm90",
-    "desc": "호환되는 포켓몬에게 대타출동을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 대타출동을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -3063,7 +3063,7 @@
     "id": 395,
     "ko": "기술머신91",
     "en": "tm91",
-    "desc": "호환되는 포켓몬에게 러스터캐논을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 러스터캐논을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -3072,7 +3072,7 @@
     "id": 396,
     "ko": "기술머신92",
     "en": "tm92",
-    "desc": "호환되는 포켓몬에게 트릭룸을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 트릭룸을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -3081,7 +3081,7 @@
     "id": 397,
     "ko": "비전머신01",
     "en": "hm01",
-    "desc": "호환되는 포켓몬에게 풀베기을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 풀베기를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hm-normal.png",
     "category": "all-machines"
@@ -3090,7 +3090,7 @@
     "id": 398,
     "ko": "비전머신02",
     "en": "hm02",
-    "desc": "호환되는 포켓몬에게 공중날기을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 공중날기를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hm-normal.png",
     "category": "all-machines"
@@ -3099,7 +3099,7 @@
     "id": 399,
     "ko": "비전머신03",
     "en": "hm03",
-    "desc": "호환되는 포켓몬에게 파도타기을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 파도타기를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hm-normal.png",
     "category": "all-machines"
@@ -3108,7 +3108,7 @@
     "id": 400,
     "ko": "비전머신04",
     "en": "hm04",
-    "desc": "호환되는 포켓몬에게 괴력을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 괴력을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hm-normal.png",
     "category": "all-machines"
@@ -3117,7 +3117,7 @@
     "id": 401,
     "ko": "비전머신05",
     "en": "hm05",
-    "desc": "호환되는 포켓몬에게 폭포오르기을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 폭포오르기를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hm-normal.png",
     "category": "all-machines"
@@ -3126,7 +3126,7 @@
     "id": 402,
     "ko": "비전머신06",
     "en": "hm06",
-    "desc": "호환되는 포켓몬에게 다이빙을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 다이빙을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hm-normal.png",
     "category": "all-machines"
@@ -3135,7 +3135,7 @@
     "id": 403,
     "ko": "비전머신07",
     "en": "hm07",
-    "desc": "호환되는 포켓몬에게 a move을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 기술을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hm-normal.png",
     "category": "all-machines"
@@ -3144,7 +3144,7 @@
     "id": 404,
     "ko": "HM08",
     "en": "hm08",
-    "desc": "호환되는 포켓몬에게 a move을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 기술을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hm-normal.png",
     "category": "all-machines",
@@ -3613,7 +3613,7 @@
     "id": 659,
     "ko": "기술머신93",
     "en": "tm93",
-    "desc": "호환되는 포켓몬에게 와일드볼트을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 와일드볼트를 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -3631,7 +3631,7 @@
     "id": 661,
     "ko": "기술머신95",
     "en": "tm95",
-    "desc": "호환되는 포켓몬에게 바크아웃을(를) 가르친다.",
+    "desc": "호환되는 포켓몬에게 바크아웃을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -3739,7 +3739,7 @@
     "id": 695,
     "ko": "팬텀나이트",
     "en": "gengarite",
-    "desc": "지니면 팬텀이(가) 메가진화할 수 있다.",
+    "desc": "지니면 팬텀이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/gengarite.png",
     "category": "mega-stones"
@@ -3748,7 +3748,7 @@
     "id": 696,
     "ko": "가디안나이트",
     "en": "gardevoirite",
-    "desc": "지니면 가디안이(가) 메가진화할 수 있다.",
+    "desc": "지니면 가디안이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/gardevoirite.png",
     "category": "mega-stones"
@@ -3757,7 +3757,7 @@
     "id": 697,
     "ko": "전룡나이트",
     "en": "ampharosite",
-    "desc": "지니면 전룡이(가) 메가진화할 수 있다.",
+    "desc": "지니면 전룡이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ampharosite.png",
     "category": "mega-stones"
@@ -3766,7 +3766,7 @@
     "id": 698,
     "ko": "이상해꽃나이트",
     "en": "venusaurite",
-    "desc": "지니면 이상해꽃이(가) 메가진화할 수 있다.",
+    "desc": "지니면 이상해꽃이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/venusaurite.png",
     "category": "mega-stones"
@@ -3775,7 +3775,7 @@
     "id": 699,
     "ko": "리자몽나이트X",
     "en": "charizardite x",
-    "desc": "지니면 리자몽이(가) 메가진화할 수 있다.",
+    "desc": "지니면 리자몽이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/charizardite-x.png",
     "category": "mega-stones"
@@ -3784,7 +3784,7 @@
     "id": 700,
     "ko": "거북왕나이트",
     "en": "blastoisinite",
-    "desc": "지니면 거북왕이(가) 메가진화할 수 있다.",
+    "desc": "지니면 거북왕이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/blastoisinite.png",
     "category": "mega-stones"
@@ -3793,7 +3793,7 @@
     "id": 701,
     "ko": "뮤츠나이트X",
     "en": "mewtwonite x",
-    "desc": "지니면 뮤츠이(가) 메가진화할 수 있다.",
+    "desc": "지니면 뮤츠가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mewtwonite-x.png",
     "category": "mega-stones"
@@ -3802,7 +3802,7 @@
     "id": 702,
     "ko": "뮤츠나이트Y",
     "en": "mewtwonite y",
-    "desc": "지니면 뮤츠이(가) 메가진화할 수 있다.",
+    "desc": "지니면 뮤츠가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mewtwonite-y.png",
     "category": "mega-stones"
@@ -3811,7 +3811,7 @@
     "id": 703,
     "ko": "번치코나이트",
     "en": "blazikenite",
-    "desc": "지니면 번치코이(가) 메가진화할 수 있다.",
+    "desc": "지니면 번치코가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/blazikenite.png",
     "category": "mega-stones"
@@ -3820,7 +3820,7 @@
     "id": 704,
     "ko": "요가램나이트",
     "en": "medichamite",
-    "desc": "지니면 요가램이(가) 메가진화할 수 있다.",
+    "desc": "지니면 요가램이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/medichamite.png",
     "category": "mega-stones"
@@ -3829,7 +3829,7 @@
     "id": 705,
     "ko": "헬가나이트",
     "en": "houndoominite",
-    "desc": "지니면 헬가이(가) 메가진화할 수 있다.",
+    "desc": "지니면 헬가가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/houndoominite.png",
     "category": "mega-stones"
@@ -3838,7 +3838,7 @@
     "id": 706,
     "ko": "보스로라나이트",
     "en": "aggronite",
-    "desc": "지니면 보스로라이(가) 메가진화할 수 있다.",
+    "desc": "지니면 보스로라가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/aggronite.png",
     "category": "mega-stones"
@@ -3847,7 +3847,7 @@
     "id": 707,
     "ko": "다크펫나이트",
     "en": "banettite",
-    "desc": "지니면 다크펫이(가) 메가진화할 수 있다.",
+    "desc": "지니면 다크펫이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/banettite.png",
     "category": "mega-stones"
@@ -3856,7 +3856,7 @@
     "id": 708,
     "ko": "마기라스나이트",
     "en": "tyranitarite",
-    "desc": "지니면 마기라스이(가) 메가진화할 수 있다.",
+    "desc": "지니면 마기라스가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tyranitarite.png",
     "category": "mega-stones"
@@ -3865,7 +3865,7 @@
     "id": 709,
     "ko": "핫삼나이트",
     "en": "scizorite",
-    "desc": "지니면 핫삼이(가) 메가진화할 수 있다.",
+    "desc": "지니면 핫삼이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/scizorite.png",
     "category": "mega-stones"
@@ -3874,7 +3874,7 @@
     "id": 710,
     "ko": "쁘사이저나이트",
     "en": "pinsirite",
-    "desc": "지니면 쁘사이저이(가) 메가진화할 수 있다.",
+    "desc": "지니면 쁘사이저가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pinsirite.png",
     "category": "mega-stones"
@@ -3883,7 +3883,7 @@
     "id": 711,
     "ko": "프테라나이트",
     "en": "aerodactylite",
-    "desc": "지니면 프테라이(가) 메가진화할 수 있다.",
+    "desc": "지니면 프테라가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/aerodactylite.png",
     "category": "mega-stones"
@@ -3892,7 +3892,7 @@
     "id": 712,
     "ko": "루카리오나이트",
     "en": "lucarionite",
-    "desc": "지니면 루카리오이(가) 메가진화할 수 있다.",
+    "desc": "지니면 루카리오가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lucarionite.png",
     "category": "mega-stones"
@@ -3901,7 +3901,7 @@
     "id": 713,
     "ko": "눈설왕나이트",
     "en": "abomasite",
-    "desc": "지니면 눈설왕이(가) 메가진화할 수 있다.",
+    "desc": "지니면 눈설왕이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/abomasite.png",
     "category": "mega-stones"
@@ -3910,7 +3910,7 @@
     "id": 714,
     "ko": "캥카나이트",
     "en": "kangaskhanite",
-    "desc": "지니면 캥카이(가) 메가진화할 수 있다.",
+    "desc": "지니면 캥카가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kangaskhanite.png",
     "category": "mega-stones"
@@ -3919,7 +3919,7 @@
     "id": 715,
     "ko": "갸라도스나이트",
     "en": "gyaradosite",
-    "desc": "지니면 갸라도스이(가) 메가진화할 수 있다.",
+    "desc": "지니면 갸라도스가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/gyaradosite.png",
     "category": "mega-stones"
@@ -3928,7 +3928,7 @@
     "id": 716,
     "ko": "앱솔나이트",
     "en": "absolite",
-    "desc": "지니면 앱솔이(가) 메가진화할 수 있다.",
+    "desc": "지니면 앱솔이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/absolite.png",
     "category": "mega-stones"
@@ -3937,7 +3937,7 @@
     "id": 717,
     "ko": "리자몽나이트Y",
     "en": "charizardite y",
-    "desc": "지니면 리자몽이(가) 메가진화할 수 있다.",
+    "desc": "지니면 리자몽이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/charizardite-y.png",
     "category": "mega-stones"
@@ -3946,7 +3946,7 @@
     "id": 718,
     "ko": "후디나이트",
     "en": "alakazite",
-    "desc": "지니면 후딘이(가) 메가진화할 수 있다.",
+    "desc": "지니면 후딘이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/alakazite.png",
     "category": "mega-stones"
@@ -3955,7 +3955,7 @@
     "id": 719,
     "ko": "헤라크로스나이트",
     "en": "heracronite",
-    "desc": "지니면 헤라크로스이(가) 메가진화할 수 있다.",
+    "desc": "지니면 헤라크로스가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heracronite.png",
     "category": "mega-stones"
@@ -3964,7 +3964,7 @@
     "id": 720,
     "ko": "입치트나이트",
     "en": "mawilite",
-    "desc": "지니면 입치트이(가) 메가진화할 수 있다.",
+    "desc": "지니면 입치트가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mawilite.png",
     "category": "mega-stones"
@@ -3973,7 +3973,7 @@
     "id": 721,
     "ko": "썬더볼트나이트",
     "en": "manectite",
-    "desc": "지니면 썬더볼트이(가) 메가진화할 수 있다.",
+    "desc": "지니면 썬더볼트가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/manectite.png",
     "category": "mega-stones"
@@ -3982,7 +3982,7 @@
     "id": 722,
     "ko": "한카리아스나이트",
     "en": "garchompite",
-    "desc": "지니면 한카리아스이(가) 메가진화할 수 있다.",
+    "desc": "지니면 한카리아스가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/garchompite.png",
     "category": "mega-stones"
@@ -4036,7 +4036,7 @@
     "id": 745,
     "ko": "기술머신96",
     "en": "tm96",
-    "desc": "Teaches a Pokémon TM96.",
+    "desc": "호환되는 포켓몬에게 기술을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -4045,7 +4045,7 @@
     "id": 746,
     "ko": "기술머신97",
     "en": "tm97",
-    "desc": "Teaches a Pokémon TM97.",
+    "desc": "호환되는 포켓몬에게 기술을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -4054,7 +4054,7 @@
     "id": 747,
     "ko": "기술머신98",
     "en": "tm98",
-    "desc": "Teaches a Pokémon TM98.",
+    "desc": "호환되는 포켓몬에게 기술을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -4063,7 +4063,7 @@
     "id": 748,
     "ko": "기술머신99",
     "en": "tm99",
-    "desc": "Teaches a Pokémon TM99.",
+    "desc": "호환되는 포켓몬에게 기술을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -4072,7 +4072,7 @@
     "id": 749,
     "ko": "기술머신100",
     "en": "tm100",
-    "desc": "Teaches a Pokémon TM100.",
+    "desc": "호환되는 포켓몬에게 기술을 가르친다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png",
     "category": "all-machines"
@@ -4081,7 +4081,7 @@
     "id": 760,
     "ko": "라티아스나이트",
     "en": "latiasite",
-    "desc": "지니면 라티아스이(가) 메가진화할 수 있다.",
+    "desc": "지니면 라티아스가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/latiasite.png",
     "category": "mega-stones"
@@ -4090,7 +4090,7 @@
     "id": 761,
     "ko": "라티오스나이트",
     "en": "latiosite",
-    "desc": "지니면 라티오스이(가) 메가진화할 수 있다.",
+    "desc": "지니면 라티오스가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/latiosite.png",
     "category": "mega-stones"
@@ -4108,7 +4108,7 @@
     "id": 793,
     "ko": "대짱이나이트",
     "en": "swampertite",
-    "desc": "지니면 대짱이이(가) 메가진화할 수 있다.",
+    "desc": "지니면 대짱이가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/swampertite.png",
     "category": "mega-stones"
@@ -4117,7 +4117,7 @@
     "id": 794,
     "ko": "나무킹나이트",
     "en": "sceptilite",
-    "desc": "지니면 나무킹이(가) 메가진화할 수 있다.",
+    "desc": "지니면 나무킹이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sceptilite.png",
     "category": "mega-stones"
@@ -4126,7 +4126,7 @@
     "id": 795,
     "ko": "깜까미나이트",
     "en": "sablenite",
-    "desc": "지니면 깜까미이(가) 메가진화할 수 있다.",
+    "desc": "지니면 깜까미가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sablenite.png",
     "category": "mega-stones"
@@ -4135,7 +4135,7 @@
     "id": 796,
     "ko": "파비코리나이트",
     "en": "altarianite",
-    "desc": "지니면 파비코리이(가) 메가진화할 수 있다.",
+    "desc": "지니면 파비코리가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/altarianite.png",
     "category": "mega-stones"
@@ -4144,7 +4144,7 @@
     "id": 797,
     "ko": "엘레이드나이트",
     "en": "galladite",
-    "desc": "지니면 엘레이드이(가) 메가진화할 수 있다.",
+    "desc": "지니면 엘레이드가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/galladite.png",
     "category": "mega-stones"
@@ -4153,7 +4153,7 @@
     "id": 798,
     "ko": "다부니나이트",
     "en": "audinite",
-    "desc": "지니면 다부니이(가) 메가진화할 수 있다.",
+    "desc": "지니면 다부니가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/audinite.png",
     "category": "mega-stones"
@@ -4162,7 +4162,7 @@
     "id": 799,
     "ko": "메타그로스나이트",
     "en": "metagrossite",
-    "desc": "지니면 메타그로스이(가) 메가진화할 수 있다.",
+    "desc": "지니면 메타그로스가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/metagrossite.png",
     "category": "mega-stones"
@@ -4171,7 +4171,7 @@
     "id": 800,
     "ko": "샤크니아나이트",
     "en": "sharpedonite",
-    "desc": "지니면 샤크니아이(가) 메가진화할 수 있다.",
+    "desc": "지니면 샤크니아가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sharpedonite.png",
     "category": "mega-stones"
@@ -4180,7 +4180,7 @@
     "id": 801,
     "ko": "야도란나이트",
     "en": "slowbronite",
-    "desc": "지니면 야도란이(가) 메가진화할 수 있다.",
+    "desc": "지니면 야도란이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/slowbronite.png",
     "category": "mega-stones"
@@ -4189,7 +4189,7 @@
     "id": 802,
     "ko": "강철톤나이트",
     "en": "steelixite",
-    "desc": "지니면 강철톤이(가) 메가진화할 수 있다.",
+    "desc": "지니면 강철톤이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/steelixite.png",
     "category": "mega-stones"
@@ -4198,7 +4198,7 @@
     "id": 803,
     "ko": "피죤투나이트",
     "en": "pidgeotite",
-    "desc": "지니면 피죤투이(가) 메가진화할 수 있다.",
+    "desc": "지니면 피죤투가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pidgeotite.png",
     "category": "mega-stones"
@@ -4207,7 +4207,7 @@
     "id": 804,
     "ko": "얼음귀신나이트",
     "en": "glalitite",
-    "desc": "지니면 얼음귀신이(가) 메가진화할 수 있다.",
+    "desc": "지니면 얼음귀신이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/glalitite.png",
     "category": "mega-stones"
@@ -4216,7 +4216,7 @@
     "id": 805,
     "ko": "디안시나이트",
     "en": "diancite",
-    "desc": "지니면 디안시이(가) 메가진화할 수 있다.",
+    "desc": "지니면 디안시가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/diancite.png",
     "category": "mega-stones"
@@ -4225,7 +4225,7 @@
     "id": 808,
     "ko": "폭타나이트",
     "en": "cameruptite",
-    "desc": "지니면 폭타이(가) 메가진화할 수 있다.",
+    "desc": "지니면 폭타가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cameruptite.png",
     "category": "mega-stones"
@@ -4234,7 +4234,7 @@
     "id": 809,
     "ko": "이어롭나이트",
     "en": "lopunnite",
-    "desc": "지니면 이어롭이(가) 메가진화할 수 있다.",
+    "desc": "지니면 이어롭이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lopunnite.png",
     "category": "mega-stones"
@@ -4243,7 +4243,7 @@
     "id": 810,
     "ko": "보만다나이트",
     "en": "salamencite",
-    "desc": "지니면 보만다이(가) 메가진화할 수 있다.",
+    "desc": "지니면 보만다가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/salamencite.png",
     "category": "mega-stones"
@@ -4252,7 +4252,7 @@
     "id": 811,
     "ko": "독침붕나이트",
     "en": "beedrillite",
-    "desc": "지니면 독침붕이(가) 메가진화할 수 있다.",
+    "desc": "지니면 독침붕이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/beedrillite.png",
     "category": "mega-stones"
