@@ -733,11 +733,6 @@
     <div class="b-game-info" style="display:flex">
       <div class="b-lives" id="i-lives">❤️❤️❤️</div>
     </div>
-    <div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap">
-      <button class="btn-outline i-cat-btn active" id="i-cat-important" onclick="iSetCategory('중요한물건')">중요한물건</button>
-      <button class="btn-outline i-cat-btn"        id="i-cat-item"      onclick="iSetCategory('도구')">도구</button>
-      <button class="btn-outline i-cat-btn"        id="i-cat-other"     onclick="iSetCategory('기타')">기타</button>
-    </div>
     <div class="divider"></div>
     <div class="loading-text" id="i-loading" style="position:relative;padding:20px 0">불러오는 중...</div>
     <div id="i-info-panel" style="display:none;width:100%;flex-direction:column;gap:9px">
@@ -1648,39 +1643,25 @@ document.getElementById('a-guess-input').addEventListener('keydown', e => {
 ═══════════════════════════════════════════════════════════ */
 
 // 카테고리 분류
-const ITEM_CAT_MAP = {
-  '중요한물건': ['held-items','mega-stones','plates','memories','jewels',
-                 'evolution','species-specific','type-enhancement','type-protection',
-                 'bad-held-items','choice','in-a-pinch','scarves'],
-  '도구':       ['healing','medicine','status-cures','picky-healing','pp-recovery','revival',
-                 'standard-balls','special-balls','apricorn-balls','vitamins','all-machines',
-                 'effort-drop','effort-training','baking-only','training','flutes',
-                 'spelunking','dex-completion','loot','collectibles','mulch','other',
-                 'all-mail','gameplay','apricorn-box','event-items','data-cards'],
-  '기타':       ['stat-boosts','miracle-shooter'],
-};
+// 퀴즈에서 제외할 카테고리 (숨김)
+const ITEM_HIDE_CATS = new Set(['all-machines','scarves','plates','jewels','memories']);
 
-let iCategory = '중요한물건';
-let iCatItems = [];   // 현재 카테고리 아이템 배열
+// 이미지만 보여주고 설명 숨김 (이미지 보고 이름 맞추기)
+const ITEM_IMAGE_ONLY = new Set(['mega-stones','species-specific']);
+
+// 설명만 보여주고 이미지는 정답/포기 후 공개
+const ITEM_DESC_ONLY = new Set(['bad-held-items','type-enhancement','choice','held-items','evolution']);
+
+// 나머지: 이미지 + 설명 둘 다 표시
+// (standard-balls, special-balls, apricorn-balls, healing, status-cures,
+//  revival, pp-recovery, vitamins, medicine, picky-healing, effort-drop,
+//  other, type-protection, in-a-pinch, effort-training, training,
+//  spelunking, flutes, stat-boosts 등)
+
+let iCatItems = [];   // 전체 퀴즈 풀
 
 function iBuildCatItems() {
-  const cats = ITEM_CAT_MAP[iCategory] || [];
-  iCatItems = DB.items.filter(x => cats.includes(x.category));
-}
-
-function iSetCategory(cat) {
-  iCategory = cat;
-  iBuildCatItems();
-  // 버튼 active 표시
-  document.querySelectorAll('.i-cat-btn').forEach(b => b.classList.remove('active'));
-  const idMap = {'중요한물건':'i-cat-important','도구':'i-cat-item','기타':'i-cat-other'};
-  document.getElementById(idMap[cat])?.classList.add('active');
-  // 풀 초기화
-  iPool = []; iPoolIdx = 0;
-  iLives = 3; iSessionC = 0; iSessionW = 0;
-  iUpdateLives(); iUpdateScore();
-  document.getElementById('i-gameover').style.display = 'none';
-  iLoadItem();
+  iCatItems = DB.items.filter(x => !ITEM_HIDE_CATS.has(x.category));
 }
 
 let iPool = [], iPoolIdx = 0;
@@ -1718,7 +1699,6 @@ function iLoadItem() {
   document.getElementById('i-loading').textContent = '불러오는 중...';
   document.getElementById('i-info-panel').style.display = 'none';
   document.getElementById('i-sprite-box').style.display = 'none';
-  document.getElementById('i-status').textContent = '도구 효과를 보고 이름을 맞춰보세요';
   document.getElementById('i-status').className = 'status';
   document.getElementById('i-guess-input').value = '';
   document.getElementById('i-guess-input').disabled = false;
@@ -1734,8 +1714,28 @@ function iLoadItem() {
   iKoName = item.ko;
   iEnName = item.en;
   iItem   = item;
-  document.getElementById('i-effect').textContent = item.desc;
-  document.getElementById('i-info-panel').style.display = 'flex';
+
+  const cat = item.category;
+  const imageOnly = ITEM_IMAGE_ONLY.has(cat);
+  const descOnly  = ITEM_DESC_ONLY.has(cat);
+  const showBoth  = !imageOnly && !descOnly;
+
+  // 설명 표시
+  if (imageOnly) {
+    document.getElementById('i-info-panel').style.display = 'none';
+    document.getElementById('i-status').textContent = '이미지를 보고 이름을 맞춰보세요';
+  } else {
+    document.getElementById('i-effect').textContent = item.desc;
+    document.getElementById('i-info-panel').style.display = 'flex';
+    document.getElementById('i-status').textContent = '도구 효과를 보고 이름을 맞춰보세요';
+  }
+
+  // 이미지 표시 (설명만인 경우 정답 전까지 숨김)
+  if ((imageOnly || showBoth) && item.sprite) {
+    document.getElementById('i-sprite').src = item.sprite;
+    document.getElementById('i-sprite-box').style.display = 'flex';
+  }
+
   document.getElementById('i-loading').style.display = 'none';
   document.getElementById('i-guess-input').focus();
 }
@@ -1773,6 +1773,7 @@ function iReveal(isCorrect) {
   const nameEl = document.getElementById('i-name-revealed');
   nameEl.textContent = displayName;
   setTimeout(() => nameEl.classList.add('show'), 80);
+  // 설명만 모드: 정답/포기 후 이미지 공개
   if (iItem?.sprite) {
     document.getElementById('i-sprite').src = iItem.sprite;
     document.getElementById('i-sprite-box').style.display = 'flex';
