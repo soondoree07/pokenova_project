@@ -22264,7 +22264,7 @@
         "type": "primal",
         "name_ko": "황혼의갈기",
         "name_en": "necrozma-dusk-mane",
-        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10153.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10155.png",
         "types": [
           "에스퍼",
           "강철"
@@ -22281,7 +22281,7 @@
         "type": "primal",
         "name_ko": "새벽의날개",
         "name_en": "necrozma-dawn-wings",
-        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10154.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10156.png",
         "types": [
           "에스퍼",
           "고스트"
@@ -22298,7 +22298,7 @@
         "type": "primal",
         "name_ko": "울트라네크로즈마",
         "name_en": "necrozma-ultra",
-        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10155.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10157.png",
         "types": [
           "에스퍼",
           "드래곤"
