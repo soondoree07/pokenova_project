@@ -454,6 +454,74 @@
     .gameover-title { font-size: 2rem; font-weight: 900; color: #e53935; }
     .gameover-score { font-size: 1rem; color: #ccc; line-height: 1.8; }
     .gameover-score b { color: #e53935; }
+
+    /* ══ 도감 버튼 ══ */
+    .btn-pokedex {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 9px 18px; border-radius: 10px;
+      background: #e53935; color: white;
+      font-size: 0.88rem; font-weight: 700;
+      text-decoration: none; white-space: nowrap;
+      border: none; flex-shrink: 0;
+      transition: background .15s;
+    }
+    .btn-pokedex:hover { background: #ef5350; }
+
+    /* ══ 모바일 반응형 ══ */
+    @media (max-width: 600px) {
+      body { padding: 60px 10px 40px; }
+
+      .auth-bar { height: 48px; padding: 0 12px; }
+      .user-name { max-width: 80px; }
+
+      .site-title { font-size: 1.1rem; letter-spacing: 1px; margin-bottom: 12px; }
+
+      /* 탭 + 도감 버튼 레이아웃 */
+      .nav-tab-wrap {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 8px !important;
+        margin-bottom: 20px !important;
+      }
+      .nav-tabs {
+        margin-bottom: 0;
+        padding: 4px;
+        border-radius: 12px;
+        justify-content: center;
+      }
+      .nav-tab { padding: 8px 10px; font-size: 0.78rem; }
+      .btn-pokedex { justify-content: center; width: 100%; padding: 9px; }
+
+      /* 카드 */
+      .card { padding: 20px 16px; border-radius: 16px; gap: 12px; }
+
+      /* 입력 */
+      input[type="text"] { font-size: 0.92rem; padding: 10px 13px; }
+      button { padding: 10px 12px; font-size: 0.82rem; }
+
+      /* 포켓몬 이미지 */
+      .pokemon-container { width: 200px; height: 200px; }
+      canvas { width: 180px; height: 180px; }
+
+      /* 기술 */
+      .diff-btn { padding: 10px 4px; font-size: 0.78rem; }
+      .diff-btn .diff-label { font-size: 0.88rem; }
+      .move-info-grid { grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
+      .mic-value { font-size: 0.95rem; }
+
+      /* 랭킹 */
+      .rank-card { padding: 12px 14px; gap: 10px; }
+      .rank-percent { font-size: 1.2rem; }
+      .rank-bar-bg { width: 50px; }
+
+      /* 게임오버 */
+      .gameover-box { padding: 28px 20px; min-width: 0; width: 88vw; }
+      .gameover-title { font-size: 1.6rem; }
+    }
+
+    @media (max-width: 380px) {
+      .nav-tab { padding: 7px 6px; font-size: 0.72rem; }
+    }
   </style>
 </head>
 <body>
@@ -500,22 +568,14 @@
 <div class="site-title">오늘의포켓몬은뭘까용?</div>
 
 <!-- ══ 탭 네비게이션 ══ -->
-<div style="display:flex;align-items:center;gap:10px;margin-bottom:28px;flex-wrap:wrap">
+<div class="nav-tab-wrap" style="display:flex;align-items:center;gap:10px;margin-bottom:28px;flex-wrap:wrap">
   <div class="nav-tabs" style="margin-bottom:0;flex:1">
     <button class="nav-tab active" id="tab-btn-barcode"  onclick="showTab('barcode')">🎴 포켓몬 맞추기</button>
     <button class="nav-tab"        id="tab-btn-move"     onclick="showTab('move')">⚔️ 기술 맞추기</button>
     <button class="nav-tab"        id="tab-btn-ability"  onclick="showTab('ability')">✨ 특성 맞추기</button>
     <button class="nav-tab"        id="tab-btn-item"     onclick="showTab('item')">🎒 도구 맞추기</button>
   </div>
-  <a href="pokedex.html" style="
-    display:inline-flex;align-items:center;gap:6px;
-    padding:9px 18px;border-radius:10px;
-    background:#cc0000;color:white;
-    font-size:0.88rem;font-weight:700;
-    text-decoration:none;white-space:nowrap;
-    border:1px solid #ff4444;
-    flex-shrink:0;
-  ">📖 도감 보기</a>
+  <a href="pokedex.html" class="btn-pokedex">📖 도감 보기</a>
 </div>
 
 <!-- ══ 탭 1: 바코드 포켓몬 퀴즈 ══ -->
