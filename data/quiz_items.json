@@ -3277,15 +3277,6 @@
     "category": "species-specific"
   },
   {
-    "id": 567,
-    "ko": "하트스위트",
-    "en": "sweet heart",
-    "desc": "HP를 20 회복한다.",
-    "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sweet-heart.png",
-    "category": "healing"
-  },
-  {
     "id": 580,
     "ko": "고운비늘",
     "en": "prism scale",
@@ -3572,15 +3563,6 @@
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/swift-wing.png",
     "category": "vitamins"
-  },
-  {
-    "id": 616,
-    "ko": "딜구슬",
-    "en": "pass orb",
-    "desc": "패스파워를 발동시킨다.",
-    "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pass-orb.png",
-    "category": "held-items"
   },
   {
     "id": 617,
