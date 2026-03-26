@@ -16,7 +16,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 24px 16px 48px;
+      /* auth-bar 고정(52px) + 여유 여백 */
+      padding: 76px 16px 48px;
     }
 
     /* ══ 상단 인증 바 ══ */
@@ -40,6 +41,7 @@
       align-items: center;
       gap: 8px;
       padding: 7px 14px;
+      min-height: 44px;
       border-radius: 20px;
       border: 1px solid #303030;
       background: #141414;
@@ -73,6 +75,7 @@
     }
     .btn-logout {
       padding: 5px 11px;
+      min-height: 44px;
       border-radius: 20px;
       border: 1px solid #303030;
       background: transparent;
@@ -181,6 +184,7 @@
     }
     .nav-tab {
       padding: 9px 22px;
+      min-height: 44px;
       border-radius: 10px;
       border: none;
       background: transparent;
@@ -284,13 +288,14 @@
     input[type="text"] {
       flex: 1; padding: 11px 16px; border-radius: 12px;
       border: 1.5px solid #252525; background: #0f0f0f;
-      color: #f0f0f0; font-size: 1rem; outline: none; transition: border-color .2s;
+      color: #f0f0f0; font-size: 1rem; min-height: 44px; outline: none; transition: border-color .2s;
     }
     input[type="text"]:focus    { border-color: #e53935; }
     input[type="text"]:disabled { opacity: .4; }
 
     button {
       padding: 10px 17px; border-radius: 12px; border: none;
+      min-height: 44px;
       cursor: pointer; font-size: 0.88rem; font-weight: 700;
       transition: transform .1s, background .15s;
     }
@@ -366,6 +371,7 @@
       flex: 1; padding: 11px 6px; border-radius: 12px;
       border: 1.5px solid #252525; background: #0f0f0f; color: #555;
       font-size: 0.85rem; font-weight: 700; cursor: pointer; transition: all .18s; text-align: center;
+      min-height: 44px;
     }
     .diff-btn:hover { border-color: #e53935; color: #e53935; }
     .diff-btn.selected { background: #e53935; color: #fff; border-color: #e53935; }
@@ -464,10 +470,15 @@
 
     /* ══ 모바일 반응형 ══ */
     @media (max-width: 600px) {
-      body { padding: 16px 10px 40px; }
+      /* auth-bar 높이만큼 상단 여백 확보 */
+      body { padding: 64px 12px 48px; }
 
       .auth-bar { height: 48px; padding: 0 12px; }
       .user-name { max-width: 80px; }
+
+      /* auth-bar 버튼 터치 영역 모바일 보완 */
+      .btn-login-top { min-height: 44px; }
+      .btn-logout    { min-height: 44px; }
 
       .site-title { font-size: 1.1rem; letter-spacing: 1px; margin-bottom: 12px; }
 
@@ -484,23 +495,26 @@
         border-radius: 12px;
         justify-content: center;
       }
-      .nav-tab { padding: 8px 10px; font-size: 0.78rem; }
-      .btn-pokedex { justify-content: center; width: 100%; padding: 9px; }
+      /* 탭 버튼: 최소 44px 터치 영역 유지, font-size 최소 0.8rem */
+      .nav-tab { padding: 10px 10px; font-size: 0.82rem; min-height: 44px; }
+      .btn-pokedex { justify-content: center; width: 100%; padding: 12px; min-height: 44px; }
 
       /* 카드 */
       .card { padding: 20px 16px; border-radius: 16px; gap: 12px; }
 
-      /* 입력 */
-      input[type="text"] { font-size: 0.92rem; padding: 10px 13px; }
-      button { padding: 10px 12px; font-size: 0.82rem; }
+      /* 입력: iOS zoom 방지를 위해 font-size 반드시 16px(1rem) 이상 */
+      input[type="text"] { font-size: 1rem; padding: 12px 13px; min-height: 44px; }
+      button { padding: 10px 12px; font-size: 0.85rem; min-height: 44px; }
 
       /* 포켓몬 이미지 */
       .pokemon-container { width: 200px; height: 200px; }
       canvas { width: 180px; height: 180px; }
 
-      /* 기술 */
-      .diff-btn { padding: 10px 4px; font-size: 0.78rem; }
-      .diff-btn .diff-label { font-size: 0.88rem; }
+      /* 기술 난이도 버튼 */
+      .diff-btn { padding: 10px 4px; font-size: 0.8rem; min-height: 44px; }
+      .diff-btn .diff-label { font-size: 0.9rem; }
+      /* diff-sub 최소 가독 크기 유지 */
+      .diff-btn .diff-sub { font-size: 0.7rem; }
       .move-info-grid { grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
       .mic-value { font-size: 0.95rem; }
 
@@ -509,13 +523,23 @@
       .rank-percent { font-size: 1.2rem; }
       .rank-bar-bg { width: 50px; }
 
+      /* 리더보드 탭·닉네임 입력 */
+      .lb-diff-tab { min-height: 44px; }
+      .lb-nick-input { font-size: 1rem; min-height: 44px; }
+
+      /* 신고 버튼 */
+      .btn-report { min-height: 44px; font-size: 0.82rem; padding: 10px; }
+      .report-type-btn { min-height: 44px; }
+
       /* 게임오버 */
       .gameover-box { padding: 28px 20px; min-width: 0; width: 88vw; }
       .gameover-title { font-size: 1.6rem; }
     }
 
     @media (max-width: 380px) {
-      .nav-tab { padding: 7px 6px; font-size: 0.72rem; }
+      /* 극소형 화면: 탭 글자 크기 최소 유지 */
+      .nav-tab { padding: 9px 6px; font-size: 0.78rem; }
+      .diff-btn .diff-sub { display: none; }
     }
 
     /* ══ 신고 버튼 ══ */
@@ -533,6 +557,7 @@
       border: 1.5px solid #303030; background: transparent;
       color: #888; font-size: 0.82rem; font-weight: 700;
       cursor: pointer; transition: all .15s;
+      min-height: 44px;
     }
     .report-type-btn:hover { border-color: #ff9800; color: #ff9800; }
     .report-type-btn.selected { background: #ff9800; color: #fff; border-color: #ff9800; }
@@ -541,7 +566,8 @@
     .report-textarea {
       background: #0f0f0f; border: 1.5px solid #252525;
       border-radius: 10px; color: #f0f0f0; padding: 10px;
-      font-size: 0.85rem; outline: none; resize: none;
+      /* iOS zoom 방지: font-size 16px(1rem) 이상 필수 */
+      font-size: 1rem; outline: none; resize: none;
       width: 100%; font-family: inherit; transition: border-color .18s;
     }
     .report-textarea:focus { border-color: #ff9800; }
@@ -584,11 +610,12 @@
     .lb-nick-input {
       width: 100%;
       padding: 9px 12px;
+      min-height: 44px;
       border-radius: 8px;
       border: 1px solid #333;
       background: #1a1a1a;
       color: #f0f0f0;
-      font-size: 0.9rem;
+      font-size: 1rem;
       outline: none;
       box-sizing: border-box;
     }
@@ -596,6 +623,7 @@
     .lb-diff-tab {
       padding: 5px 16px; border-radius: 20px; border: 1px solid #333;
       background: #1a1a1a; color: #888; font-size: 0.78rem; cursor: pointer;
+      min-height: 44px;
     }
     .lb-diff-tab.active { background: #f5c518; color: #000; font-weight: 700; border-color: #f5c518; }
   </style>
