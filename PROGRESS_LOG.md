@@ -1,20 +1,21 @@
 # Pokénova 작업 로그
 
-마지막 업데이트: 2026-03-26 (Firebase 연결, 리더보드, 오류 신고, 관리자 페이지 등)
+마지막 업데이트: 2026-03-26 (프로젝트 이름 변경, 푸터 추가, 모바일 최적화 등)
 
 ---
 
 ## 프로젝트 개요
 
-- **경로**: `/home/soondoree07/pokemon_project_1/`
-- **GitHub**: `gh repo view` 로 확인
-- **서버 실행**: `python3 -m http.server 8080` → 브라우저에서 `localhost:8080/pokemon-quiz.html`
+- **경로**: `/home/soondoree07/pokenova_project/`
+- **GitHub**: `https://github.com/soondoree07/pokenova_project`
+- **사이트**: `https://soondoree07.github.io/pokenova_project/`
+- **서버 실행**: `python3 -m http.server 8080` → 브라우저에서 `localhost:8080/`
 
 ## 파일 구성
 
 ```
-pokemon_project_1/
-├── pokemon-quiz.html       # 메인 퀴즈 사이트 (포켓몬/기술/특성/도구 4종 퀴즈)
+pokenova_project/
+├── index.html              # 메인 퀴즈 사이트 (포켓몬/기술/특성/도구 4종 퀴즈)
 ├── collect-data.js         # PokeAPI → 로컬 JSON 수집 스크립트
 ├── apply-translations.js   # needs_translation.json → quiz_*.json 반영 스크립트
 ├── admin.html              # 관리 페이지
@@ -295,6 +296,52 @@ node apply-translations.js
 | 929a902 | fbUpdateAndShowRank 잔여 호출 제거 |
 | de40e65 | Firebase Firestore 연결 |
 | 173b478 | 오류 제보 기능 + 관리자 페이지 재설계 |
+
+---
+
+---
+
+## ✅ 완료: 2026-03-26 (2차) 작업 내용
+
+### 점수 UI 개선
+- [x] 누적 정답/오답 표시 제거, **연속 정답(스트릭)만** 유지 (4개 모드 전체)
+- [x] updateScore 함수에서 DOM null 에러 수정 (리더보드 탭 클릭 불가 버그 해결)
+
+### 리더보드 난이도 분리
+- [x] 포켓몬/기술 맞추기: 보통/어려움 난이도별 리더보드 분리
+- [x] 쉬움 난이도는 리더보드 없음 (게임오버 시 바로 다시시작 표시)
+- [x] Firestore 복합 쿼리: `mode + difficulty + correct` (인덱스 필요)
+
+### 한 문제당 최대 1목숨 차감
+- [x] 4개 모드 전체: 같은 문제에서 틀려도 목숨은 1개만 차감 (`xWrongThisRound` 플래그)
+
+### 모바일 최적화
+- [x] iOS 줌 방지: 모든 input/textarea 폰트 크기 16px 이상 강제
+- [x] 터치 타겟: button, nav-tab, diff-btn, lb-diff-tab 등 최소 높이 44px
+- [x] body padding-top: 데스크탑 76px / 모바일 64px
+- [x] 380px 이하 소형 화면: 난이도 설명 텍스트 숨김
+
+### 사이트 로고 링크
+- [x] Pokénova 로고 클릭 시 메인 페이지(index.html)로 이동 (메인에서 누르면 새로고침)
+
+### 제작자 푸터 추가
+- [x] 페이지 하단 footer 추가: 닉네임(잉짱), 이메일(soondoree07@gmail.com)
+- [x] 닌텐도/게임프리크 저작권 면책 문구 (영문)
+- [x] © 2026 Pokénova 표기
+
+### 프로젝트 이름 변경
+- [x] GitHub 저장소: `pokemon_project_1` → `pokenova_project`
+- [x] 로컬 폴더: `pokemon_project_1` → `pokenova_project`
+- [x] 메인 파일: `pokemon-quiz.html` → `index.html`
+- [x] 내부 링크 전체 업데이트 (index.html, pokedex.html, admin.html)
+- [x] 사이트 URL: `https://soondoree07.github.io/pokenova_project/`
+
+### 커밋 목록
+| 커밋 | 내용 |
+|------|------|
+| 03f621b | 모바일 최적화 |
+| 48c40d2 | Pokénova 로고 링크 + 제작자 푸터 추가 |
+| d629cfa | 프로젝트 이름 변경 및 파일명 index.html로 변경 |
 
 ---
 
