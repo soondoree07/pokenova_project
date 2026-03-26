@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>관리자 패널 · 오늘의포켓몬은뭘까용?</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 
   <style>
     :root {
@@ -18,6 +17,7 @@
       --green:   #4caf50;
       --red:     #f44336;
       --blue:    #4a9eff;
+      --orange:  #ff9800;
       --purple:  #9c6fff;
     }
 
@@ -38,7 +38,6 @@
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
       background: var(--bg); z-index: 100;
-      gap: 0;
     }
 
     .login-box {
@@ -53,72 +52,31 @@
       gap: 20px;
     }
 
-    .login-logo {
-      text-align: center;
-      font-size: 2.4rem;
-      margin-bottom: 4px;
-    }
-    .login-title {
-      text-align: center;
-      font-size: 1.1rem;
-      font-weight: 900;
-      color: var(--yellow);
-      letter-spacing: 1px;
-    }
-    .login-sub {
-      text-align: center;
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-top: -8px;
-    }
+    .login-logo  { text-align: center; font-size: 2.4rem; margin-bottom: 4px; }
+    .login-title { text-align: center; font-size: 1.1rem; font-weight: 900; color: var(--yellow); letter-spacing: 1px; }
+    .login-sub   { text-align: center; font-size: 0.8rem; color: var(--muted); margin-top: -8px; }
 
-    .login-label {
-      font-size: 0.75rem;
-      color: var(--muted);
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-    }
+    .login-label { font-size: 0.75rem; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
 
     .login-input {
-      width: 100%;
-      padding: 12px 16px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      color: var(--text);
-      font-size: 1rem;
-      outline: none;
-      transition: border-color .18s;
-      letter-spacing: 2px;
+      width: 100%; padding: 12px 16px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; color: var(--text);
+      font-size: 1rem; outline: none;
+      transition: border-color .18s; letter-spacing: 2px;
     }
     .login-input:focus { border-color: var(--yellow); }
 
     .login-btn {
-      width: 100%;
-      padding: 13px;
-      border-radius: 12px;
-      border: none;
-      background: var(--yellow);
-      color: #0a0a16;
-      font-size: 0.95rem;
-      font-weight: 900;
-      cursor: pointer;
-      transition: opacity .18s;
+      width: 100%; padding: 13px; border-radius: 12px; border: none;
+      background: var(--yellow); color: #0a0a16;
+      font-size: 0.95rem; font-weight: 900; cursor: pointer; transition: opacity .18s;
     }
     .login-btn:hover { opacity: .88; }
 
-    .login-error {
-      text-align: center;
-      font-size: 0.82rem;
-      color: var(--red);
-      min-height: 18px;
-      margin-top: -8px;
-    }
+    .login-error { text-align: center; font-size: 0.82rem; color: var(--red); min-height: 18px; margin-top: -8px; }
 
-    .login-shake {
-      animation: shake .35s ease;
-    }
+    .login-shake { animation: shake .35s ease; }
     @keyframes shake {
       0%,100% { transform: translateX(0); }
       20%      { transform: translateX(-8px); }
@@ -134,64 +92,53 @@
       background: rgba(10,10,22,.97);
       border-bottom: 1px solid var(--border);
       display: flex; align-items: center;
-      padding: 0 28px;
-      gap: 16px;
+      padding: 0 28px; gap: 16px;
       backdrop-filter: blur(12px);
       flex-shrink: 0;
     }
-    .topbar-logo { font-weight: 900; color: var(--yellow); font-size: 0.95rem; letter-spacing: 1px; }
+    .topbar-logo  { font-weight: 900; color: var(--yellow); font-size: 0.95rem; letter-spacing: 1px; }
     .topbar-badge {
       background: rgba(156,111,255,.18); color: var(--purple);
       border: 1px solid var(--purple); border-radius: 20px;
       font-size: 0.68rem; font-weight: 700; padding: 2px 10px; letter-spacing: 1px;
     }
     .topbar-spacer { flex: 1; }
-    .topbar-refresh {
+    .topbar-btn {
       display: flex; align-items: center; gap: 6px;
       padding: 6px 14px; border-radius: 8px;
       border: 1px solid var(--border); background: transparent;
       color: var(--muted); font-size: 0.8rem; cursor: pointer;
-      transition: all .18s;
+      transition: all .18s; text-decoration: none;
     }
-    .topbar-refresh:hover { border-color: var(--yellow); color: var(--yellow); }
-    .topbar-link {
-      display: flex; align-items: center; gap: 6px;
-      padding: 6px 14px; border-radius: 8px;
-      border: 1px solid var(--border); background: transparent;
-      color: var(--muted); font-size: 0.8rem; cursor: pointer;
-      text-decoration: none; transition: all .18s;
-    }
-    .topbar-link:hover { border-color: var(--blue); color: var(--blue); }
-    .btn-logout {
-      padding: 5px 12px; border-radius: 8px; border: 1px solid var(--border);
-      background: transparent; color: var(--muted); font-size: 0.78rem; cursor: pointer;
-      transition: all .18s;
-    }
-    .btn-logout:hover { border-color: var(--red); color: var(--red); }
-    .last-updated { font-size: 0.72rem; color: var(--muted); }
+    .topbar-btn:hover         { border-color: var(--yellow); color: var(--yellow); }
+    .topbar-btn.danger:hover  { border-color: var(--red); color: var(--red); }
+    .topbar-btn.blue:hover    { border-color: var(--blue); color: var(--blue); }
 
-    /* ══ 메인 컨텐츠 ══ */
+    /* ══ 메인 ══ */
     .main {
-      flex: 1;
-      padding: 28px;
-      max-width: 1300px;
-      width: 100%;
+      flex: 1; padding: 28px;
+      max-width: 1300px; width: 100%;
       margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
+      display: flex; flex-direction: column; gap: 28px;
     }
 
     .section-title {
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: var(--muted);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 14px;
+      font-size: 0.72rem; font-weight: 700; color: var(--muted);
+      letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px;
     }
 
-    /* ══ 개요 카드 그리드 ══ */
+    /* ══ Firebase 안내 배너 ══ */
+    .firebase-banner {
+      background: rgba(74,158,255,.07);
+      border: 1px solid rgba(74,158,255,.25);
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-size: 0.82rem; color: var(--blue); line-height: 1.6;
+      display: flex; align-items: flex-start; gap: 10px;
+    }
+    .firebase-banner-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+
+    /* ══ 개요 통계 그리드 ══ */
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -201,170 +148,134 @@
     @media (max-width: 500px) { .stats-grid { grid-template-columns: 1fr; } }
 
     .stat-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 22px 22px 18px;
-      position: relative;
-      overflow: hidden;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 18px; padding: 22px 22px 18px;
+      position: relative; overflow: hidden;
     }
     .stat-card::before {
-      content: '';
-      position: absolute; top: 0; left: 0; right: 0;
-      height: 3px;
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
     }
-    .stat-card.total::before  { background: linear-gradient(90deg, var(--yellow), #ffaa00); }
-    .stat-card.dau::before    { background: linear-gradient(90deg, var(--green), #00c853); }
-    .stat-card.wau::before    { background: linear-gradient(90deg, var(--blue), #00b4ff); }
-    .stat-card.mau::before    { background: linear-gradient(90deg, var(--purple), #e040fb); }
+    .stat-card.c1::before { background: linear-gradient(90deg, var(--yellow), #ffaa00); }
+    .stat-card.c2::before { background: linear-gradient(90deg, var(--green), #00c853); }
+    .stat-card.c3::before { background: linear-gradient(90deg, var(--red), #ff5722); }
+    .stat-card.c4::before { background: linear-gradient(90deg, var(--blue), #00b4ff); }
 
     .stat-label { font-size: 0.7rem; color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 10px; }
     .stat-value { font-size: 2.4rem; font-weight: 900; line-height: 1; }
-    .stat-card.total .stat-value  { color: var(--yellow); }
-    .stat-card.dau   .stat-value  { color: var(--green); }
-    .stat-card.wau   .stat-value  { color: var(--blue); }
-    .stat-card.mau   .stat-value  { color: var(--purple); }
-    .stat-sub { font-size: 0.75rem; color: var(--muted); margin-top: 6px; }
+    .stat-card.c1 .stat-value { color: var(--yellow); }
+    .stat-card.c2 .stat-value { color: var(--green); }
+    .stat-card.c3 .stat-value { color: var(--red); }
+    .stat-card.c4 .stat-value { color: var(--blue); }
+    .stat-sub  { font-size: 0.75rem; color: var(--muted); margin-top: 6px; }
     .stat-icon { position: absolute; right: 18px; top: 18px; font-size: 1.6rem; opacity: .15; }
-
-    /* ══ 2열 행 ══ */
-    .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    @media (max-width: 800px) { .row-2 { grid-template-columns: 1fr; } }
 
     /* ══ 패널 ══ */
     .panel {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 22px 24px;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 18px; padding: 22px 24px;
     }
 
-    /* ══ 차트 ══ */
-    .chart-wrap { position: relative; height: 220px; }
+    /* ══ 2열 그리드 ══ */
+    .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width: 800px) { .row-2 { grid-template-columns: 1fr; } }
 
-    /* ══ 퀴즈 현황 ══ */
-    .quiz-stat-row {
-      display: flex; align-items: center;
-      padding: 10px 0;
-      border-bottom: 1px solid var(--border);
-      gap: 12px;
+    /* ══ 퀴즈별 통계 그리드 ══ */
+    .quiz-stat-grid {
+      display: grid; grid-template-columns: repeat(4,1fr); gap: 12px;
     }
-    .quiz-stat-row:last-child { border-bottom: none; }
-    .qsr-label  { font-size: 0.75rem; color: var(--muted); width: 80px; flex-shrink: 0; }
-    .qsr-value  { font-size: 1rem; font-weight: 700; color: var(--text); flex: 1; }
-    .qsr-bar-bg {
-      width: 80px; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; flex-shrink: 0;
-    }
-    .qsr-bar-fill { height: 100%; border-radius: 3px; transition: width .8s ease; }
+    @media (max-width: 900px) { .quiz-stat-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 500px) { .quiz-stat-grid { grid-template-columns: 1fr; } }
 
-    .quiz-mode-header {
-      display: flex; align-items: center; gap: 10px; margin-bottom: 16px;
-    }
-    .quiz-mode-icon { font-size: 1.2rem; }
-    .quiz-mode-title { font-size: 0.95rem; font-weight: 700; }
-
-    /* ══ 유저 테이블 ══ */
-    .table-controls {
-      display: flex; align-items: center; gap: 12px;
-      margin-bottom: 16px; flex-wrap: wrap;
-    }
-    .table-search {
-      flex: 1; min-width: 200px;
-      padding: 8px 14px;
+    .quiz-stat-box {
       background: var(--surface); border: 1px solid var(--border);
-      border-radius: 10px; color: var(--text); font-size: 0.88rem; outline: none;
-      transition: border-color .18s;
+      border-radius: 14px; padding: 16px;
     }
-    .table-search:focus   { border-color: var(--yellow); }
-    .table-search::placeholder { color: var(--muted); }
+    .qsb-title { font-size: 0.82rem; font-weight: 700; margin-bottom: 10px; color: var(--text); }
+    .qsb-row   { display: flex; justify-content: space-between; align-items: center; padding: 5px 0; border-bottom: 1px solid var(--border); }
+    .qsb-row:last-child { border-bottom: none; }
+    .qsb-label { font-size: 0.72rem; color: var(--muted); }
+    .qsb-val   { font-size: 0.88rem; font-weight: 700; color: var(--text); }
 
-    .sort-btns { display: flex; gap: 6px; flex-wrap: wrap; }
-    .sort-btn {
-      padding: 6px 12px; border-radius: 8px;
+    /* ══ 테이블 ══ */
+    .table-controls {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 14px; flex-wrap: wrap;
+    }
+    .filter-btns { display: flex; gap: 6px; flex-wrap: wrap; }
+    .filter-btn {
+      padding: 5px 12px; border-radius: 8px;
       border: 1px solid var(--border); background: transparent;
       color: var(--muted); font-size: 0.78rem; cursor: pointer; transition: all .15s;
     }
-    .sort-btn:hover   { border-color: var(--yellow); color: var(--yellow); }
-    .sort-btn.active  { background: var(--yellow); color: #0a0a16; border-color: var(--yellow); }
+    .filter-btn:hover  { border-color: var(--yellow); color: var(--yellow); }
+    .filter-btn.active { background: var(--yellow); color: #0a0a16; border-color: var(--yellow); }
+    .filter-btn.orange.active { background: var(--orange); border-color: var(--orange); color: #fff; }
 
-    .table-count { font-size: 0.78rem; color: var(--muted); white-space: nowrap; }
+    .table-count { font-size: 0.78rem; color: var(--muted); white-space: nowrap; margin-left: auto; }
 
     .table-wrap { overflow-x: auto; }
-    table {
-      width: 100%; border-collapse: collapse;
-      font-size: 0.85rem;
-    }
+    table { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
     thead th {
-      padding: 10px 12px;
-      text-align: left;
-      font-size: 0.68rem; font-weight: 700; letter-spacing: 1px;
+      padding: 9px 12px; text-align: left;
+      font-size: 0.67rem; font-weight: 700; letter-spacing: 1px;
       text-transform: uppercase; color: var(--muted);
-      border-bottom: 1px solid var(--border);
-      white-space: nowrap;
-      cursor: pointer; user-select: none;
+      border-bottom: 1px solid var(--border); white-space: nowrap;
     }
-    thead th:hover { color: var(--yellow); }
-    thead th.sorted { color: var(--yellow); }
-    thead th .sort-arrow { margin-left: 4px; opacity: .6; }
-
     tbody tr { transition: background .12s; }
     tbody tr:hover { background: rgba(255,255,255,.03); }
     tbody td {
-      padding: 10px 12px;
+      padding: 9px 12px;
       border-bottom: 1px solid rgba(30,30,64,.6);
       vertical-align: middle;
     }
     tbody tr:last-child td { border-bottom: none; }
 
-    .td-user { display: flex; align-items: center; gap: 10px; }
-    .td-avatar {
-      width: 30px; height: 30px; border-radius: 50%;
-      background: var(--border); object-fit: cover; flex-shrink: 0;
+    .badge {
+      display: inline-block; padding: 2px 9px; border-radius: 20px;
+      font-size: 0.78rem; font-weight: 700;
     }
-    .td-avatar-fallback {
-      width: 30px; height: 30px; border-radius: 50%;
-      background: var(--border); display: flex; align-items: center;
-      justify-content: center; font-size: 0.8rem; color: var(--muted); flex-shrink: 0;
+    .badge-yellow  { background: rgba(245,197,24,.12);  color: var(--yellow); }
+    .badge-green   { background: rgba(76,175,80,.12);   color: var(--green); }
+    .badge-red     { background: rgba(244,67,54,.12);   color: var(--red); }
+    .badge-blue    { background: rgba(74,158,255,.12);  color: var(--blue); }
+    .badge-orange  { background: rgba(255,152,0,.12);   color: var(--orange); }
+    .badge-purple  { background: rgba(156,111,255,.12); color: var(--purple); }
+    .badge-muted   { background: rgba(85,85,112,.12);   color: var(--muted); }
+
+    .time-str { font-size: 0.75rem; color: var(--muted); white-space: nowrap; }
+
+    .empty-row td { text-align: center; padding: 36px; color: var(--muted); font-size: 0.85rem; }
+
+    /* ══ 신고 처리 버튼 ══ */
+    .btn-resolve {
+      padding: 3px 10px; border-radius: 7px; font-size: 0.72rem; font-weight: 700;
+      border: 1px solid rgba(76,175,80,.4); background: rgba(76,175,80,.08);
+      color: var(--green); cursor: pointer; transition: all .15s; white-space: nowrap;
     }
-    .td-name  { font-weight: 600; color: var(--text); max-width: 130px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .td-email { font-size: 0.75rem; color: var(--muted); }
+    .btn-resolve:hover { background: rgba(76,175,80,.2); }
+    .btn-resolve:disabled { opacity: .4; cursor: default; }
 
-    .num-badge {
-      display: inline-block;
-      padding: 2px 10px; border-radius: 20px;
-      font-size: 0.82rem; font-weight: 700;
-      background: rgba(245,197,24,.1); color: var(--yellow);
+    .btn-delete {
+      padding: 3px 10px; border-radius: 7px; font-size: 0.72rem; font-weight: 700;
+      border: 1px solid rgba(244,67,54,.3); background: transparent;
+      color: var(--red); cursor: pointer; transition: all .15s; white-space: nowrap;
     }
-    .num-badge.blue   { background: rgba(74,158,255,.1); color: var(--blue); }
-    .num-badge.green  { background: rgba(76,175,80,.1);  color: var(--green); }
-    .num-badge.purple { background: rgba(156,111,255,.1); color: var(--purple); }
+    .btn-delete:hover { background: rgba(244,67,54,.12); }
 
-    .accuracy-bar-bg {
-      width: 50px; height: 4px; background: var(--border); border-radius: 2px;
-      overflow: hidden; display: inline-block; margin-left: 6px; vertical-align: middle;
+    /* ══ 데이터 초기화 버튼 ══ */
+    .btn-danger-full {
+      padding: 9px 18px; border-radius: 10px;
+      border: 1px solid rgba(244,67,54,.4); background: transparent;
+      color: var(--red); font-size: 0.82rem; font-weight: 700; cursor: pointer;
+      transition: all .18s;
     }
-    .accuracy-bar-fill { height: 100%; background: var(--green); border-radius: 2px; }
-
-    .time-chip { font-size: 0.75rem; color: var(--muted); white-space: nowrap; }
-    .time-chip.today { color: var(--green); }
-    .time-chip.week  { color: var(--blue); }
-
-    .empty-row td { text-align: center; padding: 40px; color: var(--muted); }
+    .btn-danger-full:hover { background: rgba(244,67,54,.12); border-color: var(--red); }
 
     .divider { height: 1px; background: var(--border); }
 
-    /* ══ 데이터 없음 안내 ══ */
-    .no-data-notice {
-      background: rgba(245,197,24,.05);
-      border: 1px dashed rgba(245,197,24,.2);
-      border-radius: 12px;
-      padding: 20px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.83rem;
-      line-height: 1.7;
-    }
-    .no-data-notice strong { color: var(--yellow); }
+    .accuracy-cell { display: flex; align-items: center; gap: 8px; }
+    .acc-bar-bg    { width: 48px; height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; flex-shrink: 0; }
+    .acc-bar-fill  { height: 100%; border-radius: 2px; background: var(--green); }
   </style>
 </head>
 <body>
@@ -394,145 +305,125 @@
     <span class="topbar-logo">오늘의포켓몬은뭘까용?</span>
     <span class="topbar-badge">ADMIN</span>
     <div class="topbar-spacer"></div>
-    <a href="pokemon-quiz.html" class="topbar-link">← 메인 사이트</a>
-    <button class="btn-logout" onclick="doLogout()">로그아웃</button>
+    <button class="topbar-btn" onclick="loadDashboard()">↺ 새로고침</button>
+    <a href="pokemon-quiz.html" class="topbar-btn blue">← 메인 사이트</a>
+    <button class="topbar-btn danger" onclick="doLogout()">로그아웃</button>
   </nav>
 
   <div class="main">
+
+    <!-- ══ Firebase 안내 배너 ══ -->
+    <div class="firebase-banner">
+      <span class="firebase-banner-icon">📡</span>
+      <span>현재 이 기기의 데이터만 표시됩니다. Firebase 연결 시 전체 유저 데이터를 볼 수 있습니다.</span>
+    </div>
 
     <!-- ══ 섹션: 개요 통계 ══ -->
     <div>
       <div class="section-title">개요</div>
       <div class="stats-grid">
-        <div class="stat-card total">
-          <div class="stat-icon">👥</div>
-          <div class="stat-label">전체 유저</div>
-          <div class="stat-value" id="stat-total">—</div>
-          <div class="stat-sub">누적 가입자</div>
+        <div class="stat-card c1">
+          <div class="stat-icon">🎮</div>
+          <div class="stat-label">총 게임 세션</div>
+          <div class="stat-value" id="stat-sessions">—</div>
+          <div class="stat-sub">저장된 게임 기록</div>
         </div>
-        <div class="stat-card dau">
-          <div class="stat-icon">🌅</div>
-          <div class="stat-label">DAU · 오늘</div>
-          <div class="stat-value" id="stat-dau">—</div>
-          <div class="stat-sub">오늘 방문한 유저</div>
+        <div class="stat-card c2">
+          <div class="stat-icon">✅</div>
+          <div class="stat-label">총 정답 수</div>
+          <div class="stat-value" id="stat-total-correct">—</div>
+          <div class="stat-sub">전체 모드 합계</div>
         </div>
-        <div class="stat-card wau">
+        <div class="stat-card c3">
+          <div class="stat-icon">⚠️</div>
+          <div class="stat-label">미처리 신고</div>
+          <div class="stat-value" id="stat-pending-reports">—</div>
+          <div class="stat-sub">처리 대기 중</div>
+        </div>
+        <div class="stat-card c4">
           <div class="stat-icon">📅</div>
-          <div class="stat-label">WAU · 7일</div>
-          <div class="stat-value" id="stat-wau">—</div>
-          <div class="stat-sub">최근 7일 방문</div>
-        </div>
-        <div class="stat-card mau">
-          <div class="stat-icon">📆</div>
-          <div class="stat-label">MAU · 30일</div>
-          <div class="stat-value" id="stat-mau">—</div>
-          <div class="stat-sub">최근 30일 방문</div>
+          <div class="stat-label">오늘 플레이</div>
+          <div class="stat-value" id="stat-today-play">—</div>
+          <div class="stat-sub">오늘 게임 종료 수</div>
         </div>
       </div>
     </div>
 
-    <!-- ══ 섹션: 차트 + 퀴즈 현황 ══ -->
-    <div class="row-2">
-
-      <!-- 7일 방문자 차트 -->
-      <div class="panel">
-        <div class="section-title">최근 7일 방문자 추이</div>
-        <div class="chart-wrap">
-          <canvas id="chart-activity"></canvas>
-        </div>
-      </div>
-
-      <!-- 퀴즈 현황 -->
-      <div class="panel">
-        <div class="section-title">퀴즈 현황</div>
-
-        <div class="quiz-mode-header">
-          <span class="quiz-mode-icon">🎴</span>
-          <span class="quiz-mode-title">포켓몬 맞추기</span>
-        </div>
-        <div class="quiz-stat-row">
-          <span class="qsr-label">총 정답</span>
-          <span class="qsr-value" id="qs-p-correct">—</span>
-          <div class="qsr-bar-bg"><div class="qsr-bar-fill" id="qb-p-correct" style="background:var(--green);width:0"></div></div>
-        </div>
-        <div class="quiz-stat-row">
-          <span class="qsr-label">총 오답</span>
-          <span class="qsr-value" id="qs-p-wrong">—</span>
-          <div class="qsr-bar-bg"><div class="qsr-bar-fill" id="qb-p-wrong" style="background:var(--red);width:0"></div></div>
-        </div>
-        <div class="quiz-stat-row">
-          <span class="qsr-label">평균 정답</span>
-          <span class="qsr-value" id="qs-p-avg">—</span>
-        </div>
-        <div class="quiz-stat-row">
-          <span class="qsr-label">최고 정답</span>
-          <span class="qsr-value" id="qs-p-top">—</span>
-        </div>
-
-        <div class="divider" style="margin:16px 0"></div>
-
-        <div class="quiz-mode-header">
-          <span class="quiz-mode-icon">⚔️</span>
-          <span class="quiz-mode-title">기술 맞추기</span>
-        </div>
-        <div class="quiz-stat-row">
-          <span class="qsr-label">총 정답</span>
-          <span class="qsr-value" id="qs-m-correct">—</span>
-          <div class="qsr-bar-bg"><div class="qsr-bar-fill" id="qb-m-correct" style="background:var(--green);width:0"></div></div>
-        </div>
-        <div class="quiz-stat-row">
-          <span class="qsr-label">총 오답</span>
-          <span class="qsr-value" id="qs-m-wrong">—</span>
-          <div class="qsr-bar-bg"><div class="qsr-bar-fill" id="qb-m-wrong" style="background:var(--red);width:0"></div></div>
-        </div>
-        <div class="quiz-stat-row">
-          <span class="qsr-label">평균 정답</span>
-          <span class="qsr-value" id="qs-m-avg">—</span>
-        </div>
-        <div class="quiz-stat-row">
-          <span class="qsr-label">최고 정답</span>
-          <span class="qsr-value" id="qs-m-top">—</span>
-        </div>
+    <!-- ══ 섹션: 퀴즈별 통계 ══ -->
+    <div>
+      <div class="section-title">퀴즈별 통계</div>
+      <div class="quiz-stat-grid" id="quiz-stat-grid">
+        <!-- JS로 렌더 -->
       </div>
     </div>
 
-    <!-- ══ 데이터 연결 안내 ══ -->
-    <div class="no-data-notice">
-      📡 현재 데이터가 연결되어 있지 않습니다.<br>
-      데이터를 표시하려면 <strong>FIREBASE_CONFIG</strong> 또는 별도 백엔드를 연결해주세요.
-    </div>
-
-    <!-- ══ 섹션: 유저 목록 ══ -->
+    <!-- ══ 섹션: 오류 신고 로그 ══ -->
     <div class="panel">
-      <div class="section-title">유저 목록</div>
+      <div class="section-title">오류 신고 로그</div>
       <div class="table-controls">
-        <input type="text" class="table-search" id="user-search"
-          placeholder="🔍 이름 또는 이메일 검색..." oninput="renderTable()">
-        <div class="sort-btns">
-          <button class="sort-btn active" onclick="setSort('total')" id="sb-total">총 정답 ↓</button>
-          <button class="sort-btn" onclick="setSort('pokemon_correct')" id="sb-pokemon">포켓몬</button>
-          <button class="sort-btn" onclick="setSort('move_correct')" id="sb-move">기술</button>
-          <button class="sort-btn" onclick="setSort('lastSeen')" id="sb-lastSeen">최근 접속</button>
-          <button class="sort-btn" onclick="setSort('accuracy')" id="sb-accuracy">정확도</button>
+        <div class="filter-btns">
+          <button class="filter-btn orange active" id="rf-pending" onclick="setReportFilter('pending')">미처리만</button>
+          <button class="filter-btn orange" id="rf-all" onclick="setReportFilter('all')">전체</button>
         </div>
-        <span class="table-count" id="table-count"></span>
+        <span class="table-count" id="report-count"></span>
       </div>
       <div class="table-wrap">
         <table>
           <thead>
             <tr>
-              <th style="width:44px"></th>
-              <th onclick="setSort('name')" id="th-name">이름 <span class="sort-arrow"></span></th>
-              <th>이메일</th>
-              <th onclick="setSort('pokemon_correct')" id="th-pokemon">포켓몬 정답 <span class="sort-arrow"></span></th>
-              <th onclick="setSort('move_correct')" id="th-move">기술 정답 <span class="sort-arrow"></span></th>
-              <th onclick="setSort('total')" id="th-total">합계 <span class="sort-arrow"></span></th>
-              <th onclick="setSort('accuracy')" id="th-accuracy">정확도 <span class="sort-arrow"></span></th>
-              <th onclick="setSort('lastSeen')" id="th-lastSeen">마지막 접속 <span class="sort-arrow"></span></th>
+              <th>시간</th>
+              <th>모드</th>
+              <th>문제명 (한국어)</th>
+              <th>신고 유형</th>
+              <th>메모</th>
+              <th>상태</th>
+              <th></th>
             </tr>
           </thead>
-          <tbody id="user-tbody"></tbody>
+          <tbody id="report-tbody"></tbody>
         </table>
+      </div>
+    </div>
+
+    <!-- ══ 섹션: 게임 세션 데이터 ══ -->
+    <div class="panel">
+      <div class="section-title">게임 세션 데이터</div>
+      <div class="table-controls">
+        <div class="filter-btns">
+          <button class="filter-btn active" id="sf-all"     onclick="setSessionFilter('all')">전체</button>
+          <button class="filter-btn" id="sf-pokemon"        onclick="setSessionFilter('pokemon')">포켓몬</button>
+          <button class="filter-btn" id="sf-move"           onclick="setSessionFilter('move')">기술</button>
+          <button class="filter-btn" id="sf-ability"        onclick="setSessionFilter('ability')">특성</button>
+          <button class="filter-btn" id="sf-item"           onclick="setSessionFilter('item')">도구</button>
+        </div>
+        <span class="table-count" id="session-count"></span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>시간</th>
+              <th>모드</th>
+              <th>난이도</th>
+              <th>정답</th>
+              <th>오답</th>
+              <th>정확도</th>
+            </tr>
+          </thead>
+          <tbody id="session-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ══ 섹션: 데이터 관리 ══ -->
+    <div class="panel">
+      <div class="section-title">데이터 관리</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+        <div style="font-size:0.83rem;color:var(--muted);line-height:1.6">
+          localStorage에 저장된 게임 세션 및 신고 데이터를 모두 삭제합니다.<br>
+          <span style="color:var(--red);font-size:0.78rem">이 작업은 되돌릴 수 없습니다.</span>
+        </div>
+        <button class="btn-danger-full" onclick="clearAllData()">🗑️ 데이터 전체 초기화</button>
       </div>
     </div>
 
@@ -540,18 +431,14 @@
 </div><!-- /#screen-dashboard -->
 
 <script>
-/* ═══════════════════════════════════════════
-   ▼▼▼ 관리자 비밀번호 — 여기서 변경하세요 ▼▼▼
-═══════════════════════════════════════════ */
+/* ══ 관리자 비밀번호 ══ */
 const ADMIN_PASSWORD = "qkrwjdgur07";
-/* ═══════════════════════════════════════════ */
 
-let allUsers = [];
-let sortCol  = 'total';
-let sortDir  = -1;
-let activityChart = null;
+/* ══ 상태 ══ */
+let reportFilter  = 'pending';
+let sessionFilter = 'all';
 
-/* ── 로그인 ── */
+/* ══ 로그인 ══ */
 function doLogin() {
   const val = document.getElementById('pw-input').value;
   const errEl = document.getElementById('login-error');
@@ -561,8 +448,7 @@ function doLogin() {
     sessionStorage.setItem('admin_auth', '1');
     document.getElementById('screen-login').style.display = 'none';
     document.getElementById('screen-dashboard').style.display = 'block';
-    renderActivityChart([], []);
-    renderTable();
+    loadDashboard();
   } else {
     errEl.textContent = '비밀번호가 올바르지 않습니다.';
     box.classList.remove('login-shake');
@@ -585,132 +471,224 @@ function doLogout() {
 if (sessionStorage.getItem('admin_auth') === '1') {
   document.getElementById('screen-login').style.display = 'none';
   document.getElementById('screen-dashboard').style.display = 'block';
-  setTimeout(() => { renderActivityChart([], []); renderTable(); }, 0);
+  setTimeout(loadDashboard, 0);
 }
 
-/* ── 시간 포맷 ── */
+/* ══ 시간 포맷 ══ */
 function fmtTime(ms) {
   if (!ms) return '—';
   const diff = Date.now() - ms;
   const sec = Math.floor(diff / 1000);
-  if (sec < 60)    return '방금';
-  if (sec < 3600)  return Math.floor(sec/60) + '분 전';
-  if (sec < 86400) return Math.floor(sec/3600) + '시간 전';
-  if (sec < 604800) return Math.floor(sec/86400) + '일 전';
-  return new Date(ms).toLocaleDateString('ko-KR');
-}
-function isToday(ms) { return ms && (Date.now()-ms) < 86400000; }
-function isWeek(ms)  { return ms && (Date.now()-ms) < 604800000; }
-
-/* ── 정렬 ── */
-function setSort(col) {
-  if (sortCol === col) sortDir *= -1;
-  else { sortCol = col; sortDir = -1; }
-  document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
-  const sb = document.getElementById('sb-' + col);
-  if (sb) sb.classList.add('active');
-  document.querySelectorAll('thead th').forEach(th => {
-    const id = th.id?.replace('th-','');
-    const arrow = th.querySelector('.sort-arrow');
-    if (arrow) arrow.textContent = id === col ? (sortDir === -1 ? '↓' : '↑') : '';
-    th.classList.toggle('sorted', id === col);
-  });
-  renderTable();
+  if (sec < 60)     return '방금';
+  if (sec < 3600)   return Math.floor(sec / 60) + '분 전';
+  if (sec < 86400)  return Math.floor(sec / 3600) + '시간 전';
+  if (sec < 604800) return Math.floor(sec / 86400) + '일 전';
+  const d = new Date(ms);
+  return d.getFullYear() + '.' +
+    String(d.getMonth()+1).padStart(2,'0') + '.' +
+    String(d.getDate()).padStart(2,'0') + ' ' +
+    String(d.getHours()).padStart(2,'0') + ':' +
+    String(d.getMinutes()).padStart(2,'0');
 }
 
-function getVal(u, col) {
-  if (col==='total')    return u.total;
-  if (col==='accuracy') return u.accuracy;
-  if (col==='lastSeen') return u.lastSeenMs || 0;
-  if (col==='name')     return (u.name||'').toLowerCase();
-  return u[col] || 0;
+function isToday(ms) {
+  const d = new Date(ms), n = new Date();
+  return d.getFullYear() === n.getFullYear() &&
+         d.getMonth()    === n.getMonth()    &&
+         d.getDate()     === n.getDate();
 }
 
-/* ── 테이블 렌더 ── */
-function renderTable() {
-  const query = (document.getElementById('user-search')?.value || '').toLowerCase();
-  let rows = allUsers.filter(u =>
-    !query || (u.name||'').toLowerCase().includes(query) || (u.email||'').toLowerCase().includes(query)
-  );
-  rows.sort((a,b) => {
-    const av = getVal(a, sortCol), bv = getVal(b, sortCol);
-    if (typeof av === 'string') return sortDir * av.localeCompare(bv);
-    return sortDir * ((bv||0) - (av||0));
-  });
+function esc(s) {
+  return String(s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
 
-  document.getElementById('table-count').textContent = rows.length ? `${rows.length}명` : '';
-  const tbody = document.getElementById('user-tbody');
+/* ══ 데이터 로드 ══ */
+function getSessions() {
+  return JSON.parse(localStorage.getItem('pq_sessions') || '[]');
+}
+function getReports() {
+  return JSON.parse(localStorage.getItem('pq_reports') || '[]');
+}
 
+/* ══ 대시보드 전체 렌더 ══ */
+function loadDashboard() {
+  renderOverviewStats();
+  renderQuizStats();
+  renderReportTable();
+  renderSessionTable();
+}
+
+/* ── 개요 통계 ── */
+function renderOverviewStats() {
+  const sessions = getSessions();
+  const reports  = getReports();
+
+  const totalCorrect  = sessions.reduce((s, x) => s + (x.correct || 0), 0);
+  const pendingCount  = reports.filter(r => !r.resolved).length;
+  const todayCount    = sessions.filter(s => isToday(s.ts)).length;
+
+  document.getElementById('stat-sessions').textContent       = sessions.length;
+  document.getElementById('stat-total-correct').textContent  = totalCorrect;
+  document.getElementById('stat-pending-reports').textContent = pendingCount;
+  document.getElementById('stat-today-play').textContent     = todayCount;
+}
+
+/* ── 퀴즈별 통계 ── */
+function renderQuizStats() {
+  const sessions = getSessions();
+  const modes = [
+    { key: 'pokemon', label: '🎴 포켓몬 맞추기' },
+    { key: 'move',    label: '⚔️ 기술 맞추기' },
+    { key: 'ability', label: '✨ 특성 맞추기' },
+    { key: 'item',    label: '🎒 도구 맞추기' },
+  ];
+
+  const grid = document.getElementById('quiz-stat-grid');
+  grid.innerHTML = modes.map(m => {
+    const list = sessions.filter(s => s.mode === m.key);
+    const totalPlay = list.length;
+    const avgCorrect = totalPlay
+      ? (list.reduce((s,x) => s + (x.correct||0), 0) / totalPlay).toFixed(1)
+      : '—';
+    const maxCorrect = totalPlay
+      ? Math.max(...list.map(x => x.correct || 0))
+      : '—';
+    const totalCorrect = totalPlay
+      ? list.reduce((s,x) => s + (x.correct||0), 0)
+      : 0;
+
+    return `<div class="quiz-stat-box">
+      <div class="qsb-title">${esc(m.label)}</div>
+      <div class="qsb-row"><span class="qsb-label">총 플레이</span><span class="qsb-val">${totalPlay}</span></div>
+      <div class="qsb-row"><span class="qsb-label">총 정답</span><span class="qsb-val">${totalCorrect}</span></div>
+      <div class="qsb-row"><span class="qsb-label">평균 정답</span><span class="qsb-val">${avgCorrect}</span></div>
+      <div class="qsb-row"><span class="qsb-label">최고 정답</span><span class="qsb-val">${maxCorrect}</span></div>
+    </div>`;
+  }).join('');
+}
+
+/* ── 신고 필터 ── */
+function setReportFilter(f) {
+  reportFilter = f;
+  document.getElementById('rf-pending').classList.toggle('active', f === 'pending');
+  document.getElementById('rf-all').classList.toggle('active', f === 'all');
+  renderReportTable();
+}
+
+/* ── 신고 테이블 ── */
+function renderReportTable() {
+  const all = getReports();
+  const rows = reportFilter === 'pending' ? all.filter(r => !r.resolved) : all;
+  document.getElementById('report-count').textContent = rows.length ? rows.length + '건' : '';
+
+  const tbody = document.getElementById('report-tbody');
   if (!rows.length) {
-    tbody.innerHTML = '<tr class="empty-row"><td colspan="8">데이터 없음</td></tr>';
+    tbody.innerHTML = '<tr class="empty-row"><td colspan="7">신고 없음</td></tr>';
     return;
   }
 
-  tbody.innerHTML = rows.map(u => {
-    const avatar = u.photo
-      ? `<img class="td-avatar" src="${u.photo}" onerror="this.style.display='none'">`
-      : `<div class="td-avatar-fallback">${(u.name||'?')[0]}</div>`;
-    const tc  = isToday(u.lastSeenMs) ? 'today' : isWeek(u.lastSeenMs) ? 'week' : '';
-    const accWidth = Math.round(u.accuracy);
+  tbody.innerHTML = rows.map((r, idx) => {
+    const realIdx = reportFilter === 'pending'
+      ? all.findIndex(x => x.id === r.id)
+      : idx;
+    const statusBadge = r.resolved
+      ? '<span class="badge badge-muted">처리완료</span>'
+      : '<span class="badge badge-orange">미처리</span>';
+    const resolveBtn = r.resolved
+      ? '<button class="btn-resolve" disabled>완료</button>'
+      : `<button class="btn-resolve" onclick="resolveReport('${esc(r.id)}')">처리완료</button>`;
+
     return `<tr>
-      <td>${avatar}</td>
-      <td><div class="td-name">${esc(u.name||'—')}</div></td>
-      <td><span class="td-email">${esc(u.email||'—')}</span></td>
-      <td><span class="num-badge green">${u.pokemon_correct||0}</span>
-          ${u.pokemon_wrong ? `<span style="font-size:.7rem;color:var(--muted);margin-left:4px">/ ${u.pokemon_wrong} 오</span>` : ''}</td>
-      <td><span class="num-badge blue">${u.move_correct||0}</span>
-          ${u.move_wrong ? `<span style="font-size:.7rem;color:var(--muted);margin-left:4px">/ ${u.move_wrong} 오</span>` : ''}</td>
-      <td><span class="num-badge">${u.total}</span></td>
-      <td>
-        <span style="font-size:.85rem;font-weight:700;color:${u.accuracy>=70?'var(--green)':u.accuracy>=40?'var(--yellow)':'var(--red)'}">${u.accuracy}%</span>
-        <div class="accuracy-bar-bg"><div class="accuracy-bar-fill" style="width:${accWidth}%"></div></div>
-      </td>
-      <td><span class="time-chip ${tc}">${fmtTime(u.lastSeenMs)}</span></td>
+      <td><span class="time-str">${fmtTime(r.ts)}</span></td>
+      <td><span class="badge badge-blue">${esc(r.modeLabel || r.mode)}</span></td>
+      <td style="max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(r.ko || r.en || '—')}</td>
+      <td><span class="badge badge-yellow">${esc(r.type || '—')}</span></td>
+      <td style="max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted);font-size:0.8rem">${esc(r.memo || '—')}</td>
+      <td>${statusBadge}</td>
+      <td style="display:flex;gap:6px;align-items:center">${resolveBtn}<button class="btn-delete" onclick="deleteReport('${esc(r.id)}')">삭제</button></td>
     </tr>`;
   }).join('');
 }
 
-function esc(s) {
-  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+function resolveReport(id) {
+  const arr = getReports();
+  const idx = arr.findIndex(r => r.id === id);
+  if (idx === -1) return;
+  arr[idx].resolved = true;
+  localStorage.setItem('pq_reports', JSON.stringify(arr));
+  renderOverviewStats();
+  renderReportTable();
 }
 
-/* ── 차트 ── */
-function renderActivityChart(labels, data) {
-  const ctx = document.getElementById('chart-activity').getContext('2d');
-  if (activityChart) activityChart.destroy();
-  activityChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: labels.length ? labels : ['데이터 없음'],
-      datasets: [{
-        label: '방문자',
-        data: data.length ? data : [0],
-        backgroundColor: 'rgba(245,197,24,.3)',
-        borderColor:     'rgba(245,197,24,.5)',
-        borderWidth: 1,
-        borderRadius: 6,
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: { display: false },
-        tooltip: {
-          backgroundColor: '#14142e',
-          borderColor: '#1e1e40',
-          borderWidth: 1,
-          titleColor: '#f5c518',
-          bodyColor: '#aaa',
-          callbacks: { label: ctx => ` ${ctx.raw}명` }
-        }
-      },
-      scales: {
-        x: { ticks: { color: '#555570' }, grid: { color: 'rgba(30,30,64,.5)' } },
-        y: { ticks: { color: '#555570', stepSize: 1 }, grid: { color: 'rgba(30,30,64,.5)' }, beginAtZero: true }
-      }
-    }
+function deleteReport(id) {
+  if (!confirm('이 신고를 삭제하시겠습니까?')) return;
+  const arr = getReports().filter(r => r.id !== id);
+  localStorage.setItem('pq_reports', JSON.stringify(arr));
+  renderOverviewStats();
+  renderReportTable();
+}
+
+/* ── 세션 필터 ── */
+function setSessionFilter(f) {
+  sessionFilter = f;
+  ['all','pokemon','move','ability','item'].forEach(k => {
+    const el = document.getElementById('sf-' + k);
+    if (el) el.classList.toggle('active', k === f);
   });
+  renderSessionTable();
+}
+
+/* ── 세션 테이블 ── */
+const MODE_BADGE_CLASS = {
+  pokemon: 'badge-green',
+  move:    'badge-blue',
+  ability: 'badge-purple',
+  item:    'badge-yellow',
+};
+
+function renderSessionTable() {
+  const all = getSessions();
+  let rows = sessionFilter === 'all' ? all : all.filter(s => s.mode === sessionFilter);
+  rows = rows.slice(0, 100);  // 최근 100개
+  document.getElementById('session-count').textContent = rows.length ? rows.length + '개 (최근 100)' : '';
+
+  const tbody = document.getElementById('session-tbody');
+  if (!rows.length) {
+    tbody.innerHTML = '<tr class="empty-row"><td colspan="6">세션 데이터 없음</td></tr>';
+    return;
+  }
+
+  tbody.innerHTML = rows.map(s => {
+    const total = (s.correct || 0) + (s.wrong || 0);
+    const acc   = total > 0 ? Math.round((s.correct / total) * 100) : 0;
+    const accColor = acc >= 70 ? 'var(--green)' : acc >= 40 ? 'var(--yellow)' : 'var(--red)';
+    const badgeCls = MODE_BADGE_CLASS[s.mode] || 'badge-muted';
+
+    return `<tr>
+      <td><span class="time-str">${fmtTime(s.ts)}</span></td>
+      <td><span class="badge ${badgeCls}">${esc(s.modeLabel || s.mode)}</span></td>
+      <td><span style="font-size:0.8rem;color:var(--muted)">${esc(s.difficulty || '—')}</span></td>
+      <td><span class="badge badge-green">${s.correct || 0}</span></td>
+      <td><span class="badge badge-red">${s.wrong || 0}</span></td>
+      <td>
+        <div class="accuracy-cell">
+          <span style="font-size:0.85rem;font-weight:700;color:${accColor}">${acc}%</span>
+          <div class="acc-bar-bg"><div class="acc-bar-fill" style="width:${acc}%"></div></div>
+        </div>
+      </td>
+    </tr>`;
+  }).join('');
+}
+
+/* ── 전체 초기화 ── */
+function clearAllData() {
+  if (!confirm('게임 세션 및 신고 데이터를 모두 삭제하시겠습니까?\n이 작업은 되돌릴 수 없습니다.')) return;
+  localStorage.removeItem('pq_sessions');
+  localStorage.removeItem('pq_reports');
+  alert('데이터가 초기화되었습니다.');
+  loadDashboard();
 }
 </script>
 </body>
