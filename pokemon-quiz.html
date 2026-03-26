@@ -589,11 +589,11 @@
 
     <!-- 바코드 난이도 -->
     <div class="diff-selector">
-      <button class="diff-btn" id="b-diff-easy" onclick="bSetDifficulty('easy')">
+      <button class="diff-btn selected" id="b-diff-easy" onclick="bSetDifficulty('easy')">
         <div class="diff-label">쉬움</div>
         <div class="diff-sub">가로선 8줄 · 목숨∞</div>
       </button>
-      <button class="diff-btn selected" id="b-diff-normal" onclick="bSetDifficulty('normal')">
+      <button class="diff-btn" id="b-diff-normal" onclick="bSetDifficulty('normal')">
         <div class="diff-label">보통</div>
         <div class="diff-sub">가로선 4줄 · HP3</div>
       </button>
@@ -1105,7 +1105,7 @@ const BARCODE_DIFF = {
   normal: { strips: 4, stripH: 4 },
   hard:   { strips: 1, stripH: 3 }
 };
-let bDifficulty = 'normal';
+let bDifficulty = 'easy';
 let bGameStarted = false;
 let bLives = 3, bHints = 0, bQuestionsPlayed = 0;
 let bSessionC = 0, bSessionW = 0;
