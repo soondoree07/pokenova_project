@@ -5,11 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>오늘의포켓몬은뭘까용?</title>
 
-  <!-- Firebase SDK (compat) -->
-  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
-
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -21,7 +16,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 72px 16px 48px;
+      padding: 24px 16px 48px;
     }
 
     /* ══ 상단 인증 바 ══ */
@@ -469,7 +464,7 @@
 
     /* ══ 모바일 반응형 ══ */
     @media (max-width: 600px) {
-      body { padding: 60px 10px 40px; }
+      body { padding: 16px 10px 40px; }
 
       .auth-bar { height: 48px; padding: 0 12px; }
       .user-name { max-width: 80px; }
@@ -525,44 +520,6 @@
   </style>
 </head>
 <body>
-
-<!-- ══ 상단 인증 바 ══ -->
-<div class="auth-bar">
-  <!-- 로그인 전 -->
-  <div id="auth-loggedout">
-    <button class="btn-login-top" onclick="openLoginModal()">
-      <svg width="16" height="16" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.08 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.36-8.16 2.36-6.26 0-11.57-3.59-13.46-8.83l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
-      구글로 로그인
-    </button>
-  </div>
-  <!-- 로그인 후 -->
-  <div id="auth-loggedin" class="user-chip" style="display:none">
-    <img id="user-photo" class="user-photo" src="" alt="">
-    <span id="user-name" class="user-name"></span>
-    <button class="btn-logout" onclick="fbSignOut()">로그아웃</button>
-  </div>
-</div>
-
-<!-- ══ 로그인 모달 ══ -->
-<div id="login-modal" class="modal-overlay" style="display:none" onclick="closeLoginModalBg(event)">
-  <div class="modal">
-    <div class="modal-icon">🎮</div>
-    <div class="modal-title">로그인</div>
-    <div class="modal-sub">구글 계정으로 로그인하면<br>점수가 저장되고 <b style="color:#f5c518">랭킹</b>을 확인할 수 있어요!</div>
-
-    <div id="firebase-setup-notice" class="setup-notice" style="display:none">
-      <b>⚠️ Firebase 설정 필요</b>
-      이 기능을 사용하려면 Firebase 프로젝트를 연결해야 합니다.<br>
-      HTML 파일 하단 스크립트의 <code>FIREBASE_CONFIG</code> 값을 채워주세요.
-    </div>
-
-    <button class="btn-google" id="btn-google-signin" onclick="fbSignIn()">
-      <svg class="btn-google-logo" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.08 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.36-8.16 2.36-6.26 0-11.57-3.59-13.46-8.83l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
-      구글 계정으로 로그인
-    </button>
-    <button class="btn-modal-close" onclick="closeLoginModal()">닫기 (로그인 없이 플레이)</button>
-  </div>
-</div>
 
 <!-- ══ 사이트 타이틀 ══ -->
 <div class="site-title">오늘의포켓몬은뭘까용?</div>
@@ -623,20 +580,6 @@
     <div class="pokemon-number" id="b-pokemon-number" style="display:none"></div>
     <div class="name-revealed"  id="b-name-revealed" style="display:none"></div>
     <div class="status"         id="b-status" style="display:none">이름을 입력하고 확인 버튼을 누르세요</div>
-
-    <!-- 랭킹 카드 -->
-    <div class="rank-card" id="b-rank-card">
-      <div class="rank-trophy">🏆</div>
-      <div class="rank-info">
-        <div class="rank-mode-label">포켓몬 맞추기 랭킹</div>
-        <div class="rank-percent" id="b-rank-percent">—</div>
-        <div class="rank-total"   id="b-rank-total"></div>
-      </div>
-      <div class="rank-bar-wrap">
-        <div class="rank-bar-bg"><div class="rank-bar-fill" id="b-rank-bar" style="width:0%"></div></div>
-        <div class="rank-login-prompt" id="b-rank-login" onclick="openLoginModal()" style="display:none">로그인하면 랭킹을 확인할 수 있어요 →</div>
-      </div>
-    </div>
 
     <div class="input-row" id="b-input-row" style="display:none">
       <input type="text" id="b-guess-input" placeholder="포켓몬 이름 입력..." autocomplete="off" />
@@ -729,20 +672,6 @@
 
     <div class="name-revealed" id="m-name-revealed"></div>
     <div class="status"        id="m-status" style="display:none"></div>
-
-    <!-- 랭킹 카드 -->
-    <div class="rank-card" id="m-rank-card">
-      <div class="rank-trophy">🏆</div>
-      <div class="rank-info">
-        <div class="rank-mode-label">기술 맞추기 랭킹</div>
-        <div class="rank-percent" id="m-rank-percent">—</div>
-        <div class="rank-total"   id="m-rank-total"></div>
-      </div>
-      <div class="rank-bar-wrap">
-        <div class="rank-bar-bg"><div class="rank-bar-fill" id="m-rank-bar" style="width:0%"></div></div>
-        <div class="rank-login-prompt" id="m-rank-login" onclick="openLoginModal()" style="display:none">로그인하면 랭킹을 확인할 수 있어요 →</div>
-      </div>
-    </div>
 
     <div class="input-row" id="m-input-row" style="display:none">
       <input type="text" id="m-guess-input" placeholder="기술 이름 입력..." autocomplete="off" />
