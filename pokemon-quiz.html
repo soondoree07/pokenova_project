@@ -593,6 +593,11 @@
       box-sizing: border-box;
     }
     .lb-nick-input:focus { border-color: #f5c518; }
+    .lb-diff-tab {
+      padding: 5px 16px; border-radius: 20px; border: 1px solid #333;
+      background: #1a1a1a; color: #888; font-size: 0.78rem; cursor: pointer;
+    }
+    .lb-diff-tab.active { background: #f5c518; color: #000; font-weight: 700; border-color: #f5c518; }
   </style>
 </head>
 <body>
@@ -616,8 +621,6 @@
   <div class="card">
     <button class="btn-ghost" style="width:100%;margin-bottom:8px;font-size:0.82rem" onclick="toggleLb('b')">🏆 리더보드 보기</button>
     <div class="score-row">
-      <span>정답 <b id="b-score-correct">0</b></span>
-      <span>오답 <b id="b-score-wrong">0</b></span>
       <span>연속 <b id="b-score-streak">0</b> 🔥</span>
     </div>
 
@@ -670,6 +673,10 @@
   </div>
   <div id="b-lb-panel" class="lb-panel" style="display:none">
     <div class="lb-panel-title">🏆 포켓몬 맞추기 TOP 100</div>
+    <div style="display:flex;gap:8px;margin-bottom:12px">
+      <button id="b-lb-tab-normal" class="lb-diff-tab active" onclick="setLbDiff('b','normal')">보통</button>
+      <button id="b-lb-tab-hard" class="lb-diff-tab" onclick="setLbDiff('b','hard')">어려움</button>
+    </div>
     <div id="b-lb-list"></div>
   </div>
 </div>
@@ -679,8 +686,6 @@
   <div class="card">
     <button class="btn-ghost" style="width:100%;margin-bottom:8px;font-size:0.82rem" onclick="toggleLb('m')">🏆 리더보드 보기</button>
     <div class="score-row">
-      <span>정답 <b id="m-score-correct">0</b></span>
-      <span>오답 <b id="m-score-wrong">0</b></span>
       <span>연속 <b id="m-score-streak">0</b> 🔥</span>
     </div>
 
@@ -768,6 +773,10 @@
   </div>
   <div id="m-lb-panel" class="lb-panel" style="display:none">
     <div class="lb-panel-title">🏆 기술 맞추기 TOP 100</div>
+    <div style="display:flex;gap:8px;margin-bottom:12px">
+      <button id="m-lb-tab-normal" class="lb-diff-tab active" onclick="setLbDiff('m','normal')">보통</button>
+      <button id="m-lb-tab-hard" class="lb-diff-tab" onclick="setLbDiff('m','hard')">어려움</button>
+    </div>
     <div id="m-lb-list"></div>
   </div>
 </div>
@@ -777,8 +786,6 @@
   <div class="card">
     <button class="btn-ghost" style="width:100%;margin-bottom:8px;font-size:0.82rem" onclick="toggleLb('a')">🏆 리더보드 보기</button>
     <div class="score-row">
-      <span>정답 <b id="a-score-correct">0</b></span>
-      <span>오답 <b id="a-score-wrong">0</b></span>
       <span>연속 <b id="a-score-streak">0</b> 🔥</span>
     </div>
     <button class="btn-primary" id="a-btn-start" onclick="aStartGame()" style="width:100%;margin-bottom:8px">게임 시작</button>
@@ -821,8 +828,6 @@
   <div class="card">
     <button class="btn-ghost" style="width:100%;margin-bottom:8px;font-size:0.82rem" onclick="toggleLb('i')">🏆 리더보드 보기</button>
     <div class="score-row">
-      <span>정답 <b id="i-score-correct">0</b></span>
-      <span>오답 <b id="i-score-wrong">0</b></span>
       <span>연속 <b id="i-score-streak">0</b> 🔥</span>
     </div>
     <button class="btn-primary" id="i-btn-start" onclick="iStartGame()" style="width:100%;margin-bottom:8px">게임 시작</button>
@@ -1149,12 +1154,16 @@ function bStartGame() {
 function bGameOver() {
   bGameStarted = false;
   document.getElementById('b-gameover-score').innerHTML =
-    `이번 게임 결과<br><b>${bSessionC}</b>개 정답 &nbsp;/&nbsp; <b>${bSessionW}</b>개 오답<br><br>` +
-    `누적 정답: <b>${bScoreC}</b>개`;
-  document.getElementById('b-lb-form').style.display = 'flex';
-  document.getElementById('b-lb-done').style.display = 'none';
-  document.getElementById('b-lb-nick').value = '';
-  document.getElementById('b-lb-err').textContent = '';
+    `이번 게임 결과<br><b>${bSessionC}</b>개 정답 &nbsp;/&nbsp; <b>${bSessionW}</b>개 오답`;
+  if (bDifficulty === 'easy') {
+    document.getElementById('b-lb-form').style.display = 'none';
+    document.getElementById('b-lb-done').style.display = 'flex';
+  } else {
+    document.getElementById('b-lb-form').style.display = 'flex';
+    document.getElementById('b-lb-done').style.display = 'none';
+    document.getElementById('b-lb-nick').value = '';
+    document.getElementById('b-lb-err').textContent = '';
+  }
   document.getElementById('b-gameover').style.display = 'flex';
   saveSession('pokemon', '포켓몬 맞추기', bDifficulty, bSessionC, bSessionW);
 }
@@ -1288,9 +1297,13 @@ function bCheckGuess() {
   if (normalize(guess)===normalize(bKoName) || (bEnName&&normalize(guess)===normalize(bEnName))) {
     bReveal(true);
   } else {
-    bScoreW++; bScoreS=0; bSessionW++; bUpdateScore();
+    bScoreS=0; bUpdateScore();
+    if (!bWrongThisRound) {
+      bSessionW++;
+      if (bLives !== Infinity) bLives--;
+      bUpdateLives();
+    }
     bWrongThisRound = true;
-    bLives--; bUpdateLives();
     document.getElementById('b-status').textContent = `"${guess}" 은(는) 틀렸습니다!  (목숨 ${bLives}개 남음)`;
     document.getElementById('b-status').className   = 'status wrong';
     input.value=''; input.focus();
@@ -1551,10 +1564,13 @@ function mCheckGuess() {
   if (g===normalize(mKoName)||(mEnName&&g===normalize(mEnName))) {
     mReveal(true);
   } else {
-    mScoreW++; mScoreS=0; mSessionW++; mUpdateScore();
+    mScoreS=0; mUpdateScore();
+    if (!mWrongThisRound) {
+      mSessionW++;
+      if (mLives !== Infinity) mLives--;
+      mUpdateLives();
+    }
     mWrongThisRound = true;
-    if (mLives !== Infinity) mLives--;
-    mUpdateLives();
     const livesMsg = mLives === Infinity ? '' : ` (목숨 ${mLives}개 남음)`;
     document.getElementById('m-status').textContent=`"${guess}" 은(는) 틀렸습니다!${livesMsg}`;
     document.getElementById('m-status').className='status wrong';
@@ -1612,11 +1628,16 @@ function mUpdateLives() {
 
 function mGameOver() {
   document.getElementById('m-gameover-score').innerHTML =
-    `이번 게임 결과<br><b>${mSessionC}</b>개 정답 &nbsp;/&nbsp; <b>${mSessionW}</b>개 오답<br><br>누적 정답: <b>${mScoreC}</b>개`;
-  document.getElementById('m-lb-form').style.display = 'flex';
-  document.getElementById('m-lb-done').style.display = 'none';
-  document.getElementById('m-lb-nick').value = '';
-  document.getElementById('m-lb-err').textContent = '';
+    `이번 게임 결과<br><b>${mSessionC}</b>개 정답 &nbsp;/&nbsp; <b>${mSessionW}</b>개 오답`;
+  if (mDifficulty === 'easy') {
+    document.getElementById('m-lb-form').style.display = 'none';
+    document.getElementById('m-lb-done').style.display = 'flex';
+  } else {
+    document.getElementById('m-lb-form').style.display = 'flex';
+    document.getElementById('m-lb-done').style.display = 'none';
+    document.getElementById('m-lb-nick').value = '';
+    document.getElementById('m-lb-err').textContent = '';
+  }
   document.getElementById('m-gameover').style.display = 'flex';
   saveSession('move', '기술 맞추기', mDifficulty, mSessionC, mSessionW);
 }
@@ -1745,9 +1766,12 @@ function aCheckGuess() {
   if (normalize(guess) === normalize(aKoName) || (aEnName && normalize(guess) === normalize(aEnName))) {
     aReveal(true);
   } else {
-    aScoreW_total++; aScoreS = 0; aSessionW++; aUpdateScore();
+    aScoreS = 0; aUpdateScore();
+    if (!aWrongThisRound) {
+      aSessionW++;
+      aLives--; aUpdateLives();
+    }
     aWrongThisRound = true;
-    aLives--; aUpdateLives();
     document.getElementById('a-status').textContent = `"${guess}" 은(는) 틀렸습니다! (목숨 ${aLives}개 남음)`;
     document.getElementById('a-status').className = 'status wrong';
     input.value = ''; input.focus();
@@ -1779,7 +1803,7 @@ function aReveal(isCorrect) {
 
 function aGameOver() {
   document.getElementById('a-gameover-score').innerHTML =
-    `이번 게임 결과<br><b>${aSessionC}</b>개 정답 &nbsp;/&nbsp; <b>${aSessionW}</b>개 오답<br><br>누적 정답: <b>${aScoreC}</b>개`;
+    `이번 게임 결과<br><b>${aSessionC}</b>개 정답 &nbsp;/&nbsp; <b>${aSessionW}</b>개 오답`;
   document.getElementById('a-lb-form').style.display = 'flex';
   document.getElementById('a-lb-done').style.display = 'none';
   document.getElementById('a-lb-nick').value = '';
@@ -1964,9 +1988,12 @@ function iCheckGuess() {
   if (normalize(guess) === normalize(iKoName) || (iEnName && normalize(guess) === normalize(iEnName))) {
     iReveal(true);
   } else {
-    iScoreW_total++; iScoreS = 0; iSessionW++; iUpdateScore();
+    iScoreS = 0; iUpdateScore();
+    if (!iWrongThisRound) {
+      iSessionW++;
+      iLives--; iUpdateLives();
+    }
     iWrongThisRound = true;
-    iLives--; iUpdateLives();
     document.getElementById('i-status').textContent = `"${guess}" 은(는) 틀렸습니다! (목숨 ${iLives}개 남음)`;
     document.getElementById('i-status').className = 'status wrong';
     input.value = ''; input.focus();
@@ -2018,7 +2045,7 @@ function iShowHint() {
 
 function iGameOver() {
   document.getElementById('i-gameover-score').innerHTML =
-    `이번 게임 결과<br><b>${iSessionC}</b>개 정답 &nbsp;/&nbsp; <b>${iSessionW}</b>개 오답<br><br>누적 정답: <b>${iScoreC}</b>개`;
+    `이번 게임 결과<br><b>${iSessionC}</b>개 정답 &nbsp;/&nbsp; <b>${iSessionW}</b>개 오답`;
   document.getElementById('i-lb-form').style.display = 'flex';
   document.getElementById('i-lb-done').style.display = 'none';
   document.getElementById('i-lb-nick').value = '';
@@ -2130,6 +2157,17 @@ function lbShowDone(prefix) {
 
 // 리더보드 토글
 const _lbOpen = { b: false, m: false, a: false, i: false };
+const _lbDiff = { b: 'normal', m: 'normal' };
+
+function setLbDiff(prefix, diff) {
+  _lbDiff[prefix] = diff;
+  ['normal','hard'].forEach(d => {
+    const el = document.getElementById(`${prefix}-lb-tab-${d}`);
+    if (el) el.classList.toggle('active', d === diff);
+  });
+  renderLb(prefix);
+}
+
 async function toggleLb(prefix) {
   const panel = document.getElementById(prefix + '-lb-panel');
   _lbOpen[prefix] = !_lbOpen[prefix];
@@ -2138,17 +2176,20 @@ async function toggleLb(prefix) {
 }
 
 async function renderLb(prefix) {
-  const mode = LB_MODE[prefix === 'b' ? 'barcode' : prefix === 'm' ? 'move' : prefix === 'a' ? 'ability' : 'item'];
+  const modeKey = prefix === 'b' ? 'barcode' : prefix === 'm' ? 'move' : prefix === 'a' ? 'ability' : 'item';
+  const mode = LB_MODE[modeKey];
+  const diff = (prefix === 'b' || prefix === 'm') ? _lbDiff[prefix] : null;
   const listEl = document.getElementById(prefix + '-lb-list');
   listEl.innerHTML = '<div style="padding:20px;text-align:center;color:#555">불러오는 중...</div>';
 
   let rows = [];
   if (window._lbGet) {
-    try { rows = await window._lbGet(mode); } catch(e) {}
+    try { rows = await window._lbGet(mode, diff); } catch(e) {}
   }
   if (!rows.length) {
     const local = JSON.parse(localStorage.getItem('pq_lb') || '[]');
-    rows = local.filter(x => x.mode === mode).sort((a,b) => b.correct - a.correct).slice(0, 100);
+    rows = local.filter(x => x.mode === mode && (diff === null || x.difficulty === diff))
+      .sort((a,b) => b.correct - a.correct).slice(0, 100);
   }
 
   if (!rows.length) {
@@ -2306,14 +2347,14 @@ loadAllData();
     }
   };
 
-  window._lbGet = async (mode) => {
-    const q = query(
-      collection(firestoreDb, 'leaderboard'),
+  window._lbGet = async (mode, diff) => {
+    const constraints = [
       where('mode', '==', mode),
       orderBy('correct', 'desc'),
       limit(100)
-    );
-    const snap = await getDocs(q);
+    ];
+    if (diff) constraints.splice(1, 0, where('difficulty', '==', diff));
+    const snap = await getDocs(query(collection(firestoreDb, 'leaderboard'), ...constraints));
     return snap.docs.map(d => d.data());
   };
 
