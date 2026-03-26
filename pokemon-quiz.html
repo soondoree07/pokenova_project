@@ -1291,7 +1291,7 @@ function bLoadPokemon() {
   bUpdateLives();
 
   const p = DB.pokemon[bGetNextId()];
-  bKoName  = p.ko;
+  bKoName  = (p.ko||'').replace(/\s/g,'');
   bEnName  = p.en.toLowerCase();
   bPokemon = p;
   document.getElementById('b-pokemon-number').textContent = `#${String(p.id).padStart(4,'0')}`;
@@ -1566,7 +1566,7 @@ function mLoadMove() {
   hideRankCard('m');
 
   const m = DB.moves[mGetNextId()];
-  mKoName = m.ko;
+  mKoName = (m.ko||'').replace(/\s/g,'');
   mEnName = m.en;
   mMove   = m;
   renderMovePanel();
@@ -1744,7 +1744,7 @@ function aLoadAbility() {
   document.getElementById('a-name-revealed').className = 'name-revealed';
 
   const a = DB.abilities[aGetNextId()];
-  aKoName  = a.ko;
+  aKoName  = (a.ko||'').replace(/\s/g,'');
   aEnName  = a.en;
   aAbility = a;
   document.getElementById('a-desc').textContent = a.desc;
@@ -1895,7 +1895,7 @@ function iLoadItem() {
   document.getElementById('i-name-revealed').className = 'name-revealed';
 
   const item = iCatItems[iGetNextId()];
-  iKoName = item.ko;
+  iKoName = (item.ko||'').replace(/\s/g,'');
   iEnName = item.en;
   iItem   = item;
 
