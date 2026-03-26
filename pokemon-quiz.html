@@ -1094,10 +1094,8 @@ let bScoreW = parseInt(localStorage.getItem('bw')||'0');
 let bScoreS = parseInt(localStorage.getItem('bs')||'0');
 
 function bUpdateScore() {
-  document.getElementById('b-score-correct').textContent = bScoreC;
-  document.getElementById('b-score-wrong').textContent   = bScoreW;
   document.getElementById('b-score-streak').textContent  = bScoreS;
-  localStorage.setItem('bc',bScoreC); localStorage.setItem('bw',bScoreW); localStorage.setItem('bs',bScoreS);
+  localStorage.setItem('bs',bScoreS);
 }
 bUpdateScore();
 
@@ -1443,10 +1441,8 @@ let mScoreW=parseInt(localStorage.getItem('mw')||'0');
 let mScoreS=parseInt(localStorage.getItem('ms')||'0');
 
 function mUpdateScore() {
-  document.getElementById('m-score-correct').textContent = mScoreC;
-  document.getElementById('m-score-wrong').textContent   = mScoreW;
   document.getElementById('m-score-streak').textContent  = mScoreS;
-  localStorage.setItem('mc',mScoreC); localStorage.setItem('mw',mScoreW); localStorage.setItem('ms',mScoreS);
+  localStorage.setItem('ms',mScoreS);
 }
 mUpdateScore();
 
@@ -1712,11 +1708,7 @@ let aScoreW_total = parseInt(localStorage.getItem('aw')||'0');
 let aScoreS = parseInt(localStorage.getItem('as')||'0');
 
 function aUpdateScore() {
-  document.getElementById('a-score-correct').textContent = aScoreC;
-  document.getElementById('a-score-wrong').textContent   = aScoreW_total;
   document.getElementById('a-score-streak').textContent  = aScoreS;
-  localStorage.setItem('ac', aScoreC);
-  localStorage.setItem('aw', aScoreW_total);
   localStorage.setItem('as', aScoreS);
 }
 aUpdateScore();
@@ -1921,11 +1913,7 @@ let iScoreW_total = parseInt(localStorage.getItem('iw')||'0');
 let iScoreS = parseInt(localStorage.getItem('is')||'0');
 
 function iUpdateScore() {
-  document.getElementById('i-score-correct').textContent = iScoreC;
-  document.getElementById('i-score-wrong').textContent   = iScoreW_total;
   document.getElementById('i-score-streak').textContent  = iScoreS;
-  localStorage.setItem('ic', iScoreC);
-  localStorage.setItem('iw', iScoreW_total);
   localStorage.setItem('is', iScoreS);
 }
 iUpdateScore();
