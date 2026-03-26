@@ -1080,7 +1080,7 @@ async function loadAllData() {
     });
   });
   DB.pokemon = p.concat(formEntries);
-  DB.moves     = m.filter(x => hasKorean(x.ko) && (x.id < 622 || x.id > 658)); // Z기술(ID 622-658) 제외
+  DB.moves     = m.filter(x => hasKorean(x.ko) && (x.id < 622 || x.id > 658) && (x.pp !== 1 || x.id === 165 || x.id === 166)); // Z기술 제외 (범용 622-658, 전용 PP=1 / 발버둥·스케치 제외)
   DB.abilities = a.filter(x => hasKorean(x.ko));
   DB.items     = i.filter(x => hasKorean(x.ko) && hasKorean(x.desc || ''));
 }
