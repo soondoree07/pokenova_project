@@ -315,7 +315,7 @@
     <!-- ══ Firebase 안내 배너 ══ -->
     <div class="firebase-banner">
       <span class="firebase-banner-icon">📡</span>
-      <span>현재 이 기기의 데이터만 표시됩니다. Firebase 연결 시 전체 유저 데이터를 볼 수 있습니다.</span>
+      <span>Firebase 연결 중...</span>
     </div>
 
     <!-- ══ 섹션: 개요 통계 ══ -->
@@ -504,27 +504,31 @@ function esc(s) {
     .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-/* ══ 데이터 로드 ══ */
-function getSessions() {
+/* ══ 데이터 로드 (Firestore 우선, localStorage 백업) ══ */
+async function getSessions() {
+  if (window._adminGetSessions) {
+    try { return await window._adminGetSessions(); } catch(e) { console.warn('Firestore sessions:', e); }
+  }
   return JSON.parse(localStorage.getItem('pq_sessions') || '[]');
 }
-function getReports() {
+async function getReports() {
+  if (window._adminGetReports) {
+    try { return await window._adminGetReports(); } catch(e) { console.warn('Firestore reports:', e); }
+  }
   return JSON.parse(localStorage.getItem('pq_reports') || '[]');
 }
 
 /* ══ 대시보드 전체 렌더 ══ */
-function loadDashboard() {
-  renderOverviewStats();
-  renderQuizStats();
-  renderReportTable();
-  renderSessionTable();
+async function loadDashboard() {
+  const [sessions, reports] = await Promise.all([getSessions(), getReports()]);
+  renderOverviewStats(sessions, reports);
+  renderQuizStats(sessions);
+  renderReportTable(reports);
+  renderSessionTable(sessions);
 }
 
 /* ── 개요 통계 ── */
-function renderOverviewStats() {
-  const sessions = getSessions();
-  const reports  = getReports();
-
+function renderOverviewStats(sessions, reports) {
   const totalCorrect  = sessions.reduce((s, x) => s + (x.correct || 0), 0);
   const pendingCount  = reports.filter(r => !r.resolved).length;
   const todayCount    = sessions.filter(s => isToday(s.ts)).length;
@@ -536,8 +540,7 @@ function renderOverviewStats() {
 }
 
 /* ── 퀴즈별 통계 ── */
-function renderQuizStats() {
-  const sessions = getSessions();
+function renderQuizStats(sessions) {
   const modes = [
     { key: 'pokemon', label: '🎴 포켓몬 맞추기' },
     { key: 'move',    label: '⚔️ 기술 맞추기' },
@@ -574,13 +577,12 @@ function setReportFilter(f) {
   reportFilter = f;
   document.getElementById('rf-pending').classList.toggle('active', f === 'pending');
   document.getElementById('rf-all').classList.toggle('active', f === 'all');
-  renderReportTable();
+  getReports().then(renderReportTable);
 }
 
 /* ── 신고 테이블 ── */
-function renderReportTable() {
-  const all = getReports();
-  const rows = reportFilter === 'pending' ? all.filter(r => !r.resolved) : all;
+function renderReportTable(reports) {
+  const rows = reportFilter === 'pending' ? reports.filter(r => !r.resolved) : reports;
   document.getElementById('report-count').textContent = rows.length ? rows.length + '건' : '';
 
   const tbody = document.getElementById('report-tbody');
@@ -589,10 +591,7 @@ function renderReportTable() {
     return;
   }
 
-  tbody.innerHTML = rows.map((r, idx) => {
-    const realIdx = reportFilter === 'pending'
-      ? all.findIndex(x => x.id === r.id)
-      : idx;
+  tbody.innerHTML = rows.map(r => {
     const statusBadge = r.resolved
       ? '<span class="badge badge-muted">처리완료</span>'
       : '<span class="badge badge-orange">미처리</span>';
@@ -612,22 +611,24 @@ function renderReportTable() {
   }).join('');
 }
 
-function resolveReport(id) {
-  const arr = getReports();
+async function resolveReport(id) {
+  // localStorage
+  const arr = JSON.parse(localStorage.getItem('pq_reports') || '[]');
   const idx = arr.findIndex(r => r.id === id);
-  if (idx === -1) return;
-  arr[idx].resolved = true;
-  localStorage.setItem('pq_reports', JSON.stringify(arr));
-  renderOverviewStats();
-  renderReportTable();
+  if (idx !== -1) { arr[idx].resolved = true; localStorage.setItem('pq_reports', JSON.stringify(arr)); }
+  // Firestore
+  if (window._adminResolveReport) await window._adminResolveReport(id).catch(()=>{});
+  loadDashboard();
 }
 
-function deleteReport(id) {
+async function deleteReport(id) {
   if (!confirm('이 신고를 삭제하시겠습니까?')) return;
-  const arr = getReports().filter(r => r.id !== id);
+  // localStorage
+  const arr = JSON.parse(localStorage.getItem('pq_reports') || '[]').filter(r => r.id !== id);
   localStorage.setItem('pq_reports', JSON.stringify(arr));
-  renderOverviewStats();
-  renderReportTable();
+  // Firestore
+  if (window._adminDeleteReport) await window._adminDeleteReport(id).catch(()=>{});
+  loadDashboard();
 }
 
 /* ── 세션 필터 ── */
@@ -637,7 +638,7 @@ function setSessionFilter(f) {
     const el = document.getElementById('sf-' + k);
     if (el) el.classList.toggle('active', k === f);
   });
-  renderSessionTable();
+  getSessions().then(renderSessionTable);
 }
 
 /* ── 세션 테이블 ── */
@@ -648,10 +649,9 @@ const MODE_BADGE_CLASS = {
   item:    'badge-yellow',
 };
 
-function renderSessionTable() {
-  const all = getSessions();
-  let rows = sessionFilter === 'all' ? all : all.filter(s => s.mode === sessionFilter);
-  rows = rows.slice(0, 100);  // 최근 100개
+function renderSessionTable(sessions) {
+  let rows = sessionFilter === 'all' ? sessions : sessions.filter(s => s.mode === sessionFilter);
+  rows = rows.slice(0, 100);
   document.getElementById('session-count').textContent = rows.length ? rows.length + '개 (최근 100)' : '';
 
   const tbody = document.getElementById('session-tbody');
@@ -690,6 +690,57 @@ function clearAllData() {
   alert('데이터가 초기화되었습니다.');
   loadDashboard();
 }
+</script>
+
+<!-- Firebase 모듈 초기화 -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
+  import {
+    getFirestore, collection, getDocs, doc,
+    query, orderBy, where, updateDoc, deleteDoc
+  } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey:            "AIzaSyD1mW-CLjA6Y2rwhNmGJWPZaSBz7AFanv0",
+    authDomain:        "pokenova-f17e7.firebaseapp.com",
+    projectId:         "pokenova-f17e7",
+    storageBucket:     "pokenova-f17e7.firebasestorage.app",
+    messagingSenderId: "801789401448",
+    appId:             "1:801789401448:web:1d6c49a3c81a78e0649edd",
+    measurementId:     "G-42TMREJVJT"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db  = getFirestore(app);
+
+  window._adminGetSessions = async () => {
+    const snap = await getDocs(query(collection(db, 'sessions'), orderBy('ts', 'desc')));
+    return snap.docs.map(d => ({ _docId: d.id, ...d.data() }));
+  };
+
+  window._adminGetReports = async () => {
+    const snap = await getDocs(query(collection(db, 'reports'), orderBy('ts', 'desc')));
+    return snap.docs.map(d => ({ _docId: d.id, ...d.data() }));
+  };
+
+  window._adminResolveReport = async (customId) => {
+    const snap = await getDocs(query(collection(db, 'reports'), where('id', '==', customId)));
+    for (const d of snap.docs) await updateDoc(doc(db, 'reports', d.id), { resolved: true });
+  };
+
+  window._adminDeleteReport = async (customId) => {
+    const snap = await getDocs(query(collection(db, 'reports'), where('id', '==', customId)));
+    for (const d of snap.docs) await deleteDoc(doc(db, 'reports', d.id));
+  };
+
+  // Firebase 연결됨 → 배너 업데이트
+  const banner = document.querySelector('.firebase-banner');
+  if (banner) {
+    banner.style.background = 'rgba(76,175,80,0.12)';
+    banner.style.borderColor = 'rgba(76,175,80,0.4)';
+    banner.querySelector('span:last-child').textContent = 'Firebase 연결됨 — 전체 유저 데이터를 표시합니다.';
+    banner.querySelector('.firebase-banner-icon').textContent = '✅';
+  }
 </script>
 </body>
 </html>

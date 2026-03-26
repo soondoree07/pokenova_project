@@ -844,147 +844,9 @@
 </div>
 
 <script>
-/* ═══════════════════════════════════════════════════════════
-   ▼ Firebase 설정 ─ 아래 값을 본인의 Firebase 프로젝트로 교체하세요
-   설정 방법: https://console.firebase.google.com/
-   1) 프로젝트 생성 → 웹 앱 추가 → 아래 값 붙여넣기
-   2) Authentication → 로그인 방법 → Google 활성화
-   3) Firestore Database → 프로덕션 모드로 생성
-   4) Firestore 규칙:
-      allow read: if request.auth != null;
-      allow write: if request.auth != null && request.auth.uid == userId;
-═══════════════════════════════════════════════════════════ */
-const FIREBASE_CONFIG = {
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: ""
-};
-
-/* ═══════════════════════════════════════════════════════════
-   Firebase 초기화
-═══════════════════════════════════════════════════════════ */
-let db = null, auth = null, currentUser = null;
-const fbReady = FIREBASE_CONFIG.apiKey !== '';
-
-if (fbReady) {
-  try {
-    firebase.initializeApp(FIREBASE_CONFIG);
-    auth = firebase.auth();
-    db   = firebase.firestore();
-
-    auth.onAuthStateChanged(user => {
-      currentUser = user;
-      if (user) {
-        document.getElementById('auth-loggedout').style.display = 'none';
-        document.getElementById('auth-loggedin').style.display  = 'flex';
-        document.getElementById('user-photo').src  = user.photoURL || '';
-        document.getElementById('user-name').textContent = user.displayName || user.email;
-        // Firestore에 유저 등록/업데이트
-        db.collection('users').doc(user.uid).set({
-          name: user.displayName || '',
-          email: user.email || '',
-          photo: user.photoURL || '',
-          lastSeen: firebase.firestore.FieldValue.serverTimestamp()
-        }, { merge: true });
-        // 일별 방문 기록 (관리자 통계용)
-        const _today = new Date().toISOString().slice(0,10);
-        db.collection('daily').doc(_today).collection('visitors').doc(user.uid)
-          .set({ name: user.displayName||'', ts: firebase.firestore.FieldValue.serverTimestamp() })
-          .catch(()=>{});
-      } else {
-        document.getElementById('auth-loggedout').style.display = 'flex';
-        document.getElementById('auth-loggedin').style.display  = 'none';
-      }
-    });
-  } catch(e) {
-    console.warn('Firebase init error:', e);
-  }
-}
-
-function openLoginModal() {
-  document.getElementById('login-modal').style.display = 'flex';
-  if (!fbReady) {
-    document.getElementById('firebase-setup-notice').style.display = 'block';
-    document.getElementById('btn-google-signin').disabled = true;
-  }
-}
-function closeLoginModal()        { document.getElementById('login-modal').style.display = 'none'; }
-function closeLoginModalBg(e)     { if (e.target === document.getElementById('login-modal')) closeLoginModal(); }
-
-async function fbSignIn() {
-  if (!fbReady || !auth) return;
-  try {
-    const provider = new firebase.auth.GoogleAuthProvider();
-    await auth.signInWithPopup(provider);
-    closeLoginModal();
-  } catch(e) { console.warn('Sign in error:', e); }
-}
-
-async function fbSignOut() {
-  if (!auth) return;
-  await auth.signOut();
-}
-
-/* 점수를 Firestore에 업데이트하고 랭킹 반환 */
-async function fbUpdateAndShowRank(mode, correct, wrong) {
-  const rankCard    = document.getElementById(`${mode[0]}-rank-card`);
-  const percentEl   = document.getElementById(`${mode[0]}-rank-percent`);
-  const totalEl     = document.getElementById(`${mode[0]}-rank-total`);
-  const barEl       = document.getElementById(`${mode[0]}-rank-bar`);
-  const loginPrompt = document.getElementById(`${mode[0]}-rank-login`);
-
-  // 랭킹 카드 표시 (로그인 여부와 무관하게 카드는 보여줌)
-  rankCard.classList.add('show', 'loading-rank');
-  loginPrompt.style.display = 'none';
-
-  if (!fbReady || !currentUser || !db) {
-    // 로그인 안된 경우
-    percentEl.innerHTML = '—';
-    totalEl.textContent  = '';
-    barEl.style.width    = '0%';
-    loginPrompt.style.display = 'block';
-    rankCard.classList.remove('loading-rank');
-    return;
-  }
-
-  const field = mode + '_correct'; // 'pokemon_correct' or 'move_correct'
-  try {
-    // 1) 내 점수 저장 (정답 + 오답 + lastSeen)
-    await db.collection('users').doc(currentUser.uid).set(
-      { [field]: correct, [mode + '_wrong']: wrong||0, lastSeen: firebase.firestore.FieldValue.serverTimestamp() },
-      { merge: true }
-    );
-
-    // 2) 나보다 낮은 점수 유저 수 & 전체 유저 수
-    const [belowSnap, totalSnap] = await Promise.all([
-      db.collection('users').where(field, '<', correct).get(),
-      db.collection('users').get()
-    ]);
-
-    const below = belowSnap.size;
-    const total = totalSnap.size;
-
-    if (total <= 1) {
-      percentEl.innerHTML  = `1위 <span>🥇</span>`;
-      totalEl.textContent  = '첫 번째 플레이어!';
-      barEl.style.width    = '100%';
-    } else {
-      const topPct = Math.ceil(((total - below) / total) * 100);
-      percentEl.innerHTML  = `상위 <b style="font-size:1.6rem">${topPct}</b>%`;
-      totalEl.textContent  = `전체 ${total}명 기준`;
-      barEl.style.width    = Math.max(4, 100 - topPct) + '%';
-    }
-  } catch(e) {
-    console.warn('Rank error:', e);
-    percentEl.innerHTML  = '—';
-    totalEl.textContent  = '랭킹 불러오기 실패';
-  }
-
-  rankCard.classList.remove('loading-rank');
-}
+/* Firestore db 인스턴스 (firebase-module.js에서 window._db로 설정됨) */
+let db = null;
+window.addEventListener('fb-ready', () => { db = window._db; });
 
 /* ═══════════════════════════════════════════════════════════
    공통 유틸
@@ -2073,25 +1935,82 @@ function submitReport() {
     ts:        Date.now(),
     resolved:  false
   };
+  // localStorage 백업
   const arr = JSON.parse(localStorage.getItem('pq_reports') || '[]');
   arr.unshift(report);
   if (arr.length > 500) arr.length = 500;
   localStorage.setItem('pq_reports', JSON.stringify(arr));
+  // Firestore 저장
+  if (db) {
+    db.collection('reports').add(report).catch(e => console.warn('report save error:', e));
+  }
   closeReportModal();
-  // TODO: Firebase 연결 후 Firestore reports 컬렉션에도 저장
 }
 
 function saveSession(mode, modeLabel, difficulty, correct, wrong) {
   const session = { mode, modeLabel, difficulty, correct, wrong, ts: Date.now() };
+  // localStorage 백업
   const arr = JSON.parse(localStorage.getItem('pq_sessions') || '[]');
   arr.unshift(session);
   if (arr.length > 1000) arr.length = 1000;
   localStorage.setItem('pq_sessions', JSON.stringify(arr));
-  // TODO: Firebase 연결 후 Firestore sessions 컬렉션에도 저장
+  // Firestore 저장
+  if (db) {
+    db.collection('sessions').add(session).catch(e => console.warn('session save error:', e));
+  }
 }
 
 /* ══ 초기화 ══ */
 loadAllData();
+</script>
+
+<!-- Firebase 모듈 초기화 (Firestore 전용) -->
+<script type="module">
+  import { initializeApp }  from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
+  import { getFirestore, collection, addDoc, getDocs, query, orderBy, limit }
+    from "https://www.gstatic.com/firebasejs/12.11.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey:            "AIzaSyD1mW-CLjA6Y2rwhNmGJWPZaSBz7AFanv0",
+    authDomain:        "pokenova-f17e7.firebaseapp.com",
+    projectId:         "pokenova-f17e7",
+    storageBucket:     "pokenova-f17e7.firebasestorage.app",
+    messagingSenderId: "801789401448",
+    appId:             "1:801789401448:web:1d6c49a3c81a78e0649edd",
+    measurementId:     "G-42TMREJVJT"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const firestoreDb = getFirestore(app);
+
+  // compat API 래퍼 (기존 db.collection().add() 형식 유지)
+  window._db = {
+    collection(name) {
+      return {
+        add(data) { return addDoc(collection(firestoreDb, name), data); },
+        async get() {
+          const snap = await getDocs(collection(firestoreDb, name));
+          return { docs: snap.docs.map(d => ({ id: d.id, data: () => d.data() })), size: snap.size };
+        },
+        orderBy(field, dir) {
+          return {
+            limit(n) {
+              return {
+                async get() {
+                  const q = query(collection(firestoreDb, name), orderBy(field, dir||'asc'), limit(n));
+                  const snap = await getDocs(q);
+                  return { docs: snap.docs.map(d => ({ id: d.id, data: () => d.data() })) };
+                }
+              };
+            }
+          };
+        }
+      };
+    }
+  };
+
+  // 메인 스크립트에 db 준비됨 알림
+  window.dispatchEvent(new Event('fb-ready'));
 </script>
 </body>
 </html>
