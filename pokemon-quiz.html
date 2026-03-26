@@ -765,7 +765,7 @@
     </div>
     <div class="b-game-info" style="display:flex">
       <div class="b-lives" id="a-lives">❤️❤️❤️</div>
-      <div style="font-size:0.75rem;color:#444">힌트 없음</div>
+      <div class="b-hint-badge" id="a-hint-badge">힌트 3개</div>
     </div>
     <div class="divider"></div>
     <div class="loading-text" id="a-loading" style="position:relative;padding:20px 0">불러오는 중...</div>
@@ -785,6 +785,7 @@
       <input type="text" id="a-guess-input" placeholder="특성 이름 입력..." autocomplete="off" />
       <button class="btn-primary" id="a-btn-guess" onclick="aCheckGuess()">확인</button>
     </div>
+    <button class="btn-ghost"   id="a-btn-hint" onclick="aShowHint()">힌트 보기 (첫 글자)</button>
     <button class="btn-danger"  id="a-btn-skip" onclick="aSkip()">포기하기 (정답 보기)</button>
     <button class="btn-outline" id="a-btn-next" onclick="aNextAbility()" style="display:none">다음 특성 →</button>
   </div>
@@ -1709,7 +1710,8 @@ function aGetNextId() {
 }
 
 let aAbility = null, aKoName = '', aEnName = '', aRevealed = false, aWrongThisRound = false;
-let aLives = 3, aSessionC = 0, aSessionW = 0;
+let aLives = 3, aHints = 3, aSessionC = 0, aSessionW = 0;
+let aHintText = '';
 let aScoreC = parseInt(localStorage.getItem('ac')||'0');
 let aScoreW_total = parseInt(localStorage.getItem('aw')||'0');
 let aScoreS = parseInt(localStorage.getItem('as')||'0');
@@ -1728,8 +1730,13 @@ function aUpdateLives() {
   document.getElementById('a-lives').textContent = '❤️'.repeat(aLives) + '🖤'.repeat(3 - aLives);
 }
 
+function aUpdateHintBadge() {
+  document.getElementById('a-hint-badge').textContent = `힌트 ${aHints}개`;
+  document.getElementById('a-btn-hint').disabled = (aHints <= 0);
+}
+
 function aLoadAbility() {
-  aRevealed = false; aKoName = ''; aEnName = ''; aAbility = null; aWrongThisRound = false;
+  aRevealed = false; aKoName = ''; aEnName = ''; aAbility = null; aWrongThisRound = false; aHintText = '';
   document.getElementById('a-loading').style.display = 'block';
   document.getElementById('a-loading').textContent = '불러오는 중...';
   document.getElementById('a-info-panel').style.display = 'none';
@@ -1738,10 +1745,12 @@ function aLoadAbility() {
   document.getElementById('a-guess-input').value = '';
   document.getElementById('a-guess-input').disabled = false;
   document.getElementById('a-btn-guess').disabled = false;
+  document.getElementById('a-btn-hint').style.display = 'block';
   document.getElementById('a-btn-skip').style.display = 'block';
   document.getElementById('a-btn-next').style.display = 'none';
   document.getElementById('a-name-revealed').textContent = '';
   document.getElementById('a-name-revealed').className = 'name-revealed';
+  aUpdateHintBadge();
 
   const a = DB.abilities[aGetNextId()];
   aKoName  = (a.ko||'').replace(/\s/g,'');
@@ -1776,6 +1785,7 @@ function aReveal(isCorrect) {
   aRevealed = true;
   document.getElementById('a-guess-input').disabled = true;
   document.getElementById('a-btn-guess').disabled = true;
+  document.getElementById('a-btn-hint').style.display = 'none';
   document.getElementById('a-btn-skip').style.display = 'none';
   document.getElementById('a-btn-next').style.display = 'block';
   const displayName = aKoName || aEnName;
@@ -1800,13 +1810,22 @@ function aGameOver() {
 }
 
 function aResetGame() {
-  aLives = 3; aSessionC = 0; aSessionW = 0;
+  aLives = 3; aHints = 3; aSessionC = 0; aSessionW = 0;
   aUpdateLives();
   document.getElementById('a-gameover').style.display = 'none';
   aLoadAbility();
 }
 
 function aNextAbility() { aLoadAbility(); }
+
+function aShowHint() {
+  if (aRevealed || !aKoName || aHints <= 0) return;
+  aHints--;
+  aUpdateHintBadge();
+  aHintText = `힌트: ${aKoName[0]}${'＿'.repeat(aKoName.length-1)}  (${aKoName.length}글자)`;
+  document.getElementById('a-status').textContent = aHintText;
+  document.getElementById('a-status').className = 'status hint';
+}
 
 function aSkip() {
   if (aRevealed) return;
