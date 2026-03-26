@@ -1120,7 +1120,7 @@ function bGetNextId() {
   return bPool[bPoolIdx++];
 }
 
-let bPokemon = null, bKoName = '', bEnName = '', bRevealed = false, bLoadedImg = null, bHintText = '';
+let bPokemon = null, bKoName = '', bEnName = '', bRevealed = false, bLoadedImg = null, bHintText = '', bWrongThisRound = false;
 let bScoreC = parseInt(localStorage.getItem('bc')||'0');
 let bScoreW = parseInt(localStorage.getItem('bw')||'0');
 let bScoreS = parseInt(localStorage.getItem('bs')||'0');
@@ -1267,7 +1267,7 @@ function renderBarcodeDecoration() {
 }
 
 function bLoadPokemon() {
-  bRevealed = false; bLoadedImg = null; bKoName = ''; bEnName = ''; bHintText = '';
+  bRevealed = false; bLoadedImg = null; bKoName = ''; bEnName = ''; bHintText = ''; bWrongThisRound = false;
   const cv = document.getElementById('pokemon-canvas');
   cv.style.display = 'none';
   document.getElementById('b-loading').style.display = 'block';
@@ -1319,6 +1319,7 @@ function bCheckGuess() {
     bReveal(true);
   } else {
     bScoreW++; bScoreS=0; bSessionW++; bUpdateScore();
+    bWrongThisRound = true;
     bLives--; bUpdateLives();
     document.getElementById('b-status').textContent = `"${guess}" 은(는) 틀렸습니다!  (목숨 ${bLives}개 남음)`;
     document.getElementById('b-status').className   = 'status wrong';
@@ -1383,10 +1384,12 @@ function bNextPokemon() {
 
 function bSkip() {
   if (bRevealed) return;
-  bScoreW++; bScoreS = 0; bSessionW++; bUpdateScore();
-  if (bLives !== Infinity) bLives--;
+  if (!bWrongThisRound) {
+    bScoreW++; bScoreS = 0; bSessionW++; bUpdateScore();
+    if (bLives !== Infinity) bLives--;
+    bUpdateLives();
+  }
   bReveal(false);
-  bUpdateLives();
   if (bLives <= 0) setTimeout(bGameOver, 1200);
 }
 
@@ -1452,7 +1455,7 @@ function mGetNextId() {
 }
 
 let mDifficulty='easy', mMove=null, mKoName='', mEnName='', mRevealed=false, mGameStarted=false;
-let mLives = 3, mSessionC = 0, mSessionW = 0;
+let mLives = 3, mSessionC = 0, mSessionW = 0, mWrongThisRound = false;
 let mScoreC=parseInt(localStorage.getItem('mc')||'0');
 let mScoreW=parseInt(localStorage.getItem('mw')||'0');
 let mScoreS=parseInt(localStorage.getItem('ms')||'0');
@@ -1544,7 +1547,7 @@ function renderMovePanel(forceReveal) {
 }
 
 function mLoadMove() {
-  mRevealed=false; mKoName=''; mEnName=''; mMove=null;
+  mRevealed=false; mKoName=''; mEnName=''; mMove=null; mWrongThisRound=false;
   document.getElementById('m-loading').style.display='block';
   document.getElementById('m-loading').textContent='불러오는 중...';
   document.getElementById('m-info-panel').style.display='none';
@@ -1579,6 +1582,7 @@ function mCheckGuess() {
     mReveal(true);
   } else {
     mScoreW++; mScoreS=0; mSessionW++; mUpdateScore();
+    mWrongThisRound = true;
     if (mLives !== Infinity) mLives--;
     mUpdateLives();
     const livesMsg = mLives === Infinity ? '' : ` (목숨 ${mLives}개 남음)`;
@@ -1663,10 +1667,12 @@ function mResetGame() {
 
 function mSkip() {
   if (mRevealed) return;
-  mScoreW++; mScoreS = 0; mSessionW++; mUpdateScore();
-  if (mLives !== Infinity) mLives--;
+  if (!mWrongThisRound) {
+    mScoreW++; mScoreS = 0; mSessionW++; mUpdateScore();
+    if (mLives !== Infinity) mLives--;
+    mUpdateLives();
+  }
   mReveal(false);
-  mUpdateLives();
   if (mLives <= 0) setTimeout(mGameOver, 1200);
 }
 
@@ -1702,7 +1708,7 @@ function aGetNextId() {
   return aPool[aPoolIdx++];
 }
 
-let aAbility = null, aKoName = '', aEnName = '', aRevealed = false;
+let aAbility = null, aKoName = '', aEnName = '', aRevealed = false, aWrongThisRound = false;
 let aLives = 3, aSessionC = 0, aSessionW = 0;
 let aScoreC = parseInt(localStorage.getItem('ac')||'0');
 let aScoreW_total = parseInt(localStorage.getItem('aw')||'0');
@@ -1723,7 +1729,7 @@ function aUpdateLives() {
 }
 
 function aLoadAbility() {
-  aRevealed = false; aKoName = ''; aEnName = ''; aAbility = null;
+  aRevealed = false; aKoName = ''; aEnName = ''; aAbility = null; aWrongThisRound = false;
   document.getElementById('a-loading').style.display = 'block';
   document.getElementById('a-loading').textContent = '불러오는 중...';
   document.getElementById('a-info-panel').style.display = 'none';
@@ -1757,6 +1763,7 @@ function aCheckGuess() {
     aReveal(true);
   } else {
     aScoreW_total++; aScoreS = 0; aSessionW++; aUpdateScore();
+    aWrongThisRound = true;
     aLives--; aUpdateLives();
     document.getElementById('a-status').textContent = `"${guess}" 은(는) 틀렸습니다! (목숨 ${aLives}개 남음)`;
     document.getElementById('a-status').className = 'status wrong';
@@ -1803,8 +1810,10 @@ function aNextAbility() { aLoadAbility(); }
 
 function aSkip() {
   if (aRevealed) return;
-  aScoreW_total++; aScoreS = 0; aSessionW++; aUpdateScore();
-  aLives--; aUpdateLives();
+  if (!aWrongThisRound) {
+    aScoreW_total++; aScoreS = 0; aSessionW++; aUpdateScore();
+    aLives--; aUpdateLives();
+  }
   aReveal(false);
   if (aLives <= 0) setTimeout(aGameOver, 1200);
 }
@@ -1848,7 +1857,7 @@ function iGetNextId() {
   return iPool[iPoolIdx++];
 }
 
-let iItem = null, iKoName = '', iEnName = '', iRevealed = false, iHintText = '';
+let iItem = null, iKoName = '', iEnName = '', iRevealed = false, iHintText = '', iWrongThisRound = false;
 let iLives = 3, iSessionC = 0, iSessionW = 0;
 let iScoreC = parseInt(localStorage.getItem('ic')||'0');
 let iScoreW_total = parseInt(localStorage.getItem('iw')||'0');
@@ -1869,7 +1878,7 @@ function iUpdateLives() {
 }
 
 function iLoadItem() {
-  iRevealed = false; iKoName = ''; iEnName = ''; iItem = null; iHintText = '';
+  iRevealed = false; iKoName = ''; iEnName = ''; iItem = null; iHintText = ''; iWrongThisRound = false;
   document.getElementById('i-loading').style.display = 'block';
   document.getElementById('i-loading').textContent = '불러오는 중...';
   document.getElementById('i-info-panel').style.display = 'none';
@@ -1923,6 +1932,7 @@ function iCheckGuess() {
     iReveal(true);
   } else {
     iScoreW_total++; iScoreS = 0; iSessionW++; iUpdateScore();
+    iWrongThisRound = true;
     iLives--; iUpdateLives();
     document.getElementById('i-status').textContent = `"${guess}" 은(는) 틀렸습니다! (목숨 ${iLives}개 남음)`;
     document.getElementById('i-status').className = 'status wrong';
@@ -1989,8 +1999,10 @@ function iNextItem() { iLoadItem(); }
 
 function iSkip() {
   if (iRevealed) return;
-  iScoreW_total++; iScoreS = 0; iSessionW++; iUpdateScore();
-  iLives--; iUpdateLives();
+  if (!iWrongThisRound) {
+    iScoreW_total++; iScoreS = 0; iSessionW++; iUpdateScore();
+    iLives--; iUpdateLives();
+  }
   iReveal(false);
   if (iLives <= 0) setTimeout(iGameOver, 1200);
 }
