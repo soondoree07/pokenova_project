@@ -2157,10 +2157,20 @@ document.getElementById('i-guess-input').addEventListener('keydown', e => {
 const LB_MODE = { barcode:'pokemon', move:'move', ability:'ability', item:'item' };
 const LB_LABEL = { barcode:'포켓몬 맞추기', move:'기술 맞추기', ability:'특성 맞추기', item:'도구 맞추기' };
 
+const NICK_BLACKLIST = [
+  '씨발','시발','ㅅㅂ','개새끼','개새','새끼','지랄','존나','좆','좇','보지','자지','씹','개년','미친놈','미친년','병신','창녀','창년','뒤져','뒤지','썅','느개비','니애미','니애비','엄창','애미','애비','개소리','닥쳐','잡놈','잡년','화냥',
+  'fuck','shit','asshole','bitch','cunt','dick','pussy','cock','nigger','nigga','faggot','retard','whore','slut','bastard'
+];
+function containsBadWord(nick) {
+  const s = nick.toLowerCase().replace(/\s/g, '');
+  return NICK_BLACKLIST.some(w => s.includes(w.toLowerCase()));
+}
+
 function validateNick(nick) {
   if (!nick.trim()) return '닉네임을 입력해주세요';
   if (!/^[a-zA-Z0-9가-힣]+$/.test(nick)) return '한글, 영어, 숫자만 사용 가능해요';
   if (nick.length > 10) return '최대 10글자까지 입력 가능해요';
+  if (containsBadWord(nick)) return '사용할 수 없는 닉네임이에요';
   return '';
 }
 
