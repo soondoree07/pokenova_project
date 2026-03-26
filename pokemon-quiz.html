@@ -545,6 +545,54 @@
       width: 100%; font-family: inherit; transition: border-color .18s;
     }
     .report-textarea:focus { border-color: #ff9800; }
+
+    /* ══ 리더보드 ══ */
+    .lb-panel {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 14px;
+      padding: 16px;
+      margin-top: 12px;
+      width: 100%;
+      max-width: 520px;
+    }
+    .lb-panel-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #f5c518;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+    .lb-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+    }
+    .lb-table th {
+      color: #555;
+      font-size: 0.7rem;
+      letter-spacing: 0.5px;
+      padding: 4px 6px;
+      border-bottom: 1px solid #222;
+      text-align: left;
+    }
+    .lb-table td {
+      padding: 6px 6px;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    .lb-top3 td { background: rgba(245,197,24,0.05); }
+    .lb-nick-input {
+      width: 100%;
+      padding: 9px 12px;
+      border-radius: 8px;
+      border: 1px solid #333;
+      background: #1a1a1a;
+      color: #f0f0f0;
+      font-size: 0.9rem;
+      outline: none;
+      box-sizing: border-box;
+    }
+    .lb-nick-input:focus { border-color: #f5c518; }
   </style>
 </head>
 <body>
@@ -566,6 +614,7 @@
 <!-- ══ 탭 1: 바코드 포켓몬 퀴즈 ══ -->
 <div id="tab-barcode" class="section">
   <div class="card">
+    <button class="btn-ghost" style="width:100%;margin-bottom:8px;font-size:0.82rem" onclick="toggleLb('b')">🏆 리더보드 보기</button>
     <div class="score-row">
       <span>정답 <b id="b-score-correct">0</b></span>
       <span>오답 <b id="b-score-wrong">0</b></span>
@@ -619,11 +668,16 @@
     <button class="btn-report" id="b-btn-report" onclick="openReport('pokemon','포켓몬 맞추기')" style="display:none">⚠️ 오류 신고</button>
     <button class="btn-outline" id="b-btn-next" onclick="bNextPokemon()" style="display:none">다음 포켓몬 →</button>
   </div>
+  <div id="b-lb-panel" class="lb-panel" style="display:none">
+    <div class="lb-panel-title">🏆 포켓몬 맞추기 TOP 100</div>
+    <div id="b-lb-list"></div>
+  </div>
 </div>
 
 <!-- ══ 탭 2: 기술 맞추기 ══ -->
 <div id="tab-move" class="section" style="display:none">
   <div class="card">
+    <button class="btn-ghost" style="width:100%;margin-bottom:8px;font-size:0.82rem" onclick="toggleLb('m')">🏆 리더보드 보기</button>
     <div class="score-row">
       <span>정답 <b id="m-score-correct">0</b></span>
       <span>오답 <b id="m-score-wrong">0</b></span>
@@ -712,11 +766,16 @@
     <button class="btn-report" id="m-btn-report" onclick="openReport('move','기술 맞추기')" style="display:none">⚠️ 오류 신고</button>
     <button class="btn-outline" id="m-btn-next" onclick="mNextMove()" style="display:none">다음 기술 →</button>
   </div>
+  <div id="m-lb-panel" class="lb-panel" style="display:none">
+    <div class="lb-panel-title">🏆 기술 맞추기 TOP 100</div>
+    <div id="m-lb-list"></div>
+  </div>
 </div>
 
 <!-- ══ 탭 3: 특성 맞추기 ══ -->
 <div id="tab-ability" class="section" style="display:none">
   <div class="card">
+    <button class="btn-ghost" style="width:100%;margin-bottom:8px;font-size:0.82rem" onclick="toggleLb('a')">🏆 리더보드 보기</button>
     <div class="score-row">
       <span>정답 <b id="a-score-correct">0</b></span>
       <span>오답 <b id="a-score-wrong">0</b></span>
@@ -751,11 +810,16 @@
     <button class="btn-report" id="a-btn-report" onclick="openReport('ability','특성 맞추기')" style="display:none">⚠️ 오류 신고</button>
     <button class="btn-outline" id="a-btn-next" onclick="aNextAbility()" style="display:none">다음 특성 →</button>
   </div>
+  <div id="a-lb-panel" class="lb-panel" style="display:none">
+    <div class="lb-panel-title">🏆 특성 맞추기 TOP 100</div>
+    <div id="a-lb-list"></div>
+  </div>
 </div>
 
 <!-- ══ 탭 4: 도구 맞추기 ══ -->
 <div id="tab-item" class="section" style="display:none">
   <div class="card">
+    <button class="btn-ghost" style="width:100%;margin-bottom:8px;font-size:0.82rem" onclick="toggleLb('i')">🏆 리더보드 보기</button>
     <div class="score-row">
       <span>정답 <b id="i-score-correct">0</b></span>
       <span>오답 <b id="i-score-wrong">0</b></span>
@@ -789,6 +853,10 @@
     <button class="btn-report" id="i-btn-report" onclick="openReport('item','도구 맞추기')" style="display:none">⚠️ 오류 신고</button>
     <button class="btn-outline" id="i-btn-next" onclick="iNextItem()" style="display:none">다음 도구 →</button>
   </div>
+  <div id="i-lb-panel" class="lb-panel" style="display:none">
+    <div class="lb-panel-title">🏆 도구 맞추기 TOP 100</div>
+    <div id="i-lb-list"></div>
+  </div>
 </div>
 
 <!-- ══ 게임오버 오버레이 ══ -->
@@ -796,7 +864,18 @@
   <div class="gameover-box">
     <div class="gameover-title">💀 게임 오버</div>
     <div class="gameover-score" id="b-gameover-score"></div>
-    <button class="btn-primary" onclick="bResetGame()" style="width:100%;margin-top:8px">완료</button>
+    <div id="b-lb-form" style="width:100%;display:flex;flex-direction:column;gap:8px;margin-top:8px">
+      <div style="font-size:0.78rem;color:#aaa;text-align:center">리더보드에 등록하시겠어요?</div>
+      <input class="lb-nick-input" type="text" id="b-lb-nick" placeholder="닉네임 (한/영/숫자, 최대 10자)" maxlength="10" />
+      <div id="b-lb-err" style="font-size:0.72rem;color:#f44336;min-height:14px;text-align:center"></div>
+      <div style="display:flex;gap:8px">
+        <button class="btn-ghost" style="flex:1" onclick="lbSkip('b')">건너뛰기</button>
+        <button class="btn-primary" style="flex:1;background:#f5c518;color:#000;font-weight:700" onclick="lbSubmit('b')">등록하기</button>
+      </div>
+    </div>
+    <div id="b-lb-done" style="display:none;width:100%;gap:8px;margin-top:8px">
+      <button class="btn-primary" onclick="bResetGame()" style="width:100%">다시 시작</button>
+    </div>
   </div>
 </div>
 
@@ -804,7 +883,18 @@
   <div class="gameover-box">
     <div class="gameover-title">💀 게임 오버</div>
     <div class="gameover-score" id="m-gameover-score"></div>
-    <button class="btn-primary" onclick="mResetGame()" style="width:100%;margin-top:8px">다시 시작</button>
+    <div id="m-lb-form" style="width:100%;display:flex;flex-direction:column;gap:8px;margin-top:8px">
+      <div style="font-size:0.78rem;color:#aaa;text-align:center">리더보드에 등록하시겠어요?</div>
+      <input class="lb-nick-input" type="text" id="m-lb-nick" placeholder="닉네임 (한/영/숫자, 최대 10자)" maxlength="10" />
+      <div id="m-lb-err" style="font-size:0.72rem;color:#f44336;min-height:14px;text-align:center"></div>
+      <div style="display:flex;gap:8px">
+        <button class="btn-ghost" style="flex:1" onclick="lbSkip('m')">건너뛰기</button>
+        <button class="btn-primary" style="flex:1;background:#f5c518;color:#000;font-weight:700" onclick="lbSubmit('m')">등록하기</button>
+      </div>
+    </div>
+    <div id="m-lb-done" style="display:none;width:100%;gap:8px;margin-top:8px">
+      <button class="btn-primary" onclick="mResetGame()" style="width:100%">다시 시작</button>
+    </div>
   </div>
 </div>
 
@@ -812,7 +902,18 @@
   <div class="gameover-box">
     <div class="gameover-title">💀 게임 오버</div>
     <div class="gameover-score" id="a-gameover-score"></div>
-    <button class="btn-primary" onclick="aResetGame()" style="width:100%;margin-top:8px">다시 시작</button>
+    <div id="a-lb-form" style="width:100%;display:flex;flex-direction:column;gap:8px;margin-top:8px">
+      <div style="font-size:0.78rem;color:#aaa;text-align:center">리더보드에 등록하시겠어요?</div>
+      <input class="lb-nick-input" type="text" id="a-lb-nick" placeholder="닉네임 (한/영/숫자, 최대 10자)" maxlength="10" />
+      <div id="a-lb-err" style="font-size:0.72rem;color:#f44336;min-height:14px;text-align:center"></div>
+      <div style="display:flex;gap:8px">
+        <button class="btn-ghost" style="flex:1" onclick="lbSkip('a')">건너뛰기</button>
+        <button class="btn-primary" style="flex:1;background:#f5c518;color:#000;font-weight:700" onclick="lbSubmit('a')">등록하기</button>
+      </div>
+    </div>
+    <div id="a-lb-done" style="display:none;width:100%;gap:8px;margin-top:8px">
+      <button class="btn-primary" onclick="aResetGame()" style="width:100%">다시 시작</button>
+    </div>
   </div>
 </div>
 
@@ -820,7 +921,18 @@
   <div class="gameover-box">
     <div class="gameover-title">💀 게임 오버</div>
     <div class="gameover-score" id="i-gameover-score"></div>
-    <button class="btn-primary" onclick="iResetGame()" style="width:100%;margin-top:8px">다시 시작</button>
+    <div id="i-lb-form" style="width:100%;display:flex;flex-direction:column;gap:8px;margin-top:8px">
+      <div style="font-size:0.78rem;color:#aaa;text-align:center">리더보드에 등록하시겠어요?</div>
+      <input class="lb-nick-input" type="text" id="i-lb-nick" placeholder="닉네임 (한/영/숫자, 최대 10자)" maxlength="10" />
+      <div id="i-lb-err" style="font-size:0.72rem;color:#f44336;min-height:14px;text-align:center"></div>
+      <div style="display:flex;gap:8px">
+        <button class="btn-ghost" style="flex:1" onclick="lbSkip('i')">건너뛰기</button>
+        <button class="btn-primary" style="flex:1;background:#f5c518;color:#000;font-weight:700" onclick="lbSubmit('i')">등록하기</button>
+      </div>
+    </div>
+    <div id="i-lb-done" style="display:none;width:100%;gap:8px;margin-top:8px">
+      <button class="btn-primary" onclick="iResetGame()" style="width:100%">다시 시작</button>
+    </div>
   </div>
 </div>
 
@@ -1039,6 +1151,10 @@ function bGameOver() {
   document.getElementById('b-gameover-score').innerHTML =
     `이번 게임 결과<br><b>${bSessionC}</b>개 정답 &nbsp;/&nbsp; <b>${bSessionW}</b>개 오답<br><br>` +
     `누적 정답: <b>${bScoreC}</b>개`;
+  document.getElementById('b-lb-form').style.display = 'flex';
+  document.getElementById('b-lb-done').style.display = 'none';
+  document.getElementById('b-lb-nick').value = '';
+  document.getElementById('b-lb-err').textContent = '';
   document.getElementById('b-gameover').style.display = 'flex';
   saveSession('pokemon', '포켓몬 맞추기', bDifficulty, bSessionC, bSessionW);
 }
@@ -1497,6 +1613,10 @@ function mUpdateLives() {
 function mGameOver() {
   document.getElementById('m-gameover-score').innerHTML =
     `이번 게임 결과<br><b>${mSessionC}</b>개 정답 &nbsp;/&nbsp; <b>${mSessionW}</b>개 오답<br><br>누적 정답: <b>${mScoreC}</b>개`;
+  document.getElementById('m-lb-form').style.display = 'flex';
+  document.getElementById('m-lb-done').style.display = 'none';
+  document.getElementById('m-lb-nick').value = '';
+  document.getElementById('m-lb-err').textContent = '';
   document.getElementById('m-gameover').style.display = 'flex';
   saveSession('move', '기술 맞추기', mDifficulty, mSessionC, mSessionW);
 }
@@ -1660,6 +1780,10 @@ function aReveal(isCorrect) {
 function aGameOver() {
   document.getElementById('a-gameover-score').innerHTML =
     `이번 게임 결과<br><b>${aSessionC}</b>개 정답 &nbsp;/&nbsp; <b>${aSessionW}</b>개 오답<br><br>누적 정답: <b>${aScoreC}</b>개`;
+  document.getElementById('a-lb-form').style.display = 'flex';
+  document.getElementById('a-lb-done').style.display = 'none';
+  document.getElementById('a-lb-nick').value = '';
+  document.getElementById('a-lb-err').textContent = '';
   document.getElementById('a-gameover').style.display = 'flex';
   saveSession('ability', '특성 맞추기', '-', aSessionC, aSessionW);
 }
@@ -1895,6 +2019,10 @@ function iShowHint() {
 function iGameOver() {
   document.getElementById('i-gameover-score').innerHTML =
     `이번 게임 결과<br><b>${iSessionC}</b>개 정답 &nbsp;/&nbsp; <b>${iSessionW}</b>개 오답<br><br>누적 정답: <b>${iScoreC}</b>개`;
+  document.getElementById('i-lb-form').style.display = 'flex';
+  document.getElementById('i-lb-done').style.display = 'none';
+  document.getElementById('i-lb-nick').value = '';
+  document.getElementById('i-lb-err').textContent = '';
   document.getElementById('i-gameover').style.display = 'flex';
   saveSession('item', '도구 맞추기', '-', iSessionC, iSessionW);
 }
@@ -1952,6 +2080,105 @@ function iSkip() {
 document.getElementById('i-guess-input').addEventListener('keydown', e => {
   if (e.key === 'Enter') iCheckGuess();
 });
+
+/* ═══════════════ 리더보드 ═══════════════ */
+const LB_MODE = { barcode:'pokemon', move:'move', ability:'ability', item:'item' };
+const LB_LABEL = { barcode:'포켓몬 맞추기', move:'기술 맞추기', ability:'특성 맞추기', item:'도구 맞추기' };
+
+function validateNick(nick) {
+  if (!nick.trim()) return '닉네임을 입력해주세요';
+  if (!/^[a-zA-Z0-9가-힣]+$/.test(nick)) return '한글, 영어, 숫자만 사용 가능해요';
+  if (nick.length > 10) return '최대 10글자까지 입력 가능해요';
+  return '';
+}
+
+// prefix: 'b','m','a','i'
+function lbSubmit(prefix) {
+  const mode = LB_MODE[prefix === 'b' ? 'barcode' : prefix === 'm' ? 'move' : prefix === 'a' ? 'ability' : 'item'];
+  const modeLabel = LB_LABEL[prefix === 'b' ? 'barcode' : prefix === 'm' ? 'move' : prefix === 'a' ? 'ability' : 'item'];
+  const nickEl = document.getElementById(prefix + '-lb-nick');
+  const errEl  = document.getElementById(prefix + '-lb-err');
+  const nick = nickEl.value.trim();
+  const err = validateNick(nick);
+  if (err) { errEl.textContent = err; return; }
+  errEl.textContent = '';
+
+  // 점수 가져오기
+  const correct = prefix === 'b' ? bSessionC : prefix === 'm' ? mSessionC : prefix === 'a' ? aSessionC : iSessionC;
+  const wrong   = prefix === 'b' ? bSessionW : prefix === 'm' ? mSessionW : prefix === 'a' ? aSessionW : iSessionW;
+  const diff    = prefix === 'b' ? bDifficulty : prefix === 'm' ? mDifficulty : '-';
+
+  const entry = { mode, modeLabel, nickname: nick, correct, wrong, difficulty: diff, ts: Date.now() };
+
+  // localStorage 백업
+  const arr = JSON.parse(localStorage.getItem('pq_lb') || '[]');
+  arr.push(entry);
+  localStorage.setItem('pq_lb', JSON.stringify(arr));
+
+  // Firestore 저장
+  if (db) db.collection('leaderboard').add(entry).catch(e => console.warn(e));
+
+  lbShowDone(prefix);
+}
+
+function lbSkip(prefix) { lbShowDone(prefix); }
+
+function lbShowDone(prefix) {
+  document.getElementById(prefix + '-lb-form').style.display = 'none';
+  document.getElementById(prefix + '-lb-done').style.display = 'flex';
+}
+
+// 리더보드 토글
+const _lbOpen = { b: false, m: false, a: false, i: false };
+async function toggleLb(prefix) {
+  const panel = document.getElementById(prefix + '-lb-panel');
+  _lbOpen[prefix] = !_lbOpen[prefix];
+  panel.style.display = _lbOpen[prefix] ? 'block' : 'none';
+  if (_lbOpen[prefix]) await renderLb(prefix);
+}
+
+async function renderLb(prefix) {
+  const mode = LB_MODE[prefix === 'b' ? 'barcode' : prefix === 'm' ? 'move' : prefix === 'a' ? 'ability' : 'item'];
+  const listEl = document.getElementById(prefix + '-lb-list');
+  listEl.innerHTML = '<div style="padding:20px;text-align:center;color:#555">불러오는 중...</div>';
+
+  let rows = [];
+  if (window._lbGet) {
+    try { rows = await window._lbGet(mode); } catch(e) {}
+  }
+  if (!rows.length) {
+    const local = JSON.parse(localStorage.getItem('pq_lb') || '[]');
+    rows = local.filter(x => x.mode === mode).sort((a,b) => b.correct - a.correct).slice(0, 100);
+  }
+
+  if (!rows.length) {
+    listEl.innerHTML = '<div style="padding:20px;text-align:center;color:#555">아직 기록이 없어요</div>';
+    return;
+  }
+
+  const fmtDate = ts => {
+    const d = new Date(ts);
+    return `${d.getMonth()+1}/${d.getDate()}`;
+  };
+
+  listEl.innerHTML = `
+    <table class="lb-table">
+      <thead><tr><th>순위</th><th>닉네임</th><th>정답</th><th>오답</th><th>정확도</th><th>날짜</th></tr></thead>
+      <tbody>${rows.map((r, i) => {
+        const total = (r.correct||0) + (r.wrong||0);
+        const acc = total > 0 ? Math.round(r.correct/total*100) : 0;
+        const medal = i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : '';
+        return `<tr class="${i<3?'lb-top3':''}">
+          <td>${medal || (i+1)}</td>
+          <td style="font-weight:600">${r.nickname||'—'}</td>
+          <td style="color:#4caf50">${r.correct||0}</td>
+          <td style="color:#f44336">${r.wrong||0}</td>
+          <td>${acc}%</td>
+          <td style="color:#666;font-size:0.78rem">${fmtDate(r.ts)}</td>
+        </tr>`;
+      }).join('')}</tbody>
+    </table>`;
+}
 
 /* ═══════════════════════════════════════════════════════════
    오류 신고 시스템
@@ -2037,7 +2264,7 @@ loadAllData();
 <!-- Firebase 모듈 초기화 (Firestore 전용) -->
 <script type="module">
   import { initializeApp }  from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
-  import { getFirestore, collection, addDoc, getDocs, query, orderBy, limit }
+  import { getFirestore, collection, addDoc, getDocs, query, where, orderBy, limit }
     from "https://www.gstatic.com/firebasejs/12.11.0/firebase-firestore.js";
 
   const firebaseConfig = {
@@ -2077,6 +2304,17 @@ loadAllData();
         }
       };
     }
+  };
+
+  window._lbGet = async (mode) => {
+    const q = query(
+      collection(firestoreDb, 'leaderboard'),
+      where('mode', '==', mode),
+      orderBy('correct', 'desc'),
+      limit(100)
+    );
+    const snap = await getDocs(q);
+    return snap.docs.map(d => d.data());
   };
 
   // 메인 스크립트에 db 준비됨 알림
