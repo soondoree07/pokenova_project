@@ -779,6 +779,7 @@
       <input type="text" id="i-guess-input" placeholder="도구 이름 입력..." autocomplete="off" />
       <button class="btn-primary" id="i-btn-guess" onclick="iCheckGuess()">확인</button>
     </div>
+    <div class="b-hint-badge" id="i-hint-badge">힌트 3개</div>
     <button class="btn-ghost"   id="i-btn-hint" onclick="iShowHint()">힌트 보기 (첫 글자)</button>
     <button class="btn-danger"  id="i-btn-skip" onclick="iSkip()">포기하기 (정답 보기)</button>
     <button class="btn-report" id="i-btn-report" onclick="openReport('item','도구 맞추기')">⚠️ 오류 신고</button>
@@ -1697,7 +1698,7 @@ document.getElementById('a-guess-input').addEventListener('keydown', e => {
 
 // 카테고리 분류
 // 퀴즈에서 제외할 카테고리 (숨김)
-const ITEM_HIDE_CATS = new Set(['all-machines','scarves','plates','jewels','memories']);
+const ITEM_HIDE_CATS = new Set(['all-machines','scarves','plates','jewels','memories','z-crystals']);
 
 // 이미지만 보여주고 설명 숨김 (이미지 보고 이름 맞추기)
 const ITEM_IMAGE_ONLY = new Set(['mega-stones','species-specific']);
@@ -1727,7 +1728,12 @@ function iGetNextId() {
 }
 
 let iItem = null, iKoName = '', iEnName = '', iRevealed = false, iHintText = '', iWrongThisRound = false;
-let iLives = 3, iSessionC = 0, iSessionW = 0;
+let iLives = 3, iHints = 3, iSessionC = 0, iSessionW = 0;
+
+function iUpdateHintBadge() {
+  document.getElementById('i-hint-badge').textContent = `힌트 ${iHints}개`;
+  document.getElementById('i-btn-hint').disabled = (iHints <= 0);
+}
 let iScoreC = parseInt(localStorage.getItem('ic')||'0');
 let iScoreW_total = parseInt(localStorage.getItem('iw')||'0');
 let iScoreS = parseInt(localStorage.getItem('is')||'0');
@@ -1757,7 +1763,7 @@ function iLoadItem() {
   document.getElementById('i-guess-input').disabled = false;
   document.getElementById('i-btn-guess').disabled = false;
   document.getElementById('i-btn-hint').style.display = 'block';
-  document.getElementById('i-btn-hint').disabled = false;
+  iUpdateHintBadge();
   document.getElementById('i-btn-skip').style.display = 'block';
   document.getElementById('i-btn-next').style.display = 'none';
   document.getElementById('i-name-revealed').textContent = '';
@@ -1844,7 +1850,8 @@ function iReveal(isCorrect) {
 }
 
 function iShowHint() {
-  if (iRevealed || !iKoName) return;
+  if (iRevealed || !iKoName || iHints <= 0) return;
+  iHints--; iUpdateHintBadge();
   iHintText = `힌트: ${iKoName[0]}${'＿'.repeat(iKoName.length-1)}  (${iKoName.length}글자)`;
   document.getElementById('i-status').textContent = iHintText;
   document.getElementById('i-status').className = 'status hint';
@@ -1859,7 +1866,7 @@ function iGameOver() {
 }
 
 function iResetGame() {
-  iLives = 3; iSessionC = 0; iSessionW = 0;
+  iLives = 3; iHints = 3; iSessionC = 0; iSessionW = 0;
   iUpdateLives();
   document.getElementById('i-gameover').style.display = 'none';
   iLoadItem();
