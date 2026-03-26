@@ -1206,7 +1206,6 @@ function bReveal(isCorrect) {
     document.getElementById('b-status').textContent = `정답! 🎉 ${displayName}`;
     document.getElementById('b-status').className   = 'status correct';
     launchConfetti();
-    fbUpdateAndShowRank('pokemon', bScoreC, bScoreW);
   } else {
     document.getElementById('b-status').textContent = `정답: ${displayName}`;
     document.getElementById('b-status').className   = 'status hint';
@@ -1466,7 +1465,6 @@ function mReveal(isCorrect) {
     document.getElementById('m-status').textContent=`정답! 🎉 ${displayName}`;
     document.getElementById('m-status').className='status correct';
     launchConfetti();
-    fbUpdateAndShowRank('move', mScoreC, mScoreW);
   } else {
     document.getElementById('m-status').textContent=`정답: ${displayName}`;
     document.getElementById('m-status').className='status hint';
