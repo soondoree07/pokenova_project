@@ -722,12 +722,14 @@
       <span>오답 <b id="a-score-wrong">0</b></span>
       <span>연속 <b id="a-score-streak">0</b> 🔥</span>
     </div>
-    <div class="b-game-info" style="display:flex">
+    <button class="btn-primary" id="a-btn-start" onclick="aStartGame()" style="width:100%;margin-bottom:8px">게임 시작</button>
+    <div class="b-game-info" id="a-game-info" style="display:none">
       <div class="b-lives" id="a-lives">❤️❤️❤️</div>
       <div class="b-hint-badge" id="a-hint-badge">힌트 3개</div>
+      <button class="btn-ghost" style="margin-left:auto;font-size:0.75rem;padding:4px 10px" onclick="aGoToStart()">처음으로</button>
     </div>
     <div class="divider"></div>
-    <div class="loading-text" id="a-loading" style="position:relative;padding:20px 0">불러오는 중...</div>
+    <div class="loading-text" id="a-loading" style="position:relative;padding:20px 0;display:none">불러오는 중...</div>
     <div id="a-info-panel" style="display:none;width:100%;flex-direction:column;gap:9px">
       <div class="move-desc-card">
         <div class="move-desc-label">특성 설명</div>
@@ -738,15 +740,15 @@
         <div class="pokemon-chip-list" id="a-pokemon-list"></div>
       </div>
     </div>
-    <div class="name-revealed" id="a-name-revealed"></div>
-    <div class="status" id="a-status">특성 설명을 보고 이름을 맞춰보세요</div>
-    <div class="input-row">
+    <div class="name-revealed" id="a-name-revealed" style="display:none"></div>
+    <div class="status" id="a-status" style="display:none">특성 설명을 보고 이름을 맞춰보세요</div>
+    <div class="input-row" id="a-input-row" style="display:none">
       <input type="text" id="a-guess-input" placeholder="특성 이름 입력..." autocomplete="off" />
       <button class="btn-primary" id="a-btn-guess" onclick="aCheckGuess()">확인</button>
     </div>
-    <button class="btn-ghost"   id="a-btn-hint" onclick="aShowHint()">힌트 보기 (첫 글자)</button>
-    <button class="btn-danger"  id="a-btn-skip" onclick="aSkip()">포기하기 (정답 보기)</button>
-    <button class="btn-report" id="a-btn-report" onclick="openReport('ability','특성 맞추기')">⚠️ 오류 신고</button>
+    <button class="btn-ghost"   id="a-btn-hint" onclick="aShowHint()" style="display:none">힌트 보기 (첫 글자)</button>
+    <button class="btn-danger"  id="a-btn-skip" onclick="aSkip()" style="display:none">포기하기 (정답 보기)</button>
+    <button class="btn-report" id="a-btn-report" onclick="openReport('ability','특성 맞추기')" style="display:none">⚠️ 오류 신고</button>
     <button class="btn-outline" id="a-btn-next" onclick="aNextAbility()" style="display:none">다음 특성 →</button>
   </div>
 </div>
@@ -759,11 +761,14 @@
       <span>오답 <b id="i-score-wrong">0</b></span>
       <span>연속 <b id="i-score-streak">0</b> 🔥</span>
     </div>
-    <div class="b-game-info" style="display:flex">
+    <button class="btn-primary" id="i-btn-start" onclick="iStartGame()" style="width:100%;margin-bottom:8px">게임 시작</button>
+    <div class="b-game-info" id="i-game-info" style="display:none">
       <div class="b-lives" id="i-lives">❤️❤️❤️</div>
+      <div class="b-hint-badge" id="i-hint-badge">힌트 3개</div>
+      <button class="btn-ghost" style="margin-left:auto;font-size:0.75rem;padding:4px 10px" onclick="iGoToStart()">처음으로</button>
     </div>
     <div class="divider"></div>
-    <div class="loading-text" id="i-loading" style="position:relative;padding:20px 0">불러오는 중...</div>
+    <div class="loading-text" id="i-loading" style="position:relative;padding:20px 0;display:none">불러오는 중...</div>
     <div id="i-info-panel" style="display:none;width:100%;flex-direction:column;gap:9px">
       <div class="move-desc-card">
         <div class="move-desc-label">도구 효과</div>
@@ -773,16 +778,15 @@
     <div id="i-sprite-box" class="item-sprite-box" style="display:none">
       <img id="i-sprite" src="" alt="도구 이미지" />
     </div>
-    <div class="name-revealed" id="i-name-revealed"></div>
-    <div class="status" id="i-status">도구 효과를 보고 이름을 맞춰보세요</div>
-    <div class="input-row">
+    <div class="name-revealed" id="i-name-revealed" style="display:none"></div>
+    <div class="status" id="i-status" style="display:none">도구 효과를 보고 이름을 맞춰보세요</div>
+    <div class="input-row" id="i-input-row" style="display:none">
       <input type="text" id="i-guess-input" placeholder="도구 이름 입력..." autocomplete="off" />
       <button class="btn-primary" id="i-btn-guess" onclick="iCheckGuess()">확인</button>
     </div>
-    <div class="b-hint-badge" id="i-hint-badge">힌트 3개</div>
-    <button class="btn-ghost"   id="i-btn-hint" onclick="iShowHint()">힌트 보기 (첫 글자)</button>
-    <button class="btn-danger"  id="i-btn-skip" onclick="iSkip()">포기하기 (정답 보기)</button>
-    <button class="btn-report" id="i-btn-report" onclick="openReport('item','도구 맞추기')">⚠️ 오류 신고</button>
+    <button class="btn-ghost"   id="i-btn-hint" onclick="iShowHint()" style="display:none">힌트 보기 (첫 글자)</button>
+    <button class="btn-danger"  id="i-btn-skip" onclick="iSkip()" style="display:none">포기하기 (정답 보기)</button>
+    <button class="btn-report" id="i-btn-report" onclick="openReport('item','도구 맞추기')" style="display:none">⚠️ 오류 신고</button>
     <button class="btn-outline" id="i-btn-next" onclick="iNextItem()" style="display:none">다음 도구 →</button>
   </div>
 </div>
@@ -937,8 +941,8 @@ function showTab(name) {
     document.getElementById('tab-' + t).style.display = t === name ? '' : 'none';
     document.getElementById('tab-btn-' + t).className = 'nav-tab' + (t === name ? ' active' : '');
   });
-  if (name === 'ability' && !aInitialized) { aInitialized = true; aLoadAbility(); }
-  if (name === 'item'    && !iInitialized) { iInitialized = true; iBuildCatItems(); iLoadItem(); }
+  if (name === 'ability' && !aInitialized) { aInitialized = true; }
+  if (name === 'item'    && !iInitialized) { iInitialized = true; iBuildCatItems(); }
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -1660,6 +1664,36 @@ function aGameOver() {
   saveSession('ability', '특성 맞추기', '-', aSessionC, aSessionW);
 }
 
+function aStartGame() {
+  aSessionC = 0; aSessionW = 0; aLives = 3; aHints = 3;
+  aUpdateLives(); aUpdateHintBadge();
+  document.getElementById('a-btn-start').style.display = 'none';
+  document.getElementById('a-game-info').style.display = 'flex';
+  document.getElementById('a-status').style.display = '';
+  document.getElementById('a-input-row').style.display = 'flex';
+  document.getElementById('a-name-revealed').style.display = '';
+  document.getElementById('a-btn-hint').style.display = 'block';
+  document.getElementById('a-btn-skip').style.display = 'block';
+  document.getElementById('a-btn-report').style.display = 'block';
+  aLoadAbility();
+}
+
+function aGoToStart() {
+  if (!confirm('처음으로 돌아가시겠어요?\n현재 게임 기록은 초기화됩니다.')) return;
+  document.getElementById('a-gameover').style.display = 'none';
+  document.getElementById('a-btn-start').style.display = '';
+  document.getElementById('a-game-info').style.display = 'none';
+  document.getElementById('a-loading').style.display = 'none';
+  document.getElementById('a-info-panel').style.display = 'none';
+  document.getElementById('a-status').style.display = 'none';
+  document.getElementById('a-input-row').style.display = 'none';
+  document.getElementById('a-name-revealed').style.display = 'none';
+  document.getElementById('a-btn-hint').style.display = 'none';
+  document.getElementById('a-btn-skip').style.display = 'none';
+  document.getElementById('a-btn-report').style.display = 'none';
+  document.getElementById('a-btn-next').style.display = 'none';
+}
+
 function aResetGame() {
   aLives = 3; aHints = 3; aSessionC = 0; aSessionW = 0;
   aUpdateLives();
@@ -1863,6 +1897,37 @@ function iGameOver() {
     `이번 게임 결과<br><b>${iSessionC}</b>개 정답 &nbsp;/&nbsp; <b>${iSessionW}</b>개 오답<br><br>누적 정답: <b>${iScoreC}</b>개`;
   document.getElementById('i-gameover').style.display = 'flex';
   saveSession('item', '도구 맞추기', '-', iSessionC, iSessionW);
+}
+
+function iStartGame() {
+  iSessionC = 0; iSessionW = 0; iLives = 3; iHints = 3;
+  iUpdateLives(); iUpdateHintBadge();
+  document.getElementById('i-btn-start').style.display = 'none';
+  document.getElementById('i-game-info').style.display = 'flex';
+  document.getElementById('i-status').style.display = '';
+  document.getElementById('i-input-row').style.display = 'flex';
+  document.getElementById('i-name-revealed').style.display = '';
+  document.getElementById('i-btn-hint').style.display = 'block';
+  document.getElementById('i-btn-skip').style.display = 'block';
+  document.getElementById('i-btn-report').style.display = 'block';
+  iLoadItem();
+}
+
+function iGoToStart() {
+  if (!confirm('처음으로 돌아가시겠어요?\n현재 게임 기록은 초기화됩니다.')) return;
+  document.getElementById('i-gameover').style.display = 'none';
+  document.getElementById('i-btn-start').style.display = '';
+  document.getElementById('i-game-info').style.display = 'none';
+  document.getElementById('i-loading').style.display = 'none';
+  document.getElementById('i-info-panel').style.display = 'none';
+  document.getElementById('i-sprite-box').style.display = 'none';
+  document.getElementById('i-status').style.display = 'none';
+  document.getElementById('i-input-row').style.display = 'none';
+  document.getElementById('i-name-revealed').style.display = 'none';
+  document.getElementById('i-btn-hint').style.display = 'none';
+  document.getElementById('i-btn-skip').style.display = 'none';
+  document.getElementById('i-btn-report').style.display = 'none';
+  document.getElementById('i-btn-next').style.display = 'none';
 }
 
 function iResetGame() {
