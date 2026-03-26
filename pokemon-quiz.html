@@ -591,15 +591,15 @@
     <div class="diff-selector">
       <button class="diff-btn" id="b-diff-easy" onclick="bSetDifficulty('easy')">
         <div class="diff-label">쉬움</div>
-        <div class="diff-sub">가로선 8줄</div>
+        <div class="diff-sub">가로선 8줄 · 목숨∞</div>
       </button>
       <button class="diff-btn selected" id="b-diff-normal" onclick="bSetDifficulty('normal')">
         <div class="diff-label">보통</div>
-        <div class="diff-sub">가로선 4줄</div>
+        <div class="diff-sub">가로선 4줄 · HP3</div>
       </button>
       <button class="diff-btn" id="b-diff-hard" onclick="bSetDifficulty('hard')">
         <div class="diff-label">어려움</div>
-        <div class="diff-sub">가로선 1줄</div>
+        <div class="diff-sub">가로선 1줄 · 힌트없음</div>
       </button>
     </div>
 
@@ -610,6 +610,7 @@
     <div class="b-game-info" id="b-game-info" style="display:none">
       <div class="b-lives" id="b-lives">❤️❤️❤️</div>
       <div class="b-hint-badge" id="b-hint-badge">힌트 ∞</div>
+      <button class="btn-ghost" style="padding:4px 10px;font-size:0.75rem;width:auto" onclick="bGoToStart()">↩ 처음으로</button>
     </div>
 
     <div class="pokemon-container" id="b-pokemon-container" style="display:none">
@@ -643,7 +644,7 @@
     </div>
 
     <button class="btn-ghost"   id="b-btn-hint" onclick="bShowHint()" style="display:none">힌트 보기 (첫 글자)</button>
-    <button class="btn-danger"  id="b-btn-skip" onclick="bReveal(false)" style="display:none">포기하기 (정답 보기)</button>
+    <button class="btn-danger"  id="b-btn-skip" onclick="bSkip()" style="display:none">포기하기 (정답 보기)</button>
     <button class="btn-outline" id="b-btn-next" onclick="bNextPokemon()" style="display:none">다음 포켓몬 →</button>
   </div>
 </div>
@@ -663,20 +664,26 @@
     <div class="diff-selector">
       <button class="diff-btn selected" id="diff-easy"   onclick="setDifficulty('easy')">
         <div class="diff-label">쉬움</div>
-        <div class="diff-sub">전체 정보</div>
+        <div class="diff-sub">전체 정보 · 목숨∞</div>
       </button>
       <button class="diff-btn" id="diff-normal" onclick="setDifficulty('normal')">
         <div class="diff-label">보통</div>
-        <div class="diff-sub">명중률·설명 숨김</div>
+        <div class="diff-sub">명중률·첫등장 숨김 · HP3</div>
       </button>
       <button class="diff-btn" id="diff-hard" onclick="setDifficulty('hard')">
         <div class="diff-label">어려움</div>
-        <div class="diff-sub">타입·위력·명중률 숨김</div>
+        <div class="diff-sub">타입·위력·명중률 숨김 · HP3</div>
       </button>
     </div>
 
     <!-- 게임 시작 버튼 -->
     <button class="btn-primary" id="m-btn-start" onclick="mStartGame()" style="width:100%;margin-top:4px">게임 시작</button>
+
+    <!-- 목숨 & 처음으로 (게임 중) -->
+    <div class="b-game-info" id="m-game-info" style="display:none">
+      <div class="b-lives" id="m-lives">❤️❤️❤️</div>
+      <button class="btn-ghost" style="padding:4px 10px;font-size:0.75rem;width:auto" onclick="mGoToStart()">↩ 처음으로</button>
+    </div>
 
     <div class="divider" id="m-game-divider" style="display:none"></div>
 
@@ -743,7 +750,7 @@
     </div>
 
     <button class="btn-ghost"   id="m-btn-hint" onclick="mShowHint()" style="display:none">힌트 보기 (첫 글자)</button>
-    <button class="btn-danger"  id="m-btn-skip" onclick="mReveal(false)" style="display:none">포기하기 (정답 보기)</button>
+    <button class="btn-danger"  id="m-btn-skip" onclick="mSkip()" style="display:none">포기하기 (정답 보기)</button>
     <button class="btn-outline" id="m-btn-next" onclick="mNextMove()" style="display:none">다음 기술 →</button>
   </div>
 </div>
@@ -778,7 +785,7 @@
       <input type="text" id="a-guess-input" placeholder="특성 이름 입력..." autocomplete="off" />
       <button class="btn-primary" id="a-btn-guess" onclick="aCheckGuess()">확인</button>
     </div>
-    <button class="btn-danger"  id="a-btn-skip" onclick="aReveal(false)">포기하기 (정답 보기)</button>
+    <button class="btn-danger"  id="a-btn-skip" onclick="aSkip()">포기하기 (정답 보기)</button>
     <button class="btn-outline" id="a-btn-next" onclick="aNextAbility()" style="display:none">다음 특성 →</button>
   </div>
 </div>
@@ -812,7 +819,7 @@
       <button class="btn-primary" id="i-btn-guess" onclick="iCheckGuess()">확인</button>
     </div>
     <button class="btn-ghost"   id="i-btn-hint" onclick="iShowHint()">힌트 보기 (첫 글자)</button>
-    <button class="btn-danger"  id="i-btn-skip" onclick="iReveal(false)">포기하기 (정답 보기)</button>
+    <button class="btn-danger"  id="i-btn-skip" onclick="iSkip()">포기하기 (정답 보기)</button>
     <button class="btn-outline" id="i-btn-next" onclick="iNextItem()" style="display:none">다음 도구 →</button>
   </div>
 </div>
@@ -823,6 +830,14 @@
     <div class="gameover-title">💀 게임 오버</div>
     <div class="gameover-score" id="b-gameover-score"></div>
     <button class="btn-primary" onclick="bResetGame()" style="width:100%;margin-top:8px">완료</button>
+  </div>
+</div>
+
+<div id="m-gameover" class="gameover-overlay" style="display:none">
+  <div class="gameover-box">
+    <div class="gameover-title">💀 게임 오버</div>
+    <div class="gameover-score" id="m-gameover-score"></div>
+    <button class="btn-primary" onclick="mResetGame()" style="width:100%;margin-top:8px">다시 시작</button>
   </div>
 </div>
 
@@ -1065,7 +1080,7 @@ async function loadAllData() {
     });
   });
   DB.pokemon = p.concat(formEntries);
-  DB.moves     = m.filter(x => hasKorean(x.ko));
+  DB.moves     = m.filter(x => hasKorean(x.ko) && (x.id < 622 || x.id > 658)); // Z기술(ID 622-658) 제외
   DB.abilities = a.filter(x => hasKorean(x.ko));
   DB.items     = i.filter(x => hasKorean(x.ko) && hasKorean(x.desc || ''));
 }
@@ -1119,13 +1134,20 @@ function bUpdateScore() {
 bUpdateScore();
 
 function bUpdateLives() {
-  document.getElementById('b-lives').textContent = '❤️'.repeat(bLives) + '🖤'.repeat(3 - bLives);
+  const el = document.getElementById('b-lives');
+  if (bLives === Infinity) {
+    el.textContent = '❤️❤️❤️ ∞';
+  } else {
+    el.textContent = '❤️'.repeat(Math.max(0, bLives)) + '🖤'.repeat(Math.max(0, 3 - bLives));
+  }
 }
 
 function bUpdateHintBadge() {
   const badge = document.getElementById('b-hint-badge');
   if (bDifficulty === 'easy') {
     badge.textContent = '힌트 ∞';
+  } else if (bDifficulty === 'hard') {
+    badge.textContent = '힌트 없음';
   } else {
     badge.textContent = `힌트 ${bHints}개`;
     document.getElementById('b-btn-hint').disabled = (bHints <= 0);
@@ -1134,13 +1156,13 @@ function bUpdateHintBadge() {
 
 function bStartGame() {
   bGameStarted = true;
-  bLives = 3; bSessionC = 0; bSessionW = 0; bQuestionsPlayed = 0;
+  bSessionC = 0; bSessionW = 0; bQuestionsPlayed = 0;
   bPool = []; bPoolIdx = 0;
 
-  // 힌트 초기화
-  if (bDifficulty === 'easy')        bHints = Infinity;
-  else if (bDifficulty === 'normal') bHints = 3;
-  else                               bHints = 3;
+  // 난이도별 목숨·힌트 초기화
+  if (bDifficulty === 'easy')        { bLives = Infinity; bHints = Infinity; }
+  else if (bDifficulty === 'normal') { bLives = 3; bHints = 3; }
+  else                               { bLives = 3; bHints = 0; }
 
   // 난이도 버튼 잠금
   ['easy','normal','hard'].forEach(x =>
@@ -1255,8 +1277,12 @@ function bLoadPokemon() {
   document.getElementById('b-guess-input').disabled = false;
   document.getElementById('b-btn-guess').disabled  = false;
   document.getElementById('b-btn-next').style.display = 'none';
-  document.getElementById('b-btn-hint').style.display = 'block';
-  document.getElementById('b-btn-hint').disabled = (bDifficulty !== 'easy' && bHints <= 0);
+  if (bDifficulty === 'hard') {
+    document.getElementById('b-btn-hint').style.display = 'none';
+  } else {
+    document.getElementById('b-btn-hint').style.display = 'block';
+    document.getElementById('b-btn-hint').disabled = (bDifficulty !== 'easy' && bHints <= 0);
+  }
   document.getElementById('b-btn-skip').style.display = 'block';
   document.getElementById('b-name-revealed').textContent = '';
   document.getElementById('b-name-revealed').className   = 'name-revealed';
@@ -1354,6 +1380,22 @@ function bNextPokemon() {
   }
   bLoadPokemon();
 }
+
+function bSkip() {
+  if (bRevealed) return;
+  bScoreW++; bScoreS = 0; bSessionW++; bUpdateScore();
+  if (bLives !== Infinity) bLives--;
+  bReveal(false);
+  bUpdateLives();
+  if (bLives <= 0) setTimeout(bGameOver, 1200);
+}
+
+function bGoToStart() {
+  if (!confirm('처음으로 돌아가시겠어요?\n현재 게임 기록은 초기화됩니다.')) return;
+  bGameStarted = false;
+  bResetGame();
+}
+
 document.getElementById('b-guess-input').addEventListener('keydown', e=>{
   if (e.key==='Enter') bCheckGuess();
 });
@@ -1394,9 +1436,9 @@ function getLatestFlavorText(entries, lang) {
 }
 
 const DIFF_CONFIG = {
-  easy:   { type:true,  power:true,  accuracy:true,  pp:true, desc:true  },
-  normal: { type:true,  power:true,  accuracy:false, pp:true, desc:false },
-  hard:   { type:false, power:false, accuracy:false, pp:true, desc:true  }
+  easy:   { type:true,  power:true,  accuracy:true,  pp:true, gen:true,  desc:true  },
+  normal: { type:true,  power:true,  accuracy:false, pp:true, gen:false, desc:true  },
+  hard:   { type:false, power:false, accuracy:false, pp:true, gen:true,  desc:true  }
 };
 
 // 중복 방지: 기술 셔플 풀
@@ -1410,6 +1452,7 @@ function mGetNextId() {
 }
 
 let mDifficulty='easy', mMove=null, mKoName='', mEnName='', mRevealed=false, mGameStarted=false;
+let mLives = 3, mSessionC = 0, mSessionW = 0;
 let mScoreC=parseInt(localStorage.getItem('mc')||'0');
 let mScoreW=parseInt(localStorage.getItem('mw')||'0');
 let mScoreS=parseInt(localStorage.getItem('ms')||'0');
@@ -1430,12 +1473,16 @@ function setDifficulty(d) {
 
 function mStartGame() {
   mGameStarted = true;
+  mLives = (mDifficulty === 'easy') ? Infinity : 3;
+  mSessionC = 0; mSessionW = 0;
   ['easy','normal','hard'].forEach(x => document.getElementById('diff-'+x).classList.add('locked'));
   document.getElementById('m-btn-start').style.display   = 'none';
+  document.getElementById('m-game-info').style.display   = 'flex';
   document.getElementById('m-game-divider').style.display = '';
   document.getElementById('m-move-header').style.display  = '';
   document.getElementById('m-input-row').style.display    = 'flex';
   document.getElementById('m-status').style.display       = '';
+  mUpdateLives();
   mLoadMove();
 }
 
@@ -1470,8 +1517,12 @@ function renderMovePanel(forceReveal) {
   if (cfg.accuracy) { acEl.textContent=m.accuracy!=null?m.accuracy+'%':'—'; acEl.className='mic-value'; }
   else              { acEl.textContent='???'; acEl.className='mic-value hidden-val'; }
 
-  // 첫 등장 세대 (항상 공개)
-  document.getElementById('mv-gen').textContent = m.gen || GEN_NAME[m.generation?.name||''] || '—';
+  // 첫 등장 세대
+  const genEl2 = document.getElementById('mv-gen');
+  if (cfg.gen !== false) {
+    genEl2.textContent = m.gen || GEN_NAME[m.generation?.name||''] || '—';
+    genEl2.className = 'mic-value';
+  } else { genEl2.textContent = '???'; genEl2.className = 'mic-value hidden-val'; }
 
   // 설명
   const descCard = document.getElementById('mc-desc');
@@ -1527,15 +1578,20 @@ function mCheckGuess() {
   if (g===normalize(mKoName)||(mEnName&&g===normalize(mEnName))) {
     mReveal(true);
   } else {
-    mScoreW++; mScoreS=0; mUpdateScore();
-    document.getElementById('m-status').textContent=`"${guess}" 은(는) 틀렸습니다!`;
+    mScoreW++; mScoreS=0; mSessionW++; mUpdateScore();
+    if (mLives !== Infinity) mLives--;
+    mUpdateLives();
+    const livesMsg = mLives === Infinity ? '' : ` (목숨 ${mLives}개 남음)`;
+    document.getElementById('m-status').textContent=`"${guess}" 은(는) 틀렸습니다!${livesMsg}`;
     document.getElementById('m-status').className='status wrong';
     input.value=''; input.focus();
     const panel=document.getElementById('m-info-panel');
     panel.style.transition='none'; panel.style.transform='translateX(-6px)';
     setTimeout(()=>{panel.style.transform='translateX(6px)';},70);
     setTimeout(()=>{panel.style.transform='translateX(-3px)';},140);
-    setTimeout(()=>{panel.style.transform='translateX(0)';panel.style.transition='';},210);
+    setTimeout(()=>{panel.style.transform='translateX(0)';panel.style.transition='';
+      if (mLives <= 0) { mReveal(false); setTimeout(mGameOver, 1200); }
+    },210);
   }
 }
 
@@ -1552,7 +1608,7 @@ function mReveal(isCorrect) {
   nameEl.textContent=displayName;
   setTimeout(()=>nameEl.classList.add('show'),80);
   if (isCorrect) {
-    mScoreC++; mScoreS++; mUpdateScore();
+    mScoreC++; mScoreS++; mSessionC++; mUpdateScore();
     document.getElementById('m-status').textContent=`정답! 🎉 ${displayName}`;
     document.getElementById('m-status').className='status correct';
     launchConfetti();
@@ -1570,6 +1626,55 @@ function mShowHint() {
   document.getElementById('m-btn-hint').disabled=true;
 }
 function mNextMove() { mLoadMove(); }
+
+function mUpdateLives() {
+  const el = document.getElementById('m-lives');
+  if (!el) return;
+  if (mLives === Infinity) {
+    el.textContent = '❤️❤️❤️ ∞';
+  } else {
+    el.textContent = '❤️'.repeat(Math.max(0, mLives)) + '🖤'.repeat(Math.max(0, 3 - mLives));
+  }
+}
+
+function mGameOver() {
+  document.getElementById('m-gameover-score').innerHTML =
+    `이번 게임 결과<br><b>${mSessionC}</b>개 정답 &nbsp;/&nbsp; <b>${mSessionW}</b>개 오답<br><br>누적 정답: <b>${mScoreC}</b>개`;
+  document.getElementById('m-gameover').style.display = 'flex';
+}
+
+function mResetGame() {
+  mGameStarted = false;
+  document.getElementById('m-gameover').style.display = 'none';
+  ['easy','normal','hard'].forEach(x => document.getElementById('diff-'+x).classList.remove('locked'));
+  document.getElementById('m-btn-start').style.display = '';
+  document.getElementById('m-game-info').style.display = 'none';
+  document.getElementById('m-game-divider').style.display = 'none';
+  document.getElementById('m-move-header').style.display = 'none';
+  document.getElementById('m-input-row').style.display = 'none';
+  document.getElementById('m-status').style.display = 'none';
+  document.getElementById('m-info-panel').style.display = 'none';
+  document.getElementById('m-name-revealed').textContent = '';
+  document.getElementById('m-btn-hint').style.display = 'none';
+  document.getElementById('m-btn-skip').style.display = 'none';
+  document.getElementById('m-btn-next').style.display = 'none';
+  hideRankCard('m');
+}
+
+function mSkip() {
+  if (mRevealed) return;
+  mScoreW++; mScoreS = 0; mSessionW++; mUpdateScore();
+  if (mLives !== Infinity) mLives--;
+  mReveal(false);
+  mUpdateLives();
+  if (mLives <= 0) setTimeout(mGameOver, 1200);
+}
+
+function mGoToStart() {
+  if (!confirm('처음으로 돌아가시겠어요?\n현재 게임 기록은 초기화됩니다.')) return;
+  mResetGame();
+}
+
 document.getElementById('m-guess-input').addEventListener('keydown',e=>{
   if (e.key==='Enter') mCheckGuess();
 });
@@ -1695,6 +1800,15 @@ function aResetGame() {
 }
 
 function aNextAbility() { aLoadAbility(); }
+
+function aSkip() {
+  if (aRevealed) return;
+  aScoreW_total++; aScoreS = 0; aSessionW++; aUpdateScore();
+  aLives--; aUpdateLives();
+  aReveal(false);
+  if (aLives <= 0) setTimeout(aGameOver, 1200);
+}
+
 document.getElementById('a-guess-input').addEventListener('keydown', e => {
   if (e.key === 'Enter') aCheckGuess();
 });
@@ -1872,6 +1986,15 @@ function iResetGame() {
 }
 
 function iNextItem() { iLoadItem(); }
+
+function iSkip() {
+  if (iRevealed) return;
+  iScoreW_total++; iScoreS = 0; iSessionW++; iUpdateScore();
+  iLives--; iUpdateLives();
+  iReveal(false);
+  if (iLives <= 0) setTimeout(iGameOver, 1200);
+}
+
 document.getElementById('i-guess-input').addEventListener('keydown', e => {
   if (e.key === 'Enter') iCheckGuess();
 });

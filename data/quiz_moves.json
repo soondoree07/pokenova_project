@@ -11574,7 +11574,7 @@
     "power": 80,
     "accuracy": 100,
     "gen": "8세대",
-    "desc": "The user lashes out at the target with ruinous claws, aiming to land a critical hit. This may also leave the target poisoned, paralyzed, or drowsy.",
+    "desc": "이 기술에 맞으면 50%로 독, 마비, 잠듦 중 하나의 상태이상에 걸린다.",
     "desc_lang": "en"
   },
   {
@@ -11588,7 +11588,7 @@
     "power": 70,
     "accuracy": 90,
     "gen": "8세대",
-    "desc": "Cloaking itself in psychic energy, the user slams into the target. This may also raise the user’s defensive stats.",
+    "desc": "사용하면 자신의 방어력이 1랭크 오른다.",
     "desc_lang": "en"
   },
   {
@@ -11602,7 +11602,7 @@
     "power": 0,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "The user swaps its offensive and defensive stats.",
+    "desc": "자신의 공격력과 방어력을 바꾼다.",
     "desc_lang": "en"
   },
   {
@@ -11616,7 +11616,7 @@
     "power": 65,
     "accuracy": 90,
     "gen": "8세대",
-    "desc": "The user swings its stone axes at the target, aiming to land a critical hit. Stone splinters left behind by this attack continue to damage the target for several turns.",
+    "desc": "암석 도끼로 급소를 노려 공격한다. 흩어진 암석 파편으로 상대에게 여러 번 데미지를 준다.",
     "desc_lang": "en"
   },
   {
@@ -11630,7 +11630,7 @@
     "power": 100,
     "accuracy": 80,
     "gen": "8세대",
-    "desc": "The user attacks by wrapping the target in fierce winds brimming with love and hate. This move’s additional effects depend on the user’s form.",
+    "desc": "애증 섞인 강렬한 바람으로 상대를 둘러싸서 공격한다. 기술을 사용하는 폼에 따라 추가 효과가 달라진다.",
     "desc_lang": "en"
   },
   {
@@ -11644,7 +11644,7 @@
     "power": 70,
     "accuracy": 90,
     "gen": "8세대",
-    "desc": "The user strengthens itself with a mysterious power. If it excels in offense, its offensive stats are raised. If it excels in defense, its defensive stats are raised.",
+    "desc": "신비한 힘으로 자신을 강화한다. 자신의 특수공격이 올라간다.",
     "desc_lang": "en"
   },
   {
@@ -11658,7 +11658,7 @@
     "power": 120,
     "accuracy": 100,
     "gen": "8세대",
-    "desc": "The user rampages and spews vicious flames to inflict damage on the target, then becomes fixated on using this move.",
+    "desc": "격렬한 불꽃을 방출하면서 마구 날뛰어 공격한다. 기술을 사용한 다음 열중 상태가 된다.",
     "desc_lang": "en"
   },
   {
@@ -11672,7 +11672,7 @@
     "power": 120,
     "accuracy": 100,
     "gen": "8세대",
-    "desc": "The user shrouds itself in water and slams into the target with its whole body to inflict damage. This also damages the user and raises the user’s action speed.",
+    "desc": "물을 두르고 온몸으로 상대에게 부딪친다. 자신도 상당한 데미지를 입는다.",
     "desc_lang": "en"
   },
   {
@@ -11686,7 +11686,7 @@
     "power": 150,
     "accuracy": 95,
     "gen": "8세대",
-    "desc": "The user launches its amassed chlorophyll to inflict damage on the target. This also damages the user and lowers the user's action speed.",
+    "desc": "엽록소를 모은 뒤 발사하여 공격한다. 자신도 데미지를 입는다.",
     "desc_lang": "en"
   },
   {
@@ -11700,7 +11700,7 @@
     "power": 100,
     "accuracy": 85,
     "gen": "8세대",
-    "desc": "The user hurls giant chunks of ice at the target to inflict damage.",
+    "desc": "빙산처럼 커다란 얼음덩어리를 부딪쳐서 공격한다.",
     "desc_lang": "en"
   },
   {
@@ -11714,7 +11714,7 @@
     "power": 0,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "The user performs a dance to usher in victory. This raises the user’s offensive and defensive stats and increases the damage dealt by the user’s moves by 50 percent.",
+    "desc": "승리를 부르는 춤을 격렬하게 춘다. 자신의 공격, 방어, 스피드를 1랭크 올린다.",
     "desc_lang": "en"
   },
   {
@@ -11728,7 +11728,7 @@
     "power": 120,
     "accuracy": 100,
     "gen": "8세대",
-    "desc": "The user smashes into the target in a full-body tackle. This also lowers the user’s defensive stats.",
+    "desc": "온 힘을 다한 몸통박치기를 날린다. 자신의 방어력이 떨어진다.",
     "desc_lang": "en"
   },
   {
@@ -11742,7 +11742,7 @@
     "power": 60,
     "accuracy": 100,
     "gen": "8세대",
-    "desc": "The user launches countless toxic barbs to inflict damage. This may also poison the target. This move’s power is doubled if the target has a status condition.",
+    "desc": "무수히 많은 독침으로 공격한다. 상대를 독 상태로 만들 때가 있다. 상대가 상태 이상인 경우 위력이 2배가 된다.",
     "desc_lang": "en"
   },
   {
@@ -11756,7 +11756,7 @@
     "power": 80,
     "accuracy": 100,
     "gen": "8세대",
-    "desc": "The user slashes the target with aura-enriched wings. This also raises the user's action speed. This move has a heightened chance of landing a critical hit.",
+    "desc": "오라로 강화한 날개로 베어 가른다. 급소에 맞기 쉽다. 자신의 행동 순서가 빨라진다.",
     "desc_lang": "en"
   },
   {
@@ -11770,7 +11770,7 @@
     "power": 75,
     "accuracy": 100,
     "gen": "8세대",
-    "desc": "The user attacks its target with spine-chilling resentment. This may also leave the target with frostbite. This move's power is doubled if the target has a status condition.",
+    "desc": "동굴이 서늘해지는 원념으로 공격해서 상대를 동상 상태로 만들 때가 있다. 상대가 상태 이상인 경우 위력이 2배가 된다.",
     "desc_lang": "en"
   },
   {
@@ -11784,7 +11784,7 @@
     "power": 0,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "The user makes its skin as hard as an iron shield, raising its defensive stats. Incoming moves also become more likely to miss.",
+    "desc": "피부를 강철 방패처럼 단단하게 만들어서 자신의 방어력을 올린다. 상대의 기술을 회피하기 쉬워진다.",
     "desc_lang": "en"
   },
   {
@@ -11798,7 +11798,7 @@
     "power": 90,
     "accuracy": 100,
     "gen": "8세대",
-    "desc": "The user delivers an axe kick, then fires three arrows. This raises the chance of its future attacks landing critical hits and also lowers the target's defensive stats.",
+    "desc": "발뒤꿈치로 찍은 뒤 3개의 화살을 동시에 발사한다. 자신의 공격이 급소에 맞기 쉬워진다. 상대의 방어력을 떨어뜨린다.",
     "desc_lang": "en"
   },
   {
@@ -11812,7 +11812,7 @@
     "power": 60,
     "accuracy": 100,
     "gen": "8세대",
-    "desc": "The user attacks with myriad fireballs. This may also leave the target with a burn. This move's power is doubled if the target has a status condition.",
+    "desc": "무수히 많은 불덩이로 공격해서 상대를 화상 상태로 만들 때가 있다. 상대가 상태 이상인 경우 위력이 2배가 된다.",
     "desc_lang": "en"
   },
   {
@@ -11826,7 +11826,7 @@
     "power": 65,
     "accuracy": 90,
     "gen": "8세대",
-    "desc": "The user slashes its shell blade at the target, aiming to land a critical hit. Shell splinters left behind by this attack will continue to damage the target for several turns.",
+    "desc": "조개껍질 검으로 급소를 노려 공격한다. 흩어진 조개껍질 파편으로 상대에게 여러 번 데미지를 준다.",
     "desc_lang": "en"
   },
   {
@@ -11840,7 +11840,7 @@
     "power": 100,
     "accuracy": 80,
     "gen": "8세대",
-    "desc": "The user attacks with savagely cold winds that cause both body and spirit to tremble. This may also leave the target with frostbite.",
+    "desc": "심신을 모두 떨게 만드는 차갑고도 거친 바람으로 공격한다. 상대를 동상 상태로 만들 때가 있다.",
     "desc_lang": "en"
   },
   {
@@ -11854,7 +11854,7 @@
     "power": 100,
     "accuracy": 80,
     "gen": "8세대",
-    "desc": "The user summons a thunderous tempest and savagely attacks with lightning and wind. This may also leave the target with paralysis.",
+    "desc": "폭풍을 일으키고 뇌운을 불러서 번개와 바람으로 매섭게 공격한다. 상대를 마비 상태로 만들 때가 있다.",
     "desc_lang": "en"
   },
   {
@@ -11868,7 +11868,7 @@
     "power": 100,
     "accuracy": 80,
     "gen": "8세대",
-    "desc": "The user attacks by wrapping the target in fierce winds and searingly hot sand. This also leaves the target with a burn.",
+    "desc": "뜨겁게 달궈진 모래와 강렬한 바람으로 상대를 둘러싸서 공격한다. 상대를 화상 상태로 만든다.",
     "desc_lang": "en"
   },
   {
@@ -11882,7 +11882,7 @@
     "power": 0,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "The user heals its own status conditions and restores its HP. Incoming moves also become more likely to miss.",
+    "desc": "자신의 상태 이상과 HP를 회복한다. 상대의 기술을 회피하기 쉬워진다.",
     "desc_lang": "en"
   },
   {
@@ -11896,7 +11896,7 @@
     "power": 0,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "The user lifts its spirits, healing its own status conditions and raising its offensive and defensive stats.",
+    "desc": "기운을 고조시켜서 자신의 상태 이상을 회복하고 공격력과 방어력을 올린다.",
     "desc_lang": "en"
   }
 ]
