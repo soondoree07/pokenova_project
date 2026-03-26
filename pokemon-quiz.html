@@ -168,6 +168,34 @@
       text-shadow: 0 0 22px rgba(229,57,53,.4);
       margin-bottom: 18px;
       text-align: center;
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+      transition: opacity .2s;
+    }
+    .site-title:hover { opacity: .8; }
+
+    /* ══ 푸터 ══ */
+    .site-footer {
+      width: 100%;
+      max-width: 700px;
+      margin-top: 60px;
+      padding: 24px 0 8px;
+      border-top: 1px solid #252525;
+      text-align: center;
+      color: #555;
+      font-size: 0.78rem;
+      line-height: 1.9;
+    }
+    .site-footer a {
+      color: #777;
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .site-footer a:hover { color: #e53935; }
+    .site-footer .footer-name {
+      color: #888;
+      font-weight: 600;
     }
 
     /* ══ 탭 네비게이션 ══ */
@@ -481,6 +509,7 @@
       .btn-logout    { min-height: 44px; }
 
       .site-title { font-size: 1.1rem; letter-spacing: 1px; margin-bottom: 12px; }
+      .site-footer { margin-top: 40px; padding: 20px 12px 8px; font-size: 0.73rem; }
 
       /* 탭 + 도감 버튼 레이아웃 */
       .nav-tab-wrap {
@@ -631,7 +660,7 @@
 <body>
 
 <!-- ══ 사이트 타이틀 ══ -->
-<div class="site-title">Pokénova</div>
+<a class="site-title" href="pokemon-quiz.html">Pokénova</a>
 
 <!-- ══ 탭 네비게이션 ══ -->
 <div class="nav-tab-wrap" style="display:flex;align-items:center;gap:10px;margin-bottom:28px;flex-wrap:wrap">
@@ -2377,5 +2406,14 @@ loadAllData();
   // 메인 스크립트에 db 준비됨 알림
   window.dispatchEvent(new Event('fb-ready'));
 </script>
+
+<footer class="site-footer">
+  <div>Made by <span class="footer-name">잉짱</span> &nbsp;·&nbsp; <a href="mailto:soondoree07@gmail.com">soondoree07@gmail.com</a></div>
+  <div style="margin-top:6px; font-size:0.72rem; color:#444;">
+    Pokémon and all related names are trademarks of Nintendo / Game Freak / Creatures Inc.<br>
+    This site is a fan-made project and is not affiliated with or endorsed by Nintendo.
+  </div>
+  <div style="margin-top:8px; font-size:0.72rem;">© 2026 Pokénova</div>
+</footer>
 </body>
 </html>
