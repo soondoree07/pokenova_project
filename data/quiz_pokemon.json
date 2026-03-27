@@ -5287,7 +5287,11 @@
           "비행"
         ],
         "abilities": [
-          "?"
+          {
+            "ko": "멀티스케일",
+            "en": "multiscale",
+            "hidden": false
+          }
         ]
       }
     ]
@@ -5439,7 +5443,11 @@
           "페어리"
         ],
         "abilities": [
-          "?"
+          {
+            "ko": "메가솔라",
+            "en": "mega solar",
+            "hidden": false
+          }
         ]
       }
     ]
@@ -5604,7 +5612,11 @@
           "드래곤"
         ],
         "abilities": [
-          "?"
+          {
+            "ko": "드래곤스킨",
+            "en": "dragon skin",
+            "hidden": false
+          }
         ]
       }
     ]
@@ -14077,7 +14089,11 @@
           "고스트"
         ],
         "abilities": [
-          "?"
+          {
+            "ko": "눈퍼뜨리기",
+            "en": "snow warning",
+            "hidden": false
+          }
         ]
       }
     ]
@@ -14542,7 +14558,11 @@
           "격투"
         ],
         "abilities": [
-          "?"
+          {
+            "ko": "틀깨기",
+            "en": "mold breaker",
+            "hidden": false
+          }
         ]
       }
     ]
