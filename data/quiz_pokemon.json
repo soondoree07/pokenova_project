@@ -19731,6 +19731,16 @@
         "en": "stance change",
         "hidden": false
       }
+    ],
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "킬가르도 블레이드폼",
+        "name_en": "aegislash-blade",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10026.png",
+        "types": ["강철", "고스트"],
+        "abilities": [{"ko": "배틀스위치", "en": "stance change", "hidden": false}]
+      }
     ]
   },
   {
