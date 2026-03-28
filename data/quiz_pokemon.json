@@ -11773,6 +11773,7 @@
     "id": 386,
     "ko": "테오키스",
     "en": "Deoxys",
+    "formLabel": "노말폼",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/386.png",
     "types": [
       "에스퍼"
@@ -12401,6 +12402,7 @@
     "id": 412,
     "ko": "도롱충이",
     "en": "Burmy",
+    "formLabel": "초록도롱",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/412.png",
     "types": [
       "벌레"
@@ -14219,7 +14221,7 @@
         "type": "alt",
         "name_ko": "히트로토무",
         "name_en": "rotom-heat",
-        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10058.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10008.png",
         "types": ["전기", "불꽃"],
         "abilities": [{"ko": "부유", "en": "levitate", "hidden": false}]
       },
@@ -14227,7 +14229,7 @@
         "type": "alt",
         "name_ko": "워시로토무",
         "name_en": "rotom-wash",
-        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10059.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10009.png",
         "types": ["전기", "물"],
         "abilities": [{"ko": "부유", "en": "levitate", "hidden": false}]
       },
@@ -14235,7 +14237,7 @@
         "type": "alt",
         "name_ko": "프로스트로토무",
         "name_en": "rotom-frost",
-        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10060.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10010.png",
         "types": ["전기", "얼음"],
         "abilities": [{"ko": "부유", "en": "levitate", "hidden": false}]
       },
@@ -14243,7 +14245,7 @@
         "type": "alt",
         "name_ko": "스핀로토무",
         "name_en": "rotom-fan",
-        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10061.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10011.png",
         "types": ["전기", "비행"],
         "abilities": [{"ko": "부유", "en": "levitate", "hidden": false}]
       },
@@ -14251,7 +14253,7 @@
         "type": "alt",
         "name_ko": "커트로토무",
         "name_en": "rotom-mow",
-        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10062.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10012.png",
         "types": ["전기", "풀"],
         "abilities": [{"ko": "부유", "en": "levitate", "hidden": false}]
       }
@@ -14459,6 +14461,7 @@
     "id": 487,
     "ko": "기라티나",
     "en": "Giratina",
+    "formLabel": "얼터드폼",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/487.png",
     "types": [
       "고스트",
@@ -14581,6 +14584,7 @@
     "id": 492,
     "ko": "쉐이미",
     "en": "Shaymin",
+    "formLabel": "랜드폼",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/492.png",
     "types": [
       "풀"
@@ -17450,6 +17454,7 @@
     "id": 592,
     "ko": "탱그릴",
     "en": "Frillish",
+    "formLabel": "수컷",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/592.png",
     "types": [
       "물",
@@ -17491,6 +17496,7 @@
     "id": 593,
     "ko": "탱탱겔",
     "en": "Jellicent",
+    "formLabel": "수컷",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/593.png",
     "types": [
       "물",
@@ -18917,6 +18923,7 @@
     "id": 647,
     "ko": "케르디오",
     "en": "Keldeo",
+    "formLabel": "평범의 모습",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/647.png",
     "types": [
       "물",
@@ -19715,6 +19722,7 @@
     "id": 678,
     "ko": "냐오닉스",
     "en": "Meowstic",
+    "formLabel": "수컷",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/678.png",
     "types": [
       "에스퍼"
@@ -19799,6 +19807,7 @@
     "id": 681,
     "ko": "킬가르도",
     "en": "Aegislash",
+    "formLabel": "실드폼",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/681.png",
     "types": [
       "강철",
@@ -20839,6 +20848,7 @@
     "id": 718,
     "ko": "지가르데",
     "en": "Zygarde",
+    "formLabel": "50% 폼",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/718.png",
     "types": [
       "드래곤",
@@ -20925,6 +20935,7 @@
     "id": 720,
     "ko": "후파",
     "en": "Hoopa",
+    "formLabel": "봉인된 후파",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/720.png",
     "types": [
       "에스퍼",
@@ -21438,6 +21449,7 @@
     "id": 741,
     "ko": "춤추새",
     "en": "Oricorio",
+    "formLabel": "이글이글스타일",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/741.png",
     "types": [
       "불꽃",
@@ -21561,6 +21573,7 @@
     "id": 745,
     "ko": "루가루암",
     "en": "Lycanroc",
+    "formLabel": "한낮의 모습",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/745.png",
     "types": [
       "바위"
@@ -25464,6 +25477,7 @@
     "id": 888,
     "ko": "자시안",
     "en": "Zacian",
+    "formLabel": "역전의 용사",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/888.png",
     "types": [
       "페어리"
@@ -25491,6 +25505,7 @@
     "id": 889,
     "ko": "자마젠타",
     "en": "Zamazenta",
+    "formLabel": "역전의 용사",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/889.png",
     "types": [
       "격투"
@@ -25563,6 +25578,7 @@
     "id": 892,
     "ko": "우라오스",
     "en": "Urshifu",
+    "formLabel": "일격의 태세",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/892.png",
     "types": [
       "격투",
@@ -25838,6 +25854,7 @@
     "id": 902,
     "ko": "대쓰여너",
     "en": "Basculegion",
+    "formLabel": "수컷",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/902.png",
     "types": [
       "물",
@@ -26184,6 +26201,7 @@
     "id": 916,
     "ko": "퍼퓨돈",
     "en": "Oinkologne",
+    "formLabel": "수컷",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/916.png",
     "types": [
       "노말"
@@ -27372,6 +27390,7 @@
     "id": 964,
     "ko": "돌핀맨",
     "en": "Palafin",
+    "formLabel": "나이브폼",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/964.png",
     "types": [
       "물"
@@ -28534,6 +28553,7 @@
     "id": 1017,
     "ko": "오거폰",
     "en": "Ogerpon",
+    "formLabel": "벽록의가면",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1017.png",
     "types": [
       "풀"
