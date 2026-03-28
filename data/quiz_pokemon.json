@@ -28398,6 +28398,7 @@
     "id": 978,
     "ko": "싸리용",
     "en": "Tatsugiri",
+    "formLabel": "젖힌 모습",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/978.png",
     "types": [
       "드래곤",
@@ -28416,6 +28417,50 @@
       }
     ],
     "forms": [
+      {
+        "type": "alt",
+        "name_ko": "싸리용 늘어진 모습",
+        "name_en": "tatsugiri-droopy",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10258.png",
+        "types": [
+          "드래곤",
+          "물"
+        ],
+        "abilities": [
+          {
+            "ko": "사령탑",
+            "en": "commander",
+            "hidden": false
+          },
+          {
+            "ko": "마중물",
+            "en": "storm drain",
+            "hidden": true
+          }
+        ]
+      },
+      {
+        "type": "alt",
+        "name_ko": "싸리용 뻗은 모습",
+        "name_en": "tatsugiri-stretchy",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10259.png",
+        "types": [
+          "드래곤",
+          "물"
+        ],
+        "abilities": [
+          {
+            "ko": "사령탑",
+            "en": "commander",
+            "hidden": false
+          },
+          {
+            "ko": "마중물",
+            "en": "storm drain",
+            "hidden": true
+          }
+        ]
+      },
       {
         "type": "mega",
         "name_ko": "메가싸리용",
