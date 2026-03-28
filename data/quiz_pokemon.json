@@ -22716,6 +22716,7 @@
     "id": 793,
     "ko": "텅비드",
     "en": "Nihilego",
+    "is_ub": true,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/793.png",
     "types": [
       "바위",
@@ -22733,6 +22734,7 @@
     "id": 794,
     "ko": "매시붕",
     "en": "Buzzwole",
+    "is_ub": true,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/794.png",
     "types": [
       "벌레",
@@ -22750,6 +22752,7 @@
     "id": 795,
     "ko": "페로코체",
     "en": "Pheromosa",
+    "is_ub": true,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/795.png",
     "types": [
       "벌레",
@@ -22767,6 +22770,7 @@
     "id": 796,
     "ko": "전수목",
     "en": "Xurkitree",
+    "is_ub": true,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/796.png",
     "types": [
       "전기"
@@ -22783,6 +22787,7 @@
     "id": 797,
     "ko": "철화구야",
     "en": "Celesteela",
+    "is_ub": true,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/797.png",
     "types": [
       "강철",
@@ -22800,6 +22805,7 @@
     "id": 798,
     "ko": "종이신도",
     "en": "Kartana",
+    "is_ub": true,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/798.png",
     "types": [
       "풀",
@@ -22817,6 +22823,7 @@
     "id": 799,
     "ko": "악식킹",
     "en": "Guzzlord",
+    "is_ub": true,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/799.png",
     "types": [
       "악",
@@ -22834,6 +22841,7 @@
     "id": 800,
     "ko": "네크로즈마",
     "en": "Necrozma",
+    "is_ub": true,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/800.png",
     "types": [
       "에스퍼"
@@ -22964,6 +22972,7 @@
     "id": 803,
     "ko": "베베놈",
     "en": "Poipole",
+    "is_ub": true,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/803.png",
     "types": [
       "독"
@@ -22980,6 +22989,7 @@
     "id": 804,
     "ko": "아고용",
     "en": "Naganadel",
+    "is_ub": true,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/804.png",
     "types": [
       "독",
@@ -22997,6 +23007,7 @@
     "id": 805,
     "ko": "차곡차곡",
     "en": "Stakataka",
+    "is_ub": true,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/805.png",
     "types": [
       "바위",
@@ -23014,6 +23025,7 @@
     "id": 806,
     "ko": "두파팡",
     "en": "Blacephalon",
+    "is_ub": true,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/806.png",
     "types": [
       "불꽃",
@@ -24791,6 +24803,7 @@
     "id": 862,
     "ko": "가로막구리",
     "en": "Obstagoon",
+    "regionType": "galar",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/862.png",
     "types": [
       "악",
@@ -24818,6 +24831,7 @@
     "id": 863,
     "ko": "나이킹",
     "en": "Perrserker",
+    "regionType": "galar",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/863.png",
     "types": [
       "강철"
@@ -24844,6 +24858,7 @@
     "id": 864,
     "ko": "산호르곤",
     "en": "Cursola",
+    "regionType": "galar",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/864.png",
     "types": [
       "고스트"
@@ -24865,6 +24880,7 @@
     "id": 865,
     "ko": "창파나이트",
     "en": "Sirfetch’d",
+    "regionType": "galar",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/865.png",
     "types": [
       "격투"
@@ -24914,6 +24930,7 @@
     "id": 867,
     "ko": "데스판",
     "en": "Runerigus",
+    "regionType": "galar",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/867.png",
     "types": [
       "땅",

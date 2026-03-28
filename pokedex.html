@@ -648,6 +648,9 @@
         <div class="modal-number" id="modal-number"></div>
         <div class="modal-name-ko" id="modal-name-ko"></div>
         <div class="modal-name-en" id="modal-name-en"></div>
+        <div id="modal-ub-badge" style="display:none;margin-bottom:8px">
+          <span style="background:#4a0080;color:white;font-size:11px;font-weight:700;padding:2px 10px;border-radius:10px;letter-spacing:0.5px">울트라비스트</span>
+        </div>
         <div class="modal-types" id="modal-types"></div>
       </div>
     </div>
@@ -1016,6 +1019,7 @@ function openModal(p) {
   document.getElementById('modal-types').innerHTML = types.map(t =>
     `<span class="modal-type-tag">${t}</span>`
   ).join('');
+  document.getElementById('modal-ub-badge').style.display = p.is_ub ? 'block' : 'none';
 
   const body = document.getElementById('modal-body');
   body.innerHTML = '';
