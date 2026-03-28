@@ -26416,6 +26416,7 @@
     "id": 901,
     "ko": "다투곰",
     "en": "Ursaluna",
+    "formLabel": "히스이의 모습",
     "regionType": "hisui",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/901.png",
     "types": [
@@ -26437,6 +26438,25 @@
         "ko": "긴장감",
         "en": "unnerve",
         "hidden": true
+      }
+    ],
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "다투곰 붉은달의 모습",
+        "name_en": "ursaluna-bloodmoon",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10272.png",
+        "types": [
+          "땅",
+          "노말"
+        ],
+        "abilities": [
+          {
+            "ko": "마음의눈",
+            "en": "mind's eye",
+            "hidden": false
+          }
+        ]
       }
     ]
   },
