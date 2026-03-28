@@ -24886,6 +24886,7 @@
     "id": 866,
     "ko": "마임꽁꽁",
     "en": "Mr. Rime",
+    "regionType": "galar",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/866.png",
     "types": [
       "얼음",
