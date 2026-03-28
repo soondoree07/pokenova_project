@@ -787,30 +787,47 @@ function renderAll(data) {
   const grid = document.getElementById('pokemon-grid');
   const noRes = document.getElementById('no-results');
   const SKIP_EN = new Set(['pikachu-alola-cap']);
-  // 각 리전그룹의 시작 displayId (해당 세대 마지막 번호 이후)
-  const REGION_BASE = { alola: 809.001, galar: 905.001, hisui: 905.201, paldea: 1025.001 };
+  const REGION_BASE = { alola: true, galar: true, hisui: true, paldea: true };
   const REGION_GEN  = { alola: 7, galar: 8, hisui: 8, paldea: 9 };
-  const counters    = { alola: 0, galar: 0, hisui: 0, paldea: 0 };
 
   const entries = [];
 
+  const formCounters = {};
   data.forEach(p => {
     entries.push({ ...p, displayId: p.id });
     if (!p.forms) return;
     const seenKo = new Set();
     p.forms.forEach(f => {
+      // 합체폼(primal) / 달마모드(zen): 원종 옆에 표시
+      if (f.type === 'primal' || f.type === 'zen') {
+        if (!f.name_ko || !f.sprite) return;
+        if (seenKo.has(f.name_ko)) return;
+        seenKo.add(f.name_ko);
+        if (!formCounters[p.id]) formCounters[p.id] = 0;
+        entries.push({
+          id: p.id, ko: f.name_ko, en: f.name_en,
+          sprite: f.sprite, types: f.types || p.types,
+          abilities: f.abilities || p.abilities,
+          formType: 'fusion',
+          genNum: getGen(p.id),
+          displayId: p.id + (++formCounters[p.id]) * 0.001
+        });
+        return;
+      }
+      // 리전폼: 원종 옆에 표시 (genNum은 리전 세대 유지)
       if (!REGION_BASE[f.type]) return;
       if (!f.name_ko || !f.sprite) return;
       if (f.name_en && (f.name_en.includes('totem') || SKIP_EN.has(f.name_en))) return;
       if (seenKo.has(f.name_ko)) return;
       seenKo.add(f.name_ko);
+      if (!formCounters[p.id]) formCounters[p.id] = 0;
       entries.push({
         id: p.id, ko: f.name_ko, en: f.name_en,
         sprite: f.sprite, types: f.types || p.types,
         abilities: f.abilities || p.abilities,
         formType: 'region', regionType: f.type,
         genNum: REGION_GEN[f.type],
-        displayId: REGION_BASE[f.type] + counters[f.type]++ * 0.001
+        displayId: p.id + (++formCounters[p.id]) * 0.001
       });
     });
   });
@@ -832,8 +849,8 @@ function renderForms(data) {
     base.forms.forEach(f => {
       if (!f.sprite || !f.name_ko) return;
 
-      if (f.type === 'mega' || f.type === 'primal') {
-        if (f.type === 'mega' && !CANONICAL_MEGA.has(f.name_en)) return;
+      if (f.type === 'mega') {
+        if (!CANONICAL_MEGA.has(f.name_en)) return;
         const entry = {
           id: base.id, ko: f.name_ko, en: f.name_en,
           sprite: f.sprite, types: f.types || base.types,
@@ -874,7 +891,7 @@ function applyFilters() {
     const matchType = !activeType || c.dataset.types.split(',').includes(activeType);
     const matchGen  = !activeGen  || +c.dataset.gen === activeGen;
     const matchCat  = activeCat === 'all'
-      || (activeCat === 'normal' && c.dataset.cat === 'normal')
+      || (activeCat === 'normal' && (c.dataset.cat === 'normal' || c.dataset.cat === 'fusion'))
       || (activeCat === 'region' && c.dataset.cat === 'region')
       || (activeCat === 'mega'   && c.dataset.cat === 'mega')
       || (activeCat === 'gmax'   && c.dataset.cat === 'gmax');

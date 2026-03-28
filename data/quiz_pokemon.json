@@ -16087,6 +16087,23 @@
     ],
     "forms": [
       {
+        "type": "zen",
+        "name_ko": "달마모드 불비달마",
+        "name_en": "darmanitan-zen",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10017.png",
+        "types": [
+          "불꽃",
+          "에스퍼"
+        ],
+        "abilities": [
+          {
+            "ko": "달마모드",
+            "en": "zen mode",
+            "hidden": false
+          }
+        ]
+      },
+      {
         "type": "galar",
         "name_ko": "가라르 불비달마",
         "name_en": "darmanitan-galar-standard",
@@ -16108,8 +16125,8 @@
         ]
       },
       {
-        "type": "galar",
-        "name_ko": "가라르 불비달마",
+        "type": "zen",
+        "name_ko": "가라르 달마모드 불비달마",
         "name_en": "darmanitan-galar-zen",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10178.png",
         "types": [
@@ -16118,14 +16135,9 @@
         ],
         "abilities": [
           {
-            "ko": "무아지경",
-            "en": "gorilla tactics",
-            "hidden": false
-          },
-          {
             "ko": "달마모드",
             "en": "zen mode",
-            "hidden": true
+            "hidden": false
           }
         ]
       }
@@ -18628,7 +18640,7 @@
           "격투"
         ],
         "abilities": [
-          "?"
+          "방탄"
         ]
       }
     ]
@@ -18707,7 +18719,7 @@
           "에스퍼"
         ],
         "abilities": [
-          "?"
+          "부유"
         ]
       }
     ]
@@ -18786,7 +18798,7 @@
           "악"
         ],
         "abilities": [
-          "?"
+          "변환자재"
         ]
       }
     ]

@@ -1106,6 +1106,32 @@ async function loadAllData() {
   });
   DB.pokemon = p.concat(formEntries);
   DB.moves     = m.filter(x => hasKorean(x.ko) && (x.id < 622 || x.id > 658) && (x.pp !== 1 || x.id === 165 || x.id === 166)); // Z기술 제외 (범용 622-658, 전용 PP=1 / 발버둥·스케치 제외)
+
+  // quiz_pokemon.json에서 특성 보유 포켓몬 동적 빌드 (숨겨진 특성 포함)
+  const abilityPokemonMap = {};
+  p.forEach(base => {
+    (base.abilities || []).forEach(ab => {
+      const name = typeof ab === 'string' ? ab : (ab.ko || '');
+      if (!name || name === '?') return;
+      if (!abilityPokemonMap[name]) abilityPokemonMap[name] = [];
+      abilityPokemonMap[name].push(base.ko);
+    });
+    (base.forms || []).forEach(f => {
+      if (!f.name_ko) return;
+      (f.abilities || []).forEach(ab => {
+        const name = typeof ab === 'string' ? ab : (ab.ko || '');
+        if (!name || name === '?') return;
+        if (!abilityPokemonMap[name]) abilityPokemonMap[name] = [];
+        abilityPokemonMap[name].push(f.name_ko);
+      });
+    });
+  });
+  a.forEach(ab => {
+    const fromData = abilityPokemonMap[ab.ko] || [];
+    const merged = new Set([...(ab.pokemon || []), ...fromData]);
+    ab.pokemon = Array.from(merged);
+  });
+
   DB.abilities = a.filter(x => hasKorean(x.ko));
   DB.items     = i.filter(x => hasKorean(x.ko) && hasKorean(x.desc || ''));
 }
