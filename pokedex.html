@@ -777,9 +777,11 @@ function buildCard(p) {
     leftBadge = `<span class="card-badge ${p.regionType}">${REGION_LABEL[p.regionType] || ''}</span>`;
   }
 
-  // 오른쪽 뱃지: 폼 라벨 (baseKo가 있는 폼)
+  // 오른쪽 뱃지: 폼 라벨 (baseKo가 있는 폼 또는 formLabel 직접 지정)
   let rightBadge = '';
-  if (p.baseKo && p.formType !== 'mega' && p.formType !== 'gmax') {
+  if (p.formLabel) {
+    rightBadge = `<span class="card-badge form-label">${p.formLabel}</span>`;
+  } else if (p.baseKo && p.formType !== 'mega' && p.formType !== 'gmax') {
     let label = p.ko;
     const base = p.baseKo;
     if (label.startsWith(base + ' ')) label = label.slice(base.length + 1);

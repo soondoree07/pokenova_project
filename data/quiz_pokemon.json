@@ -16138,6 +16138,7 @@
     "ko": "배쓰나이",
     "en": "Basculin",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/550.png",
+    "formLabel": "적색근의 모습",
     "types": [
       "물"
     ],
