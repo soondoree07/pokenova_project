@@ -14461,7 +14461,7 @@
     "id": 487,
     "ko": "기라티나",
     "en": "Giratina",
-    "formLabel": "얼터드폼",
+    "formLabel": "어나더폼",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/487.png",
     "types": [
       "고스트",
@@ -18923,7 +18923,6 @@
     "id": 647,
     "ko": "케르디오",
     "en": "Keldeo",
-    "formLabel": "평범의 모습",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/647.png",
     "types": [
       "물",
