@@ -22089,6 +22089,7 @@
     "id": 746,
     "ko": "약어리",
     "en": "Wishiwashi",
+    "formLabel": "단독의 모습",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/746.png",
     "types": [
       "물"
@@ -25616,6 +25617,7 @@
     "id": 876,
     "ko": "에써르",
     "en": "Indeedee",
+    "formLabel": "수컷",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/876.png",
     "types": [
       "에스퍼",
@@ -25636,6 +25638,35 @@
         "ko": "사이코메이커",
         "en": "psychic surge",
         "hidden": true
+      }
+    ],
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "에써르 암컷",
+        "name_en": "indeedee-female",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10186.png",
+        "types": [
+          "에스퍼",
+          "노말"
+        ],
+        "abilities": [
+          {
+            "ko": "정신력",
+            "en": "inner focus",
+            "hidden": false
+          },
+          {
+            "ko": "싱크로",
+            "en": "synchronize",
+            "hidden": false
+          },
+          {
+            "ko": "하트파워",
+            "en": "healer",
+            "hidden": true
+          }
+        ]
       }
     ]
   },
