@@ -23372,7 +23372,7 @@
         ],
         "abilities": [
           {
-            "ko": "뉴트론포스",
+            "ko": "브레인포스",
             "en": "neuroforce",
             "hidden": false
           }
@@ -25663,7 +25663,7 @@
             "hidden": false
           },
           {
-            "ko": "하트파워",
+            "ko": "치유의마음",
             "en": "healer",
             "hidden": true
           }
@@ -29453,7 +29453,7 @@
         ],
         "abilities": [
           {
-            "ko": "테라쉘",
+            "ko": "테라셸",
             "en": "tera shell",
             "hidden": false
           }
@@ -29469,7 +29469,7 @@
         ],
         "abilities": [
           {
-            "ko": "테라폼제로",
+            "ko": "제로포밍",
             "en": "teraform zero",
             "hidden": false
           }
