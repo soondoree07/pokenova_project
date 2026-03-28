@@ -325,7 +325,10 @@
       border-radius: 10px;
       padding: 10px 6px 8px;
       text-align: center;
+      cursor: pointer;
+      transition: border-color 0.15s, transform 0.15s;
     }
+    .form-card:hover { border-color: #e53935; transform: translateY(-2px); }
     .form-card img {
       width: 64px;
       height: 64px;
@@ -754,6 +757,7 @@ const GMAX_NAME_OVERRIDE = {
 const GMAX_SKIP = new Set(['toxtricity-low-key-gmax']);
 
 let DB = [], totalAll = 0;
+const SIBLING_MAP = {}; // id → 같은 ID를 가진 모든 렌더된 엔트리
 let activeType = null, activeGen = null, activeCat = 'all';
 
 // ─── CARD 생성 ───
@@ -865,7 +869,11 @@ function renderAll(data) {
   entries.sort((a, b) => a.displayId - b.displayId);
 
   const frag = document.createDocumentFragment();
-  entries.forEach(e => frag.appendChild(buildCard(e)));
+  entries.forEach(e => {
+    if (!SIBLING_MAP[e.id]) SIBLING_MAP[e.id] = [];
+    SIBLING_MAP[e.id].push(e);
+    frag.appendChild(buildCard(e));
+  });
   grid.insertBefore(frag, noRes);
 }
 
@@ -886,6 +894,8 @@ function renderForms(data) {
           sprite: f.sprite, types: f.types || base.types,
           abilities: f.abilities || base.abilities, formType: 'mega'
         };
+        if (!SIBLING_MAP[entry.id]) SIBLING_MAP[entry.id] = [];
+        SIBLING_MAP[entry.id].push(entry);
         megaGrid.appendChild(buildCard(entry));
         megaCount++;
       } else if (f.type === 'gmax') {
@@ -897,6 +907,8 @@ function renderForms(data) {
           abilities: f.abilities || base.abilities,
           gmaxMove: GMAX_MOVES[f.name_en], formType: 'gmax'
         };
+        if (!SIBLING_MAP[entry.id]) SIBLING_MAP[entry.id] = [];
+        SIBLING_MAP[entry.id].push(entry);
         gmaxGrid.appendChild(buildCard(entry));
         gmaxCount++;
       }
@@ -988,6 +1000,11 @@ document.getElementById('type-group').addEventListener('click', e => {
 });
 
 // ─── MODAL ───
+function getFormLabel(p) {
+  if (!p.baseKo) return p.formLabel || p.ko;
+  return p.ko;
+}
+
 function openModal(p) {
   const types = p.types || [];
   document.getElementById('modal-header').style.background = typeGradient(types);
@@ -1045,27 +1062,27 @@ function openModal(p) {
     body.appendChild(sec);
   }
 
-  // 일반 포켓몬만 폼 보여주기
-  if (!p.formType) {
-    const showForms = (p.forms || []).filter(f => f.name_ko && f.sprite);
-    if (showForms.length) {
-      const sec = document.createElement('div');
-      sec.className = 'info-section';
-      sec.innerHTML = `<div class="section-title">다른 폼</div>`;
-      const grid = document.createElement('div');
-      grid.className = 'forms-grid';
-      showForms.forEach(f => {
-        const ft = f.types || [];
-        grid.innerHTML += `
-          <div class="form-card">
-            <img src="${f.sprite}" alt="${f.name_ko}" loading="lazy">
-            <div class="form-card-name">${f.name_ko}</div>
-            <div class="form-types">${ft.map(t=>`<span class="form-type t-${t}">${t}</span>`).join('')}</div>
-          </div>`;
-      });
-      sec.appendChild(grid);
-      body.appendChild(sec);
-    }
+  // 다른 폼 표시 (클릭 가능)
+  const siblings = (SIBLING_MAP[p.id] || []).filter(s => s !== p);
+  if (siblings.length) {
+    const sec = document.createElement('div');
+    sec.className = 'info-section';
+    sec.innerHTML = `<div class="section-title">다른 폼</div>`;
+    const grid = document.createElement('div');
+    grid.className = 'forms-grid';
+    siblings.forEach(s => {
+      const ft = s.types || [];
+      const card = document.createElement('div');
+      card.className = 'form-card';
+      card.innerHTML = `
+        <img src="${s.sprite}" alt="${getFormLabel(s)}" loading="lazy">
+        <div class="form-card-name">${getFormLabel(s)}</div>
+        <div class="form-types">${ft.map(t=>`<span class="form-type t-${t}">${t}</span>`).join('')}</div>`;
+      card.addEventListener('click', () => openModal(s));
+      grid.appendChild(card);
+    });
+    sec.appendChild(grid);
+    body.appendChild(sec);
   }
 
   document.getElementById('modal-overlay').classList.add('open');
