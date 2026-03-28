@@ -24807,6 +24807,7 @@
     "id": 849,
     "ko": "스트린더",
     "en": "Toxtricity",
+    "formLabel": "하이한 모습",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/849.png",
     "types": [
       "전기",
@@ -24831,6 +24832,33 @@
     ],
     "forms": [
       {
+        "type": "alt",
+        "name_ko": "스트린더 로우한 모습",
+        "name_en": "toxtricity-low-key",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10184.png",
+        "types": [
+          "전기",
+          "독"
+        ],
+        "abilities": [
+          {
+            "ko": "펑크록",
+            "en": "punk rock",
+            "hidden": false
+          },
+          {
+            "ko": "마이너스",
+            "en": "minus",
+            "hidden": false
+          },
+          {
+            "ko": "테크니션",
+            "en": "technician",
+            "hidden": true
+          }
+        ]
+      },
+      {
         "type": "gmax",
         "name_ko": "거다이맥스 스트린더",
         "name_en": "toxtricity-amped-gmax",
@@ -24848,33 +24876,6 @@
           {
             "ko": "플러스",
             "en": "plus",
-            "hidden": false
-          },
-          {
-            "ko": "테크니션",
-            "en": "technician",
-            "hidden": true
-          }
-        ]
-      },
-      {
-        "type": "gmax",
-        "name_ko": "거다이맥스 스트린더",
-        "name_en": "toxtricity-low-key-gmax",
-        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10228.png",
-        "types": [
-          "전기",
-          "독"
-        ],
-        "abilities": [
-          {
-            "ko": "펑크록",
-            "en": "punk rock",
-            "hidden": false
-          },
-          {
-            "ko": "마이너스",
-            "en": "minus",
             "hidden": false
           },
           {
