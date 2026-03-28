@@ -768,7 +768,7 @@ function buildCard(p) {
     ? '<span class="card-badge mega">MEGA</span>'
     : p.formType === 'gmax'
     ? '<span class="card-badge gmax">거다이</span>'
-    : p.formType === 'region'
+    : (p.formType === 'region' || p.regionType)
     ? `<span class="card-badge ${p.regionType}">${REGION_LABEL[p.regionType] || p.regionType}</span>`
     : '';
   card.innerHTML = `
@@ -798,8 +798,8 @@ function renderAll(data) {
     if (!p.forms) return;
     const seenKo = new Set();
     p.forms.forEach(f => {
-      // 합체폼(primal) / 달마모드(zen): 원종 옆에 표시
-      if (f.type === 'primal' || f.type === 'zen') {
+      // 합체폼(primal) / 달마모드(zen) / 오리진폼(origin) / 기타 대체폼(alt): 원종 옆에 표시
+      if (f.type === 'primal' || f.type === 'zen' || f.type === 'origin' || f.type === 'alt') {
         if (!f.name_ko || !f.sprite) return;
         if (seenKo.has(f.name_ko)) return;
         seenKo.add(f.name_ko);
@@ -809,6 +809,7 @@ function renderAll(data) {
           sprite: f.sprite, types: f.types || p.types,
           abilities: f.abilities || p.abilities,
           formType: 'fusion',
+          regionType: f.regionType || null,
           genNum: getGen(p.id),
           displayId: p.id + (++formCounters[p.id]) * 0.001
         });
@@ -891,7 +892,7 @@ function applyFilters() {
     const matchType = !activeType || c.dataset.types.split(',').includes(activeType);
     const matchGen  = !activeGen  || +c.dataset.gen === activeGen;
     const matchCat  = activeCat === 'all'
-      || (activeCat === 'normal' && (c.dataset.cat === 'normal' || c.dataset.cat === 'fusion'))
+      || (activeCat === 'normal' && (c.dataset.cat === 'normal' || c.dataset.cat === 'fusion' || c.dataset.cat === 'origin' || c.dataset.cat === 'alt'))
       || (activeCat === 'region' && c.dataset.cat === 'region')
       || (activeCat === 'mega'   && c.dataset.cat === 'mega')
       || (activeCat === 'gmax'   && c.dataset.cat === 'gmax');

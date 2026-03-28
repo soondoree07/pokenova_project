@@ -10780,6 +10780,32 @@
         "en": "forecast",
         "hidden": false
       }
+    ],
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "태양의 모습",
+        "name_en": "castform-sunny",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10013.png",
+        "types": ["불꽃"],
+        "abilities": [{"ko": "기분파", "en": "forecast", "hidden": false}]
+      },
+      {
+        "type": "alt",
+        "name_ko": "빗방울의 모습",
+        "name_en": "castform-rainy",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10014.png",
+        "types": ["물"],
+        "abilities": [{"ko": "기분파", "en": "forecast", "hidden": false}]
+      },
+      {
+        "type": "alt",
+        "name_ko": "설운의 모습",
+        "name_en": "castform-snowy",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10015.png",
+        "types": ["얼음"],
+        "abilities": [{"ko": "기분파", "en": "forecast", "hidden": false}]
+      }
     ]
   },
   {
@@ -11758,7 +11784,33 @@
         "hidden": false
       }
     ],
-    "is_mythical": true
+    "is_mythical": true,
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "테오키스 어택폼",
+        "name_en": "deoxys-attack",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10001.png",
+        "types": ["에스퍼"],
+        "abilities": [{"ko": "프레셔", "en": "pressure", "hidden": false}]
+      },
+      {
+        "type": "alt",
+        "name_ko": "테오키스 디펜스폼",
+        "name_en": "deoxys-defense",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10002.png",
+        "types": ["에스퍼"],
+        "abilities": [{"ko": "프레셔", "en": "pressure", "hidden": false}]
+      },
+      {
+        "type": "alt",
+        "name_ko": "테오키스 스피드폼",
+        "name_en": "deoxys-speed",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10003.png",
+        "types": ["에스퍼"],
+        "abilities": [{"ko": "프레셔", "en": "pressure", "hidden": false}]
+      }
+    ]
   },
   {
     "id": 387,
@@ -12364,6 +12416,30 @@
         "en": "overcoat",
         "hidden": true
       }
+    ],
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "모래땅도롱",
+        "name_en": "burmy-sandy",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10034.png",
+        "types": ["벌레"],
+        "abilities": [
+          {"ko": "탈피", "en": "shed skin", "hidden": false},
+          {"ko": "방진", "en": "overcoat", "hidden": true}
+        ]
+      },
+      {
+        "type": "alt",
+        "name_ko": "슈레도롱",
+        "name_en": "burmy-trash",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10035.png",
+        "types": ["벌레"],
+        "abilities": [
+          {"ko": "탈피", "en": "shed skin", "hidden": false},
+          {"ko": "방진", "en": "overcoat", "hidden": true}
+        ]
+      }
     ]
   },
   {
@@ -12385,6 +12461,30 @@
         "ko": "방진",
         "en": "overcoat",
         "hidden": true
+      }
+    ],
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "모래땅도롱마담",
+        "name_en": "wormadam-sandy",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10004.png",
+        "types": ["벌레", "땅"],
+        "abilities": [
+          {"ko": "위험예지", "en": "anticipation", "hidden": false},
+          {"ko": "방진", "en": "overcoat", "hidden": true}
+        ]
+      },
+      {
+        "type": "alt",
+        "name_ko": "슈레도롱마담",
+        "name_en": "wormadam-trash",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10005.png",
+        "types": ["벌레", "강철"],
+        "abilities": [
+          {"ko": "위험예지", "en": "anticipation", "hidden": false},
+          {"ko": "방진", "en": "overcoat", "hidden": true}
+        ]
       }
     ]
   },
@@ -14113,6 +14213,48 @@
         "en": "levitate",
         "hidden": false
       }
+    ],
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "히트로토무",
+        "name_en": "rotom-heat",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10058.png",
+        "types": ["전기", "불꽃"],
+        "abilities": [{"ko": "부유", "en": "levitate", "hidden": false}]
+      },
+      {
+        "type": "alt",
+        "name_ko": "워시로토무",
+        "name_en": "rotom-wash",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10059.png",
+        "types": ["전기", "물"],
+        "abilities": [{"ko": "부유", "en": "levitate", "hidden": false}]
+      },
+      {
+        "type": "alt",
+        "name_ko": "프로스트로토무",
+        "name_en": "rotom-frost",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10060.png",
+        "types": ["전기", "얼음"],
+        "abilities": [{"ko": "부유", "en": "levitate", "hidden": false}]
+      },
+      {
+        "type": "alt",
+        "name_ko": "스핀로토무",
+        "name_en": "rotom-fan",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10061.png",
+        "types": ["전기", "비행"],
+        "abilities": [{"ko": "부유", "en": "levitate", "hidden": false}]
+      },
+      {
+        "type": "alt",
+        "name_ko": "커트로토무",
+        "name_en": "rotom-mow",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10062.png",
+        "types": ["전기", "풀"],
+        "abilities": [{"ko": "부유", "en": "levitate", "hidden": false}]
+      }
     ]
   },
   {
@@ -14187,7 +14329,31 @@
         "hidden": true
       }
     ],
-    "is_legendary": true
+    "is_legendary": true,
+    "forms": [
+      {
+        "type": "origin",
+        "name_ko": "오리진폼 디아루가",
+        "name_en": "dialga-origin",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10245.png",
+        "types": [
+          "강철",
+          "드래곤"
+        ],
+        "abilities": [
+          {
+            "ko": "프레셔",
+            "en": "pressure",
+            "hidden": false
+          },
+          {
+            "ko": "텔레파시",
+            "en": "telepathy",
+            "hidden": true
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 484,
@@ -14210,7 +14376,31 @@
         "hidden": true
       }
     ],
-    "is_legendary": true
+    "is_legendary": true,
+    "forms": [
+      {
+        "type": "origin",
+        "name_ko": "오리진폼 펄기아",
+        "name_en": "palkia-origin",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10246.png",
+        "types": [
+          "물",
+          "드래곤"
+        ],
+        "abilities": [
+          {
+            "ko": "프레셔",
+            "en": "pressure",
+            "hidden": false
+          },
+          {
+            "ko": "텔레파시",
+            "en": "telepathy",
+            "hidden": true
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 485,
@@ -14286,7 +14476,26 @@
         "hidden": true
       }
     ],
-    "is_legendary": true
+    "is_legendary": true,
+    "forms": [
+      {
+        "type": "origin",
+        "name_ko": "오리진폼 기라티나",
+        "name_en": "giratina-origin",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10063.png",
+        "types": [
+          "고스트",
+          "드래곤"
+        ],
+        "abilities": [
+          {
+            "ko": "부유",
+            "en": "levitate",
+            "hidden": false
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 488,
@@ -14383,7 +14592,17 @@
         "hidden": false
       }
     ],
-    "is_mythical": true
+    "is_mythical": true,
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "쉐이미 스카이폼",
+        "name_en": "shaymin-sky",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10064.png",
+        "types": ["풀", "비행"],
+        "abilities": [{"ko": "하늘의은총", "en": "serene grace", "hidden": false}]
+      }
+    ]
   },
   {
     "id": 493,
@@ -15938,6 +16157,32 @@
         "en": "mold breaker",
         "hidden": true
       }
+    ],
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "청색근의 모습",
+        "name_en": "basculin-blue-striped",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10016.png",
+        "types": ["물"],
+        "abilities": [
+          {"ko": "돌머리", "en": "rock head", "hidden": false},
+          {"ko": "적응력", "en": "adaptability", "hidden": false},
+          {"ko": "틀깨기", "en": "mold breaker", "hidden": true}
+        ]
+      },
+      {
+        "type": "hisui",
+        "name_ko": "배쓰나이 (백색근의 모습)",
+        "name_en": "basculin-white-striped",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10247.png",
+        "types": ["물"],
+        "abilities": [
+          {"ko": "주눅", "en": "rattled", "hidden": false},
+          {"ko": "적응력", "en": "adaptability", "hidden": false},
+          {"ko": "틀깨기", "en": "mold breaker", "hidden": true}
+        ]
+      }
     ]
   },
   {
@@ -16126,6 +16371,7 @@
       },
       {
         "type": "zen",
+        "regionType": "galar",
         "name_ko": "가라르 달마모드 불비달마",
         "name_en": "darmanitan-galar-zen",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10178.png",
@@ -17146,6 +17392,20 @@
         "en": "damp",
         "hidden": true
       }
+    ],
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "탱그릴 (암컷)",
+        "name_en": "frillish-female",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/female/592.png",
+        "types": ["물", "고스트"],
+        "abilities": [
+          {"ko": "저수", "en": "water absorb", "hidden": false},
+          {"ko": "저주받은바디", "en": "cursed body", "hidden": false},
+          {"ko": "습기", "en": "damp", "hidden": true}
+        ]
+      }
     ]
   },
   {
@@ -17172,6 +17432,20 @@
         "ko": "습기",
         "en": "damp",
         "hidden": true
+      }
+    ],
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "탱탱겔 (암컷)",
+        "name_en": "jellicent-female",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/female/593.png",
+        "types": ["물", "고스트"],
+        "abilities": [
+          {"ko": "저수", "en": "water absorb", "hidden": false},
+          {"ko": "저주받은바디", "en": "cursed body", "hidden": false},
+          {"ko": "습기", "en": "damp", "hidden": true}
+        ]
       }
     ]
   },
@@ -18410,7 +18684,17 @@
         "hidden": true
       }
     ],
-    "is_legendary": true
+    "is_legendary": true,
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "토네로스 영물폼",
+        "name_en": "tornadus-therian",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10019.png",
+        "types": ["비행"],
+        "abilities": [{"ko": "재생력", "en": "regenerator", "hidden": false}]
+      }
+    ]
   },
   {
     "id": 642,
@@ -18433,7 +18717,17 @@
         "hidden": true
       }
     ],
-    "is_legendary": true
+    "is_legendary": true,
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "볼트로스 영물폼",
+        "name_en": "thundurus-therian",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10020.png",
+        "types": ["전기", "비행"],
+        "abilities": [{"ko": "축전", "en": "volt absorb", "hidden": false}]
+      }
+    ]
   },
   {
     "id": 643,
@@ -18492,7 +18786,17 @@
         "hidden": true
       }
     ],
-    "is_legendary": true
+    "is_legendary": true,
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "랜드로스 영물폼",
+        "name_en": "landorus-therian",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10021.png",
+        "types": ["땅", "비행"],
+        "abilities": [{"ko": "위협", "en": "intimidate", "hidden": false}]
+      }
+    ]
   },
   {
     "id": 646,
@@ -18510,7 +18814,25 @@
         "hidden": false
       }
     ],
-    "is_legendary": true
+    "is_legendary": true,
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "블랙큐레무",
+        "name_en": "kyurem-black",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10022.png",
+        "types": ["드래곤", "얼음"],
+        "abilities": [{"ko": "테라볼티지", "en": "teravolt", "hidden": false}]
+      },
+      {
+        "type": "alt",
+        "name_ko": "화이트큐레무",
+        "name_en": "kyurem-white",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10023.png",
+        "types": ["드래곤", "얼음"],
+        "abilities": [{"ko": "터보블레이즈", "en": "turboblaze", "hidden": false}]
+      }
+    ]
   },
   {
     "id": 647,
@@ -18546,7 +18868,17 @@
         "hidden": false
       }
     ],
-    "is_mythical": true
+    "is_mythical": true,
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "메로엣타 스텝폼",
+        "name_en": "meloetta-pirouette",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10018.png",
+        "types": ["노말", "격투"],
+        "abilities": [{"ko": "하늘의은총", "en": "serene grace", "hidden": false}]
+      }
+    ]
   },
   {
     "id": 649,
@@ -19305,6 +19637,18 @@
       }
     ],
     "forms": [
+      {
+        "type": "alt",
+        "name_ko": "냐오닉스 (암컷)",
+        "name_en": "meowstic-female",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10025.png",
+        "types": ["에스퍼"],
+        "abilities": [
+          {"ko": "날카로운눈", "en": "keen eye", "hidden": false},
+          {"ko": "틈새포착", "en": "infiltrator", "hidden": false},
+          {"ko": "승기", "en": "competitive", "hidden": true}
+        ]
+      },
       {
         "type": "mega",
         "name_ko": "메가냐오닉스",
@@ -20399,6 +20743,22 @@
     ],
     "forms": [
       {
+        "type": "alt",
+        "name_ko": "지가르데 10%폼",
+        "name_en": "zygarde-10",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10181.png",
+        "types": ["드래곤", "땅"],
+        "abilities": [{"ko": "오라브레이크", "en": "aura break", "hidden": false}]
+      },
+      {
+        "type": "alt",
+        "name_ko": "지가르데 퍼펙트폼",
+        "name_en": "zygarde-complete",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10120.png",
+        "types": ["드래곤", "땅"],
+        "abilities": [{"ko": "스웜체인지", "en": "power construct", "hidden": false}]
+      },
+      {
         "type": "mega",
         "name_ko": "메가지가르데",
         "name_en": "zygarde-mega",
@@ -20467,7 +20827,17 @@
         "hidden": false
       }
     ],
-    "is_mythical": true
+    "is_mythical": true,
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "굴레를 벗어난 후파",
+        "name_en": "hoopa-unbound",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10086.png",
+        "types": ["에스퍼", "악"],
+        "abilities": [{"ko": "매지션", "en": "magician", "hidden": false}]
+      }
+    ]
   },
   {
     "id": 721,
@@ -21075,6 +21445,28 @@
         "en": "steadfast",
         "hidden": true
       }
+    ],
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "루가루암 한밤중의 모습",
+        "name_en": "lycanroc-midnight",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10126.png",
+        "types": ["바위"],
+        "abilities": [
+          {"ko": "날카로운눈", "en": "keen eye", "hidden": false},
+          {"ko": "의기양양", "en": "vital spirit", "hidden": false},
+          {"ko": "노가드", "en": "no guard", "hidden": true}
+        ]
+      },
+      {
+        "type": "alt",
+        "name_ko": "루가루암 황혼의 모습",
+        "name_en": "lycanroc-dusk",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10152.png",
+        "types": ["바위"],
+        "abilities": [{"ko": "단단한발톱", "en": "tough claws", "hidden": false}]
+      }
     ]
   },
   {
@@ -21090,6 +21482,16 @@
         "ko": "어군",
         "en": "schooling",
         "hidden": false
+      }
+    ],
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "약어리 군집의 모습",
+        "name_en": "wishiwashi-school",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10127.png",
+        "types": ["물"],
+        "abilities": [{"ko": "어군", "en": "schooling", "hidden": false}]
       }
     ]
   },
@@ -25332,7 +25734,17 @@
         "hidden": true
       }
     ],
-    "is_legendary": true
+    "is_legendary": true,
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "러브로스 영물폼",
+        "name_en": "enamorus-therian",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10249.png",
+        "types": ["페어리", "비행"],
+        "abilities": [{"ko": "방진", "en": "overcoat", "hidden": false}]
+      }
+    ]
   },
   {
     "id": 906,
