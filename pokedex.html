@@ -651,6 +651,9 @@
         <div id="modal-ub-badge" style="display:none;margin-bottom:8px">
           <span style="background:#4a0080;color:white;font-size:11px;font-weight:700;padding:2px 10px;border-radius:10px;letter-spacing:0.5px">울트라비스트</span>
         </div>
+        <div id="modal-paradox-badge" style="display:none;margin-bottom:8px">
+          <span style="background:#8b1a1a;color:white;font-size:11px;font-weight:700;padding:2px 10px;border-radius:10px;letter-spacing:0.5px">패러독스</span>
+        </div>
         <div class="modal-types" id="modal-types"></div>
       </div>
     </div>
@@ -1020,6 +1023,7 @@ function openModal(p) {
     `<span class="modal-type-tag">${t}</span>`
   ).join('');
   document.getElementById('modal-ub-badge').style.display = p.is_ub ? 'block' : 'none';
+  document.getElementById('modal-paradox-badge').style.display = p.is_paradox ? 'block' : 'none';
 
   const body = document.getElementById('modal-body');
   body.innerHTML = '';
