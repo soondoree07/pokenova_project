@@ -17200,6 +17200,7 @@
     "ko": "사철록",
     "en": "Deerling",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/585.png",
+    "formLabel": "봄의 모습",
     "types": [
       "노말",
       "풀"
@@ -17220,6 +17221,44 @@
         "en": "serene grace",
         "hidden": true
       }
+    ],
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "사철록 여름의 모습",
+        "name_en": "deerling-summer",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10068.png",
+        "types": ["노말", "풀"],
+        "abilities": [
+          {"ko": "엽록소", "en": "chlorophyll", "hidden": false},
+          {"ko": "초식", "en": "sap sipper", "hidden": false},
+          {"ko": "하늘의은총", "en": "serene grace", "hidden": true}
+        ]
+      },
+      {
+        "type": "alt",
+        "name_ko": "사철록 가을의 모습",
+        "name_en": "deerling-autumn",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10069.png",
+        "types": ["노말", "풀"],
+        "abilities": [
+          {"ko": "엽록소", "en": "chlorophyll", "hidden": false},
+          {"ko": "초식", "en": "sap sipper", "hidden": false},
+          {"ko": "하늘의은총", "en": "serene grace", "hidden": true}
+        ]
+      },
+      {
+        "type": "alt",
+        "name_ko": "사철록 겨울의 모습",
+        "name_en": "deerling-winter",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10070.png",
+        "types": ["노말", "풀"],
+        "abilities": [
+          {"ko": "엽록소", "en": "chlorophyll", "hidden": false},
+          {"ko": "초식", "en": "sap sipper", "hidden": false},
+          {"ko": "하늘의은총", "en": "serene grace", "hidden": true}
+        ]
+      }
     ]
   },
   {
@@ -17227,6 +17266,7 @@
     "ko": "바라철록",
     "en": "Sawsbuck",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/586.png",
+    "formLabel": "봄의 모습",
     "types": [
       "노말",
       "풀"
@@ -17246,6 +17286,44 @@
         "ko": "하늘의은총",
         "en": "serene grace",
         "hidden": true
+      }
+    ],
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "바라철록 여름의 모습",
+        "name_en": "sawsbuck-summer",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10071.png",
+        "types": ["노말", "풀"],
+        "abilities": [
+          {"ko": "엽록소", "en": "chlorophyll", "hidden": false},
+          {"ko": "초식", "en": "sap sipper", "hidden": false},
+          {"ko": "하늘의은총", "en": "serene grace", "hidden": true}
+        ]
+      },
+      {
+        "type": "alt",
+        "name_ko": "바라철록 가을의 모습",
+        "name_en": "sawsbuck-autumn",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10072.png",
+        "types": ["노말", "풀"],
+        "abilities": [
+          {"ko": "엽록소", "en": "chlorophyll", "hidden": false},
+          {"ko": "초식", "en": "sap sipper", "hidden": false},
+          {"ko": "하늘의은총", "en": "serene grace", "hidden": true}
+        ]
+      },
+      {
+        "type": "alt",
+        "name_ko": "바라철록 겨울의 모습",
+        "name_en": "sawsbuck-winter",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10073.png",
+        "types": ["노말", "풀"],
+        "abilities": [
+          {"ko": "엽록소", "en": "chlorophyll", "hidden": false},
+          {"ko": "초식", "en": "sap sipper", "hidden": false},
+          {"ko": "하늘의은총", "en": "serene grace", "hidden": true}
+        ]
       }
     ]
   },
