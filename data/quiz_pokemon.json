@@ -17231,7 +17231,7 @@
         "type": "alt",
         "name_ko": "사철록 여름의 모습",
         "name_en": "deerling-summer",
-        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10068.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/585-summer.png",
         "types": ["노말", "풀"],
         "abilities": [
           {"ko": "엽록소", "en": "chlorophyll", "hidden": false},
@@ -17243,7 +17243,7 @@
         "type": "alt",
         "name_ko": "사철록 가을의 모습",
         "name_en": "deerling-autumn",
-        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10069.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/585-autumn.png",
         "types": ["노말", "풀"],
         "abilities": [
           {"ko": "엽록소", "en": "chlorophyll", "hidden": false},
@@ -17255,7 +17255,7 @@
         "type": "alt",
         "name_ko": "사철록 겨울의 모습",
         "name_en": "deerling-winter",
-        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10070.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/585-winter.png",
         "types": ["노말", "풀"],
         "abilities": [
           {"ko": "엽록소", "en": "chlorophyll", "hidden": false},
@@ -17297,7 +17297,7 @@
         "type": "alt",
         "name_ko": "바라철록 여름의 모습",
         "name_en": "sawsbuck-summer",
-        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10071.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/586-summer.png",
         "types": ["노말", "풀"],
         "abilities": [
           {"ko": "엽록소", "en": "chlorophyll", "hidden": false},
@@ -17309,7 +17309,7 @@
         "type": "alt",
         "name_ko": "바라철록 가을의 모습",
         "name_en": "sawsbuck-autumn",
-        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10072.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/586-autumn.png",
         "types": ["노말", "풀"],
         "abilities": [
           {"ko": "엽록소", "en": "chlorophyll", "hidden": false},
@@ -17321,7 +17321,7 @@
         "type": "alt",
         "name_ko": "바라철록 겨울의 모습",
         "name_en": "sawsbuck-winter",
-        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10073.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/586-winter.png",
         "types": ["노말", "풀"],
         "abilities": [
           {"ko": "엽록소", "en": "chlorophyll", "hidden": false},
