@@ -12448,6 +12448,7 @@
     "id": 413,
     "ko": "도롱마담",
     "en": "Wormadam",
+    "formLabel": "초록도롱",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/413.png",
     "types": [
       "벌레",
@@ -18753,6 +18754,7 @@
     "id": 641,
     "ko": "토네로스",
     "en": "Tornadus",
+    "formLabel": "화신폼",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/641.png",
     "types": [
       "비행"
@@ -18785,6 +18787,7 @@
     "id": 642,
     "ko": "볼트로스",
     "en": "Thundurus",
+    "formLabel": "화신폼",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/642.png",
     "types": [
       "전기",
@@ -18854,6 +18857,7 @@
     "id": 645,
     "ko": "랜드로스",
     "en": "Landorus",
+    "formLabel": "화신폼",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/645.png",
     "types": [
       "땅",
@@ -25751,7 +25755,7 @@
     "forms": [
       {
         "type": "alt",
-        "name_ko": "백마 탄 버드렉스",
+        "name_ko": "백마 탄 모습",
         "name_en": "calyrex-ice",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10193.png",
         "types": ["에스퍼", "얼음"],
@@ -25759,7 +25763,7 @@
       },
       {
         "type": "alt",
-        "name_ko": "흑마 탄 버드렉스",
+        "name_ko": "흑마 탄 모습",
         "name_en": "calyrex-shadow",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10194.png",
         "types": ["에스퍼", "고스트"],
@@ -25949,6 +25953,7 @@
     "id": 905,
     "ko": "러브로스",
     "en": "Enamorus",
+    "formLabel": "화신폼",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/905.png",
     "types": [
       "페어리",
@@ -28719,6 +28724,7 @@
     "ko": "테라파고스",
     "en": "Terapagos",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1024.png",
+    "formLabel": "노말폼",
     "types": [
       "노말"
     ],
@@ -28727,6 +28733,24 @@
         "ko": "테라체인지",
         "en": "tera shift",
         "hidden": false
+      }
+    ],
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "테라스탈폼",
+        "name_en": "terapagos-terastal",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10276.png",
+        "types": ["노말"],
+        "abilities": [{"ko": "테라쉘", "en": "tera shell", "hidden": false}]
+      },
+      {
+        "type": "alt",
+        "name_ko": "스텔라폼",
+        "name_en": "terapagos-stellar",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10277.png",
+        "types": ["노말"],
+        "abilities": [{"ko": "테라폼제로", "en": "teraform zero", "hidden": false}]
       }
     ],
     "is_legendary": true
