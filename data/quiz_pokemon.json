@@ -18955,6 +18955,7 @@
     "id": 648,
     "ko": "메로엣타",
     "en": "Meloetta",
+    "formLabel": "보이스폼",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/648.png",
     "types": [
       "노말",
