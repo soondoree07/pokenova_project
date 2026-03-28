@@ -13385,7 +13385,7 @@
         "type": "mega",
         "name_ko": "메가한카리아스 Z",
         "name_en": "garchomp-mega-z",
-        "sprite": null,
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10309.png",
         "types": [
           "드래곤"
         ],
@@ -23409,15 +23409,21 @@
         "abilities": []
       },
       {
-        "type": "mega",
-        "name_ko": "메가마기아나",
-        "name_en": "magearna-original-mega",
-        "sprite": null,
+        "type": "alt",
+        "name_ko": "마기아나 500년전의 모습",
+        "name_en": "magearna-original",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10147.png",
         "types": [
           "강철",
           "페어리"
         ],
-        "abilities": []
+        "abilities": [
+          {
+            "ko": "소울하트",
+            "en": "soul-heart",
+            "hidden": false
+          }
+        ]
       }
     ],
     "is_mythical": true
@@ -28410,28 +28416,6 @@
       }
     ],
     "forms": [
-      {
-        "type": "mega",
-        "name_ko": "메가싸리용",
-        "name_en": "tatsugiri-curly-mega",
-        "sprite": null,
-        "types": [
-          "드래곤",
-          "물"
-        ],
-        "abilities": []
-      },
-      {
-        "type": "mega",
-        "name_ko": "메가싸리용",
-        "name_en": "tatsugiri-droopy-mega",
-        "sprite": null,
-        "types": [
-          "드래곤",
-          "물"
-        ],
-        "abilities": []
-      },
       {
         "type": "mega",
         "name_ko": "메가싸리용",
