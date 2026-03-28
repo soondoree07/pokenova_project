@@ -12422,7 +12422,7 @@
         "type": "alt",
         "name_ko": "모래땅도롱",
         "name_en": "burmy-sandy",
-        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10034.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/412-sandy.png",
         "types": ["벌레"],
         "abilities": [
           {"ko": "탈피", "en": "shed skin", "hidden": false},
@@ -12433,7 +12433,7 @@
         "type": "alt",
         "name_ko": "슈레도롱",
         "name_en": "burmy-trash",
-        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10035.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/412-trash.png",
         "types": ["벌레"],
         "abilities": [
           {"ko": "탈피", "en": "shed skin", "hidden": false},
@@ -14482,7 +14482,7 @@
         "type": "origin",
         "name_ko": "오리진폼 기라티나",
         "name_en": "giratina-origin",
-        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10063.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10007.png",
         "types": [
           "고스트",
           "드래곤"
@@ -14598,7 +14598,7 @@
         "type": "alt",
         "name_ko": "쉐이미 스카이폼",
         "name_en": "shaymin-sky",
-        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10064.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10006.png",
         "types": ["풀", "비행"],
         "abilities": [{"ko": "하늘의은총", "en": "serene grace", "hidden": false}]
       }
@@ -18850,6 +18850,16 @@
         "hidden": false
       }
     ],
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "케르디오 각오의 모습",
+        "name_en": "keldeo-resolute",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10024.png",
+        "types": ["물", "격투"],
+        "abilities": [{"ko": "정의의마음", "en": "justified", "hidden": false}]
+      }
+    ],
     "is_mythical": true
   },
   {
@@ -19439,6 +19449,17 @@
       }
     ],
     "forms": [
+      {
+        "type": "alt",
+        "name_ko": "영원의꽃 플라엣테",
+        "name_en": "floette-eternal",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10061.png",
+        "types": ["페어리"],
+        "abilities": [
+          {"ko": "플라워베일", "en": "flower veil", "hidden": false},
+          {"ko": "공생", "en": "symbiosis", "hidden": true}
+        ]
+      },
       {
         "type": "mega",
         "name_ko": "메가플라엣테",
@@ -21338,6 +21359,32 @@
         "ko": "무희",
         "en": "dancer",
         "hidden": false
+      }
+    ],
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "파칙파칙스타일",
+        "name_en": "oricorio-pom-pom",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10123.png",
+        "types": ["전기", "비행"],
+        "abilities": [{"ko": "무희", "en": "dancer", "hidden": false}]
+      },
+      {
+        "type": "alt",
+        "name_ko": "훌라훌라스타일",
+        "name_en": "oricorio-pau",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10124.png",
+        "types": ["에스퍼", "비행"],
+        "abilities": [{"ko": "무희", "en": "dancer", "hidden": false}]
+      },
+      {
+        "type": "alt",
+        "name_ko": "하늘하늘스타일",
+        "name_en": "oricorio-sensu",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10125.png",
+        "types": ["고스트", "비행"],
+        "abilities": [{"ko": "무희", "en": "dancer", "hidden": false}]
       }
     ]
   },
@@ -28407,6 +28454,32 @@
         "ko": "오기",
         "en": "defiant",
         "hidden": false
+      }
+    ],
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "우물의가면",
+        "name_en": "ogerpon-wellspring-mask",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10273.png",
+        "types": ["풀", "물"],
+        "abilities": [{"ko": "물흡수", "en": "water absorb", "hidden": false}]
+      },
+      {
+        "type": "alt",
+        "name_ko": "화덕의가면",
+        "name_en": "ogerpon-hearthflame-mask",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10274.png",
+        "types": ["풀", "불꽃"],
+        "abilities": [{"ko": "틀깨기", "en": "mold breaker", "hidden": false}]
+      },
+      {
+        "type": "alt",
+        "name_ko": "주춧돌의가면",
+        "name_en": "ogerpon-cornerstone-mask",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10275.png",
+        "types": ["풀", "바위"],
+        "abilities": [{"ko": "옹골참", "en": "sturdy", "hidden": false}]
       }
     ],
     "is_legendary": true
