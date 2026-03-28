@@ -25900,6 +25900,7 @@
     "id": 903,
     "ko": "포푸니크",
     "en": "Sneasler",
+    "regionType": "hisui",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/903.png",
     "types": [
       "격투",
