@@ -1199,6 +1199,7 @@ function buildAbilityPokemonMap(pokemonData) {
 }
 
 function openAbilityModal(abilityKo, abilityEn) {
+  closeModal();
   const desc = ABILITY_DESC[abilityKo] || '';
   const en   = abilityEn || ABILITY_EN[abilityKo] || '';
   const list = ABILITY_POKEMON_MAP[abilityKo] || [];
