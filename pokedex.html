@@ -169,9 +169,12 @@
       font-weight: 700;
       color: #f0f0f0;
       margin-bottom: 7px;
-      white-space: nowrap;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
       overflow: hidden;
-      text-overflow: ellipsis;
+      line-height: 1.35;
+      word-break: keep-all;
     }
     .card-types {
       display: flex;
@@ -452,6 +455,7 @@
     .card-badge.galar  { background: #1a3a7a; }
     .card-badge.hisui  { background: #6b3a1a; }
     .card-badge.paldea { background: #5a1a6b; }
+    .card-badge.form-label { left: auto; right: 6px; background: #3a3a3a; }
 
     /* 거다이 전용기 */
     .gmax-move-box {
@@ -764,18 +768,39 @@ function buildCard(p) {
   card.dataset.types = types.join(',');
   const bg = typeColor(types[0] || '노말');
   const REGION_LABEL = { alola:'알로라', galar:'가라르', hisui:'히스이', paldea:'팔데아' };
-  const badge = p.formType === 'mega'
-    ? '<span class="card-badge mega">MEGA</span>'
-    : p.formType === 'gmax'
-    ? '<span class="card-badge gmax">거다이</span>'
-    : (p.formType === 'region' || p.regionType)
-    ? `<span class="card-badge ${p.regionType}">${REGION_LABEL[p.regionType] || p.regionType}</span>`
-    : '';
+
+  // 왼쪽 뱃지: 메가/거다이/리전
+  let leftBadge = '';
+  if (p.formType === 'mega') leftBadge = '<span class="card-badge mega">MEGA</span>';
+  else if (p.formType === 'gmax') leftBadge = '<span class="card-badge gmax">거다이</span>';
+  else if (p.formType === 'region' || p.regionType) {
+    leftBadge = `<span class="card-badge ${p.regionType}">${REGION_LABEL[p.regionType] || ''}</span>`;
+  }
+
+  // 오른쪽 뱃지: 폼 라벨 (baseKo가 있는 폼)
+  let rightBadge = '';
+  if (p.baseKo && p.formType !== 'mega' && p.formType !== 'gmax') {
+    let label = p.ko;
+    const base = p.baseKo;
+    if (label.startsWith(base + ' ')) label = label.slice(base.length + 1);
+    else if (label.endsWith(' ' + base)) label = label.slice(0, -(base.length + 1));
+    label = label.replace(/^\(|\)$/g, '').trim();
+    if (p.regionType) {
+      const rn = REGION_LABEL[p.regionType] || '';
+      if (rn && label.startsWith(rn + ' ')) label = label.slice(rn.length + 1);
+      if (label === rn) label = '';
+    }
+    if (label) rightBadge = `<span class="card-badge form-label">${label}</span>`;
+  }
+
+  const displayName = p.baseKo || p.ko;
+
   card.innerHTML = `
-    ${badge}
-    <img class="card-img" src="${p.sprite}" alt="${p.ko}" loading="lazy">
+    ${leftBadge}
+    ${rightBadge}
+    <img class="card-img" src="${p.sprite}" alt="${displayName}" loading="lazy">
     <div class="card-number">${padId(p.id)}</div>
-    <div class="card-name">${p.ko}</div>
+    <div class="card-name">${displayName}</div>
     <div class="card-types">${types.map(t=>typeBadge(t)).join('')}</div>
   `;
   card.style.borderColor = bg + '44';
@@ -806,6 +831,7 @@ function renderAll(data) {
         if (!formCounters[p.id]) formCounters[p.id] = 0;
         entries.push({
           id: p.id, ko: f.name_ko, en: f.name_en,
+          baseKo: p.ko,
           sprite: f.sprite, types: f.types || p.types,
           abilities: f.abilities || p.abilities,
           formType: 'fusion',
@@ -824,6 +850,7 @@ function renderAll(data) {
       if (!formCounters[p.id]) formCounters[p.id] = 0;
       entries.push({
         id: p.id, ko: f.name_ko, en: f.name_en,
+        baseKo: p.ko,
         sprite: f.sprite, types: f.types || p.types,
         abilities: f.abilities || p.abilities,
         formType: 'region', regionType: f.type,
