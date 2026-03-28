@@ -25339,6 +25339,16 @@
         "hidden": false
       }
     ],
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "검왕",
+        "name_en": "zacian-crowned",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10188.png",
+        "types": ["페어리", "강철"],
+        "abilities": [{"ko": "불요의검", "en": "intrepid sword", "hidden": false}]
+      }
+    ],
     "is_legendary": true
   },
   {
@@ -25354,6 +25364,16 @@
         "ko": "불굴의방패",
         "en": "dauntless shield",
         "hidden": false
+      }
+    ],
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "방패왕",
+        "name_en": "zamazenta-crowned",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10189.png",
+        "types": ["격투", "강철"],
+        "abilities": [{"ko": "불굴의방패", "en": "dauntless shield", "hidden": false}]
       }
     ],
     "is_legendary": true
@@ -25372,6 +25392,16 @@
         "ko": "프레셔",
         "en": "pressure",
         "hidden": false
+      }
+    ],
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "무한다이맥스",
+        "name_en": "eternatus-eternamax",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10190.png",
+        "types": ["독", "드래곤"],
+        "abilities": [{"ko": "프레셔", "en": "pressure", "hidden": false}]
       }
     ],
     "is_legendary": true
@@ -25411,8 +25441,16 @@
     ],
     "forms": [
       {
+        "type": "alt",
+        "name_ko": "우라오스 (연격의 태세)",
+        "name_en": "urshifu-rapid-strike",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10191.png",
+        "types": ["격투", "물"],
+        "abilities": [{"ko": "보이지않는주먹", "en": "unseen fist", "hidden": false}]
+      },
+      {
         "type": "gmax",
-        "name_ko": "거다이맥스 우라오스",
+        "name_ko": "거다이맥스 우라오스 (일격)",
         "name_en": "urshifu-single-strike-gmax",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10226.png",
         "types": [
@@ -25429,7 +25467,7 @@
       },
       {
         "type": "gmax",
-        "name_ko": "거다이맥스 우라오스",
+        "name_ko": "거다이맥스 우라오스 (연격)",
         "name_en": "urshifu-rapid-strike-gmax",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10227.png",
         "types": [
@@ -25461,6 +25499,16 @@
         "ko": "리프가드",
         "en": "leaf guard",
         "hidden": false
+      }
+    ],
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "자루도 아빠",
+        "name_en": "zarude-dada",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10192.png",
+        "types": ["악", "풀"],
+        "abilities": [{"ko": "리프가드", "en": "leaf guard", "hidden": false}]
       }
     ],
     "is_mythical": true
@@ -25547,6 +25595,24 @@
         "ko": "긴장감",
         "en": "unnerve",
         "hidden": false
+      }
+    ],
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "백마 탄 버드렉스",
+        "name_en": "calyrex-ice",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10193.png",
+        "types": ["에스퍼", "얼음"],
+        "abilities": [{"ko": "혼연일체", "en": "as one", "hidden": false}]
+      },
+      {
+        "type": "alt",
+        "name_ko": "흑마 탄 버드렉스",
+        "name_en": "calyrex-shadow",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10194.png",
+        "types": ["에스퍼", "고스트"],
+        "abilities": [{"ko": "혼연일체", "en": "as one", "hidden": false}]
       }
     ],
     "is_legendary": true
@@ -25656,6 +25722,20 @@
         "ko": "틀깨기",
         "en": "mold breaker",
         "hidden": true
+      }
+    ],
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "대쓰여너 (암컷)",
+        "name_en": "basculegion-female",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10248.png",
+        "types": ["물", "고스트"],
+        "abilities": [
+          {"ko": "쓱쓱", "en": "swift swim", "hidden": false},
+          {"ko": "적응력", "en": "adaptability", "hidden": false},
+          {"ko": "틀깨기", "en": "mold breaker", "hidden": true}
+        ]
       }
     ]
   },
@@ -25974,7 +26054,7 @@
     ],
     "abilities": [
       {
-        "ko": "Lingering Aroma",
+        "ko": "가시지않는향기",
         "en": "lingering aroma",
         "hidden": false
       },
@@ -25987,6 +26067,20 @@
         "ko": "두꺼운지방",
         "en": "thick fat",
         "hidden": true
+      }
+    ],
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "퍼퓨돈 (암컷)",
+        "name_en": "oinkologne-female",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10254.png",
+        "types": ["노말"],
+        "abilities": [
+          {"ko": "아로마베일", "en": "aroma veil", "hidden": false},
+          {"ko": "먹보", "en": "gluttony", "hidden": false},
+          {"ko": "두꺼운지방", "en": "thick fat", "hidden": true}
+        ]
       }
     ]
   },
@@ -27148,9 +27242,19 @@
     ],
     "abilities": [
       {
-        "ko": "Zero to Hero",
+        "ko": "마이티체인지",
         "en": "zero to hero",
         "hidden": false
+      }
+    ],
+    "forms": [
+      {
+        "type": "alt",
+        "name_ko": "돌핀맨 (마이티폼)",
+        "name_en": "palafin-hero",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10256.png",
+        "types": ["물"],
+        "abilities": [{"ko": "마이티체인지", "en": "zero to hero", "hidden": false}]
       }
     ]
   },
