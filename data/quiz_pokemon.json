@@ -8819,7 +8819,7 @@
         "hidden": false
       },
       {
-        "ko": "Wind Rider",
+        "ko": "바람타기",
         "en": "wind rider",
         "hidden": false
       },
@@ -14172,7 +14172,7 @@
         "hidden": false
       },
       {
-        "ko": "Sharpness",
+        "ko": "예리함",
         "en": "sharpness",
         "hidden": false
       },
@@ -15014,7 +15014,7 @@
             "hidden": false
           },
           {
-            "ko": "Sharpness",
+            "ko": "예리함",
             "en": "sharpness",
             "hidden": true
           }
@@ -26407,7 +26407,7 @@
         "hidden": false
       },
       {
-        "ko": "Sharpness",
+        "ko": "예리함",
         "en": "sharpness",
         "hidden": true
       }
@@ -27140,7 +27140,7 @@
     ],
     "abilities": [
       {
-        "ko": "Well-Baked Body",
+        "ko": "노릇노릇바디",
         "en": "well-baked body",
         "hidden": false
       },
@@ -27206,7 +27206,7 @@
     ],
     "abilities": [
       {
-        "ko": "Seed Sower",
+        "ko": "넘치는씨",
         "en": "seed sower",
         "hidden": false
       },
@@ -27254,7 +27254,7 @@
     ],
     "abilities": [
       {
-        "ko": "Purifying Salt",
+        "ko": "정화의소금",
         "en": "purifying salt",
         "hidden": false
       },
@@ -27280,7 +27280,7 @@
     ],
     "abilities": [
       {
-        "ko": "Purifying Salt",
+        "ko": "정화의소금",
         "en": "purifying salt",
         "hidden": false
       },
@@ -27306,7 +27306,7 @@
     ],
     "abilities": [
       {
-        "ko": "Purifying Salt",
+        "ko": "정화의소금",
         "en": "purifying salt",
         "hidden": false
       },
@@ -27423,7 +27423,7 @@
     ],
     "abilities": [
       {
-        "ko": "Electromorphosis",
+        "ko": "전기로바꾸기",
         "en": "electromorphosis",
         "hidden": false
       },
@@ -27450,7 +27450,7 @@
     ],
     "abilities": [
       {
-        "ko": "Wind Power",
+        "ko": "풍력발전",
         "en": "wind power",
         "hidden": false
       },
@@ -27477,7 +27477,7 @@
     ],
     "abilities": [
       {
-        "ko": "Wind Power",
+        "ko": "풍력발전",
         "en": "wind power",
         "hidden": false
       },
@@ -27534,7 +27534,7 @@
         "hidden": false
       },
       {
-        "ko": "Guard Dog",
+        "ko": "파수견",
         "en": "guard dog",
         "hidden": false
       },
@@ -27610,7 +27610,7 @@
     ],
     "abilities": [
       {
-        "ko": "Wind Rider",
+        "ko": "바람타기",
         "en": "wind rider",
         "hidden": false
       },
@@ -27632,7 +27632,7 @@
     ],
     "abilities": [
       {
-        "ko": "Wind Rider",
+        "ko": "바람타기",
         "en": "wind rider",
         "hidden": false
       },
@@ -27654,7 +27654,7 @@
     ],
     "abilities": [
       {
-        "ko": "Mycelium Might",
+        "ko": "균사의힘",
         "en": "mycelium might",
         "hidden": false
       }
@@ -27671,7 +27671,7 @@
     ],
     "abilities": [
       {
-        "ko": "Mycelium Might",
+        "ko": "균사의힘",
         "en": "mycelium might",
         "hidden": false
       }
@@ -27687,7 +27687,7 @@
     ],
     "abilities": [
       {
-        "ko": "Anger Shell",
+        "ko": "분노의껍질",
         "en": "anger shell",
         "hidden": false
       },
@@ -27848,7 +27848,7 @@
     ],
     "abilities": [
       {
-        "ko": "Opportunist",
+        "ko": "편승",
         "en": "opportunist",
         "hidden": false
       },
@@ -28018,7 +28018,7 @@
         "hidden": false
       },
       {
-        "ko": "Rocky Payload",
+        "ko": "바위나르기",
         "en": "rocky payload",
         "hidden": true
       }
@@ -28151,7 +28151,7 @@
     ],
     "abilities": [
       {
-        "ko": "Earth Eater",
+        "ko": "흙먹기",
         "en": "earth eater",
         "hidden": false
       },
@@ -28173,7 +28173,7 @@
     ],
     "abilities": [
       {
-        "ko": "Toxic Debris",
+        "ko": "독치장",
         "en": "toxic debris",
         "hidden": false
       },
@@ -28195,7 +28195,7 @@
     ],
     "abilities": [
       {
-        "ko": "Toxic Debris",
+        "ko": "독치장",
         "en": "toxic debris",
         "hidden": false
       },
@@ -28282,7 +28282,7 @@
         "hidden": false
       },
       {
-        "ko": "Costar",
+        "ko": "협연",
         "en": "costar",
         "hidden": true
       }
@@ -28356,7 +28356,7 @@
         "hidden": false
       },
       {
-        "ko": "Sharpness",
+        "ko": "예리함",
         "en": "sharpness",
         "hidden": true
       }
@@ -28399,7 +28399,7 @@
     ],
     "abilities": [
       {
-        "ko": "Commander",
+        "ko": "사령탑",
         "en": "commander",
         "hidden": false
       },
@@ -28510,12 +28510,12 @@
     ],
     "abilities": [
       {
-        "ko": "Cud Chew",
+        "ko": "되새김질",
         "en": "cud chew",
         "hidden": false
       },
       {
-        "ko": "Armor Tail",
+        "ko": "테일아머",
         "en": "armor tail",
         "hidden": false
       },
@@ -28568,7 +28568,7 @@
         "hidden": false
       },
       {
-        "ko": "Supreme Overlord",
+        "ko": "총대장",
         "en": "supreme overlord",
         "hidden": false
       },
@@ -28590,7 +28590,7 @@
     ],
     "abilities": [
       {
-        "ko": "Protosynthesis",
+        "ko": "고대활성",
         "en": "protosynthesis",
         "hidden": false
       }
@@ -28608,7 +28608,7 @@
     ],
     "abilities": [
       {
-        "ko": "Protosynthesis",
+        "ko": "고대활성",
         "en": "protosynthesis",
         "hidden": false
       }
@@ -28626,7 +28626,7 @@
     ],
     "abilities": [
       {
-        "ko": "Protosynthesis",
+        "ko": "고대활성",
         "en": "protosynthesis",
         "hidden": false
       }
@@ -28644,7 +28644,7 @@
     ],
     "abilities": [
       {
-        "ko": "Protosynthesis",
+        "ko": "고대활성",
         "en": "protosynthesis",
         "hidden": false
       }
@@ -28662,7 +28662,7 @@
     ],
     "abilities": [
       {
-        "ko": "Protosynthesis",
+        "ko": "고대활성",
         "en": "protosynthesis",
         "hidden": false
       }
@@ -28680,7 +28680,7 @@
     ],
     "abilities": [
       {
-        "ko": "Protosynthesis",
+        "ko": "고대활성",
         "en": "protosynthesis",
         "hidden": false
       }
@@ -28698,7 +28698,7 @@
     ],
     "abilities": [
       {
-        "ko": "Quark Drive",
+        "ko": "쿼크차지",
         "en": "quark drive",
         "hidden": false
       }
@@ -28716,7 +28716,7 @@
     ],
     "abilities": [
       {
-        "ko": "Quark Drive",
+        "ko": "쿼크차지",
         "en": "quark drive",
         "hidden": false
       }
@@ -28734,7 +28734,7 @@
     ],
     "abilities": [
       {
-        "ko": "Quark Drive",
+        "ko": "쿼크차지",
         "en": "quark drive",
         "hidden": false
       }
@@ -28752,7 +28752,7 @@
     ],
     "abilities": [
       {
-        "ko": "Quark Drive",
+        "ko": "쿼크차지",
         "en": "quark drive",
         "hidden": false
       }
@@ -28770,7 +28770,7 @@
     ],
     "abilities": [
       {
-        "ko": "Quark Drive",
+        "ko": "쿼크차지",
         "en": "quark drive",
         "hidden": false
       }
@@ -28788,7 +28788,7 @@
     ],
     "abilities": [
       {
-        "ko": "Quark Drive",
+        "ko": "쿼크차지",
         "en": "quark drive",
         "hidden": false
       }
@@ -28806,7 +28806,7 @@
     ],
     "abilities": [
       {
-        "ko": "Thermal Exchange",
+        "ko": "열교환",
         "en": "thermal exchange",
         "hidden": false
       },
@@ -28828,7 +28828,7 @@
     ],
     "abilities": [
       {
-        "ko": "Thermal Exchange",
+        "ko": "열교환",
         "en": "thermal exchange",
         "hidden": false
       },
@@ -28850,7 +28850,7 @@
     ],
     "abilities": [
       {
-        "ko": "Thermal Exchange",
+        "ko": "열교환",
         "en": "thermal exchange",
         "hidden": false
       },
@@ -28901,7 +28901,7 @@
     ],
     "abilities": [
       {
-        "ko": "Good as Gold",
+        "ko": "황금몸",
         "en": "good as gold",
         "hidden": false
       }
@@ -28918,7 +28918,7 @@
     ],
     "abilities": [
       {
-        "ko": "Tablets of Ruin",
+        "ko": "재앙의 목간",
         "en": "tablets of ruin",
         "hidden": false
       }
@@ -28936,7 +28936,7 @@
     ],
     "abilities": [
       {
-        "ko": "Sword of Ruin",
+        "ko": "재앙의검",
         "en": "sword of ruin",
         "hidden": false
       }
@@ -28954,7 +28954,7 @@
     ],
     "abilities": [
       {
-        "ko": "Vessel of Ruin",
+        "ko": "재앙의 그릇",
         "en": "vessel of ruin",
         "hidden": false
       }
@@ -28972,7 +28972,7 @@
     ],
     "abilities": [
       {
-        "ko": "Beads of Ruin",
+        "ko": "재앙의 구슬",
         "en": "beads of ruin",
         "hidden": false
       }
@@ -28990,7 +28990,7 @@
     ],
     "abilities": [
       {
-        "ko": "Protosynthesis",
+        "ko": "고대활성",
         "en": "protosynthesis",
         "hidden": false
       }
@@ -29008,7 +29008,7 @@
     ],
     "abilities": [
       {
-        "ko": "Quark Drive",
+        "ko": "쿼크차지",
         "en": "quark drive",
         "hidden": false
       }
@@ -29026,7 +29026,7 @@
     ],
     "abilities": [
       {
-        "ko": "Orichalcum Pulse",
+        "ko": "진홍빛고동",
         "en": "orichalcum pulse",
         "hidden": false
       }
@@ -29045,7 +29045,7 @@
     ],
     "abilities": [
       {
-        "ko": "Hadron Engine",
+        "ko": "하드론엔진",
         "en": "hadron engine",
         "hidden": false
       }
@@ -29064,7 +29064,7 @@
     ],
     "abilities": [
       {
-        "ko": "Protosynthesis",
+        "ko": "고대활성",
         "en": "protosynthesis",
         "hidden": false
       }
@@ -29082,7 +29082,7 @@
     ],
     "abilities": [
       {
-        "ko": "Quark Drive",
+        "ko": "쿼크차지",
         "en": "quark drive",
         "hidden": false
       }
@@ -29176,7 +29176,7 @@
         "hidden": false
       },
       {
-        "ko": "Guard Dog",
+        "ko": "파수견",
         "en": "guard dog",
         "hidden": true
       }
@@ -29365,7 +29365,7 @@
     ],
     "abilities": [
       {
-        "ko": "Protosynthesis",
+        "ko": "고대활성",
         "en": "protosynthesis",
         "hidden": false
       }
@@ -29383,7 +29383,7 @@
     ],
     "abilities": [
       {
-        "ko": "Protosynthesis",
+        "ko": "고대활성",
         "en": "protosynthesis",
         "hidden": false
       }
@@ -29401,7 +29401,7 @@
     ],
     "abilities": [
       {
-        "ko": "Quark Drive",
+        "ko": "쿼크차지",
         "en": "quark drive",
         "hidden": false
       }
@@ -29419,7 +29419,7 @@
     ],
     "abilities": [
       {
-        "ko": "Quark Drive",
+        "ko": "쿼크차지",
         "en": "quark drive",
         "hidden": false
       }
