@@ -8705,21 +8705,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워로 기세를 몰아 전력으로 상대에게 부딪친다. 원래 기술에 따라 위력이 변한다.",
-    "desc_lang": "ko"
-  },
-  {
-    "id": 623,
-    "ko": "울트라대시어택",
-    "en": "breakneck blitz",
-    "type": "노말",
-    "type_en": "normal",
-    "class": "특수",
-    "pp": 1,
-    "power": null,
-    "accuracy": null,
-    "gen": "7세대",
-    "desc": "Dummy Data",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 624,
@@ -8733,21 +8720,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워로 만든 에너지 구슬을 전력으로 상대에게 부딪친다. 원래 기술에 따라 위력이 변한다.",
-    "desc_lang": "ko"
-  },
-  {
-    "id": 625,
-    "ko": "전력무쌍격렬권",
-    "en": "all-out pummeling",
-    "type": "격투",
-    "type_en": "fighting",
-    "class": "특수",
-    "pp": 1,
-    "power": null,
-    "accuracy": null,
-    "gen": "7세대",
-    "desc": "Dummy Data",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 626,
@@ -8761,21 +8735,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워로 기세 좋게 날아올라 상대를 향해 전력으로 낙하한다. 원래 기술에 따라 위력이 변한다.",
-    "desc_lang": "ko"
-  },
-  {
-    "id": 627,
-    "ko": "파이널다이브클래시",
-    "en": "supersonic skystrike",
-    "type": "비행",
-    "type_en": "flying",
-    "class": "특수",
-    "pp": 1,
-    "power": null,
-    "accuracy": null,
-    "gen": "7세대",
-    "desc": "Dummy Data",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 628,
@@ -8789,21 +8750,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워로 독의 늪을 만들어 전력으로 상대를 가라앉힌다. 원래 기술에 따라 위력이 변한다.",
-    "desc_lang": "ko"
-  },
-  {
-    "id": 629,
-    "ko": "애시드포이즌딜리트",
-    "en": "acid downpour",
-    "type": "독",
-    "type_en": "poison",
-    "class": "특수",
-    "pp": 1,
-    "power": null,
-    "accuracy": null,
-    "gen": "7세대",
-    "desc": "Dummy Data",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 630,
@@ -8817,21 +8765,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워로 땅 깊숙이 파고들어 전력으로 상대에게 부딪친다. 원래 기술에 따라 위력이 변한다.",
-    "desc_lang": "ko"
-  },
-  {
-    "id": 631,
-    "ko": "라이징랜드오버",
-    "en": "tectonic rage",
-    "type": "땅",
-    "type_en": "ground",
-    "class": "특수",
-    "pp": 1,
-    "power": null,
-    "accuracy": null,
-    "gen": "7세대",
-    "desc": "Dummy Data",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 632,
@@ -8845,21 +8780,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워로 큰 바위산을 불러내 전력으로 상대에게 부딪친다. 원래 기술에 따라 위력이 변한다.",
-    "desc_lang": "ko"
-  },
-  {
-    "id": 633,
-    "ko": "월즈엔드폴",
-    "en": "continental crush",
-    "type": "바위",
-    "type_en": "rock",
-    "class": "특수",
-    "pp": 1,
-    "power": null,
-    "accuracy": null,
-    "gen": "7세대",
-    "desc": "Dummy Data",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 634,
@@ -8873,21 +8795,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워로 뱉어낸 실이 전력으로 상대를 붙들어 맨다. 원래 기술에 따라 위력이 변한다.",
-    "desc_lang": "ko"
-  },
-  {
-    "id": 635,
-    "ko": "절대포식회전참",
-    "en": "savage spin-out",
-    "type": "벌레",
-    "type_en": "bug",
-    "class": "특수",
-    "pp": 1,
-    "power": null,
-    "accuracy": null,
-    "gen": "7세대",
-    "desc": "Dummy Data",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 636,
@@ -8901,21 +8810,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워로 불러낸 강한 원념이 전력으로 상대에게 쏟아진다. 원래 기술에 따라 위력이 변한다.",
-    "desc_lang": "ko"
-  },
-  {
-    "id": 637,
-    "ko": "무한암야로의유인",
-    "en": "never-ending nightmare",
-    "type": "고스트",
-    "type_en": "ghost",
-    "class": "특수",
-    "pp": 1,
-    "power": null,
-    "accuracy": null,
-    "gen": "7세대",
-    "desc": "Dummy Data",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 638,
@@ -8929,21 +8825,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워로 고속 회전을 하여 전력으로 상대에게 부딪친다. 원래 기술에 따라 위력이 변한다.",
-    "desc_lang": "ko"
-  },
-  {
-    "id": 639,
-    "ko": "초월나선연격",
-    "en": "corkscrew crash",
-    "type": "강철",
-    "type_en": "steel",
-    "class": "특수",
-    "pp": 1,
-    "power": null,
-    "accuracy": null,
-    "gen": "7세대",
-    "desc": "Dummy Data",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 640,
@@ -8957,21 +8840,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워로 활활 타는 불꽃을 뱉어내 전력으로 상대에게 부딪친다. 원래 기술에 따라 위력이 변한다.",
-    "desc_lang": "ko"
-  },
-  {
-    "id": 641,
-    "ko": "다이내믹풀플레임",
-    "en": "inferno overdrive",
-    "type": "불꽃",
-    "type_en": "fire",
-    "class": "특수",
-    "pp": 1,
-    "power": null,
-    "accuracy": null,
-    "gen": "7세대",
-    "desc": "Dummy Data",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 642,
@@ -8985,21 +8855,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워로 큰 바다회오리를 만들어 전력으로 상대를 집어삼킨다. 원래 기술에 따라 위력이 변한다.",
-    "desc_lang": "ko"
-  },
-  {
-    "id": 643,
-    "ko": "슈퍼아쿠아토네이도",
-    "en": "hydro vortex",
-    "type": "물",
-    "type_en": "water",
-    "class": "특수",
-    "pp": 1,
-    "power": null,
-    "accuracy": null,
-    "gen": "7세대",
-    "desc": "Dummy Data",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 644,
@@ -9013,21 +8870,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워로 화초들의 에너지를 빌려 전력으로 상대를 공격한다. 원래 기술에 따라 위력이 변한다.",
-    "desc_lang": "ko"
-  },
-  {
-    "id": 645,
-    "ko": "블룸샤인엑스트라",
-    "en": "bloom doom",
-    "type": "풀",
-    "type_en": "grass",
-    "class": "특수",
-    "pp": 1,
-    "power": null,
-    "accuracy": null,
-    "gen": "7세대",
-    "desc": "Dummy Data",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 646,
@@ -9041,21 +8885,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워로 비축한 강한 전기를 전력으로 상대에게 부딪친다. 원래 기술에 따라 위력이 변한다.",
-    "desc_lang": "ko"
-  },
-  {
-    "id": 647,
-    "ko": "스파킹기가볼트",
-    "en": "gigavolt havoc",
-    "type": "전기",
-    "type_en": "electric",
-    "class": "특수",
-    "pp": 1,
-    "power": null,
-    "accuracy": null,
-    "gen": "7세대",
-    "desc": "Dummy Data",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 648,
@@ -9069,21 +8900,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워로 상대를 조종해 전력으로 매서운 맛을 보여준다. 원래 기술에 따라 위력이 변한다.",
-    "desc_lang": "ko"
-  },
-  {
-    "id": 649,
-    "ko": "맥시멈사이브레이커",
-    "en": "shattered psyche",
-    "type": "에스퍼",
-    "type_en": "psychic",
-    "class": "특수",
-    "pp": 1,
-    "power": null,
-    "accuracy": null,
-    "gen": "7세대",
-    "desc": "Dummy Data",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 650,
@@ -9097,21 +8915,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워로 기온을 급격하게 떨어뜨려 전력으로 상대를 얼린다. 원래 기술에 따라 위력이 변한다.",
-    "desc_lang": "ko"
-  },
-  {
-    "id": 651,
-    "ko": "레이징지오프리즈",
-    "en": "subzero slammer",
-    "type": "얼음",
-    "type_en": "ice",
-    "class": "특수",
-    "pp": 1,
-    "power": null,
-    "accuracy": null,
-    "gen": "7세대",
-    "desc": "Dummy Data",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 652,
@@ -9125,21 +8930,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워로 오라를 실체화시켜 전력으로 상대를 공격한다. 원래 기술에 따라 위력이 변한다.",
-    "desc_lang": "ko"
-  },
-  {
-    "id": 653,
-    "ko": "얼티메이트드래곤번",
-    "en": "devastating drake",
-    "type": "드래곤",
-    "type_en": "dragon",
-    "class": "특수",
-    "pp": 1,
-    "power": null,
-    "accuracy": null,
-    "gen": "7세대",
-    "desc": "Dummy Data",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 654,
@@ -9153,21 +8945,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워로 어둠의 에너지를 모아 전력으로 상대를 끌어당긴다. 원래 기술에 따라 위력이 변한다.",
-    "desc_lang": "ko"
-  },
-  {
-    "id": 655,
-    "ko": "블랙홀이클립스",
-    "en": "black hole eclipse",
-    "type": "악",
-    "type_en": "dark",
-    "class": "특수",
-    "pp": 1,
-    "power": null,
-    "accuracy": null,
-    "gen": "7세대",
-    "desc": "Dummy Data",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 656,
@@ -9181,21 +8960,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워로 매혹의 공간을 만들어 전력으로 상대를 가지고 논다. 원래 기술에 따라 위력이 변한다.",
-    "desc_lang": "ko"
-  },
-  {
-    "id": 657,
-    "ko": "러블리스타임팩트",
-    "en": "twinkle tackle",
-    "type": "페어리",
-    "type_en": "fairy",
-    "class": "특수",
-    "pp": 1,
-    "power": null,
-    "accuracy": null,
-    "gen": "7세대",
-    "desc": "Dummy Data",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 658,
@@ -9209,7 +8975,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워로 최대 전력을 몸에 두른 피카츄가 전력으로 상대에게 덤벼든다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 659,
@@ -9727,7 +9494,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워로 무수한 화살을 만들어낸 모크나이퍼가 전력으로 상대를 꿰뚫는 공격이다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 696,
@@ -9741,7 +9509,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워로 강한 육체를 얻은 어흥염이 전력으로 상대에게 부딪쳐 공격한다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 697,
@@ -9755,7 +9524,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워로 대량의 물을 부른 누리레느가 전력으로 상대를 공격한다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 698,
@@ -9769,7 +9539,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워로 알로라의 힘을 얻은 토속신포켓몬 전력의 공격. 상대의 남은 HP를 많이 줄인다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 699,
@@ -9783,7 +9554,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워를 얻은 마샤도가 펀치와 킥의 연속기술을 전력으로 상대에게 퍼붓는다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 700,
@@ -9797,7 +9569,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워를 얻은 알로라지방의 라이츄가 전력으로 공격한다. 상대를 마비 상태로 만든다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 701,
@@ -9811,7 +9584,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워로 진심을 낸 잠만보가 거대한 몸을 움직여서 전력으로 상대를 공격한다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 702,
@@ -9825,7 +9599,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워를 얻은 이브이가 진화한 동료들의 힘을 빌려 능력을 크게 올린다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 703,
@@ -9839,7 +9614,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워를 얻은 뮤가 전력으로 상대를 공격한다. 발밑이 사이코필드가 된다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 704,
@@ -10063,7 +9839,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "모자를 쓴 피카츄가 Z파워로 파워업한 전격을 쏜다. 급소에 맞기 쉽다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 720,
@@ -10119,7 +9896,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "네크로즈마가 상대의 특성 효과를 무시하고 공격과 특수공격 중 높은 쪽으로 데미지를 준다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 724,
@@ -10133,7 +9911,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워를 얻은 솔가레오가 전력으로 공격한다. 상대의 특성 효과를 무시할 수 있다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 725,
@@ -10147,7 +9926,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워를 얻은 루나아라가 전력으로 공격한다. 상대의 특성 효과를 무시할 수 있다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 726,
@@ -10161,7 +9941,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워를 얻은 따라큐가 전력으로 투닥투닥 공격한다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 727,
@@ -10175,7 +9956,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워를 얻은 루가루암이 전력으로 공격한다. 추가로 필드 상태를 없앤다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 728,
@@ -10189,7 +9971,8 @@
     "accuracy": null,
     "gen": "7세대",
     "desc": "Z파워를 얻은 짜랑고우거가 전력으로 상대를 공격한다. 추가로 자신의 능력이 올라간다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_zmove": true
   },
   {
     "id": 729,

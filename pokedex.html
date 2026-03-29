@@ -1119,7 +1119,7 @@ function openModal(p) {
   }
 
   // 다른 폼 표시 (클릭 가능)
-  const siblings = (SIBLING_MAP[p.id] || []).filter(s => s !== p);
+  const siblings = (SIBLING_MAP[p.id] || []).filter(s => s.ko !== p.ko);
   if (siblings.length) {
     const sec = document.createElement('div');
     sec.className = 'info-section';

@@ -1116,7 +1116,7 @@ async function loadAllData() {
     });
   });
   DB.pokemon = p.concat(formEntries);
-  DB.moves     = m.filter(x => hasKorean(x.ko) && (x.id < 622 || x.id > 658) && (x.pp !== 1 || x.id === 165 || x.id === 166)); // Z기술 제외 (범용 622-658, 전용 PP=1 / 발버둥·스케치 제외)
+  DB.moves     = m.filter(x => hasKorean(x.ko) && !x.is_zmove && (x.pp !== 1 || x.id === 165 || x.id === 166)); // Z기술 제외 (is_zmove 플래그 / 발버둥·스케치 제외)
 
   // quiz_pokemon.json에서 특성 보유 포켓몬 동적 빌드 (숨겨진 특성 포함)
   const abilityPokemonMap = {};
