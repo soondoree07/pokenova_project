@@ -415,7 +415,6 @@ const ITEM_GROUPS = {
   '열매': '__berry__',
   '메가스톤': ['mega-stones'],
   '전용도구': '__dedicated__',
-  '기타': ['spelunking','jewels'],
 };
 const HIDDEN_ITEMS   = new Set([
   '나무열매쥬스',
@@ -435,13 +434,13 @@ function isHiddenAbility(ab) {
   return typeof ab === 'object' && ab !== null && !!ab.hidden;
 }
 const DEDICATED_ITEMS = new Set(['금강옥', '백옥', '백금옥', '마음의물방울', '전기구슬', '금속파우더', '스피드파우더']);
+const HELD_EXTRA_ITEMS = new Set(['노말주얼']); // 카테고리는 다르지만 지닌도구로 분류
 
 // 전체 탭에서도 허용할 카테고리 (위 그룹들의 합집합)
 const ALLOWED_CATS = new Set([
   'held-items','choice','bad-held-items','in-a-pinch',
   'species-specific','type-enhancement','type-protection',
   'mega-stones','memories','plates',
-  'spelunking','jewels',
 ]);
 
 // ─── 전역 상태 ───
@@ -889,13 +888,13 @@ function filterItemModal() {
     if (HIDDEN_ITEMS.has(it.ko)) return false;
     let mc;
     if (!cats) {
-      mc = ALLOWED_CATS.has(it.category) || it.ko.includes('열매');
+      mc = ALLOWED_CATS.has(it.category) || it.ko.includes('열매') || HELD_EXTRA_ITEMS.has(it.ko);
     } else if (cats === '__berry__') {
       mc = it.ko.includes('열매');
     } else if (cats === '__dedicated__') {
       mc = ['plates','memories'].includes(it.category) || DEDICATED_ITEMS.has(it.ko);
     } else {
-      mc = cats.includes(it.category);
+      mc = cats.includes(it.category) || (itemGroupFilter === '지닌도구' && HELD_EXTRA_ITEMS.has(it.ko));
       if (itemGroupFilter === '지닌도구') {
         if (it.ko.includes('열매') || DEDICATED_ITEMS.has(it.ko)) mc = false;
       }
