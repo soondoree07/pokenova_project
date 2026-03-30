@@ -269,6 +269,13 @@
       border-radius:20px; transition:color .2s,border-color .2s;
     }
     .btn-skip-item:hover { color:#888; border-color:#555; }
+    .btn-modal-back {
+      background:transparent; border:1px solid #303030; color:#555;
+      font-size:0.82rem; cursor:pointer; padding:8px 24px;
+      border-radius:20px; transition:color .2s,border-color .2s;
+    }
+    .btn-modal-back:hover { color:#aaa; border-color:#555; }
+    .btn-modal-back.hidden { display:none; }
 
     .modal-empty {
       grid-column:1/-1; padding:40px;
@@ -362,6 +369,7 @@
       <div class="ability-list" id="ability-list"></div>
     </div>
     <div class="modal-close-wrap">
+      <button class="btn-modal-back hidden" id="ability-back-btn" onclick="goBackFromAbility()">← 뒤로</button>
       <button class="btn-modal-close" onclick="closeAbilityModal()">닫기</button>
     </div>
   </div>
@@ -381,6 +389,7 @@
       <div class="item-grid" id="item-grid"></div>
     </div>
     <div class="modal-close-wrap">
+      <button class="btn-modal-back hidden" id="item-back-btn" onclick="goBackFromItem()">← 뒤로</button>
       <button class="btn-modal-close" onclick="closeItemModal()">닫기</button>
     </div>
   </div>
@@ -404,9 +413,17 @@ const ITEM_GROUPS = {
   '전체': null,
   '지닌도구': ['held-items','choice','scarves','bad-held-items','in-a-pinch','species-specific','type-enhancement','type-protection'],
   '열매': '__berry__',
-  '진화/메가': ['mega-stones','memories','plates'],
+  '메가스톤': ['mega-stones'],
+  '전용도구': '__dedicated__',
   '기타': ['spelunking','jewels'],
 };
+const HIDDEN_ITEMS   = new Set([
+  '다홍꿀', '진노랑꿀', '연분홍꿀', '보라꿀', '나무열매주스',
+  '검정비드로', '하양비드로', '에나비꼬리', '삐삐인형',
+  '실버스프레이', '골드스프레이', '벌레회피스프레이', '동굴탈출로프',
+  '심해의이빨', '심해의비늘',
+]);
+const DEDICATED_ITEMS = new Set(['금강옥', '백옥', '마음의물방울', '전기구슬', '금속파우더', '스피드파우더']);
 
 // 전체 탭에서도 허용할 카테고리 (위 그룹들의 합집합)
 const ALLOWED_CATS = new Set([
@@ -426,6 +443,9 @@ let benchEntry = new Array(6).fill(null);
 let activeSection = null;
 let activeSlotIdx = null;
 let pendingPokemon = null;  // 포켓몬 선택 후 특성 선택 전 임시 저장
+let itemModalPrevStep  = 'pokemon'; // 'pokemon' | 'ability'
+let itemModalShowBack  = false;
+let abilityModalShowBack = false;
 
 let pokeTypeFilter = '전체';
 let pokeFiltered   = [];
@@ -690,11 +710,23 @@ function renderPokeGrid() {
 function onPokeSelected(p) {
   closePokeModal();
   pendingPokemon = p;
-  // 특성이 2개 이상이면 선택 모달, 1개면 바로 적용
+
+  // 이미 같은 포켓몬이 있으면 도구 선택부터
+  const existing = getEntry(activeSection, activeSlotIdx);
+  if (existing && existing.pokemon.ko === p.ko) {
+    itemModalPrevStep = 'pokemon';
+    itemModalShowBack = true;
+    openItemModal(activeSection, activeSlotIdx, null);
+    return;
+  }
+
   const abs = p.abilities || [];
   if (abs.length > 1) {
+    itemModalPrevStep = 'ability';
+    abilityModalShowBack = true;
     openAbilitySelectModal(p);
   } else {
+    itemModalPrevStep = 'pokemon';
     applyPokemonToSlot(p, abs[0] || null);
   }
 }
@@ -722,6 +754,11 @@ function openAbilitySelectModal(p) {
     list.appendChild(item);
   });
 
+  // 뒤로 버튼 표시
+  const backBtn = document.getElementById('ability-back-btn');
+  backBtn.classList.toggle('hidden', !abilityModalShowBack);
+  abilityModalShowBack = false;
+
   document.getElementById('ability-modal').classList.remove('hidden');
 }
 
@@ -730,6 +767,8 @@ function openAbilityModal(section, idx, e) {
   if (e) e.stopPropagation();
   activeSection = section;
   activeSlotIdx = idx;
+  // 슬롯에서 직접 열 때는 뒤로 버튼 없음
+  document.getElementById('ability-back-btn').classList.add('hidden');
   const slot = getEntry(section, idx);
   if (!slot) return;
   const p = slot.pokemon;
@@ -768,7 +807,8 @@ function applyPokemonToSlot(p, ability) {
     item: existing?.item || null,  // 기존 도구 유지
   });
   renderGrids();
-  // 도구 선택 모달 이어서 열기
+  // 도구 선택 모달 이어서 열기 (뒤로 버튼 표시)
+  itemModalShowBack = true;
   openItemModal(activeSection, activeSlotIdx, null);
 }
 
@@ -777,6 +817,8 @@ function applyPokemonToSlot(p, ability) {
 // ══════════════════════════════════════════
 function openItemModal(section, idx, e) {
   if (e) e.stopPropagation();
+  // 슬롯 도구 칩에서 직접 열 때는 뒤로 버튼 없음
+  if (e !== null && e !== undefined) itemModalShowBack = false;
   activeSection = section;
   activeSlotIdx = idx;
   itemGroupFilter = '전체';
@@ -793,12 +835,29 @@ function openItemModal(section, idx, e) {
   document.getElementById('item-modal-title').textContent =
     slot ? `${slot.pokemon.ko} — 도구 선택` : '도구 선택';
 
+  // 뒤로 버튼 표시/숨김
+  document.getElementById('item-back-btn').classList.toggle('hidden', !itemModalShowBack);
+  itemModalShowBack = false;
+
   filterItemModal();
   document.getElementById('item-modal').classList.remove('hidden');
   setTimeout(() => document.getElementById('item-search').focus(), 50);
 }
 function closeItemModal() {
   document.getElementById('item-modal').classList.add('hidden');
+}
+function goBackFromItem() {
+  closeItemModal();
+  if (itemModalPrevStep === 'ability' && pendingPokemon) {
+    abilityModalShowBack = true;
+    openAbilitySelectModal(pendingPokemon);
+  } else {
+    openPokeModal(activeSection, activeSlotIdx);
+  }
+}
+function goBackFromAbility() {
+  closeAbilityModal();
+  openPokeModal(activeSection, activeSlotIdx);
 }
 
 function setItemGroupFilter(btn) {
@@ -816,10 +875,20 @@ function filterItemModal() {
   const cats = ITEM_GROUPS[itemGroupFilter];
 
   itemFiltered = allItems.filter(it => {
+    if (HIDDEN_ITEMS.has(it.ko)) return false;
     let mc;
-    if (!cats)                     mc = ALLOWED_CATS.has(it.category) || it.ko.includes('열매');
-    else if (cats === '__berry__') mc = it.ko.includes('열매');
-    else                           mc = cats.includes(it.category);
+    if (!cats) {
+      mc = ALLOWED_CATS.has(it.category) || it.ko.includes('열매');
+    } else if (cats === '__berry__') {
+      mc = it.ko.includes('열매');
+    } else if (cats === '__dedicated__') {
+      mc = ['plates','memories'].includes(it.category) || DEDICATED_ITEMS.has(it.ko);
+    } else {
+      mc = cats.includes(it.category);
+      if (itemGroupFilter === '지닌도구') {
+        if (it.ko.includes('열매') || DEDICATED_ITEMS.has(it.ko)) mc = false;
+      }
+    }
     const mq = !q || it.ko.toLowerCase().includes(q) || it.en.toLowerCase().includes(q);
     return mc && mq;
   });
