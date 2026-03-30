@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>엔트리 구성 · Pokénova</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Noto Sans KR', 'Segoe UI', sans-serif;
+      background: #0a0a0a;
+      color: #f0f0f0;
+      min-height: 100vh;
+      padding-bottom: 60px;
+    }
+
+    /* ─── HEADER ─── */
+    .site-header {
+      background: #141414;
+      padding: 0 24px;
+      border-bottom: 1px solid #252525;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      gap: 16px;
+    }
+    .site-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .logo-ball {
+      width: 28px; height: 28px;
+      background: #f0f0f0;
+      border-radius: 50%;
+      position: relative;
+      overflow: hidden;
+      border: 2.5px solid #555;
+      flex-shrink: 0;
+    }
+    .logo-ball::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 50%;
+      background: #e53935;
+    }
+    .logo-ball::after {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 9px; height: 9px;
+      background: #f0f0f0;
+      border-radius: 50%;
+      border: 2px solid #555;
+      z-index: 1;
+    }
+    .logo-text {
+      color: #f0f0f0;
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+    }
+    .logo-text span { color: #e53935; }
+
+    .nav-links { display: flex; gap: 8px; }
+    .nav-link {
+      padding: 7px 14px;
+      border-radius: 20px;
+      border: 1px solid #252525;
+      background: transparent;
+      color: #888;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: border-color .2s, color .2s;
+      white-space: nowrap;
+    }
+    .nav-link:hover { border-color: #e53935; color: #e53935; }
+
+    /* ─── MAIN ─── */
+    .main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 20px;
+    }
+
+    .page-title {
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: #f0f0f0;
+      margin-bottom: 6px;
+    }
+    .page-sub {
+      font-size: 0.85rem;
+      color: #555;
+      margin-bottom: 32px;
+    }
+
+    /* ─── 엔트리 섹션 ─── */
+    .entry-section { margin-bottom: 36px; }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #ccc;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-title .badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: #1e1e1e;
+      border: 1px solid #303030;
+      border-radius: 20px;
+      padding: 2px 10px;
+      color: #888;
+    }
+    .section-title .badge.full { border-color: #e53935; color: #e53935; }
+
+    .btn-clear-section {
+      font-size: 0.78rem;
+      color: #555;
+      background: none;
+      border: 1px solid #252525;
+      border-radius: 20px;
+      padding: 4px 12px;
+      cursor: pointer;
+      transition: color .2s, border-color .2s;
+    }
+    .btn-clear-section:hover { color: #e53935; border-color: #e53935; }
+
+    /* ─── 슬롯 그리드 ─── */
+    .slot-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
+    }
+
+    /* ─── 슬롯 ─── */
+    .slot {
+      aspect-ratio: 1;
+      border-radius: 16px;
+      border: 1.5px solid #252525;
+      background: #111;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: border-color .2s, background .2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .slot:hover { border-color: #e53935; }
+
+    /* 빈 슬롯 */
+    .slot.empty .slot-plus {
+      font-size: 1.6rem;
+      color: #2a2a2a;
+      line-height: 1;
+      transition: color .2s;
+    }
+    .slot.empty:hover .slot-plus { color: #e53935; }
+    .slot.empty .slot-label {
+      font-size: 0.62rem;
+      color: #2a2a2a;
+      margin-top: 4px;
+      transition: color .2s;
+    }
+    .slot.empty:hover .slot-label { color: #888; }
+
+    /* 채워진 슬롯 */
+    .slot.filled { border-color: #303030; background: #0f0f0f; }
+    .slot.filled:hover { border-color: #e53935; }
+
+    .slot-type-bg {
+      position: absolute;
+      inset: 0;
+      opacity: 0.07;
+      background: var(--type-color, #888);
+    }
+
+    .slot-sprite {
+      width: 72%;
+      height: 72%;
+      object-fit: contain;
+      position: relative;
+      z-index: 1;
+      image-rendering: auto;
+      drop-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    }
+    .slot-name {
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: #ccc;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 0 4px;
+      line-height: 1.2;
+      margin-top: 2px;
+    }
+    .slot-types {
+      display: flex;
+      gap: 3px;
+      position: relative;
+      z-index: 1;
+      margin-top: 3px;
+    }
+    .slot-type-badge {
+      font-size: 0.55rem;
+      font-weight: 700;
+      padding: 1px 5px;
+      border-radius: 4px;
+      color: #fff;
+      line-height: 1.4;
+    }
+
+    .slot-remove {
+      position: absolute;
+      top: 5px; right: 5px;
+      z-index: 2;
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.7);
+      border: 1px solid #333;
+      color: #666;
+      font-size: 0.7rem;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity .15s, color .15s;
+    }
+    .slot:hover .slot-remove { opacity: 1; }
+    .slot-remove:hover { color: #e53935; border-color: #e53935; }
+
+    /* ─── 액션 바 ─── */
+    .action-bar {
+      display: flex;
+      gap: 12px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+    .btn-save {
+      padding: 12px 28px;
+      border-radius: 12px;
+      border: none;
+      background: #e53935;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .2s, transform .1s;
+    }
+    .btn-save:hover { background: #c62828; }
+    .btn-save:active { transform: scale(.97); }
+
+    .btn-reset {
+      padding: 12px 20px;
+      border-radius: 12px;
+      border: 1px solid #303030;
+      background: transparent;
+      color: #666;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: border-color .2s, color .2s;
+    }
+    .btn-reset:hover { border-color: #e53935; color: #e53935; }
+
+    .save-msg {
+      font-size: 0.82rem;
+      color: #4caf50;
+      align-self: center;
+      display: none;
+    }
+    .save-msg.show { display: block; }
+
+    /* ─── 검색 모달 ─── */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 500;
+      backdrop-filter: blur(8px);
+      padding: 20px;
+    }
+    .modal-overlay.hidden { display: none; }
+
+    .search-modal {
+      background: #141414;
+      border: 1px solid #252525;
+      border-radius: 24px;
+      width: 100%;
+      max-width: 560px;
+      max-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0,0,0,.9);
+    }
+
+    .modal-header {
+      padding: 20px 24px 0;
+      flex-shrink: 0;
+    }
+    .modal-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #ccc;
+      margin-bottom: 14px;
+    }
+
+    .modal-search {
+      width: 100%;
+      padding: 11px 18px;
+      border: 1.5px solid #252525;
+      border-radius: 50px;
+      font-size: 15px;
+      font-family: inherit;
+      outline: none;
+      background: #0f0f0f;
+      color: #f0f0f0;
+      transition: border-color .2s;
+    }
+    .modal-search::placeholder { color: #444; }
+    .modal-search:focus { border-color: #e53935; }
+
+    .modal-filters {
+      display: flex;
+      gap: 6px;
+      padding: 12px 24px;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+    }
+    .filter-btn {
+      padding: 4px 10px;
+      border-radius: 20px;
+      border: 1px solid #252525;
+      background: transparent;
+      color: #666;
+      font-size: 0.72rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .15s;
+    }
+    .filter-btn.active {
+      color: #fff;
+      border-color: transparent;
+    }
+
+    .modal-grid {
+      overflow-y: auto;
+      padding: 0 16px 16px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      flex: 1;
+    }
+    .modal-grid::-webkit-scrollbar { width: 6px; }
+    .modal-grid::-webkit-scrollbar-track { background: transparent; }
+    .modal-grid::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 4px; }
+
+    .modal-card {
+      border-radius: 12px;
+      border: 1.5px solid #252525;
+      background: #0f0f0f;
+      cursor: pointer;
+      padding: 8px 4px 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: border-color .15s, background .15s;
+      position: relative;
+      overflow: hidden;
+    }
+    .modal-card:hover { border-color: #e53935; background: #151515; }
+    .modal-card .mc-type-bg {
+      position: absolute;
+      inset: 0;
+      opacity: 0.05;
+      background: var(--type-color, #888);
+    }
+    .modal-card img {
+      width: 56px; height: 56px;
+      object-fit: contain;
+      position: relative;
+      z-index: 1;
+    }
+    .modal-card .mc-name {
+      font-size: 0.62rem;
+      font-weight: 700;
+      color: #ccc;
+      text-align: center;
+      margin-top: 4px;
+      position: relative;
+      z-index: 1;
+      line-height: 1.3;
+    }
+    .modal-card .mc-types {
+      display: flex;
+      gap: 2px;
+      margin-top: 3px;
+      position: relative;
+      z-index: 1;
+    }
+    .modal-card .mc-type {
+      font-size: 0.52rem;
+      font-weight: 700;
+      padding: 1px 5px;
+      border-radius: 4px;
+      color: #fff;
+    }
+
+    .modal-close-wrap {
+      padding: 12px 24px;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .btn-modal-close {
+      background: transparent;
+      border: 1px solid #303030;
+      color: #555;
+      font-size: 0.82rem;
+      cursor: pointer;
+      padding: 8px 24px;
+      border-radius: 20px;
+      transition: color .2s, border-color .2s;
+    }
+    .btn-modal-close:hover { color: #e53935; border-color: #e53935; }
+
+    .modal-empty {
+      grid-column: 1 / -1;
+      padding: 40px;
+      text-align: center;
+      color: #333;
+      font-size: 0.9rem;
+    }
+
+    /* ─── 반응형 ─── */
+    @media (max-width: 600px) {
+      .main { padding: 20px 14px; }
+      .slot-grid { gap: 8px; }
+      .slot-sprite { width: 68%; height: 68%; }
+      .slot-name { font-size: 0.58rem; }
+      .modal-grid { grid-template-columns: repeat(4, 1fr); }
+      .nav-link span { display: none; }
+    }
+    @media (max-width: 400px) {
+      .slot-grid { gap: 6px; }
+      .modal-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">
+      <div class="logo-ball"></div>
+      <span class="logo-text">Poké<span>nova</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">퀴즈</a>
+      <a href="pokedex.html" class="nav-link">도감</a>
+    </nav>
+  </div>
+</header>
+
+<main class="main">
+  <div class="page-title">엔트리 구성</div>
+  <div class="page-sub">메인 엔트리 6마리와 벤치 엔트리 6마리를 골라보세요.</div>
+
+  <!-- 메인 엔트리 -->
+  <section class="entry-section">
+    <div class="section-header">
+      <div class="section-title">
+        ⚔️ 메인 엔트리
+        <span class="badge" id="main-badge">0 / 6</span>
+      </div>
+      <button class="btn-clear-section" onclick="clearSection('main')">전체 해제</button>
+    </div>
+    <div class="slot-grid" id="main-grid"></div>
+  </section>
+
+  <!-- 벤치 엔트리 -->
+  <section class="entry-section">
+    <div class="section-header">
+      <div class="section-title">
+        🪑 벤치 엔트리
+        <span class="badge" id="bench-badge">0 / 6</span>
+      </div>
+      <button class="btn-clear-section" onclick="clearSection('bench')">전체 해제</button>
+    </div>
+    <div class="slot-grid" id="bench-grid"></div>
+  </section>
+
+  <div class="action-bar">
+    <button class="btn-save" onclick="saveEntry()">저장하기</button>
+    <button class="btn-reset" onclick="resetAll()">전체 초기화</button>
+    <span class="save-msg" id="save-msg">저장되었습니다!</span>
+  </div>
+</main>
+
+<!-- 검색 모달 -->
+<div class="modal-overlay hidden" id="search-modal">
+  <div class="search-modal">
+    <div class="modal-header">
+      <div class="modal-title" id="modal-title">포켓몬 선택</div>
+      <input type="text" class="modal-search" id="modal-search-input"
+             placeholder="이름으로 검색..." oninput="filterModal()"
+             autocomplete="off" spellcheck="false">
+    </div>
+    <div class="modal-filters" id="modal-filters">
+      <button class="filter-btn active" data-type="전체" onclick="setTypeFilter(this)">전체</button>
+    </div>
+    <div class="modal-grid" id="modal-grid"></div>
+    <div class="modal-close-wrap">
+      <button class="btn-modal-close" onclick="closeModal()">닫기</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const TYPE_BG = {
+  '노말':'#A8A77A','불꽃':'#EE8130','물':'#6390F0','전기':'#F7D02C',
+  '풀':'#7AC74C','얼음':'#96D9D6','격투':'#C22E28','독':'#A33EA1',
+  '땅':'#E2BF65','비행':'#A98FF3','에스퍼':'#F95587','벌레':'#A6B91A',
+  '바위':'#B6A136','고스트':'#4b0082','드래곤':'#6F35FC','악':'#705746',
+  '강철':'#B7B7CE','페어리':'#D685AD'
+};
+const TYPE_LIGHT = new Set(['전기','얼음','땅','강철','노말']);
+
+function typeColor(t) { return TYPE_BG[t] || '#888'; }
+
+// ─── 상태 ───
+let allPokemon = [];   // 전체 포켓몬 + 폼 목록 (검색용)
+let mainEntry  = new Array(6).fill(null);
+let benchEntry = new Array(6).fill(null);
+
+// 모달 상태
+let activeSection = null;  // 'main' | 'bench'
+let activeSlotIdx = null;
+let modalFiltered = [];
+let currentTypeFilter = '전체';
+
+// ─── 초기화 ───
+async function init() {
+  const res = await fetch('data/quiz_pokemon.json');
+  const data = await res.json();
+
+  // 원종 + 폼을 평탄화
+  data.forEach(p => {
+    allPokemon.push({
+      id: p.id,
+      ko: p.ko,
+      en: p.en,
+      sprite: p.sprite,
+      types: p.types,
+      formLabel: null
+    });
+    if (p.forms) {
+      p.forms.forEach(f => {
+        allPokemon.push({
+          id: p.id,
+          ko: f.name_ko || p.ko,
+          en: f.name_en || p.en,
+          sprite: f.sprite || p.sprite,
+          types: f.types || p.types,
+          formLabel: f.formLabel || f.name_ko || null
+        });
+      });
+    }
+  });
+
+  // 타입 필터 버튼 생성
+  const types = [...new Set(allPokemon.flatMap(p => p.types))].sort();
+  const filterWrap = document.getElementById('modal-filters');
+  types.forEach(t => {
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn';
+    btn.dataset.type = t;
+    btn.textContent = t;
+    btn.style.cssText = `background:${typeColor(t)};border-color:${typeColor(t)};color:${TYPE_LIGHT.has(t)?'#555':'#fff'}`;
+    btn.onclick = () => setTypeFilter(btn);
+    filterWrap.appendChild(btn);
+  });
+
+  loadSaved();
+  renderGrids();
+}
+
+// ─── 저장/불러오기 ───
+function saveEntry() {
+  localStorage.setItem('pokenova_main',  JSON.stringify(mainEntry));
+  localStorage.setItem('pokenova_bench', JSON.stringify(benchEntry));
+  const msg = document.getElementById('save-msg');
+  msg.classList.add('show');
+  setTimeout(() => msg.classList.remove('show'), 2000);
+}
+function loadSaved() {
+  try {
+    const m = localStorage.getItem('pokenova_main');
+    const b = localStorage.getItem('pokenova_bench');
+    if (m) mainEntry  = JSON.parse(m);
+    if (b) benchEntry = JSON.parse(b);
+  } catch(e) {}
+}
+
+// ─── 그리드 렌더링 ───
+function renderGrids() {
+  renderSectionGrid('main',  mainEntry,  'main-grid',  'main-badge');
+  renderSectionGrid('bench', benchEntry, 'bench-grid', 'bench-badge');
+}
+
+function renderSectionGrid(section, entry, gridId, badgeId) {
+  const grid  = document.getElementById(gridId);
+  const badge = document.getElementById(badgeId);
+  const count = entry.filter(Boolean).length;
+
+  badge.textContent = `${count} / 6`;
+  badge.className   = 'badge' + (count === 6 ? ' full' : '');
+
+  grid.innerHTML = '';
+  for (let i = 0; i < 6; i++) {
+    const p = entry[i];
+    const slot = document.createElement('div');
+    slot.className = 'slot ' + (p ? 'filled' : 'empty');
+
+    if (p) {
+      const c1 = typeColor(p.types[0]);
+      slot.style.setProperty('--type-color', c1);
+      slot.innerHTML = `
+        <div class="slot-type-bg"></div>
+        <button class="slot-remove" onclick="removeSlot('${section}',${i},event)" title="제거">✕</button>
+        <img class="slot-sprite" src="${p.sprite}" alt="${p.ko}" loading="lazy"
+             onerror="this.src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/0.png'">
+        <div class="slot-name">${p.ko}</div>
+        <div class="slot-types">${p.types.map(t => `<span class="slot-type-badge" style="background:${typeColor(t)};${TYPE_LIGHT.has(t)?'color:#555':''}">${t}</span>`).join('')}</div>
+      `;
+      slot.onclick = () => openModal(section, i);
+    } else {
+      slot.innerHTML = `<div class="slot-plus">+</div><div class="slot-label">추가</div>`;
+      slot.onclick = () => openModal(section, i);
+    }
+    grid.appendChild(slot);
+  }
+}
+
+// ─── 슬롯 제거 ───
+function removeSlot(section, idx, e) {
+  e.stopPropagation();
+  if (section === 'main')  mainEntry[idx]  = null;
+  else                     benchEntry[idx] = null;
+  renderGrids();
+}
+
+// ─── 섹션 초기화 ───
+function clearSection(section) {
+  if (section === 'main')  mainEntry  = new Array(6).fill(null);
+  else                     benchEntry = new Array(6).fill(null);
+  renderGrids();
+}
+
+function resetAll() {
+  mainEntry  = new Array(6).fill(null);
+  benchEntry = new Array(6).fill(null);
+  localStorage.removeItem('pokenova_main');
+  localStorage.removeItem('pokenova_bench');
+  renderGrids();
+}
+
+// ─── 모달 ───
+function openModal(section, idx) {
+  activeSection = section;
+  activeSlotIdx = idx;
+  currentTypeFilter = '전체';
+
+  // 필터 버튼 초기화
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.type === '전체');
+    if (b.dataset.type === '전체') {
+      b.style.background = '';
+      b.style.borderColor = '';
+      b.style.color = '';
+    }
+  });
+
+  document.getElementById('modal-search-input').value = '';
+  document.getElementById('modal-title').textContent =
+    section === 'main' ? `메인 엔트리 ${idx + 1}번 슬롯` : `벤치 엔트리 ${idx + 1}번 슬롯`;
+
+  filterModal();
+  document.getElementById('search-modal').classList.remove('hidden');
+  setTimeout(() => document.getElementById('modal-search-input').focus(), 50);
+}
+
+function closeModal() {
+  document.getElementById('search-modal').classList.add('hidden');
+}
+
+function setTypeFilter(btn) {
+  currentTypeFilter = btn.dataset.type;
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    const isActive = b === btn;
+    b.classList.toggle('active', isActive);
+    if (b.dataset.type !== '전체') {
+      const t = b.dataset.type;
+      b.style.background   = isActive ? typeColor(t) : '';
+      b.style.borderColor  = isActive ? typeColor(t) : '';
+      b.style.color        = isActive ? (TYPE_LIGHT.has(t) ? '#555' : '#fff') : '';
+    }
+  });
+  filterModal();
+}
+
+function filterModal() {
+  const q = document.getElementById('modal-search-input').value.trim().toLowerCase();
+
+  modalFiltered = allPokemon.filter(p => {
+    const matchType = currentTypeFilter === '전체' || p.types.includes(currentTypeFilter);
+    const matchQ = !q || p.ko.toLowerCase().includes(q) || p.en.toLowerCase().includes(q);
+    return matchType && matchQ;
+  });
+
+  renderModalGrid();
+}
+
+function renderModalGrid() {
+  const grid = document.getElementById('modal-grid');
+  grid.innerHTML = '';
+
+  if (modalFiltered.length === 0) {
+    grid.innerHTML = '<div class="modal-empty">검색 결과가 없습니다.</div>';
+    return;
+  }
+
+  // 최대 200개만 렌더링 (성능)
+  const toShow = modalFiltered.slice(0, 200);
+  toShow.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'modal-card';
+    const c1 = typeColor(p.types[0]);
+    card.style.setProperty('--type-color', c1);
+    card.innerHTML = `
+      <div class="mc-type-bg"></div>
+      <img src="${p.sprite}" alt="${p.ko}" loading="lazy"
+           onerror="this.style.opacity=0.3">
+      <div class="mc-name">${p.ko}</div>
+      <div class="mc-types">${p.types.map(t => `<span class="mc-type" style="background:${typeColor(t)};${TYPE_LIGHT.has(t)?'color:#555':''}">${t}</span>`).join('')}</div>
+    `;
+    card.onclick = () => selectPokemon(p);
+    grid.appendChild(card);
+  });
+}
+
+function selectPokemon(p) {
+  if (activeSection === 'main')  mainEntry[activeSlotIdx]  = p;
+  else                           benchEntry[activeSlotIdx] = p;
+  closeModal();
+  renderGrids();
+}
+
+// 모달 외부 클릭 닫기
+document.getElementById('search-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+
+// ─── 시작 ───
+init();
+</script>
+
+</body>
+</html>
