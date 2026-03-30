@@ -381,7 +381,6 @@
       <div class="item-grid" id="item-grid"></div>
     </div>
     <div class="modal-close-wrap">
-      <button class="btn-skip-item" onclick="selectItem(null)">도구 없음</button>
       <button class="btn-modal-close" onclick="closeItemModal()">닫기</button>
     </div>
   </div>
@@ -474,6 +473,16 @@ async function init() {
 
   // 도구 카테고리 필터 버튼 생성
   const iWrap = document.getElementById('item-cat-filters');
+
+  // 맨 앞에 '지닌도구 없음' 버튼
+  const noItemBtn = document.createElement('button');
+  noItemBtn.className = 'filter-btn';
+  noItemBtn.dataset.group = '__none__';
+  noItemBtn.textContent = '지닌도구 없음';
+  noItemBtn.style.cssText = 'border-color:#555;color:#888';
+  noItemBtn.onclick = () => { selectItem(null); };
+  iWrap.appendChild(noItemBtn);
+
   Object.keys(ITEM_GROUPS).forEach((g, i) => {
     const btn = document.createElement('button');
     btn.className = 'filter-btn' + (i === 0 ? ' active' : '');
