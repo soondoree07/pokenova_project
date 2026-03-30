@@ -415,7 +415,6 @@ const ITEM_GROUPS = {
   '열매': '__berry__',
   '메가스톤': ['mega-stones'],
   '전용도구': '__dedicated__',
-  '폼체인지도구': '__formchange__',
   '기타': ['spelunking','jewels'],
 };
 const HIDDEN_ITEMS   = new Set([
@@ -423,6 +422,7 @@ const HIDDEN_ITEMS   = new Set([
   '검정비드로', '하양비드로', '에나비꼬리', '삐삐인형',
   '실버스프레이', '골드스프레이', '벌레회피스프레이', '동굴탈출로프',
   '심해의이빨', '심해의비늘',
+  '다홍꿀', '진노랑꿀', '연분홍꿀', '보라꿀',
 ]);
 
 // 특성 표시 헬퍼 (문자열 '?' 또는 객체 형식 모두 처리)
@@ -434,8 +434,7 @@ function abilityDisplayName(ab) {
 function isHiddenAbility(ab) {
   return typeof ab === 'object' && ab !== null && !!ab.hidden;
 }
-const DEDICATED_ITEMS   = new Set(['금강옥', '백옥', '마음의물방울', '전기구슬', '금속파우더', '스피드파우더']);
-const FORMCHANGE_ITEMS  = new Set(['다홍꿀', '진노랑꿀', '연분홍꿀', '보라꿀']);
+const DEDICATED_ITEMS = new Set(['금강옥', '백옥', '백금옥', '마음의물방울', '전기구슬', '금속파우더', '스피드파우더']);
 
 // 전체 탭에서도 허용할 카테고리 (위 그룹들의 합집합)
 const ALLOWED_CATS = new Set([
@@ -895,12 +894,10 @@ function filterItemModal() {
       mc = it.ko.includes('열매');
     } else if (cats === '__dedicated__') {
       mc = ['plates','memories'].includes(it.category) || DEDICATED_ITEMS.has(it.ko);
-    } else if (cats === '__formchange__') {
-      mc = FORMCHANGE_ITEMS.has(it.ko);
     } else {
       mc = cats.includes(it.category);
       if (itemGroupFilter === '지닌도구') {
-        if (it.ko.includes('열매') || DEDICATED_ITEMS.has(it.ko) || FORMCHANGE_ITEMS.has(it.ko)) mc = false;
+        if (it.ko.includes('열매') || DEDICATED_ITEMS.has(it.ko)) mc = false;
       }
     }
     const mq = !q || it.ko.toLowerCase().includes(q) || it.en.toLowerCase().includes(q);
