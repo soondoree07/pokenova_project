@@ -433,7 +433,8 @@ function abilityDisplayName(ab) {
 function isHiddenAbility(ab) {
   return typeof ab === 'object' && ab !== null && !!ab.hidden;
 }
-const DEDICATED_ITEMS = new Set(['금강옥', '백옥', '백금옥', '마음의물방울', '전기구슬', '금속파우더', '스피드파우더']);
+const DEDICATED_ITEMS = new Set(['금강옥', '백옥', '백금옥', '마음의물방울', '전기구슬', '금속파우더', '스피드파우더',
+  '아쿠아카세트', '번개카세트', '블레이즈카세트', '프리즈카세트']);
 const HELD_EXTRA_ITEMS = new Set(['노말주얼']); // 카테고리는 다르지만 지닌도구로 분류
 
 // 전체 탭에서도 허용할 카테고리 (위 그룹들의 합집합)
