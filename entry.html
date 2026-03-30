@@ -399,15 +399,14 @@ const TYPE_LIGHT = new Set(['전기','얼음','땅','강철','노말']);
 function typeColor(t) { return TYPE_BG[t] || '#888'; }
 
 // 도구 카테고리 그룹
+// 값이 '__berry__'이면 ko 이름에 '열매' 포함 아이템 전체 표시
 const ITEM_GROUPS = {
   '전체': null,
   '지닌도구': ['held-items','choice','scarves','bad-held-items','in-a-pinch','species-specific','type-enhancement','type-protection'],
-  '회복/PP': ['healing','picky-healing','medicine','pp-recovery','revival','status-cures'],
-  '강화': ['stat-boosts','vitamins','effort-training','effort-drop','training','flutes'],
-  '진화/메가': ['evolution','mega-stones','memories','plates'],
-  '볼': ['standard-balls','special-balls','apricorn-balls'],
+  '열매': '__berry__',
+  '진화/메가': ['mega-stones','memories','plates'],
   '기술머신': ['all-machines'],
-  '기타': ['other','spelunking','jewels','z-crystals'],
+  '기타': ['spelunking','jewels'],
 };
 
 // ─── 전역 상태 ───
@@ -800,7 +799,10 @@ function filterItemModal() {
   const cats = ITEM_GROUPS[itemGroupFilter];
 
   itemFiltered = allItems.filter(it => {
-    const mc = !cats || cats.includes(it.category);
+    let mc;
+    if (!cats)                  mc = true;
+    else if (cats === '__berry__') mc = it.ko.includes('열매');
+    else                        mc = cats.includes(it.category);
     const mq = !q || it.ko.toLowerCase().includes(q) || it.en.toLowerCase().includes(q);
     return mc && mq;
   });
