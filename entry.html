@@ -399,6 +399,7 @@ function typeColor(t) { return TYPE_BG[t] || '#888'; }
 
 // 도구 카테고리 그룹
 // 값이 '__berry__'이면 ko 이름에 '열매' 포함 아이템 전체 표시
+// 값이 null이면 ALLOWED_CATS 기준으로 필터
 const ITEM_GROUPS = {
   '전체': null,
   '지닌도구': ['held-items','choice','scarves','bad-held-items','in-a-pinch','species-specific','type-enhancement','type-protection'],
@@ -406,6 +407,14 @@ const ITEM_GROUPS = {
   '진화/메가': ['mega-stones','memories','plates'],
   '기타': ['spelunking','jewels'],
 };
+
+// 전체 탭에서도 허용할 카테고리 (위 그룹들의 합집합)
+const ALLOWED_CATS = new Set([
+  'held-items','choice','scarves','bad-held-items','in-a-pinch',
+  'species-specific','type-enhancement','type-protection',
+  'mega-stones','memories','plates',
+  'spelunking','jewels',
+]);
 
 // ─── 전역 상태 ───
 let allPokemon = [];
@@ -808,9 +817,9 @@ function filterItemModal() {
 
   itemFiltered = allItems.filter(it => {
     let mc;
-    if (!cats)                  mc = true;
+    if (!cats)                     mc = ALLOWED_CATS.has(it.category) || it.ko.includes('열매');
     else if (cats === '__berry__') mc = it.ko.includes('열매');
-    else                        mc = cats.includes(it.category);
+    else                           mc = cats.includes(it.category);
     const mq = !q || it.ko.toLowerCase().includes(q) || it.en.toLowerCase().includes(q);
     return mc && mq;
   });
