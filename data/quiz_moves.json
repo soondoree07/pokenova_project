@@ -11712,7 +11712,7 @@
   },
   {
     "id": 851,
-    "ko": "거다이편달",
+    "ko": "테라버스트",
     "en": "g-max vine lash",
     "type": "풀",
     "type_en": "grass",
@@ -11721,12 +11721,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "이상해꽃 전용. 풀 타입이 아닌 상대 포켓몬에게 4턴간 지속 대미지를 입힌다.",
+    "desc": "테라스탈 중이면, 테라스탈타입의 에너지를 방출해서 공격한다. 공격과 특수공격을 비교해서 높은 쪽으로 데미지를 준다.",
     "desc_lang": "ko"
   },
   {
     "id": 851,
-    "ko": "Tera Blast",
+    "ko": "테라버스트",
     "en": "Tera Blast",
     "type": "노말",
     "type_en": "normal",
@@ -11735,13 +11735,12 @@
     "power": 80,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "If the user has Terastallized, it unleashes energy of its Tera Type. This move inflicts damage using the Attack or Sp. Atk stat—whichever is higher for the user.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "테라스탈 중이면, 테라스탈타입의 에너지를 방출해서 공격한다. 공격과 특수공격을 비교해서 높은 쪽으로 데미지를 준다.",
+    "desc_lang": "ko"
   },
   {
     "id": 852,
-    "ko": "거다이옥염",
+    "ko": "스레드트랩",
     "en": "g-max wildfire",
     "type": "불꽃",
     "type_en": "fire",
@@ -11750,12 +11749,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "리자몽 전용. 불꽃 타입이 아닌 상대 포켓몬에게 4턴간 최대 HP의 1/6 지속 대미지를 입힌다.",
+    "desc": "실로 함정을 만들어 둘러친다. 상대의 공격을 막음과 동시에 접촉한 상대의 스피드를 떨어뜨린다.",
     "desc_lang": "ko"
   },
   {
     "id": 852,
-    "ko": "Silk Trap",
+    "ko": "스레드트랩",
     "en": "Silk Trap",
     "type": "벌레",
     "type_en": "bug",
@@ -11764,13 +11763,12 @@
     "power": 0,
     "accuracy": null,
     "gen": "9세대",
-    "desc": "The user spins a silken trap, protecting itself from damage while lowering the Speed stat of any attacker that makes direct contact.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "실로 함정을 만들어 둘러친다. 상대의 공격을 막음과 동시에 접촉한 상대의 스피드를 떨어뜨린다.",
+    "desc_lang": "ko"
   },
   {
     "id": 853,
-    "ko": "거다이포격",
+    "ko": "발꿈치찍기",
     "en": "g-max cannonade",
     "type": "물",
     "type_en": "water",
@@ -11779,12 +11777,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "거북왕 전용. 물 타입이 아닌 상대 포켓몬에게 4턴간 지속 대미지를 입힌다.",
+    "desc": "발꿈치를 들어 올린 뒤 내리찍어 공격한다. 상대를 혼란시킬 때가 있다. 빗나가면 자신이 데미지를 입는다.",
     "desc_lang": "ko"
   },
   {
     "id": 853,
-    "ko": "Axe Kick",
+    "ko": "발꿈치찍기",
     "en": "Axe Kick",
     "type": "격투",
     "type_en": "fighting",
@@ -11793,13 +11791,12 @@
     "power": 120,
     "accuracy": 90,
     "gen": "9세대",
-    "desc": "The user attacks by kicking up into the air and slamming its heel down upon the target. This may also confuse the target. If it misses, the user takes damage instead.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "발꿈치를 들어 올린 뒤 내리찍어 공격한다. 상대를 혼란시킬 때가 있다. 빗나가면 자신이 데미지를 입는다.",
+    "desc_lang": "ko"
   },
   {
     "id": 854,
-    "ko": "거다이고혹",
+    "ko": "성묘",
     "en": "g-max befuddle",
     "type": "벌레",
     "type_en": "bug",
@@ -11808,12 +11805,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "버터플 전용. 상대를 잠듦, 마비, 독 중 하나의 상태로 만든다.",
+    "desc": "동료의 한을 풀어 주기 위해 공격한다. 쓰러진 같은 편 포켓몬이 많을수록 기술의 위력이 올라간다.",
     "desc_lang": "ko"
   },
   {
     "id": 854,
-    "ko": "Last Respects",
+    "ko": "성묘",
     "en": "Last Respects",
     "type": "고스트",
     "type_en": "ghost",
@@ -11822,13 +11819,12 @@
     "power": 50,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user attacks to avenge its allies. The more defeated allies there are in the user's party, the greater the move's power.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "동료의 한을 풀어 주기 위해 공격한다. 쓰러진 같은 편 포켓몬이 많을수록 기술의 위력이 올라간다.",
+    "desc_lang": "ko"
   },
   {
     "id": 855,
-    "ko": "거다이만뢰",
+    "ko": "루미나콜리전",
     "en": "g-max volt crash",
     "type": "전기",
     "type_en": "electric",
@@ -11837,12 +11833,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "피카츄 전용. 상대 포켓몬 전원을 마비 상태로 만든다.",
+    "desc": "정신에도 작용하는 기묘한 빛을 발산해서 공격한다. 상대의 특수방어를 크게 떨어뜨린다.",
     "desc_lang": "ko"
   },
   {
     "id": 855,
-    "ko": "Lumina Crash",
+    "ko": "루미나콜리전",
     "en": "Lumina Crash",
     "type": "에스퍼",
     "type_en": "psychic",
@@ -11851,13 +11847,12 @@
     "power": 80,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user attacks by unleashing a peculiar light that even affects the mind. This also harshly lowers the target's Sp. Def stat.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "정신에도 작용하는 기묘한 빛을 발산해서 공격한다. 상대의 특수방어를 크게 떨어뜨린다.",
+    "desc_lang": "ko"
   },
   {
     "id": 856,
-    "ko": "거다이금화",
+    "ko": "한판내기",
     "en": "g-max gold rush",
     "type": "노말",
     "type_en": "normal",
@@ -11866,12 +11861,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "나옹 전용. 인접한 모든 상대를 혼란 상태로 만든다.",
+    "desc": "멋들어진 몸놀림으로 공격한다. 입속에 싸리용이 있으면 싸리용의 모습에 따라 능력이 올라간다.",
     "desc_lang": "ko"
   },
   {
     "id": 856,
-    "ko": "Order Up",
+    "ko": "한판내기",
     "en": "Order Up",
     "type": "드래곤",
     "type_en": "dragon",
@@ -11880,13 +11875,12 @@
     "power": 80,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user attacks with elegant poise. If the user has a Tatsugiri in its mouth, this move boosts one of the user's stats based on the Tatsugiri's form.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "멋들어진 몸놀림으로 공격한다. 입속에 싸리용이 있으면 싸리용의 모습에 따라 능력이 올라간다.",
+    "desc_lang": "ko"
   },
   {
     "id": 857,
-    "ko": "거다이회심격",
+    "ko": "제트펀치",
     "en": "g-max chi strike",
     "type": "격투",
     "type_en": "fighting",
@@ -11895,12 +11889,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "괴력몬 전용. 아군의 급소율을 1랭크 올린다.",
+    "desc": "거센 물살을 주먹에 둘러 눈에 보이지 않는 속도로 펀치를 날린다. 반드시 선제공격할 수 있다.",
     "desc_lang": "ko"
   },
   {
     "id": 857,
-    "ko": "Jet Punch",
+    "ko": "제트펀치",
     "en": "Jet Punch",
     "type": "물",
     "type_en": "water",
@@ -11909,13 +11903,12 @@
     "power": 60,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user summons a torrent around its fist and punches at blinding speed. This move always goes first.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "거센 물살을 주먹에 둘러 눈에 보이지 않는 속도로 펀치를 날린다. 반드시 선제공격할 수 있다.",
+    "desc_lang": "ko"
   },
   {
     "id": 858,
-    "ko": "거다이환영",
+    "ko": "하바네로엑기스",
     "en": "g-max terror",
     "type": "고스트",
     "type_en": "ghost",
@@ -11924,12 +11917,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "팬텀 전용. 상대는 도망칠 수 없다.",
+    "desc": "어마어마하게 매운 엑기스를 발사한다. 상대의 공격이 크게 오르고 방어는 크게 떨어진다.",
     "desc_lang": "ko"
   },
   {
     "id": 858,
-    "ko": "Spicy Extract",
+    "ko": "하바네로엑기스",
     "en": "Spicy Extract",
     "type": "풀",
     "type_en": "grass",
@@ -11938,13 +11931,12 @@
     "power": 0,
     "accuracy": null,
     "gen": "9세대",
-    "desc": "The user emits an incredibly spicy extract, sharply boosting the target's Attack stat and harshly lowering the target's Defense stat.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "어마어마하게 매운 엑기스를 발사한다. 상대의 공격이 크게 오르고 방어는 크게 떨어진다.",
+    "desc_lang": "ko"
   },
   {
     "id": 859,
-    "ko": "거다이포말",
+    "ko": "휠스핀",
     "en": "g-max foam burst",
     "type": "물",
     "type_en": "water",
@@ -11953,12 +11945,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "킹크랩 전용. 상대 전원의 스피드를 2랭크 낮춘다.",
+    "desc": "발에 부하를 걸어 격렬하게 회전하며 데미지를 준다. 자신의 스피드가 크게 떨어진다.",
     "desc_lang": "ko"
   },
   {
     "id": 859,
-    "ko": "Spin Out",
+    "ko": "휠스핀",
     "en": "Spin Out",
     "type": "강철",
     "type_en": "steel",
@@ -11967,13 +11959,12 @@
     "power": 100,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user spins furiously by straining its legs, inflicting damage on the target. This also harshly lowers the user's Speed stat.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "발에 부하를 걸어 격렬하게 회전하며 데미지를 준다. 자신의 스피드가 크게 떨어진다.",
+    "desc_lang": "ko"
   },
   {
     "id": 860,
-    "ko": "거다이선율",
+    "ko": "찍찍베기",
     "en": "g-max resonance",
     "type": "얼음",
     "type_en": "ice",
@@ -11982,12 +11973,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "라프라스 전용. 5턴간 아군의 피해를 절반으로 줄이는 오로라베일을 설치한다.",
+    "desc": "여기저기서 동료들을 모아서 화려한 콤비네이션으로 공격한다. 1~10회 연속으로 공격한다.",
     "desc_lang": "ko"
   },
   {
     "id": 860,
-    "ko": "Population Bomb",
+    "ko": "찍찍베기",
     "en": "Population Bomb",
     "type": "노말",
     "type_en": "normal",
@@ -11996,13 +11987,12 @@
     "power": 20,
     "accuracy": 90,
     "gen": "9세대",
-    "desc": "The user’s fellows gather in droves to perform a combo attack that hits the target one to ten times in a row.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "여기저기서 동료들을 모아서 화려한 콤비네이션으로 공격한다. 1~10회 연속으로 공격한다.",
+    "desc_lang": "ko"
   },
   {
     "id": 861,
-    "ko": "거다이포옹",
+    "ko": "아이스스피너",
     "en": "g-max cuddle",
     "type": "노말",
     "type_en": "normal",
@@ -12011,12 +12001,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "이브이 전용. 성별이 다른 상대 포켓몬 전원을 헤롱헤롱 상태로 만든다.",
+    "desc": "발에 얇은 얼음을 두르고 빙글빙글 회전하며 부딪친다. 회전 운동에 의해 필드가 파괴된다.",
     "desc_lang": "ko"
   },
   {
     "id": 861,
-    "ko": "Ice Spinner",
+    "ko": "아이스스피너",
     "en": "Ice Spinner",
     "type": "얼음",
     "type_en": "ice",
@@ -12025,13 +12015,12 @@
     "power": 80,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user covers its feet in thin ice and twirls around, slamming into the target. This move's spinning motion also destroys the terrain.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "발에 얇은 얼음을 두르고 빙글빙글 회전하며 부딪친다. 회전 운동에 의해 필드가 파괴된다.",
+    "desc_lang": "ko"
   },
   {
     "id": 862,
-    "ko": "거다이재생",
+    "ko": "대검돌격",
     "en": "g-max replenish",
     "type": "노말",
     "type_en": "normal",
@@ -12040,12 +12029,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "잠만보 전용. 같은 편 포켓몬이 배틀 중에 먹은 나무열매를 재생한다.",
+    "desc": "몸을 내던지는 무모한 돌격. 상대의 다음 턴 공격이 반드시 명중하고 데미지를 2배로 입게 된다.",
     "desc_lang": "ko"
   },
   {
     "id": 862,
-    "ko": "Glaive Rush",
+    "ko": "대검돌격",
     "en": "Glaive Rush",
     "type": "드래곤",
     "type_en": "dragon",
@@ -12054,13 +12043,12 @@
     "power": 120,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user throws its entire body into a reckless charge. After this move is used, attacks on the user cannot miss and will inflict double damage until the user’s next turn.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "몸을 내던지는 무모한 돌격. 상대의 다음 턴 공격이 반드시 명중하고 데미지를 2배로 입게 된다.",
+    "desc_lang": "ko"
   },
   {
     "id": 863,
-    "ko": "거다이악취",
+    "ko": "회생의기도",
     "en": "g-max malodor",
     "type": "독",
     "type_en": "poison",
@@ -12069,12 +12057,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "더스트나 전용. 상대 포켓몬 전원을 독 상태로 만든다.",
+    "desc": "자애로운 마음으로 기도를 하여 기절한 교대 포켓몬을 HP가 절반인 상태로 부활시킨다.",
     "desc_lang": "ko"
   },
   {
     "id": 863,
-    "ko": "Revival Blessing",
+    "ko": "회생의기도",
     "en": "Revival Blessing",
     "type": "노말",
     "type_en": "normal",
@@ -12083,13 +12071,12 @@
     "power": 0,
     "accuracy": null,
     "gen": "9세대",
-    "desc": "The user bestows a loving blessing, reviving a party Pokémon that has fainted and restoring half that Pokémon's max HP.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "자애로운 마음으로 기도를 하여 기절한 교대 포켓몬을 HP가 절반인 상태로 부활시킨다.",
+    "desc_lang": "ko"
   },
   {
     "id": 864,
-    "ko": "거다이융격",
+    "ko": "소금절이",
     "en": "g-max meltdown",
     "type": "강철",
     "type_en": "steel",
@@ -12098,12 +12085,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "멜메탈 전용. 같은 기술을 2회 연속으로 쓰지 못하게 한다.",
+    "desc": "상대를 소금절이 상태로 만들어 매 턴 데미지를 준다. 강철타입이나 물타입에게 더 고통스럽다.",
     "desc_lang": "ko"
   },
   {
     "id": 864,
-    "ko": "Salt Cure",
+    "ko": "소금절이",
     "en": "Salt Cure",
     "type": "바위",
     "type_en": "rock",
@@ -12112,13 +12099,12 @@
     "power": 40,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user salt cures the target, inflicting damage every turn. Steel and Water types are more strongly affected by this move.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "상대를 소금절이 상태로 만들어 매 턴 데미지를 준다. 강철타입이나 물타입에게 더 고통스럽다.",
+    "desc_lang": "ko"
   },
   {
     "id": 865,
-    "ko": "거다이난타",
+    "ko": "트리플다이브",
     "en": "g-max drum solo",
     "type": "풀",
     "type_en": "grass",
@@ -12127,12 +12113,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "고릴타 전용. 상대의 특성을 무시하고 공격한다.",
+    "desc": "호흡이 척척 맞게 다이빙해서 상대에게 물보라를 끼얹는다. 3회 연속으로 데미지를 준다.",
     "desc_lang": "ko"
   },
   {
     "id": 865,
-    "ko": "Triple Dive",
+    "ko": "트리플다이브",
     "en": "Triple Dive",
     "type": "물",
     "type_en": "water",
@@ -12141,13 +12127,12 @@
     "power": 30,
     "accuracy": 95,
     "gen": "9세대",
-    "desc": "The user performs a perfectly timed triple dive, hitting the target with splashes of water three times in a row.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "호흡이 척척 맞게 다이빙해서 상대에게 물보라를 끼얹는다. 3회 연속으로 데미지를 준다.",
+    "desc_lang": "ko"
   },
   {
     "id": 866,
-    "ko": "거다이화염구",
+    "ko": "킬러스핀",
     "en": "g-max fireball",
     "type": "불꽃",
     "type_en": "fire",
@@ -12156,12 +12141,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "에이스번 전용. 상대의 특성을 무시하고 공격한다.",
+    "desc": "회전해서 상대를 공격한다. 조이기, 김밥말이, 씨뿌리기 등의 효과를 날려 버린다. 상대를 독 상태로 만든다.",
     "desc_lang": "ko"
   },
   {
     "id": 866,
-    "ko": "Mortal Spin",
+    "ko": "킬러스핀",
     "en": "Mortal Spin",
     "type": "독",
     "type_en": "poison",
@@ -12170,13 +12155,12 @@
     "power": 30,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user performs a spin attack that can also eliminate the effects of such moves as Bind, Wrap, and Leech Seed. This also poisons opposing Pokémon.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "회전해서 상대를 공격한다. 조이기, 김밥말이, 씨뿌리기 등의 효과를 날려 버린다. 상대를 독 상태로 만든다.",
+    "desc_lang": "ko"
   },
   {
     "id": 867,
-    "ko": "거다이저격",
+    "ko": "베껴그리기",
     "en": "g-max hydrosnipe",
     "type": "물",
     "type_en": "water",
@@ -12185,12 +12169,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "인텔리레온 전용. 상대의 특성을 무시하고 공격한다.",
+    "desc": "상대의 본질을 꿰뚫어 보고 베껴서 자신과 같은 편을 상대와 같은 특성으로 바꾼다.",
     "desc_lang": "ko"
   },
   {
     "id": 867,
-    "ko": "Doodle",
+    "ko": "베껴그리기",
     "en": "Doodle",
     "type": "노말",
     "type_en": "normal",
@@ -12199,13 +12183,12 @@
     "power": 0,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user captures the very essence of the target in a sketch. This changes the Abilities of the user and its ally Pokémon to that of the target.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "상대의 본질을 꿰뚫어 보고 베껴서 자신과 같은 편을 상대와 같은 특성으로 바꾼다.",
+    "desc_lang": "ko"
   },
   {
     "id": 868,
-    "ko": "거다이풍격",
+    "ko": "제살깎기",
     "en": "g-max wind rage",
     "type": "비행",
     "type_en": "flying",
@@ -12214,12 +12197,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "아머까오 전용. 상대의 필드 설치기를 제거한다.",
+    "desc": "자신의 HP를 깎아서 자신의 공격, 특수공격, 스피드를 크게 올린다.",
     "desc_lang": "ko"
   },
   {
     "id": 868,
-    "ko": "Fillet Away",
+    "ko": "제살깎기",
     "en": "Fillet Away",
     "type": "노말",
     "type_en": "normal",
@@ -12228,13 +12211,12 @@
     "power": 0,
     "accuracy": null,
     "gen": "9세대",
-    "desc": "The user sharply boosts its Attack, Sp. Atk, and Speed stats by using its own HP.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "자신의 HP를 깎아서 자신의 공격, 특수공격, 스피드를 크게 올린다.",
+    "desc_lang": "ko"
   },
   {
     "id": 869,
-    "ko": "거다이천도",
+    "ko": "도각참",
     "en": "g-max gravity",
     "type": "에스퍼",
     "type_en": "psychic",
@@ -12243,12 +12225,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "이올브 전용. 5턴간 비행·부유 포켓몬이 땅타입에 맞게 되고 공중 기술 사용 불가.",
+    "desc": "머리를 조아려 상대를 방심하게 만든 뒤에 베어 버린다. 공격은 반드시 명중한다.",
     "desc_lang": "ko"
   },
   {
     "id": 869,
-    "ko": "Kowtow Cleave",
+    "ko": "도각참",
     "en": "Kowtow Cleave",
     "type": "악",
     "type_en": "dark",
@@ -12257,13 +12239,12 @@
     "power": 85,
     "accuracy": null,
     "gen": "9세대",
-    "desc": "The user slashes at the target after kowtowing to make the target let down its guard. This attack never misses.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "머리를 조아려 상대를 방심하게 만든 뒤에 베어 버린다. 공격은 반드시 명중한다.",
+    "desc_lang": "ko"
   },
   {
     "id": 870,
-    "ko": "거다이암진",
+    "ko": "트릭플라워",
     "en": "g-max stonesurge",
     "type": "물",
     "type_en": "water",
@@ -12272,12 +12253,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "갈가부기 전용. 교체해서 나온 상대 포켓몬에게 스텔스록 유사 바위 대미지를 입힌다.",
+    "desc": "숨겨진 장치가 있는 꽃다발을 상대에게 던져서 공격한다. 반드시 명중하며 급소에 맞는다.",
     "desc_lang": "ko"
   },
   {
     "id": 870,
-    "ko": "Flower Trick",
+    "ko": "트릭플라워",
     "en": "Flower Trick",
     "type": "풀",
     "type_en": "grass",
@@ -12286,13 +12267,12 @@
     "power": 70,
     "accuracy": null,
     "gen": "9세대",
-    "desc": "The user throws a rigged bouquet of flowers at the target. This attack never misses and always lands a critical hit.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "숨겨진 장치가 있는 꽃다발을 상대에게 던져서 공격한다. 반드시 명중하며 급소에 맞는다.",
+    "desc_lang": "ko"
   },
   {
     "id": 871,
-    "ko": "거다이분석",
+    "ko": "플레어송",
     "en": "g-max volcalith",
     "type": "바위",
     "type_en": "rock",
@@ -12301,12 +12281,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "석탄산 전용. 바위 타입이 아닌 상대 전원에게 4턴간 매 턴 최대 HP의 1/6 대미지를 입힌다.",
+    "desc": "활활 타오르는 불꽃을 노래하듯 뿜어서 상대를 태워 버린다. 자신의 특수공격을 올린다.",
     "desc_lang": "ko"
   },
   {
     "id": 871,
-    "ko": "Torch Song",
+    "ko": "플레어송",
     "en": "Torch Song",
     "type": "불꽃",
     "type_en": "fire",
@@ -12315,13 +12295,12 @@
     "power": 80,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user blows out raging flames as if singing a song, scorching the target. This also boosts the user's Sp. Atk stat.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "활활 타오르는 불꽃을 노래하듯 뿜어서 상대를 태워 버린다. 자신의 특수공격을 올린다.",
+    "desc_lang": "ko"
   },
   {
     "id": 872,
-    "ko": "거다이산격",
+    "ko": "아쿠아스텝",
     "en": "g-max tartness",
     "type": "풀",
     "type_en": "grass",
@@ -12330,12 +12309,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "애프룡 전용. 상대 전원의 회피율을 1랭크 떨어뜨린다.",
+    "desc": "물 흐르듯 민첩하고 경쾌한 발재간으로 상대를 농락하며 데미지를 준다. 자신의 스피드를 올린다.",
     "desc_lang": "ko"
   },
   {
     "id": 872,
-    "ko": "Aqua Step",
+    "ko": "아쿠아스텝",
     "en": "Aqua Step",
     "type": "물",
     "type_en": "water",
@@ -12344,13 +12323,12 @@
     "power": 80,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user toys with the target and attacks it using light and fluid dance steps. This also boosts the user's Speed stat.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "물 흐르듯 민첩하고 경쾌한 발재간으로 상대를 농락하며 데미지를 준다. 자신의 스피드를 올린다.",
+    "desc_lang": "ko"
   },
   {
     "id": 873,
-    "ko": "거다이감로",
+    "ko": "레이징불",
     "en": "g-max sweetness",
     "type": "풀",
     "type_en": "grass",
@@ -12359,12 +12337,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "단지래플 전용. 아군 전원의 상태이상을 회복한다.",
+    "desc": "분노해 날뛰는 성난소의 맹렬한 태클. 폼에 따라 기술의 타입이 달라지고 빛의장막이나 리플렉터 등도 파괴할 수 있다.",
     "desc_lang": "ko"
   },
   {
     "id": 873,
-    "ko": "Raging Bull",
+    "ko": "레이징불",
     "en": "Raging Bull",
     "type": "노말",
     "type_en": "normal",
@@ -12373,13 +12351,12 @@
     "power": 90,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user performs a tackle like a raging bull. This move's type depends on the user's form. It can also break barriers, such as Light Screen and Reflect.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "분노해 날뛰는 성난소의 맹렬한 태클. 폼에 따라 기술의 타입이 달라지고 빛의장막이나 리플렉터 등도 파괴할 수 있다.",
+    "desc_lang": "ko"
   },
   {
     "id": 874,
-    "ko": "거다이사진",
+    "ko": "골드러시",
     "en": "g-max sandblast",
     "type": "땅",
     "type_en": "ground",
@@ -12388,12 +12365,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "사다이사 전용. 4~5턴간 상대 전원을 모래에 가둬 매 턴 HP 1/6 대미지와 교체 불가 상태로 만든다.",
+    "desc": "대량의 코인을 날려서 공격한다. 자신의 특수공격이 떨어진다. 배틀 후에 돈을 받을 수 있다.",
     "desc_lang": "ko"
   },
   {
     "id": 874,
-    "ko": "Make It Rain",
+    "ko": "골드러시",
     "en": "Make It Rain",
     "type": "강철",
     "type_en": "steel",
@@ -12402,13 +12379,12 @@
     "power": 120,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user attacks by throwing out a mass of coins. This also lowers the user's Sp. Atk stat. Money is earned after the battle.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "대량의 코인을 날려서 공격한다. 자신의 특수공격이 떨어진다. 배틀 후에 돈을 받을 수 있다.",
+    "desc_lang": "ko"
   },
   {
     "id": 875,
-    "ko": "거다이감전",
+    "ko": "사이코블레이드",
     "en": "g-max stun shock",
     "type": "전기",
     "type_en": "electric",
@@ -12417,7 +12393,7 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "스트린더 전용. 상대를 마비 또는 독 상태로 만든다.",
+    "desc": "실체가 없는 칼날로 상대를 베어 가른다. 일렉트릭필드 위에 있을 때 기술의 위력이 1.5배가 된다.",
     "desc_lang": "ko"
   },
   {
@@ -12431,12 +12407,12 @@
     "power": 80,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user rends the target with an ethereal blade. This move's power is boosted by 50 percent if the user is on Electric Terrain.",
-    "desc_lang": "en"
+    "desc": "실체가 없는 칼날로 상대를 베어 가른다. 일렉트릭필드 위에 있을 때 기술의 위력이 1.5배가 된다.",
+    "desc_lang": "ko"
   },
   {
     "id": 876,
-    "ko": "거다이백화",
+    "ko": "하이드로스팀",
     "en": "g-max centiferno",
     "type": "불꽃",
     "type_en": "fire",
@@ -12445,7 +12421,7 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "다태우지네 전용. 상대 전원을 회오리불꽃 상태로 만든다.",
+    "desc": "펄펄 끓는 물을 기세 좋게 뿜어낸다. 햇살이 강할 때 기술의 위력이 떨어지기는커녕 1.5배가 된다.",
     "desc_lang": "ko"
   },
   {
@@ -12459,12 +12435,12 @@
     "power": 80,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user blasts the target with boiling-hot water. This move's power is not lowered in harsh sunlight but rather boosted by 50 percent.",
-    "desc_lang": "en"
+    "desc": "펄펄 끓는 물을 기세 좋게 뿜어낸다. 햇살이 강할 때 기술의 위력이 떨어지기는커녕 1.5배가 된다.",
+    "desc_lang": "ko"
   },
   {
     "id": 877,
-    "ko": "거다이천벌",
+    "ko": "카타스트로피",
     "en": "g-max smite",
     "type": "페어리",
     "type_en": "fairy",
@@ -12473,12 +12449,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "브리무음 전용. 상대 전체를 혼란 상태로 만든다.",
+    "desc": "파멸적인 재앙에 휩쓸리게 하여 상대의 HP를 절반으로 만든다.",
     "desc_lang": "ko"
   },
   {
     "id": 877,
-    "ko": "Ruination",
+    "ko": "카타스트로피",
     "en": "Ruination",
     "type": "악",
     "type_en": "dark",
@@ -12487,13 +12463,12 @@
     "power": 1,
     "accuracy": 90,
     "gen": "9세대",
-    "desc": "The user summons a ruinous disaster. This cuts the target’s HP in half.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "파멸적인 재앙에 휩쓸리게 하여 상대의 HP를 절반으로 만든다.",
+    "desc_lang": "ko"
   },
   {
     "id": 878,
-    "ko": "거다이수마",
+    "ko": "액셀브레이크",
     "en": "g-max snooze",
     "type": "악",
     "type_en": "dark",
@@ -12502,12 +12477,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "오롱털 전용. 상대 전원을 50% 확률로 1턴 후 잠듦 상태로 만든다.",
+    "desc": "변형하며 거칠게 낙하한 다음 고대의 대폭발을 일으킨다. 약점인 상대에게는 위력이 더욱 올라간다.",
     "desc_lang": "ko"
   },
   {
     "id": 878,
-    "ko": "Collision Course",
+    "ko": "액셀브레이크",
     "en": "Collision Course",
     "type": "격투",
     "type_en": "fighting",
@@ -12516,13 +12491,12 @@
     "power": 100,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user transforms and crashes to the ground, causing a massive prehistoric explosion. This move's power is boosted more than usual if it’s a supereffective hit.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "변형하며 거칠게 낙하한 다음 고대의 대폭발을 일으킨다. 약점인 상대에게는 위력이 더욱 올라간다.",
+    "desc_lang": "ko"
   },
   {
     "id": 879,
-    "ko": "거다이단원",
+    "ko": "라이트닝드라이브",
     "en": "g-max finale",
     "type": "페어리",
     "type_en": "fairy",
@@ -12531,12 +12505,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "마휘핑 전용. 아군 전원의 HP를 1/6만큼 회복한다.",
+    "desc": "변형하며 초고속으로 달려서 미지의 전격으로 상대를 관통한다. 약점인 상대에게는 위력이 더욱 올라간다.",
     "desc_lang": "ko"
   },
   {
     "id": 879,
-    "ko": "Electro Drift",
+    "ko": "라이트닝드라이브",
     "en": "Electro Drift",
     "type": "전기",
     "type_en": "electric",
@@ -12545,13 +12519,12 @@
     "power": 100,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user races forward at ultrafast speeds, piercing its target with futuristic electricity. This move's power is boosted more than usual if it's a supereffective hit.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "변형하며 초고속으로 달려서 미지의 전격으로 상대를 관통한다. 약점인 상대에게는 위력이 더욱 올라간다.",
+    "desc_lang": "ko"
   },
   {
     "id": 880,
-    "ko": "거다이강철진",
+    "ko": "꼬리자르기",
     "en": "g-max steelsurge",
     "type": "강철",
     "type_en": "steel",
@@ -12560,12 +12533,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "대왕끼리동 전용. 적 진영에 강철 타입 상성에 따라 위력이 달라지는 함정을 설치한다.",
+    "desc": "사용자 HP의 1/2를 깎아서 대타가 되는 분신을 만든 다음, 교대 포켓몬과 교체한다.",
     "desc_lang": "ko"
   },
   {
     "id": 880,
-    "ko": "Shed Tail",
+    "ko": "꼬리자르기",
     "en": "Shed Tail",
     "type": "노말",
     "type_en": "normal",
@@ -12574,13 +12547,12 @@
     "power": 0,
     "accuracy": null,
     "gen": "9세대",
-    "desc": "The user creates a substitute for itself using its own HP before switching places with a party Pokémon in waiting.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "사용자 HP의 1/2를 깎아서 대타가 되는 분신을 만든 다음, 교대 포켓몬과 교체한다.",
+    "desc_lang": "ko"
   },
   {
     "id": 881,
-    "ko": "거다이감쇠",
+    "ko": "썰렁개그",
     "en": "g-max depletion",
     "type": "드래곤",
     "type_en": "dragon",
@@ -12589,12 +12561,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "두랄루돈 전용. 상대 전원이 마지막으로 사용한 기술의 PP를 감소시킨다.",
+    "desc": "자리를 얼어붙게 만드는 개그를 하고 교대 포켓몬과 교체한다. 5턴 동안 눈을 내리게 한다.",
     "desc_lang": "ko"
   },
   {
     "id": 881,
-    "ko": "Chilly Reception",
+    "ko": "썰렁개그",
     "en": "Chilly Reception",
     "type": "얼음",
     "type_en": "ice",
@@ -12603,13 +12575,12 @@
     "power": 0,
     "accuracy": null,
     "gen": "9세대",
-    "desc": "The user tells a chillingly bad joke before switching places with a party Pokémon in waiting. This summons a snowstorm lasting five turns.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "자리를 얼어붙게 만드는 개그를 하고 교대 포켓몬과 교체한다. 5턴 동안 눈을 내리게 한다.",
+    "desc_lang": "ko"
   },
   {
     "id": 882,
-    "ko": "거다이일격",
+    "ko": "정리정돈",
     "en": "g-max one blow",
     "type": "악",
     "type_en": "dark",
@@ -12618,12 +12589,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "우라오스(일격) 전용. 방어와 다이월을 무시하고 공격한다.",
+    "desc": "압정뿌리기, 스텔스록, 끈적끈적네트, 독압정, 대타출동을 모두 정리한다. 자신의 공격과 스피드가 올라간다.",
     "desc_lang": "ko"
   },
   {
     "id": 882,
-    "ko": "Tidy Up",
+    "ko": "정리정돈",
     "en": "Tidy Up",
     "type": "노말",
     "type_en": "normal",
@@ -12632,13 +12603,12 @@
     "power": 0,
     "accuracy": null,
     "gen": "9세대",
-    "desc": "The user tidies up and removes the effects of Spikes, Stealth Rock, Sticky Web, Toxic Spikes, and Substitute. This also boosts the user’s Attack and Speed stats.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "압정뿌리기, 스텔스록, 끈적끈적네트, 독압정, 대타출동을 모두 정리한다. 자신의 공격과 스피드가 올라간다.",
+    "desc_lang": "ko"
   },
   {
     "id": 883,
-    "ko": "거다이연격",
+    "ko": "설경",
     "en": "g-max rapid flow",
     "type": "물",
     "type_en": "water",
@@ -12647,12 +12617,12 @@
     "power": null,
     "accuracy": null,
     "gen": "8세대",
-    "desc": "우라오스(연격) 전용. 방어와 다이월을 무시하고 공격한다.",
+    "desc": "5턴 동안 눈을 내리게 한다. 얼음타입의 방어가 올라간다.",
     "desc_lang": "ko"
   },
   {
     "id": 883,
-    "ko": "Snowscape",
+    "ko": "설경",
     "en": "Snowscape",
     "type": "얼음",
     "type_en": "ice",
@@ -12661,13 +12631,12 @@
     "power": 0,
     "accuracy": null,
     "gen": "9세대",
-    "desc": "The user summons a snowstorm lasting five turns. This boosts the Defense stats of Ice types.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "5턴 동안 눈을 내리게 한다. 얼음타입의 방어가 올라간다.",
+    "desc_lang": "ko"
   },
   {
     "id": 884,
-    "ko": "무한다이빔",
+    "ko": "달려들기",
     "en": "eternabeam",
     "type": "드래곤",
     "type_en": "dragon",
@@ -12676,12 +12645,12 @@
     "power": 160,
     "accuracy": 90,
     "gen": "8세대",
-    "desc": "무한다이노 전용. 무한다이노 최대의 공격. 사용 후 1턴간 움직일 수 없다.",
+    "desc": "상대에게 달려들어 공격한다. 상대의 스피드를 떨어뜨린다.",
     "desc_lang": "ko"
   },
   {
     "id": 884,
-    "ko": "Pounce",
+    "ko": "달려들기",
     "en": "Pounce",
     "type": "벌레",
     "type_en": "bug",
@@ -12690,13 +12659,12 @@
     "power": 50,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user attacks by pouncing on the target. This also lowers the target's Speed stat.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "상대에게 달려들어 공격한다. 상대의 스피드를 떨어뜨린다.",
+    "desc_lang": "ko"
   },
   {
     "id": 885,
-    "ko": "Trailblaze",
+    "ko": "개척하기",
     "en": "Trailblaze",
     "type": "풀",
     "type_en": "grass",
@@ -12705,13 +12673,12 @@
     "power": 50,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user attacks suddenly as if leaping out from tall grass. The user's nimble footwork boosts its Speed stat.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "풀숲에서 튀어나오듯이 공격한다. 경쾌한 발재간으로 자신의 스피드를 올린다.",
+    "desc_lang": "ko"
   },
   {
     "id": 886,
-    "ko": "Chilling Water",
+    "ko": "찬물끼얹기",
     "en": "Chilling Water",
     "type": "물",
     "type_en": "water",
@@ -12720,13 +12687,12 @@
     "power": 50,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user attacks the target by showering it with water that's so cold it saps the target's power. This also lowers the target's Attack stat.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "상대의 기운이 빠질 정도로 차가운 물을 끼얹어서 공격한다. 상대의 공격을 떨어뜨린다.",
+    "desc_lang": "ko"
   },
   {
     "id": 887,
-    "ko": "Hyper Drill",
+    "ko": "하이퍼드릴",
     "en": "Hyper Drill",
     "type": "노말",
     "type_en": "normal",
@@ -12735,13 +12701,12 @@
     "power": 100,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user spins the pointed part of its body at high speed to pierce the target. This attack can hit a target using a move such as Protect or Detect.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "뾰족한 신체 부위를 급속도로 회전시켜 관통한다. 방어나 판별 등도 무시할 수 있다.",
+    "desc_lang": "ko"
   },
   {
     "id": 888,
-    "ko": "Twin Beam",
+    "ko": "트윈빔",
     "en": "Twin Beam",
     "type": "에스퍼",
     "type_en": "psychic",
@@ -12750,13 +12715,12 @@
     "power": 40,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user shoots mystical beams from its eyes to inflict damage. The target is hit twice in a row.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "두 눈에서 불가사의한 광선을 발사해서 공격한다. 2회 연속으로 데미지를 준다.",
+    "desc_lang": "ko"
   },
   {
     "id": 889,
-    "ko": "Rage Fist",
+    "ko": "분노의주먹",
     "en": "Rage Fist",
     "type": "고스트",
     "type_en": "ghost",
@@ -12765,13 +12729,12 @@
     "power": 50,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user converts its rage into energy to attack. The more times the user has been hit by attacks, the greater the move's power.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "분노를 에너지로 바꿔서 공격한다. 받은 공격의 횟수가 많을수록 기술의 위력이 올라간다.",
+    "desc_lang": "ko"
   },
   {
     "id": 890,
-    "ko": "Armor Cannon",
+    "ko": "아머캐논",
     "en": "Armor Cannon",
     "type": "불꽃",
     "type_en": "fire",
@@ -12780,13 +12743,12 @@
     "power": 120,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user shoots its own armor out as blazing projectiles. This also lowers the user’s Defense and Sp. Def stats.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "자신의 갑옷을 활활 타오르는 탄환으로 발사해서 공격한다. 자신의 방어와 특수방어가 떨어진다.",
+    "desc_lang": "ko"
   },
   {
     "id": 891,
-    "ko": "Bitter Blade",
+    "ko": "원념의칼",
     "en": "Bitter Blade",
     "type": "불꽃",
     "type_en": "fire",
@@ -12795,13 +12757,12 @@
     "power": 90,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user focuses its bitter feelings toward the world of the living into a slashing attack. The user's HP is restored by up to half the damage taken by the target.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "현세의 미련을 칼끝에 담아 베어 버린다. 입힌 데미지의 절반에 해당하는 HP를 회복할 수 있다.",
+    "desc_lang": "ko"
   },
   {
     "id": 892,
-    "ko": "Double Shock",
+    "ko": "전광쌍격",
     "en": "Double Shock",
     "type": "전기",
     "type_en": "electric",
@@ -12810,13 +12771,12 @@
     "power": 120,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user discharges all the electricity from its body to perform a high-damage attack. After using this move, the user will no longer be Electric type.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "전신의 전기를 모두 방출해서 큰 데미지를 준다. 자신의 전기타입이 없어진다.",
+    "desc_lang": "ko"
   },
   {
     "id": 893,
-    "ko": "Gigaton Hammer",
+    "ko": "거대해머",
     "en": "Gigaton Hammer",
     "type": "강철",
     "type_en": "steel",
@@ -12825,13 +12785,12 @@
     "power": 160,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user swings its whole body around to attack with its huge hammer. This move can't be used twice in a row.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "거대한 해머를 온몸으로 휘둘러서 공격한다. 이 기술은 2회 연속으로 쓸 수 없다.",
+    "desc_lang": "ko"
   },
   {
     "id": 894,
-    "ko": "Comeuppance",
+    "ko": "앙갚음",
     "en": "Comeuppance",
     "type": "악",
     "type_en": "dark",
@@ -12840,13 +12799,12 @@
     "power": 1,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user retaliates with much greater force against the opponent that last inflicted damage on it.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "기술을 쓰기 전에 마지막으로 받은 기술의 데미지를 늘려서 기술을 쓴 상대에게 돌려준다.",
+    "desc_lang": "ko"
   },
   {
     "id": 895,
-    "ko": "Aqua Cutter",
+    "ko": "아쿠아커터",
     "en": "Aqua Cutter",
     "type": "물",
     "type_en": "water",
@@ -12855,13 +12813,12 @@
     "power": 70,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user expels pressurized water to cut at the target like a blade. This move has a heightened chance of landing a critical hit.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "압력을 가한 물을 칼날처럼 분사해서 상대를 베어 가른다. 급소에 맞기 쉽다.",
+    "desc_lang": "ko"
   },
   {
     "id": 901,
-    "ko": "Blood Moon",
+    "ko": "블러드문",
     "en": "Blood Moon",
     "type": "노말",
     "type_en": "normal",
@@ -12870,13 +12827,12 @@
     "power": 140,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user unleashes the full brunt of its spirit from a full moon that shines as red as blood. This move can't be used twice in a row.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "피와 같이 붉은 보름달에서 혼신의 기백을 발사한다. 이 기술은 2회 연속으로 쓸 수 없다.",
+    "desc_lang": "ko"
   },
   {
     "id": 902,
-    "ko": "Matcha Gotcha",
+    "ko": "휘적휘적포",
     "en": "Matcha Gotcha",
     "type": "풀",
     "type_en": "grass",
@@ -12885,13 +12841,12 @@
     "power": 80,
     "accuracy": 90,
     "gen": "9세대",
-    "desc": "The user fires a blast of tea that it mixed. The user's HP is restored by up to half the damage taken by the target. This may also leave the target with a burn.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "휘저은 차를 대포처럼 발사해 준 데미지의 절반을 HP로 회복한다. 화상 상태로 만들 때도 있다.",
+    "desc_lang": "ko"
   },
   {
     "id": 903,
-    "ko": "Syrup Bomb",
+    "ko": "시럽봄",
     "en": "Syrup Bomb",
     "type": "풀",
     "type_en": "grass",
@@ -12900,13 +12855,12 @@
     "power": 60,
     "accuracy": 85,
     "gen": "9세대",
-    "desc": "The user sets off an explosion of sticky candy syrup, which coats the target and causes the target's Speed stat to drop each turn for three turns.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "끈적끈적한 물엿을 폭발시킨다. 상대를 물엿범벅 상태로 만들어서 3턴 동안 계속 스피드를 떨어뜨린다.",
+    "desc_lang": "ko"
   },
   {
     "id": 904,
-    "ko": "Ivy Cudgel",
+    "ko": "덩굴방망이",
     "en": "Ivy Cudgel",
     "type": "풀",
     "type_en": "grass",
@@ -12915,9 +12869,8 @@
     "power": 100,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user strikes with an ivy-wrapped cudgel. This move's type changes depending on the mask worn by the user, and it has a heightened chance of landing a critical hit.",
-    "desc_lang": "en",
-    "needs_ko": true
+    "desc": "덩굴을 휘감은 방망이로 때린다. 쓰고 있는 가면에 따라 타입이 바뀐다. 급소에 맞기 쉽다.",
+    "desc_lang": "ko"
   },
   {
     "id": 905,
@@ -12930,8 +12883,8 @@
     "power": 130,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user gathers electricity on the first turn, boosting its Sp. Atk stat, then fires a high-voltage shot on the next turn. The shot will be fired immediately in rain.",
-    "desc_lang": "en"
+    "desc": "1턴째에 전기를 모아서 특수공격을 올리고 2턴째에 고압의 전기를 발사한다. 비가 오는 날씨일 때는 바로 발사할 수 있다.",
+    "desc_lang": "ko"
   },
   {
     "id": 906,
@@ -12944,8 +12897,8 @@
     "power": 120,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "With the power of its crystals, the user bombards and eliminates the target. When used by Terapagos in its Stellar Form, this move damages all opposing Pokémon.",
-    "desc_lang": "en"
+    "desc": "결정의 힘을 내리쬐어 적을 없애 버린다. 테라파고스가 스텔라폼일 때 사용하면 모든 상대에게 데미지를 준다.",
+    "desc_lang": "ko"
   },
   {
     "id": 907,
@@ -12958,8 +12911,8 @@
     "power": 80,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user shoots a beam of light to inflict damage. Sometimes all the user's heads shoot beams in unison, doubling the move's power.",
-    "desc_lang": "en"
+    "desc": "광선을 발사해서 공격한다. 가끔 다른 머리도 협력해서 레이저를 발사하여 위력이 2배가 된다.",
+    "desc_lang": "ko"
   },
   {
     "id": 908,
@@ -12972,8 +12925,8 @@
     "power": 0,
     "accuracy": 0,
     "gen": "9세대",
-    "desc": "The user's intensely hot fur protects it from attacks and also burns any attacker that makes direct contact with it.",
-    "desc_lang": "en"
+    "desc": "상대의 공격을 초고열의 털로 방어하는 동시에 접촉한 상대를 화상 상태로 만든다.",
+    "desc_lang": "ko"
   },
   {
     "id": 909,
@@ -12986,8 +12939,8 @@
     "power": 70,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "This move enables the user to attack first with a jolt of electricity. This move fails if the target is not readying an attack.",
-    "desc_lang": "en"
+    "desc": "상대보다 먼저 전격을 퍼붓는다. 상대가 쓴 기술이 공격 기술이 아니면 실패한다.",
+    "desc_lang": "ko"
   },
   {
     "id": 910,
@@ -13000,8 +12953,8 @@
     "power": 95,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user wields the light that has accumulated atop its head to cleave the target. This move hits even if the target protects itself.",
-    "desc_lang": "en"
+    "desc": "머리에 축적된 빛으로 절단한다. 기술 방어를 무시하고 공격할 수 있다.",
+    "desc_lang": "ko"
   },
   {
     "id": 911,
@@ -13014,8 +12967,8 @@
     "power": 50,
     "accuracy": 0,
     "gen": "9세대",
-    "desc": "The user attacks by launching particle blades at the target twice in a row. This attack never misses.",
-    "desc_lang": "en"
+    "desc": "입자로 된 칼날을 연이어 발사해서 2회 연속으로 데미지를 준다. 공격은 반드시 명중한다.",
+    "desc_lang": "ko"
   },
   {
     "id": 912,
@@ -13028,8 +12981,8 @@
     "power": 0,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The target is crushed with an arm, a claw, or the like to inflict damage. The more HP the target has left, the greater the move's power.",
-    "desc_lang": "en"
+    "desc": "팔이나 집게로 상대를 압박한다. 상대의 HP가 남아 있을수록 위력이 올라간다.",
+    "desc_lang": "ko"
   },
   {
     "id": 913,
@@ -13042,8 +12995,8 @@
     "power": 0,
     "accuracy": 0,
     "gen": "9세대",
-    "desc": "The user raises its allies’ morale with a draconic cry so that their future attacks have a heightened chance of landing critical hits. This rouses Dragon types more.",
-    "desc_lang": "en"
+    "desc": "용의 북돋움으로 사기를 높여서 같은 편의 기술이 급소에 맞기 쉬워진다. 드래곤타입이면 더욱더 사기가 북돋는다.",
+    "desc_lang": "ko"
   },
   {
     "id": 914,
@@ -13056,8 +13009,8 @@
     "power": 80,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user attacks the target using its angelic voice. This also confuses the target if its stats have been boosted during the turn.",
-    "desc_lang": "en"
+    "desc": "천사와도 같은 노랫소리로 상대를 공격한다. 그 턴에 능력이 올라간 포켓몬을 혼란 상태로 만든다.",
+    "desc_lang": "ko"
   },
   {
     "id": 915,
@@ -13070,8 +13023,8 @@
     "power": 75,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "Spurred by desperation, the user attacks the target. This move's power is doubled if the user's previous move failed.",
-    "desc_lang": "en"
+    "desc": "자포자기하는 자세로 공격한다. 앞 턴에서 기술이 빗나갔다면 위력이 배가 된다.",
+    "desc_lang": "ko"
   },
   {
     "id": 916,
@@ -13084,8 +13037,8 @@
     "power": 100,
     "accuracy": 95,
     "gen": "9세대",
-    "desc": "The user electrifies its body and drops onto the target to inflict damage. If this move misses, the user takes damage instead.",
-    "desc_lang": "en"
+    "desc": "몸에 전기를 두르고 상대를 덮친다. 빗나가면 자신이 데미지를 입는다.",
+    "desc_lang": "ko"
   },
   {
     "id": 917,
@@ -13098,8 +13051,8 @@
     "power": 75,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user attacks the target with unpleasant sound waves. For two turns, the target is prevented from recovering HP through moves, Abilities, or held items.",
-    "desc_lang": "en"
+    "desc": "불쾌한 음파를 상대에게 날려서 공격한다. 2턴 동안 상대는 기술이나 특성 또는 지니고 있는 도구로 HP를 회복할 수 없게 된다.",
+    "desc_lang": "ko"
   },
   {
     "id": 918,
@@ -13112,8 +13065,8 @@
     "power": 65,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user reacts to the target's movement and strikes with the heel of its palm, making the target flinch. This move fails if the target is not readying a priority move.",
-    "desc_lang": "en"
+    "desc": "움직임에 반응하여 손바닥으로 밀쳐서 상대를 풀죽게 한다. 상대가 쓴 기술이 선제공격 기술이 아니면 실패한다.",
+    "desc_lang": "ko"
   },
   {
     "id": 919,
@@ -13126,7 +13079,7 @@
     "power": 100,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "The user pours toxins into the target by wrapping them in a toxic, corrosive chain. This may also leave the target badly poisoned.",
-    "desc_lang": "en"
+    "desc": "독으로 된 사슬로 상대를 휘감은 뒤 독소를 흘려보내어 해치운다. 맹독 상태로 만들 때가 있다.",
+    "desc_lang": "ko"
   }
 ]
