@@ -622,7 +622,7 @@ function renderSectionGrid(section, entry, gridId, badgeId) {
       `;
       el.onclick = (e) => {
         if (!e.target.closest('.slot-remove,.slot-ability,.slot-item')) {
-          openPokeModal(section, i);
+          openItemModal(section, i, e);
         }
       };
     } else {
