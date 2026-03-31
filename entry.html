@@ -475,6 +475,7 @@
       <div class="move-grid" id="move-grid"></div>
     </div>
     <div class="modal-close-wrap">
+      <button class="btn-modal-back hidden" id="move-back-btn" onclick="goBackFromMove()">← 뒤로</button>
       <button class="move-remove-btn hidden" id="move-remove-btn" onclick="removeMove()">기술 해제</button>
       <button class="btn-modal-close" onclick="closeMoveModal()">닫기</button>
     </div>
@@ -597,6 +598,7 @@ let activeMoveSlotIdx   = 0;    // 0~3: 어떤 기술 슬롯을 편집 중
 let moveMethodFilter    = '전체';
 let moveTypeFilter      = '전체';
 let moveFiltered        = [];
+let moveModalShowBack   = false;
 
 const LEARN_METHOD_KO = {
   'level-up': '레벨업', 'machine': '기술머신',
@@ -835,7 +837,8 @@ function renderSectionGrid(section, entry, gridId, badgeId) {
       `;
       el.onclick = (e) => {
         if (!e.target.closest('.slot-remove,.slot-ability,.slot-item,.slot-move')) {
-          openItemModal(section, i, e);
+          moveModalShowBack = false;
+          openMoveModal(section, i, 0, null);
         }
       };
     } else {
@@ -956,12 +959,11 @@ function onPokeSelected(p) {
   closePokeModal();
   pendingPokemon = p;
 
-  // 이미 같은 포켓몬이 있으면 도구 선택부터
+  // 이미 같은 포켓몬이 있으면 기술 선택부터
   const existing = getEntry(activeSection, activeSlotIdx);
   if (existing && existing.pokemon.ko === p.ko) {
-    itemModalPrevStep = 'pokemon';
-    itemModalShowBack = true;
-    openItemModal(activeSection, activeSlotIdx, null);
+    moveModalShowBack = false;
+    openMoveModal(activeSection, activeSlotIdx, 0, null);
     return;
   }
 
@@ -1059,9 +1061,11 @@ function applyPokemonToSlot(p, ability) {
   });
   renderGrids();
 
-  // 메가스톤이 자동 지정된 경우 도구 모달 스킵
+  // 메가스톤이 자동 지정된 경우 도구 모달 스킵 → 바로 기술 선택
   if (autoStone) {
     pendingPokemon = null;
+    moveModalShowBack = false;
+    openMoveModal(activeSection, activeSlotIdx, 0, null);
     return;
   }
 
@@ -1109,6 +1113,11 @@ function openMoveModal(section, idx, moveSlotIdx, e) {
   // 기술 해제 버튼: 슬롯에 기술이 있으면 표시
   const currentMove = (slot.moves || [])[moveSlotIdx];
   document.getElementById('move-remove-btn').classList.toggle('hidden', !currentMove);
+
+  // 뒤로가기 버튼 (도구 선택에서 넘어온 경우만)
+  const backBtn = document.getElementById('move-back-btn');
+  backBtn.classList.toggle('hidden', !moveModalShowBack);
+  moveModalShowBack = false;
 
   buildMoveFilters();
   renderMoveGrid();
@@ -1213,8 +1222,15 @@ function selectMove(mv) {
   if (!slot) return;
   if (!slot.moves) slot.moves = [null, null, null, null];
   slot.moves[activeMoveSlotIdx] = mv;
-  closeMoveModal();
   renderGrids();
+
+  // 다음 빈 기술 슬롯으로 자동 이동 (없으면 닫기)
+  const nextEmpty = slot.moves.findIndex((m, i) => i > activeMoveSlotIdx && !m);
+  if (nextEmpty !== -1) {
+    openMoveModal(activeSection, activeSlotIdx, nextEmpty, null);
+  } else {
+    closeMoveModal();
+  }
 }
 
 function removeMove() {
@@ -1224,6 +1240,12 @@ function removeMove() {
   slot.moves[activeMoveSlotIdx] = null;
   closeMoveModal();
   renderGrids();
+}
+
+function goBackFromMove() {
+  closeMoveModal();
+  itemModalShowBack = false;
+  openItemModal(activeSection, activeSlotIdx, null);
 }
 
 function closeMoveModal() {
@@ -1340,15 +1362,19 @@ function selectItem(it) {
   if (slot) slot.item = it;
   closeItemModal();
   renderGrids();
+  // 도구 선택 완료 → 기술 1번 선택으로 이동 (뒤로가기 버튼 표시)
+  moveModalShowBack = true;
+  openMoveModal(activeSection, activeSlotIdx, 0, null);
 }
 
 // ─── 모달 외부 클릭 닫기 ───
-['poke-modal','ability-modal','item-modal'].forEach(id => {
+['poke-modal','ability-modal','item-modal','move-modal'].forEach(id => {
   document.getElementById(id).addEventListener('click', function(e) {
     if (e.target === this) {
       if (id === 'poke-modal')    closePokeModal();
       if (id === 'ability-modal') closeAbilityModal();
       if (id === 'item-modal')    closeItemModal();
+      if (id === 'move-modal')    closeMoveModal();
     }
   });
 });
