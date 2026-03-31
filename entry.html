@@ -628,13 +628,6 @@ async function init() {
     }
   });
 
-  // 메가스톤 룩업 맵 빌드 (mega_en → item)
-  allItems.forEach(it => {
-    if (it.category === 'mega-stones' && it.mega_en) {
-      megaStoneByFormEn[it.mega_en] = it;
-    }
-  });
-
   // 원종 + 폼 평탄화 (abilities 포함)
   pokeData.forEach(p => {
     allPokemon.push({
@@ -1053,11 +1046,20 @@ function applyPokemonToSlot(p, ability) {
   const autoStone = megaStoneByFormEn[p.en] || null;
   const itemToSet = autoStone !== null ? autoStone : (existing?.item || null);
 
+  // 메가 레쿠쟈 선택 시 화룡점정 1번 슬롯 고정
+  let autoMoves = existing?.moves || [null, null, null, null];
+  if (p.en === 'rayquaza-mega') {
+    const dragonAscent = moveByEn['dragon ascent'] || null;
+    if (dragonAscent && !autoMoves.some(m => m && m.en === 'dragon ascent')) {
+      autoMoves = [dragonAscent, ...autoMoves.slice(1)];
+    }
+  }
+
   setEntry(activeSection, activeSlotIdx, {
     pokemon: p,
     ability: ability,
     item: itemToSet,
-    moves: existing?.moves || [null, null, null, null],
+    moves: autoMoves,
   });
   renderGrids();
 

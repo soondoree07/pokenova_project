@@ -83,7 +83,9 @@ with open('data/quiz_pokemon.json', encoding='utf-8') as f:
 with open('data/quiz_moves.json', encoding='utf-8') as f:
     moves = json.load(f)
 
-known_moves = set(m['en'] for m in moves)
+# PokeAPI uses hyphens ("dragon-ascent") but quiz_moves.json uses spaces ("dragon ascent")
+# Build a hyphen-normalized set so multi-word moves aren't silently dropped
+known_moves = set(m['en'].replace(' ', '-') for m in moves)
 
 # 수집 대상 목록 (원종 + 폼)
 to_fetch = []
