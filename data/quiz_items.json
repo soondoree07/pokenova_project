@@ -3724,7 +3724,10 @@
     "desc": "지니면 팬텀이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/gengarite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가팬텀",
+    "mega_en": "gengar-mega",
+    "base_id": 94
   },
   {
     "id": 696,
@@ -3733,7 +3736,10 @@
     "desc": "지니면 가디안이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/gardevoirite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가가디안",
+    "mega_en": "gardevoir-mega",
+    "base_id": 282
   },
   {
     "id": 697,
@@ -3742,7 +3748,10 @@
     "desc": "지니면 전룡이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ampharosite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가전룡",
+    "mega_en": "ampharos-mega",
+    "base_id": 181
   },
   {
     "id": 698,
@@ -3751,7 +3760,10 @@
     "desc": "지니면 이상해꽃이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/venusaurite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가이상해꽃",
+    "mega_en": "venusaur-mega",
+    "base_id": 3
   },
   {
     "id": 699,
@@ -3760,7 +3772,10 @@
     "desc": "지니면 리자몽이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/charizardite-x.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가리자몽 X",
+    "mega_en": "charizard-mega-x",
+    "base_id": 6
   },
   {
     "id": 700,
@@ -3769,7 +3784,10 @@
     "desc": "지니면 거북왕이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/blastoisinite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가거북왕",
+    "mega_en": "blastoise-mega",
+    "base_id": 9
   },
   {
     "id": 701,
@@ -3778,7 +3796,10 @@
     "desc": "지니면 뮤츠가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mewtwonite-x.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가뮤츠 X",
+    "mega_en": "mewtwo-mega-x",
+    "base_id": 150
   },
   {
     "id": 702,
@@ -3787,7 +3808,10 @@
     "desc": "지니면 뮤츠가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mewtwonite-y.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가뮤츠 Y",
+    "mega_en": "mewtwo-mega-y",
+    "base_id": 150
   },
   {
     "id": 703,
@@ -3796,7 +3820,10 @@
     "desc": "지니면 번치코가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/blazikenite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가번치코",
+    "mega_en": "blaziken-mega",
+    "base_id": 257
   },
   {
     "id": 704,
@@ -3805,7 +3832,10 @@
     "desc": "지니면 요가램이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/medichamite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가요가램",
+    "mega_en": "medicham-mega",
+    "base_id": 308
   },
   {
     "id": 705,
@@ -3814,7 +3844,10 @@
     "desc": "지니면 헬가가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/houndoominite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가헬가",
+    "mega_en": "houndoom-mega",
+    "base_id": 229
   },
   {
     "id": 706,
@@ -3823,7 +3856,10 @@
     "desc": "지니면 보스로라가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/aggronite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가보스로라",
+    "mega_en": "aggron-mega",
+    "base_id": 306
   },
   {
     "id": 707,
@@ -3832,7 +3868,10 @@
     "desc": "지니면 다크펫이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/banettite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가다크펫",
+    "mega_en": "banette-mega",
+    "base_id": 354
   },
   {
     "id": 708,
@@ -3841,7 +3880,10 @@
     "desc": "지니면 마기라스가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tyranitarite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가마기라스",
+    "mega_en": "tyranitar-mega",
+    "base_id": 248
   },
   {
     "id": 709,
@@ -3850,7 +3892,10 @@
     "desc": "지니면 핫삼이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/scizorite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가핫삼",
+    "mega_en": "scizor-mega",
+    "base_id": 212
   },
   {
     "id": 710,
@@ -3859,7 +3904,10 @@
     "desc": "지니면 쁘사이저가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pinsirite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가쁘사이저",
+    "mega_en": "pinsir-mega",
+    "base_id": 127
   },
   {
     "id": 711,
@@ -3868,7 +3916,10 @@
     "desc": "지니면 프테라가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/aerodactylite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가프테라",
+    "mega_en": "aerodactyl-mega",
+    "base_id": 142
   },
   {
     "id": 712,
@@ -3877,7 +3928,10 @@
     "desc": "지니면 루카리오가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lucarionite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가루카리오",
+    "mega_en": "lucario-mega",
+    "base_id": 448
   },
   {
     "id": 713,
@@ -3886,7 +3940,10 @@
     "desc": "지니면 눈설왕이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/abomasite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가눈설왕",
+    "mega_en": "abomasnow-mega",
+    "base_id": 460
   },
   {
     "id": 714,
@@ -3895,7 +3952,10 @@
     "desc": "지니면 캥카가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kangaskhanite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가캥카",
+    "mega_en": "kangaskhan-mega",
+    "base_id": 115
   },
   {
     "id": 715,
@@ -3904,7 +3964,10 @@
     "desc": "지니면 갸라도스가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/gyaradosite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가갸라도스",
+    "mega_en": "gyarados-mega",
+    "base_id": 130
   },
   {
     "id": 716,
@@ -3913,7 +3976,10 @@
     "desc": "지니면 앱솔이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/absolite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가앱솔",
+    "mega_en": "absol-mega",
+    "base_id": 359
   },
   {
     "id": 717,
@@ -3922,7 +3988,10 @@
     "desc": "지니면 리자몽이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/charizardite-y.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가리자몽 Y",
+    "mega_en": "charizard-mega-y",
+    "base_id": 6
   },
   {
     "id": 718,
@@ -3931,7 +4000,10 @@
     "desc": "지니면 후딘이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/alakazite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가후딘",
+    "mega_en": "alakazam-mega",
+    "base_id": 65
   },
   {
     "id": 719,
@@ -3940,7 +4012,10 @@
     "desc": "지니면 헤라크로스가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heracronite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가헤라크로스",
+    "mega_en": "heracross-mega",
+    "base_id": 214
   },
   {
     "id": 720,
@@ -3949,7 +4024,10 @@
     "desc": "지니면 입치트가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mawilite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가입치트",
+    "mega_en": "mawile-mega",
+    "base_id": 303
   },
   {
     "id": 721,
@@ -3958,7 +4036,10 @@
     "desc": "지니면 썬더볼트가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/manectite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가썬더볼트",
+    "mega_en": "manectric-mega",
+    "base_id": 310
   },
   {
     "id": 722,
@@ -3967,7 +4048,10 @@
     "desc": "지니면 한카리아스가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/garchompite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가한카리아스",
+    "mega_en": "garchomp-mega",
+    "base_id": 445
   },
   {
     "id": 723,
@@ -4066,7 +4150,10 @@
     "desc": "지니면 라티아스가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/latiasite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가라티아스",
+    "mega_en": "latias-mega",
+    "base_id": 380
   },
   {
     "id": 761,
@@ -4075,7 +4162,10 @@
     "desc": "지니면 라티오스가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/latiosite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가라티오스",
+    "mega_en": "latios-mega",
+    "base_id": 381
   },
   {
     "id": 765,
@@ -4093,7 +4183,10 @@
     "desc": "지니면 대짱이가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/swampertite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가대짱이",
+    "mega_en": "swampert-mega",
+    "base_id": 260
   },
   {
     "id": 794,
@@ -4102,7 +4195,10 @@
     "desc": "지니면 나무킹이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sceptilite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가나무킹",
+    "mega_en": "sceptile-mega",
+    "base_id": 254
   },
   {
     "id": 795,
@@ -4111,7 +4207,10 @@
     "desc": "지니면 깜까미가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sablenite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가깜까미",
+    "mega_en": "sableye-mega",
+    "base_id": 302
   },
   {
     "id": 796,
@@ -4120,7 +4219,10 @@
     "desc": "지니면 파비코리가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/altarianite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가파비코리",
+    "mega_en": "altaria-mega",
+    "base_id": 334
   },
   {
     "id": 797,
@@ -4129,7 +4231,10 @@
     "desc": "지니면 엘레이드가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/galladite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가엘레이드",
+    "mega_en": "gallade-mega",
+    "base_id": 475
   },
   {
     "id": 798,
@@ -4138,7 +4243,10 @@
     "desc": "지니면 다부니가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/audinite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가다부니",
+    "mega_en": "audino-mega",
+    "base_id": 531
   },
   {
     "id": 799,
@@ -4147,7 +4255,10 @@
     "desc": "지니면 메타그로스가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/metagrossite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가메타그로스",
+    "mega_en": "metagross-mega",
+    "base_id": 376
   },
   {
     "id": 800,
@@ -4156,7 +4267,10 @@
     "desc": "지니면 샤크니아가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sharpedonite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가샤크니아",
+    "mega_en": "sharpedo-mega",
+    "base_id": 319
   },
   {
     "id": 801,
@@ -4165,7 +4279,10 @@
     "desc": "지니면 야도란이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/slowbronite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가야도란",
+    "mega_en": "slowbro-mega",
+    "base_id": 80
   },
   {
     "id": 802,
@@ -4174,7 +4291,10 @@
     "desc": "지니면 강철톤이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/steelixite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가강철톤",
+    "mega_en": "steelix-mega",
+    "base_id": 208
   },
   {
     "id": 803,
@@ -4183,7 +4303,10 @@
     "desc": "지니면 피죤투가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pidgeotite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가피죤투",
+    "mega_en": "pidgeot-mega",
+    "base_id": 18
   },
   {
     "id": 804,
@@ -4192,7 +4315,10 @@
     "desc": "지니면 얼음귀신이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/glalitite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가얼음귀신",
+    "mega_en": "glalie-mega",
+    "base_id": 362
   },
   {
     "id": 805,
@@ -4201,7 +4327,10 @@
     "desc": "지니면 디안시가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/diancite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가디안시",
+    "mega_en": "diancie-mega",
+    "base_id": 719
   },
   {
     "id": 808,
@@ -4210,7 +4339,10 @@
     "desc": "지니면 폭타가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cameruptite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가폭타",
+    "mega_en": "camerupt-mega",
+    "base_id": 323
   },
   {
     "id": 809,
@@ -4219,7 +4351,10 @@
     "desc": "지니면 이어롭이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lopunnite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가이어롭",
+    "mega_en": "lopunny-mega",
+    "base_id": 428
   },
   {
     "id": 810,
@@ -4228,7 +4363,10 @@
     "desc": "지니면 보만다가 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/salamencite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가보만다",
+    "mega_en": "salamence-mega",
+    "base_id": 373
   },
   {
     "id": 811,
@@ -4237,7 +4375,10 @@
     "desc": "지니면 독침붕이 메가진화할 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/beedrillite.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가독침붕",
+    "mega_en": "beedrill-mega",
+    "base_id": 15
   },
   {
     "id": 817,
@@ -5515,7 +5656,10 @@
     "desc": "픽시에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/b/b2/%EC%95%84%EC%9D%B4%EC%BD%98_%ED%94%BD%EC%8B%9C%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가픽시",
+    "mega_en": "clefable-mega",
+    "base_id": 36
   },
   {
     "id": 1001,
@@ -5524,7 +5668,10 @@
     "desc": "우츠보트에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/f/f1/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%9A%B0%EC%B8%A0%EB%B3%B4%ED%8A%B8%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가우츠보트",
+    "mega_en": "victreebel-mega",
+    "base_id": 71
   },
   {
     "id": 1002,
@@ -5533,7 +5680,10 @@
     "desc": "아쿠스타에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/8/88/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%95%84%EC%BF%A0%EC%8A%A4%ED%83%80%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가아쿠스타",
+    "mega_en": "starmie-mega",
+    "base_id": 121
   },
   {
     "id": 1003,
@@ -5542,7 +5692,10 @@
     "desc": "망나뇽에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/7/70/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%A7%9D%EB%82%98%EB%87%BD%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가망나뇽",
+    "mega_en": "dragonite-mega",
+    "base_id": 149
   },
   {
     "id": 1004,
@@ -5551,7 +5704,10 @@
     "desc": "메가니움에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/c/c8/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%A9%94%EA%B0%80%EB%8B%88%EC%9B%80%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가메가니움",
+    "mega_en": "meganium-mega",
+    "base_id": 154
   },
   {
     "id": 1005,
@@ -5560,7 +5716,10 @@
     "desc": "장크로다일에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/f/f2/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%9E%A5%ED%81%AC%EB%A1%9C%EB%8B%A4%EC%9D%BC%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가장크로다일",
+    "mega_en": "feraligatr-mega",
+    "base_id": 160
   },
   {
     "id": 1006,
@@ -5569,7 +5728,10 @@
     "desc": "무장조에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/3/35/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%AC%B4%EC%9E%A5%EC%A1%B0%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가무장조",
+    "mega_en": "skarmory-mega",
+    "base_id": 227
   },
   {
     "id": 1007,
@@ -5578,7 +5740,10 @@
     "desc": "눈여아에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/2/29/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%88%88%EC%97%AC%EC%95%84%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가눈여아",
+    "mega_en": "froslass-mega",
+    "base_id": 478
   },
   {
     "id": 1008,
@@ -5587,7 +5752,10 @@
     "desc": "염무왕에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/7/75/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%97%BC%EB%AC%B4%EC%99%95%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가염무왕",
+    "mega_en": "emboar-mega",
+    "base_id": 500
   },
   {
     "id": 1009,
@@ -5596,7 +5764,10 @@
     "desc": "몰드류에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/2/21/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%AA%B0%EB%93%9C%EB%A5%98%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가몰드류",
+    "mega_en": "excadrill-mega",
+    "base_id": 530
   },
   {
     "id": 1010,
@@ -5605,7 +5776,10 @@
     "desc": "펜드라에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/d/d1/%EC%95%84%EC%9D%B4%EC%BD%98_%ED%8E%9C%EB%93%9C%EB%9D%BC%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가펜드라",
+    "mega_en": "scolipede-mega",
+    "base_id": 545
   },
   {
     "id": 1011,
@@ -5614,7 +5788,10 @@
     "desc": "곤율거니에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/c/c2/%EC%95%84%EC%9D%B4%EC%BD%98_%EA%B3%A4%EC%9C%A8%EA%B1%B0%EB%8B%88%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가곤율거니",
+    "mega_en": "scrafty-mega",
+    "base_id": 560
   },
   {
     "id": 1012,
@@ -5623,7 +5800,10 @@
     "desc": "저리더프에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/5/53/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%A0%80%EB%A6%AC%EB%8D%94%ED%94%84%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가저리더프",
+    "mega_en": "eelektross-mega",
+    "base_id": 604
   },
   {
     "id": 1013,
@@ -5632,7 +5812,10 @@
     "desc": "샹델라에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/6/62/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%83%B9%EB%8D%B8%EB%9D%BC%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가샹델라",
+    "mega_en": "chandelure-mega",
+    "base_id": 609
   },
   {
     "id": 1014,
@@ -5641,7 +5824,10 @@
     "desc": "브리가론에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/4/41/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%B8%8C%EB%A6%AC%EA%B0%80%EB%A1%A0%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가브리가론",
+    "mega_en": "chesnaught-mega",
+    "base_id": 652
   },
   {
     "id": 1015,
@@ -5650,7 +5836,10 @@
     "desc": "마폭시에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/d/db/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%A7%88%ED%8F%AD%EC%8B%9C%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가마폭시",
+    "mega_en": "delphox-mega",
+    "base_id": 655
   },
   {
     "id": 1016,
@@ -5659,7 +5848,10 @@
     "desc": "개굴닌자에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/6/64/%EC%95%84%EC%9D%B4%EC%BD%98_%EA%B0%9C%EA%B5%B4%EB%8B%8C%EC%9E%90%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가개굴닌자",
+    "mega_en": "greninja-mega",
+    "base_id": 658
   },
   {
     "id": 1017,
@@ -5668,7 +5860,10 @@
     "desc": "화염레오에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/b/b8/%EC%95%84%EC%9D%B4%EC%BD%98_%ED%99%94%EC%97%BC%EB%A0%88%EC%98%A4%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가화염레오",
+    "mega_en": "pyroar-mega",
+    "base_id": 668
   },
   {
     "id": 1018,
@@ -5677,7 +5872,10 @@
     "desc": "특별한 플라엣테에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/2/2d/%EC%95%84%EC%9D%B4%EC%BD%98_%ED%94%8C%EB%9D%BC%EC%97%A3%ED%85%8C%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가플라엣테",
+    "mega_en": "floette-mega",
+    "base_id": 670
   },
   {
     "id": 1019,
@@ -5686,7 +5884,10 @@
     "desc": "칼라마네로에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/9/96/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%B9%BC%EB%9D%BC%EB%A7%88%EB%84%A4%EB%A1%9C%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가칼라마네로",
+    "mega_en": "malamar-mega",
+    "base_id": 687
   },
   {
     "id": 1020,
@@ -5695,7 +5896,10 @@
     "desc": "거북손데스에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/e/e0/%EC%95%84%EC%9D%B4%EC%BD%98_%EA%B1%B0%EB%B6%81%EC%86%90%EB%8D%B0%EC%8A%A4%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가거북손데스",
+    "mega_en": "barbaracle-mega",
+    "base_id": 689
   },
   {
     "id": 1021,
@@ -5704,7 +5908,10 @@
     "desc": "드래캄에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/4/4e/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%93%9C%EB%9E%98%EC%BA%84%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가드래캄",
+    "mega_en": "dragalge-mega",
+    "base_id": 691
   },
   {
     "id": 1022,
@@ -5713,7 +5920,10 @@
     "desc": "루차불에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/7/7b/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%A3%A8%EC%B0%A8%EB%B6%88%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가루차불",
+    "mega_en": "hawlucha-mega",
+    "base_id": 701
   },
   {
     "id": 1023,
@@ -5722,7 +5932,10 @@
     "desc": "지가르데에게 지니게 하면 배틀할 때 퍼펙트폼 상태에서 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/3/3d/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%A7%80%EA%B0%80%EB%A5%B4%EB%8D%B0%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가지가르데",
+    "mega_en": "zygarde-mega",
+    "base_id": 718
   },
   {
     "id": 1024,
@@ -5731,7 +5944,10 @@
     "desc": "할비롱에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/2/2a/%EC%95%84%EC%9D%B4%EC%BD%98_%ED%95%A0%EB%B9%84%EB%A1%B1%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가할비롱",
+    "mega_en": "drampa-mega",
+    "base_id": 780
   },
   {
     "id": 1025,
@@ -5740,7 +5956,10 @@
     "desc": "대여르에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/f/f5/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%8C%80%EC%97%AC%EB%A5%B4%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가대여르",
+    "mega_en": "falinks-mega",
+    "base_id": 870
   },
   {
     "id": 1026,
@@ -5749,7 +5968,10 @@
     "desc": "히드런에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/7/7b/%EC%95%84%EC%9D%B4%EC%BD%98_%ED%9E%88%EB%93%9C%EB%9F%B0%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가히드런",
+    "mega_en": "heatran-mega",
+    "base_id": 485
   },
   {
     "id": 1027,
@@ -5758,7 +5980,10 @@
     "desc": "다크라이에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/a/a2/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%8B%A4%ED%81%AC%EB%9D%BC%EC%9D%B4%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가다크라이",
+    "mega_en": "darkrai-mega",
+    "base_id": 491
   },
   {
     "id": 1028,
@@ -5767,7 +5992,10 @@
     "desc": "제라오라에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/e/e6/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%A0%9C%EB%9D%BC%EC%98%A4%EB%9D%BC%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가제라오라",
+    "mega_en": "zeraora-mega",
+    "base_id": 807
   },
   {
     "id": 1029,
@@ -5776,7 +6004,10 @@
     "desc": "라이츄에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/6/64/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%9D%BC%EC%9D%B4%EC%B8%84%EB%82%98%EC%9D%B4%ED%8A%B8X_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가라이츄 X",
+    "mega_en": "raichu-mega-x",
+    "base_id": 26
   },
   {
     "id": 1030,
@@ -5785,7 +6016,10 @@
     "desc": "라이츄에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/c/c3/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%9D%BC%EC%9D%B4%EC%B8%84%EB%82%98%EC%9D%B4%ED%8A%B8Y_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가라이츄 Y",
+    "mega_en": "raichu-mega-y",
+    "base_id": 26
   },
   {
     "id": 1031,
@@ -5794,7 +6028,10 @@
     "desc": "치렁에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/0/07/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%B9%98%EB%A0%81%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가치렁",
+    "mega_en": "chimecho-mega",
+    "base_id": 358
   },
   {
     "id": 1032,
@@ -5803,7 +6040,10 @@
     "desc": "앱솔에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/e/ea/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%95%B1%EC%86%94%EB%82%98%EC%9D%B4%ED%8A%B8Z_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가앱솔 Z",
+    "mega_en": "absol-mega-z",
+    "base_id": 359
   },
   {
     "id": 1033,
@@ -5812,7 +6052,10 @@
     "desc": "찌르호크에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/3/36/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%B0%8C%EB%A5%B4%ED%98%B8%ED%81%AC%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가찌르호크",
+    "mega_en": "staraptor-mega",
+    "base_id": 398
   },
   {
     "id": 1034,
@@ -5821,7 +6064,10 @@
     "desc": "한카리아스에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/2/23/%EC%95%84%EC%9D%B4%EC%BD%98_%ED%95%9C%EC%B9%B4%EB%A6%AC%EC%95%84%EC%8A%A4%EB%82%98%EC%9D%B4%ED%8A%B8Z_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가한카리아스 Z",
+    "mega_en": "garchomp-mega-z",
+    "base_id": 445
   },
   {
     "id": 1035,
@@ -5830,7 +6076,10 @@
     "desc": "루카리오에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/2/2a/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%A3%A8%EC%B9%B4%EB%A6%AC%EC%98%A4%EB%82%98%EC%9D%B4%ED%8A%B8Z_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가루카리오 Z",
+    "mega_en": "lucario-mega-z",
+    "base_id": 448
   },
   {
     "id": 1036,
@@ -5839,7 +6088,10 @@
     "desc": "골루그에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/5/5d/%EC%95%84%EC%9D%B4%EC%BD%98_%EA%B3%A8%EB%A3%A8%EA%B7%B8%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가골루그",
+    "mega_en": "golurk-mega",
+    "base_id": 623
   },
   {
     "id": 1037,
@@ -5848,7 +6100,10 @@
     "desc": "냐오닉스에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/2/23/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%83%90%EC%98%A4%EB%8B%89%EC%8A%A4%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가냐오닉스",
+    "mega_en": "meowstic-mega",
+    "base_id": 678
   },
   {
     "id": 1038,
@@ -5857,7 +6112,10 @@
     "desc": "모단단게에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/a/af/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%AA%A8%EB%8B%A8%EB%8B%A8%EA%B2%8C%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가모단단게",
+    "mega_en": "crabominable-mega",
+    "base_id": 740
   },
   {
     "id": 1039,
@@ -5866,7 +6124,10 @@
     "desc": "갑주무사에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/6/67/%EC%95%84%EC%9D%B4%EC%BD%98_%EA%B0%91%EC%A3%BC%EB%AC%B4%EC%82%AC%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가갑주무사",
+    "mega_en": "golisopod-mega",
+    "base_id": 768
   },
   {
     "id": 1040,
@@ -5875,7 +6136,10 @@
     "desc": "마기아나에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/7/79/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%A7%88%EA%B8%B0%EC%95%84%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가마기아나",
+    "mega_en": "magearna-mega",
+    "base_id": 801
   },
   {
     "id": 1041,
@@ -5884,7 +6148,10 @@
     "desc": "스코빌런에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/f/f3/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%8A%A4%EC%BD%94%EB%B9%8C%EB%9F%B0%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가스코빌런",
+    "mega_en": "scovillain-mega",
+    "base_id": 952
   },
   {
     "id": 1042,
@@ -5893,7 +6160,10 @@
     "desc": "드닐레이브에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/d/df/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%93%9C%EB%8B%90%EB%A0%88%EC%9D%B4%EB%B8%8C%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가드닐레이브",
+    "mega_en": "baxcalibur-mega",
+    "base_id": 998
   },
   {
     "id": 1043,
@@ -5902,7 +6172,10 @@
     "desc": "싸리용에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/2/2c/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%8B%B8%EB%A6%AC%EC%9A%A9%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가싸리용",
+    "mega_en": "tatsugiri-stretchy-mega",
+    "base_id": 978
   },
   {
     "id": 1044,
@@ -5911,6 +6184,9 @@
     "desc": "킬라플로르에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
     "sprite": "https://static.wikia.nocookie.net/pokemon/images/7/73/%EC%95%84%EC%9D%B4%EC%BD%98_%ED%82%AC%EB%9D%BC%ED%94%8C%EB%A1%9C%EB%A5%B4%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
-    "category": "mega-stones"
+    "category": "mega-stones",
+    "mega_ko": "메가킬라플로르",
+    "mega_en": "glimmora-mega",
+    "base_id": 970
   }
 ]
