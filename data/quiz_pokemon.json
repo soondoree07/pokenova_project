@@ -848,27 +848,6 @@
     ],
     "forms": [
       {
-        "type": "alola",
-        "name_ko": "알로라 피카츄",
-        "name_en": "pikachu-alola-cap",
-        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10099.png",
-        "types": [
-          "전기"
-        ],
-        "abilities": [
-          {
-            "ko": "정전기",
-            "en": "static",
-            "hidden": false
-          },
-          {
-            "ko": "피뢰침",
-            "en": "lightning rod",
-            "hidden": true
-          }
-        ]
-      },
-      {
         "type": "gmax",
         "name_ko": "거다이맥스 피카츄",
         "name_en": "pikachu-gmax",
