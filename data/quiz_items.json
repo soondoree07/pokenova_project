@@ -5507,5 +5507,410 @@
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/booster-energy.png",
     "category": "held-items"
+  },
+  {
+    "id": 1000,
+    "ko": "픽시나이트",
+    "en": "clefablite",
+    "desc": "픽시에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/b/b2/%EC%95%84%EC%9D%B4%EC%BD%98_%ED%94%BD%EC%8B%9C%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1001,
+    "ko": "우츠보트나이트",
+    "en": "victreebelite",
+    "desc": "우츠보트에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/f/f1/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%9A%B0%EC%B8%A0%EB%B3%B4%ED%8A%B8%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1002,
+    "ko": "아쿠스타나이트",
+    "en": "starminite",
+    "desc": "아쿠스타에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/8/88/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%95%84%EC%BF%A0%EC%8A%A4%ED%83%80%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1003,
+    "ko": "망나뇽나이트",
+    "en": "dragoninite",
+    "desc": "망나뇽에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/7/70/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%A7%9D%EB%82%98%EB%87%BD%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1004,
+    "ko": "메가니움나이트",
+    "en": "meganiumite",
+    "desc": "메가니움에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/c/c8/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%A9%94%EA%B0%80%EB%8B%88%EC%9B%80%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1005,
+    "ko": "장크로다일나이트",
+    "en": "feraligite",
+    "desc": "장크로다일에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/f/f2/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%9E%A5%ED%81%AC%EB%A1%9C%EB%8B%A4%EC%9D%BC%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1006,
+    "ko": "무장조나이트",
+    "en": "skarmorite",
+    "desc": "무장조에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/3/35/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%AC%B4%EC%9E%A5%EC%A1%B0%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1007,
+    "ko": "눈여아나이트",
+    "en": "froslassite",
+    "desc": "눈여아에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/2/29/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%88%88%EC%97%AC%EC%95%84%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1008,
+    "ko": "염무왕나이트",
+    "en": "emboarite",
+    "desc": "염무왕에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/7/75/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%97%BC%EB%AC%B4%EC%99%95%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1009,
+    "ko": "몰드류나이트",
+    "en": "excadrite",
+    "desc": "몰드류에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/2/21/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%AA%B0%EB%93%9C%EB%A5%98%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1010,
+    "ko": "펜드라나이트",
+    "en": "scolipite",
+    "desc": "펜드라에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/d/d1/%EC%95%84%EC%9D%B4%EC%BD%98_%ED%8E%9C%EB%93%9C%EB%9D%BC%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1011,
+    "ko": "곤율거니나이트",
+    "en": "scraftinite",
+    "desc": "곤율거니에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/c/c2/%EC%95%84%EC%9D%B4%EC%BD%98_%EA%B3%A4%EC%9C%A8%EA%B1%B0%EB%8B%88%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1012,
+    "ko": "저리더프나이트",
+    "en": "eelektrossite",
+    "desc": "저리더프에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/5/53/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%A0%80%EB%A6%AC%EB%8D%94%ED%94%84%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1013,
+    "ko": "샹델라나이트",
+    "en": "chandelurite",
+    "desc": "샹델라에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/6/62/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%83%B9%EB%8D%B8%EB%9D%BC%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1014,
+    "ko": "브리가론나이트",
+    "en": "chesnaughtite",
+    "desc": "브리가론에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/4/41/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%B8%8C%EB%A6%AC%EA%B0%80%EB%A1%A0%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1015,
+    "ko": "마폭시나이트",
+    "en": "delphoxite",
+    "desc": "마폭시에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/d/db/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%A7%88%ED%8F%AD%EC%8B%9C%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1016,
+    "ko": "개굴닌자나이트",
+    "en": "greninjite",
+    "desc": "개굴닌자에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/6/64/%EC%95%84%EC%9D%B4%EC%BD%98_%EA%B0%9C%EA%B5%B4%EB%8B%8C%EC%9E%90%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1017,
+    "ko": "화염레오나이트",
+    "en": "pyroarite",
+    "desc": "화염레오에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/b/b8/%EC%95%84%EC%9D%B4%EC%BD%98_%ED%99%94%EC%97%BC%EB%A0%88%EC%98%A4%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1018,
+    "ko": "플라엣테나이트",
+    "en": "floettite",
+    "desc": "특별한 플라엣테에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/2/2d/%EC%95%84%EC%9D%B4%EC%BD%98_%ED%94%8C%EB%9D%BC%EC%97%A3%ED%85%8C%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1019,
+    "ko": "칼라마네로나이트",
+    "en": "malamarite",
+    "desc": "칼라마네로에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/9/96/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%B9%BC%EB%9D%BC%EB%A7%88%EB%84%A4%EB%A1%9C%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1020,
+    "ko": "거북손데스나이트",
+    "en": "barbaracite",
+    "desc": "거북손데스에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/e/e0/%EC%95%84%EC%9D%B4%EC%BD%98_%EA%B1%B0%EB%B6%81%EC%86%90%EB%8D%B0%EC%8A%A4%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1021,
+    "ko": "드래캄나이트",
+    "en": "dragalgite",
+    "desc": "드래캄에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/4/4e/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%93%9C%EB%9E%98%EC%BA%84%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1022,
+    "ko": "루차불나이트",
+    "en": "hawluchanite",
+    "desc": "루차불에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/7/7b/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%A3%A8%EC%B0%A8%EB%B6%88%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1023,
+    "ko": "지가르데나이트",
+    "en": "zygardite",
+    "desc": "지가르데에게 지니게 하면 배틀할 때 퍼펙트폼 상태에서 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/3/3d/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%A7%80%EA%B0%80%EB%A5%B4%EB%8D%B0%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1024,
+    "ko": "할비롱나이트",
+    "en": "drampanite",
+    "desc": "할비롱에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/2/2a/%EC%95%84%EC%9D%B4%EC%BD%98_%ED%95%A0%EB%B9%84%EB%A1%B1%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1025,
+    "ko": "대여르나이트",
+    "en": "falinksite",
+    "desc": "대여르에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/f/f5/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%8C%80%EC%97%AC%EB%A5%B4%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1026,
+    "ko": "히드런나이트",
+    "en": "heatranite",
+    "desc": "히드런에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/7/7b/%EC%95%84%EC%9D%B4%EC%BD%98_%ED%9E%88%EB%93%9C%EB%9F%B0%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1027,
+    "ko": "다크라이나이트",
+    "en": "darkranite",
+    "desc": "다크라이에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/a/a2/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%8B%A4%ED%81%AC%EB%9D%BC%EC%9D%B4%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1028,
+    "ko": "제라오라나이트",
+    "en": "zeraorite",
+    "desc": "제라오라에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/e/e6/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%A0%9C%EB%9D%BC%EC%98%A4%EB%9D%BC%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1029,
+    "ko": "라이츄나이트X",
+    "en": "raichunite x",
+    "desc": "라이츄에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/6/64/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%9D%BC%EC%9D%B4%EC%B8%84%EB%82%98%EC%9D%B4%ED%8A%B8X_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1030,
+    "ko": "라이츄나이트Y",
+    "en": "raichunite y",
+    "desc": "라이츄에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/c/c3/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%9D%BC%EC%9D%B4%EC%B8%84%EB%82%98%EC%9D%B4%ED%8A%B8Y_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1031,
+    "ko": "치렁나이트",
+    "en": "chimechite",
+    "desc": "치렁에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/0/07/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%B9%98%EB%A0%81%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1032,
+    "ko": "앱솔나이트Z",
+    "en": "absolite z",
+    "desc": "앱솔에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/e/ea/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%95%B1%EC%86%94%EB%82%98%EC%9D%B4%ED%8A%B8Z_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1033,
+    "ko": "찌르호크나이트",
+    "en": "staraptite",
+    "desc": "찌르호크에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/3/36/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%B0%8C%EB%A5%B4%ED%98%B8%ED%81%AC%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1034,
+    "ko": "한카리아스나이트Z",
+    "en": "garchompite z",
+    "desc": "한카리아스에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/2/23/%EC%95%84%EC%9D%B4%EC%BD%98_%ED%95%9C%EC%B9%B4%EB%A6%AC%EC%95%84%EC%8A%A4%EB%82%98%EC%9D%B4%ED%8A%B8Z_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1035,
+    "ko": "루카리오나이트Z",
+    "en": "lucarionite z",
+    "desc": "루카리오에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/2/2a/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%A3%A8%EC%B9%B4%EB%A6%AC%EC%98%A4%EB%82%98%EC%9D%B4%ED%8A%B8Z_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1036,
+    "ko": "골루그나이트",
+    "en": "golurkite",
+    "desc": "골루그에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/5/5d/%EC%95%84%EC%9D%B4%EC%BD%98_%EA%B3%A8%EB%A3%A8%EA%B7%B8%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1037,
+    "ko": "냐오닉스나이트",
+    "en": "meowsticite",
+    "desc": "냐오닉스에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/2/23/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%83%90%EC%98%A4%EB%8B%89%EC%8A%A4%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1038,
+    "ko": "모단단게나이트",
+    "en": "crabominite",
+    "desc": "모단단게에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/a/af/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%AA%A8%EB%8B%A8%EB%8B%A8%EA%B2%8C%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1039,
+    "ko": "갑주무사나이트",
+    "en": "golisopite",
+    "desc": "갑주무사에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/6/67/%EC%95%84%EC%9D%B4%EC%BD%98_%EA%B0%91%EC%A3%BC%EB%AC%B4%EC%82%AC%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1040,
+    "ko": "마기아나이트",
+    "en": "magearnite",
+    "desc": "마기아나에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/7/79/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%A7%88%EA%B8%B0%EC%95%84%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1041,
+    "ko": "스코빌런나이트",
+    "en": "scovillainite",
+    "desc": "스코빌런에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/f/f3/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%8A%A4%EC%BD%94%EB%B9%8C%EB%9F%B0%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1042,
+    "ko": "드닐레이브나이트",
+    "en": "baxcalibrite",
+    "desc": "드닐레이브에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/d/df/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%93%9C%EB%8B%90%EB%A0%88%EC%9D%B4%EB%B8%8C%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1043,
+    "ko": "싸리용나이트",
+    "en": "tatsugirinite",
+    "desc": "싸리용에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/2/2c/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%8B%B8%EB%A6%AC%EC%9A%A9%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
+  },
+  {
+    "id": 1044,
+    "ko": "킬라플로르나이트",
+    "en": "glimmoranite",
+    "desc": "킬라플로르에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "desc_lang": "ko",
+    "sprite": "https://static.wikia.nocookie.net/pokemon/images/7/73/%EC%95%84%EC%9D%B4%EC%BD%98_%ED%82%AC%EB%9D%BC%ED%94%8C%EB%A1%9C%EB%A5%B4%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "category": "mega-stones"
   }
 ]
