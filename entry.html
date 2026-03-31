@@ -1144,7 +1144,7 @@ function buildMoveFilters() {
   }).join('');
 
   // 타입 필터
-  const types = ['전체', ...new Set(moveFiltered.map(m => m.type).filter(Boolean))].sort();
+  const types = ['전체', ...[...new Set(moveFiltered.map(m => m.type).filter(Boolean))].sort()];
   const tWrap = document.getElementById('move-type-filters');
   tWrap.innerHTML = types.map(t => {
     const active = moveTypeFilter === t;
