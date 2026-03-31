@@ -469,6 +469,9 @@ let pokeFiltered   = [];
 let itemGroupFilter = '전체';
 let itemFiltered    = [];
 
+// 메가진화 폼 영문명 → 메가스톤 아이템 룩업
+const megaStoneByFormEn = {};
+
 // ─── 초기화 ───
 async function init() {
   const [pokeRes, itemRes] = await Promise.all([
@@ -477,6 +480,13 @@ async function init() {
   ]);
   const pokeData = await pokeRes.json();
   allItems = await itemRes.json();
+
+  // 메가스톤 룩업 맵 빌드 (mega_en → item)
+  allItems.forEach(it => {
+    if (it.category === 'mega-stones' && it.mega_en) {
+      megaStoneByFormEn[it.mega_en] = it;
+    }
+  });
 
   // 원종 + 폼 평탄화 (abilities 포함)
   pokeData.forEach(p => {
@@ -818,12 +828,24 @@ function closeAbilityModal() {
 
 function applyPokemonToSlot(p, ability) {
   const existing = getEntry(activeSection, activeSlotIdx);
+
+  // 메가진화 포켓몬이면 대응하는 메가스톤 자동 지정
+  const autoStone = megaStoneByFormEn[p.en] || null;
+  const itemToSet = autoStone !== null ? autoStone : (existing?.item || null);
+
   setEntry(activeSection, activeSlotIdx, {
     pokemon: p,
     ability: ability,
-    item: existing?.item || null,  // 기존 도구 유지
+    item: itemToSet,
   });
   renderGrids();
+
+  // 메가스톤이 자동 지정된 경우 도구 모달 스킵
+  if (autoStone) {
+    pendingPokemon = null;
+    return;
+  }
+
   // 도구 선택 모달 이어서 열기 (뒤로 버튼 표시)
   itemModalShowBack = true;
   openItemModal(activeSection, activeSlotIdx, null);
