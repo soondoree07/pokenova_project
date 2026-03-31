@@ -4778,5 +4778,734 @@
     "desc_lang": "ko",
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fairy-memory.png",
     "category": "memories"
+  },
+  {
+    "id": 919,
+    "ko": "금구슬",
+    "en": "nugget",
+    "desc": "금색으로 반짝반짝 빛나는 순금으로 만들어진 구슬. 상점에서 비싸게 팔린다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/nugget.png",
+    "category": "for-sell"
+  },
+  {
+    "id": 920,
+    "ko": "별의모래",
+    "en": "stardust",
+    "desc": "감촉이 보슬보슬한 빨갛고 예쁜 모래. 상점에서 비싸게 팔린다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/stardust.png",
+    "category": "for-sell"
+  },
+  {
+    "id": 921,
+    "ko": "별의조각",
+    "en": "star piece",
+    "desc": "반짝반짝 빨갛게 빛나는 예쁜 보석 조각. 상점에서 비싸게 팔린다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/star-piece.png",
+    "category": "for-sell"
+  },
+  {
+    "id": 922,
+    "ko": "작은버섯",
+    "en": "tiny mushroom",
+    "desc": "작고 진귀한 버섯. 일부 마니아 사이에서는 매우 인기가 높다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tiny-mushroom.png",
+    "category": "for-sell"
+  },
+  {
+    "id": 923,
+    "ko": "진주",
+    "en": "pearl",
+    "desc": "예쁜 은색으로 빛나는 자그마한 진주. 상점에서 싸게 팔린다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pearl.png",
+    "category": "for-sell"
+  },
+  {
+    "id": 924,
+    "ko": "큰버섯",
+    "en": "big mushroom",
+    "desc": "크고 진귀한 버섯. 일부 마니아 사이에서는 매우 인기가 높다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/big-mushroom.png",
+    "category": "for-sell"
+  },
+  {
+    "id": 925,
+    "ko": "큰진주",
+    "en": "big pearl",
+    "desc": "예쁜 은색으로 빛나는 상당히 큰 낱알의 진주. 상점에서 비싸게 팔린다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/big-pearl.png",
+    "category": "for-sell"
+  },
+  {
+    "id": 926,
+    "ko": "귀중한뼈",
+    "en": "rare bone",
+    "desc": "포켓몬 고고학 상에서 매우 귀중한 뼈. 상점에서 비싸게 팔린다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rare-bone.png",
+    "category": "for-sell"
+  },
+  {
+    "id": 927,
+    "ko": "달콤한꿀",
+    "en": "honey",
+    "desc": "풀숲에서 사용하면 야생 포켓몬과 조우할 수 있는 달콤한 꿀.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/honey.png",
+    "category": "for-sell"
+  },
+  {
+    "id": 928,
+    "ko": "고운깃털",
+    "en": "pretty feather",
+    "desc": "아름답기만 할 뿐 아무 효과도 없는 지극히 평범한 깃털.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pretty-feather.png",
+    "category": "for-sell"
+  },
+  {
+    "id": 929,
+    "ko": "향기버섯",
+    "en": "balm mushroom",
+    "desc": "주변 일대에 좋은 향기가 퍼지는 희귀한 버섯. 상점에서 비싸게 팔린다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/balm-mushroom.png",
+    "category": "for-sell"
+  },
+  {
+    "id": 930,
+    "ko": "혜성조각",
+    "en": "comet shard",
+    "desc": "혜성이 가까워졌을 때 지표면에 떨어진 조각. 상점에서 비싸게 팔린다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/comet-shard.png",
+    "category": "for-sell"
+  },
+  {
+    "id": 931,
+    "ko": "큰금구슬",
+    "en": "big nugget",
+    "desc": "금색으로 반짝반짝 빛나는 순금으로 만들어진 큰 구슬. 상점에서 비싸게 팔린다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/big-nugget.png",
+    "category": "for-sell"
+  },
+  {
+    "id": 932,
+    "ko": "경단진주",
+    "en": "pearl string",
+    "desc": "예쁜 은색으로 빛나는 매우 큰 낱알의 진주. 상점에서 비싸게 팔린다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pearl-string.png",
+    "category": "for-sell"
+  },
+  {
+    "id": 933,
+    "ko": "작은죽순",
+    "en": "tiny bamboo shoot",
+    "desc": "작고 진귀한 죽순. 일부 미식가 사이에서는 매우 인기가 높다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tiny-bamboo-shoot.png",
+    "category": "for-sell"
+  },
+  {
+    "id": 934,
+    "ko": "큰죽순",
+    "en": "big bamboo shoot",
+    "desc": "크고 진귀한 죽순. 일부 미식가 사이에서는 매우 인기가 높다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/big-bamboo-shoot.png",
+    "category": "for-sell"
+  },
+  {
+    "id": 935,
+    "ko": "가라두구팔찌",
+    "en": "galarica cuff",
+    "desc": "가라두구가지를 엮어서 만든 팔찌. 가라르지방의 야돈에게 채워주면 기뻐한다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/galarica-cuff.png",
+    "category": "evolution"
+  },
+  {
+    "id": 936,
+    "ko": "가라두구머리장식",
+    "en": "galarica wreath",
+    "desc": "가라두구가지를 엮어서 만든 머리 장식. 가라르지방의 야돈에게 씌워주면 기뻐한다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/galarica-wreath.png",
+    "category": "evolution"
+  },
+  {
+    "id": 937,
+    "ko": "연결의끈",
+    "en": "linking cord",
+    "desc": "모종의 유대감이 느껴지는 신비한 에너지가 담긴 끈. 어떤 포켓몬들이 좋아하는 물건이다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/linking-cord.png",
+    "category": "evolution"
+  },
+  {
+    "id": 938,
+    "ko": "검은휘석",
+    "en": "black augurite",
+    "desc": "조각내면 예리하게 날이 서는 유리 같은 성질을 띠는 검은 돌. 어떤 포켓몬이 좋아하는 물건이다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-augurite.png",
+    "category": "evolution"
+  },
+  {
+    "id": 939,
+    "ko": "피트블록",
+    "en": "peat block",
+    "desc": "진흙 같은 석탄 덩어리. 말리면 연료로도 쓸 수 있다. 어떤 포켓몬이 좋아하는 물건이다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/peat-block.png",
+    "category": "evolution"
+  },
+  {
+    "id": 940,
+    "ko": "꽃사탕공예",
+    "en": "flower sweet",
+    "desc": "꽃 모양의 사탕공예. 마빌크에게 지니게 하면 빙빙 돌며 기뻐한다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/flower-sweet.png",
+    "category": "evolution"
+  },
+  {
+    "id": 941,
+    "ko": "네잎사탕공예",
+    "en": "clover sweet",
+    "desc": "네잎 모양의 사탕공예. 마빌크에게 지니게 하면 빙빙 돌며 기뻐한다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/clover-sweet.png",
+    "category": "evolution"
+  },
+  {
+    "id": 942,
+    "ko": "딸기사탕공예",
+    "en": "strawberry sweet",
+    "desc": "딸기 모양의 사탕공예. 마빌크에게 지니게 하면 빙빙 돌며 기뻐한다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/strawberry-sweet.png",
+    "category": "evolution"
+  },
+  {
+    "id": 943,
+    "ko": "리본사탕공예",
+    "en": "ribbon sweet",
+    "desc": "리본 모양의 사탕공예. 마빌크에게 지니게 하면 빙빙 돌며 기뻐한다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ribbon-sweet.png",
+    "category": "evolution"
+  },
+  {
+    "id": 944,
+    "ko": "베리사탕공예",
+    "en": "berry sweet",
+    "desc": "베리 모양의 사탕공예. 마빌크에게 지니게 하면 빙빙 돌며 기뻐한다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/berry-sweet.png",
+    "category": "evolution"
+  },
+  {
+    "id": 945,
+    "ko": "스타사탕공예",
+    "en": "star sweet",
+    "desc": "스타 모양의 사탕공예. 마빌크에게 지니게 하면 빙빙 돌며 기뻐한다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/star-sweet.png",
+    "category": "evolution"
+  },
+  {
+    "id": 946,
+    "ko": "하트사탕공예",
+    "en": "love sweet",
+    "desc": "하트 모양의 사탕공예. 마빌크에게 지니게 하면 빙빙 돌며 기뻐한다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/love-sweet.png",
+    "category": "evolution"
+  },
+  {
+    "id": 947,
+    "ko": "깨진포트",
+    "en": "cracked pot",
+    "desc": "어느 특정 포켓몬을 진화시키는 이상한 포트. 깨졌지만 차는 맛있어진다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cracked-pot.png",
+    "category": "evolution"
+  },
+  {
+    "id": 948,
+    "ko": "이빠진포트",
+    "en": "chipped pot",
+    "desc": "어느 특정 포켓몬을 진화시키는 이상한 포트. 이가 빠졌지만 차는 맛있어진다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chipped-pot.png",
+    "category": "evolution"
+  },
+  {
+    "id": 949,
+    "ko": "악의족자",
+    "en": "scroll of darkness",
+    "desc": "어느 특정 포켓몬을 진화시키는 이상한 족자. 어두운 기운이 담겨 있다.",
+    "desc_lang": "ko",
+    "sprite": "",
+    "category": "evolution"
+  },
+  {
+    "id": 950,
+    "ko": "물의족자",
+    "en": "scroll of waters",
+    "desc": "어느 특정 포켓몬을 진화시키는 이상한 족자. 물의 기운이 담겨 있다.",
+    "desc_lang": "ko",
+    "sprite": "",
+    "category": "evolution"
+  },
+  {
+    "id": 951,
+    "ko": "저주받은갑옷",
+    "en": "malicious armor",
+    "desc": "어느 특정 포켓몬을 진화시키는 이상한 갑옷. 저주의 감정이 담겨 있다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/malicious-armor.png",
+    "category": "evolution"
+  },
+  {
+    "id": 952,
+    "ko": "축복받은갑옷",
+    "en": "auspicious armor",
+    "desc": "어느 특정 포켓몬을 진화시키는 이상한 갑옷. 축복의 감정이 담겨 있다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/auspicious-armor.png",
+    "category": "evolution"
+  },
+  {
+    "id": 953,
+    "ko": "꿀맛사과",
+    "en": "syrupy apple",
+    "desc": "어느 특정 포켓몬을 진화시키는 이상한 사과. 엄청나게 꿀맛이다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/syrupy-apple.png",
+    "category": "evolution"
+  },
+  {
+    "id": 954,
+    "ko": "범작찻잔",
+    "en": "unremarkable teacup",
+    "desc": "어느 특정 포켓몬을 진화시키는 이상한 찻잔. 깨졌지만 차는 맛있어진다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/unremarkable-teacup.png",
+    "category": "evolution"
+  },
+  {
+    "id": 955,
+    "ko": "걸작찻잔",
+    "en": "masterpiece teacup",
+    "desc": "어느 특정 포켓몬을 진화시키는 이상한 찻잔. 이가 빠졌지만 차는 맛있어진다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/masterpiece-teacup.png",
+    "category": "evolution"
+  },
+  {
+    "id": 956,
+    "ko": "복합금속",
+    "en": "metal alloy",
+    "desc": "어느 특정 포켓몬을 진화시키는 이상한 금속. 여러 겹으로 겹쳐져 있다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/metal-alloy.png",
+    "category": "evolution"
+  },
+  {
+    "id": 957,
+    "ko": "주춧돌의가면",
+    "en": "cornerstone mask",
+    "desc": "결정이 장식되어 있는 목각 가면. 오거폰에게 지니게 하면 바위타입을 두르고 싸울 수 있다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cornerstone-mask.png",
+    "category": "species-specific"
+  },
+  {
+    "id": 958,
+    "ko": "우물의가면",
+    "en": "wellspring mask",
+    "desc": "결정이 장식되어 있는 목각 가면. 오거폰에게 지니게 하면 물타입을 두르고 싸울 수 있다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wellspring-mask.png",
+    "category": "species-specific"
+  },
+  {
+    "id": 959,
+    "ko": "화덕의가면",
+    "en": "hearthflame mask",
+    "desc": "결정이 장식되어 있는 목각 가면. 오거폰에게 지니게 하면 불꽃타입을 두르고 싸울 수 있다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hearthflame-mask.png",
+    "category": "species-specific"
+  },
+  {
+    "id": 960,
+    "ko": "큰금강옥",
+    "en": "adamant crystal",
+    "desc": "눈부시게 빛나는 큰 구슬. 디아루가에게 사용하면 힘이 넘쳐서 모습이 바뀐다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/adamant-crystal.png",
+    "category": "species-specific"
+  },
+  {
+    "id": 961,
+    "ko": "큰백옥",
+    "en": "lustrous globe",
+    "desc": "눈부시게 빛나는 큰 구슬. 펄기아에게 사용하면 힘이 넘쳐서 모습이 바뀐다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lustrous-globe.png",
+    "category": "species-specific"
+  },
+  {
+    "id": 962,
+    "ko": "큰백금옥",
+    "en": "griseous core",
+    "desc": "눈부시게 빛나는 큰 구슬. 기라티나에게 사용하면 힘이 넘쳐서 모습이 바뀐다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/griseous-core.png",
+    "category": "species-specific"
+  },
+  {
+    "id": 963,
+    "ko": "녹슨검",
+    "en": "rusted sword",
+    "desc": "먼 옛날의 영웅이 재앙을 막는 데 사용했다고 전해지는 검이지만 지금은 녹이 슬고 닳아버렸다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rusted-sword.png",
+    "category": "species-specific"
+  },
+  {
+    "id": 964,
+    "ko": "녹슨방패",
+    "en": "rusted shield",
+    "desc": "먼 옛날의 영웅이 재앙을 막는 데 사용했다고 전해지는 방패지만 지금은 녹이 슬고 닳아버렸다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rusted-shield.png",
+    "category": "species-specific"
+  },
+  {
+    "id": 965,
+    "ko": "그라시데아꽃",
+    "en": "gracidea",
+    "desc": "생일이나 기념일 등에 감사의 마음을 전하기 위해 부케로 만들어 보내는 일이 있다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/gracidea.png",
+    "category": "species-specific"
+  },
+  {
+    "id": 966,
+    "ko": "비추는거울",
+    "en": "reveal glass",
+    "desc": "진실을 비춰줌으로 포켓몬을 본래의 모습으로 바꿔버리는 이상한 거울.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/reveal-glass.png",
+    "category": "species-specific"
+  },
+  {
+    "id": 967,
+    "ko": "유전자쐐기",
+    "en": "dna splicers",
+    "desc": "원래는 하나였다고 전해지는 큐레무와 어떤 포켓몬을 합체시키는 한 쌍의 쐐기.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dna-splicers.png",
+    "category": "species-specific"
+  },
+  {
+    "id": 968,
+    "ko": "굴레의항아리",
+    "en": "prison bottle",
+    "desc": "먼 옛날 어떤 포켓몬의 힘을 봉인했다고 여겨지는 항아리.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/prison-bottle.png",
+    "category": "species-specific"
+  },
+  {
+    "id": 969,
+    "ko": "네크로플러스루나",
+    "en": "n-lunarizer",
+    "desc": "빛을 필요로 하는 네크로즈마와 루나아라를 합체시키기 위한 머신.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/n-lunarizer.png",
+    "category": "species-specific"
+  },
+  {
+    "id": 970,
+    "ko": "네크로플러스솔",
+    "en": "n-solarizer",
+    "desc": "빛을 필요로 하는 네크로즈마와 솔가레오를 합체시키기 위한 머신.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/n-solarizer.png",
+    "category": "species-specific"
+  },
+  {
+    "id": 971,
+    "ko": "요정의깃털",
+    "en": "fairy feather",
+    "desc": "빛에 비추면 희미하게 빛나는 깃털. 지니게 하면 페어리타입 기술의 위력이 올라간다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fairy-feather.png",
+    "category": "type-enhancement"
+  },
+  {
+    "id": 972,
+    "ko": "조개화석",
+    "en": "helix fossil",
+    "desc": "화석을 복원시키면 암나이트가 나온다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/helix-fossil.png",
+    "category": "fossil"
+  },
+  {
+    "id": 973,
+    "ko": "껍질화석",
+    "en": "dome fossil",
+    "desc": "화석을 복원시키면 투구가 나온다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dome-fossil.png",
+    "category": "fossil"
+  },
+  {
+    "id": 974,
+    "ko": "비밀의호박",
+    "en": "old amber",
+    "desc": "화석을 복원시키면 프테라가 나온다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/old-amber.png",
+    "category": "fossil"
+  },
+  {
+    "id": 975,
+    "ko": "뿌리화석",
+    "en": "root fossil",
+    "desc": "화석을 복원시키면 릴링이 나온다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/root-fossil.png",
+    "category": "fossil"
+  },
+  {
+    "id": 976,
+    "ko": "발톱화석",
+    "en": "claw fossil",
+    "desc": "화석을 복원시키면 아노딥스가 나온다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/claw-fossil.png",
+    "category": "fossil"
+  },
+  {
+    "id": 977,
+    "ko": "두개의화석",
+    "en": "skull fossil",
+    "desc": "화석을 복원시키면 두개도스가 나온다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/skull-fossil.png",
+    "category": "fossil"
+  },
+  {
+    "id": 978,
+    "ko": "방패의화석",
+    "en": "armor fossil",
+    "desc": "화석을 복원시키면 방패톱스가 나온다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/armor-fossil.png",
+    "category": "fossil"
+  },
+  {
+    "id": 979,
+    "ko": "덮개화석",
+    "en": "cover fossil",
+    "desc": "화석을 복원시키면 프로토가가 나온다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cover-fossil.png",
+    "category": "fossil"
+  },
+  {
+    "id": 980,
+    "ko": "깃털화석",
+    "en": "plume fossil",
+    "desc": "화석을 복원시키면 아켄이 나온다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/plume-fossil.png",
+    "category": "fossil"
+  },
+  {
+    "id": 981,
+    "ko": "턱화석",
+    "en": "jaw fossil",
+    "desc": "화석을 복원시키면 티고라스가 나온다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/jaw-fossil.png",
+    "category": "fossil"
+  },
+  {
+    "id": 982,
+    "ko": "지느러미화석",
+    "en": "sail fossil",
+    "desc": "화석을 복원시키면 아마루스가 나온다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sail-fossil.png",
+    "category": "fossil"
+  },
+  {
+    "id": 983,
+    "ko": "화석새",
+    "en": "fossilized bird",
+    "desc": "오랜 옛날 하늘을 날던 고대 포켓몬 화석의 일부. 어떤 모습이었는지는 수수께끼다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fossilized-bird.png",
+    "category": "fossil"
+  },
+  {
+    "id": 984,
+    "ko": "화석물고기",
+    "en": "fossilized fish",
+    "desc": "오랜 옛날 바다에 살았던 고대 포켓몬 화석의 일부. 어떤 모습이었는지는 수수께끼다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fossilized-fish.png",
+    "category": "fossil"
+  },
+  {
+    "id": 985,
+    "ko": "화석용",
+    "en": "fossilized drake",
+    "desc": "오랜 옛날 육지에 살았던 고대 포켓몬 화석의 일부. 어떤 모습이었는지는 수수께끼다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fossilized-drake.png",
+    "category": "fossil"
+  },
+  {
+    "id": 986,
+    "ko": "화석긴목",
+    "en": "fossilized dino",
+    "desc": "오랜 옛날 바다에 살았던 고대 포켓몬 화석의 일부. 어떤 모습이었는지는 수수께끼다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fossilized-dino.png",
+    "category": "fossil"
+  },
+  {
+    "id": 987,
+    "ko": "탈출팩",
+    "en": "eject pack",
+    "desc": "지니게 한 포켓몬의 능력이 떨어지면 지닌 포켓몬과 교체한다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/eject-pack.png",
+    "category": "held-items"
+  },
+  {
+    "id": 988,
+    "ko": "속임수주사위",
+    "en": "loaded dice",
+    "desc": "좋은 눈만 나오는 주사위. 지니게 하고 연속 기술을 사용하면 많은 횟수로 기술을 사용할 수 있다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/loaded-dice.png",
+    "category": "held-items"
+  },
+  {
+    "id": 989,
+    "ko": "흉내허브",
+    "en": "mirror herb",
+    "desc": "지니게 한 포켓몬은 한 번에 한해 상대의 능력이 올랐을 때 흉내 내어 똑같이 능력을 올린다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mirror-herb.png",
+    "category": "held-items"
+  },
+  {
+    "id": 990,
+    "ko": "만능우산",
+    "en": "utility umbrella",
+    "desc": "지니게 한 포켓몬은 비와 햇살이 강할 때의 영향을 받지 않게 된다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/utility-umbrella.png",
+    "category": "held-items"
+  },
+  {
+    "id": 991,
+    "ko": "목스프레이",
+    "en": "throat spray",
+    "desc": "소리 기술을 사용하면 특수공격이 올라간다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/throat-spray.png",
+    "category": "held-items"
+  },
+  {
+    "id": 992,
+    "ko": "통굽부츠",
+    "en": "heavy-duty boots",
+    "desc": "발밑에 설치된 함정 등의 영향을 받지 않게 된다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heavy-duty-boots.png",
+    "category": "held-items"
+  },
+  {
+    "id": 993,
+    "ko": "허탕보험",
+    "en": "blunder policy",
+    "desc": "명중률에 의해 기술이 빗나갔을 때 스피드가 크게 올라간다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/blunder-policy.png",
+    "category": "held-items"
+  },
+  {
+    "id": 994,
+    "ko": "룸서비스",
+    "en": "room service",
+    "desc": "포켓몬에게 지니게 하면 트릭룸일 때 사용하여 스피드가 떨어진다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/room-service.png",
+    "category": "held-items"
+  },
+  {
+    "id": 995,
+    "ko": "펀치글러브",
+    "en": "punching glove",
+    "desc": "주먹을 보호하는 글러브. 지니게 하면 펀치 기술의 위력이 오르고 상대에게 접촉하지 않는 펀치가 된다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/punching-glove.png",
+    "category": "held-items"
+  },
+  {
+    "id": 996,
+    "ko": "특성가드",
+    "en": "ability shield",
+    "desc": "귀엽고 개성적인 방패. 지니게 하면 상대에 의해 특성이 바뀌지 않는다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ability-shield.png",
+    "category": "held-items"
+  },
+  {
+    "id": 997,
+    "ko": "클리어참",
+    "en": "clear amulet",
+    "desc": "투명하고 빛나는 참. 지니게 하면 상대의 기술이나 특성으로 능력이 떨어지지 않는다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/clear-amulet.png",
+    "category": "held-items"
+  },
+  {
+    "id": 998,
+    "ko": "은밀망토",
+    "en": "covert cloak",
+    "desc": "상대의 눈을 속이는 후드 달린 망토. 지니게 하면 몸을 숨겨서 기술의 추가 효과를 받지 않게 된다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/covert-cloak.png",
+    "category": "held-items"
+  },
+  {
+    "id": 999,
+    "ko": "부스트에너지",
+    "en": "booster energy",
+    "desc": "에너지가 가득한 캡슐. 어떤 특성을 가진 포켓몬에게 지니게 하면 그 힘을 증폭시킨다.",
+    "desc_lang": "ko",
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/booster-energy.png",
+    "category": "held-items"
   }
 ]
