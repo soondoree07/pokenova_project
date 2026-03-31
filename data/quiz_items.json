@@ -4926,7 +4926,7 @@
     "en": "nugget",
     "desc": "금색으로 반짝반짝 빛나는 순금으로 만들어진 구슬. 상점에서 비싸게 팔린다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/nugget.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/nugget.png",
     "category": "for-sell"
   },
   {
@@ -4935,7 +4935,7 @@
     "en": "stardust",
     "desc": "감촉이 보슬보슬한 빨갛고 예쁜 모래. 상점에서 비싸게 팔린다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/stardust.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/stardust.png",
     "category": "for-sell"
   },
   {
@@ -4944,7 +4944,7 @@
     "en": "star piece",
     "desc": "반짝반짝 빨갛게 빛나는 예쁜 보석 조각. 상점에서 비싸게 팔린다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/star-piece.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/starpiece.png",
     "category": "for-sell"
   },
   {
@@ -4953,7 +4953,7 @@
     "en": "tiny mushroom",
     "desc": "작고 진귀한 버섯. 일부 마니아 사이에서는 매우 인기가 높다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tiny-mushroom.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/tinymushroom.png",
     "category": "for-sell"
   },
   {
@@ -4962,7 +4962,7 @@
     "en": "pearl",
     "desc": "예쁜 은색으로 빛나는 자그마한 진주. 상점에서 싸게 팔린다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pearl.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/pearl.png",
     "category": "for-sell"
   },
   {
@@ -4971,7 +4971,7 @@
     "en": "big mushroom",
     "desc": "크고 진귀한 버섯. 일부 마니아 사이에서는 매우 인기가 높다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/big-mushroom.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/bigmushroom.png",
     "category": "for-sell"
   },
   {
@@ -4980,7 +4980,7 @@
     "en": "big pearl",
     "desc": "예쁜 은색으로 빛나는 상당히 큰 낱알의 진주. 상점에서 비싸게 팔린다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/big-pearl.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/bigpearl.png",
     "category": "for-sell"
   },
   {
@@ -4989,7 +4989,7 @@
     "en": "rare bone",
     "desc": "포켓몬 고고학 상에서 매우 귀중한 뼈. 상점에서 비싸게 팔린다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rare-bone.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/rarebone.png",
     "category": "for-sell"
   },
   {
@@ -4998,7 +4998,7 @@
     "en": "honey",
     "desc": "풀숲에서 사용하면 야생 포켓몬과 조우할 수 있는 달콤한 꿀.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/honey.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/honey.png",
     "category": "for-sell"
   },
   {
@@ -5007,7 +5007,7 @@
     "en": "pretty feather",
     "desc": "아름답기만 할 뿐 아무 효과도 없는 지극히 평범한 깃털.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pretty-feather.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/prettyfeather.png",
     "category": "for-sell"
   },
   {
@@ -5016,7 +5016,7 @@
     "en": "balm mushroom",
     "desc": "주변 일대에 좋은 향기가 퍼지는 희귀한 버섯. 상점에서 비싸게 팔린다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/balm-mushroom.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/balmmushroom.png",
     "category": "for-sell"
   },
   {
@@ -5025,7 +5025,7 @@
     "en": "comet shard",
     "desc": "혜성이 가까워졌을 때 지표면에 떨어진 조각. 상점에서 비싸게 팔린다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/comet-shard.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/cometshard.png",
     "category": "for-sell"
   },
   {
@@ -5034,7 +5034,7 @@
     "en": "big nugget",
     "desc": "금색으로 반짝반짝 빛나는 순금으로 만들어진 큰 구슬. 상점에서 비싸게 팔린다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/big-nugget.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/bignugget.png",
     "category": "for-sell"
   },
   {
@@ -5043,7 +5043,7 @@
     "en": "pearl string",
     "desc": "예쁜 은색으로 빛나는 매우 큰 낱알의 진주. 상점에서 비싸게 팔린다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pearl-string.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/pearlstring.png",
     "category": "for-sell"
   },
   {
@@ -5052,7 +5052,7 @@
     "en": "tiny bamboo shoot",
     "desc": "작고 진귀한 죽순. 일부 미식가 사이에서는 매우 인기가 높다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tiny-bamboo-shoot.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/tinybambooshoot.png",
     "category": "for-sell"
   },
   {
@@ -5061,7 +5061,7 @@
     "en": "big bamboo shoot",
     "desc": "크고 진귀한 죽순. 일부 미식가 사이에서는 매우 인기가 높다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/big-bamboo-shoot.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/bigbambooshoot.png",
     "category": "for-sell"
   },
   {
@@ -5070,7 +5070,7 @@
     "en": "galarica cuff",
     "desc": "가라두구가지를 엮어서 만든 팔찌. 가라르지방의 야돈에게 채워주면 기뻐한다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/galarica-cuff.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/galaricacuff.png",
     "category": "evolution"
   },
   {
@@ -5079,7 +5079,7 @@
     "en": "galarica wreath",
     "desc": "가라두구가지를 엮어서 만든 머리 장식. 가라르지방의 야돈에게 씌워주면 기뻐한다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/galarica-wreath.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/galaricawreath.png",
     "category": "evolution"
   },
   {
@@ -5088,7 +5088,7 @@
     "en": "linking cord",
     "desc": "모종의 유대감이 느껴지는 신비한 에너지가 담긴 끈. 어떤 포켓몬들이 좋아하는 물건이다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/linking-cord.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/linkingcord.png",
     "category": "evolution"
   },
   {
@@ -5097,7 +5097,7 @@
     "en": "black augurite",
     "desc": "조각내면 예리하게 날이 서는 유리 같은 성질을 띠는 검은 돌. 어떤 포켓몬이 좋아하는 물건이다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-augurite.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/blackaugurite.png",
     "category": "evolution"
   },
   {
@@ -5106,7 +5106,7 @@
     "en": "peat block",
     "desc": "진흙 같은 석탄 덩어리. 말리면 연료로도 쓸 수 있다. 어떤 포켓몬이 좋아하는 물건이다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/peat-block.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/peatblock.png",
     "category": "evolution"
   },
   {
@@ -5115,7 +5115,7 @@
     "en": "flower sweet",
     "desc": "꽃 모양의 사탕공예. 마빌크에게 지니게 하면 빙빙 돌며 기뻐한다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/flower-sweet.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/flowersweet.png",
     "category": "evolution"
   },
   {
@@ -5124,7 +5124,7 @@
     "en": "clover sweet",
     "desc": "네잎 모양의 사탕공예. 마빌크에게 지니게 하면 빙빙 돌며 기뻐한다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/clover-sweet.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/cloversweet.png",
     "category": "evolution"
   },
   {
@@ -5133,7 +5133,7 @@
     "en": "strawberry sweet",
     "desc": "딸기 모양의 사탕공예. 마빌크에게 지니게 하면 빙빙 돌며 기뻐한다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/strawberry-sweet.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/strawberrysweet.png",
     "category": "evolution"
   },
   {
@@ -5142,7 +5142,7 @@
     "en": "ribbon sweet",
     "desc": "리본 모양의 사탕공예. 마빌크에게 지니게 하면 빙빙 돌며 기뻐한다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ribbon-sweet.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/ribbonsweet.png",
     "category": "evolution"
   },
   {
@@ -5151,7 +5151,7 @@
     "en": "berry sweet",
     "desc": "베리 모양의 사탕공예. 마빌크에게 지니게 하면 빙빙 돌며 기뻐한다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/berry-sweet.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/berrysweet.png",
     "category": "evolution"
   },
   {
@@ -5160,7 +5160,7 @@
     "en": "star sweet",
     "desc": "스타 모양의 사탕공예. 마빌크에게 지니게 하면 빙빙 돌며 기뻐한다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/star-sweet.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/starsweet.png",
     "category": "evolution"
   },
   {
@@ -5169,7 +5169,7 @@
     "en": "love sweet",
     "desc": "하트 모양의 사탕공예. 마빌크에게 지니게 하면 빙빙 돌며 기뻐한다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/love-sweet.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/lovesweet.png",
     "category": "evolution"
   },
   {
@@ -5178,7 +5178,7 @@
     "en": "cracked pot",
     "desc": "어느 특정 포켓몬을 진화시키는 이상한 포트. 깨졌지만 차는 맛있어진다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cracked-pot.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/crackedpot.png",
     "category": "evolution"
   },
   {
@@ -5187,7 +5187,7 @@
     "en": "chipped pot",
     "desc": "어느 특정 포켓몬을 진화시키는 이상한 포트. 이가 빠졌지만 차는 맛있어진다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chipped-pot.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/chippedpot.png",
     "category": "evolution"
   },
   {
@@ -5214,7 +5214,7 @@
     "en": "malicious armor",
     "desc": "어느 특정 포켓몬을 진화시키는 이상한 갑옷. 저주의 감정이 담겨 있다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/malicious-armor.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/maliciousarmor.png",
     "category": "evolution"
   },
   {
@@ -5223,7 +5223,7 @@
     "en": "auspicious armor",
     "desc": "어느 특정 포켓몬을 진화시키는 이상한 갑옷. 축복의 감정이 담겨 있다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/auspicious-armor.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/auspiciousarmor.png",
     "category": "evolution"
   },
   {
@@ -5232,7 +5232,7 @@
     "en": "syrupy apple",
     "desc": "어느 특정 포켓몬을 진화시키는 이상한 사과. 엄청나게 꿀맛이다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/syrupy-apple.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/syrupyapple.png",
     "category": "evolution"
   },
   {
@@ -5241,7 +5241,7 @@
     "en": "unremarkable teacup",
     "desc": "어느 특정 포켓몬을 진화시키는 이상한 찻잔. 깨졌지만 차는 맛있어진다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/unremarkable-teacup.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/unremarkableteacup.png",
     "category": "evolution"
   },
   {
@@ -5250,7 +5250,7 @@
     "en": "masterpiece teacup",
     "desc": "어느 특정 포켓몬을 진화시키는 이상한 찻잔. 이가 빠졌지만 차는 맛있어진다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/masterpiece-teacup.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/masterpieceteacup.png",
     "category": "evolution"
   },
   {
@@ -5259,7 +5259,7 @@
     "en": "metal alloy",
     "desc": "어느 특정 포켓몬을 진화시키는 이상한 금속. 여러 겹으로 겹쳐져 있다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/metal-alloy.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/metalalloy.png",
     "category": "evolution"
   },
   {
@@ -5268,7 +5268,7 @@
     "en": "cornerstone mask",
     "desc": "결정이 장식되어 있는 목각 가면. 오거폰에게 지니게 하면 바위타입을 두르고 싸울 수 있다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cornerstone-mask.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/cornerstonemask.png",
     "category": "species-specific"
   },
   {
@@ -5277,7 +5277,7 @@
     "en": "wellspring mask",
     "desc": "결정이 장식되어 있는 목각 가면. 오거폰에게 지니게 하면 물타입을 두르고 싸울 수 있다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wellspring-mask.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/wellspringmask.png",
     "category": "species-specific"
   },
   {
@@ -5286,7 +5286,7 @@
     "en": "hearthflame mask",
     "desc": "결정이 장식되어 있는 목각 가면. 오거폰에게 지니게 하면 불꽃타입을 두르고 싸울 수 있다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hearthflame-mask.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/hearthflamemask.png",
     "category": "species-specific"
   },
   {
@@ -5295,7 +5295,7 @@
     "en": "adamant crystal",
     "desc": "눈부시게 빛나는 큰 구슬. 디아루가에게 사용하면 힘이 넘쳐서 모습이 바뀐다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/adamant-crystal.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/adamantcrystal.png",
     "category": "species-specific"
   },
   {
@@ -5304,7 +5304,7 @@
     "en": "lustrous globe",
     "desc": "눈부시게 빛나는 큰 구슬. 펄기아에게 사용하면 힘이 넘쳐서 모습이 바뀐다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lustrous-globe.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/lustrousglobe.png",
     "category": "species-specific"
   },
   {
@@ -5313,7 +5313,7 @@
     "en": "griseous core",
     "desc": "눈부시게 빛나는 큰 구슬. 기라티나에게 사용하면 힘이 넘쳐서 모습이 바뀐다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/griseous-core.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/griseouscore.png",
     "category": "species-specific"
   },
   {
@@ -5322,7 +5322,7 @@
     "en": "rusted sword",
     "desc": "먼 옛날의 영웅이 재앙을 막는 데 사용했다고 전해지는 검이지만 지금은 녹이 슬고 닳아버렸다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rusted-sword.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/rustedsword.png",
     "category": "species-specific"
   },
   {
@@ -5331,7 +5331,7 @@
     "en": "rusted shield",
     "desc": "먼 옛날의 영웅이 재앙을 막는 데 사용했다고 전해지는 방패지만 지금은 녹이 슬고 닳아버렸다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rusted-shield.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/rustedshield.png",
     "category": "species-specific"
   },
   {
@@ -5340,7 +5340,7 @@
     "en": "gracidea",
     "desc": "생일이나 기념일 등에 감사의 마음을 전하기 위해 부케로 만들어 보내는 일이 있다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/gracidea.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/gracidea.png",
     "category": "species-specific"
   },
   {
@@ -5349,7 +5349,7 @@
     "en": "reveal glass",
     "desc": "진실을 비춰줌으로 포켓몬을 본래의 모습으로 바꿔버리는 이상한 거울.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/reveal-glass.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/revealglass.png",
     "category": "species-specific"
   },
   {
@@ -5358,7 +5358,7 @@
     "en": "dna splicers",
     "desc": "원래는 하나였다고 전해지는 큐레무와 어떤 포켓몬을 합체시키는 한 쌍의 쐐기.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dna-splicers.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/dnasplicers.png",
     "category": "species-specific"
   },
   {
@@ -5367,7 +5367,7 @@
     "en": "prison bottle",
     "desc": "먼 옛날 어떤 포켓몬의 힘을 봉인했다고 여겨지는 항아리.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/prison-bottle.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/prisonbottle.png",
     "category": "species-specific"
   },
   {
@@ -5376,7 +5376,7 @@
     "en": "n-lunarizer",
     "desc": "빛을 필요로 하는 네크로즈마와 루나아라를 합체시키기 위한 머신.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/n-lunarizer.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/n-lunarizer.png",
     "category": "species-specific"
   },
   {
@@ -5385,7 +5385,7 @@
     "en": "n-solarizer",
     "desc": "빛을 필요로 하는 네크로즈마와 솔가레오를 합체시키기 위한 머신.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/n-solarizer.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/n-solarizer.png",
     "category": "species-specific"
   },
   {
@@ -5394,7 +5394,7 @@
     "en": "fairy feather",
     "desc": "빛에 비추면 희미하게 빛나는 깃털. 지니게 하면 페어리타입 기술의 위력이 올라간다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fairy-feather.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/fairyfeather.png",
     "category": "type-enhancement"
   },
   {
@@ -5403,7 +5403,7 @@
     "en": "helix fossil",
     "desc": "화석을 복원시키면 암나이트가 나온다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/helix-fossil.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/helixfossil.png",
     "category": "fossil"
   },
   {
@@ -5412,7 +5412,7 @@
     "en": "dome fossil",
     "desc": "화석을 복원시키면 투구가 나온다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dome-fossil.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/domefossil.png",
     "category": "fossil"
   },
   {
@@ -5421,7 +5421,7 @@
     "en": "old amber",
     "desc": "화석을 복원시키면 프테라가 나온다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/old-amber.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/oldamber.png",
     "category": "fossil"
   },
   {
@@ -5430,7 +5430,7 @@
     "en": "root fossil",
     "desc": "화석을 복원시키면 릴링이 나온다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/root-fossil.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/rootfossil.png",
     "category": "fossil"
   },
   {
@@ -5439,7 +5439,7 @@
     "en": "claw fossil",
     "desc": "화석을 복원시키면 아노딥스가 나온다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/claw-fossil.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/clawfossil.png",
     "category": "fossil"
   },
   {
@@ -5448,7 +5448,7 @@
     "en": "skull fossil",
     "desc": "화석을 복원시키면 두개도스가 나온다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/skull-fossil.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/skullfossil.png",
     "category": "fossil"
   },
   {
@@ -5457,7 +5457,7 @@
     "en": "armor fossil",
     "desc": "화석을 복원시키면 방패톱스가 나온다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/armor-fossil.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/armorfossil.png",
     "category": "fossil"
   },
   {
@@ -5466,7 +5466,7 @@
     "en": "cover fossil",
     "desc": "화석을 복원시키면 프로토가가 나온다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cover-fossil.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/coverfossil.png",
     "category": "fossil"
   },
   {
@@ -5475,7 +5475,7 @@
     "en": "plume fossil",
     "desc": "화석을 복원시키면 아켄이 나온다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/plume-fossil.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/plumefossil.png",
     "category": "fossil"
   },
   {
@@ -5484,7 +5484,7 @@
     "en": "jaw fossil",
     "desc": "화석을 복원시키면 티고라스가 나온다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/jaw-fossil.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/jawfossil.png",
     "category": "fossil"
   },
   {
@@ -5493,7 +5493,7 @@
     "en": "sail fossil",
     "desc": "화석을 복원시키면 아마루스가 나온다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sail-fossil.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/sailfossil.png",
     "category": "fossil"
   },
   {
@@ -5502,7 +5502,7 @@
     "en": "fossilized bird",
     "desc": "오랜 옛날 하늘을 날던 고대 포켓몬 화석의 일부. 어떤 모습이었는지는 수수께끼다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fossilized-bird.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/fossilizedbird.png",
     "category": "fossil"
   },
   {
@@ -5511,7 +5511,7 @@
     "en": "fossilized fish",
     "desc": "오랜 옛날 바다에 살았던 고대 포켓몬 화석의 일부. 어떤 모습이었는지는 수수께끼다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fossilized-fish.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/fossilizedfish.png",
     "category": "fossil"
   },
   {
@@ -5520,7 +5520,7 @@
     "en": "fossilized drake",
     "desc": "오랜 옛날 육지에 살았던 고대 포켓몬 화석의 일부. 어떤 모습이었는지는 수수께끼다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fossilized-drake.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/fossilizeddrake.png",
     "category": "fossil"
   },
   {
@@ -5529,7 +5529,7 @@
     "en": "fossilized dino",
     "desc": "오랜 옛날 바다에 살았던 고대 포켓몬 화석의 일부. 어떤 모습이었는지는 수수께끼다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fossilized-dino.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/fossilizeddino.png",
     "category": "fossil"
   },
   {
@@ -5538,7 +5538,7 @@
     "en": "eject pack",
     "desc": "지니게 한 포켓몬의 능력이 떨어지면 지닌 포켓몬과 교체한다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/eject-pack.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/ejectpack.png",
     "category": "held-items"
   },
   {
@@ -5547,7 +5547,7 @@
     "en": "loaded dice",
     "desc": "좋은 눈만 나오는 주사위. 지니게 하고 연속 기술을 사용하면 많은 횟수로 기술을 사용할 수 있다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/loaded-dice.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/loadeddice.png",
     "category": "held-items"
   },
   {
@@ -5556,7 +5556,7 @@
     "en": "mirror herb",
     "desc": "지니게 한 포켓몬은 한 번에 한해 상대의 능력이 올랐을 때 흉내 내어 똑같이 능력을 올린다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mirror-herb.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/mirrorherb.png",
     "category": "held-items"
   },
   {
@@ -5565,7 +5565,7 @@
     "en": "utility umbrella",
     "desc": "지니게 한 포켓몬은 비와 햇살이 강할 때의 영향을 받지 않게 된다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/utility-umbrella.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/utilityumbrella.png",
     "category": "held-items"
   },
   {
@@ -5574,7 +5574,7 @@
     "en": "throat spray",
     "desc": "소리 기술을 사용하면 특수공격이 올라간다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/throat-spray.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/throatspray.png",
     "category": "held-items"
   },
   {
@@ -5583,7 +5583,7 @@
     "en": "heavy-duty boots",
     "desc": "발밑에 설치된 함정 등의 영향을 받지 않게 된다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heavy-duty-boots.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/heavy-dutyboots.png",
     "category": "held-items"
   },
   {
@@ -5592,7 +5592,7 @@
     "en": "blunder policy",
     "desc": "명중률에 의해 기술이 빗나갔을 때 스피드가 크게 올라간다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/blunder-policy.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/blunderpolicy.png",
     "category": "held-items"
   },
   {
@@ -5601,7 +5601,7 @@
     "en": "room service",
     "desc": "포켓몬에게 지니게 하면 트릭룸일 때 사용하여 스피드가 떨어진다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/room-service.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/roomservice.png",
     "category": "held-items"
   },
   {
@@ -5610,7 +5610,7 @@
     "en": "punching glove",
     "desc": "주먹을 보호하는 글러브. 지니게 하면 펀치 기술의 위력이 오르고 상대에게 접촉하지 않는 펀치가 된다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/punching-glove.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/punchingglove.png",
     "category": "held-items"
   },
   {
@@ -5619,7 +5619,7 @@
     "en": "ability shield",
     "desc": "귀엽고 개성적인 방패. 지니게 하면 상대에 의해 특성이 바뀌지 않는다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ability-shield.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/abilityshield.png",
     "category": "held-items"
   },
   {
@@ -5628,7 +5628,7 @@
     "en": "clear amulet",
     "desc": "투명하고 빛나는 참. 지니게 하면 상대의 기술이나 특성으로 능력이 떨어지지 않는다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/clear-amulet.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/clearamulet.png",
     "category": "held-items"
   },
   {
@@ -5637,7 +5637,7 @@
     "en": "covert cloak",
     "desc": "상대의 눈을 속이는 후드 달린 망토. 지니게 하면 몸을 숨겨서 기술의 추가 효과를 받지 않게 된다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/covert-cloak.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/covertcloak.png",
     "category": "held-items"
   },
   {
@@ -5646,7 +5646,7 @@
     "en": "booster energy",
     "desc": "에너지가 가득한 캡슐. 어떤 특성을 가진 포켓몬에게 지니게 하면 그 힘을 증폭시킨다.",
     "desc_lang": "ko",
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/booster-energy.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/boosterenergy.png",
     "category": "held-items"
   },
   {
@@ -5655,7 +5655,7 @@
     "en": "clefablite",
     "desc": "픽시에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/b/b2/%EC%95%84%EC%9D%B4%EC%BD%98_%ED%94%BD%EC%8B%9C%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/clefablite.png",
     "category": "mega-stones",
     "mega_ko": "메가픽시",
     "mega_en": "clefable-mega",
@@ -5667,7 +5667,7 @@
     "en": "victreebelite",
     "desc": "우츠보트에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/f/f1/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%9A%B0%EC%B8%A0%EB%B3%B4%ED%8A%B8%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/victreebelite.png",
     "category": "mega-stones",
     "mega_ko": "메가우츠보트",
     "mega_en": "victreebel-mega",
@@ -5679,7 +5679,7 @@
     "en": "starminite",
     "desc": "아쿠스타에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/8/88/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%95%84%EC%BF%A0%EC%8A%A4%ED%83%80%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/starminite.png",
     "category": "mega-stones",
     "mega_ko": "메가아쿠스타",
     "mega_en": "starmie-mega",
@@ -5691,7 +5691,7 @@
     "en": "dragoninite",
     "desc": "망나뇽에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/7/70/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%A7%9D%EB%82%98%EB%87%BD%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/dragoninite.png",
     "category": "mega-stones",
     "mega_ko": "메가망나뇽",
     "mega_en": "dragonite-mega",
@@ -5703,7 +5703,7 @@
     "en": "meganiumite",
     "desc": "메가니움에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/c/c8/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%A9%94%EA%B0%80%EB%8B%88%EC%9B%80%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/meganiumite.png",
     "category": "mega-stones",
     "mega_ko": "메가메가니움",
     "mega_en": "meganium-mega",
@@ -5715,7 +5715,7 @@
     "en": "feraligite",
     "desc": "장크로다일에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/f/f2/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%9E%A5%ED%81%AC%EB%A1%9C%EB%8B%A4%EC%9D%BC%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/feraligite.png",
     "category": "mega-stones",
     "mega_ko": "메가장크로다일",
     "mega_en": "feraligatr-mega",
@@ -5727,7 +5727,7 @@
     "en": "skarmorite",
     "desc": "무장조에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/3/35/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%AC%B4%EC%9E%A5%EC%A1%B0%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/skarmorite.png",
     "category": "mega-stones",
     "mega_ko": "메가무장조",
     "mega_en": "skarmory-mega",
@@ -5739,7 +5739,7 @@
     "en": "froslassite",
     "desc": "눈여아에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/2/29/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%88%88%EC%97%AC%EC%95%84%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/froslassite.png",
     "category": "mega-stones",
     "mega_ko": "메가눈여아",
     "mega_en": "froslass-mega",
@@ -5751,7 +5751,7 @@
     "en": "emboarite",
     "desc": "염무왕에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/7/75/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%97%BC%EB%AC%B4%EC%99%95%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/emboarite.png",
     "category": "mega-stones",
     "mega_ko": "메가염무왕",
     "mega_en": "emboar-mega",
@@ -5763,7 +5763,7 @@
     "en": "excadrite",
     "desc": "몰드류에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/2/21/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%AA%B0%EB%93%9C%EB%A5%98%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/excadrite.png",
     "category": "mega-stones",
     "mega_ko": "메가몰드류",
     "mega_en": "excadrill-mega",
@@ -5775,7 +5775,7 @@
     "en": "scolipite",
     "desc": "펜드라에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/d/d1/%EC%95%84%EC%9D%B4%EC%BD%98_%ED%8E%9C%EB%93%9C%EB%9D%BC%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/scolipite.png",
     "category": "mega-stones",
     "mega_ko": "메가펜드라",
     "mega_en": "scolipede-mega",
@@ -5787,7 +5787,7 @@
     "en": "scraftinite",
     "desc": "곤율거니에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/c/c2/%EC%95%84%EC%9D%B4%EC%BD%98_%EA%B3%A4%EC%9C%A8%EA%B1%B0%EB%8B%88%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/scraftinite.png",
     "category": "mega-stones",
     "mega_ko": "메가곤율거니",
     "mega_en": "scrafty-mega",
@@ -5799,7 +5799,7 @@
     "en": "eelektrossite",
     "desc": "저리더프에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/5/53/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%A0%80%EB%A6%AC%EB%8D%94%ED%94%84%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/eelektrossite.png",
     "category": "mega-stones",
     "mega_ko": "메가저리더프",
     "mega_en": "eelektross-mega",
@@ -5811,7 +5811,7 @@
     "en": "chandelurite",
     "desc": "샹델라에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/6/62/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%83%B9%EB%8D%B8%EB%9D%BC%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/chandelurite.png",
     "category": "mega-stones",
     "mega_ko": "메가샹델라",
     "mega_en": "chandelure-mega",
@@ -5823,7 +5823,7 @@
     "en": "chesnaughtite",
     "desc": "브리가론에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/4/41/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%B8%8C%EB%A6%AC%EA%B0%80%EB%A1%A0%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/chesnaughtite.png",
     "category": "mega-stones",
     "mega_ko": "메가브리가론",
     "mega_en": "chesnaught-mega",
@@ -5835,7 +5835,7 @@
     "en": "delphoxite",
     "desc": "마폭시에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/d/db/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%A7%88%ED%8F%AD%EC%8B%9C%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/delphoxite.png",
     "category": "mega-stones",
     "mega_ko": "메가마폭시",
     "mega_en": "delphox-mega",
@@ -5847,7 +5847,7 @@
     "en": "greninjite",
     "desc": "개굴닌자에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/6/64/%EC%95%84%EC%9D%B4%EC%BD%98_%EA%B0%9C%EA%B5%B4%EB%8B%8C%EC%9E%90%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/greninjite.png",
     "category": "mega-stones",
     "mega_ko": "메가개굴닌자",
     "mega_en": "greninja-mega",
@@ -5859,7 +5859,7 @@
     "en": "pyroarite",
     "desc": "화염레오에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/b/b8/%EC%95%84%EC%9D%B4%EC%BD%98_%ED%99%94%EC%97%BC%EB%A0%88%EC%98%A4%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/pyroarite.png",
     "category": "mega-stones",
     "mega_ko": "메가화염레오",
     "mega_en": "pyroar-mega",
@@ -5871,7 +5871,7 @@
     "en": "floettite",
     "desc": "특별한 플라엣테에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/2/2d/%EC%95%84%EC%9D%B4%EC%BD%98_%ED%94%8C%EB%9D%BC%EC%97%A3%ED%85%8C%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/floettite.png",
     "category": "mega-stones",
     "mega_ko": "메가플라엣테",
     "mega_en": "floette-mega",
@@ -5883,7 +5883,7 @@
     "en": "malamarite",
     "desc": "칼라마네로에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/9/96/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%B9%BC%EB%9D%BC%EB%A7%88%EB%84%A4%EB%A1%9C%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/malamarite.png",
     "category": "mega-stones",
     "mega_ko": "메가칼라마네로",
     "mega_en": "malamar-mega",
@@ -5895,7 +5895,7 @@
     "en": "barbaracite",
     "desc": "거북손데스에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/e/e0/%EC%95%84%EC%9D%B4%EC%BD%98_%EA%B1%B0%EB%B6%81%EC%86%90%EB%8D%B0%EC%8A%A4%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/barbaracite.png",
     "category": "mega-stones",
     "mega_ko": "메가거북손데스",
     "mega_en": "barbaracle-mega",
@@ -5907,7 +5907,7 @@
     "en": "dragalgite",
     "desc": "드래캄에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/4/4e/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%93%9C%EB%9E%98%EC%BA%84%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/dragalgite.png",
     "category": "mega-stones",
     "mega_ko": "메가드래캄",
     "mega_en": "dragalge-mega",
@@ -5919,7 +5919,7 @@
     "en": "hawluchanite",
     "desc": "루차불에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/7/7b/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%A3%A8%EC%B0%A8%EB%B6%88%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/hawluchanite.png",
     "category": "mega-stones",
     "mega_ko": "메가루차불",
     "mega_en": "hawlucha-mega",
@@ -5931,7 +5931,7 @@
     "en": "zygardite",
     "desc": "지가르데에게 지니게 하면 배틀할 때 퍼펙트폼 상태에서 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/3/3d/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%A7%80%EA%B0%80%EB%A5%B4%EB%8D%B0%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/zygardite.png",
     "category": "mega-stones",
     "mega_ko": "메가지가르데",
     "mega_en": "zygarde-mega",
@@ -5943,7 +5943,7 @@
     "en": "drampanite",
     "desc": "할비롱에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/2/2a/%EC%95%84%EC%9D%B4%EC%BD%98_%ED%95%A0%EB%B9%84%EB%A1%B1%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/drampanite.png",
     "category": "mega-stones",
     "mega_ko": "메가할비롱",
     "mega_en": "drampa-mega",
@@ -5955,7 +5955,7 @@
     "en": "falinksite",
     "desc": "대여르에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/f/f5/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%8C%80%EC%97%AC%EB%A5%B4%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/falinksite.png",
     "category": "mega-stones",
     "mega_ko": "메가대여르",
     "mega_en": "falinks-mega",
@@ -5967,7 +5967,7 @@
     "en": "heatranite",
     "desc": "히드런에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/7/7b/%EC%95%84%EC%9D%B4%EC%BD%98_%ED%9E%88%EB%93%9C%EB%9F%B0%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/heatranite.png",
     "category": "mega-stones",
     "mega_ko": "메가히드런",
     "mega_en": "heatran-mega",
@@ -5979,7 +5979,7 @@
     "en": "darkranite",
     "desc": "다크라이에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/a/a2/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%8B%A4%ED%81%AC%EB%9D%BC%EC%9D%B4%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/darkranite.png",
     "category": "mega-stones",
     "mega_ko": "메가다크라이",
     "mega_en": "darkrai-mega",
@@ -5991,7 +5991,7 @@
     "en": "zeraorite",
     "desc": "제라오라에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/e/e6/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%A0%9C%EB%9D%BC%EC%98%A4%EB%9D%BC%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/zeraorite.png",
     "category": "mega-stones",
     "mega_ko": "메가제라오라",
     "mega_en": "zeraora-mega",
@@ -6003,7 +6003,7 @@
     "en": "raichunite x",
     "desc": "라이츄에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/6/64/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%9D%BC%EC%9D%B4%EC%B8%84%EB%82%98%EC%9D%B4%ED%8A%B8X_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/raichunitex.png",
     "category": "mega-stones",
     "mega_ko": "메가라이츄 X",
     "mega_en": "raichu-mega-x",
@@ -6015,7 +6015,7 @@
     "en": "raichunite y",
     "desc": "라이츄에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/c/c3/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%9D%BC%EC%9D%B4%EC%B8%84%EB%82%98%EC%9D%B4%ED%8A%B8Y_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/raichunitey.png",
     "category": "mega-stones",
     "mega_ko": "메가라이츄 Y",
     "mega_en": "raichu-mega-y",
@@ -6027,7 +6027,7 @@
     "en": "chimechite",
     "desc": "치렁에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/0/07/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%B9%98%EB%A0%81%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/chimechite.png",
     "category": "mega-stones",
     "mega_ko": "메가치렁",
     "mega_en": "chimecho-mega",
@@ -6039,7 +6039,7 @@
     "en": "absolite z",
     "desc": "앱솔에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/e/ea/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%95%B1%EC%86%94%EB%82%98%EC%9D%B4%ED%8A%B8Z_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/absolitez.png",
     "category": "mega-stones",
     "mega_ko": "메가앱솔 Z",
     "mega_en": "absol-mega-z",
@@ -6051,7 +6051,7 @@
     "en": "staraptite",
     "desc": "찌르호크에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/3/36/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%B0%8C%EB%A5%B4%ED%98%B8%ED%81%AC%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/staraptite.png",
     "category": "mega-stones",
     "mega_ko": "메가찌르호크",
     "mega_en": "staraptor-mega",
@@ -6063,7 +6063,7 @@
     "en": "garchompite z",
     "desc": "한카리아스에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/2/23/%EC%95%84%EC%9D%B4%EC%BD%98_%ED%95%9C%EC%B9%B4%EB%A6%AC%EC%95%84%EC%8A%A4%EB%82%98%EC%9D%B4%ED%8A%B8Z_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/garchompitez.png",
     "category": "mega-stones",
     "mega_ko": "메가한카리아스 Z",
     "mega_en": "garchomp-mega-z",
@@ -6075,7 +6075,7 @@
     "en": "lucarionite z",
     "desc": "루카리오에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/2/2a/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%A3%A8%EC%B9%B4%EB%A6%AC%EC%98%A4%EB%82%98%EC%9D%B4%ED%8A%B8Z_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/lucarionitez.png",
     "category": "mega-stones",
     "mega_ko": "메가루카리오 Z",
     "mega_en": "lucario-mega-z",
@@ -6087,7 +6087,7 @@
     "en": "golurkite",
     "desc": "골루그에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/5/5d/%EC%95%84%EC%9D%B4%EC%BD%98_%EA%B3%A8%EB%A3%A8%EA%B7%B8%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/golurkite.png",
     "category": "mega-stones",
     "mega_ko": "메가골루그",
     "mega_en": "golurk-mega",
@@ -6099,7 +6099,7 @@
     "en": "meowsticite",
     "desc": "냐오닉스에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/2/23/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%83%90%EC%98%A4%EB%8B%89%EC%8A%A4%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/meowsticite.png",
     "category": "mega-stones",
     "mega_ko": "메가냐오닉스",
     "mega_en": "meowstic-mega",
@@ -6111,7 +6111,7 @@
     "en": "crabominite",
     "desc": "모단단게에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/a/af/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%AA%A8%EB%8B%A8%EB%8B%A8%EA%B2%8C%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/crabominite.png",
     "category": "mega-stones",
     "mega_ko": "메가모단단게",
     "mega_en": "crabominable-mega",
@@ -6123,7 +6123,7 @@
     "en": "golisopite",
     "desc": "갑주무사에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/6/67/%EC%95%84%EC%9D%B4%EC%BD%98_%EA%B0%91%EC%A3%BC%EB%AC%B4%EC%82%AC%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/golisopite.png",
     "category": "mega-stones",
     "mega_ko": "메가갑주무사",
     "mega_en": "golisopod-mega",
@@ -6135,7 +6135,7 @@
     "en": "magearnite",
     "desc": "마기아나에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/7/79/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%A7%88%EA%B8%B0%EC%95%84%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/magearnite.png",
     "category": "mega-stones",
     "mega_ko": "메가마기아나",
     "mega_en": "magearna-mega",
@@ -6147,7 +6147,7 @@
     "en": "scovillainite",
     "desc": "스코빌런에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/f/f3/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%8A%A4%EC%BD%94%EB%B9%8C%EB%9F%B0%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/scovillainite.png",
     "category": "mega-stones",
     "mega_ko": "메가스코빌런",
     "mega_en": "scovillain-mega",
@@ -6159,7 +6159,7 @@
     "en": "baxcalibrite",
     "desc": "드닐레이브에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/d/df/%EC%95%84%EC%9D%B4%EC%BD%98_%EB%93%9C%EB%8B%90%EB%A0%88%EC%9D%B4%EB%B8%8C%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/baxcalibrite.png",
     "category": "mega-stones",
     "mega_ko": "메가드닐레이브",
     "mega_en": "baxcalibur-mega",
@@ -6171,7 +6171,7 @@
     "en": "tatsugirinite",
     "desc": "싸리용에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/2/2c/%EC%95%84%EC%9D%B4%EC%BD%98_%EC%8B%B8%EB%A6%AC%EC%9A%A9%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/tatsugirinite.png",
     "category": "mega-stones",
     "mega_ko": "메가싸리용",
     "mega_en": "tatsugiri-stretchy-mega",
@@ -6183,7 +6183,7 @@
     "en": "glimmoranite",
     "desc": "킬라플로르에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
     "desc_lang": "ko",
-    "sprite": "https://static.wikia.nocookie.net/pokemon/images/7/73/%EC%95%84%EC%9D%B4%EC%BD%98_%ED%82%AC%EB%9D%BC%ED%94%8C%EB%A1%9C%EB%A5%B4%EB%82%98%EC%9D%B4%ED%8A%B8_ZA.png",
+    "sprite": "https://www.serebii.net/itemdex/sprites/glimmoranite.png",
     "category": "mega-stones",
     "mega_ko": "메가킬라플로르",
     "mega_en": "glimmora-mega",
