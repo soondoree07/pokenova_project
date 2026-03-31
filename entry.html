@@ -282,6 +282,65 @@
       text-align:center; color:#333; font-size:0.9rem;
     }
 
+    /* ─── 기술 슬롯 (슬롯 카드 내) ─── */
+    .slot-moves {
+      display:grid; grid-template-columns:1fr 1fr;
+      gap:3px; width:90%; margin-top:5px; position:relative; z-index:2;
+    }
+    .slot-move {
+      font-size:0.5rem; font-weight:700;
+      padding:2px 4px; border-radius:4px; text-align:center;
+      cursor:pointer; transition:opacity .15s, border-color .15s;
+      overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+      line-height:1.5;
+    }
+    .slot-move.filled { background:var(--mc); color:#fff; border:1px solid transparent; }
+    .slot-move.filled:hover { opacity:.75; }
+    .slot-move.empty { background:transparent; color:#2a2a2a; border:1px dashed #252525; }
+    .slot-move.empty:hover { border-color:#555; color:#555; }
+
+    /* ─── 기술 모달 ─── */
+    .move-grid {
+      display:grid; grid-template-columns:repeat(2,1fr);
+      gap:8px; padding-top:8px;
+    }
+    .move-card {
+      border-radius:12px; border:1.5px solid #252525; background:#0f0f0f;
+      cursor:pointer; padding:10px 12px;
+      transition:border-color .15s, background .15s;
+    }
+    .move-card:hover { border-color:#7c4dff; background:#100d18; }
+    .move-card.selected { border-color:#7c4dff; background:#100d18; }
+    .move-card .mc-head {
+      display:flex; align-items:center; justify-content:space-between; gap:6px;
+      margin-bottom:4px;
+    }
+    .move-card .mc-name { font-size:0.78rem; font-weight:700; color:#ddd; }
+    .move-card .mc-learn {
+      font-size:0.6rem; color:#666; white-space:nowrap; flex-shrink:0;
+    }
+    .move-card .mc-meta {
+      display:flex; align-items:center; gap:5px; flex-wrap:wrap;
+    }
+    .move-card .mc-type {
+      font-size:0.58rem; font-weight:700; padding:1px 6px;
+      border-radius:4px; color:#fff; line-height:1.4;
+    }
+    .move-card .mc-stat {
+      font-size:0.6rem; color:#555;
+    }
+    .move-card .mc-desc {
+      font-size:0.6rem; color:#444; margin-top:4px;
+      overflow:hidden; text-overflow:ellipsis;
+      display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;
+    }
+    .move-remove-btn {
+      background:none; border:1px solid #333; color:#555;
+      font-size:0.72rem; padding:6px 16px; border-radius:20px;
+      cursor:pointer; transition:color .2s,border-color .2s;
+    }
+    .move-remove-btn:hover { color:#e53935; border-color:#e53935; }
+
     /* ─── 배틀팀 탭 ─── */
     .team-tabs {
       display:flex; gap:8px; margin-bottom:24px; align-items:center;
@@ -401,6 +460,27 @@
   </div>
 </div>
 
+<!-- ─── 기술 선택 모달 ─── -->
+<div class="modal-overlay hidden" id="move-modal">
+  <div class="modal-box">
+    <div class="modal-head">
+      <div class="modal-title" id="move-modal-title">기술 선택</div>
+      <input type="text" class="modal-search" id="move-search"
+             placeholder="기술 이름 검색..." oninput="filterMoveModal()"
+             autocomplete="off" spellcheck="false">
+    </div>
+    <div class="modal-filters" id="move-method-filters"></div>
+    <div class="modal-filters" id="move-type-filters" style="padding-top:0"></div>
+    <div class="modal-scroll">
+      <div class="move-grid" id="move-grid"></div>
+    </div>
+    <div class="modal-close-wrap">
+      <button class="move-remove-btn hidden" id="move-remove-btn" onclick="removeMove()">기술 해제</button>
+      <button class="btn-modal-close" onclick="closeMoveModal()">닫기</button>
+    </div>
+  </div>
+</div>
+
 <!-- ─── 도구 선택 모달 ─── -->
 <div class="modal-overlay hidden" id="item-modal">
   <div class="modal-box">
@@ -507,14 +587,44 @@ let itemFiltered    = [];
 // 메가진화 폼 영문명 → 메가스톤 아이템 룩업
 const megaStoneByFormEn = {};
 
+// 기술 데이터
+let allMoves    = [];           // quiz_moves.json 전체
+let moveByEn    = {};           // en -> move 객체
+let learnsets   = {};           // pokemon_en -> [{en, method, level}]
+
+// 기술 모달 상태
+let activeMoveSlotIdx   = 0;    // 0~3: 어떤 기술 슬롯을 편집 중
+let moveMethodFilter    = '전체';
+let moveTypeFilter      = '전체';
+let moveFiltered        = [];
+
+const LEARN_METHOD_KO = {
+  'level-up': '레벨업', 'machine': '기술머신',
+  'egg': '교배기', 'tutor': '가르침',
+};
+
 // ─── 초기화 ───
 async function init() {
-  const [pokeRes, itemRes] = await Promise.all([
+  const [pokeRes, itemRes, moveRes, learnRes] = await Promise.all([
     fetch('data/quiz_pokemon.json'),
     fetch('data/quiz_items.json'),
+    fetch('data/quiz_moves.json'),
+    fetch('data/learnsets.json').catch(() => null),
   ]);
   const pokeData = await pokeRes.json();
-  allItems = await itemRes.json();
+  allItems  = await itemRes.json();
+  allMoves  = await moveRes.json();
+  if (learnRes) learnsets = await learnRes.json();
+
+  // 기술 en → 객체 룩업
+  allMoves.forEach(m => { moveByEn[m.en] = m; });
+
+  // 메가스톤 룩업 맵 빌드 (mega_en → item)
+  allItems.forEach(it => {
+    if (it.category === 'mega-stones' && it.mega_en) {
+      megaStoneByFormEn[it.mega_en] = it;
+    }
+  });
 
   // 메가스톤 룩업 맵 빌드 (mega_en → item)
   allItems.forEach(it => {
@@ -701,6 +811,18 @@ function renderSectionGrid(section, entry, gridId, badgeId) {
            </div>`
         : `<div class="slot-item empty-item" onclick="openItemModal('${section}',${i},event)">+ 도구</div>`;
 
+      // 기술 슬롯 (4개)
+      const moves = slot.moves || [null, null, null, null];
+      const movesHtml = moves.map((mv, mi) => {
+        if (mv) {
+          const mc = typeColor(mv.type);
+          return `<div class="slot-move filled" style="--mc:${mc}"
+                    onclick="openMoveModal('${section}',${i},${mi},event)">${mv.ko}</div>`;
+        }
+        return `<div class="slot-move empty"
+                  onclick="openMoveModal('${section}',${i},${mi},event)">+ 기술</div>`;
+      }).join('');
+
       el.innerHTML = `
         <div class="slot-type-bg"></div>
         <button class="slot-remove" onclick="removeSlot('${section}',${i},event)">✕</button>
@@ -709,9 +831,10 @@ function renderSectionGrid(section, entry, gridId, badgeId) {
         <div class="slot-types">${typesBadges}</div>
         <div class="${abClass}" onclick="openAbilityModal('${section}',${i},event)">${abText}</div>
         ${itemHtml}
+        <div class="slot-moves">${movesHtml}</div>
       `;
       el.onclick = (e) => {
-        if (!e.target.closest('.slot-remove,.slot-ability,.slot-item')) {
+        if (!e.target.closest('.slot-remove,.slot-ability,.slot-item,.slot-move')) {
           openItemModal(section, i, e);
         }
       };
@@ -932,6 +1055,7 @@ function applyPokemonToSlot(p, ability) {
     pokemon: p,
     ability: ability,
     item: itemToSet,
+    moves: existing?.moves || [null, null, null, null],
   });
   renderGrids();
 
@@ -944,6 +1068,166 @@ function applyPokemonToSlot(p, ability) {
   // 도구 선택 모달 이어서 열기 (뒤로 버튼 표시)
   itemModalShowBack = true;
   openItemModal(activeSection, activeSlotIdx, null);
+}
+
+// ══════════════════════════════════════════
+// ─── 기술 모달 ───
+// ══════════════════════════════════════════
+function openMoveModal(section, idx, moveSlotIdx, e) {
+  if (e) e.stopPropagation();
+  activeSection    = section;
+  activeSlotIdx    = idx;
+  activeMoveSlotIdx = moveSlotIdx;
+
+  const slot = getEntry(section, idx);
+  if (!slot) return;
+
+  const pokeEn = slot.pokemon.en.toLowerCase().replace(/ /g, '-');
+  const ls = learnsets[pokeEn] || [];
+
+  // 배울 수 있는 기술 목록 (quiz_moves.json 기준으로 enriched)
+  moveFiltered = ls
+    .map(entry => {
+      const mv = moveByEn[entry.en];
+      if (!mv) return null;
+      return { ...mv, method: entry.method, level: entry.level };
+    })
+    .filter(Boolean);
+
+  if (moveFiltered.length === 0) {
+    // learnset 없으면 전체 기술 표시
+    moveFiltered = allMoves.map(mv => ({ ...mv, method: '', level: 0 }));
+  }
+
+  moveMethodFilter = '전체';
+  moveTypeFilter   = '전체';
+
+  document.getElementById('move-modal-title').textContent =
+    `${slot.pokemon.ko} — ${moveSlotIdx + 1}번 기술 선택`;
+  document.getElementById('move-search').value = '';
+
+  // 기술 해제 버튼: 슬롯에 기술이 있으면 표시
+  const currentMove = (slot.moves || [])[moveSlotIdx];
+  document.getElementById('move-remove-btn').classList.toggle('hidden', !currentMove);
+
+  buildMoveFilters();
+  renderMoveGrid();
+  document.getElementById('move-modal').classList.remove('hidden');
+}
+
+function buildMoveFilters() {
+  // 습득 방법 필터
+  const methods = ['전체', ...new Set(moveFiltered.map(m => m.method).filter(Boolean))];
+  const mWrap = document.getElementById('move-method-filters');
+  mWrap.innerHTML = methods.map(m => {
+    const label = m === '전체' ? '전체' : (LEARN_METHOD_KO[m] || m);
+    const active = moveMethodFilter === m;
+    return `<button class="filter-btn${active ? ' active' : ''}"
+      style="${active ? 'background:#7c4dff;border-color:#7c4dff;color:#fff' : ''}"
+      onclick="setMoveMethodFilter('${m}')">${label}</button>`;
+  }).join('');
+
+  // 타입 필터
+  const types = ['전체', ...new Set(moveFiltered.map(m => m.type).filter(Boolean))].sort();
+  const tWrap = document.getElementById('move-type-filters');
+  tWrap.innerHTML = types.map(t => {
+    const active = moveTypeFilter === t;
+    const bg = t === '전체' ? '#e53935' : typeColor(t);
+    return `<button class="filter-btn${active ? ' active' : ''}"
+      style="${active ? `background:${bg};border-color:${bg};color:${TYPE_LIGHT.has(t)?'#555':'#fff'}` : ''}"
+      onclick="setMoveTypeFilter('${t}')">${t}</button>`;
+  }).join('');
+}
+
+function setMoveMethodFilter(m) {
+  moveMethodFilter = m;
+  buildMoveFilters();
+  renderMoveGrid();
+}
+function setMoveTypeFilter(t) {
+  moveTypeFilter = t;
+  buildMoveFilters();
+  renderMoveGrid();
+}
+
+function filterMoveModal() {
+  renderMoveGrid();
+}
+
+function renderMoveGrid() {
+  const q = document.getElementById('move-search').value.trim().toLowerCase();
+  const grid = document.getElementById('move-grid');
+
+  let list = moveFiltered;
+  if (moveMethodFilter !== '전체') list = list.filter(m => m.method === moveMethodFilter);
+  if (moveTypeFilter   !== '전체') list = list.filter(m => m.type   === moveTypeFilter);
+  if (q) list = list.filter(m => m.ko.includes(q) || m.en.includes(q));
+
+  // 레벨업은 레벨 순, 나머지는 이름 순
+  list = [...list].sort((a, b) => {
+    if (a.method === 'level-up' && b.method === 'level-up') return a.level - b.level;
+    if (a.method === 'level-up') return -1;
+    if (b.method === 'level-up') return 1;
+    return a.ko.localeCompare(b.ko);
+  });
+
+  const slot = getEntry(activeSection, activeSlotIdx);
+  const currentMoves = slot?.moves || [];
+
+  if (list.length === 0) {
+    grid.innerHTML = '<div class="modal-empty">기술이 없습니다.</div>';
+    return;
+  }
+
+  grid.innerHTML = '';
+  list.forEach(mv => {
+    const isSelected = currentMoves[activeMoveSlotIdx]?.en === mv.en;
+    const learnInfo = mv.method === 'level-up' && mv.level > 0
+      ? `Lv.${mv.level}` : (LEARN_METHOD_KO[mv.method] || mv.method || '');
+    const tc = typeColor(mv.type);
+    const tLight = TYPE_LIGHT.has(mv.type);
+
+    const card = document.createElement('div');
+    card.className = 'move-card' + (isSelected ? ' selected' : '');
+    card.innerHTML = `
+      <div class="mc-head">
+        <span class="mc-name">${mv.ko}</span>
+        <span class="mc-learn">${learnInfo}</span>
+      </div>
+      <div class="mc-meta">
+        <span class="mc-type" style="background:${tc};${tLight?'color:#555':''}">${mv.type}</span>
+        <span class="mc-stat">${mv.class}</span>
+        <span class="mc-stat">위력 ${mv.power ?? '—'}</span>
+        <span class="mc-stat">명중 ${mv.accuracy ?? '—'}</span>
+        <span class="mc-stat">PP ${mv.pp ?? '—'}</span>
+      </div>
+      ${mv.desc ? `<div class="mc-desc">${mv.desc}</div>` : ''}
+    `;
+    card.onclick = () => selectMove(mv);
+    grid.appendChild(card);
+  });
+}
+
+function selectMove(mv) {
+  const slot = getEntry(activeSection, activeSlotIdx);
+  if (!slot) return;
+  if (!slot.moves) slot.moves = [null, null, null, null];
+  slot.moves[activeMoveSlotIdx] = mv;
+  closeMoveModal();
+  renderGrids();
+}
+
+function removeMove() {
+  const slot = getEntry(activeSection, activeSlotIdx);
+  if (!slot) return;
+  if (!slot.moves) slot.moves = [null, null, null, null];
+  slot.moves[activeMoveSlotIdx] = null;
+  closeMoveModal();
+  renderGrids();
+}
+
+function closeMoveModal() {
+  document.getElementById('move-modal').classList.add('hidden');
 }
 
 // ══════════════════════════════════════════
