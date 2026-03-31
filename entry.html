@@ -621,9 +621,10 @@ async function init() {
   // 기술 en → 객체 룩업
   allMoves.forEach(m => { moveByEn[m.en] = m; });
 
-  // 메가스톤 룩업 맵 빌드 (mega_en → item)
+  // 메가스톤·전용도구 룩업 맵 빌드 (mega_en → item)
+  // mega-stones 뿐 아니라 species-specific 중 mega_en 있는 것도 포함 (오거폰 가면류)
   allItems.forEach(it => {
-    if (it.category === 'mega-stones' && it.mega_en) {
+    if (it.mega_en) {
       megaStoneByFormEn[it.mega_en] = it;
     }
   });

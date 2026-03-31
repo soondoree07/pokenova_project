@@ -29305,7 +29305,7 @@
     "forms": [
       {
         "type": "alt",
-        "name_ko": "우물의가면",
+        "name_ko": "오거폰",
         "name_en": "ogerpon-wellspring-mask",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10273.png",
         "types": [
@@ -29322,7 +29322,7 @@
       },
       {
         "type": "alt",
-        "name_ko": "화덕의가면",
+        "name_ko": "오거폰",
         "name_en": "ogerpon-hearthflame-mask",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10274.png",
         "types": [
@@ -29339,7 +29339,7 @@
       },
       {
         "type": "alt",
-        "name_ko": "주춧돌의가면",
+        "name_ko": "오거폰",
         "name_en": "ogerpon-cornerstone-mask",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10275.png",
         "types": [

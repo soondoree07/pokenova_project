@@ -5269,7 +5269,9 @@
     "desc": "결정이 장식되어 있는 목각 가면. 오거폰에게 지니게 하면 바위타입을 두르고 싸울 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://www.serebii.net/itemdex/sprites/cornerstonemask.png",
-    "category": "species-specific"
+    "category": "species-specific",
+    "mega_en": "ogerpon-cornerstone-mask",
+    "base_id": 1017
   },
   {
     "id": 958,
@@ -5278,7 +5280,9 @@
     "desc": "결정이 장식되어 있는 목각 가면. 오거폰에게 지니게 하면 물타입을 두르고 싸울 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://www.serebii.net/itemdex/sprites/wellspringmask.png",
-    "category": "species-specific"
+    "category": "species-specific",
+    "mega_en": "ogerpon-wellspring-mask",
+    "base_id": 1017
   },
   {
     "id": 959,
@@ -5287,7 +5291,9 @@
     "desc": "결정이 장식되어 있는 목각 가면. 오거폰에게 지니게 하면 불꽃타입을 두르고 싸울 수 있다.",
     "desc_lang": "ko",
     "sprite": "https://www.serebii.net/itemdex/sprites/hearthflamemask.png",
-    "category": "species-specific"
+    "category": "species-specific",
+    "mega_en": "ogerpon-hearthflame-mask",
+    "base_id": 1017
   },
   {
     "id": 960,
@@ -6188,5 +6194,29 @@
     "mega_ko": "메가킬라플로르",
     "mega_en": "glimmora-mega",
     "base_id": 970
+  },
+  {
+    "id": 1045,
+    "ko": "쪽빛구슬",
+    "en": "blue orb",
+    "desc": "가이오가에게 지니게 하면 배틀할 때 원시회귀할 수 있는 신비한 구슬.",
+    "desc_lang": "ko",
+    "sprite": "https://www.serebii.net/itemdex/sprites/blueorb.png",
+    "category": "mega-stones",
+    "mega_ko": "원시가이오가",
+    "mega_en": "kyogre-primal",
+    "base_id": 382
+  },
+  {
+    "id": 1046,
+    "ko": "주홍구슬",
+    "en": "red orb",
+    "desc": "그란돈에게 지니게 하면 배틀할 때 원시회귀할 수 있는 신비한 구슬.",
+    "desc_lang": "ko",
+    "sprite": "https://www.serebii.net/itemdex/sprites/redorb.png",
+    "category": "mega-stones",
+    "mega_ko": "원시그란돈",
+    "mega_en": "groudon-primal",
+    "base_id": 383
   }
 ]
