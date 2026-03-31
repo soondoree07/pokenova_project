@@ -282,6 +282,30 @@
       text-align:center; color:#333; font-size:0.9rem;
     }
 
+    /* ─── 배틀팀 탭 ─── */
+    .team-tabs {
+      display:flex; gap:8px; margin-bottom:24px; align-items:center;
+      border-bottom:1px solid #1e1e1e; padding-bottom:20px;
+      flex-wrap:wrap;
+    }
+    .team-tab {
+      display:flex; align-items:center; gap:6px;
+      padding:7px 18px; border-radius:20px;
+      border:1.5px solid #252525; background:#111;
+      color:#666; font-size:0.85rem; font-weight:600;
+      cursor:pointer; transition:border-color .2s,color .2s,background .2s;
+      user-select:none;
+    }
+    .team-tab:hover { border-color:#555; color:#ccc; }
+    .team-tab.active { border-color:#e53935; color:#f0f0f0; background:#1a0000; }
+    .team-tab-rename {
+      background:none; border:none; color:#444;
+      font-size:0.72rem; cursor:pointer; padding:0 2px;
+      transition:color .2s; line-height:1;
+    }
+    .team-tab.active .team-tab-rename { color:#883333; }
+    .team-tab-rename:hover { color:#e53935; }
+
     /* ─── 반응형 ─── */
     @media (max-width:700px) {
       .main { padding:20px 12px; }
@@ -314,6 +338,8 @@
 <main class="main">
   <div class="page-title">엔트리 구성</div>
   <div class="page-sub">메인 엔트리 6마리와 벤치 엔트리 6마리를 골라보세요.</div>
+
+  <div class="team-tabs" id="team-tabs"></div>
 
   <section class="entry-section">
     <div class="section-header">
@@ -453,8 +479,17 @@ const ALLOWED_CATS = new Set([
 // ─── 전역 상태 ───
 let allPokemon = [];
 let allItems   = [];
-let mainEntry  = new Array(6).fill(null);  // 각 slot: {pokemon, ability, item} | null
-let benchEntry = new Array(6).fill(null);
+
+// 배틀팀 (최대 3개)
+const MAX_TEAMS = 3;
+let teams = Array.from({length: MAX_TEAMS}, (_, i) => ({
+  name: `배틀팀${i + 1}`,
+  main:  new Array(6).fill(null),
+  bench: new Array(6).fill(null),
+}));
+let activeTeam = 0;
+let mainEntry  = teams[0].main;
+let benchEntry = teams[0].bench;
 
 // 모달 상태
 let activeSection = null;
@@ -549,30 +584,85 @@ async function init() {
   });
 
   loadSaved();
+  renderTeamTabs();
   renderGrids();
 }
 
 // ─── 저장/불러오기 ───
 function saveEntry() {
-  localStorage.setItem('pokenova_main',  JSON.stringify(mainEntry));
-  localStorage.setItem('pokenova_bench', JSON.stringify(benchEntry));
+  localStorage.setItem('pokenova_teams',       JSON.stringify(teams));
+  localStorage.setItem('pokenova_active_team', String(activeTeam));
   const msg = document.getElementById('save-msg');
   msg.classList.add('show');
   setTimeout(() => msg.classList.remove('show'), 2000);
 }
 function loadSaved() {
   try {
-    const m = localStorage.getItem('pokenova_main');
-    const b = localStorage.getItem('pokenova_bench');
-    if (m) mainEntry  = JSON.parse(m);
-    if (b) benchEntry = JSON.parse(b);
-    // 슬롯 크기 보정
-    while (mainEntry.length  < 6) mainEntry.push(null);
-    while (benchEntry.length < 6) benchEntry.push(null);
+    const saved = localStorage.getItem('pokenova_teams');
+    const savedAt = localStorage.getItem('pokenova_active_team');
+
+    // 구버전 데이터 마이그레이션 (pokenova_main / pokenova_bench)
+    if (!saved) {
+      const m = localStorage.getItem('pokenova_main');
+      const b = localStorage.getItem('pokenova_bench');
+      if (m) teams[0].main  = JSON.parse(m);
+      if (b) teams[0].bench = JSON.parse(b);
+    } else {
+      const parsed = JSON.parse(saved);
+      parsed.forEach((t, i) => {
+        if (!teams[i]) return;
+        teams[i].name  = t.name  || `배틀팀${i + 1}`;
+        teams[i].main  = t.main  || new Array(6).fill(null);
+        teams[i].bench = t.bench || new Array(6).fill(null);
+        while (teams[i].main.length  < 6) teams[i].main.push(null);
+        while (teams[i].bench.length < 6) teams[i].bench.push(null);
+      });
+    }
+
+    activeTeam = Math.min(parseInt(savedAt) || 0, MAX_TEAMS - 1);
+    mainEntry  = teams[activeTeam].main;
+    benchEntry = teams[activeTeam].bench;
   } catch(e) {}
 }
 
 // ─── 렌더링 ───
+// ══════════════════════════════════════════
+// ─── 배틀팀 탭 ───
+// ══════════════════════════════════════════
+function renderTeamTabs() {
+  const wrap = document.getElementById('team-tabs');
+  wrap.innerHTML = '';
+  teams.forEach((team, idx) => {
+    const tab = document.createElement('div');
+    tab.className = 'team-tab' + (idx === activeTeam ? ' active' : '');
+    tab.innerHTML = `
+      <span>${team.name}</span>
+      <button class="team-tab-rename" title="이름 변경" onclick="event.stopPropagation(); renameTeam(${idx})">✏</button>
+    `;
+    tab.onclick = () => switchTeam(idx);
+    wrap.appendChild(tab);
+  });
+}
+
+function switchTeam(idx) {
+  if (idx === activeTeam) return;
+  activeTeam = idx;
+  mainEntry  = teams[activeTeam].main;
+  benchEntry = teams[activeTeam].bench;
+  renderTeamTabs();
+  renderGrids();
+}
+
+function renameTeam(idx) {
+  const current = teams[idx].name;
+  const next = prompt('팀 이름을 입력하세요', current);
+  if (next === null) return;           // 취소
+  const trimmed = next.trim();
+  if (!trimmed) return;                // 빈 문자열
+  teams[idx].name = trimmed;
+  renderTeamTabs();
+}
+
 function renderGrids() {
   renderSectionGrid('main',  mainEntry,  'main-grid',  'main-badge');
   renderSectionGrid('bench', benchEntry, 'bench-grid', 'bench-badge');
@@ -648,15 +738,20 @@ function removeSlot(section, idx, e) {
   renderGrids();
 }
 function clearSection(section) {
-  if (section === 'main') mainEntry  = new Array(6).fill(null);
-  else                    benchEntry = new Array(6).fill(null);
+  if (section === 'main') {
+    teams[activeTeam].main = new Array(6).fill(null);
+    mainEntry = teams[activeTeam].main;
+  } else {
+    teams[activeTeam].bench = new Array(6).fill(null);
+    benchEntry = teams[activeTeam].bench;
+  }
   renderGrids();
 }
 function resetAll() {
-  mainEntry  = new Array(6).fill(null);
-  benchEntry = new Array(6).fill(null);
-  localStorage.removeItem('pokenova_main');
-  localStorage.removeItem('pokenova_bench');
+  teams[activeTeam].main  = new Array(6).fill(null);
+  teams[activeTeam].bench = new Array(6).fill(null);
+  mainEntry  = teams[activeTeam].main;
+  benchEntry = teams[activeTeam].bench;
   renderGrids();
 }
 
