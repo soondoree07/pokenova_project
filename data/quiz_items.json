@@ -5196,7 +5196,7 @@
     "en": "scroll of darkness",
     "desc": "어느 특정 포켓몬을 진화시키는 이상한 족자. 어두운 기운이 담겨 있다.",
     "desc_lang": "ko",
-    "sprite": "",
+    "sprite": "https://www.serebii.net/itemdex/sprites/scrollofdarkness.png",
     "category": "evolution"
   },
   {
@@ -5205,7 +5205,7 @@
     "en": "scroll of waters",
     "desc": "어느 특정 포켓몬을 진화시키는 이상한 족자. 물의 기운이 담겨 있다.",
     "desc_lang": "ko",
-    "sprite": "",
+    "sprite": "https://www.serebii.net/itemdex/sprites/scrollofwaters.png",
     "category": "evolution"
   },
   {
