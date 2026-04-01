@@ -41,7 +41,7 @@ h1{font-size:1.3rem;font-weight:700;margin-bottom:18px;color:#fff}
 
 /* ── 기술 그리드 ── */
 .move-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
-.move-card{background:#141414;border:1px solid #252525;border-radius:10px;padding:12px 14px;cursor:default;transition:border-color .15s}
+.move-card{background:#141414;border:1px solid #252525;border-radius:10px;padding:12px 14px;cursor:pointer;transition:border-color .15s}
 .move-card:hover{border-color:#444}
 .move-card-header{display:flex;align-items:center;gap:8px;margin-bottom:6px}
 .move-name-ko{font-size:0.98rem;font-weight:700}
@@ -88,6 +88,34 @@ h1{font-size:1.3rem;font-weight:700;margin-bottom:18px;color:#fff}
 .site-footer a{color:#777;text-decoration:none;transition:color .2s}
 .site-footer a:hover{color:#e53935}
 .site-footer .footer-name{color:#888;font-weight:600}
+
+/* ── 모달 ── */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:200;align-items:flex-start;justify-content:center;padding:40px 16px;overflow-y:auto}
+.modal-overlay.open{display:flex}
+.modal-box{background:#181818;border:1px solid #333;border-radius:14px;width:100%;max-width:680px;padding:24px;position:relative;margin:auto}
+.modal-close{position:absolute;top:14px;right:16px;background:none;border:none;color:#888;font-size:1.4rem;cursor:pointer;line-height:1}
+.modal-close:hover{color:#fff}
+
+/* 모달 기술 정보 */
+.modal-move-header{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+.modal-move-name-ko{font-size:1.2rem;font-weight:800}
+.modal-move-name-en{font-size:0.82rem;color:#888;margin-top:2px}
+.modal-move-badges{display:flex;gap:6px;margin-left:auto}
+.modal-move-stats{display:flex;gap:18px;font-size:0.82rem;color:#aaa;margin-bottom:12px;flex-wrap:wrap}
+.modal-move-stats span{color:#e0e0e0;font-weight:600}
+.modal-move-desc{font-size:0.84rem;color:#ccc;line-height:1.6;margin-bottom:4px}
+.modal-move-gen{font-size:0.75rem;color:#555;margin-bottom:20px}
+
+/* 배울 수 있는 포켓몬 */
+.modal-section-title{font-size:0.82rem;font-weight:700;color:#888;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid #2a2a2a}
+.learner-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:8px}
+.learner-card{background:#1e1e1e;border:1px solid #2a2a2a;border-radius:8px;padding:8px 4px 6px;text-align:center;cursor:default;transition:border-color .15s}
+.learner-card:hover{border-color:#555}
+.learner-card img{width:56px;height:56px;object-fit:contain;image-rendering:auto}
+.learner-name-ko{font-size:0.68rem;font-weight:600;margin-top:4px;color:#e0e0e0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.learner-name-en{font-size:0.6rem;color:#666;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.learner-id{font-size:0.6rem;color:#555;margin-bottom:2px}
+.modal-no-learner{color:#666;font-size:0.84rem;padding:16px 0}
 </style>
 </head>
 <body>
@@ -122,14 +150,31 @@ h1{font-size:1.3rem;font-weight:700;margin-bottom:18px;color:#fff}
   <div class="move-grid" id="move-grid"></div>
 </div>
 
+<!-- 기술 상세 모달 -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+  <div class="modal-box" id="modal-box">
+    <button class="modal-close" onclick="closeModalDirect()">✕</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
 <script>
-let allMoves = [];
+let allMoves    = [];
+let allPokemon  = [];
+let learnsets   = {};
 let typeFilter  = '전체';
 let classFilter = '전체';
 
+// learnsets의 en은 하이픈, quiz_moves의 en은 공백 → 통일
+function moveKey(en) { return (en || '').toLowerCase().replace(/\s+/g, '-'); }
+
 async function init() {
-  allMoves = (await fetch('data/quiz_moves.json').then(r => r.json()))
-    .filter(m => !m.is_zmove);
+  [allMoves, allPokemon, learnsets] = await Promise.all([
+    fetch('data/quiz_moves.json').then(r => r.json()),
+    fetch('data/quiz_pokemon.json').then(r => r.json()),
+    fetch('data/learnsets.json').then(r => r.json()),
+  ]);
+  allMoves = allMoves.filter(m => !m.is_zmove);
 
   buildChips();
   render();
@@ -150,20 +195,13 @@ function buildChips() {
 
 function setType(t) {
   typeFilter = t;
-  document.querySelectorAll('#type-chips .chip').forEach(b => {
-    const on = b.dataset.t === t;
-    b.classList.toggle('active', on);
-    b.style.background = on && t !== '전체' ? '' : '';
-  });
-  // active 칩 색상 강조는 CSS 클래스로
+  document.querySelectorAll('#type-chips .chip').forEach(b => b.classList.toggle('active', b.dataset.t === t));
   render();
 }
 
 function setClass(c) {
   classFilter = c;
-  document.querySelectorAll('#class-chips .chip').forEach(b => {
-    b.classList.toggle('active', b.dataset.c === c);
-  });
+  document.querySelectorAll('#class-chips .chip').forEach(b => b.classList.toggle('active', b.dataset.c === c));
   render();
 }
 
@@ -184,7 +222,7 @@ function render() {
     const power = m.power ?? '—';
     const acc   = m.accuracy ?? '—';
     return `
-    <div class="move-card">
+    <div class="move-card" onclick="openModal(${JSON.stringify(m).replace(/"/g,'&quot;')})">
       <div class="move-card-header">
         <div>
           <div class="move-name-ko">${m.ko}</div>
@@ -205,6 +243,67 @@ function render() {
     </div>`;
   }).join('');
 }
+
+/* ── 모달 ── */
+function openModal(m) {
+  const key = moveKey(m.en);
+
+  // 이 기술을 배울 수 있는 포켓몬 찾기 (도감순)
+  const learners = allPokemon.filter(p => {
+    const lsEntry = learnsets[p.en.toLowerCase()];
+    return lsEntry && lsEntry.some(mv => mv.en === key);
+  }).sort((a, b) => a.id - b.id);
+
+  const pp    = m.pp    ?? '—';
+  const power = m.power ?? '—';
+  const acc   = m.accuracy ?? '—';
+
+  const learnerHTML = learners.length
+    ? `<div class="learner-grid">` + learners.map(p => `
+        <div class="learner-card">
+          <div class="learner-id">#${String(p.id).padStart(3,'0')}</div>
+          <img src="${p.sprite}" alt="${p.ko}" loading="lazy">
+          <div class="learner-name-ko">${p.ko}</div>
+          <div class="learner-name-en">${p.en}</div>
+        </div>`).join('') + `</div>`
+    : `<div class="modal-no-learner">이 기술을 배울 수 있는 포켓몬 정보가 없습니다.</div>`;
+
+  document.getElementById('modal-content').innerHTML = `
+    <div class="modal-move-header">
+      <div>
+        <div class="modal-move-name-ko">${m.ko}</div>
+        <div class="modal-move-name-en">${m.en}</div>
+      </div>
+      <div class="modal-move-badges">
+        <span class="badge-type t-${m.type}">${m.type}</span>
+        <span class="badge-class class-${m.class}">${m.class}</span>
+      </div>
+    </div>
+    <div class="modal-move-stats">
+      <div>PP <span>${pp}</span></div>
+      <div>위력 <span>${power}</span></div>
+      <div>명중 <span>${acc}</span></div>
+    </div>
+    <div class="modal-move-desc">${m.desc || ''}</div>
+    <div class="modal-move-gen">${m.gen || ''}</div>
+    <div class="modal-section-title">이 기술을 배울 수 있는 포켓몬 <span style="color:#666;font-weight:400">(${learners.length}마리)</span></div>
+    ${learnerHTML}
+  `;
+
+  document.getElementById('modal-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModalDirect() {
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function closeModal(e) {
+  if (e.target === document.getElementById('modal-overlay')) closeModalDirect();
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDirect(); });
 
 init();
 </script>
