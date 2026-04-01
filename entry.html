@@ -615,7 +615,7 @@ async function init() {
   ]);
   const pokeData = await pokeRes.json();
   allItems  = await itemRes.json();
-  allMoves  = await moveRes.json();
+  allMoves  = (await moveRes.json()).filter(m => !m.is_zmove);
   if (learnRes) learnsets = await learnRes.json();
 
   // 기술 en → 객체 룩업 (공백 키 + 하이픈 키 둘 다 등록)
