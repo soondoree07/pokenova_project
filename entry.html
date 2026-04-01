@@ -389,7 +389,8 @@
     </a>
     <nav class="nav-links">
       <a href="index.html" class="nav-link">퀴즈</a>
-      <a href="pokedex.html" class="nav-link">도감</a>
+      <a href="pokedex.html" class="nav-link">포켓몬 도감</a>
+      <a href="movedex.html" class="nav-link">기술 도감</a>
     </nav>
   </div>
 </header>
@@ -602,7 +603,7 @@ let moveModalShowBack   = false;
 
 const LEARN_METHOD_KO = {
   'level-up': '레벨업', 'machine': '기술머신',
-  'egg': '교배기', 'tutor': '가르침', 'form-change': '폼체인지',
+  'egg': '교배기', 'tutor': '가르침', 'form-change': '폼체인지', 'all': '전체기술',
 };
 
 // ─── 초기화 ───
@@ -1106,8 +1107,8 @@ function openMoveModal(section, idx, moveSlotIdx, e) {
     .filter(Boolean);
 
   if (moveFiltered.length === 0) {
-    // SV 미등장 포켓몬 — 전체 기술 표시 (method 정보 없음)
-    moveFiltered = allMoves.map(mv => ({ ...mv, method: '', level: 0 }));
+    // learnset 없음 — 전체 기술 표시 (method 정보 없음)
+    moveFiltered = allMoves.map(mv => ({ ...mv, method: 'all', level: 0 }));
   }
 
   moveMethodFilter = '전체';

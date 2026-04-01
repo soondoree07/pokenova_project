@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>기술 도감 — Pokénova</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0a0a0a;color:#f0f0f0;font-family:'Segoe UI','Noto Sans KR',sans-serif;min-height:100vh}
+a{text-decoration:none;color:inherit}
+
+/* ── 헤더 ── */
+.site-header{padding:18px 20px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.site-title{font-size:1.5rem;font-weight:800;letter-spacing:-.5px;color:#e53935}
+.nav-links{display:flex;gap:8px;flex-wrap:wrap}
+.nav-link{padding:7px 14px;border-radius:8px;background:#1e1e1e;font-size:0.82rem;font-weight:600;border:1px solid #333;transition:background .2s,color .2s}
+.nav-link:hover{background:#2a2a2a;color:#e53935}
+.nav-link.active{background:#e53935;color:#fff;border-color:#e53935}
+
+/* ── 컨테이너 ── */
+.container{max-width:1200px;margin:0 auto;padding:20px}
+h1{font-size:1.3rem;font-weight:700;margin-bottom:18px;color:#fff}
+
+/* ── 필터 바 ── */
+.filter-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;align-items:center}
+.search-wrap{position:relative;flex:1;min-width:180px;max-width:320px}
+.search-wrap input{width:100%;padding:8px 12px 8px 32px;background:#1a1a1a;border:1px solid #333;border-radius:8px;color:#f0f0f0;font-size:0.9rem;outline:none}
+.search-wrap input:focus{border-color:#e53935}
+.search-wrap::before{content:'🔍';position:absolute;left:9px;top:50%;transform:translateY(-50%);font-size:.85rem;opacity:.5}
+.filter-chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{padding:5px 11px;border-radius:20px;background:#1e1e1e;border:1.5px solid #333;font-size:0.78rem;font-weight:600;cursor:pointer;transition:all .15s;white-space:nowrap}
+.chip:hover{border-color:#888}
+.chip.active{color:#fff}
+.count-label{font-size:0.8rem;color:#888;margin-left:auto;align-self:center}
+
+/* ── 기술 그리드 ── */
+.move-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
+.move-card{background:#141414;border:1px solid #252525;border-radius:10px;padding:12px 14px;cursor:default;transition:border-color .15s}
+.move-card:hover{border-color:#444}
+.move-card-header{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.move-name-ko{font-size:0.98rem;font-weight:700}
+.move-name-en{font-size:0.75rem;color:#888}
+.move-badges{display:flex;gap:5px;margin-left:auto;flex-shrink:0}
+.badge-type{padding:2px 8px;border-radius:12px;font-size:0.72rem;font-weight:700}
+.badge-class{padding:2px 8px;border-radius:12px;font-size:0.72rem;font-weight:700;background:#2a2a2a;border:1px solid #444}
+.move-stats{display:flex;gap:12px;font-size:0.78rem;color:#aaa;margin-bottom:6px}
+.move-stat span{color:#e0e0e0;font-weight:600}
+.move-desc{font-size:0.8rem;color:#bbb;line-height:1.5}
+.move-gen{font-size:0.72rem;color:#666;margin-top:4px}
+
+/* ── 타입 색상 ── */
+.t-노말{background:#9e9e9e;color:#fff}
+.t-불꽃{background:#e53935;color:#fff}
+.t-물{background:#1976d2;color:#fff}
+.t-전기{background:#f9a825;color:#333}
+.t-풀{background:#388e3c;color:#fff}
+.t-얼음{background:#0097a7;color:#fff}
+.t-격투{background:#bf360c;color:#fff}
+.t-독{background:#7b1fa2;color:#fff}
+.t-땅{background:#795548;color:#fff}
+.t-비행{background:#5c6bc0;color:#fff}
+.t-에스퍼{background:#e91e63;color:#fff}
+.t-벌레{background:#558b2f;color:#fff}
+.t-바위{background:#78909c;color:#fff}
+.t-고스트{background:#4527a0;color:#fff}
+.t-드래곤{background:#1565c0;color:#fff}
+.t-악{background:#37474f;color:#fff}
+.t-강철{background:#546e7a;color:#fff}
+.t-페어리{background:#f06292;color:#fff}
+.t-스텔라{background:linear-gradient(135deg,#e53935,#1565c0,#388e3c);color:#fff}
+
+.class-물리{background:#c62828;color:#fff;border-color:#c62828!important}
+.class-특수{background:#1565c0;color:#fff;border-color:#1565c0!important}
+.class-변화{background:#2e7d32;color:#fff;border-color:#2e7d32!important}
+
+/* ── 반응형 ── */
+@media(max-width:600px){
+  .move-grid{grid-template-columns:1fr}
+  .filter-bar{gap:6px}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="site-title" href="index.html">Pokénova</a>
+  <nav class="nav-links">
+    <a href="index.html" class="nav-link">퀴즈</a>
+    <a href="pokedex.html" class="nav-link">포켓몬 도감</a>
+    <a href="movedex.html" class="nav-link active">기술 도감</a>
+    <a href="entry.html" class="nav-link">엔트리 구성</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>기술 도감</h1>
+
+  <div class="filter-bar">
+    <div class="search-wrap">
+      <input id="search" type="text" placeholder="기술명 검색..." oninput="render()" autocomplete="off" spellcheck="false">
+    </div>
+    <div class="filter-chips" id="type-chips"></div>
+    <div class="filter-chips" id="class-chips"></div>
+    <span class="count-label" id="count-label"></span>
+  </div>
+
+  <div class="move-grid" id="move-grid"></div>
+</div>
+
+<script>
+let allMoves = [];
+let typeFilter  = '전체';
+let classFilter = '전체';
+
+async function init() {
+  allMoves = (await fetch('data/quiz_moves.json').then(r => r.json()))
+    .filter(m => !m.is_zmove);
+
+  buildChips();
+  render();
+}
+
+function buildChips() {
+  const types = ['전체', ...[...new Set(allMoves.map(m => m.type).filter(Boolean))].sort()];
+  document.getElementById('type-chips').innerHTML = types.map(t => {
+    const cls = t === '전체' ? '' : `t-${t}`;
+    return `<button class="chip${t==='전체'?' active':''} ${cls}" data-t="${t}" onclick="setType('${t}')">${t}</button>`;
+  }).join('');
+
+  const classes = ['전체', '물리', '특수', '변화'];
+  document.getElementById('class-chips').innerHTML = classes.map(c =>
+    `<button class="chip${c==='전체'?' active':''}" data-c="${c}" onclick="setClass('${c}')">${c}</button>`
+  ).join('');
+}
+
+function setType(t) {
+  typeFilter = t;
+  document.querySelectorAll('#type-chips .chip').forEach(b => {
+    const on = b.dataset.t === t;
+    b.classList.toggle('active', on);
+    b.style.background = on && t !== '전체' ? '' : '';
+  });
+  // active 칩 색상 강조는 CSS 클래스로
+  render();
+}
+
+function setClass(c) {
+  classFilter = c;
+  document.querySelectorAll('#class-chips .chip').forEach(b => {
+    b.classList.toggle('active', b.dataset.c === c);
+  });
+  render();
+}
+
+function render() {
+  const q = document.getElementById('search').value.trim().toLowerCase();
+  let list = allMoves;
+  if (typeFilter  !== '전체') list = list.filter(m => m.type  === typeFilter);
+  if (classFilter !== '전체') list = list.filter(m => m.class === classFilter);
+  if (q) list = list.filter(m =>
+    (m.ko || '').toLowerCase().includes(q) ||
+    (m.en || '').toLowerCase().includes(q)
+  );
+
+  document.getElementById('count-label').textContent = `${list.length}개`;
+
+  document.getElementById('move-grid').innerHTML = list.map(m => {
+    const pp    = m.pp    ?? '—';
+    const power = m.power ?? '—';
+    const acc   = m.accuracy ?? '—';
+    return `
+    <div class="move-card">
+      <div class="move-card-header">
+        <div>
+          <div class="move-name-ko">${m.ko}</div>
+          <div class="move-name-en">${m.en}</div>
+        </div>
+        <div class="move-badges">
+          <span class="badge-type t-${m.type}">${m.type}</span>
+          <span class="badge-class class-${m.class}">${m.class}</span>
+        </div>
+      </div>
+      <div class="move-stats">
+        <div>PP <span>${pp}</span></div>
+        <div>위력 <span>${power}</span></div>
+        <div>명중 <span>${acc}</span></div>
+        <div style="margin-left:auto">${m.gen || ''}</div>
+      </div>
+      <div class="move-desc">${m.desc || ''}</div>
+    </div>`;
+  }).join('');
+}
+
+init();
+</script>
+</body>
+</html>
