@@ -81,8 +81,36 @@ h1{font-size:1.3rem;font-weight:700;margin-bottom:18px;color:#fff}
 
 /* ── 반응형 ── */
 @media(max-width:600px){
+  /* 헤더 */
+  .site-header{padding:0 12px}
+  .header-inner{height:52px;gap:8px}
+  .logo-text{font-size:15px}
+  .site-nav-btn{padding:5px 8px;font-size:0.75rem}
+
+  /* 컨테이너 */
+  .container{padding:14px 12px}
+  h1{font-size:1.1rem;margin-bottom:14px}
+
+  /* 검색·필터 */
+  .filter-bar{gap:6px;margin-bottom:10px}
+  .search-wrap{min-width:0;max-width:100%;flex:1 1 100%}
+  .search-wrap input{font-size:1rem;min-height:44px;padding:10px 12px 10px 32px} /* iOS zoom 방지 */
+  .chip{padding:7px 10px;min-height:38px;font-size:0.8rem}
+  .count-label{font-size:0.75rem}
+
+  /* 그리드 */
   .move-grid{grid-template-columns:1fr}
-  .filter-bar{gap:6px}
+
+  /* 모달 */
+  .modal-overlay{padding:20px 10px}
+  .modal-box{padding:18px}
+  .learner-grid{grid-template-columns:repeat(auto-fill,minmax(68px,1fr));gap:6px}
+  .learner-card img{width:48px;height:48px}
+  .modal-move-stats{gap:12px}
+}
+@media(max-width:380px){
+  .site-nav-btn{padding:4px 6px;font-size:0.7rem}
+  .chip{padding:6px 8px;font-size:0.75rem}
 }
 .site-footer{width:100%;max-width:700px;margin:60px auto 0;padding:24px 16px 8px;border-top:1px solid #252525;text-align:center;color:#555;font-size:0.78rem;line-height:1.9}
 .site-footer a{color:#777;text-decoration:none;transition:color .2s}

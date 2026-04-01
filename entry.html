@@ -373,14 +373,30 @@
     /* ─── 반응형 ─── */
     @media (max-width:700px) {
       .main { padding:20px 12px; }
-      .slot-grid { gap:8px; }
+      .site-header{padding:0 12px}
+      .header-inner{height:52px;gap:8px}
+      .logo-text{font-size:15px}
+      .site-nav-btn{padding:5px 8px;font-size:0.75rem}
+      .page-title{font-size:1.2rem}
+      /* 6열 → 3열: 375px 화면에서 슬롯 최소 100px 확보 */
+      .slot-grid { grid-template-columns:repeat(3,1fr); gap:8px; }
+      .slot { min-height:140px; }
       .poke-grid { grid-template-columns:repeat(2,1fr); }
       .item-grid { grid-template-columns:1fr; }
+      .team-tab{padding:6px 12px;font-size:0.8rem}
+      .action-bar{gap:8px}
+      .btn-save,.btn-reset{padding:10px 18px;font-size:0.85rem}
     }
     @media (max-width:460px) {
-      .slot-grid { gap:6px; }
+      .slot-grid { grid-template-columns:repeat(3,1fr); gap:6px; }
+      .slot { min-height:120px; }
       .slot-name { font-size:0.58rem; }
       .poke-grid { grid-template-columns:repeat(2,1fr); }
+      .modal-box{border-radius:18px}
+    }
+    @media (max-width:360px) {
+      .site-nav-btn{padding:4px 6px;font-size:0.7rem}
+      .slot-grid{grid-template-columns:repeat(3,1fr);gap:5px}
     }
     .site-footer {
       width: 100%; max-width: 700px; margin: 60px auto 0;

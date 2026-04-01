@@ -517,6 +517,7 @@
 
     @media (max-width: 768px) {
       /* 헤더: 검색창을 두 번째 줄로 */
+      .site-header { padding: 0 14px; }
       .header-inner {
         flex-wrap: wrap;
         height: auto;
@@ -528,13 +529,18 @@
         max-width: 100%;
         flex: 1 1 100%;
       }
+      /* iOS zoom 방지: 검색 font-size 반드시 1rem(16px) 이상 */
+      .search-input { font-size: 1rem; }
       .btn-quiz { font-size: 0.8rem; padding: 6px 12px; }
       .logo-text { font-size: 17px; }
+      .site-nav-btn { padding: 5px 10px; font-size: 0.78rem; }
 
       /* 필터바 */
       .filter-bar { padding: 10px 12px; }
       .filter-group { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 2px; }
       .filter-group::-webkit-scrollbar { height: 0; }
+      /* 필터 버튼 터치 영역 확보 */
+      .filter-btn { padding: 7px 12px; min-height: 36px; font-size: 12px; }
 
       /* 그리드 */
       .pokemon-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 8px; }
@@ -543,11 +549,15 @@
       /* 섹션 헤더 */
       .section-divider { margin: 20px auto 12px; }
       .section-divider h2 { font-size: 16px; }
+
+      /* 모달 */
+      .modal-overlay { padding: 12px; }
     }
 
     @media (max-width: 480px) {
       .site-header { padding: 0 12px; }
       .logo-text { font-size: 15px; }
+      .site-nav-btn { padding: 5px 8px; font-size: 0.74rem; }
       .pokemon-grid { grid-template-columns: repeat(auto-fill, minmax(88px, 1fr)); gap: 6px; }
       .pokemon-card { padding: 10px 6px 8px; }
       .card-img { width: 64px; height: 64px; }
@@ -560,6 +570,11 @@
       .modal-name-ko { font-size: 22px; }
       .modal-body { padding: 16px 18px 22px; }
       .forms-grid { grid-template-columns: repeat(auto-fill, minmax(76px, 1fr)); gap: 8px; }
+    }
+
+    @media (max-width: 380px) {
+      .site-nav-btn { padding: 4px 6px; font-size: 0.7rem; }
+      .filter-btn { padding: 6px 8px; font-size: 11px; }
     }
     .site-footer {
       width: 100%; max-width: 700px; margin: 60px auto 0;

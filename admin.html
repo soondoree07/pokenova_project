@@ -276,6 +276,23 @@
     .accuracy-cell { display: flex; align-items: center; gap: 8px; }
     .acc-bar-bg    { width: 48px; height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; flex-shrink: 0; }
     .acc-bar-fill  { height: 100%; border-radius: 2px; background: var(--green); }
+
+    /* ══ 모바일 반응형 ══ */
+    @media (max-width: 600px) {
+      .topbar { padding: 0 14px; gap: 8px; }
+      .topbar-logo { font-size: 0.82rem; }
+      .topbar-badge { padding: 2px 7px; font-size: 0.62rem; }
+      .topbar-btn { padding: 5px 10px; font-size: 0.75rem; }
+      .main { padding: 16px 12px; gap: 18px; }
+      .login-box { padding: 32px 22px 28px; }
+      .stat-value { font-size: 1.9rem; }
+      .panel { padding: 16px 14px; }
+      .filter-btn { padding: 6px 10px; min-height: 34px; }
+    }
+    @media (max-width: 400px) {
+      .topbar-btn { padding: 4px 8px; font-size: 0.7rem; }
+      .topbar-logo { display: none; }
+    }
   </style>
 </head>
 <body>
