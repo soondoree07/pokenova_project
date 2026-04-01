@@ -4466,6 +4466,20 @@
     "desc_lang": "ko"
   },
   {
+    "id": 344,
+    "ko": "볼트태클",
+    "en": "volt tackle",
+    "type": "전기",
+    "type_en": "electric",
+    "class": "물리",
+    "pp": 15,
+    "power": 120,
+    "accuracy": 100,
+    "gen": "3세대",
+    "desc": "전기를 한데 모아 돌진한다. 자신도 상당한 데미지를 입는다. 마비 상태로 만들 때가 있다.",
+    "desc_lang": "ko"
+  },
+  {
     "id": 345,
     "ko": "메지컬리프",
     "en": "magical leaf",
@@ -5821,6 +5835,20 @@
     "accuracy": 100,
     "gen": "4세대",
     "desc": "풀을 휘감아서 상대를 쓰러뜨린다. 상대가 무거울수록 위력이 올라간다.",
+    "desc_lang": "ko"
+  },
+  {
+    "id": 448,
+    "ko": "수다",
+    "en": "chatter",
+    "type": "비행",
+    "type_en": "flying",
+    "class": "특수",
+    "pp": 20,
+    "power": 65,
+    "accuracy": 100,
+    "gen": "4세대",
+    "desc": "기억한 말로 음파를 일으켜서 공격한다. 상대를 혼란시킨다.",
     "desc_lang": "ko"
   },
   {
@@ -7378,6 +7406,20 @@
     "desc_lang": "ko"
   },
   {
+    "id": 567,
+    "ko": "핼러윈",
+    "en": "trick-or-treat",
+    "type": "고스트",
+    "type_en": "ghost",
+    "class": "변화",
+    "pp": 20,
+    "power": null,
+    "accuracy": 100,
+    "gen": "6세대",
+    "desc": "상대를 핼러윈으로 초대한다. 상대 타입에 고스트타입이 추가된다.",
+    "desc_lang": "ko"
+  },
+  {
     "id": 568,
     "ko": "부르짖기",
     "en": "noble roar",
@@ -7627,6 +7669,20 @@
     "accuracy": null,
     "gen": "6세대",
     "desc": "록을 걸어 다음 턴의 모든 포켓몬을 도망가지 못하게 한다.",
+    "desc_lang": "ko"
+  },
+  {
+    "id": 588,
+    "ko": "킹실드",
+    "en": "king's shield",
+    "type": "강철",
+    "type_en": "steel",
+    "class": "변화",
+    "pp": 10,
+    "power": null,
+    "accuracy": null,
+    "gen": "6세대",
+    "desc": "상대의 공격을 막음과 동시에 방어 태세를 갖춘다. 접촉한 상대의 공격을 크게 떨어뜨린다.",
     "desc_lang": "ko"
   },
   {
@@ -7935,6 +7991,20 @@
     "accuracy": 100,
     "gen": "6세대",
     "desc": "땅 위를 뻗어 나가는 파도로 공격한다. 파도에 휩쓸린 상대는 전투에서 도망칠 수 없게 된다.",
+    "desc_lang": "ko"
+  },
+  {
+    "id": 616,
+    "ko": "그라운드포스",
+    "en": "land's wrath",
+    "type": "땅",
+    "type_en": "ground",
+    "class": "물리",
+    "pp": 10,
+    "power": 90,
+    "accuracy": 100,
+    "gen": "6세대",
+    "desc": "대지의 힘을 모으고 그 힘을 상대에게 집중시켜서 데미지를 준다.",
     "desc_lang": "ko"
   },
   {
