@@ -787,7 +787,9 @@ const GMAX_SKIP = new Set(['toxtricity-low-key-gmax']);
 
 let DB = [], totalAll = 0;
 const SIBLING_MAP = {}; // id → 같은 ID를 가진 모든 렌더된 엔트리
-let activeType = null, activeGen = null, activeCat = 'all';
+let activeTypes = new Set(), activeGens = new Set(), activeCats = new Set();
+const ALL_CATS = ['normal','region','mega','gmax'];
+const ALL_GENS = [1,2,3,4,5,6,7,8,9];
 
 // ─── CARD 생성 ───
 function buildCard(p) {
@@ -959,20 +961,28 @@ function applyFilters() {
 
   cards.forEach(c => {
     const matchText = !q || c.dataset.ko.includes(q) || c.dataset.en.includes(q);
-    const matchType = !activeType || c.dataset.types.split(',').includes(activeType);
-    const matchGen  = !activeGen  || +c.dataset.gen === activeGen;
-    const matchCat  = activeCat === 'all'
-      || (activeCat === 'normal' && (c.dataset.cat === 'normal' || c.dataset.cat === 'fusion' || c.dataset.cat === 'origin' || c.dataset.cat === 'alt'))
-      || (activeCat === 'region' && c.dataset.cat === 'region')
-      || (activeCat === 'mega'   && c.dataset.cat === 'mega')
-      || (activeCat === 'gmax'   && c.dataset.cat === 'gmax');
+
+    // 타입: 선택된 타입 모두 포함해야 통과
+    const cardTypes = c.dataset.types.split(',');
+    const matchType = activeTypes.size === 0 || [...activeTypes].every(t => cardTypes.includes(t));
+
+    // 세대: 선택된 세대 중 하나면 통과 (전체 선택 = 필터 없음)
+    const matchGen = activeGens.size === 0 || activeGens.has(+c.dataset.gen);
+
+    // 분류: 선택된 분류 중 하나면 통과 (전체 선택 = 필터 없음)
+    const cat = c.dataset.cat;
+    const normalCats = new Set(['normal','fusion','origin','alt']);
+    const matchCat = activeCats.size === 0
+      || (activeCats.has('normal') && normalCats.has(cat))
+      || (activeCats.has('region') && cat === 'region')
+      || (activeCats.has('mega')   && cat === 'mega')
+      || (activeCats.has('gmax')   && cat === 'gmax');
 
     const visible = matchText && matchType && matchGen && matchCat;
     c.classList.toggle('hidden', !visible);
     if (visible) shown++;
   });
 
-  // 섹션 헤더 - 해당 섹션에 보이는 카드 없으면 숨김
   ['mega','gmax'].forEach(type => {
     const grid   = document.getElementById(type + '-grid');
     const header = document.getElementById(type + '-section-header');
@@ -980,51 +990,64 @@ function applyFilters() {
     header.style.display = hasVisible ? '' : 'none';
   });
 
-  const hasAnyFilter = q || activeType || activeGen || activeCat !== 'all';
+  const hasAnyFilter = q || activeTypes.size || activeGens.size || activeCats.size;
   document.getElementById('no-results').style.display = (shown === 0 && hasAnyFilter) ? 'block' : 'none';
   updateCount(shown);
 }
 
 document.getElementById('search-input').addEventListener('input', applyFilters);
 
-// 분류 필터
+// 분류 필터 (다중 최대 3개 / 4개 전체 선택 시 초기화)
 document.getElementById('cat-group').addEventListener('click', e => {
   const btn = e.target.closest('[data-cat]');
   if (!btn) return;
-  activeCat = btn.dataset.cat;
-  document.querySelectorAll('#cat-group .filter-btn').forEach(b => b.classList.toggle('active-cat', b===btn));
+  const cat = btn.dataset.cat;
+  if (cat === 'all') {
+    activeCats.clear();
+  } else {
+    if (activeCats.has(cat)) activeCats.delete(cat);
+    else {
+      if (activeCats.size >= 3) return;
+      activeCats.add(cat);
+    }
+    if (ALL_CATS.every(c => activeCats.has(c))) activeCats.clear();
+  }
+  document.querySelectorAll('#cat-group [data-cat]').forEach(b => {
+    if (b.dataset.cat === 'all') b.classList.toggle('active-cat', activeCats.size === 0);
+    else b.classList.toggle('active-cat', activeCats.has(b.dataset.cat));
+  });
   applyFilters();
 });
 
-// 세대 필터
+// 세대 필터 (다중 / 전체 선택 시 초기화)
 document.getElementById('gen-group').addEventListener('click', e => {
   const btn = e.target.closest('[data-gen]');
   if (!btn) return;
   const g = +btn.dataset.gen;
-  if (activeGen === g) { activeGen = null; btn.classList.remove('active-gen'); }
-  else {
-    activeGen = g;
-    document.querySelectorAll('#gen-group .filter-btn').forEach(b => b.classList.remove('active-gen'));
-    btn.classList.add('active-gen');
-  }
+  if (activeGens.has(g)) activeGens.delete(g);
+  else activeGens.add(g);
+  if (ALL_GENS.every(n => activeGens.has(n))) activeGens.clear();
+  document.querySelectorAll('#gen-group .filter-btn').forEach(b => {
+    b.classList.toggle('active-gen', activeGens.has(+b.dataset.gen));
+  });
   applyFilters();
 });
 
-// 타입 필터
+// 타입 필터 (최대 2개)
 document.getElementById('type-group').addEventListener('click', e => {
   const btn = e.target.closest('[data-type]');
   if (!btn) return;
   const t = btn.dataset.type;
-  if (activeType === t) {
-    activeType = null;
-    document.querySelectorAll('#type-group .filter-btn').forEach(b => b.style.opacity = '0.55');
-  } else {
-    activeType = t;
-    document.querySelectorAll('#type-group .filter-btn').forEach(b => b.style.opacity = '0.55');
-    btn.style.opacity = '1';
-    btn.style.boxShadow = '0 0 0 3px rgba(0,0,0,0.25)';
-    setTimeout(() => btn.style.boxShadow = '', 200);
+  if (activeTypes.has(t)) activeTypes.delete(t);
+  else {
+    if (activeTypes.size >= 2) return;
+    activeTypes.add(t);
   }
+  document.querySelectorAll('#type-group .filter-btn').forEach(b => {
+    const on = activeTypes.has(b.dataset.type);
+    b.style.opacity = (activeTypes.size === 0 || on) ? '1' : '0.45';
+    b.style.outline = on ? '2px solid #fff' : '';
+  });
   applyFilters();
 });
 
