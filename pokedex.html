@@ -561,6 +561,14 @@
       .modal-body { padding: 16px 18px 22px; }
       .forms-grid { grid-template-columns: repeat(auto-fill, minmax(76px, 1fr)); gap: 8px; }
     }
+    .site-footer {
+      width: 100%; max-width: 700px; margin: 60px auto 0;
+      padding: 24px 16px 8px; border-top: 1px solid #252525;
+      text-align: center; color: #555; font-size: 0.78rem; line-height: 1.9;
+    }
+    .site-footer a { color: #777; text-decoration: none; transition: color .2s; }
+    .site-footer a:hover { color: #e53935; }
+    .site-footer .footer-name { color: #888; font-weight: 600; }
   </style>
 </head>
 <body>
@@ -1303,5 +1311,14 @@ Promise.all([
       '<p style="padding:40px;color:#999;text-align:center">데이터를 불러올 수 없습니다.</p>';
   });
 </script>
+
+<footer class="site-footer">
+  <div>Made by <span class="footer-name">잉짱</span> &nbsp;·&nbsp; <a href="mailto:soondoree07@gmail.com">soondoree07@gmail.com</a></div>
+  <div style="margin-top:6px; font-size:0.72rem; color:#444;">
+    Pokémon and all related names are trademarks of Nintendo / Game Freak / Creatures Inc.<br>
+    This site is a fan-made project and is not affiliated with or endorsed by Nintendo.
+  </div>
+  <div style="margin-top:8px; font-size:0.72rem;">© 2026 Pokénova</div>
+</footer>
 </body>
 </html>
