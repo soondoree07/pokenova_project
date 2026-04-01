@@ -69,7 +69,7 @@
         "type": "mega",
         "name_ko": "메가이상해꽃",
         "name_en": "venusaur-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10033.png",
+        "sprite": "sprites/pokemon/za_venusaur_mega.png",
         "types": [
           "풀",
           "독"
@@ -86,7 +86,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 이상해꽃",
         "name_en": "venusaur-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10195.png",
+        "sprite": "sprites/pokemon/za_venusaur_gmax.png",
         "types": [
           "풀",
           "독"
@@ -174,7 +174,7 @@
         "type": "mega",
         "name_ko": "메가리자몽 X",
         "name_en": "charizard-mega-x",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10034.png",
+        "sprite": "sprites/pokemon/za_charizard_mega_x.png",
         "types": [
           "불꽃",
           "드래곤"
@@ -191,7 +191,7 @@
         "type": "mega",
         "name_ko": "메가리자몽 Y",
         "name_en": "charizard-mega-y",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10035.png",
+        "sprite": "sprites/pokemon/za_charizard_mega_y.png",
         "types": [
           "불꽃",
           "비행"
@@ -208,7 +208,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 리자몽",
         "name_en": "charizard-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10196.png",
+        "sprite": "sprites/pokemon/za_charizard_gmax.png",
         "types": [
           "불꽃",
           "비행"
@@ -295,7 +295,7 @@
         "type": "mega",
         "name_ko": "메가거북왕",
         "name_en": "blastoise-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10036.png",
+        "sprite": "sprites/pokemon/za_blastoise_mega.png",
         "types": [
           "물"
         ],
@@ -311,7 +311,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 거북왕",
         "name_en": "blastoise-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10197.png",
+        "sprite": "sprites/pokemon/za_blastoise_gmax.png",
         "types": [
           "물"
         ],
@@ -393,7 +393,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 버터플",
         "name_en": "butterfree-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10198.png",
+        "sprite": "sprites/pokemon/za_butterfree_gmax.png",
         "types": [
           "벌레",
           "비행"
@@ -478,7 +478,7 @@
         "type": "mega",
         "name_ko": "메가독침붕",
         "name_en": "beedrill-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10090.png",
+        "sprite": "sprites/pokemon/za_beedrill_mega.png",
         "types": [
           "벌레",
           "독"
@@ -578,7 +578,7 @@
         "type": "mega",
         "name_ko": "메가피죤투",
         "name_en": "pidgeot-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10073.png",
+        "sprite": "sprites/pokemon/za_pidgeot_mega.png",
         "types": [
           "노말",
           "비행"
@@ -623,7 +623,7 @@
         "type": "alola",
         "name_ko": "알로라 꼬렛",
         "name_en": "rattata-alola",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10091.png",
+        "sprite": "sprites/pokemon/za_rattata_alola.png",
         "types": [
           "악",
           "노말"
@@ -678,7 +678,7 @@
         "type": "alola",
         "name_ko": "알로라 레트라",
         "name_en": "raticate-alola",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10092.png",
+        "sprite": "sprites/pokemon/za_raticate_alola.png",
         "types": [
           "악",
           "노말"
@@ -705,7 +705,7 @@
         "type": "alola",
         "name_ko": "알로라 레트라",
         "name_en": "raticate-totem-alola",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10093.png",
+        "sprite": "sprites/pokemon/za_raticate_totem_alola.png",
         "types": [
           "악",
           "노말"
@@ -851,7 +851,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 피카츄",
         "name_en": "pikachu-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10199.png",
+        "sprite": "sprites/pokemon/za_pikachu_gmax.png",
         "types": [
           "전기"
         ],
@@ -895,7 +895,7 @@
         "type": "alola",
         "name_ko": "알로라 라이츄",
         "name_en": "raichu-alola",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10100.png",
+        "sprite": "sprites/pokemon/za_raichu_alola.png",
         "types": [
           "전기",
           "에스퍼"
@@ -912,7 +912,7 @@
         "type": "mega",
         "name_ko": "메가라이츄 X",
         "name_en": "raichu-mega-x",
-        "sprite": "sprites/pokemon/__pokemon__images__d__d0__%EB%A9%94%EA%B0%80%EB%9D%BC%EC%9D%B4%EC%B8%84X_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png",
+        "sprite": "sprites/pokemon/za_raichu_mega_x.png",
         "types": [
           "전기"
         ],
@@ -924,7 +924,7 @@
         "type": "mega",
         "name_ko": "메가라이츄 Y",
         "name_en": "raichu-mega-y",
-        "sprite": "sprites/pokemon/__pokemon__images__c__c9__%EB%A9%94%EA%B0%80%EB%9D%BC%EC%9D%B4%EC%B8%84Y_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png",
+        "sprite": "sprites/pokemon/za_raichu_mega_y.png",
         "types": [
           "전기"
         ],
@@ -959,7 +959,7 @@
         "type": "alola",
         "name_ko": "알로라 모래두지",
         "name_en": "sandshrew-alola",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10101.png",
+        "sprite": "sprites/pokemon/za_sandshrew_alola.png",
         "types": [
           "얼음",
           "강철"
@@ -1004,7 +1004,7 @@
         "type": "alola",
         "name_ko": "알로라 고지",
         "name_en": "sandslash-alola",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10102.png",
+        "sprite": "sprites/pokemon/za_sandslash_alola.png",
         "types": [
           "얼음",
           "강철"
@@ -1238,7 +1238,7 @@
         "type": "mega",
         "name_ko": "메가픽시",
         "name_en": "clefable-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10278.png",
+        "sprite": "sprites/pokemon/za_clefable_mega.png",
         "types": [
           "페어리",
           "비행"
@@ -1274,7 +1274,7 @@
         "type": "alola",
         "name_ko": "알로라 식스테일",
         "name_en": "vulpix-alola",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10103.png",
+        "sprite": "sprites/pokemon/za_vulpix_alola.png",
         "types": [
           "얼음"
         ],
@@ -1318,7 +1318,7 @@
         "type": "alola",
         "name_ko": "알로라 나인테일",
         "name_en": "ninetales-alola",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10104.png",
+        "sprite": "sprites/pokemon/za_ninetales_alola.png",
         "types": [
           "얼음",
           "페어리"
@@ -1640,7 +1640,7 @@
         "type": "alola",
         "name_ko": "알로라 디그다",
         "name_en": "diglett-alola",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10105.png",
+        "sprite": "sprites/pokemon/za_diglett_alola.png",
         "types": [
           "땅",
           "강철"
@@ -1695,7 +1695,7 @@
         "type": "alola",
         "name_ko": "알로라 닥트리오",
         "name_en": "dugtrio-alola",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10106.png",
+        "sprite": "sprites/pokemon/za_dugtrio_alola.png",
         "types": [
           "땅",
           "강철"
@@ -1750,7 +1750,7 @@
         "type": "alola",
         "name_ko": "알로라 나옹",
         "name_en": "meowth-alola",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10107.png",
+        "sprite": "sprites/pokemon/za_meowth_alola.png",
         "types": [
           "악"
         ],
@@ -1776,7 +1776,7 @@
         "type": "galar",
         "name_ko": "가라르 나옹",
         "name_en": "meowth-galar",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10161.png",
+        "sprite": "sprites/pokemon/za_meowth_galar.png",
         "types": [
           "강철"
         ],
@@ -1802,7 +1802,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 나옹",
         "name_en": "meowth-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10200.png",
+        "sprite": "sprites/pokemon/za_meowth_gmax.png",
         "types": [
           "노말"
         ],
@@ -1856,7 +1856,7 @@
         "type": "alola",
         "name_ko": "알로라 페르시온",
         "name_en": "persian-alola",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10108.png",
+        "sprite": "sprites/pokemon/za_persian_alola.png",
         "types": [
           "악"
         ],
@@ -2014,7 +2014,7 @@
         "type": "hisui",
         "name_ko": "히스이 가디",
         "name_en": "growlithe-hisui",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10229.png",
+        "sprite": "sprites/pokemon/za_growlithe_hisui.png",
         "types": [
           "불꽃",
           "바위"
@@ -2069,7 +2069,7 @@
         "type": "hisui",
         "name_ko": "히스이 윈디",
         "name_en": "arcanine-hisui",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10230.png",
+        "sprite": "sprites/pokemon/za_arcanine_hisui.png",
         "types": [
           "불꽃",
           "바위"
@@ -2255,7 +2255,7 @@
         "type": "mega",
         "name_ko": "메가후딘",
         "name_en": "alakazam-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10037.png",
+        "sprite": "sprites/pokemon/za_alakazam_mega.png",
         "types": [
           "에스퍼"
         ],
@@ -2351,7 +2351,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 괴력몬",
         "name_en": "machamp-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10201.png",
+        "sprite": "sprites/pokemon/za_machamp_gmax.png",
         "types": [
           "격투"
         ],
@@ -2445,7 +2445,7 @@
         "type": "mega",
         "name_ko": "메가우츠보트",
         "name_en": "victreebel-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10279.png",
+        "sprite": "sprites/pokemon/za_victreebel_mega.png",
         "types": [
           "풀",
           "독"
@@ -2541,7 +2541,7 @@
         "type": "alola",
         "name_ko": "알로라 꼬마돌",
         "name_en": "geodude-alola",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10109.png",
+        "sprite": "sprites/pokemon/za_geodude_alola.png",
         "types": [
           "바위",
           "전기"
@@ -2597,7 +2597,7 @@
         "type": "alola",
         "name_ko": "알로라 데구리",
         "name_en": "graveler-alola",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10110.png",
+        "sprite": "sprites/pokemon/za_graveler_alola.png",
         "types": [
           "바위",
           "전기"
@@ -2653,7 +2653,7 @@
         "type": "alola",
         "name_ko": "알로라 딱구리",
         "name_en": "golem-alola",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10111.png",
+        "sprite": "sprites/pokemon/za_golem_alola.png",
         "types": [
           "바위",
           "전기"
@@ -2708,7 +2708,7 @@
         "type": "galar",
         "name_ko": "가라르 포니타",
         "name_en": "ponyta-galar",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10162.png",
+        "sprite": "sprites/pokemon/za_ponyta_galar.png",
         "types": [
           "에스퍼"
         ],
@@ -2762,7 +2762,7 @@
         "type": "galar",
         "name_ko": "가라르 날쌩마",
         "name_en": "rapidash-galar",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10163.png",
+        "sprite": "sprites/pokemon/za_rapidash_galar.png",
         "types": [
           "에스퍼",
           "페어리"
@@ -2818,7 +2818,7 @@
         "type": "galar",
         "name_ko": "가라르 야돈",
         "name_en": "slowpoke-galar",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10164.png",
+        "sprite": "sprites/pokemon/za_slowpoke_galar.png",
         "types": [
           "에스퍼"
         ],
@@ -2873,7 +2873,7 @@
         "type": "mega",
         "name_ko": "메가야도란",
         "name_en": "slowbro-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10071.png",
+        "sprite": "sprites/pokemon/za_slowbro_mega.png",
         "types": [
           "물",
           "에스퍼"
@@ -2890,7 +2890,7 @@
         "type": "galar",
         "name_ko": "가라르 야도란",
         "name_en": "slowbro-galar",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10165.png",
+        "sprite": "sprites/pokemon/za_slowbro_galar.png",
         "types": [
           "독",
           "에스퍼"
@@ -3000,7 +3000,7 @@
         "type": "galar",
         "name_ko": "가라르 파오리",
         "name_en": "farfetchd-galar",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10166.png",
+        "sprite": "sprites/pokemon/za_farfetchd_galar.png",
         "types": [
           "격투"
         ],
@@ -3156,7 +3156,7 @@
         "type": "alola",
         "name_ko": "알로라 질퍽이",
         "name_en": "grimer-alola",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10112.png",
+        "sprite": "sprites/pokemon/za_grimer_alola.png",
         "types": [
           "독",
           "악"
@@ -3211,7 +3211,7 @@
         "type": "alola",
         "name_ko": "알로라 질뻐기",
         "name_en": "muk-alola",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10113.png",
+        "sprite": "sprites/pokemon/za_muk_alola.png",
         "types": [
           "독",
           "악"
@@ -3344,7 +3344,7 @@
         "type": "mega",
         "name_ko": "메가팬텀",
         "name_en": "gengar-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10038.png",
+        "sprite": "sprites/pokemon/za_gengar_mega.png",
         "types": [
           "고스트",
           "독"
@@ -3361,7 +3361,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 팬텀",
         "name_en": "gengar-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10202.png",
+        "sprite": "sprites/pokemon/za_gengar_gmax.png",
         "types": [
           "고스트",
           "독"
@@ -3511,7 +3511,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 킹크랩",
         "name_en": "kingler-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10203.png",
+        "sprite": "sprites/pokemon/za_kingler_gmax.png",
         "types": [
           "물"
         ],
@@ -3565,7 +3565,7 @@
         "type": "hisui",
         "name_ko": "히스이 찌리리공",
         "name_en": "voltorb-hisui",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10231.png",
+        "sprite": "sprites/pokemon/za_voltorb_hisui.png",
         "types": [
           "전기",
           "풀"
@@ -3620,7 +3620,7 @@
         "type": "hisui",
         "name_ko": "히스이 붐볼",
         "name_en": "electrode-hisui",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10232.png",
+        "sprite": "sprites/pokemon/za_electrode_hisui.png",
         "types": [
           "전기",
           "풀"
@@ -3693,7 +3693,7 @@
         "type": "alola",
         "name_ko": "알로라 나시",
         "name_en": "exeggutor-alola",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10114.png",
+        "sprite": "sprites/pokemon/za_exeggutor_alola.png",
         "types": [
           "풀",
           "드래곤"
@@ -3769,7 +3769,7 @@
         "type": "alola",
         "name_ko": "알로라 텅구리",
         "name_en": "marowak-alola",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10115.png",
+        "sprite": "sprites/pokemon/za_marowak_alola.png",
         "types": [
           "불꽃",
           "고스트"
@@ -3928,7 +3928,7 @@
         "type": "galar",
         "name_ko": "가라르 또도가스",
         "name_en": "weezing-galar",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10167.png",
+        "sprite": "sprites/pokemon/za_weezing_galar.png",
         "types": [
           "독",
           "페어리"
@@ -4089,7 +4089,7 @@
         "type": "mega",
         "name_ko": "메가캥카",
         "name_en": "kangaskhan-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10039.png",
+        "sprite": "sprites/pokemon/za_kangaskhan_mega.png",
         "types": [
           "노말"
         ],
@@ -4264,7 +4264,7 @@
         "type": "mega",
         "name_ko": "메가아쿠스타",
         "name_en": "starmie-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10280.png",
+        "sprite": "sprites/pokemon/za_starmie_mega.png",
         "types": [
           "물",
           "에스퍼"
@@ -4306,7 +4306,7 @@
         "type": "galar",
         "name_ko": "가라르 마임맨",
         "name_en": "mr-mime-galar",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10168.png",
+        "sprite": "sprites/pokemon/za_mr_mime_galar.png",
         "types": [
           "얼음",
           "에스퍼"
@@ -4457,7 +4457,7 @@
         "type": "mega",
         "name_ko": "메가쁘사이저",
         "name_en": "pinsir-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10040.png",
+        "sprite": "sprites/pokemon/za_pinsir_mega.png",
         "types": [
           "벌레",
           "비행"
@@ -4502,7 +4502,7 @@
         "type": "paldea",
         "name_ko": "팔데아 켄타로스 (컴뱃종)",
         "name_en": "tauros-paldea-combat-breed",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10250.png",
+        "sprite": "sprites/pokemon/za_tauros_paldea_combat_breed.png",
         "types": [
           "격투"
         ],
@@ -4528,7 +4528,7 @@
         "type": "paldea",
         "name_ko": "팔데아 켄타로스 (블레이즈종)",
         "name_en": "tauros-paldea-blaze-breed",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10251.png",
+        "sprite": "sprites/pokemon/za_tauros_paldea_blaze_breed.png",
         "types": [
           "격투",
           "불꽃"
@@ -4555,7 +4555,7 @@
         "type": "paldea",
         "name_ko": "팔데아 켄타로스 (워터종)",
         "name_en": "tauros-paldea-aqua-breed",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10252.png",
+        "sprite": "sprites/pokemon/za_tauros_paldea_aqua_breed.png",
         "types": [
           "격투",
           "물"
@@ -4627,7 +4627,7 @@
         "type": "mega",
         "name_ko": "메가갸라도스",
         "name_en": "gyarados-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10041.png",
+        "sprite": "sprites/pokemon/za_gyarados_mega.png",
         "types": [
           "물",
           "악"
@@ -4673,7 +4673,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 라프라스",
         "name_en": "lapras-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10204.png",
+        "sprite": "sprites/pokemon/za_lapras_gmax.png",
         "types": [
           "물",
           "얼음"
@@ -4749,7 +4749,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 이브이",
         "name_en": "eevee-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10205.png",
+        "sprite": "sprites/pokemon/za_eevee_gmax.png",
         "types": [
           "노말"
         ],
@@ -5001,7 +5001,7 @@
         "type": "mega",
         "name_ko": "메가프테라",
         "name_en": "aerodactyl-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10042.png",
+        "sprite": "sprites/pokemon/za_aerodactyl_mega.png",
         "types": [
           "바위",
           "비행"
@@ -5046,7 +5046,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 잠만보",
         "name_en": "snorlax-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10206.png",
+        "sprite": "sprites/pokemon/za_snorlax_gmax.png",
         "types": [
           "노말"
         ],
@@ -5096,7 +5096,7 @@
         "type": "galar",
         "name_ko": "가라르 프리져",
         "name_en": "articuno-galar",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10169.png",
+        "sprite": "sprites/pokemon/za_articuno_galar.png",
         "types": [
           "에스퍼",
           "비행"
@@ -5138,7 +5138,7 @@
         "type": "galar",
         "name_ko": "가라르 썬더",
         "name_en": "zapdos-galar",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10170.png",
+        "sprite": "sprites/pokemon/za_zapdos_galar.png",
         "types": [
           "격투",
           "비행"
@@ -5180,7 +5180,7 @@
         "type": "galar",
         "name_ko": "가라르 파이어",
         "name_en": "moltres-galar",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10171.png",
+        "sprite": "sprites/pokemon/za_moltres_galar.png",
         "types": [
           "악",
           "비행"
@@ -5264,7 +5264,7 @@
         "type": "mega",
         "name_ko": "메가망나뇽",
         "name_en": "dragonite-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10281.png",
+        "sprite": "sprites/pokemon/za_dragonite_mega.png",
         "types": [
           "드래곤",
           "비행"
@@ -5304,7 +5304,7 @@
         "type": "mega",
         "name_ko": "메가뮤츠 X",
         "name_en": "mewtwo-mega-x",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10043.png",
+        "sprite": "sprites/pokemon/za_mewtwo_mega_x.png",
         "types": [
           "에스퍼",
           "격투"
@@ -5321,7 +5321,7 @@
         "type": "mega",
         "name_ko": "메가뮤츠 Y",
         "name_en": "mewtwo-mega-y",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10044.png",
+        "sprite": "sprites/pokemon/za_mewtwo_mega_y.png",
         "types": [
           "에스퍼"
         ],
@@ -5420,7 +5420,7 @@
         "type": "mega",
         "name_ko": "메가메가니움",
         "name_en": "meganium-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10282.png",
+        "sprite": "sprites/pokemon/za_meganium_mega.png",
         "types": [
           "풀",
           "페어리"
@@ -5502,7 +5502,7 @@
         "type": "hisui",
         "name_ko": "히스이 블레이범",
         "name_en": "typhlosion-hisui",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10233.png",
+        "sprite": "sprites/pokemon/za_typhlosion_hisui.png",
         "types": [
           "불꽃",
           "고스트"
@@ -5589,7 +5589,7 @@
         "type": "mega",
         "name_ko": "메가장크로다일",
         "name_en": "feraligatr-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10283.png",
+        "sprite": "sprites/pokemon/za_feraligatr_mega.png",
         "types": [
           "물",
           "드래곤"
@@ -6142,7 +6142,7 @@
         "type": "mega",
         "name_ko": "메가전룡",
         "name_en": "ampharos-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10045.png",
+        "sprite": "sprites/pokemon/za_ampharos_mega.png",
         "types": [
           "전기",
           "드래곤"
@@ -6501,7 +6501,7 @@
         "type": "paldea",
         "name_ko": "팔데아 우파",
         "name_en": "wooper-paldea",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10253.png",
+        "sprite": "sprites/pokemon/za_wooper_paldea.png",
         "types": [
           "독",
           "땅"
@@ -6653,7 +6653,7 @@
         "type": "galar",
         "name_ko": "가라르 야도킹",
         "name_en": "slowking-galar",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10172.png",
+        "sprite": "sprites/pokemon/za_slowking_galar.png",
         "types": [
           "독",
           "에스퍼"
@@ -6885,7 +6885,7 @@
         "type": "mega",
         "name_ko": "메가강철톤",
         "name_en": "steelix-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10072.png",
+        "sprite": "sprites/pokemon/za_steelix_mega.png",
         "types": [
           "강철",
           "땅"
@@ -6983,7 +6983,7 @@
         "type": "hisui",
         "name_ko": "히스이 침바루",
         "name_en": "qwilfish-hisui",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10234.png",
+        "sprite": "sprites/pokemon/za_qwilfish_hisui.png",
         "types": [
           "악",
           "독"
@@ -7039,7 +7039,7 @@
         "type": "mega",
         "name_ko": "메가핫삼",
         "name_en": "scizor-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10046.png",
+        "sprite": "sprites/pokemon/za_scizor_mega.png",
         "types": [
           "벌레",
           "강철"
@@ -7112,7 +7112,7 @@
         "type": "mega",
         "name_ko": "메가헤라크로스",
         "name_en": "heracross-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10047.png",
+        "sprite": "sprites/pokemon/za_heracross_mega.png",
         "types": [
           "벌레",
           "격투"
@@ -7158,7 +7158,7 @@
         "type": "hisui",
         "name_ko": "히스이 포푸니",
         "name_en": "sneasel-hisui",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10235.png",
+        "sprite": "sprites/pokemon/za_sneasel_hisui.png",
         "types": [
           "격투",
           "독"
@@ -7373,7 +7373,7 @@
         "type": "galar",
         "name_ko": "가라르 코산호",
         "name_en": "corsola-galar",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10173.png",
+        "sprite": "sprites/pokemon/za_corsola_galar.png",
         "types": [
           "고스트"
         ],
@@ -7529,7 +7529,7 @@
         "type": "mega",
         "name_ko": "메가무장조",
         "name_en": "skarmory-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10284.png",
+        "sprite": "sprites/pokemon/za_skarmory_mega.png",
         "types": [
           "강철",
           "비행"
@@ -7598,7 +7598,7 @@
         "type": "mega",
         "name_ko": "메가헬가",
         "name_en": "houndoom-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10048.png",
+        "sprite": "sprites/pokemon/za_houndoom_mega.png",
         "types": [
           "악",
           "불꽃"
@@ -8064,7 +8064,7 @@
         "type": "mega",
         "name_ko": "메가마기라스",
         "name_en": "tyranitar-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10049.png",
+        "sprite": "sprites/pokemon/za_tyranitar_mega.png",
         "types": [
           "바위",
           "악"
@@ -8210,7 +8210,7 @@
         "type": "mega",
         "name_ko": "메가나무킹",
         "name_en": "sceptile-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10065.png",
+        "sprite": "sprites/pokemon/za_sceptile_mega.png",
         "types": [
           "풀",
           "드래곤"
@@ -8294,7 +8294,7 @@
         "type": "mega",
         "name_ko": "메가번치코",
         "name_en": "blaziken-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10050.png",
+        "sprite": "sprites/pokemon/za_blaziken_mega.png",
         "types": [
           "불꽃",
           "격투"
@@ -8378,7 +8378,7 @@
         "type": "mega",
         "name_ko": "메가대짱이",
         "name_en": "swampert-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10064.png",
+        "sprite": "sprites/pokemon/za_swampert_mega.png",
         "types": [
           "물",
           "땅"
@@ -8475,7 +8475,7 @@
         "type": "galar",
         "name_ko": "가라르 지그제구리",
         "name_en": "zigzagoon-galar",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10174.png",
+        "sprite": "sprites/pokemon/za_zigzagoon_galar.png",
         "types": [
           "악",
           "노말"
@@ -8530,7 +8530,7 @@
         "type": "galar",
         "name_ko": "가라르 직구리",
         "name_en": "linoone-galar",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10175.png",
+        "sprite": "sprites/pokemon/za_linoone_galar.png",
         "types": [
           "악",
           "노말"
@@ -8996,7 +8996,7 @@
         "type": "mega",
         "name_ko": "메가가디안",
         "name_en": "gardevoir-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10051.png",
+        "sprite": "sprites/pokemon/za_gardevoir_mega.png",
         "types": [
           "에스퍼",
           "페어리"
@@ -9468,7 +9468,7 @@
         "type": "mega",
         "name_ko": "메가깜까미",
         "name_en": "sableye-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10066.png",
+        "sprite": "sprites/pokemon/za_sableye_mega.png",
         "types": [
           "악",
           "고스트"
@@ -9514,7 +9514,7 @@
         "type": "mega",
         "name_ko": "메가입치트",
         "name_en": "mawile-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10052.png",
+        "sprite": "sprites/pokemon/za_mawile_mega.png",
         "types": [
           "강철",
           "페어리"
@@ -9614,7 +9614,7 @@
         "type": "mega",
         "name_ko": "메가보스로라",
         "name_en": "aggron-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10053.png",
+        "sprite": "sprites/pokemon/za_aggron_mega.png",
         "types": [
           "강철"
         ],
@@ -9676,7 +9676,7 @@
         "type": "mega",
         "name_ko": "메가요가램",
         "name_en": "medicham-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10054.png",
+        "sprite": "sprites/pokemon/za_medicham_mega.png",
         "types": [
           "격투",
           "에스퍼"
@@ -9747,7 +9747,7 @@
         "type": "mega",
         "name_ko": "메가썬더볼트",
         "name_en": "manectric-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10055.png",
+        "sprite": "sprites/pokemon/za_manectric_mega.png",
         "types": [
           "전기"
         ],
@@ -9982,7 +9982,7 @@
         "type": "mega",
         "name_ko": "메가샤크니아",
         "name_en": "sharpedo-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10070.png",
+        "sprite": "sprites/pokemon/za_sharpedo_mega.png",
         "types": [
           "물",
           "악"
@@ -10107,7 +10107,7 @@
         "type": "mega",
         "name_ko": "메가폭타",
         "name_en": "camerupt-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10087.png",
+        "sprite": "sprites/pokemon/za_camerupt_mega.png",
         "types": [
           "불꽃",
           "땅"
@@ -10377,7 +10377,7 @@
         "type": "mega",
         "name_ko": "메가파비코리",
         "name_en": "altaria-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10067.png",
+        "sprite": "sprites/pokemon/za_altaria_mega.png",
         "types": [
           "드래곤",
           "페어리"
@@ -10769,7 +10769,7 @@
         "type": "alt",
         "name_ko": "태양의 모습",
         "name_en": "castform-sunny",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10013.png",
+        "sprite": "sprites/pokemon/za_castform_sunny.png",
         "types": [
           "불꽃"
         ],
@@ -10785,7 +10785,7 @@
         "type": "alt",
         "name_ko": "빗방울의 모습",
         "name_en": "castform-rainy",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10014.png",
+        "sprite": "sprites/pokemon/za_castform_rainy.png",
         "types": [
           "물"
         ],
@@ -10801,7 +10801,7 @@
         "type": "alt",
         "name_ko": "설운의 모습",
         "name_en": "castform-snowy",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10015.png",
+        "sprite": "sprites/pokemon/za_castform_snowy.png",
         "types": [
           "얼음"
         ],
@@ -10892,7 +10892,7 @@
         "type": "mega",
         "name_ko": "메가다크펫",
         "name_en": "banette-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10056.png",
+        "sprite": "sprites/pokemon/za_banette_mega.png",
         "types": [
           "고스트"
         ],
@@ -10995,7 +10995,7 @@
         "type": "mega",
         "name_ko": "메가치렁",
         "name_en": "chimecho-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10306.png",
+        "sprite": "sprites/pokemon/za_chimecho_mega.png",
         "types": [
           "에스퍼",
           "강철"
@@ -11034,7 +11034,7 @@
         "type": "mega",
         "name_ko": "메가앱솔",
         "name_en": "absol-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10057.png",
+        "sprite": "sprites/pokemon/za_absol_mega.png",
         "types": [
           "악"
         ],
@@ -11050,7 +11050,7 @@
         "type": "mega",
         "name_ko": "메가앱솔 Z",
         "name_en": "absol-mega-z",
-        "sprite": "sprites/pokemon/__pokemon__images__3__37__%EB%A9%94%EA%B0%80%EC%95%B1%EC%86%94Z_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png",
+        "sprite": "sprites/pokemon/za_absol_mega_z.png",
         "types": [
           "악",
           "고스트"
@@ -11138,7 +11138,7 @@
         "type": "mega",
         "name_ko": "메가얼음귀신",
         "name_en": "glalie-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10074.png",
+        "sprite": "sprites/pokemon/za_glalie_mega.png",
         "types": [
           "얼음"
         ],
@@ -11412,7 +11412,7 @@
         "type": "mega",
         "name_ko": "메가보만다",
         "name_en": "salamence-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10089.png",
+        "sprite": "sprites/pokemon/za_salamence_mega.png",
         "types": [
           "드래곤",
           "비행"
@@ -11497,7 +11497,7 @@
         "type": "mega",
         "name_ko": "메가메타그로스",
         "name_en": "metagross-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10076.png",
+        "sprite": "sprites/pokemon/za_metagross_mega.png",
         "types": [
           "강철",
           "에스퍼"
@@ -11599,7 +11599,7 @@
         "type": "mega",
         "name_ko": "메가라티아스",
         "name_en": "latias-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10062.png",
+        "sprite": "sprites/pokemon/za_latias_mega.png",
         "types": [
           "드래곤",
           "에스퍼"
@@ -11636,7 +11636,7 @@
         "type": "mega",
         "name_ko": "메가라티오스",
         "name_en": "latios-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10063.png",
+        "sprite": "sprites/pokemon/za_latios_mega.png",
         "types": [
           "드래곤",
           "에스퍼"
@@ -11673,7 +11673,7 @@
         "type": "primal",
         "name_ko": "원시가이오가",
         "name_en": "kyogre-primal",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10077.png",
+        "sprite": "sprites/pokemon/za_kyogre_primal.png",
         "types": [
           "물"
         ],
@@ -11708,7 +11708,7 @@
         "type": "primal",
         "name_ko": "원시그란돈",
         "name_en": "groudon-primal",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10078.png",
+        "sprite": "sprites/pokemon/za_groudon_primal.png",
         "types": [
           "땅",
           "불꽃"
@@ -11744,7 +11744,7 @@
         "type": "mega",
         "name_ko": "메가레쿠쟈",
         "name_en": "rayquaza-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10079.png",
+        "sprite": "sprites/pokemon/za_rayquaza_mega.png",
         "types": [
           "드래곤",
           "비행"
@@ -11800,7 +11800,7 @@
         "type": "alt",
         "name_ko": "테오키스 어택폼",
         "name_en": "deoxys-attack",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10001.png",
+        "sprite": "sprites/pokemon/za_deoxys_attack.png",
         "types": [
           "에스퍼"
         ],
@@ -11816,7 +11816,7 @@
         "type": "alt",
         "name_ko": "테오키스 디펜스폼",
         "name_en": "deoxys-defense",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10002.png",
+        "sprite": "sprites/pokemon/za_deoxys_defense.png",
         "types": [
           "에스퍼"
         ],
@@ -11832,7 +11832,7 @@
         "type": "alt",
         "name_ko": "테오키스 스피드폼",
         "name_en": "deoxys-speed",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10003.png",
+        "sprite": "sprites/pokemon/za_deoxys_speed.png",
         "types": [
           "에스퍼"
         ],
@@ -12109,7 +12109,7 @@
         "type": "mega",
         "name_ko": "메가찌르호크",
         "name_en": "staraptor-mega",
-        "sprite": "sprites/pokemon/__pokemon__images__a__aa__%EB%A9%94%EA%B0%80%EC%B0%8C%EB%A5%B4%ED%98%B8%ED%81%AC_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png",
+        "sprite": "sprites/pokemon/za_staraptor_mega.png",
         "types": [
           "격투",
           "비행"
@@ -12459,7 +12459,7 @@
         "type": "alt",
         "name_ko": "모래땅도롱",
         "name_en": "burmy-sandy",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__home__412-sandy.png",
+        "sprite": "sprites/pokemon/za_burmy_sandy.png",
         "types": [
           "벌레"
         ],
@@ -12480,7 +12480,7 @@
         "type": "alt",
         "name_ko": "슈레도롱",
         "name_en": "burmy-trash",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__home__412-trash.png",
+        "sprite": "sprites/pokemon/za_burmy_trash.png",
         "types": [
           "벌레"
         ],
@@ -12526,7 +12526,7 @@
         "type": "alt",
         "name_ko": "모래땅도롱마담",
         "name_en": "wormadam-sandy",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10004.png",
+        "sprite": "sprites/pokemon/za_wormadam_sandy.png",
         "types": [
           "벌레",
           "땅"
@@ -12548,7 +12548,7 @@
         "type": "alt",
         "name_ko": "슈레도롱마담",
         "name_en": "wormadam-trash",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10005.png",
+        "sprite": "sprites/pokemon/za_wormadam_trash.png",
         "types": [
           "벌레",
           "강철"
@@ -12923,7 +12923,7 @@
         "type": "mega",
         "name_ko": "메가이어롭",
         "name_en": "lopunny-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10088.png",
+        "sprite": "sprites/pokemon/za_lopunny_mega.png",
         "types": [
           "노말",
           "격투"
@@ -13355,7 +13355,7 @@
         "type": "mega",
         "name_ko": "메가한카리아스",
         "name_en": "garchomp-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10058.png",
+        "sprite": "sprites/pokemon/za_garchomp_mega.png",
         "types": [
           "드래곤",
           "땅"
@@ -13372,7 +13372,7 @@
         "type": "mega",
         "name_ko": "메가한카리아스 Z",
         "name_en": "garchomp-mega-z",
-        "sprite": "sprites/pokemon/__pokemon__images__7__7d__%EB%A9%94%EA%B0%80%ED%95%9C%EC%B9%B4%EB%A6%AC%EC%95%84%EC%8A%A4Z_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png",
+        "sprite": "sprites/pokemon/za_garchomp_mega_z.png",
         "types": [
           "드래곤"
         ],
@@ -13465,7 +13465,7 @@
         "type": "mega",
         "name_ko": "메가루카리오",
         "name_en": "lucario-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10059.png",
+        "sprite": "sprites/pokemon/za_lucario_mega.png",
         "types": [
           "격투",
           "강철"
@@ -13482,7 +13482,7 @@
         "type": "mega",
         "name_ko": "메가루카리오 Z",
         "name_en": "lucario-mega-z",
-        "sprite": "sprites/pokemon/__pokemon__images__2__27__%EB%A9%94%EA%B0%80%EB%A3%A8%EC%B9%B4%EB%A6%AC%EC%98%A4Z_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png",
+        "sprite": "sprites/pokemon/za_lucario_mega_z.png",
         "types": [
           "격투",
           "강철"
@@ -13786,7 +13786,7 @@
         "type": "mega",
         "name_ko": "메가눈설왕",
         "name_en": "abomasnow-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10060.png",
+        "sprite": "sprites/pokemon/za_abomasnow_mega.png",
         "types": [
           "풀",
           "얼음"
@@ -14178,7 +14178,7 @@
         "type": "mega",
         "name_ko": "메가엘레이드",
         "name_en": "gallade-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10068.png",
+        "sprite": "sprites/pokemon/za_gallade_mega.png",
         "types": [
           "에스퍼",
           "격투"
@@ -14267,7 +14267,7 @@
         "type": "mega",
         "name_ko": "메가눈여아",
         "name_en": "froslass-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10285.png",
+        "sprite": "sprites/pokemon/za_froslass_mega.png",
         "types": [
           "얼음",
           "고스트"
@@ -14303,7 +14303,7 @@
         "type": "alt",
         "name_ko": "히트로토무",
         "name_en": "rotom-heat",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10008.png",
+        "sprite": "sprites/pokemon/za_rotom_heat.png",
         "types": [
           "전기",
           "불꽃"
@@ -14320,7 +14320,7 @@
         "type": "alt",
         "name_ko": "워시로토무",
         "name_en": "rotom-wash",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10009.png",
+        "sprite": "sprites/pokemon/za_rotom_wash.png",
         "types": [
           "전기",
           "물"
@@ -14337,7 +14337,7 @@
         "type": "alt",
         "name_ko": "프로스트로토무",
         "name_en": "rotom-frost",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10010.png",
+        "sprite": "sprites/pokemon/za_rotom_frost.png",
         "types": [
           "전기",
           "얼음"
@@ -14354,7 +14354,7 @@
         "type": "alt",
         "name_ko": "스핀로토무",
         "name_en": "rotom-fan",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10011.png",
+        "sprite": "sprites/pokemon/za_rotom_fan.png",
         "types": [
           "전기",
           "비행"
@@ -14371,7 +14371,7 @@
         "type": "alt",
         "name_ko": "커트로토무",
         "name_en": "rotom-mow",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10012.png",
+        "sprite": "sprites/pokemon/za_rotom_mow.png",
         "types": [
           "전기",
           "풀"
@@ -14464,7 +14464,7 @@
         "type": "origin",
         "name_ko": "오리진폼 디아루가",
         "name_en": "dialga-origin",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10245.png",
+        "sprite": "sprites/pokemon/za_dialga_origin.png",
         "types": [
           "강철",
           "드래곤"
@@ -14511,7 +14511,7 @@
         "type": "origin",
         "name_ko": "오리진폼 펄기아",
         "name_en": "palkia-origin",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10246.png",
+        "sprite": "sprites/pokemon/za_palkia_origin.png",
         "types": [
           "물",
           "드래곤"
@@ -14557,7 +14557,7 @@
         "type": "mega",
         "name_ko": "메가히드런",
         "name_en": "heatran-mega",
-        "sprite": "sprites/pokemon/__pokemon__images__0__0f__%EB%A9%94%EA%B0%80%ED%9E%88%EB%93%9C%EB%9F%B0_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png",
+        "sprite": "sprites/pokemon/za_heatran_mega.png",
         "types": [
           "불꽃",
           "강철"
@@ -14614,7 +14614,7 @@
         "type": "origin",
         "name_ko": "오리진폼 기라티나",
         "name_en": "giratina-origin",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10007.png",
+        "sprite": "sprites/pokemon/za_giratina_origin.png",
         "types": [
           "고스트",
           "드래곤"
@@ -14700,7 +14700,7 @@
         "type": "mega",
         "name_ko": "메가다크라이",
         "name_en": "darkrai-mega",
-        "sprite": "sprites/pokemon/__pokemon__images__1__1b__%EB%A9%94%EA%B0%80%EB%8B%A4%ED%81%AC%EB%9D%BC%EC%9D%B4_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png",
+        "sprite": "sprites/pokemon/za_darkrai_mega.png",
         "types": [
           "악"
         ],
@@ -14733,7 +14733,7 @@
         "type": "alt",
         "name_ko": "쉐이미 스카이폼",
         "name_en": "shaymin-sky",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10006.png",
+        "sprite": "sprites/pokemon/za_shaymin_sky.png",
         "types": [
           "풀",
           "비행"
@@ -14915,7 +14915,7 @@
         "type": "mega",
         "name_ko": "메가염무왕",
         "name_en": "emboar-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10286.png",
+        "sprite": "sprites/pokemon/za_emboar_mega.png",
         "types": [
           "불꽃",
           "격투"
@@ -14997,7 +14997,7 @@
         "type": "hisui",
         "name_ko": "히스이 대검귀",
         "name_en": "samurott-hisui",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10236.png",
+        "sprite": "sprites/pokemon/za_samurott_hisui.png",
         "types": [
           "물",
           "악"
@@ -15699,7 +15699,7 @@
         "type": "mega",
         "name_ko": "메가몰드류",
         "name_en": "excadrill-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10287.png",
+        "sprite": "sprites/pokemon/za_excadrill_mega.png",
         "types": [
           "땅",
           "강철"
@@ -15740,7 +15740,7 @@
         "type": "mega",
         "name_ko": "메가다부니",
         "name_en": "audino-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10069.png",
+        "sprite": "sprites/pokemon/za_audino_mega.png",
         "types": [
           "노말",
           "페어리"
@@ -16131,7 +16131,7 @@
         "type": "mega",
         "name_ko": "메가펜드라",
         "name_en": "scolipede-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10288.png",
+        "sprite": "sprites/pokemon/za_scolipede_mega.png",
         "types": [
           "벌레",
           "독"
@@ -16252,7 +16252,7 @@
         "type": "hisui",
         "name_ko": "히스이 드레디어",
         "name_en": "lilligant-hisui",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10237.png",
+        "sprite": "sprites/pokemon/za_lilligant_hisui.png",
         "types": [
           "풀",
           "격투"
@@ -16308,7 +16308,7 @@
         "type": "alt",
         "name_ko": "청색근의 모습",
         "name_en": "basculin-blue-striped",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10016.png",
+        "sprite": "sprites/pokemon/za_basculin_blue_striped.png",
         "types": [
           "물"
         ],
@@ -16334,7 +16334,7 @@
         "type": "hisui",
         "name_ko": "배쓰나이 (백색근의 모습)",
         "name_en": "basculin-white-striped",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10247.png",
+        "sprite": "sprites/pokemon/za_basculin_white_striped.png",
         "types": [
           "물"
         ],
@@ -16464,7 +16464,7 @@
         "type": "galar",
         "name_ko": "가라르 달막화",
         "name_en": "darumaka-galar",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10176.png",
+        "sprite": "sprites/pokemon/za_darumaka_galar.png",
         "types": [
           "얼음"
         ],
@@ -16508,7 +16508,7 @@
         "type": "zen",
         "name_ko": "달마모드 불비달마",
         "name_en": "darmanitan-zen",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10017.png",
+        "sprite": "sprites/pokemon/za_darmanitan_zen.png",
         "types": [
           "불꽃",
           "에스퍼"
@@ -16525,7 +16525,7 @@
         "type": "galar",
         "name_ko": "가라르 불비달마",
         "name_en": "darmanitan-galar-standard",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10177.png",
+        "sprite": "sprites/pokemon/za_darmanitan_galar_standard.png",
         "types": [
           "얼음"
         ],
@@ -16547,7 +16547,7 @@
         "regionType": "galar",
         "name_ko": "가라르 달마모드 불비달마",
         "name_en": "darmanitan-galar-zen",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10178.png",
+        "sprite": "sprites/pokemon/za_darmanitan_galar_zen.png",
         "types": [
           "얼음",
           "불꽃"
@@ -16700,7 +16700,7 @@
         "type": "mega",
         "name_ko": "메가곤율거니",
         "name_en": "scrafty-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10289.png",
+        "sprite": "sprites/pokemon/za_scrafty_mega.png",
         "types": [
           "악",
           "격투"
@@ -16758,7 +16758,7 @@
         "type": "galar",
         "name_ko": "가라르 데스마스",
         "name_en": "yamask-galar",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10179.png",
+        "sprite": "sprites/pokemon/za_yamask_galar.png",
         "types": [
           "땅",
           "고스트"
@@ -16933,7 +16933,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 더스트나",
         "name_en": "garbodor-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10207.png",
+        "sprite": "sprites/pokemon/za_garbodor_gmax.png",
         "types": [
           "독"
         ],
@@ -16977,7 +16977,7 @@
         "type": "hisui",
         "name_ko": "히스이 조로아",
         "name_en": "zorua-hisui",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10238.png",
+        "sprite": "sprites/pokemon/za_zorua_hisui.png",
         "types": [
           "노말",
           "고스트"
@@ -17012,7 +17012,7 @@
         "type": "hisui",
         "name_ko": "히스이 조로아크",
         "name_en": "zoroark-hisui",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10239.png",
+        "sprite": "sprites/pokemon/za_zoroark_hisui.png",
         "types": [
           "노말",
           "고스트"
@@ -17399,7 +17399,7 @@
         "type": "alt",
         "name_ko": "사철록 여름의 모습",
         "name_en": "deerling-summer",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__home__585-summer.png",
+        "sprite": "sprites/pokemon/za_deerling_summer.png",
         "types": [
           "노말",
           "풀"
@@ -17426,7 +17426,7 @@
         "type": "alt",
         "name_ko": "사철록 가을의 모습",
         "name_en": "deerling-autumn",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__home__585-autumn.png",
+        "sprite": "sprites/pokemon/za_deerling_autumn.png",
         "types": [
           "노말",
           "풀"
@@ -17453,7 +17453,7 @@
         "type": "alt",
         "name_ko": "사철록 겨울의 모습",
         "name_en": "deerling-winter",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__home__585-winter.png",
+        "sprite": "sprites/pokemon/za_deerling_winter.png",
         "types": [
           "노말",
           "풀"
@@ -17510,7 +17510,7 @@
         "type": "alt",
         "name_ko": "바라철록 여름의 모습",
         "name_en": "sawsbuck-summer",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__home__586-summer.png",
+        "sprite": "sprites/pokemon/za_sawsbuck_summer.png",
         "types": [
           "노말",
           "풀"
@@ -17537,7 +17537,7 @@
         "type": "alt",
         "name_ko": "바라철록 가을의 모습",
         "name_en": "sawsbuck-autumn",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__home__586-autumn.png",
+        "sprite": "sprites/pokemon/za_sawsbuck_autumn.png",
         "types": [
           "노말",
           "풀"
@@ -17564,7 +17564,7 @@
         "type": "alt",
         "name_ko": "바라철록 겨울의 모습",
         "name_en": "sawsbuck-winter",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__home__586-winter.png",
+        "sprite": "sprites/pokemon/za_sawsbuck_winter.png",
         "types": [
           "노말",
           "풀"
@@ -17740,7 +17740,7 @@
         "type": "alt",
         "name_ko": "탱그릴 (암컷)",
         "name_en": "frillish-female",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__home__female__592.png",
+        "sprite": "sprites/pokemon/za_frillish_female.png",
         "types": [
           "물",
           "고스트"
@@ -17797,7 +17797,7 @@
         "type": "alt",
         "name_ko": "탱탱겔 (암컷)",
         "name_en": "jellicent-female",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__home__female__593.png",
+        "sprite": "sprites/pokemon/za_jellicent_female.png",
         "types": [
           "물",
           "고스트"
@@ -18071,7 +18071,7 @@
         "type": "mega",
         "name_ko": "메가저리더프",
         "name_en": "eelektross-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10290.png",
+        "sprite": "sprites/pokemon/za_eelektross_mega.png",
         "types": [
           "전기"
         ],
@@ -18218,7 +18218,7 @@
         "type": "mega",
         "name_ko": "메가샹델라",
         "name_en": "chandelure-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10291.png",
+        "sprite": "sprites/pokemon/za_chandelure_mega.png",
         "types": [
           "고스트",
           "불꽃"
@@ -18458,7 +18458,7 @@
         "type": "galar",
         "name_ko": "가라르 메더",
         "name_en": "stunfisk-galar",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10180.png",
+        "sprite": "sprites/pokemon/za_stunfisk_galar.png",
         "types": [
           "땅",
           "강철"
@@ -18609,7 +18609,7 @@
         "type": "mega",
         "name_ko": "메가골루그",
         "name_en": "golurk-mega",
-        "sprite": "sprites/pokemon/__pokemon__images__a__a3__%EB%A9%94%EA%B0%80%EA%B3%A8%EB%A3%A8%EA%B7%B8_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png",
+        "sprite": "sprites/pokemon/za_golurk_mega.png",
         "types": [
           "땅",
           "고스트"
@@ -18758,7 +18758,7 @@
         "type": "hisui",
         "name_ko": "히스이 워글",
         "name_en": "braviary-hisui",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10240.png",
+        "sprite": "sprites/pokemon/za_braviary_hisui.png",
         "types": [
           "에스퍼",
           "비행"
@@ -19066,7 +19066,7 @@
         "type": "alt",
         "name_ko": "토네로스 영물폼",
         "name_en": "tornadus-therian",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10019.png",
+        "sprite": "sprites/pokemon/za_tornadus_therian.png",
         "types": [
           "비행"
         ],
@@ -19108,7 +19108,7 @@
         "type": "alt",
         "name_ko": "볼트로스 영물폼",
         "name_en": "thundurus-therian",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10020.png",
+        "sprite": "sprites/pokemon/za_thundurus_therian.png",
         "types": [
           "전기",
           "비행"
@@ -19187,7 +19187,7 @@
         "type": "alt",
         "name_ko": "랜드로스 영물폼",
         "name_en": "landorus-therian",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10021.png",
+        "sprite": "sprites/pokemon/za_landorus_therian.png",
         "types": [
           "땅",
           "비행"
@@ -19224,7 +19224,7 @@
         "type": "alt",
         "name_ko": "블랙큐레무",
         "name_en": "kyurem-black",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10022.png",
+        "sprite": "sprites/pokemon/za_kyurem_black.png",
         "types": [
           "드래곤",
           "얼음"
@@ -19241,7 +19241,7 @@
         "type": "alt",
         "name_ko": "화이트큐레무",
         "name_en": "kyurem-white",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10023.png",
+        "sprite": "sprites/pokemon/za_kyurem_white.png",
         "types": [
           "드래곤",
           "얼음"
@@ -19277,7 +19277,7 @@
         "type": "alt",
         "name_ko": "케르디오 각오의 모습",
         "name_en": "keldeo-resolute",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10024.png",
+        "sprite": "sprites/pokemon/za_keldeo_resolute.png",
         "types": [
           "물",
           "격투"
@@ -19316,7 +19316,7 @@
         "type": "alt",
         "name_ko": "메로엣타 스텝폼",
         "name_en": "meloetta-pirouette",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10018.png",
+        "sprite": "sprites/pokemon/za_meloetta_pirouette.png",
         "types": [
           "노말",
           "격투"
@@ -19417,7 +19417,7 @@
         "type": "mega",
         "name_ko": "메가브리가론",
         "name_en": "chesnaught-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10292.png",
+        "sprite": "sprites/pokemon/za_chesnaught_mega.png",
         "types": [
           "풀",
           "격투"
@@ -19496,7 +19496,7 @@
         "type": "mega",
         "name_ko": "메가마폭시",
         "name_en": "delphox-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10293.png",
+        "sprite": "sprites/pokemon/za_delphox_mega.png",
         "types": [
           "불꽃",
           "에스퍼"
@@ -19575,7 +19575,7 @@
         "type": "mega",
         "name_ko": "메가개굴닌자",
         "name_en": "greninja-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10294.png",
+        "sprite": "sprites/pokemon/za_greninja_mega.png",
         "types": [
           "물",
           "악"
@@ -19837,7 +19837,7 @@
         "type": "mega",
         "name_ko": "메가화염레오",
         "name_en": "pyroar-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10295.png",
+        "sprite": "sprites/pokemon/za_pyroar_mega.png",
         "types": [
           "불꽃",
           "노말"
@@ -19894,7 +19894,7 @@
         "type": "alt",
         "name_ko": "영원의꽃 플라엣테",
         "name_en": "floette-eternal",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10061.png",
+        "sprite": "sprites/pokemon/za_floette_eternal.png",
         "types": [
           "페어리"
         ],
@@ -19915,7 +19915,7 @@
         "type": "mega",
         "name_ko": "메가플라엣테",
         "name_en": "floette-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10296.png",
+        "sprite": "sprites/pokemon/za_floette_mega.png",
         "types": [
           "페어리"
         ],
@@ -20114,7 +20114,7 @@
         "type": "alt",
         "name_ko": "냐오닉스 (암컷)",
         "name_en": "meowstic-female",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10025.png",
+        "sprite": "sprites/pokemon/za_meowstic_female.png",
         "types": [
           "에스퍼"
         ],
@@ -20140,7 +20140,7 @@
         "type": "mega",
         "name_ko": "메가냐오닉스",
         "name_en": "meowstic-mega",
-        "sprite": "sprites/pokemon/__pokemon__images__7__75__%EB%A9%94%EA%B0%80%EB%83%90%EC%98%A4%EB%8B%89%EC%8A%A4_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png",
+        "sprite": "sprites/pokemon/za_meowstic_mega.png",
         "types": [
           "에스퍼"
         ],
@@ -20206,7 +20206,7 @@
         "type": "alt",
         "name_ko": "킬가르도 블레이드폼",
         "name_en": "aegislash-blade",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10026.png",
+        "sprite": "sprites/pokemon/za_aegislash_blade.png",
         "types": [
           "강철",
           "고스트"
@@ -20363,7 +20363,7 @@
         "type": "mega",
         "name_ko": "메가칼라마네로",
         "name_en": "malamar-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10297.png",
+        "sprite": "sprites/pokemon/za_malamar_mega.png",
         "types": [
           "악",
           "에스퍼"
@@ -20432,7 +20432,7 @@
         "type": "mega",
         "name_ko": "메가거북손데스",
         "name_en": "barbaracle-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10298.png",
+        "sprite": "sprites/pokemon/za_barbaracle_mega.png",
         "types": [
           "바위",
           "격투"
@@ -20501,7 +20501,7 @@
         "type": "mega",
         "name_ko": "메가드래캄",
         "name_en": "dragalge-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10299.png",
+        "sprite": "sprites/pokemon/za_dragalge_mega.png",
         "types": [
           "독",
           "드래곤"
@@ -20738,7 +20738,7 @@
         "type": "mega",
         "name_ko": "메가루차불",
         "name_en": "hawlucha-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10300.png",
+        "sprite": "sprites/pokemon/za_hawlucha_mega.png",
         "types": [
           "격투",
           "비행"
@@ -20854,7 +20854,7 @@
         "type": "hisui",
         "name_ko": "히스이 미끄네일",
         "name_en": "sliggoo-hisui",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10241.png",
+        "sprite": "sprites/pokemon/za_sliggoo_hisui.png",
         "types": [
           "강철",
           "드래곤"
@@ -20909,7 +20909,7 @@
         "type": "hisui",
         "name_ko": "히스이 미끄래곤",
         "name_en": "goodra-hisui",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10242.png",
+        "sprite": "sprites/pokemon/za_goodra_hisui.png",
         "types": [
           "강철",
           "드래곤"
@@ -21120,7 +21120,7 @@
         "type": "hisui",
         "name_ko": "히스이 크레베이스",
         "name_en": "avalugg-hisui",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10243.png",
+        "sprite": "sprites/pokemon/za_avalugg_hisui.png",
         "types": [
           "얼음",
           "바위"
@@ -21256,7 +21256,7 @@
         "type": "alt",
         "name_ko": "지가르데 10%폼",
         "name_en": "zygarde-10",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10181.png",
+        "sprite": "sprites/pokemon/za_zygarde_10.png",
         "types": [
           "드래곤",
           "땅"
@@ -21273,7 +21273,7 @@
         "type": "alt",
         "name_ko": "지가르데 퍼펙트폼",
         "name_en": "zygarde-complete",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10120.png",
+        "sprite": "sprites/pokemon/za_zygarde_complete.png",
         "types": [
           "드래곤",
           "땅"
@@ -21290,7 +21290,7 @@
         "type": "mega",
         "name_ko": "메가지가르데",
         "name_en": "zygarde-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10301.png",
+        "sprite": "sprites/pokemon/za_zygarde_mega.png",
         "types": [
           "드래곤",
           "땅"
@@ -21323,7 +21323,7 @@
         "type": "mega",
         "name_ko": "메가디안시",
         "name_en": "diancie-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10075.png",
+        "sprite": "sprites/pokemon/za_diancie_mega.png",
         "types": [
           "바위",
           "페어리"
@@ -21362,7 +21362,7 @@
         "type": "alt",
         "name_ko": "굴레를 벗어난 후파",
         "name_en": "hoopa-unbound",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10086.png",
+        "sprite": "sprites/pokemon/za_hoopa_unbound.png",
         "types": [
           "에스퍼",
           "악"
@@ -21465,7 +21465,7 @@
         "type": "hisui",
         "name_ko": "히스이 모크나이퍼",
         "name_en": "decidueye-hisui",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10244.png",
+        "sprite": "sprites/pokemon/za_decidueye_hisui.png",
         "types": [
           "풀",
           "격투"
@@ -21853,7 +21853,7 @@
         "type": "mega",
         "name_ko": "메가모단단게",
         "name_en": "crabominable-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10315.png",
+        "sprite": "sprites/pokemon/za_crabominable_mega.png",
         "types": [
           "격투",
           "얼음"
@@ -21884,7 +21884,7 @@
         "type": "alt",
         "name_ko": "파칙파칙스타일",
         "name_en": "oricorio-pom-pom",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10123.png",
+        "sprite": "sprites/pokemon/za_oricorio_pom_pom.png",
         "types": [
           "전기",
           "비행"
@@ -21901,7 +21901,7 @@
         "type": "alt",
         "name_ko": "훌라훌라스타일",
         "name_en": "oricorio-pau",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10124.png",
+        "sprite": "sprites/pokemon/za_oricorio_pau.png",
         "types": [
           "에스퍼",
           "비행"
@@ -21918,7 +21918,7 @@
         "type": "alt",
         "name_ko": "하늘하늘스타일",
         "name_en": "oricorio-sensu",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10125.png",
+        "sprite": "sprites/pokemon/za_oricorio_sensu.png",
         "types": [
           "고스트",
           "비행"
@@ -22044,7 +22044,7 @@
         "type": "alt",
         "name_ko": "루가루암 한밤중의 모습",
         "name_en": "lycanroc-midnight",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10126.png",
+        "sprite": "sprites/pokemon/za_lycanroc_midnight.png",
         "types": [
           "바위"
         ],
@@ -22070,7 +22070,7 @@
         "type": "alt",
         "name_ko": "루가루암 황혼의 모습",
         "name_en": "lycanroc-dusk",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10152.png",
+        "sprite": "sprites/pokemon/za_lycanroc_dusk.png",
         "types": [
           "바위"
         ],
@@ -22105,7 +22105,7 @@
         "type": "alt",
         "name_ko": "약어리 군집의 모습",
         "name_en": "wishiwashi-school",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10127.png",
+        "sprite": "sprites/pokemon/za_wishiwashi_school.png",
         "types": [
           "물"
         ],
@@ -22653,7 +22653,7 @@
         "type": "mega",
         "name_ko": "메가갑주무사",
         "name_en": "golisopod-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10316.png",
+        "sprite": "sprites/pokemon/za_golisopod_mega.png",
         "types": [
           "벌레",
           "강철"
@@ -22913,7 +22913,7 @@
         "type": "mega",
         "name_ko": "메가할비롱",
         "name_en": "drampa-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10302.png",
+        "sprite": "sprites/pokemon/za_drampa_mega.png",
         "types": [
           "노말",
           "드래곤"
@@ -23330,7 +23330,7 @@
         "type": "primal",
         "name_ko": "황혼의갈기",
         "name_en": "necrozma-dusk-mane",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10155.png",
+        "sprite": "sprites/pokemon/za_necrozma_dusk_mane.png",
         "types": [
           "에스퍼",
           "강철"
@@ -23347,7 +23347,7 @@
         "type": "primal",
         "name_ko": "새벽의날개",
         "name_en": "necrozma-dawn-wings",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10156.png",
+        "sprite": "sprites/pokemon/za_necrozma_dawn_wings.png",
         "types": [
           "에스퍼",
           "고스트"
@@ -23364,7 +23364,7 @@
         "type": "primal",
         "name_ko": "울트라네크로즈마",
         "name_en": "necrozma-ultra",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10157.png",
+        "sprite": "sprites/pokemon/za_necrozma_ultra.png",
         "types": [
           "에스퍼",
           "드래곤"
@@ -23400,7 +23400,7 @@
         "type": "mega",
         "name_ko": "메가마기아나",
         "name_en": "magearna-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10317.png",
+        "sprite": "sprites/pokemon/za_magearna_mega.png",
         "types": [
           "강철",
           "페어리"
@@ -23413,7 +23413,7 @@
         "type": "alt",
         "name_ko": "마기아나 500년전의 모습",
         "name_en": "magearna-original",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10147.png",
+        "sprite": "sprites/pokemon/za_magearna_original.png",
         "types": [
           "강철",
           "페어리"
@@ -23538,7 +23538,7 @@
         "type": "mega",
         "name_ko": "메가제라오라",
         "name_en": "zeraora-mega",
-        "sprite": "sprites/pokemon/__pokemon__images__8__87__%EB%A9%94%EA%B0%80%EC%A0%9C%EB%9D%BC%EC%98%A4%EB%9D%BC_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png",
+        "sprite": "sprites/pokemon/za_zeraora_mega.png",
         "types": [
           "전기"
         ],
@@ -23586,7 +23586,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 멜메탈",
         "name_en": "melmetal-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10208.png",
+        "sprite": "sprites/pokemon/za_melmetal_gmax.png",
         "types": [
           "강철"
         ],
@@ -23668,7 +23668,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 고릴타",
         "name_en": "rillaboom-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10209.png",
+        "sprite": "sprites/pokemon/za_rillaboom_gmax.png",
         "types": [
           "풀"
         ],
@@ -23754,7 +23754,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 에이스번",
         "name_en": "cinderace-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10210.png",
+        "sprite": "sprites/pokemon/za_cinderace_gmax.png",
         "types": [
           "불꽃"
         ],
@@ -23840,7 +23840,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 인텔리레온",
         "name_en": "inteleon-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10211.png",
+        "sprite": "sprites/pokemon/za_inteleon_gmax.png",
         "types": [
           "물"
         ],
@@ -23984,7 +23984,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 아머까오",
         "name_en": "corviknight-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10212.png",
+        "sprite": "sprites/pokemon/za_corviknight_gmax.png",
         "types": [
           "비행",
           "강철"
@@ -24093,7 +24093,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 이올브",
         "name_en": "orbeetle-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10213.png",
+        "sprite": "sprites/pokemon/za_orbeetle_gmax.png",
         "types": [
           "벌레",
           "에스퍼"
@@ -24331,7 +24331,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 갈가부기",
         "name_en": "drednaw-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10214.png",
+        "sprite": "sprites/pokemon/za_drednaw_gmax.png",
         "types": [
           "물",
           "바위"
@@ -24482,7 +24482,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 석탄산",
         "name_en": "coalossal-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10215.png",
+        "sprite": "sprites/pokemon/za_coalossal_gmax.png",
         "types": [
           "바위",
           "불꽃"
@@ -24565,7 +24565,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 애프룡",
         "name_en": "flapple-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10216.png",
+        "sprite": "sprites/pokemon/za_flapple_gmax.png",
         "types": [
           "풀",
           "드래곤"
@@ -24621,7 +24621,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 단지래플",
         "name_en": "appletun-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10217.png",
+        "sprite": "sprites/pokemon/za_appletun_gmax.png",
         "types": [
           "풀",
           "드래곤"
@@ -24702,7 +24702,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 사다이사",
         "name_en": "sandaconda-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10218.png",
+        "sprite": "sprites/pokemon/za_sandaconda_gmax.png",
         "types": [
           "땅"
         ],
@@ -24844,7 +24844,7 @@
         "type": "alt",
         "name_ko": "스트린더 로우한 모습",
         "name_en": "toxtricity-low-key",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10184.png",
+        "sprite": "sprites/pokemon/za_toxtricity_low_key.png",
         "types": [
           "전기",
           "독"
@@ -24871,7 +24871,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 스트린더",
         "name_en": "toxtricity-amped-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10219.png",
+        "sprite": "sprites/pokemon/za_toxtricity_amped_gmax.png",
         "types": [
           "전기",
           "독"
@@ -24954,7 +24954,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 다태우지네",
         "name_en": "centiskorch-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10220.png",
+        "sprite": "sprites/pokemon/za_centiskorch_gmax.png",
         "types": [
           "불꽃",
           "벌레"
@@ -25146,7 +25146,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 브리무음",
         "name_en": "hatterene-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10221.png",
+        "sprite": "sprites/pokemon/za_hatterene_gmax.png",
         "types": [
           "에스퍼",
           "페어리"
@@ -25256,7 +25256,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 오롱털",
         "name_en": "grimmsnarl-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10222.png",
+        "sprite": "sprites/pokemon/za_grimmsnarl_gmax.png",
         "types": [
           "악",
           "페어리"
@@ -25472,7 +25472,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 마휘핑",
         "name_en": "alcremie-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10223.png",
+        "sprite": "sprites/pokemon/za_alcremie_gmax.png",
         "types": [
           "페어리"
         ],
@@ -25516,7 +25516,7 @@
         "type": "mega",
         "name_ko": "메가대여르",
         "name_en": "falinks-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10303.png",
+        "sprite": "sprites/pokemon/za_falinks_mega.png",
         "types": [
           "격투"
         ],
@@ -25655,7 +25655,7 @@
         "type": "alt",
         "name_ko": "에써르 암컷",
         "name_en": "indeedee-female",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10186.png",
+        "sprite": "sprites/pokemon/za_indeedee_female.png",
         "types": [
           "에스퍼",
           "노말"
@@ -25743,7 +25743,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 대왕끼리동",
         "name_en": "copperajah-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10224.png",
+        "sprite": "sprites/pokemon/za_copperajah_gmax.png",
         "types": [
           "강철"
         ],
@@ -25901,7 +25901,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 두랄루돈",
         "name_en": "duraludon-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10225.png",
+        "sprite": "sprites/pokemon/za_duraludon_gmax.png",
         "types": [
           "강철",
           "드래곤"
@@ -26028,7 +26028,7 @@
         "type": "alt",
         "name_ko": "검왕",
         "name_en": "zacian-crowned",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10188.png",
+        "sprite": "sprites/pokemon/za_zacian_crowned.png",
         "types": [
           "페어리",
           "강철"
@@ -26065,7 +26065,7 @@
         "type": "alt",
         "name_ko": "방패왕",
         "name_en": "zamazenta-crowned",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10189.png",
+        "sprite": "sprites/pokemon/za_zamazenta_crowned.png",
         "types": [
           "격투",
           "강철"
@@ -26102,7 +26102,7 @@
         "type": "alt",
         "name_ko": "무한다이맥스",
         "name_en": "eternatus-eternamax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10190.png",
+        "sprite": "sprites/pokemon/za_eternatus_eternamax.png",
         "types": [
           "독",
           "드래곤"
@@ -26157,7 +26157,7 @@
         "type": "alt",
         "name_ko": "우라오스 (연격의 태세)",
         "name_en": "urshifu-rapid-strike",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10191.png",
+        "sprite": "sprites/pokemon/za_urshifu_rapid_strike.png",
         "types": [
           "격투",
           "물"
@@ -26174,7 +26174,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 우라오스 (일격)",
         "name_en": "urshifu-single-strike-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10226.png",
+        "sprite": "sprites/pokemon/za_urshifu_single_strike_gmax.png",
         "types": [
           "격투",
           "악"
@@ -26191,7 +26191,7 @@
         "type": "gmax",
         "name_ko": "거다이맥스 우라오스 (연격)",
         "name_en": "urshifu-rapid-strike-gmax",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10227.png",
+        "sprite": "sprites/pokemon/za_urshifu_rapid_strike_gmax.png",
         "types": [
           "격투",
           "물"
@@ -26228,7 +26228,7 @@
         "type": "alt",
         "name_ko": "자루도 아빠",
         "name_en": "zarude-dada",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10192.png",
+        "sprite": "sprites/pokemon/za_zarude_dada.png",
         "types": [
           "악",
           "풀"
@@ -26333,7 +26333,7 @@
         "type": "alt",
         "name_ko": "백마 탄 모습",
         "name_en": "calyrex-ice",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10193.png",
+        "sprite": "sprites/pokemon/za_calyrex_ice.png",
         "types": [
           "에스퍼",
           "얼음"
@@ -26350,7 +26350,7 @@
         "type": "alt",
         "name_ko": "흑마 탄 모습",
         "name_en": "calyrex-shadow",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10194.png",
+        "sprite": "sprites/pokemon/za_calyrex_shadow.png",
         "types": [
           "에스퍼",
           "고스트"
@@ -26456,7 +26456,7 @@
         "type": "alt",
         "name_ko": "다투곰 붉은달의 모습",
         "name_en": "ursaluna-bloodmoon",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10272.png",
+        "sprite": "sprites/pokemon/za_ursaluna_bloodmoon.png",
         "types": [
           "땅",
           "노말"
@@ -26506,7 +26506,7 @@
         "name_ko": "대쓰여너 (암컷)",
         "name_en": "basculegion-female",
         "regionType": "hisui",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10248.png",
+        "sprite": "sprites/pokemon/za_basculegion_female.png",
         "types": [
           "물",
           "고스트"
@@ -26618,7 +26618,7 @@
         "type": "hisui",
         "name_ko": "러브로스 영물폼",
         "name_en": "enamorus-therian",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10249.png",
+        "sprite": "sprites/pokemon/za_enamorus_therian.png",
         "types": [
           "페어리",
           "비행"
@@ -26884,7 +26884,7 @@
         "type": "alt",
         "name_ko": "퍼퓨돈 (암컷)",
         "name_en": "oinkologne-female",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10254.png",
+        "sprite": "sprites/pokemon/za_oinkologne_female.png",
         "types": [
           "노말"
         ],
@@ -27776,7 +27776,7 @@
         "type": "mega",
         "name_ko": "메가스코빌런",
         "name_en": "scovillain-mega",
-        "sprite": "sprites/pokemon/__pokemon__images__b__be__%EB%A9%94%EA%B0%80%EC%8A%A4%EC%BD%94%EB%B9%8C%EB%9F%B0_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png",
+        "sprite": "sprites/pokemon/za_scovillain_mega.png",
         "types": [
           "풀",
           "불꽃"
@@ -28079,7 +28079,7 @@
         "type": "alt",
         "name_ko": "돌핀맨 (마이티폼)",
         "name_en": "palafin-hero",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10256.png",
+        "sprite": "sprites/pokemon/za_palafin_hero.png",
         "types": [
           "물"
         ],
@@ -28228,7 +28228,7 @@
         "type": "mega",
         "name_ko": "메가킬라플로르",
         "name_en": "glimmora-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10321.png",
+        "sprite": "sprites/pokemon/za_glimmora_mega.png",
         "types": [
           "바위",
           "독"
@@ -28433,7 +28433,7 @@
         "type": "alt",
         "name_ko": "싸리용 늘어진 모습",
         "name_en": "tatsugiri-droopy",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10258.png",
+        "sprite": "sprites/pokemon/za_tatsugiri_droopy.png",
         "types": [
           "드래곤",
           "물"
@@ -28455,7 +28455,7 @@
         "type": "alt",
         "name_ko": "싸리용 뻗은 모습",
         "name_en": "tatsugiri-stretchy",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10259.png",
+        "sprite": "sprites/pokemon/za_tatsugiri_stretchy.png",
         "types": [
           "드래곤",
           "물"
@@ -28477,7 +28477,7 @@
         "type": "mega",
         "name_ko": "메가싸리용",
         "name_en": "tatsugiri-stretchy-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10324.png",
+        "sprite": "sprites/pokemon/za_tatsugiri_stretchy_mega.png",
         "types": [
           "드래곤",
           "물"
@@ -28908,7 +28908,7 @@
         "type": "mega",
         "name_ko": "메가드닐레이브",
         "name_en": "baxcalibur-mega",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10325.png",
+        "sprite": "sprites/pokemon/za_baxcalibur_mega.png",
         "types": [
           "드래곤",
           "얼음"
@@ -29293,7 +29293,7 @@
         "type": "alt",
         "name_ko": "오거폰",
         "name_en": "ogerpon-wellspring-mask",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10273.png",
+        "sprite": "sprites/pokemon/za_ogerpon_wellspring_mask.png",
         "types": [
           "풀",
           "물"
@@ -29310,7 +29310,7 @@
         "type": "alt",
         "name_ko": "오거폰",
         "name_en": "ogerpon-hearthflame-mask",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10274.png",
+        "sprite": "sprites/pokemon/za_ogerpon_hearthflame_mask.png",
         "types": [
           "풀",
           "불꽃"
@@ -29327,7 +29327,7 @@
         "type": "alt",
         "name_ko": "오거폰",
         "name_en": "ogerpon-cornerstone-mask",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10275.png",
+        "sprite": "sprites/pokemon/za_ogerpon_cornerstone_mask.png",
         "types": [
           "풀",
           "바위"
@@ -29490,7 +29490,7 @@
         "type": "alt",
         "name_ko": "테라스탈폼",
         "name_en": "terapagos-terastal",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10276.png",
+        "sprite": "sprites/pokemon/za_terapagos_terastal.png",
         "types": [
           "노말"
         ],
@@ -29506,7 +29506,7 @@
         "type": "alt",
         "name_ko": "스텔라폼",
         "name_en": "terapagos-stellar",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10277.png",
+        "sprite": "sprites/pokemon/za_terapagos_stellar.png",
         "types": [
           "노말"
         ],
