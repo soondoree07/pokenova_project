@@ -8259,7 +8259,7 @@
   {
     "id": 588,
     "ko": "킹실드",
-    "en": "king's shield",
+    "en": "King's Shield",
     "type": "강철",
     "type_en": "steel",
     "class": "변화",
@@ -8656,7 +8656,7 @@
   {
     "id": 616,
     "ko": "그라운드포스",
-    "en": "land's wrath",
+    "en": "Land's Wrath",
     "type": "땅",
     "type_en": "ground",
     "class": "물리",
