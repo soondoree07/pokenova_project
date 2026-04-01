@@ -16,7 +16,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 80px 16px 48px;
+      padding: 20px 16px 48px;
     }
 
     /* ══ 상단 인증 바 ══ */
@@ -160,14 +160,17 @@
 
     /* ══ 사이트 헤더 ══ */
     .site-header-bar {
-      position: fixed; top: 0; left: 0; right: 0;
-      height: 60px;
+      position: sticky; top: 0; left: 0; right: 0;
       background: #141414;
       border-bottom: 1px solid #252525;
-      display: flex; align-items: center; justify-content: space-between;
       padding: 0 24px;
-      gap: 16px;
       z-index: 200;
+      width: 100%;
+    }
+    .site-header-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px; gap: 16px;
     }
     .site-logo { display:flex; align-items:center; gap:10px; text-decoration:none; flex-shrink:0; }
     .logo-ball {
@@ -510,8 +513,9 @@
 
     /* ══ 모바일 반응형 ══ */
     @media (max-width: 600px) {
-      body { padding: 68px 12px 48px; }
-      .site-header-bar { padding: 0 14px; height: 52px; }
+      body { padding: 16px 12px 48px; }
+      .site-header-bar { padding: 0 14px; }
+      .site-header-inner { height: 52px; }
       .site-nav-btn { padding: 5px 9px; font-size: 0.76rem; }
       .logo-text { font-size: 15px; }
       .site-footer { margin-top: 40px; padding: 20px 12px 8px; font-size: 0.73rem; }
@@ -665,16 +669,18 @@
 <body>
 
 <div class="site-header-bar">
-  <a class="site-logo" href="index.html">
-    <div class="logo-ball"></div>
-    <span class="logo-text">Poké<span>nova</span></span>
-  </a>
-  <nav class="site-nav">
-    <a href="index.html"   class="site-nav-btn active">🎴 퀴즈</a>
-    <a href="pokedex.html" class="site-nav-btn">📖 포켓몬 도감</a>
-    <a href="movedex.html" class="site-nav-btn">⚔️ 기술 도감</a>
-    <a href="entry.html"   class="site-nav-btn">🏆 배틀팀</a>
-  </nav>
+  <div class="site-header-inner">
+    <a class="site-logo" href="index.html">
+      <div class="logo-ball"></div>
+      <span class="logo-text">Poké<span>nova</span></span>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html"   class="site-nav-btn active">🎴 퀴즈</a>
+      <a href="pokedex.html" class="site-nav-btn">📖 포켓몬 도감</a>
+      <a href="movedex.html" class="site-nav-btn">⚔️ 기술 도감</a>
+      <a href="entry.html"   class="site-nav-btn">🏆 배틀팀</a>
+    </nav>
+  </div>
 </div>
 
 <!-- ══ 탭 네비게이션 ══ -->
