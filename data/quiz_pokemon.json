@@ -26392,7 +26392,8 @@
         "en": "sap sipper",
         "hidden": true
       }
-    ]
+    ],
+    "formType": "region"
   },
   {
     "id": 900,
@@ -26420,13 +26421,13 @@
         "en": "sharpness",
         "hidden": true
       }
-    ]
+    ],
+    "formType": "region"
   },
   {
     "id": 901,
     "ko": "다투곰",
     "en": "Ursaluna",
-    "formLabel": "히스이의 모습",
     "regionType": "hisui",
     "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__901.png",
     "types": [
@@ -26468,7 +26469,8 @@
           }
         ]
       }
-    ]
+    ],
+    "formType": "region"
   },
   {
     "id": 902,
@@ -26500,7 +26502,7 @@
     ],
     "forms": [
       {
-        "type": "alt",
+        "type": "hisui",
         "name_ko": "대쓰여너 (암컷)",
         "name_en": "basculegion-female",
         "regionType": "hisui",
@@ -26527,7 +26529,8 @@
           }
         ]
       }
-    ]
+    ],
+    "formType": "region"
   },
   {
     "id": 903,
@@ -26555,7 +26558,8 @@
         "en": "poison touch",
         "hidden": true
       }
-    ]
+    ],
+    "formType": "region"
   },
   {
     "id": 904,
@@ -26583,7 +26587,8 @@
         "en": "intimidate",
         "hidden": true
       }
-    ]
+    ],
+    "formType": "region"
   },
   {
     "id": 905,
@@ -26610,7 +26615,7 @@
     "is_legendary": true,
     "forms": [
       {
-        "type": "alt",
+        "type": "hisui",
         "name_ko": "러브로스 영물폼",
         "name_en": "enamorus-therian",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__10249.png",
@@ -26626,7 +26631,9 @@
           }
         ]
       }
-    ]
+    ],
+    "regionType": "hisui",
+    "formType": "region"
   },
   {
     "id": 906,
