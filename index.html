@@ -16,8 +16,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* auth-bar 고정(52px) + 여유 여백 */
-      padding: 76px 16px 48px;
+      padding: 80px 16px 48px;
     }
 
     /* ══ 상단 인증 바 ══ */
@@ -161,20 +160,23 @@
 
     /* ══ 사이트 헤더 ══ */
     .site-header-bar {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: 60px;
+      background: #141414;
+      border-bottom: 1px solid #252525;
       display: flex; align-items: center; justify-content: space-between;
-      margin-bottom: 18px; flex-wrap: wrap; gap: 10px;
+      padding: 0 24px;
+      gap: 16px;
+      z-index: 200;
     }
     .site-title {
-      font-size: 1.45rem;
+      font-size: 1.3rem;
       font-weight: 900;
       color: #e53935;
-      letter-spacing: 3px;
-      text-shadow: 0 0 22px rgba(229,57,53,.4);
-      cursor: pointer;
+      letter-spacing: 2px;
       text-decoration: none;
-      transition: opacity .2s;
+      flex-shrink: 0;
     }
-    .site-title:hover { opacity: .8; }
     /* ── 공통 사이트 네비 ── */
     .site-nav { display: flex; gap: 6px; flex-wrap: wrap; }
     .site-nav-btn {
@@ -499,36 +501,13 @@
     .gameover-score b { color: #e53935; }
 
     /* ══ 도감 버튼 ══ */
-    /* ── 사이트 공통 네비게이션 ── */
-    .site-nav {
-      display: flex; gap: 8px; flex-wrap: wrap;
-      margin-bottom: 20px;
-    }
-    .site-nav-btn {
-      display: inline-flex; align-items: center; gap: 5px;
-      padding: 8px 16px; border-radius: 10px;
-      background: #1e1e1e; color: #ccc;
-      font-size: 0.85rem; font-weight: 600;
-      text-decoration: none; white-space: nowrap;
-      border: 1.5px solid #333;
-      transition: background .15s, color .15s, border-color .15s;
-    }
-    .site-nav-btn:hover { background: #2a2a2a; color: #fff; border-color: #555; }
-    .site-nav-btn.active { background: #e53935; color: #fff; border-color: #e53935; }
 
     /* ══ 모바일 반응형 ══ */
     @media (max-width: 600px) {
-      /* auth-bar 높이만큼 상단 여백 확보 */
-      body { padding: 64px 12px 48px; }
-
-      .auth-bar { height: 48px; padding: 0 12px; }
-      .user-name { max-width: 80px; }
-
-      /* auth-bar 버튼 터치 영역 모바일 보완 */
-      .btn-login-top { min-height: 44px; }
-      .btn-logout    { min-height: 44px; }
-
-      .site-title { font-size: 1.1rem; letter-spacing: 1px; margin-bottom: 12px; }
+      body { padding: 68px 12px 48px; }
+      .site-header-bar { padding: 0 14px; height: 52px; }
+      .site-nav-btn { padding: 5px 9px; font-size: 0.76rem; }
+      .site-title { font-size: 1.1rem; letter-spacing: 1px; }
       .site-footer { margin-top: 40px; padding: 20px 12px 8px; font-size: 0.73rem; }
 
       /* 탭 + 도감 버튼 레이아웃 */
