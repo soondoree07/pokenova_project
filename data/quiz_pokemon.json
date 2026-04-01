@@ -912,7 +912,7 @@
         "type": "mega",
         "name_ko": "메가라이츄 X",
         "name_en": "raichu-mega-x",
-        "sprite": "sprites/pokemon/__pokemon__images__d__d0__%EB%A9%94%EA%B0%80%EB%9D%BC%EC%9D%B4%EC%B8%84X_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png__revision__latest",
+        "sprite": "sprites/pokemon/__pokemon__images__d__d0__%EB%A9%94%EA%B0%80%EB%9D%BC%EC%9D%B4%EC%B8%84X_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png",
         "types": [
           "전기"
         ],
@@ -924,7 +924,7 @@
         "type": "mega",
         "name_ko": "메가라이츄 Y",
         "name_en": "raichu-mega-y",
-        "sprite": "sprites/pokemon/__pokemon__images__c__c9__%EB%A9%94%EA%B0%80%EB%9D%BC%EC%9D%B4%EC%B8%84Y_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png__revision__latest",
+        "sprite": "sprites/pokemon/__pokemon__images__c__c9__%EB%A9%94%EA%B0%80%EB%9D%BC%EC%9D%B4%EC%B8%84Y_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png",
         "types": [
           "전기"
         ],
@@ -11050,7 +11050,7 @@
         "type": "mega",
         "name_ko": "메가앱솔 Z",
         "name_en": "absol-mega-z",
-        "sprite": "sprites/pokemon/__pokemon__images__3__37__%EB%A9%94%EA%B0%80%EC%95%B1%EC%86%94Z_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png__revision__latest",
+        "sprite": "sprites/pokemon/__pokemon__images__3__37__%EB%A9%94%EA%B0%80%EC%95%B1%EC%86%94Z_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png",
         "types": [
           "악",
           "고스트"
@@ -12109,7 +12109,7 @@
         "type": "mega",
         "name_ko": "메가찌르호크",
         "name_en": "staraptor-mega",
-        "sprite": "sprites/pokemon/__pokemon__images__a__aa__%EB%A9%94%EA%B0%80%EC%B0%8C%EB%A5%B4%ED%98%B8%ED%81%AC_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png__revision__latest",
+        "sprite": "sprites/pokemon/__pokemon__images__a__aa__%EB%A9%94%EA%B0%80%EC%B0%8C%EB%A5%B4%ED%98%B8%ED%81%AC_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png",
         "types": [
           "격투",
           "비행"
@@ -13372,7 +13372,7 @@
         "type": "mega",
         "name_ko": "메가한카리아스 Z",
         "name_en": "garchomp-mega-z",
-        "sprite": "sprites/pokemon/__pokemon__images__7__7d__%EB%A9%94%EA%B0%80%ED%95%9C%EC%B9%B4%EB%A6%AC%EC%95%84%EC%8A%A4Z_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png__revision__latest",
+        "sprite": "sprites/pokemon/__pokemon__images__7__7d__%EB%A9%94%EA%B0%80%ED%95%9C%EC%B9%B4%EB%A6%AC%EC%95%84%EC%8A%A4Z_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png",
         "types": [
           "드래곤"
         ],
@@ -13482,7 +13482,7 @@
         "type": "mega",
         "name_ko": "메가루카리오 Z",
         "name_en": "lucario-mega-z",
-        "sprite": "sprites/pokemon/__pokemon__images__2__27__%EB%A9%94%EA%B0%80%EB%A3%A8%EC%B9%B4%EB%A6%AC%EC%98%A4Z_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png__revision__latest",
+        "sprite": "sprites/pokemon/__pokemon__images__2__27__%EB%A9%94%EA%B0%80%EB%A3%A8%EC%B9%B4%EB%A6%AC%EC%98%A4Z_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png",
         "types": [
           "격투",
           "강철"
@@ -14557,7 +14557,7 @@
         "type": "mega",
         "name_ko": "메가히드런",
         "name_en": "heatran-mega",
-        "sprite": "sprites/pokemon/__pokemon__images__0__0f__%EB%A9%94%EA%B0%80%ED%9E%88%EB%93%9C%EB%9F%B0_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png__revision__latest",
+        "sprite": "sprites/pokemon/__pokemon__images__0__0f__%EB%A9%94%EA%B0%80%ED%9E%88%EB%93%9C%EB%9F%B0_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png",
         "types": [
           "불꽃",
           "강철"
@@ -14700,7 +14700,7 @@
         "type": "mega",
         "name_ko": "메가다크라이",
         "name_en": "darkrai-mega",
-        "sprite": "sprites/pokemon/__pokemon__images__1__1b__%EB%A9%94%EA%B0%80%EB%8B%A4%ED%81%AC%EB%9D%BC%EC%9D%B4_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png__revision__latest",
+        "sprite": "sprites/pokemon/__pokemon__images__1__1b__%EB%A9%94%EA%B0%80%EB%8B%A4%ED%81%AC%EB%9D%BC%EC%9D%B4_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png",
         "types": [
           "악"
         ],
@@ -16543,7 +16543,7 @@
         ]
       },
       {
-        "type": "zen",
+        "type": "galar",
         "regionType": "galar",
         "name_ko": "가라르 달마모드 불비달마",
         "name_en": "darmanitan-galar-zen",
@@ -18609,7 +18609,7 @@
         "type": "mega",
         "name_ko": "메가골루그",
         "name_en": "golurk-mega",
-        "sprite": "sprites/pokemon/__pokemon__images__a__a3__%EB%A9%94%EA%B0%80%EA%B3%A8%EB%A3%A8%EA%B7%B8_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png__revision__latest",
+        "sprite": "sprites/pokemon/__pokemon__images__a__a3__%EB%A9%94%EA%B0%80%EA%B3%A8%EB%A3%A8%EA%B7%B8_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png",
         "types": [
           "땅",
           "고스트"
@@ -20140,7 +20140,7 @@
         "type": "mega",
         "name_ko": "메가냐오닉스",
         "name_en": "meowstic-mega",
-        "sprite": "sprites/pokemon/__pokemon__images__7__75__%EB%A9%94%EA%B0%80%EB%83%90%EC%98%A4%EB%8B%89%EC%8A%A4_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png__revision__latest",
+        "sprite": "sprites/pokemon/__pokemon__images__7__75__%EB%A9%94%EA%B0%80%EB%83%90%EC%98%A4%EB%8B%89%EC%8A%A4_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png",
         "types": [
           "에스퍼"
         ],
@@ -23538,7 +23538,7 @@
         "type": "mega",
         "name_ko": "메가제라오라",
         "name_en": "zeraora-mega",
-        "sprite": "sprites/pokemon/__pokemon__images__8__87__%EB%A9%94%EA%B0%80%EC%A0%9C%EB%9D%BC%EC%98%A4%EB%9D%BC_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png__revision__latest",
+        "sprite": "sprites/pokemon/__pokemon__images__8__87__%EB%A9%94%EA%B0%80%EC%A0%9C%EB%9D%BC%EC%98%A4%EB%9D%BC_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png",
         "types": [
           "전기"
         ],
@@ -27769,7 +27769,7 @@
         "type": "mega",
         "name_ko": "메가스코빌런",
         "name_en": "scovillain-mega",
-        "sprite": "sprites/pokemon/__pokemon__images__b__be__%EB%A9%94%EA%B0%80%EC%8A%A4%EC%BD%94%EB%B9%8C%EB%9F%B0_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png__revision__latest",
+        "sprite": "sprites/pokemon/__pokemon__images__b__be__%EB%A9%94%EA%B0%80%EC%8A%A4%EC%BD%94%EB%B9%8C%EB%9F%B0_ZA_%EA%B3%B5%EC%8B%9D_%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png",
         "types": [
           "풀",
           "불꽃"
