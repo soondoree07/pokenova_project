@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>엔트리 구성 · Pokénova</title>
+  <title>배틀팀 · Pokénova</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -38,7 +38,7 @@
     }
     .logo-text { color:#f0f0f0; font-size:18px; font-weight:900; letter-spacing:-0.5px; }
     .logo-text span { color:#e53935; }
-    .nav-links { display:flex; gap:8px; }
+    .nav-links { display:none; }
     .nav-link {
       padding:7px 14px; border-radius:20px; border:1px solid #252525;
       background:transparent; color:#888; font-size:0.82rem; font-weight:600;
@@ -387,16 +387,17 @@
       <div class="logo-ball"></div>
       <span class="logo-text">Poké<span>nova</span></span>
     </a>
-    <nav class="nav-links">
-      <a href="index.html" class="nav-link">퀴즈</a>
-      <a href="pokedex.html" class="nav-link">포켓몬 도감</a>
-      <a href="movedex.html" class="nav-link">기술 도감</a>
-    </nav>
   </div>
 </header>
+<nav style="display:flex;gap:8px;flex-wrap:wrap;padding:10px 24px;background:#111;border-bottom:1px solid #252525">
+  <a href="index.html"   style="display:inline-flex;align-items:center;gap:5px;padding:7px 15px;border-radius:10px;background:#1e1e1e;color:#ccc;font-size:0.85rem;font-weight:600;text-decoration:none;border:1.5px solid #333">🎴 퀴즈</a>
+  <a href="pokedex.html" style="display:inline-flex;align-items:center;gap:5px;padding:7px 15px;border-radius:10px;background:#1e1e1e;color:#ccc;font-size:0.85rem;font-weight:600;text-decoration:none;border:1.5px solid #333">📖 포켓몬 도감</a>
+  <a href="movedex.html" style="display:inline-flex;align-items:center;gap:5px;padding:7px 15px;border-radius:10px;background:#1e1e1e;color:#ccc;font-size:0.85rem;font-weight:600;text-decoration:none;border:1.5px solid #333">⚔️ 기술 도감</a>
+  <a href="entry.html"   style="display:inline-flex;align-items:center;gap:5px;padding:7px 15px;border-radius:10px;background:#e53935;color:#fff;font-size:0.85rem;font-weight:600;text-decoration:none;border:1.5px solid #e53935">🏆 배틀팀</a>
+</nav>
 
 <main class="main">
-  <div class="page-title">엔트리 구성</div>
+  <div class="page-title">배틀팀</div>
   <div class="page-sub">메인 엔트리 6마리와 벤치 엔트리 6마리를 골라보세요.</div>
 
   <div class="team-tabs" id="team-tabs"></div>
