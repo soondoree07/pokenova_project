@@ -168,6 +168,22 @@ let classFilter = '전체';
 // learnsets의 en은 하이픈, quiz_moves의 en은 공백 → 통일
 function moveKey(en) { return (en || '').toLowerCase().replace(/\s+/g, '-'); }
 
+// learnsets 키 → quiz_pokemon 매핑 (폼 포함, 특수 이름 처리)
+let lsKeyToPokeMap = null;
+function buildLSKeyMap() {
+  lsKeyToPokeMap = new Map();
+  for (const p of allPokemon) {
+    const key = p.en.toLowerCase();
+    lsKeyToPokeMap.set(key, p);
+    lsKeyToPokeMap.set(key.replace(/\s/g, '-'), p); // 'mr. mime' → 'mr.-mime'
+    if (p.forms) {
+      for (const f of p.forms) {
+        if (f.name_en) lsKeyToPokeMap.set(f.name_en.toLowerCase(), p);
+      }
+    }
+  }
+}
+
 async function init() {
   [allMoves, allPokemon, learnsets] = await Promise.all([
     fetch('data/quiz_moves.json').then(r => r.json()),
@@ -175,6 +191,7 @@ async function init() {
     fetch('data/learnsets.json').then(r => r.json()),
   ]);
   allMoves = allMoves.filter(m => !m.is_zmove && !m.hidden);
+  buildLSKeyMap();
 
   buildChips();
   render();
@@ -248,11 +265,18 @@ function render() {
 function openModal(m) {
   const key = moveKey(m.en);
 
-  // 이 기술을 배울 수 있는 포켓몬 찾기 (도감순)
-  const learners = allPokemon.filter(p => {
-    const lsEntry = learnsets[p.en.toLowerCase()];
-    return lsEntry && lsEntry.some(mv => mv.en === key);
-  }).sort((a, b) => a.id - b.id);
+  // 이 기술을 배울 수 있는 포켓몬 찾기 (도감순, 폼·특수 이름 포함)
+  const seenIds = new Set();
+  const learners = [];
+  for (const [lsKey, moveList] of Object.entries(learnsets)) {
+    if (!moveList.some(mv => mv.en === key)) continue;
+    const poke = lsKeyToPokeMap.get(lsKey);
+    if (poke && !seenIds.has(poke.id)) {
+      seenIds.add(poke.id);
+      learners.push(poke);
+    }
+  }
+  learners.sort((a, b) => a.id - b.id);
 
   const pp    = m.pp    ?? '—';
   const power = m.power ?? '—';
