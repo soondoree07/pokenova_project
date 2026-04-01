@@ -169,14 +169,20 @@
       gap: 16px;
       z-index: 200;
     }
-    .site-title {
-      font-size: 1.3rem;
-      font-weight: 900;
-      color: #e53935;
-      letter-spacing: 2px;
-      text-decoration: none;
-      flex-shrink: 0;
+    .site-logo { display:flex; align-items:center; gap:10px; text-decoration:none; flex-shrink:0; }
+    .logo-ball {
+      width:28px; height:28px; background:#f0f0f0;
+      border-radius:50%; position:relative; overflow:hidden;
+      border:2.5px solid #555; flex-shrink:0;
     }
+    .logo-ball::before { content:''; position:absolute; top:0;left:0;right:0; height:50%; background:#e53935; }
+    .logo-ball::after {
+      content:''; position:absolute; top:50%;left:50%;
+      transform:translate(-50%,-50%); width:9px;height:9px;
+      background:#f0f0f0; border-radius:50%; border:2px solid #555; z-index:1;
+    }
+    .logo-text { color:#f0f0f0; font-size:18px; font-weight:900; letter-spacing:-0.5px; }
+    .logo-text span { color:#e53935; }
     /* ── 공통 사이트 네비 ── */
     .site-nav { display: flex; gap: 6px; flex-wrap: wrap; }
     .site-nav-btn {
@@ -507,7 +513,7 @@
       body { padding: 68px 12px 48px; }
       .site-header-bar { padding: 0 14px; height: 52px; }
       .site-nav-btn { padding: 5px 9px; font-size: 0.76rem; }
-      .site-title { font-size: 1.1rem; letter-spacing: 1px; }
+      .logo-text { font-size: 15px; }
       .site-footer { margin-top: 40px; padding: 20px 12px 8px; font-size: 0.73rem; }
 
       /* 탭 + 도감 버튼 레이아웃 */
@@ -659,7 +665,10 @@
 <body>
 
 <div class="site-header-bar">
-  <a class="site-title" href="index.html">Pokénova</a>
+  <a class="site-logo" href="index.html">
+    <div class="logo-ball"></div>
+    <span class="logo-text">Poké<span>nova</span></span>
+  </a>
   <nav class="site-nav">
     <a href="index.html"   class="site-nav-btn active">🎴 퀴즈</a>
     <a href="pokedex.html" class="site-nav-btn">📖 포켓몬 도감</a>
