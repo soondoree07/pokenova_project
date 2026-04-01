@@ -16,7 +16,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 20px 16px 48px;
+      padding: 0 16px 48px;
     }
 
     /* ══ 상단 인증 바 ══ */
@@ -513,7 +513,7 @@
 
     /* ══ 모바일 반응형 ══ */
     @media (max-width: 600px) {
-      body { padding: 16px 12px 48px; }
+      body { padding: 0 12px 48px; }
       .site-header-bar { padding: 0 14px; }
       .site-header-inner { height: 52px; }
       .site-nav-btn { padding: 5px 9px; font-size: 0.76rem; }
@@ -684,7 +684,7 @@
 </div>
 
 <!-- ══ 탭 네비게이션 ══ -->
-<div class="nav-tab-wrap" style="display:flex;align-items:center;gap:10px;margin-bottom:28px;flex-wrap:wrap">
+<div class="nav-tab-wrap" style="display:flex;align-items:center;gap:10px;margin-top:32px;margin-bottom:28px;flex-wrap:wrap">
   <div class="nav-tabs" style="margin-bottom:0;flex:1">
     <button class="nav-tab active" id="tab-btn-barcode"  onclick="showTab('barcode')">🎴 포켓몬 맞추기</button>
     <button class="nav-tab"        id="tab-btn-move"     onclick="showTab('move')">⚔️ 기술 맞추기</button>
