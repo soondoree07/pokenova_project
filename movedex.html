@@ -79,6 +79,13 @@ h1{font-size:1.3rem;font-weight:700;margin-bottom:18px;color:#fff}
 .class-특수{background:#1565c0;color:#fff;border-color:#1565c0!important}
 .class-변화{background:#2e7d32;color:#fff;border-color:#2e7d32!important}
 
+/* ── 다이맥스 섹션 ── */
+.section-divider{max-width:1200px;margin:32px auto 16px;padding:0;display:flex;align-items:center;gap:14px}
+.section-divider h2{font-size:1.1rem;font-weight:900;color:#f0f0f0;white-space:nowrap}
+.section-badge{font-size:12px;font-weight:700;color:#fff;padding:3px 12px;border-radius:20px}
+.section-badge.dmax{background:#1565c0}
+.section-line{flex:1;height:1px;background:#252525;border-radius:2px}
+
 /* ── 반응형 ── */
 @media(max-width:600px){
   /* 헤더 */
@@ -178,6 +185,16 @@ h1{font-size:1.3rem;font-weight:700;margin-bottom:18px;color:#fff}
   <div class="move-grid" id="move-grid"></div>
 </div>
 
+<!-- ─── 다이맥스 기술 ─── -->
+<div class="section-divider" id="dmax-section-header">
+  <h2>다이맥스</h2>
+  <span class="section-badge dmax" id="dmax-count"></span>
+  <div class="section-line"></div>
+</div>
+<div class="container" style="padding-top:0">
+  <div class="move-grid" id="dmax-grid"></div>
+</div>
+
 <!-- 기술 상세 모달 -->
 <div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
   <div class="modal-box" id="modal-box">
@@ -192,6 +209,8 @@ let allPokemon  = [];
 let learnsets   = {};
 let typeFilter  = '전체';
 let classFilter = '전체';
+
+const isDynamax = m => (m.ko||'').startsWith('다이') || (m.ko||'').startsWith('거다이');
 
 // learnsets의 en은 하이픈, quiz_moves의 en은 공백 → 통일
 function moveKey(en) { return (en || '').toLowerCase().replace(/\s+/g, '-'); }
@@ -218,7 +237,7 @@ async function init() {
     fetch('data/quiz_pokemon.json').then(r => r.json()),
     fetch('data/learnsets.json').then(r => r.json()),
   ]);
-  allMoves = allMoves.filter(m => !m.is_zmove && !m.hidden);
+  allMoves = allMoves.filter(m => !m.is_zmove && (!m.hidden || isDynamax(m)));
   buildLSKeyMap();
 
   buildChips();
@@ -250,9 +269,41 @@ function setClass(c) {
   render();
 }
 
+function buildMoveCard(m) {
+  const pp    = m.pp    ?? '—';
+  const power = m.power ?? '—';
+  const acc   = m.accuracy ?? '—';
+  return `
+  <div class="move-card" onclick="openModal(${JSON.stringify(m).replace(/"/g,'&quot;')})">
+    <div class="move-card-header">
+      <div>
+        <div class="move-name-ko">${m.ko}</div>
+        <div class="move-name-en">${m.en}</div>
+      </div>
+      <div class="move-badges">
+        <span class="badge-type t-${m.type}">${m.type}</span>
+        <span class="badge-class class-${m.class}">${m.class}</span>
+      </div>
+    </div>
+    <div class="move-stats">
+      <div>PP <span>${pp}</span></div>
+      <div>위력 <span>${power}</span></div>
+      <div>명중 <span>${acc}</span></div>
+      <div style="margin-left:auto">${m.gen || ''}</div>
+    </div>
+    <div class="move-desc">${m.desc || ''}</div>
+  </div>`;
+}
+
 function render() {
   const q = document.getElementById('search').value.trim().toLowerCase();
-  let list = allMoves;
+
+  // 일반 기술 / 다이맥스 기술 분리
+  const normalMoves  = allMoves.filter(m => !isDynamax(m));
+  const dynamaxMoves = allMoves.filter(isDynamax);
+
+  // 일반 기술 필터링
+  let list = normalMoves;
   if (typeFilter  !== '전체') list = list.filter(m => m.type  === typeFilter);
   if (classFilter !== '전체') list = list.filter(m => m.class === classFilter);
   if (q) list = list.filter(m =>
@@ -260,33 +311,28 @@ function render() {
     (m.en || '').toLowerCase().includes(q)
   );
 
-  document.getElementById('count-label').textContent = `${list.length}개`;
+  // 타입 필터가 활성화된 경우 해당 타입의 다이맥스 기술을 목록 끝에 추가
+  let mainList = list;
+  if (typeFilter !== '전체') {
+    const dmaxForType = dynamaxMoves.filter(m => m.type === typeFilter);
+    mainList = [...list, ...dmaxForType];
+  }
 
-  document.getElementById('move-grid').innerHTML = list.map(m => {
-    const pp    = m.pp    ?? '—';
-    const power = m.power ?? '—';
-    const acc   = m.accuracy ?? '—';
-    return `
-    <div class="move-card" onclick="openModal(${JSON.stringify(m).replace(/"/g,'&quot;')})">
-      <div class="move-card-header">
-        <div>
-          <div class="move-name-ko">${m.ko}</div>
-          <div class="move-name-en">${m.en}</div>
-        </div>
-        <div class="move-badges">
-          <span class="badge-type t-${m.type}">${m.type}</span>
-          <span class="badge-class class-${m.class}">${m.class}</span>
-        </div>
-      </div>
-      <div class="move-stats">
-        <div>PP <span>${pp}</span></div>
-        <div>위력 <span>${power}</span></div>
-        <div>명중 <span>${acc}</span></div>
-        <div style="margin-left:auto">${m.gen || ''}</div>
-      </div>
-      <div class="move-desc">${m.desc || ''}</div>
-    </div>`;
-  }).join('');
+  document.getElementById('count-label').textContent = `${list.length}개`;
+  document.getElementById('move-grid').innerHTML = mainList.map(buildMoveCard).join('');
+
+  // 다이맥스 섹션: 검색어·타입 필터 적용
+  let dmaxList = dynamaxMoves;
+  if (typeFilter  !== '전체') dmaxList = dmaxList.filter(m => m.type  === typeFilter);
+  if (q) dmaxList = dmaxList.filter(m =>
+    (m.ko || '').toLowerCase().includes(q) ||
+    (m.en || '').toLowerCase().includes(q)
+  );
+  const dmaxSection = document.getElementById('dmax-section-header');
+  const dmaxGrid    = document.getElementById('dmax-grid');
+  dmaxSection.style.display = dmaxList.length ? '' : 'none';
+  document.getElementById('dmax-count').textContent = `${dmaxList.length}종`;
+  dmaxGrid.innerHTML = dmaxList.map(buildMoveCard).join('');
 }
 
 /* ── 모달 ── */
