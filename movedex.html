@@ -248,9 +248,9 @@ let learnsets   = {};
 let typeFilter  = '전체';
 let classFilter = '전체';
 
-const DMAX_EXCLUDE = new Set(['Dive', 'Diamond Storm']); // 다이빙·다이아스톰 제외
+const DMAX_EXCLUDE = new Set(['dive', 'diamond storm', 'dynamax cannon']); // 다이빙·다이아스톰·다이맥스포 제외
 const isGmax    = m => !!m.is_gmax;
-const isDynamax = m => !m.is_gmax && ((m.ko||'').startsWith('다이') || (m.ko||'').startsWith('거다이')) && !DMAX_EXCLUDE.has(m.en);
+const isDynamax = m => !m.is_gmax && (m.ko||'').startsWith('다이') && !DMAX_EXCLUDE.has((m.en||'').toLowerCase());
 
 // learnsets의 en은 하이픈, quiz_moves의 en은 공백 → 통일
 function moveKey(en) { return (en || '').toLowerCase().replace(/\s+/g, '-'); }
