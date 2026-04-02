@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>아이템 도감 — Pokénova</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0a0a0a;color:#f0f0f0;font-family:'Segoe UI','Noto Sans KR',sans-serif;min-height:100vh}
+a{text-decoration:none;color:inherit}
+
+/* ── 헤더 ── */
+.site-header{padding:0 24px;background:#141414;border-bottom:1px solid #252525;position:sticky;top:0;z-index:100}
+.header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.site-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.logo-ball{width:28px;height:28px;background:#f0f0f0;border-radius:50%;position:relative;overflow:hidden;border:2.5px solid #555;flex-shrink:0}
+.logo-ball::before{content:'';position:absolute;top:0;left:0;right:0;height:50%;background:#e53935}
+.logo-ball::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:9px;height:9px;background:#f0f0f0;border-radius:50%;border:2px solid #555;z-index:1}
+.logo-text{color:#f0f0f0;font-size:18px;font-weight:900;letter-spacing:-.5px}
+.logo-text span{color:#e53935}
+.site-nav{display:flex;gap:6px;flex-wrap:wrap;flex-shrink:0}
+.site-nav-btn{display:inline-flex;align-items:center;gap:5px;padding:7px 14px;border-radius:9px;background:#1e1e1e;color:#bbb;font-size:0.82rem;font-weight:600;text-decoration:none;white-space:nowrap;border:1.5px solid #333;transition:background .15s,color .15s,border-color .15s}
+.site-nav-btn:hover{background:#2a2a2a;color:#fff;border-color:#555}
+.site-nav-btn.active{background:#e53935;color:#fff;border-color:#e53935}
+
+/* ── 컨테이너 ── */
+.container{max-width:1200px;margin:0 auto;padding:20px}
+h1{font-size:1.3rem;font-weight:700;margin-bottom:18px;color:#fff}
+
+/* ── 필터 바 ── */
+.filter-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;align-items:center}
+.search-wrap{position:relative;flex:1;min-width:180px;max-width:320px}
+.search-wrap input{width:100%;padding:8px 12px 8px 32px;background:#1a1a1a;border:1px solid #333;border-radius:8px;color:#f0f0f0;font-size:0.9rem;outline:none}
+.search-wrap input:focus{border-color:#e53935}
+.search-wrap::before{content:'🔍';position:absolute;left:9px;top:50%;transform:translateY(-50%);font-size:.85rem;opacity:.5}
+.filter-chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{padding:5px 11px;border-radius:20px;background:#1e1e1e;border:1.5px solid #333;font-size:0.78rem;font-weight:600;cursor:pointer;transition:all .15s;white-space:nowrap;color:#fff}
+.chip:hover{border-color:#888}
+.chip.active{background:#e53935;border-color:#e53935;color:#fff}
+.count-label{font-size:0.8rem;color:#888;margin-left:auto;align-self:center}
+
+/* ── 아이템 그리드 ── */
+.item-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
+
+/* ── 아이템 카드 ── */
+.item-card{background:#141414;border:1px solid #252525;border-radius:10px;padding:12px 14px;display:flex;align-items:flex-start;gap:12px;transition:border-color .15s;cursor:default}
+.item-card:hover{border-color:#444}
+.item-sprite{width:48px;height:48px;object-fit:contain;flex-shrink:0;image-rendering:auto}
+.item-sprite-placeholder{width:48px;height:48px;flex-shrink:0;background:#1e1e1e;border-radius:6px}
+.item-body{flex:1;min-width:0}
+.item-head{display:flex;align-items:center;gap:8px;margin-bottom:5px;flex-wrap:wrap}
+.item-name-ko{font-size:0.98rem;font-weight:700;color:#f0f0f0}
+.item-cat-badge{font-size:0.68rem;font-weight:700;padding:2px 8px;border-radius:10px;white-space:nowrap;flex-shrink:0}
+.item-desc{font-size:0.8rem;color:#aaa;line-height:1.5}
+
+/* ── 카테고리 배지 색상 ── */
+.cat-지닌도구{background:#1565c0;color:#fff}
+.cat-열매{background:#388e3c;color:#fff}
+.cat-메가스톤{background:#6a1b9a;color:#fff}
+.cat-전용도구{background:#bf360c;color:#fff}
+.cat-볼{background:#00838f;color:#fff}
+.cat-기타{background:#546e7a;color:#fff}
+
+/* ── 반응형 ── */
+@media(max-width:600px){
+  .site-header{padding:0 12px}
+  .header-inner{height:52px;gap:8px}
+  .logo-text{font-size:15px}
+  .site-nav-btn{padding:5px 8px;font-size:0.75rem}
+  .container{padding:14px 12px}
+  h1{font-size:1.1rem;margin-bottom:14px}
+  .filter-bar{gap:6px;margin-bottom:10px}
+  .search-wrap{min-width:0;max-width:100%;flex:1 1 100%}
+  .search-wrap input{font-size:1rem;min-height:44px;padding:10px 12px 10px 32px}
+  .chip{padding:7px 10px;min-height:38px;font-size:0.8rem}
+  .count-label{font-size:0.75rem}
+  .item-grid{grid-template-columns:1fr}
+}
+@media(max-width:380px){
+  .site-nav-btn{padding:4px 6px;font-size:0.7rem}
+  .chip{padding:6px 8px;font-size:0.75rem}
+}
+
+.site-footer{width:100%;max-width:700px;margin:60px auto 0;padding:24px 16px 8px;border-top:1px solid #252525;text-align:center;color:#555;font-size:0.78rem;line-height:1.9}
+.site-footer a{color:#777;text-decoration:none;transition:color .2s}
+.site-footer a:hover{color:#e53935}
+.site-footer .footer-name{color:#888;font-weight:600}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="site-logo" href="index.html">
+      <div class="logo-ball"></div>
+      <span class="logo-text">Poké<span>nova</span></span>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html"    class="site-nav-btn">🎴 퀴즈</a>
+      <a href="pokedex.html"  class="site-nav-btn">📖 포켓몬 도감</a>
+      <a href="movedex.html"  class="site-nav-btn">⚔️ 기술 도감</a>
+      <a href="itemdex.html"  class="site-nav-btn active">🎒 아이템 도감</a>
+      <a href="entry.html"    class="site-nav-btn">🏆 배틀팀</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <h1>아이템 도감</h1>
+
+  <div class="filter-bar">
+    <div class="search-wrap">
+      <input id="search" type="text" placeholder="아이템명 검색..." oninput="render()" autocomplete="off" spellcheck="false">
+    </div>
+    <div class="filter-chips" id="tab-chips"></div>
+    <span class="count-label" id="count-label"></span>
+  </div>
+
+  <div class="item-grid" id="item-grid"></div>
+</div>
+
+<script>
+let allItems = [];
+let activeTab = '전체';
+
+// ── 탭 정의 ──
+const TABS = ['전체','지닌도구','열매','메가스톤','전용도구','볼','기타'];
+
+// 탭별 카테고리 집합
+const TAB_CATS = {
+  '지닌도구': new Set(['held-items','type-enhancement','type-protection','jewels','scarves','choice',
+    'bad-held-items','stat-boosts','effort-training','effort-drop','training','flutes','pp-recovery','in-a-pinch']),
+  '메가스톤': new Set(['mega-stones']),
+  '전용도구': new Set(['plates','memories','species-specific','z-crystals']),
+  '볼':      new Set(['standard-balls','special-balls','apricorn-balls']),
+  '기타':    new Set(['spelunking','healing','medicine','picky-healing','revival',
+    'status-cures','vitamins','fossil','for-sell','other','evolution']),
+};
+
+// 아이템이 속하는 탭 반환 (열매 우선)
+function getItemTab(item) {
+  if ((item.ko || '').includes('열매')) return '열매';
+  for (const [tab, cats] of Object.entries(TAB_CATS)) {
+    if (cats.has(item.category)) return tab;
+  }
+  return '기타';
+}
+
+// 카테고리 → 한국어 세부 이름
+const CAT_KO = {
+  'held-items':       '지닌도구',
+  'type-enhancement': '타입 강화',
+  'type-protection':  '타입 방어',
+  'jewels':           '주얼',
+  'scarves':          '스카프',
+  'choice':           '기술선택',
+  'bad-held-items':   '디버프 도구',
+  'stat-boosts':      '능력치 강화',
+  'effort-training':  '노력치 훈련',
+  'effort-drop':      '노력치 감소',
+  'training':         '훈련',
+  'flutes':           '피리',
+  'pp-recovery':      'PP 회복',
+  'in-a-pinch':       '핀치 도구',
+  'mega-stones':      '메가스톤',
+  'plates':           '플레이트',
+  'memories':         '메모리',
+  'species-specific': '전용도구',
+  'z-crystals':       'Z크리스탈',
+  'standard-balls':   '볼',
+  'special-balls':    '특수볼',
+  'apricorn-balls':   '아프리콘볼',
+  'spelunking':       '탐험',
+  'healing':          '회복',
+  'medicine':         '의약품',
+  'picky-healing':    '회복',
+  'revival':          '부활',
+  'status-cures':     '상태이상 치료',
+  'vitamins':         '비타민',
+  'fossil':           '화석',
+  'for-sell':         '판매용',
+  'other':            '기타',
+  'evolution':        '진화 아이템',
+};
+
+async function init() {
+  const raw = await fetch('data/quiz_items.json').then(r => r.json());
+  allItems = raw.filter(it =>
+    !it.needs_ko &&
+    it.desc_lang === 'ko' &&
+    it.category !== 'all-machines' &&
+    !(it.category === 'jewels' && it.ko !== '노말주얼')
+  );
+  buildChips();
+  render();
+}
+
+function buildChips() {
+  document.getElementById('tab-chips').innerHTML = TABS.map(t =>
+    `<button class="chip${t === '전체' ? ' active' : ''}" onclick="setTab('${t}')">${t}</button>`
+  ).join('');
+}
+
+function setTab(t) {
+  activeTab = t;
+  document.querySelectorAll('#tab-chips .chip').forEach(b =>
+    b.classList.toggle('active', b.textContent === t)
+  );
+  render();
+}
+
+function render() {
+  const q = document.getElementById('search').value.trim().toLowerCase();
+
+  let list = allItems;
+  if (activeTab !== '전체') {
+    list = list.filter(it => getItemTab(it) === activeTab);
+  }
+  if (q) {
+    list = list.filter(it =>
+      (it.ko || '').toLowerCase().includes(q) ||
+      (it.en || '').toLowerCase().includes(q)
+    );
+  }
+
+  document.getElementById('count-label').textContent = `${list.length}개`;
+  document.getElementById('item-grid').innerHTML = list.map(buildItemCard).join('');
+}
+
+function buildItemCard(it) {
+  const tab    = getItemTab(it);
+  const catKo  = (it.ko || '').includes('열매') ? '열매' : (CAT_KO[it.category] || it.category);
+  const sprite = it.sprite
+    ? `<img class="item-sprite" src="${it.sprite}" alt="${it.ko}" onerror="this.style.opacity=0.2">`
+    : `<div class="item-sprite-placeholder"></div>`;
+  return `
+  <div class="item-card">
+    ${sprite}
+    <div class="item-body">
+      <div class="item-head">
+        <span class="item-name-ko">${it.ko || ''}</span>
+        <span class="item-cat-badge cat-${tab}">${catKo}</span>
+      </div>
+      <div class="item-desc">${it.desc || ''}</div>
+    </div>
+  </div>`;
+}
+
+init();
+</script>
+
+<footer class="site-footer">
+  <div>Made by <span class="footer-name">잉짱</span> &nbsp;·&nbsp; <a href="mailto:soondoree07@gmail.com">soondoree07@gmail.com</a></div>
+  <div style="margin-top:6px; font-size:0.72rem; color:#444;">
+    Pokémon and all related names are trademarks of Nintendo / Game Freak / Creatures Inc.<br>
+    This site is a fan-made project and is not affiliated with or endorsed by Nintendo.
+  </div>
+  <div style="margin-top:8px; font-size:0.72rem;">© 2026 Pokénova</div>
+</footer>
+</body>
+</html>
