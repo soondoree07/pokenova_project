@@ -2460,14 +2460,15 @@ loadAllData();
   };
 
   window._lbGet = async (mode, diff) => {
-    const constraints = [
-      where('mode', '==', mode),
-      orderBy('correct', 'desc'),
-      limit(100)
-    ];
-    if (diff) constraints.splice(1, 0, where('difficulty', '==', diff));
-    const snap = await getDocs(query(collection(firestoreDb, 'leaderboard'), ...constraints));
-    return snap.docs.map(d => d.data());
+    // 복합 인덱스 없이 mode만 Firestore 필터링, difficulty·정렬은 클라이언트에서 처리
+    const snap = await getDocs(query(
+      collection(firestoreDb, 'leaderboard'),
+      where('mode', '==', mode)
+    ));
+    let rows = snap.docs.map(d => d.data());
+    if (diff) rows = rows.filter(r => r.difficulty === diff);
+    rows.sort((a, b) => (b.correct ?? 0) - (a.correct ?? 0));
+    return rows.slice(0, 100);
   };
 
   // 메인 스크립트에 db 준비됨 알림
