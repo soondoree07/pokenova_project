@@ -1,0 +1,9 @@
+# Windows metadata
+*:Zone.Identifier
+
+# Cache files
+data/learnsets_cache.json
+data/learnsets_sv_cache.json
+
+# Misc
+data/verify_result.json
