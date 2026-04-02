@@ -204,7 +204,7 @@ h1{font-size:1.3rem;font-weight:700;margin-bottom:18px;color:#fff}
 
 <!-- ─── 거다이맥스 전용기 ─── -->
 <div class="section-divider" id="gmax-section-header">
-  <h2>거다이맥스 전용기</h2>
+  <h2>거다이맥스</h2>
   <span class="section-badge gmax" id="gmax-count"></span>
   <div class="section-line"></div>
 </div>
@@ -437,22 +437,45 @@ function openModal(m) {
   const power = m.power ?? '—';
   const acc   = m.accuracy ?? '—';
 
+  // 포켓몬 이름으로 카드 HTML 생성 (이름 배열 받음)
+  function findPokeByName(name) {
+    const base = allPokemon.find(x => x.ko === name);
+    if (base) return { id: base.id, ko: base.ko, en: base.en, sprite: base.sprite };
+    for (const p of allPokemon) {
+      const form = (p.forms || []).find(f => f.name_ko === name);
+      if (form) return { id: p.id, ko: form.name_ko, en: form.name_en || p.en, sprite: form.sprite || p.sprite };
+    }
+    return null;
+  }
+  function pokeCards(names) {
+    const cards = names.map(name => {
+      const p = findPokeByName(name);
+      if (!p) return `<div class="learner-card"><div class="learner-name-ko">${name}</div></div>`;
+      return `<div class="learner-card">
+        <div class="learner-id">#${String(p.id).padStart(3,'0')}</div>
+        <img src="${p.sprite}" alt="${p.ko}" loading="lazy">
+        <div class="learner-name-ko">${p.ko}</div>
+        <div class="learner-name-en">${p.en}</div>
+      </div>`;
+    });
+    return `<div class="learner-grid">${cards.join('')}</div>`;
+  }
+
   // Z기술/거다이맥스 모달: 배울 수 있는 포켓몬 섹션 처리
   let learnerSection = '';
   if (m.is_gmax) {
+    const names = m.pokemon ? [m.pokemon] : [];
     learnerSection = `
       <div class="modal-section-title">사용 포켓몬</div>
-      <div style="font-size:0.88rem;color:#80cbc4;padding:8px 0">${m.pokemon || '—'}</div>
+      ${names.length ? pokeCards(names) : '<div class="modal-no-learner">—</div>'}
     `;
   } else if (m.is_zmove) {
     if (m.is_special_zmove) {
-      // 전용 Z기술: 사용 가능 포켓몬 표시
-      const pokeList = Array.isArray(m.pokemon) ? m.pokemon : (m.pokemon ? [m.pokemon] : []);
-      const pokeNames = pokeList.join(', ') || '—';
+      const names = Array.isArray(m.pokemon) ? m.pokemon : (m.pokemon ? [m.pokemon] : []);
       learnerSection = `
-        <div class="modal-section-title">전용 Z크리스탈 · 사용 가능 포켓몬</div>
-        <div style="font-size:0.88rem;color:#ce93d8;padding:8px 0">${pokeNames}</div>
-        <div style="font-size:0.8rem;color:#666;margin-top:4px">필요 기술: <span style="color:#e0e0e0">${m.required_move || '—'}</span> &nbsp;·&nbsp; 크리스탈: <span style="color:#f57f17">${m.crystal || '—'}</span></div>
+        <div class="modal-section-title">사용 가능 포켓몬</div>
+        ${names.length ? pokeCards(names) : '<div class="modal-no-learner">—</div>'}
+        <div style="font-size:0.8rem;color:#666;margin-top:8px">필요 기술: <span style="color:#e0e0e0">${m.required_move || '—'}</span> &nbsp;·&nbsp; 크리스탈: <span style="color:#f57f17">${m.crystal || '—'}</span></div>
       `;
     }
     // 범용 Z기술은 배울 수 있는 포켓몬 섹션 생략
