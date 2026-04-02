@@ -304,12 +304,9 @@
       letter-spacing: 1px;
       margin-bottom: 10px;
     }
-    .stats-grid { display: flex; flex-direction: column; gap: 5px; }
-    .stat-row { display: flex; align-items: center; gap: 8px; }
-    .stat-label { width: 24px; font-size: 11px; font-weight: 700; color: #666; flex-shrink: 0; text-align: right; }
-    .stat-bar-wrap { flex: 1; background: #1c1c1c; border-radius: 4px; height: 7px; overflow: hidden; }
-    .stat-bar { height: 100%; border-radius: 4px; transition: width 0.4s ease; }
-    .stat-val { width: 28px; font-size: 12px; font-weight: 700; color: #ccc; text-align: right; flex-shrink: 0; }
+    .stats-table { width: 100%; border-collapse: collapse; }
+    .stats-table th { font-size: 11px; font-weight: 700; color: #888; text-align: center; padding: 4px 0 6px; }
+    .stats-table td { font-size: 15px; font-weight: 700; color: #f0f0f0; text-align: center; padding: 6px 0 4px; border-top: 1px solid #222; }
     .stat-total { margin-top: 8px; text-align: right; font-size: 11px; color: #555; }
     .stat-total span { color: #aaa; font-weight: 700; }
     .ability-list { display: flex; flex-direction: column; gap: 8px; }
@@ -1186,22 +1183,16 @@ function openModal(p) {
   const statsEntry = STATS_MAP[(p.en || '').toLowerCase()];
   if (statsEntry && statsEntry.stats) {
     const st = statsEntry.stats;
-    const STAT_COLOR = { H:'#e53935', A:'#e67e22', B:'#f1c40f', C:'#3498db', D:'#2ecc71', S:'#9b59b6' };
-    const STAT_MAX = 255;
-    const total = (st.H||0)+(st.A||0)+(st.B||0)+(st.C||0)+(st.D||0)+(st.S||0);
+    const STAT_KEYS = ['H','A','B','C','D','S'];
+    const total = STAT_KEYS.reduce((s, k) => s + (st[k]||0), 0);
     const sec = document.createElement('div');
     sec.className = 'info-section';
-    sec.innerHTML = `<div class="section-title">기본 스탯</div><div class="stats-grid">` +
-      ['H','A','B','C','D','S'].map(k => {
-        const v = st[k] || 0;
-        const pct = Math.round(v / STAT_MAX * 100);
-        return `<div class="stat-row">
-          <div class="stat-label">${k}</div>
-          <div class="stat-bar-wrap"><div class="stat-bar" style="width:${pct}%;background:${STAT_COLOR[k]}"></div></div>
-          <div class="stat-val">${v}</div>
-        </div>`;
-      }).join('') +
-      `</div><div class="stat-total">합계 <span>${total}</span></div>`;
+    sec.innerHTML = `<div class="section-title">기본 스탯</div>
+      <table class="stats-table">
+        <tr>${STAT_KEYS.map(k => `<th>${k}</th>`).join('')}</tr>
+        <tr>${STAT_KEYS.map(k => `<td>${st[k]||0}</td>`).join('')}</tr>
+      </table>
+      <div class="stat-total">합계 <span>${total}</span></div>`;
     body.appendChild(sec);
   }
 
