@@ -10275,7 +10275,8 @@
     "accuracy": null,
     "gen": "8세대",
     "desc": "상대의 공격을 전혀 받지 않는다. 연속으로 쓰면 실패하기 쉽다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_dmax": true
   },
   {
     "id": 744,
@@ -10471,7 +10472,8 @@
     "accuracy": null,
     "gen": "8세대",
     "desc": "다이맥스한 포켓몬이 날리는 불꽃타입의 공격. 5턴 동안 햇살을 강하게 만든다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_dmax": true
   },
   {
     "id": 758,
@@ -10485,7 +10487,8 @@
     "accuracy": null,
     "gen": "8세대",
     "desc": "다이맥스한 포켓몬이 날리는 벌레타입의 공격. 상대의 특수공격을 떨어뜨린다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_dmax": true
   },
   {
     "id": 759,
@@ -10499,7 +10502,8 @@
     "accuracy": null,
     "gen": "8세대",
     "desc": "다이맥스한 포켓몬이 날리는 전기타입의 공격. 5턴 동안 일렉트릭필드로 만든다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_dmax": true
   },
   {
     "id": 760,
@@ -10513,7 +10517,8 @@
     "accuracy": null,
     "gen": "8세대",
     "desc": "다이맥스한 포켓몬이 날리는 노말타입의 공격. 상대의 스피드를 떨어뜨린다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_dmax": true
   },
   {
     "id": 761,
@@ -10527,7 +10532,8 @@
     "accuracy": null,
     "gen": "8세대",
     "desc": "다이맥스한 포켓몬이 날리는 격투타입의 공격. 같은 편의 공격을 올린다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_dmax": true
   },
   {
     "id": 762,
@@ -10541,7 +10547,8 @@
     "accuracy": null,
     "gen": "8세대",
     "desc": "다이맥스한 포켓몬이 날리는 고스트타입의 공격. 상대의 방어를 떨어뜨린다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_dmax": true
   },
   {
     "id": 763,
@@ -10555,7 +10562,8 @@
     "accuracy": null,
     "gen": "8세대",
     "desc": "다이맥스한 포켓몬이 날리는 얼음타입의 공격. 5턴 동안 싸라기눈을 내리게 한다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_dmax": true
   },
   {
     "id": 764,
@@ -10569,7 +10577,8 @@
     "accuracy": null,
     "gen": "8세대",
     "desc": "다이맥스한 포켓몬이 날리는 독타입의 공격. 같은 편의 특수공격을 올린다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_dmax": true
   },
   {
     "id": 765,
@@ -10583,7 +10592,8 @@
     "accuracy": null,
     "gen": "8세대",
     "desc": "다이맥스한 포켓몬이 날리는 물타입의 공격. 5턴 동안 비를 내리게 한다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_dmax": true
   },
   {
     "id": 766,
@@ -10597,7 +10607,8 @@
     "accuracy": null,
     "gen": "8세대",
     "desc": "다이맥스한 포켓몬이 날리는 비행타입의 공격. 같은 편의 스피드를 올린다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_dmax": true
   },
   {
     "id": 767,
@@ -10611,7 +10622,8 @@
     "accuracy": null,
     "gen": "8세대",
     "desc": "다이맥스한 포켓몬이 날리는 페어리타입의 공격. 5턴 동안 미스트필드로 만든다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_dmax": true
   },
   {
     "id": 768,
@@ -10625,7 +10637,8 @@
     "accuracy": null,
     "gen": "8세대",
     "desc": "다이맥스한 포켓몬이 날리는 드래곤타입의 공격. 상대의 공격을 떨어뜨린다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_dmax": true
   },
   {
     "id": 769,
@@ -10639,7 +10652,8 @@
     "accuracy": null,
     "gen": "8세대",
     "desc": "다이맥스한 포켓몬이 날리는 에스퍼타입의 공격. 5턴 동안 사이코필드로 만든다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_dmax": true
   },
   {
     "id": 770,
@@ -10653,7 +10667,8 @@
     "accuracy": null,
     "gen": "8세대",
     "desc": "다이맥스한 포켓몬이 날리는 바위타입의 공격. 5턴 동안 날씨를 모래바람으로 만든다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_dmax": true
   },
   {
     "id": 771,
@@ -10667,7 +10682,8 @@
     "accuracy": null,
     "gen": "8세대",
     "desc": "다이맥스한 포켓몬이 날리는 땅타입의 공격. 같은 편의 특수방어를 올린다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_dmax": true
   },
   {
     "id": 772,
@@ -10681,7 +10697,8 @@
     "accuracy": null,
     "gen": "8세대",
     "desc": "다이맥스한 포켓몬이 날리는 악타입의 공격. 상대의 특수방어를 떨어뜨린다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_dmax": true
   },
   {
     "id": 773,
@@ -10695,7 +10712,8 @@
     "accuracy": null,
     "gen": "8세대",
     "desc": "다이맥스한 포켓몬이 날리는 풀타입의 공격. 5턴 동안 그래스필드로 만든다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_dmax": true
   },
   {
     "id": 774,
@@ -10709,7 +10727,8 @@
     "accuracy": null,
     "gen": "8세대",
     "desc": "다이맥스한 포켓몬이 날리는 강철타입의 공격. 같은 편의 방어를 올린다.",
-    "desc_lang": "ko"
+    "desc_lang": "ko",
+    "is_dmax": true
   },
   {
     "id": 775,
