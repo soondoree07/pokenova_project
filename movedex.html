@@ -278,7 +278,7 @@ async function init() {
     fetch('data/learnsets.json').then(r => r.json()),
     fetch('data/quiz_zmoves.json').then(r => r.json()),
   ]);
-  allMoves = allMoves.filter(m => !m.is_zmove && (!m.hidden || isDynamax(m)));
+  allMoves = allMoves.filter(m => !m.is_zmove && (!m.hidden || isDynamax(m) || isGmax(m)));
   buildLSKeyMap();
 
   buildChips();
