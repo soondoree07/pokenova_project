@@ -553,6 +553,7 @@ const ITEM_GROUPS = {
   '열매': '__berry__',
   '메가스톤': ['mega-stones'],
   '전용도구': '__dedicated__',
+  'Z크리스탈': ['z-crystals'],
 };
 const HIDDEN_ITEMS   = new Set([
   '나무열매쥬스',
@@ -585,7 +586,7 @@ const HELD_EXTRA_ITEMS = new Set(['노말주얼']); // 카테고리는 다르지
 const ALLOWED_CATS = new Set([
   'held-items','choice','bad-held-items','in-a-pinch',
   'species-specific','type-enhancement','type-protection',
-  'mega-stones','memories','plates',
+  'mega-stones','memories','plates','z-crystals',
 ]);
 
 // ─── 전역 상태 ───
@@ -621,6 +622,7 @@ const megaStoneByFormEn = {};
 
 // 기술 데이터
 let allMoves    = [];           // quiz_moves.json 전체
+let allZmoves   = [];           // quiz_zmoves.json 전체
 let moveByEn    = {};           // en -> move 객체
 let learnsets   = {};           // pokemon_en -> [{en, method, level}]
 
@@ -638,16 +640,18 @@ const LEARN_METHOD_KO = {
 
 // ─── 초기화 ───
 async function init() {
-  const [pokeRes, itemRes, moveRes, learnRes] = await Promise.all([
+  const [pokeRes, itemRes, moveRes, learnRes, zmoveRes] = await Promise.all([
     fetch('data/quiz_pokemon.json'),
     fetch('data/quiz_items.json'),
     fetch('data/quiz_moves.json'),
     fetch('data/learnsets.json').catch(() => null),
+    fetch('data/quiz_zmoves.json').catch(() => null),
   ]);
   const pokeData = await pokeRes.json();
   allItems  = await itemRes.json();
   allMoves  = (await moveRes.json()).filter(m => !m.is_zmove);
   if (learnRes) learnsets = await learnRes.json();
+  if (zmoveRes) allZmoves = await zmoveRes.json();
 
   // 기술 en → 객체 룩업 (공백 키 + 하이픈 키 둘 다 등록)
   // learnsets.json은 PokeAPI 하이픈 형식, quiz_moves.json은 공백 형식
@@ -1399,10 +1403,25 @@ function selectItem(it) {
   const slot = getEntry(activeSection, activeSlotIdx);
   if (slot) slot.item = it;
   closeItemModal();
+
+  // 전용 Z크리스탈 선택 시 required_move 자동 지정
+  let firstMoveSlot = 0;
+  if (it.category === 'z-crystals' && slot) {
+    const zmove = allZmoves.find(z => z.is_special_zmove && z.crystal === it.ko);
+    if (zmove) {
+      const reqMove = allMoves.find(m => m.ko === zmove.required_move);
+      if (reqMove) {
+        if (!slot.moves) slot.moves = [null, null, null, null];
+        slot.moves[0] = { ...reqMove, method: 'all', level: 0 };
+        firstMoveSlot = 1; // 0번 슬롯은 자동 지정됐으므로 1번부터 선택
+      }
+    }
+  }
+
   renderGrids();
-  // 도구 선택 완료 → 기술 1번 선택으로 이동 (뒤로가기 버튼 표시)
+  // 도구 선택 완료 → 기술 선택으로 이동 (뒤로가기 버튼 표시)
   moveModalShowBack = true;
-  openMoveModal(activeSection, activeSlotIdx, 0, null);
+  openMoveModal(activeSection, activeSlotIdx, firstMoveSlot, null);
 }
 
 // ─── 모달 외부 클릭 닫기 ───

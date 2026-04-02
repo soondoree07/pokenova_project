@@ -1085,11 +1085,12 @@ const DB = { pokemon: [], moves: [], abilities: [], items: [] };
 function hasKorean(str) { return /[\uAC00-\uD7A3]/.test(str); }
 
 async function loadAllData() {
-  const [p, m, a, i] = await Promise.all([
+  const [p, m, a, i, zm] = await Promise.all([
     fetch('data/quiz_pokemon.json').then(r => r.json()),
     fetch('data/quiz_moves.json').then(r => r.json()),
     fetch('data/quiz_abilities.json').then(r => r.json()),
     fetch('data/quiz_items.json').then(r => r.json()),
+    fetch('data/quiz_zmoves.json').then(r => r.json()),
   ]);
   // 실제 게임에 존재하는 메가진화 목록 (PokeAPI에 가짜 메가가 다수 포함되어 있어 화이트리스트 사용)
   const CANONICAL_MEGA = new Set([
@@ -1167,6 +1168,7 @@ async function loadAllData() {
 
   DB.abilities = a.filter(x => hasKorean(x.ko));
   DB.items     = i.filter(x => hasKorean(x.ko) && hasKorean(x.desc || ''));
+  DB.zmoves    = zm.filter(x => hasKorean(x.ko)); // Z기술 (hard 난이도 전용)
 }
 
 function showTab(name) {
@@ -1542,9 +1544,10 @@ const DIFF_CONFIG = {
 
 // 중복 방지: 기술 셔플 풀
 let mPool = [], mPoolIdx = 0;
+let mCurrentMoves = []; // 현재 게임에서 사용할 기술 목록 (난이도에 따라 다름)
 function mGetNextId() {
   if (mPoolIdx >= mPool.length) {
-    mPool = Array.from({length: DB.moves.length}, (_,i)=>i).sort(()=>Math.random()-.5);
+    mPool = Array.from({length: mCurrentMoves.length}, (_,i)=>i).sort(()=>Math.random()-.5);
     mPoolIdx = 0;
   }
   return mPool[mPoolIdx++];
@@ -1571,6 +1574,9 @@ function setDifficulty(d) {
 function mStartGame() {
   mGameStarted = true;
   mLives = (mDifficulty === 'easy') ? Infinity : 3;
+  // hard 난이도에서만 Z기술 포함
+  mCurrentMoves = mDifficulty === 'hard' ? [...DB.moves, ...DB.zmoves] : DB.moves;
+  mPool = []; mPoolIdx = 0; // 풀 초기화
   mSessionC = 0; mSessionW = 0;
   ['easy','normal','hard'].forEach(x => document.getElementById('diff-'+x).classList.add('locked'));
   document.getElementById('m-btn-start').style.display   = 'none';
@@ -1660,7 +1666,7 @@ function mLoadMove() {
   document.getElementById('m-diff-badge').style.display='none';
   hideRankCard('m');
 
-  const m = DB.moves[mGetNextId()];
+  const m = mCurrentMoves[mGetNextId()];
   mKoName = (m.ko||'').replace(/\s/g,'');
   mEnName = m.en;
   mMove   = m;

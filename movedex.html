@@ -79,12 +79,17 @@ h1{font-size:1.3rem;font-weight:700;margin-bottom:18px;color:#fff}
 .class-특수{background:#1565c0;color:#fff;border-color:#1565c0!important}
 .class-변화{background:#2e7d32;color:#fff;border-color:#2e7d32!important}
 
-/* ── 다이맥스 섹션 ── */
+/* ── 다이맥스/Z기술 섹션 ── */
 .section-divider{max-width:1200px;margin:32px auto 16px;padding:0;display:flex;align-items:center;gap:14px}
 .section-divider h2{font-size:1.1rem;font-weight:900;color:#f0f0f0;white-space:nowrap}
 .section-badge{font-size:12px;font-weight:700;color:#fff;padding:3px 12px;border-radius:20px}
 .section-badge.dmax{background:#1565c0}
+.section-badge.zmove{background:#f57f17}
+.section-badge.zmove-special{background:#7b1fa2}
 .section-line{flex:1;height:1px;background:#252525;border-radius:2px}
+/* Z기술 카드 - crystal 표시 */
+.move-crystal{font-size:0.7rem;color:#f57f17;margin-top:2px}
+.move-pokemon{font-size:0.7rem;color:#ce93d8;margin-top:2px}
 
 /* ── 반응형 ── */
 @media(max-width:600px){
@@ -195,6 +200,26 @@ h1{font-size:1.3rem;font-weight:700;margin-bottom:18px;color:#fff}
   <div class="move-grid" id="dmax-grid"></div>
 </div>
 
+<!-- ─── 범용 Z기술 ─── -->
+<div class="section-divider" id="zmove-section-header">
+  <h2>범용 Z기술</h2>
+  <span class="section-badge zmove" id="zmove-count"></span>
+  <div class="section-line"></div>
+</div>
+<div class="container" style="padding-top:0">
+  <div class="move-grid" id="zmove-grid"></div>
+</div>
+
+<!-- ─── 전용 Z기술 ─── -->
+<div class="section-divider" id="zmove-special-section-header">
+  <h2>전용 Z기술</h2>
+  <span class="section-badge zmove-special" id="zmove-special-count"></span>
+  <div class="section-line"></div>
+</div>
+<div class="container" style="padding-top:0">
+  <div class="move-grid" id="zmove-special-grid"></div>
+</div>
+
 <!-- 기술 상세 모달 -->
 <div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
   <div class="modal-box" id="modal-box">
@@ -205,6 +230,7 @@ h1{font-size:1.3rem;font-weight:700;margin-bottom:18px;color:#fff}
 
 <script>
 let allMoves    = [];
+let allZmoves   = []; // quiz_zmoves.json
 let allPokemon  = [];
 let learnsets   = {};
 let typeFilter  = '전체';
@@ -233,10 +259,11 @@ function buildLSKeyMap() {
 }
 
 async function init() {
-  [allMoves, allPokemon, learnsets] = await Promise.all([
+  [allMoves, allPokemon, learnsets, allZmoves] = await Promise.all([
     fetch('data/quiz_moves.json').then(r => r.json()),
     fetch('data/quiz_pokemon.json').then(r => r.json()),
     fetch('data/learnsets.json').then(r => r.json()),
+    fetch('data/quiz_zmoves.json').then(r => r.json()),
   ]);
   allMoves = allMoves.filter(m => !m.is_zmove && (!m.hidden || isDynamax(m)));
   buildLSKeyMap();
@@ -274,12 +301,18 @@ function buildMoveCard(m) {
   const pp    = m.pp    ?? '—';
   const power = m.power ?? '—';
   const acc   = m.accuracy ?? '—';
+  const extraLine = m.is_zmove
+    ? (m.is_special_zmove
+        ? `<div class="move-pokemon">사용 포켓몬: ${m.pokemon || '—'}</div>`
+        : `<div class="move-crystal">크리스탈: ${m.crystal || '—'}</div>`)
+    : '';
   return `
   <div class="move-card" onclick="openModal(${JSON.stringify(m).replace(/"/g,'&quot;')})">
     <div class="move-card-header">
       <div>
         <div class="move-name-ko">${m.ko}</div>
         <div class="move-name-en">${m.en}</div>
+        ${extraLine}
       </div>
       <div class="move-badges">
         <span class="badge-type t-${m.type}">${m.type}</span>
@@ -334,6 +367,24 @@ function render() {
   dmaxSection.style.display = dmaxList.length ? '' : 'none';
   document.getElementById('dmax-count').textContent = `${dmaxList.length}종`;
   dmaxGrid.innerHTML = dmaxList.map(buildMoveCard).join('');
+
+  // Z기술 섹션: 범용 / 전용 분리
+  const matchesFilter = m =>
+    (typeFilter === '전체' || m.type === typeFilter) &&
+    (!q || (m.ko||'').toLowerCase().includes(q) || (m.en||'').toLowerCase().includes(q));
+
+  const universalZ = allZmoves.filter(m => !m.is_special_zmove && matchesFilter(m));
+  const specialZ   = allZmoves.filter(m =>  m.is_special_zmove && matchesFilter(m));
+
+  const zmoveSection = document.getElementById('zmove-section-header');
+  zmoveSection.style.display = universalZ.length ? '' : 'none';
+  document.getElementById('zmove-count').textContent = `${universalZ.length}종`;
+  document.getElementById('zmove-grid').innerHTML = universalZ.map(buildMoveCard).join('');
+
+  const zmoveSpecialSection = document.getElementById('zmove-special-section-header');
+  zmoveSpecialSection.style.display = specialZ.length ? '' : 'none';
+  document.getElementById('zmove-special-count').textContent = `${specialZ.length}종`;
+  document.getElementById('zmove-special-grid').innerHTML = specialZ.map(buildMoveCard).join('');
 }
 
 /* ── 모달 ── */
@@ -357,15 +408,35 @@ function openModal(m) {
   const power = m.power ?? '—';
   const acc   = m.accuracy ?? '—';
 
-  const learnerHTML = learners.length
-    ? `<div class="learner-grid">` + learners.map(p => `
-        <div class="learner-card">
-          <div class="learner-id">#${String(p.id).padStart(3,'0')}</div>
-          <img src="${p.sprite}" alt="${p.ko}" loading="lazy">
-          <div class="learner-name-ko">${p.ko}</div>
-          <div class="learner-name-en">${p.en}</div>
-        </div>`).join('') + `</div>`
-    : `<div class="modal-no-learner">이 기술을 배울 수 있는 포켓몬 정보가 없습니다.</div>`;
+  // Z기술 모달: 배울 수 있는 포켓몬 섹션 처리
+  let learnerSection = '';
+  if (m.is_zmove) {
+    if (m.is_special_zmove) {
+      // 전용 Z기술: 사용 가능 포켓몬 표시
+      const pokeList = Array.isArray(m.pokemon) ? m.pokemon : (m.pokemon ? [m.pokemon] : []);
+      const pokeNames = pokeList.join(', ') || '—';
+      learnerSection = `
+        <div class="modal-section-title">전용 Z크리스탈 · 사용 가능 포켓몬</div>
+        <div style="font-size:0.88rem;color:#ce93d8;padding:8px 0">${pokeNames}</div>
+        <div style="font-size:0.8rem;color:#666;margin-top:4px">필요 기술: <span style="color:#e0e0e0">${m.required_move || '—'}</span> &nbsp;·&nbsp; 크리스탈: <span style="color:#f57f17">${m.crystal || '—'}</span></div>
+      `;
+    }
+    // 범용 Z기술은 배울 수 있는 포켓몬 섹션 생략
+  } else {
+    const learnerHTML = learners.length
+      ? `<div class="learner-grid">` + learners.map(p => `
+          <div class="learner-card">
+            <div class="learner-id">#${String(p.id).padStart(3,'0')}</div>
+            <img src="${p.sprite}" alt="${p.ko}" loading="lazy">
+            <div class="learner-name-ko">${p.ko}</div>
+            <div class="learner-name-en">${p.en}</div>
+          </div>`).join('') + `</div>`
+      : `<div class="modal-no-learner">이 기술을 배울 수 있는 포켓몬 정보가 없습니다.</div>`;
+    learnerSection = `
+      <div class="modal-section-title">이 기술을 배울 수 있는 포켓몬 <span style="color:#666;font-weight:400">(${learners.length}마리)</span></div>
+      ${learnerHTML}
+    `;
+  }
 
   document.getElementById('modal-content').innerHTML = `
     <div class="modal-move-header">
@@ -385,8 +456,7 @@ function openModal(m) {
     </div>
     <div class="modal-move-desc">${m.desc || ''}</div>
     <div class="modal-move-gen">${m.gen || ''}</div>
-    <div class="modal-section-title">이 기술을 배울 수 있는 포켓몬 <span style="color:#666;font-weight:400">(${learners.length}마리)</span></div>
-    ${learnerHTML}
+    ${learnerSection}
   `;
 
   document.getElementById('modal-overlay').classList.add('open');
