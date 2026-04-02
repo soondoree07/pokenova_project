@@ -84,6 +84,7 @@ h1{font-size:1.3rem;font-weight:700;margin-bottom:18px;color:#fff}
 .section-divider h2{font-size:1.1rem;font-weight:900;color:#f0f0f0;white-space:nowrap}
 .section-badge{font-size:12px;font-weight:700;color:#fff;padding:3px 12px;border-radius:20px}
 .section-badge.dmax{background:#1565c0}
+.section-badge.gmax{background:#00695c}
 .section-badge.zmove{background:#f57f17}
 .section-badge.zmove-special{background:#7b1fa2}
 .section-line{flex:1;height:1px;background:#252525;border-radius:2px}
@@ -201,6 +202,16 @@ h1{font-size:1.3rem;font-weight:700;margin-bottom:18px;color:#fff}
   <div class="move-grid" id="dmax-grid"></div>
 </div>
 
+<!-- ─── 거다이맥스 전용기 ─── -->
+<div class="section-divider" id="gmax-section-header">
+  <h2>거다이맥스 전용기</h2>
+  <span class="section-badge gmax" id="gmax-count"></span>
+  <div class="section-line"></div>
+</div>
+<div class="container" style="padding-top:0">
+  <div class="move-grid" id="gmax-grid"></div>
+</div>
+
 <!-- ─── 범용 Z기술 ─── -->
 <div class="section-divider" id="zmove-section-header">
   <h2>범용 Z기술</h2>
@@ -238,7 +249,8 @@ let typeFilter  = '전체';
 let classFilter = '전체';
 
 const DMAX_EXCLUDE = new Set(['Dive', 'Diamond Storm']); // 다이빙·다이아스톰 제외
-const isDynamax = m => ((m.ko||'').startsWith('다이') || (m.ko||'').startsWith('거다이')) && !DMAX_EXCLUDE.has(m.en);
+const isGmax    = m => !!m.is_gmax;
+const isDynamax = m => !m.is_gmax && ((m.ko||'').startsWith('다이') || (m.ko||'').startsWith('거다이')) && !DMAX_EXCLUDE.has(m.en);
 
 // learnsets의 en은 하이픈, quiz_moves의 en은 공백 → 통일
 function moveKey(en) { return (en || '').toLowerCase().replace(/\s+/g, '-'); }
@@ -302,11 +314,13 @@ function buildMoveCard(m) {
   const pp    = m.pp    ?? '—';
   const power = m.power ?? '—';
   const acc   = m.accuracy ?? '—';
-  const extraLine = m.is_zmove
-    ? (m.is_special_zmove
-        ? `<div class="move-pokemon">사용 포켓몬: ${m.pokemon || '—'}</div>`
-        : `<div class="move-crystal">크리스탈: ${m.crystal || '—'}</div>`)
-    : '';
+  const extraLine = m.is_gmax
+    ? `<div class="move-pokemon">사용 포켓몬: ${m.pokemon || '—'}</div>`
+    : m.is_zmove
+      ? (m.is_special_zmove
+          ? `<div class="move-pokemon">사용 포켓몬: ${m.pokemon || '—'}</div>`
+          : `<div class="move-crystal">크리스탈: ${m.crystal || '—'}</div>`)
+      : '';
   return `
   <div class="move-card" onclick="openModal(${JSON.stringify(m).replace(/"/g,'&quot;')})">
     <div class="move-card-header">
@@ -333,8 +347,9 @@ function buildMoveCard(m) {
 function render() {
   const q = document.getElementById('search').value.trim().toLowerCase();
 
-  // 일반 기술 / 다이맥스 기술 분리
-  const normalMoves  = allMoves.filter(m => !isDynamax(m));
+  // 일반 기술 / 다이맥스 / 거다이맥스 분리
+  const gmaxMoves    = allMoves.filter(isGmax);
+  const normalMoves  = allMoves.filter(m => !isDynamax(m) && !isGmax(m));
   const dynamaxMoves = allMoves.filter(isDynamax);
 
   // 일반 기술 필터링
@@ -346,11 +361,12 @@ function render() {
     (m.en || '').toLowerCase().includes(q)
   );
 
-  // 타입 필터가 활성화된 경우 해당 타입의 다이맥스 기술을 목록 끝에 추가
+  // 타입 필터가 활성화된 경우 해당 타입의 다이맥스·거다이맥스 기술을 목록 끝에 추가
   let mainList = list;
   if (typeFilter !== '전체') {
     const dmaxForType = dynamaxMoves.filter(m => m.type === typeFilter);
-    mainList = [...list, ...dmaxForType];
+    const gmaxForType = gmaxMoves.filter(m => m.type === typeFilter);
+    mainList = [...list, ...dmaxForType, ...gmaxForType];
   }
 
   document.getElementById('count-label').textContent = `${list.length}개`;
@@ -368,6 +384,18 @@ function render() {
   dmaxSection.style.display = dmaxList.length ? '' : 'none';
   document.getElementById('dmax-count').textContent = `${dmaxList.length}종`;
   dmaxGrid.innerHTML = dmaxList.map(buildMoveCard).join('');
+
+  // 거다이맥스 섹션
+  let gmaxList = gmaxMoves;
+  if (typeFilter !== '전체') gmaxList = gmaxList.filter(m => m.type === typeFilter);
+  if (q) gmaxList = gmaxList.filter(m =>
+    (m.ko || '').toLowerCase().includes(q) ||
+    (m.en || '').toLowerCase().includes(q) ||
+    (m.pokemon || '').toLowerCase().includes(q)
+  );
+  document.getElementById('gmax-section-header').style.display = gmaxList.length ? '' : 'none';
+  document.getElementById('gmax-count').textContent = `${gmaxList.length}종`;
+  document.getElementById('gmax-grid').innerHTML = gmaxList.map(buildMoveCard).join('');
 
   // Z기술 섹션: 범용 / 전용 분리
   const matchesFilter = m =>
@@ -409,9 +437,14 @@ function openModal(m) {
   const power = m.power ?? '—';
   const acc   = m.accuracy ?? '—';
 
-  // Z기술 모달: 배울 수 있는 포켓몬 섹션 처리
+  // Z기술/거다이맥스 모달: 배울 수 있는 포켓몬 섹션 처리
   let learnerSection = '';
-  if (m.is_zmove) {
+  if (m.is_gmax) {
+    learnerSection = `
+      <div class="modal-section-title">사용 포켓몬</div>
+      <div style="font-size:0.88rem;color:#80cbc4;padding:8px 0">${m.pokemon || '—'}</div>
+    `;
+  } else if (m.is_zmove) {
     if (m.is_special_zmove) {
       // 전용 Z기술: 사용 가능 포켓몬 표시
       const pokeList = Array.isArray(m.pokemon) ? m.pokemon : (m.pokemon ? [m.pokemon] : []);
