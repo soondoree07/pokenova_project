@@ -304,6 +304,14 @@
       letter-spacing: 1px;
       margin-bottom: 10px;
     }
+    .stats-grid { display: flex; flex-direction: column; gap: 5px; }
+    .stat-row { display: flex; align-items: center; gap: 8px; }
+    .stat-label { width: 24px; font-size: 11px; font-weight: 700; color: #666; flex-shrink: 0; text-align: right; }
+    .stat-bar-wrap { flex: 1; background: #1c1c1c; border-radius: 4px; height: 7px; overflow: hidden; }
+    .stat-bar { height: 100%; border-radius: 4px; transition: width 0.4s ease; }
+    .stat-val { width: 28px; font-size: 12px; font-weight: 700; color: #ccc; text-align: right; flex-shrink: 0; }
+    .stat-total { margin-top: 8px; text-align: right; font-size: 11px; color: #555; }
+    .stat-total span { color: #aaa; font-weight: 700; }
     .ability-list { display: flex; flex-direction: column; gap: 8px; }
     .ability-item {
       display: flex;
@@ -1174,6 +1182,29 @@ function openModal(p) {
     body.appendChild(sec);
   }
 
+  // 기본 스탯 표시
+  const statsEntry = STATS_MAP[(p.en || '').toLowerCase()];
+  if (statsEntry && statsEntry.stats) {
+    const st = statsEntry.stats;
+    const STAT_COLOR = { H:'#e53935', A:'#e67e22', B:'#f1c40f', C:'#3498db', D:'#2ecc71', S:'#9b59b6' };
+    const STAT_MAX = 255;
+    const total = (st.H||0)+(st.A||0)+(st.B||0)+(st.C||0)+(st.D||0)+(st.S||0);
+    const sec = document.createElement('div');
+    sec.className = 'info-section';
+    sec.innerHTML = `<div class="section-title">기본 스탯</div><div class="stats-grid">` +
+      ['H','A','B','C','D','S'].map(k => {
+        const v = st[k] || 0;
+        const pct = Math.round(v / STAT_MAX * 100);
+        return `<div class="stat-row">
+          <div class="stat-label">${k}</div>
+          <div class="stat-bar-wrap"><div class="stat-bar" style="width:${pct}%;background:${STAT_COLOR[k]}"></div></div>
+          <div class="stat-val">${v}</div>
+        </div>`;
+      }).join('') +
+      `</div><div class="stat-total">합계 <span>${total}</span></div>`;
+    body.appendChild(sec);
+  }
+
   // 다른 폼 표시 (클릭 가능)
   const siblings = (SIBLING_MAP[p.id] || []).filter(s => s.ko !== p.ko);
   if (siblings.length) {
@@ -1231,6 +1262,7 @@ buildTypeButtons();
 let ABILITY_DESC = {};
 let ABILITY_EN = {};
 let ABILITY_POKEMON_MAP = {}; // abilityKo → [{ko, en, sprite, id, baseKo}]
+let STATS_MAP = {}; // en.toLowerCase() → {ko, en, form_type, stats}
 
 function buildAbilityPokemonMap(pokemonData) {
   ABILITY_POKEMON_MAP = {};
@@ -1304,9 +1336,11 @@ document.getElementById('ability-modal-overlay').addEventListener('click', e => 
 
 Promise.all([
   fetch('data/quiz_pokemon.json').then(r => r.json()),
-  fetch('data/quiz_abilities.json').then(r => r.json())
+  fetch('data/quiz_abilities.json').then(r => r.json()),
+  fetch('data/pokemon_stats.json').then(r => r.json())
 ])
-  .then(([pokemonData, abilitiesData]) => {
+  .then(([pokemonData, abilitiesData, statsData]) => {
+    statsData.forEach(s => { STATS_MAP[(s.en || '').toLowerCase()] = s; });
     abilitiesData.forEach(a => {
       const name = a.ko || a.en || '';
       if (name && a.desc && /[\uAC00-\uD7A3]/.test(a.desc)) {
