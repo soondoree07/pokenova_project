@@ -12,7 +12,6 @@
     "pokemon": null,
     "required_move": "해당 타입 기술",
     "is_zmove": true,
-    "is_special_zmove": false,
     "gen": "7세대",
     "class": "물리·특수"
   },
@@ -29,7 +28,6 @@
     "pokemon": null,
     "required_move": "해당 타입 기술",
     "is_zmove": true,
-    "is_special_zmove": false,
     "gen": "7세대",
     "class": "물리·특수"
   },
@@ -46,7 +44,6 @@
     "pokemon": null,
     "required_move": "해당 타입 기술",
     "is_zmove": true,
-    "is_special_zmove": false,
     "gen": "7세대",
     "class": "물리·특수"
   },
@@ -63,7 +60,6 @@
     "pokemon": null,
     "required_move": "해당 타입 기술",
     "is_zmove": true,
-    "is_special_zmove": false,
     "gen": "7세대",
     "class": "물리·특수"
   },
@@ -80,7 +76,6 @@
     "pokemon": null,
     "required_move": "해당 타입 기술",
     "is_zmove": true,
-    "is_special_zmove": false,
     "gen": "7세대",
     "class": "물리·특수"
   },
@@ -97,7 +92,6 @@
     "pokemon": null,
     "required_move": "해당 타입 기술",
     "is_zmove": true,
-    "is_special_zmove": false,
     "gen": "7세대",
     "class": "물리·특수"
   },
@@ -114,7 +108,6 @@
     "pokemon": null,
     "required_move": "해당 타입 기술",
     "is_zmove": true,
-    "is_special_zmove": false,
     "gen": "7세대",
     "class": "물리·특수"
   },
@@ -131,7 +124,6 @@
     "pokemon": null,
     "required_move": "해당 타입 기술",
     "is_zmove": true,
-    "is_special_zmove": false,
     "gen": "7세대",
     "class": "물리·특수"
   },
@@ -148,7 +140,6 @@
     "pokemon": null,
     "required_move": "해당 타입 기술",
     "is_zmove": true,
-    "is_special_zmove": false,
     "gen": "7세대",
     "class": "물리·특수"
   },
@@ -165,7 +156,6 @@
     "pokemon": null,
     "required_move": "해당 타입 기술",
     "is_zmove": true,
-    "is_special_zmove": false,
     "gen": "7세대",
     "class": "물리·특수"
   },
@@ -182,7 +172,6 @@
     "pokemon": null,
     "required_move": "해당 타입 기술",
     "is_zmove": true,
-    "is_special_zmove": false,
     "gen": "7세대",
     "class": "물리·특수"
   },
@@ -199,7 +188,6 @@
     "pokemon": null,
     "required_move": "해당 타입 기술",
     "is_zmove": true,
-    "is_special_zmove": false,
     "gen": "7세대",
     "class": "물리·특수"
   },
@@ -216,7 +204,6 @@
     "pokemon": null,
     "required_move": "해당 타입 기술",
     "is_zmove": true,
-    "is_special_zmove": false,
     "gen": "7세대",
     "class": "물리·특수"
   },
@@ -233,7 +220,6 @@
     "pokemon": null,
     "required_move": "해당 타입 기술",
     "is_zmove": true,
-    "is_special_zmove": false,
     "gen": "7세대",
     "class": "물리·특수"
   },
@@ -250,7 +236,6 @@
     "pokemon": null,
     "required_move": "해당 타입 기술",
     "is_zmove": true,
-    "is_special_zmove": false,
     "gen": "7세대",
     "class": "물리·특수"
   },
@@ -267,7 +252,6 @@
     "pokemon": null,
     "required_move": "해당 타입 기술",
     "is_zmove": true,
-    "is_special_zmove": false,
     "gen": "7세대",
     "class": "물리·특수"
   },
@@ -284,7 +268,6 @@
     "pokemon": null,
     "required_move": "해당 타입 기술",
     "is_zmove": true,
-    "is_special_zmove": false,
     "gen": "7세대",
     "class": "물리·특수"
   },
@@ -301,7 +284,6 @@
     "pokemon": null,
     "required_move": "해당 타입 기술",
     "is_zmove": true,
-    "is_special_zmove": false,
     "gen": "7세대",
     "class": "물리·특수"
   },
