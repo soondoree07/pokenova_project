@@ -321,6 +321,9 @@
       box-shadow:inset 0 0 0 1px rgba(229,57,53,.15);
     }
     .move-card.selected .mc-name { color:#ff7070; }
+    .move-card.used {
+      opacity:0.35; cursor:not-allowed; pointer-events:none;
+    }
     .move-card .mc-head {
       display:flex; align-items:center; justify-content:space-between; gap:6px;
       margin-bottom:4px;
@@ -513,7 +516,6 @@
     </div>
     <div class="modal-close-wrap">
       <button class="btn-modal-back hidden" id="move-back-btn" onclick="goBackFromMove()">← 뒤로</button>
-      <button class="move-remove-btn hidden" id="move-remove-btn" onclick="removeMove()">기술 해제</button>
       <button class="btn-modal-close" onclick="closeMoveModal()">닫기</button>
     </div>
   </div>
@@ -1158,10 +1160,6 @@ function openMoveModal(section, idx, moveSlotIdx, e) {
     `${slot.pokemon.ko} — ${moveSlotIdx + 1}번 기술 선택`;
   document.getElementById('move-search').value = '';
 
-  // 기술 해제 버튼: 슬롯에 기술이 있으면 표시
-  const currentMove = (slot.moves || [])[moveSlotIdx];
-  document.getElementById('move-remove-btn').classList.toggle('hidden', !currentMove);
-
   // 뒤로가기 버튼 (도구 선택에서 넘어온 경우만)
   const backBtn = document.getElementById('move-back-btn');
   backBtn.classList.toggle('hidden', !moveModalShowBack);
@@ -1238,14 +1236,15 @@ function renderMoveGrid() {
 
   grid.innerHTML = '';
   list.forEach(mv => {
-    const isSelected = currentMoves[activeMoveSlotIdx]?.en === mv.en;
+    const isSelected = isSameMove(currentMoves[activeMoveSlotIdx], mv);
+    const isUsedElsewhere = !isSelected && currentMoves.some((m, i) => i !== activeMoveSlotIdx && isSameMove(m, mv));
     const learnInfo = mv.method === 'level-up' && mv.level > 0
       ? `Lv.${mv.level}` : (LEARN_METHOD_KO[mv.method] || mv.method || '');
     const tc = typeColor(mv.type);
     const tLight = TYPE_LIGHT.has(mv.type);
 
     const card = document.createElement('div');
-    card.className = 'move-card' + (isSelected ? ' selected' : '');
+    card.className = 'move-card' + (isSelected ? ' selected' : '') + (isUsedElsewhere ? ' used' : '');
     card.innerHTML = `
       <div class="mc-head">
         <span class="mc-name">${mv.ko}</span>
@@ -1265,10 +1264,30 @@ function renderMoveGrid() {
   });
 }
 
+function isSameMove(a, b) {
+  if (!a || !b) return false;
+  if (a.id != null && b.id != null) return a.id === b.id;
+  return a.ko === b.ko;
+}
+
 function selectMove(mv) {
   const slot = getEntry(activeSection, activeSlotIdx);
   if (!slot) return;
   if (!slot.moves) slot.moves = [null, null, null, null];
+
+  console.log('[selectMove] slot:', activeMoveSlotIdx, 'mv:', mv?.ko, mv?.id, '| current:', slot.moves[activeMoveSlotIdx]?.ko, slot.moves[activeMoveSlotIdx]?.id);
+
+  // 현재 슬롯에 이미 선택된 기술을 다시 누르면 취소 (토글)
+  if (isSameMove(slot.moves[activeMoveSlotIdx], mv)) {
+    slot.moves[activeMoveSlotIdx] = null;
+    renderGrids();
+    renderMoveGrid();
+    return;
+  }
+
+  // 다른 슬롯에 이미 있는 기술은 중복 선택 차단
+  if (slot.moves.some((m, i) => i !== activeMoveSlotIdx && isSameMove(m, mv))) return;
+
   slot.moves[activeMoveSlotIdx] = mv;
   renderGrids();
 
@@ -1281,14 +1300,6 @@ function selectMove(mv) {
   }
 }
 
-function removeMove() {
-  const slot = getEntry(activeSection, activeSlotIdx);
-  if (!slot) return;
-  if (!slot.moves) slot.moves = [null, null, null, null];
-  slot.moves[activeMoveSlotIdx] = null;
-  closeMoveModal();
-  renderGrids();
-}
 
 function goBackFromMove() {
   closeMoveModal();
