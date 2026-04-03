@@ -1286,10 +1286,13 @@ function selectMove(mv) {
     return;
   }
 
-  // 다른 슬롯에 이미 있는 기술이면 → 그 슬롯에서만 취소 (현재 슬롯은 그대로)
+  // 다른 슬롯에 이미 있는 기술이면 → 그 슬롯 취소 후 그 슬롯으로 돌아가기
   const usedIdx = slot.moves.findIndex((m, i) => i !== activeMoveSlotIdx && isSameMove(m, mv));
   if (usedIdx !== -1) {
     slot.moves[usedIdx] = null;
+    activeMoveSlotIdx = usedIdx;
+    document.getElementById('move-modal-title').textContent =
+      `${slot.pokemon.ko} — ${usedIdx + 1}번 기술 선택`;
     renderGrids();
     renderMoveGrid();
     return;
