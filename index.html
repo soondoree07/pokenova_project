@@ -7,6 +7,7 @@
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { overflow-x: hidden; }
 
     body {
       background: #0a0a0a;
@@ -17,6 +18,8 @@
       flex-direction: column;
       align-items: center;
       padding: 0 16px 48px;
+      overflow-x: hidden;
+      max-width: 100%;
     }
 
     /* ══ 상단 인증 바 ══ */
@@ -165,7 +168,8 @@
       border-bottom: 1px solid #252525;
       padding: 0 24px;
       z-index: 100;
-      width: 100%;
+      width: calc(100% + 32px);
+      margin-left: -16px;
     }
     .site-header-inner {
       max-width: 1200px; margin: 0 auto;
@@ -514,7 +518,7 @@
     /* ══ 모바일 반응형 ══ */
     @media (max-width: 600px) {
       body { padding: 0 12px 48px; }
-      .site-header-bar { padding: 0 14px; }
+      .site-header-bar { padding: 0 14px; width: calc(100% + 24px); margin-left: -12px; }
       .site-header-inner { height: 52px; }
       .site-nav-btn { padding: 5px 9px; font-size: 0.76rem; }
       .logo-text { font-size: 15px; }
