@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>배틀팀 · Pokénova</title>
+  <title>배틀팀 — Pokénova</title>
+  <meta name="description" content="포켓몬 배틀팀 빌더. 포켓몬, 지닌도구, 기술을 조합해 나만의 배틀팀을 구성하세요.">
+  <meta property="og:title" content="배틀팀 — Pokénova">
+  <meta property="og:description" content="포켓몬 배틀팀 빌더. 포켓몬, 지닌도구, 기술을 조합해 나만의 배틀팀을 구성하세요.">
+  <meta property="og:url" content="https://soondoree07.github.io/pokenova_project/entry.html">
+  <meta property="og:image" content="https://soondoree07.github.io/pokenova_project/sprites/pokemon/25.png">
+  <meta property="og:type" content="website">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -691,13 +697,20 @@ const LEARN_METHOD_KO = {
 
 // ─── 초기화 ───
 async function init() {
-  const [pokeRes, itemRes, moveRes, learnRes, zmoveRes] = await Promise.all([
-    fetch('data/quiz_pokemon.json'),
-    fetch('data/quiz_items.json'),
-    fetch('data/quiz_moves.json'),
-    fetch('data/learnsets.json').catch(() => null),
-    fetch('data/quiz_zmoves.json').catch(() => null),
-  ]);
+  let pokeRes, itemRes, moveRes, learnRes, zmoveRes;
+  try {
+    [pokeRes, itemRes, moveRes, learnRes, zmoveRes] = await Promise.all([
+      fetch('data/quiz_pokemon.json'),
+      fetch('data/quiz_items.json'),
+      fetch('data/quiz_moves.json'),
+      fetch('data/learnsets.json').catch(() => null),
+      fetch('data/quiz_zmoves.json').catch(() => null),
+    ]);
+  } catch(e) {
+    document.getElementById('poke-grid').innerHTML =
+      '<p style="color:#e53935;padding:20px">데이터를 불러올 수 없습니다. 새로고침 해주세요.</p>';
+    return;
+  }
   const pokeData = await pokeRes.json();
   allItems  = await itemRes.json();
   allMoves  = (await moveRes.json()).filter(m => !m.is_zmove);
