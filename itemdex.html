@@ -62,16 +62,23 @@ h1{font-size:1.3rem;font-weight:700;margin-bottom:18px;color:#fff}
 .cat-볼{background:#00838f;color:#fff}
 .cat-기타{background:#546e7a;color:#fff}
 
+/* ── 햄버거 메뉴 ── */
+.hamburger-btn{display:none;flex-shrink:0;background:none;border:1.5px solid #333;border-radius:8px;cursor:pointer;padding:5px 10px;color:#bbb;font-size:20px;line-height:1;transition:border-color .15s,color .15s}
+.hamburger-btn:hover{border-color:#555;color:#fff}
+
 /* ── 반응형 ── */
 @media(max-width:600px){
   .site-header{padding:0 12px}
   .header-inner{height:52px;gap:8px}
   .logo-text{font-size:15px}
-  .site-nav-btn{padding:5px 8px;font-size:0.75rem}
+  .hamburger-btn{display:flex;align-items:center;justify-content:center}
+  .site-nav{display:none;position:absolute;top:100%;left:0;right:0;background:#141414;border-bottom:1px solid #252525;flex-direction:column;padding:10px 16px 16px;gap:6px;z-index:99;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+  .site-nav.open{display:flex}
+  .site-nav-btn{width:100%;padding:11px 16px;font-size:0.9rem;border-radius:10px;justify-content:flex-start}
   .container{padding:14px 12px}
   h1{font-size:1.1rem;margin-bottom:14px}
   .filter-bar{gap:6px;margin-bottom:10px}
-  .search-wrap{min-width:0;max-width:100%;flex:1 1 100%}
+  .search-wrap{min-width:0;max-width:100%}
   .search-wrap input{font-size:1rem;min-height:44px;padding:10px 12px 10px 32px}
   .chip{padding:7px 10px;min-height:38px;font-size:0.8rem}
   .count-label{font-size:0.75rem}
@@ -81,20 +88,10 @@ h1{font-size:1.3rem;font-weight:700;margin-bottom:18px;color:#fff}
   .site-nav-btn{padding:4px 6px;font-size:0.7rem}
   .chip{padding:6px 8px;font-size:0.75rem}
 }
-
 .site-footer{width:100%;max-width:700px;margin:60px auto 0;padding:24px 16px 8px;border-top:1px solid #252525;text-align:center;color:#555;font-size:0.78rem;line-height:1.9}
 .site-footer a{color:#777;text-decoration:none;transition:color .2s}
 .site-footer a:hover{color:#e53935}
 .site-footer .footer-name{color:#888;font-weight:600}
-/* ── 햄버거 메뉴 ── */
-.hamburger-btn{display:none;flex-shrink:0;background:none;border:1.5px solid #333;border-radius:8px;cursor:pointer;padding:5px 10px;color:#bbb;font-size:20px;line-height:1;transition:border-color .15s,color .15s}
-.hamburger-btn:hover{border-color:#555;color:#fff}
-@media(max-width:600px){
-  .hamburger-btn{display:flex;align-items:center;justify-content:center}
-  .site-nav{display:none;position:absolute;top:100%;left:0;right:0;background:#141414;border-bottom:1px solid #252525;flex-direction:column;padding:10px 16px 16px;gap:6px;z-index:99;box-shadow:0 8px 24px rgba(0,0,0,.5)}
-  .site-nav.open{display:flex}
-  .site-nav-btn{width:100%;padding:11px 16px;font-size:0.9rem;border-radius:10px;justify-content:flex-start}
-}
 </style>
 </head>
 <body>

@@ -525,32 +525,11 @@
       .site-footer { margin-top: 40px; padding: 20px 12px 8px; font-size: 0.73rem; }
 
       /* 탭 + 도감 버튼 레이아웃 */
-      .nav-tab-wrap {
-        flex-direction: column !important;
-        align-items: stretch !important;
-        gap: 8px !important;
-        margin-bottom: 20px !important;
-      }
-      .nav-tabs {
-        margin-bottom: 0;
-        padding: 4px;
-        border-radius: 12px;
-        justify-content: center;
-      }
-      /* 탭 버튼: 최소 44px 터치 영역 유지, font-size 최소 0.8rem */
-      .nav-tab { padding: 10px 10px; font-size: 0.82rem; min-height: 44px; }
-      .btn-pokedex { justify-content: center; width: 100%; padding: 12px; min-height: 44px; }
-
+      .nav-tab-wrap { flex-direction: column !important; align-items: stretch !important; gap: 8px !important; margin-bottom: 20px !important; }
       /* 퀴즈 탭 2×2 그리드 */
-      .nav-tabs {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
-        border-radius: 16px;
-        padding: 8px;
-        overflow-x: visible;
-      }
-      .nav-tab { padding: 14px 8px; font-size: 0.85rem; border-radius: 10px; text-align: center; }
+      .nav-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; border-radius: 16px; padding: 8px; overflow-x: visible; margin-bottom: 0; }
+      .nav-tab { padding: 14px 8px; font-size: 0.85rem; min-height: 44px; border-radius: 10px; text-align: center; }
+      .btn-pokedex { justify-content: center; width: 100%; padding: 12px; min-height: 44px; }
 
       /* 카드 */
       .card { padding: 20px 16px; border-radius: 16px; gap: 12px; }
@@ -587,6 +566,12 @@
       /* 게임오버 */
       .gameover-box { padding: 28px 20px; min-width: 0; width: 88vw; }
       .gameover-title { font-size: 1.6rem; }
+
+      /* 햄버거 메뉴 */
+      .hamburger-btn { display: flex; align-items: center; justify-content: center; }
+      .site-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #141414; border-bottom: 1px solid #252525; flex-direction: column; padding: 10px 16px 16px; gap: 6px; z-index: 99; box-shadow: 0 8px 24px rgba(0,0,0,.5); }
+      .site-nav.open { display: flex; }
+      .site-nav-btn { width: 100%; padding: 11px 16px; font-size: 0.9rem; border-radius: 10px; justify-content: flex-start; }
     }
 
     @media (max-width: 380px) {
@@ -689,18 +674,6 @@
       transition: border-color .15s, color .15s;
     }
     .hamburger-btn:hover { border-color: #555; color: #fff; }
-    @media (max-width: 600px) {
-      .hamburger-btn { display: flex; align-items: center; justify-content: center; }
-      .site-nav {
-        display: none;
-        position: absolute; top: 100%; left: 0; right: 0;
-        background: #141414; border-bottom: 1px solid #252525;
-        flex-direction: column; padding: 10px 16px 16px; gap: 6px;
-        z-index: 99; box-shadow: 0 8px 24px rgba(0,0,0,.5);
-      }
-      .site-nav.open { display: flex; }
-      .site-nav-btn { width: 100%; padding: 11px 16px; font-size: 0.9rem; border-radius: 10px; justify-content: flex-start; }
-    }
   </style>
 </head>
 <body>
