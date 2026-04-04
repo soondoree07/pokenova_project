@@ -29,16 +29,19 @@ a{text-decoration:none;color:inherit}
 h1{font-size:1.3rem;font-weight:700;margin-bottom:18px;color:#fff}
 
 /* ── 필터 바 ── */
-.filter-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;align-items:center}
+.filter-bar{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
+.filter-bar-top{display:flex;align-items:center;gap:8px}
 .search-wrap{position:relative;flex:1;min-width:180px;max-width:320px}
 .search-wrap input{width:100%;padding:8px 12px 8px 32px;background:#1a1a1a;border:1px solid #333;border-radius:8px;color:#f0f0f0;font-size:0.9rem;outline:none}
 .search-wrap input:focus{border-color:#e53935}
 .search-wrap::before{content:'🔍';position:absolute;left:9px;top:50%;transform:translateY(-50%);font-size:.85rem;opacity:.5}
+.filter-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.filter-label{font-size:11px;font-weight:700;color:#444;text-transform:uppercase;letter-spacing:0.5px;flex-shrink:0;min-width:28px}
 .filter-chips{display:flex;flex-wrap:wrap;gap:6px}
 .chip{padding:5px 11px;border-radius:20px;background:#1e1e1e;border:1.5px solid #333;font-size:0.78rem;font-weight:600;cursor:pointer;transition:all .15s;white-space:nowrap;color:#fff}
 .chip:hover{border-color:#888}
 .chip.active{color:#fff}
-.count-label{font-size:0.8rem;color:#888;margin-left:auto;align-self:center}
+.count-label{font-size:0.8rem;color:#888;align-self:center}
 
 /* ── 기술 그리드 ── */
 .move-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
@@ -192,12 +195,20 @@ h1{font-size:1.3rem;font-weight:700;margin-bottom:18px;color:#fff}
   <h1>기술 도감</h1>
 
   <div class="filter-bar">
-    <div class="search-wrap">
-      <input id="search" type="text" placeholder="기술명 검색..." oninput="render()" autocomplete="off" spellcheck="false">
+    <div class="filter-bar-top">
+      <div class="search-wrap">
+        <input id="search" type="text" placeholder="기술명 검색..." oninput="render()" autocomplete="off" spellcheck="false">
+      </div>
+      <span class="count-label" id="count-label"></span>
     </div>
-    <div class="filter-chips" id="type-chips"></div>
-    <div class="filter-chips" id="class-chips"></div>
-    <span class="count-label" id="count-label"></span>
+    <div class="filter-row">
+      <span class="filter-label">타입</span>
+      <div class="filter-chips" id="type-chips"></div>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">분류</span>
+      <div class="filter-chips" id="class-chips"></div>
+    </div>
   </div>
 
   <div class="move-grid" id="move-grid"></div>
