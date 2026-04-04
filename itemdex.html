@@ -86,6 +86,15 @@ h1{font-size:1.3rem;font-weight:700;margin-bottom:18px;color:#fff}
 .site-footer a{color:#777;text-decoration:none;transition:color .2s}
 .site-footer a:hover{color:#e53935}
 .site-footer .footer-name{color:#888;font-weight:600}
+/* ── 햄버거 메뉴 ── */
+.hamburger-btn{display:none;flex-shrink:0;background:none;border:1.5px solid #333;border-radius:8px;cursor:pointer;padding:5px 10px;color:#bbb;font-size:20px;line-height:1;transition:border-color .15s,color .15s}
+.hamburger-btn:hover{border-color:#555;color:#fff}
+@media(max-width:600px){
+  .hamburger-btn{display:flex;align-items:center;justify-content:center}
+  .site-nav{display:none;position:absolute;top:100%;left:0;right:0;background:#141414;border-bottom:1px solid #252525;flex-direction:column;padding:10px 16px 16px;gap:6px;z-index:99;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+  .site-nav.open{display:flex}
+  .site-nav-btn{width:100%;padding:11px 16px;font-size:0.9rem;border-radius:10px;justify-content:flex-start}
+}
 </style>
 </head>
 <body>
@@ -96,6 +105,7 @@ h1{font-size:1.3rem;font-weight:700;margin-bottom:18px;color:#fff}
       <div class="logo-ball"></div>
       <span class="logo-text">Poké<span>nova</span></span>
     </a>
+    <button class="hamburger-btn" id="hamburger-btn" onclick="toggleMobileNav()" aria-label="메뉴">☰</button>
     <nav class="site-nav">
       <a href="index.html"    class="site-nav-btn">🎴 퀴즈</a>
       <a href="pokedex.html"  class="site-nav-btn">📖 포켓몬 도감</a>
@@ -121,6 +131,23 @@ h1{font-size:1.3rem;font-weight:700;margin-bottom:18px;color:#fff}
 </div>
 
 <script>
+function toggleMobileNav() {
+  const nav = document.querySelector('.site-nav');
+  const btn = document.getElementById('hamburger-btn');
+  const isOpen = nav.classList.toggle('open');
+  btn.textContent = isOpen ? '✕' : '☰';
+}
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.site-header')) {
+    const nav = document.querySelector('.site-nav');
+    const btn = document.getElementById('hamburger-btn');
+    if (nav && nav.classList.contains('open')) {
+      nav.classList.remove('open');
+      if (btn) btn.textContent = '☰';
+    }
+  }
+});
+
 let allItems = [];
 let activeTab = '전체';
 
