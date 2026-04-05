@@ -1280,7 +1280,7 @@ async function loadAllData() {
       } else {
         en = f.name_en;
       }
-      formEntries.push({ id: base.id, ko: displayKo, en, sprite: f.sprite, types: f.types || base.types, isForm: true });
+      formEntries.push({ id: base.id, ko: displayKo, en, sprite: f.sprite, types: f.types || base.types, isForm: true, baseKo: base.ko });
     });
   });
   DB.pokemon = p.concat(formEntries);
@@ -1362,7 +1362,7 @@ function bGetNextId() {
   return bPool[bPoolIdx++];
 }
 
-let bPokemon = null, bKoName = '', bEnName = '', bRevealed = false, bLoadedImg = null, bHintText = '', bWrongThisRound = false;
+let bPokemon = null, bKoName = '', bEnName = '', bBaseKo = '', bRevealed = false, bLoadedImg = null, bHintText = '', bWrongThisRound = false;
 let bScoreC = parseInt(localStorage.getItem('bc')||'0');
 let bScoreW = parseInt(localStorage.getItem('bw')||'0');
 let bScoreS = parseInt(localStorage.getItem('bs')||'0');
@@ -1517,7 +1517,7 @@ function renderBarcodeDecoration() {
 }
 
 function bLoadPokemon() {
-  bRevealed = false; bLoadedImg = null; bKoName = ''; bEnName = ''; bHintText = ''; bWrongThisRound = false;
+  bRevealed = false; bLoadedImg = null; bKoName = ''; bEnName = ''; bBaseKo = ''; bHintText = ''; bWrongThisRound = false;
   const cv = document.getElementById('pokemon-canvas');
   cv.style.display = 'none';
   document.getElementById('b-loading').style.display = 'block';
@@ -1544,6 +1544,7 @@ function bLoadPokemon() {
   const p = DB.pokemon[bGetNextId()];
   bKoName  = (p.ko||'').replace(/\s/g,'');
   bEnName  = p.en.toLowerCase();
+  bBaseKo  = p.baseKo ? p.baseKo.replace(/\s/g,'') : '';
   bPokemon = p;
   document.getElementById('b-pokemon-number').textContent = `#${String(p.id).padStart(4,'0')}`;
 
@@ -1566,7 +1567,7 @@ function bCheckGuess() {
   if (bRevealed || !bPokemon) return;
   const input = document.getElementById('b-guess-input');
   const guess = input.value.trim(); if (!guess) return;
-  if (normalize(guess)===normalize(bKoName) || (bEnName&&normalize(guess)===normalize(bEnName))) {
+  if (normalize(guess)===normalize(bKoName) || (bEnName&&normalize(guess)===normalize(bEnName)) || (bBaseKo&&normalize(guess)===normalize(bBaseKo))) {
     bReveal(true);
   } else {
     bScoreS=0; bUpdateScore();
