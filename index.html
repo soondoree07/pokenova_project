@@ -23,7 +23,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 0 16px 48px;
+      padding: 60px 16px 48px;
       overflow-x: hidden;
       max-width: 100%;
     }
@@ -169,13 +169,11 @@
 
     /* ══ 사이트 헤더 ══ */
     .site-header-bar {
-      position: sticky; top: 0;
+      position: fixed; top: 0; left: 0; right: 0;
       background: #141414;
       border-bottom: 1px solid #252525;
       padding: 0 24px;
       z-index: 100;
-      width: calc(100% + 32px);
-      margin-left: -16px;
     }
     .site-header-inner {
       max-width: 1200px; margin: 0 auto;
@@ -434,11 +432,11 @@
       flex: 1; padding: 11px 6px; border-radius: 12px;
       border: 1.5px solid #252525; background: #0f0f0f; color: #555;
       font-size: 0.85rem; font-weight: 700; cursor: pointer; transition: all .18s; text-align: center;
-      min-height: 44px;
+      min-height: 44px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
     }
     .diff-btn:hover { border-color: #e53935; color: #e53935; }
     .diff-btn.selected { background: #e53935; color: #fff; border-color: #e53935; }
-    .diff-btn .diff-label { font-size: 0.95rem; }
+    .diff-btn .diff-label { font-size: 0.95rem; min-height: 1.3em; }
     .diff-btn .diff-sub   { font-size: 0.67rem; font-weight: 400; margin-top: 3px; opacity: .8; }
 
     .move-info-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 9px; width: 100%; }
@@ -529,7 +527,8 @@
     /* ══ 모바일 반응형 ══ */
     @media (max-width: 768px) {
       body { padding: 0 12px 48px; }
-      .site-header-bar { padding: 0 14px; width: calc(100% + 24px); margin-left: -12px; }
+      body { padding-top: 52px; }
+      .site-header-bar { padding: 0 14px; }
       .site-header-inner { height: 52px; }
       .site-nav-btn { padding: 5px 9px; font-size: 0.76rem; }
       .logo-text { font-size: 15px; }
@@ -733,7 +732,7 @@
       </button>
       <button class="diff-btn" id="b-diff-normal" onclick="bSetDifficulty('normal')">
         <div class="diff-label">보통</div>
-        <div class="diff-sub">가로선 4줄 · HP3</div>
+        <div class="diff-sub">가로선 4줄</div>
       </button>
       <button class="diff-btn" id="b-diff-hard" onclick="bSetDifficulty('hard')">
         <div class="diff-label">어려움</div>
@@ -798,11 +797,11 @@
       </button>
       <button class="diff-btn" id="diff-normal" onclick="setDifficulty('normal')">
         <div class="diff-label">보통</div>
-        <div class="diff-sub">명중률·첫등장 숨김 · HP3</div>
+        <div class="diff-sub">명중률·첫등장 숨김</div>
       </button>
       <button class="diff-btn" id="diff-hard" onclick="setDifficulty('hard')">
         <div class="diff-label">어려움</div>
-        <div class="diff-sub">타입·위력·명중률 숨김 · HP3</div>
+        <div class="diff-sub">타입·위력·명중률 숨김</div>
       </button>
     </div>
 
