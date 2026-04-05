@@ -484,8 +484,6 @@
     }
     .diff-btn.locked { opacity: 0.45; cursor: not-allowed; pointer-events: none; }
 
-    /* 포켓몬 맞추기 난이도 버튼 — 기술 맞추기보다 살짝 크게 (폰트 크기는 동일) */
-    .b-diff-selector .diff-btn { padding: 15px 6px; }
 
     /* ══ 특성 포켓몬 칩 ══ */
     .pokemon-chip-list { display: flex; flex-wrap: wrap; gap: 6px; width: 100%; }
@@ -521,6 +519,16 @@
     .gameover-score b { color: #e53935; }
 
     /* ══ 도감 버튼 ══ */
+
+    /* ── 햄버거 메뉴 기본 (모바일에서만 표시) ── */
+    .hamburger-btn {
+      display: none; flex-shrink: 0;
+      background: none; border: 1.5px solid #333; border-radius: 8px;
+      cursor: pointer; padding: 5px 10px;
+      color: #bbb; font-size: 20px; line-height: 1;
+      transition: border-color .15s, color .15s;
+    }
+    .hamburger-btn:hover { border-color: #555; color: #fff; }
 
     /* ══ 모바일 반응형 ══ */
     @media (max-width: 768px) {
@@ -673,15 +681,6 @@
     }
     .lb-diff-tab.active { background: #f5c518; color: #000; font-weight: 700; border-color: #f5c518; }
 
-    /* ── 햄버거 메뉴 ── */
-    .hamburger-btn {
-      display: none; flex-shrink: 0;
-      background: none; border: 1.5px solid #333; border-radius: 8px;
-      cursor: pointer; padding: 5px 10px;
-      color: #bbb; font-size: 20px; line-height: 1;
-      transition: border-color .15s, color .15s;
-    }
-    .hamburger-btn:hover { border-color: #555; color: #fff; }
   </style>
 </head>
 <body>
@@ -723,7 +722,7 @@
 
     <div style="font-size:.75rem;color:#444;letter-spacing:1px;align-self:flex-start">DIFFICULTY</div>
     <!-- 바코드 난이도 -->
-    <div class="diff-selector b-diff-selector">
+    <div class="diff-selector">
       <button class="diff-btn selected" id="b-diff-easy" onclick="bSetDifficulty('easy')">
         <div class="diff-label">쉬움</div>
         <div class="diff-sub">가로선 8줄 · 목숨∞</div>
