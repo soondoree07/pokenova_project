@@ -1,0 +1,11 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/pokedex", "destination": "/pokedex.html" },
+    { "source": "/movedex", "destination": "/movedex.html" },
+    { "source": "/itemdex", "destination": "/itemdex.html" },
+    { "source": "/entry", "destination": "/entry.html" },
+    { "source": "/admin", "destination": "/admin.html" }
+  ]
+}
