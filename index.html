@@ -715,10 +715,10 @@
 <div id="tab-barcode" class="section">
   <div class="card">
     <button class="btn-ghost" style="width:100%;margin-bottom:8px;font-size:0.82rem" onclick="toggleLb('b')">🏆 리더보드 보기</button>
-    <div class="score-row">
-      <span>연속 <b id="b-score-streak">0</b> 🔥</span>
-    </div>
 
+    <div class="divider"></div>
+
+    <div style="font-size:.75rem;color:#444;letter-spacing:1px;align-self:flex-start">DIFFICULTY</div>
     <!-- 바코드 난이도 -->
     <div class="diff-selector">
       <button class="diff-btn selected" id="b-diff-easy" onclick="bSetDifficulty('easy')">
@@ -780,9 +780,6 @@
 <div id="tab-move" class="section" style="display:none">
   <div class="card">
     <button class="btn-ghost" style="width:100%;margin-bottom:8px;font-size:0.82rem" onclick="toggleLb('m')">🏆 리더보드 보기</button>
-    <div class="score-row">
-      <span>연속 <b id="m-score-streak">0</b> 🔥</span>
-    </div>
 
     <div class="divider"></div>
 
@@ -1245,7 +1242,6 @@ let bScoreW = parseInt(localStorage.getItem('bw')||'0');
 let bScoreS = parseInt(localStorage.getItem('bs')||'0');
 
 function bUpdateScore() {
-  document.getElementById('b-score-streak').textContent  = bScoreS;
   localStorage.setItem('bs',bScoreS);
 }
 bUpdateScore();
@@ -1593,7 +1589,6 @@ let mScoreW=parseInt(localStorage.getItem('mw')||'0');
 let mScoreS=parseInt(localStorage.getItem('ms')||'0');
 
 function mUpdateScore() {
-  document.getElementById('m-score-streak').textContent  = mScoreS;
   localStorage.setItem('ms',mScoreS);
 }
 mUpdateScore();
