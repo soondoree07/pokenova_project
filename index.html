@@ -486,6 +486,11 @@
     }
     .diff-btn.locked { opacity: 0.45; cursor: not-allowed; pointer-events: none; }
 
+    /* 포켓몬 맞추기 난이도 버튼 — 기술 맞추기보다 살짝 크게 */
+    .b-diff-selector .diff-btn { padding: 15px 6px; }
+    .b-diff-selector .diff-btn .diff-label { font-size: 1.05rem; }
+    .b-diff-selector .diff-btn .diff-sub   { font-size: 0.7rem; }
+
     /* ══ 특성 포켓몬 칩 ══ */
     .pokemon-chip-list { display: flex; flex-wrap: wrap; gap: 6px; width: 100%; }
     .pokemon-chip {
@@ -721,7 +726,7 @@
 
     <div style="font-size:.75rem;color:#444;letter-spacing:1px;align-self:flex-start">DIFFICULTY</div>
     <!-- 바코드 난이도 -->
-    <div class="diff-selector">
+    <div class="diff-selector b-diff-selector">
       <button class="diff-btn selected" id="b-diff-easy" onclick="bSetDifficulty('easy')">
         <div class="diff-label">쉬움</div>
         <div class="diff-sub">가로선 8줄 · 목숨∞</div>
@@ -768,7 +773,7 @@
     <button class="btn-report" id="b-btn-report" onclick="openReport('pokemon','포켓몬 맞추기')" style="display:none">⚠️ 오류 신고</button>
     <button class="btn-outline" id="b-btn-next" onclick="bNextPokemon()" style="display:none">다음 포켓몬 →</button>
   </div>
-  <div id="b-lb-panel" class="lb-panel" style="display:none">
+  <div id="b-lb-panel" class="lb-panel">
     <div class="lb-panel-title">🏆 포켓몬 맞추기 TOP 100</div>
     <div style="display:flex;gap:8px;margin-bottom:12px">
       <button id="b-lb-tab-normal" class="lb-diff-tab active" onclick="setLbDiff('b','normal')">보통</button>
@@ -866,7 +871,7 @@
     <button class="btn-report" id="m-btn-report" onclick="openReport('move','기술 맞추기')" style="display:none">⚠️ 오류 신고</button>
     <button class="btn-outline" id="m-btn-next" onclick="mNextMove()" style="display:none">다음 기술 →</button>
   </div>
-  <div id="m-lb-panel" class="lb-panel" style="display:none">
+  <div id="m-lb-panel" class="lb-panel">
     <div class="lb-panel-title">🏆 기술 맞추기 TOP 100</div>
     <div style="display:flex;gap:8px;margin-bottom:12px">
       <button id="m-lb-tab-normal" class="lb-diff-tab active" onclick="setLbDiff('m','normal')">보통</button>
@@ -2326,7 +2331,9 @@ function lbShowDone(prefix) {
 }
 
 // 리더보드 토글
-const _lbOpen = { b: false, m: false, a: false, i: false };
+const _lbOpen = { b: true, m: true, a: false, i: false };
+// 페이지 로드 시 포켓몬/기술 리더보드 자동 렌더
+window.addEventListener('load', () => { renderLb('b'); renderLb('m'); });
 const _lbDiff = { b: 'normal', m: 'normal' };
 
 function setLbDiff(prefix, diff) {
