@@ -434,15 +434,56 @@
       </div>
     </div>
 
+    <!-- ══ 섹션: 리더보드 ══ -->
+    <div class="panel">
+      <div class="section-title">리더보드</div>
+      <div class="table-controls">
+        <div class="filter-btns">
+          <button class="filter-btn active" id="lf-all"     onclick="setLbFilter('all')">전체</button>
+          <button class="filter-btn" id="lf-pokemon"        onclick="setLbFilter('pokemon')">포켓몬</button>
+          <button class="filter-btn" id="lf-move"           onclick="setLbFilter('move')">기술</button>
+          <button class="filter-btn" id="lf-ability"        onclick="setLbFilter('ability')">특성</button>
+          <button class="filter-btn" id="lf-item"           onclick="setLbFilter('item')">도구</button>
+        </div>
+        <span class="table-count" id="lb-count"></span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>시간</th>
+              <th>닉네임</th>
+              <th>모드</th>
+              <th>난이도</th>
+              <th>정답</th>
+              <th>오답</th>
+              <th>정확도</th>
+            </tr>
+          </thead>
+          <tbody id="lb-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
     <!-- ══ 섹션: 데이터 관리 ══ -->
     <div class="panel">
       <div class="section-title">데이터 관리</div>
-      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
-        <div style="font-size:0.83rem;color:var(--muted);line-height:1.6">
-          localStorage에 저장된 게임 세션 및 신고 데이터를 모두 삭제합니다.<br>
-          <span style="color:var(--red);font-size:0.78rem">이 작업은 되돌릴 수 없습니다.</span>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+          <div style="font-size:0.83rem;color:var(--muted);line-height:1.6">
+            리더보드 기록만 삭제합니다.<br>
+            <span style="color:var(--red);font-size:0.78rem">이 작업은 되돌릴 수 없습니다.</span>
+          </div>
+          <button class="btn-danger-full" onclick="clearLeaderboardData()">🏆 리더보드 초기화</button>
         </div>
-        <button class="btn-danger-full" onclick="clearAllData()">🗑️ 데이터 전체 초기화</button>
+        <div class="divider"></div>
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+          <div style="font-size:0.83rem;color:var(--muted);line-height:1.6">
+            게임 세션, 신고, 리더보드 데이터를 모두 삭제합니다.<br>
+            <span style="color:var(--red);font-size:0.78rem">이 작업은 되돌릴 수 없습니다.</span>
+          </div>
+          <button class="btn-danger-full" onclick="clearAllData()">🗑️ 데이터 전체 초기화</button>
+        </div>
       </div>
     </div>
 
@@ -456,6 +497,7 @@ const ADMIN_PASSWORD = "qkrwjdgur07";
 /* ══ 상태 ══ */
 let reportFilter  = 'pending';
 let sessionFilter = 'all';
+let lbFilter      = 'all';
 
 /* ══ 로그인 ══ */
 function doLogin() {
@@ -536,14 +578,21 @@ async function getReports() {
   }
   return JSON.parse(localStorage.getItem('pq_reports') || '[]');
 }
+async function getLeaderboard() {
+  if (window._adminGetLeaderboard) {
+    try { return await window._adminGetLeaderboard(); } catch(e) { console.warn('Firestore leaderboard:', e); }
+  }
+  return JSON.parse(localStorage.getItem('pq_lb') || '[]');
+}
 
 /* ══ 대시보드 전체 렌더 ══ */
 async function loadDashboard() {
-  const [sessions, reports] = await Promise.all([getSessions(), getReports()]);
+  const [sessions, reports, leaderboard] = await Promise.all([getSessions(), getReports(), getLeaderboard()]);
   renderOverviewStats(sessions, reports);
   renderQuizStats(sessions);
   renderReportTable(reports);
   renderSessionTable(sessions);
+  renderLeaderboardTable(leaderboard);
 }
 
 /* ── 개요 통계 ── */
@@ -701,6 +750,88 @@ function renderSessionTable(sessions) {
   }).join('');
 }
 
+/* ── 리더보드 필터 ── */
+const LB_MODE_MAP = { pokemon: 'pokemon_barcode', move: 'move', ability: 'ability', item: 'item' };
+
+function setLbFilter(f) {
+  lbFilter = f;
+  ['all','pokemon','move','ability','item'].forEach(k => {
+    const el = document.getElementById('lf-' + k);
+    if (el) el.classList.toggle('active', k === f);
+  });
+  getLeaderboard().then(renderLeaderboardTable);
+}
+
+/* ── 리더보드 테이블 ── */
+function renderLeaderboardTable(rows) {
+  const filtered = lbFilter === 'all'
+    ? rows
+    : rows.filter(r => {
+        const m = r.mode || '';
+        if (lbFilter === 'pokemon') return m === 'pokemon_barcode';
+        return m === lbFilter;
+      });
+  const display = filtered.slice(0, 200);
+  document.getElementById('lb-count').textContent = display.length ? display.length + '개 (최근 200)' : '';
+
+  const tbody = document.getElementById('lb-tbody');
+  if (!display.length) {
+    tbody.innerHTML = '<tr class="empty-row"><td colspan="7">리더보드 데이터 없음</td></tr>';
+    return;
+  }
+
+  tbody.innerHTML = display.map(r => {
+    const total = (r.correct || 0) + (r.wrong || 0);
+    const acc   = total > 0 ? Math.round((r.correct / total) * 100) : 0;
+    const accColor = acc >= 70 ? 'var(--green)' : acc >= 40 ? 'var(--yellow)' : 'var(--red)';
+    const badgeCls = { pokemon_barcode: 'badge-green', move: 'badge-blue', ability: 'badge-purple', item: 'badge-yellow' }[r.mode] || 'badge-muted';
+    const diffBadge = r.difficulty === 'hard' ? '<span class="badge badge-red">어려움</span>' : r.difficulty === 'normal' ? '<span class="badge badge-muted">보통</span>' : '<span style="color:var(--muted)">—</span>';
+
+    return `<tr>
+      <td><span class="time-str">${fmtTime(r.ts)}</span></td>
+      <td style="font-weight:700">${esc(r.nickname || '—')}</td>
+      <td><span class="badge ${badgeCls}">${esc(r.modeLabel || r.mode)}</span></td>
+      <td>${diffBadge}</td>
+      <td><span class="badge badge-green">${r.correct || 0}</span></td>
+      <td><span class="badge badge-red">${r.wrong || 0}</span></td>
+      <td>
+        <div class="accuracy-cell">
+          <span style="font-size:0.85rem;font-weight:700;color:${accColor}">${acc}%</span>
+          <div class="acc-bar-bg"><div class="acc-bar-fill" style="width:${acc}%"></div></div>
+        </div>
+      </td>
+    </tr>`;
+  }).join('');
+}
+
+/* ── 리더보드 초기화 ── */
+async function clearLeaderboardData() {
+  if (!confirm('리더보드 기록을 모두 삭제하시겠습니까?\n이 작업은 되돌릴 수 없습니다.')) return;
+
+  const btn = document.querySelector('[onclick="clearLeaderboardData()"]');
+  btn.disabled = true;
+  btn.textContent = '⏳ 삭제 중...';
+
+  localStorage.removeItem('pq_lb');
+
+  if (window._adminClearLeaderboard) {
+    try {
+      await window._adminClearLeaderboard();
+    } catch(e) {
+      console.error('Firestore 리더보드 삭제 오류:', e);
+      alert('Firestore 삭제 중 오류가 발생했습니다: ' + e.message);
+      btn.disabled = false;
+      btn.textContent = '🏆 리더보드 초기화';
+      return;
+    }
+  }
+
+  btn.disabled = false;
+  btn.textContent = '🏆 리더보드 초기화';
+  alert('리더보드가 초기화되었습니다.');
+  loadDashboard();
+}
+
 /* ── 전체 초기화 ── */
 async function clearAllData() {
   if (!confirm('게임 세션, 신고, 리더보드 데이터를 모두 삭제하시겠습니까?\n이 작업은 되돌릴 수 없습니다.')) return;
@@ -712,6 +843,7 @@ async function clearAllData() {
   // localStorage 삭제
   localStorage.removeItem('pq_sessions');
   localStorage.removeItem('pq_reports');
+  localStorage.removeItem('pq_lb');
 
   // Firestore 삭제
   if (window._adminClearAll) {
@@ -772,6 +904,16 @@ async function clearAllData() {
   window._adminDeleteReport = async (customId) => {
     const snap = await getDocs(query(collection(db, 'reports'), where('id', '==', customId)));
     for (const d of snap.docs) await deleteDoc(doc(db, 'reports', d.id));
+  };
+
+  window._adminGetLeaderboard = async () => {
+    const snap = await getDocs(query(collection(db, 'leaderboard'), orderBy('ts', 'desc')));
+    return snap.docs.map(d => ({ _docId: d.id, ...d.data() }));
+  };
+
+  window._adminClearLeaderboard = async () => {
+    const snap = await getDocs(collection(db, 'leaderboard'));
+    for (const d of snap.docs) await deleteDoc(doc(db, 'leaderboard', d.id));
   };
 
   window._adminClearAll = async () => {
