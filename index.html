@@ -1255,17 +1255,32 @@ async function loadAllData() {
     base.forms.forEach(f => {
       if (!f.sprite || !f.name_ko) return;
       if (f.type === 'mega' && !CANONICAL_MEGA.has(f.name_en)) return;
-      if (f.type !== 'mega' && f.type !== 'gmax') return;
-      if (seenFormKo.has(f.name_ko)) return;
-      seenFormKo.add(f.name_ko);
-      let en = f.name_en;
+      // 폼 이름에 기본 포켓몬명이 없으면 앞에 붙여 명확하게 표시
+      const displayKo = normalize(f.name_ko).includes(normalize(base.ko))
+        ? f.name_ko
+        : `${base.ko} ${f.name_ko}`;
+      if (seenFormKo.has(displayKo)) return;
+      seenFormKo.add(displayKo);
+      let en;
       if (f.type === 'mega') {
         const sx = f.name_en.match(/-mega-(.+)$/);
         en = sx ? `Mega ${base.en} ${sx[1].toUpperCase()}` : `Mega ${base.en}`;
-      } else {
+      } else if (f.type === 'gmax') {
         en = `Gigantamax ${base.en}`;
+      } else if (f.type === 'alola') {
+        en = `Alolan ${base.en}`;
+      } else if (f.type === 'galar') {
+        en = `Galarian ${base.en}`;
+      } else if (f.type === 'hisui') {
+        en = `Hisuian ${base.en}`;
+      } else if (f.type === 'paldea') {
+        en = `Paldean ${base.en}`;
+      } else if (f.type === 'primal') {
+        en = `Primal ${base.en}`;
+      } else {
+        en = f.name_en;
       }
-      formEntries.push({ id: base.id, ko: f.name_ko, en, sprite: f.sprite, types: f.types || base.types, isForm: true });
+      formEntries.push({ id: base.id, ko: displayKo, en, sprite: f.sprite, types: f.types || base.types, isForm: true });
     });
   });
   DB.pokemon = p.concat(formEntries);
