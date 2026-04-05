@@ -702,10 +702,32 @@ function renderSessionTable(sessions) {
 }
 
 /* ── 전체 초기화 ── */
-function clearAllData() {
-  if (!confirm('게임 세션 및 신고 데이터를 모두 삭제하시겠습니까?\n이 작업은 되돌릴 수 없습니다.')) return;
+async function clearAllData() {
+  if (!confirm('게임 세션, 신고, 리더보드 데이터를 모두 삭제하시겠습니까?\n이 작업은 되돌릴 수 없습니다.')) return;
+
+  const btn = document.querySelector('.btn-danger-full');
+  btn.disabled = true;
+  btn.textContent = '⏳ 삭제 중...';
+
+  // localStorage 삭제
   localStorage.removeItem('pq_sessions');
   localStorage.removeItem('pq_reports');
+
+  // Firestore 삭제
+  if (window._adminClearAll) {
+    try {
+      await window._adminClearAll();
+    } catch(e) {
+      console.error('Firestore 삭제 오류:', e);
+      alert('Firestore 삭제 중 오류가 발생했습니다: ' + e.message);
+      btn.disabled = false;
+      btn.textContent = '🗑️ 데이터 전체 초기화';
+      return;
+    }
+  }
+
+  btn.disabled = false;
+  btn.textContent = '🗑️ 데이터 전체 초기화';
   alert('데이터가 초기화되었습니다.');
   loadDashboard();
 }
@@ -750,6 +772,14 @@ function clearAllData() {
   window._adminDeleteReport = async (customId) => {
     const snap = await getDocs(query(collection(db, 'reports'), where('id', '==', customId)));
     for (const d of snap.docs) await deleteDoc(doc(db, 'reports', d.id));
+  };
+
+  window._adminClearAll = async () => {
+    const cols = ['sessions', 'reports', 'leaderboard'];
+    for (const col of cols) {
+      const snap = await getDocs(collection(db, col));
+      for (const d of snap.docs) await deleteDoc(doc(db, col, d.id));
+    }
   };
 
   // Firebase 연결됨 → 배너 업데이트
