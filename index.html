@@ -877,9 +877,6 @@
 <div id="tab-ability" class="section" style="display:none">
   <div class="card">
     <button class="btn-ghost" style="width:100%;margin-bottom:8px;font-size:0.82rem" onclick="toggleLb('a')">🏆 리더보드 보기</button>
-    <div class="score-row">
-      <span>연속 <b id="a-score-streak">0</b> 🔥</span>
-    </div>
     <button class="btn-primary" id="a-btn-start" onclick="aStartGame()" style="width:100%;margin-bottom:8px">게임 시작</button>
     <div class="b-game-info" id="a-game-info" style="display:none">
       <div class="b-lives" id="a-lives">❤️❤️❤️</div>
@@ -919,9 +916,6 @@
 <div id="tab-item" class="section" style="display:none">
   <div class="card">
     <button class="btn-ghost" style="width:100%;margin-bottom:8px;font-size:0.82rem" onclick="toggleLb('i')">🏆 리더보드 보기</button>
-    <div class="score-row">
-      <span>연속 <b id="i-score-streak">0</b> 🔥</span>
-    </div>
     <button class="btn-primary" id="i-btn-start" onclick="iStartGame()" style="width:100%;margin-bottom:8px">게임 시작</button>
     <div class="b-game-info" id="i-game-info" style="display:none">
       <div class="b-lives" id="i-lives">❤️❤️❤️</div>
@@ -1858,7 +1852,6 @@ let aScoreW_total = parseInt(localStorage.getItem('aw')||'0');
 let aScoreS = parseInt(localStorage.getItem('as')||'0');
 
 function aUpdateScore() {
-  document.getElementById('a-score-streak').textContent  = aScoreS;
   localStorage.setItem('as', aScoreS);
 }
 aUpdateScore();
@@ -2063,7 +2056,6 @@ let iScoreW_total = parseInt(localStorage.getItem('iw')||'0');
 let iScoreS = parseInt(localStorage.getItem('is')||'0');
 
 function iUpdateScore() {
-  document.getElementById('i-score-streak').textContent  = iScoreS;
   localStorage.setItem('is', iScoreS);
 }
 iUpdateScore();
