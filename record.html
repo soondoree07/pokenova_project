@@ -81,52 +81,89 @@
     }
     .page-title span { color: #e53935; }
 
-    /* ══ 최고 기록 그리드 ══ */
+    /* ══ 최고 기록 ══ */
+    .best-section { margin-bottom: 36px; display: flex; flex-direction: column; gap: 10px; }
+
+    /* 난이도별 카드 (포켓몬/기술) */
+    .best-card-wide {
+      background: #141414;
+      border: 1px solid #252525;
+      border-radius: 16px;
+      padding: 18px 20px;
+    }
+    .best-card-wide-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #888;
+      margin-bottom: 14px;
+    }
+    .best-diff-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+    }
+    .best-diff-cell {
+      background: #1a1a1a;
+      border: 1px solid #252525;
+      border-radius: 10px;
+      padding: 12px 10px;
+      text-align: center;
+    }
+    .best-diff-name {
+      font-size: 0.68rem;
+      color: #555;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+    .best-diff-score {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: #e53935;
+      line-height: 1;
+    }
+    .best-diff-score span {
+      font-size: 0.72rem;
+      font-weight: 400;
+      color: #444;
+    }
+    .best-diff-wrong {
+      font-size: 0.68rem;
+      color: #444;
+      margin-top: 4px;
+    }
+
+    /* 단일 카드 그리드 (특성/도구) */
     .best-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-bottom: 36px;
+      gap: 10px;
     }
-
     .best-card {
       background: #141414;
       border: 1px solid #252525;
       border-radius: 16px;
-      padding: 20px 18px;
+      padding: 18px 16px;
     }
     .best-card-mode {
-      font-size: 0.72rem;
-      color: #555;
-      letter-spacing: 1px;
-      text-transform: uppercase;
+      font-size: 0.75rem;
+      color: #666;
       margin-bottom: 6px;
     }
     .best-card-score {
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: 900;
       color: #e53935;
       line-height: 1;
     }
     .best-card-score span {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       font-weight: 400;
       color: #444;
     }
     .best-card-label {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       color: #444;
       margin-top: 4px;
-    }
-    .best-card-diff {
-      display: inline-block;
-      margin-top: 8px;
-      font-size: 0.68rem;
-      color: #666;
-      background: #1e1e1e;
-      border: 1px solid #2a2a2a;
-      border-radius: 6px;
-      padding: 2px 7px;
     }
 
     /* ══ 최근 기록 ══ */
@@ -269,7 +306,7 @@
 
   <!-- 최고 기록 -->
   <div class="section-title">최고 기록</div>
-  <div class="best-grid" id="best-grid"></div>
+  <div class="best-section" id="best-section"></div>
 
   <!-- 최근 기록 -->
   <div class="section-title">최근 게임 기록</div>
@@ -312,39 +349,74 @@ function formatDate(ts) {
   return `${d.getFullYear()}.${mm}.${dd} ${hh}:${mi}`;
 }
 
+function bestDiffCell(records, diff) {
+  const filtered = records.filter(s => s.difficulty === diff);
+  if (!filtered.length) return `
+    <div class="best-diff-cell">
+      <div class="best-diff-name">${DIFF_LABEL[diff]}</div>
+      <div class="best-diff-score" style="color:#333">—</div>
+      <div class="best-diff-wrong">기록 없음</div>
+    </div>`;
+  const best = filtered.reduce((a, b) => a.correct >= b.correct ? a : b);
+  return `
+    <div class="best-diff-cell">
+      <div class="best-diff-name">${DIFF_LABEL[diff]}</div>
+      <div class="best-diff-score">${best.correct}<span> 정답</span></div>
+      <div class="best-diff-wrong">오답 ${best.wrong}</div>
+    </div>`;
+}
+
 function render() {
   const sessions = JSON.parse(localStorage.getItem('pq_sessions') || '[]');
 
   // ── 최고 기록 ──
-  const bestGrid = document.getElementById('best-grid');
-  if (sessions.length === 0) {
-    bestGrid.innerHTML = '';
-  } else {
-    bestGrid.innerHTML = MODES.map(m => {
-      const records = sessions.filter(s => s.mode === m.key);
-      if (!records.length) {
-        return `
-          <div class="best-card">
-            <div class="best-card-mode">${m.icon} ${m.label}</div>
-            <div class="best-card-score">—</div>
-            <div class="best-card-label">기록 없음</div>
-          </div>`;
-      }
-      const best = records.reduce((a, b) => (a.correct >= b.correct ? a : b));
-      const diffText = best.difficulty && best.difficulty !== '-' ? DIFF_LABEL[best.difficulty] || best.difficulty : '';
-      return `
-        <div class="best-card">
-          <div class="best-card-mode">${m.icon} ${m.label}</div>
-          <div class="best-card-score">${best.correct}<span> 정답</span></div>
-          <div class="best-card-label">오답 ${best.wrong}개</div>
-          ${diffText ? `<div class="best-card-diff">${diffText}</div>` : ''}
-        </div>`;
-    }).join('');
-  }
+  const bestSection = document.getElementById('best-section');
+
+  // 포켓몬/기술: 난이도별 카드
+  const diffModes = [
+    { key: 'pokemon', label: '포켓몬 맞추기', icon: '🎴' },
+    { key: 'move',    label: '기술 맞추기',   icon: '⚔️' },
+  ];
+  const wideCards = diffModes.map(m => {
+    const records = sessions.filter(s => s.mode === m.key);
+    return `
+      <div class="best-card-wide">
+        <div class="best-card-wide-title">${m.icon} ${m.label}</div>
+        <div class="best-diff-row">
+          ${bestDiffCell(records, 'easy')}
+          ${bestDiffCell(records, 'normal')}
+          ${bestDiffCell(records, 'hard')}
+        </div>
+      </div>`;
+  }).join('');
+
+  // 특성/도구: 단일 카드 그리드
+  const simpleModes = [
+    { key: 'ability', label: '특성 맞추기', icon: '✨' },
+    { key: 'item',    label: '도구 맞추기', icon: '🎒' },
+  ];
+  const simpleCards = simpleModes.map(m => {
+    const records = sessions.filter(s => s.mode === m.key);
+    if (!records.length) return `
+      <div class="best-card">
+        <div class="best-card-mode">${m.icon} ${m.label}</div>
+        <div class="best-card-score" style="color:#333">—</div>
+        <div class="best-card-label">기록 없음</div>
+      </div>`;
+    const best = records.reduce((a, b) => a.correct >= b.correct ? a : b);
+    return `
+      <div class="best-card">
+        <div class="best-card-mode">${m.icon} ${m.label}</div>
+        <div class="best-card-score">${best.correct}<span> 정답</span></div>
+        <div class="best-card-label">오답 ${best.wrong}개</div>
+      </div>`;
+  }).join('');
+
+  bestSection.innerHTML = wideCards + `<div class="best-grid">${simpleCards}</div>`;
 
   // ── 최근 기록 ──
   const historyList = document.getElementById('history-list');
-  if (sessions.length === 0) {
+  if (!sessions.length) {
     historyList.innerHTML = `
       <div class="empty-state">
         <span class="empty-icon">📭</span>
