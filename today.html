@@ -95,25 +95,12 @@
       background: #0d0d0d; border: 1px solid #1e1e1e;
       cursor: pointer; user-select: none;
     }
-    .video-stage video { width: 100%; display: none; border-radius: 18px; }
-    .video-stage video.playing { display: block; }
-    .video-placeholder {
-      width: 100%; aspect-ratio: 16/9;
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      gap: 12px;
-      background: radial-gradient(ellipse at center, #1a1a2e 0%, #0a0a0a 100%);
-      border-radius: 18px;
+    .video-stage video { width: 100%; display: block; border-radius: 18px; }
+    #frame-canvas {
+      width: 100%; display: block; border-radius: 18px;
+      position: absolute; inset: 0;
     }
-    .video-placeholder .pokeball-icon {
-      font-size: 5rem; line-height: 1;
-      animation: pbBounce 1.8s ease-in-out infinite;
-    }
-    @keyframes pbBounce {
-      0%, 100% { transform: translateY(0) rotate(0deg); }
-      40%       { transform: translateY(-14px) rotate(-12deg); }
-      60%       { transform: translateY(-10px) rotate(10deg); }
-    }
-    .video-stage.started .video-placeholder { display: none; }
+    .video-stage.started #frame-canvas { display: none; }
     .click-hint {
       position: absolute; inset: 0;
       display: flex; align-items: flex-end; justify-content: center;
@@ -379,11 +366,9 @@
 
   <!-- 비디오 스테이지 -->
   <div class="video-stage" id="video-stage" onclick="onStageClick()">
-    <div class="video-placeholder" id="video-placeholder">
-      <div class="pokeball-icon">⚾</div>
-    </div>
     <video id="pokeball-video" src="videos/pokeball-open.mp4"
-           muted playsinline preload="none" onended="onVideoEnded()"></video>
+           muted playsinline preload="metadata" onended="onVideoEnded()"></video>
+    <canvas id="frame-canvas"></canvas>
     <div class="video-fallback" id="video-fallback" style="display:none">⚾</div>
     <div class="click-hint" id="click-hint">
       <div class="click-hint-text">👆 눌러서 포켓몬 뽑기</div>
@@ -557,8 +542,25 @@ async function loadData() {
 
 /* ══ 비디오 ══ */
 const video = document.getElementById('pokeball-video');
+const frameCanvas = document.getElementById('frame-canvas');
+
+// 첫 프레임을 canvas에 캡처 → 클릭 전 정지 화면으로 사용
+function captureFirstFrame() {
+  video.currentTime = 0.01;
+}
+video.addEventListener('loadedmetadata', captureFirstFrame);
+video.addEventListener('seeked', function onSeeked() {
+  if (document.getElementById('video-stage').classList.contains('started')) return;
+  try {
+    frameCanvas.width  = video.videoWidth;
+    frameCanvas.height = video.videoHeight;
+    frameCanvas.getContext('2d').drawImage(video, 0, 0);
+  } catch(e) { /* cross-origin 등 실패 시 무시 */ }
+  video.removeEventListener('seeked', onSeeked);
+});
 video.addEventListener('error', () => {
   document.getElementById('video-fallback').style.display = '';
+  frameCanvas.style.display = 'none';
   video.style.display = 'none';
 });
 
@@ -567,7 +569,6 @@ function onStageClick() {
   if (revealed) return;
   document.getElementById('click-hint').classList.add('hidden');
   document.getElementById('video-stage').classList.add('started');
-  video.classList.add('playing');
   video.currentTime = 0;
   video.play().catch(() => revealPokemon());
 }
