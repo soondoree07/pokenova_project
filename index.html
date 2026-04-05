@@ -1002,6 +1002,8 @@
     <div class="divider"></div>
     <div id="st-info-panel" style="display:none;width:100%;flex-direction:column;gap:9px">
       <div class="stats-grid" id="st-stats-grid"></div>
+      <div id="st-type-row" style="display:none;gap:6px;flex-wrap:wrap;justify-content:center"></div>
+      <div id="st-multi-hint" style="display:none;font-size:0.75rem;color:#f5c518;font-weight:700;text-align:center">⚡ 복수 정답 문제입니다</div>
       <div id="st-aliases" style="display:none;width:100%;flex-direction:column;gap:4px">
         <div style="font-size:0.7rem;color:#444;letter-spacing:1px;margin-bottom:2px">동일 능력치 포켓몬</div>
         <div class="pokemon-chip-list" id="st-alias-list"></div>
@@ -2403,6 +2405,14 @@ document.getElementById('i-guess-input').addEventListener('keydown', e => {
 /* ═══════════════════════════════════════════════════════════
    탭5: 능력치 맞추기
 ═══════════════════════════════════════════════════════════ */
+const ST_TYPE_COLOR = {
+  노말:'#9099A1',불꽃:'#F08030',물:'#6890F0',전기:'#F8D030',
+  풀:'#78C850',얼음:'#98D8D8',격투:'#C03028',독:'#A040A0',
+  땅:'#E0C068',비행:'#A890F0',에스퍼:'#F85888',벌레:'#A8B820',
+  바위:'#B8A038',고스트:'#705898',드래곤:'#7038F8',악:'#705848',
+  강철:'#B8B8D0',페어리:'#EE99AC'
+};
+
 const ST_STAT_META = [
   { key: 'H', label: 'HP',     color: '#f08030' },
   { key: 'A', label: 'ATK',    color: '#e53935' },
@@ -2435,6 +2445,19 @@ function stUpdateScore() {
   document.getElementById('st-session-c').textContent = stSessionC;
 }
 
+function stShowType() {
+  const entries = stGroup.entries;
+  const pick = entries[Math.floor(Math.random() * entries.length)];
+  const pData = DB.pokemon.find(p => normalize(p.ko) === normalize(pick.ko));
+  const types = pData ? (pData.types || []) : [];
+  const typeRow = document.getElementById('st-type-row');
+  typeRow.innerHTML = types.map(t =>
+    `<span style="background:${ST_TYPE_COLOR[t]||'#666'};color:#fff;padding:3px 12px;border-radius:10px;font-size:0.82rem;font-weight:700">${t}</span>`
+  ).join('');
+  typeRow.style.display = types.length ? 'flex' : 'none';
+  document.getElementById('st-multi-hint').style.display = entries.length > 1 ? 'block' : 'none';
+}
+
 function stRenderStats(stats) {
   const grid = document.getElementById('st-stats-grid');
   grid.innerHTML = ST_STAT_META.map(m => {
@@ -2452,6 +2475,8 @@ function stLoadPokemon() {
   stRevealed = false; stWrongThisRound = false; stGroup = null;
   document.getElementById('st-info-panel').style.display = 'none';
   document.getElementById('st-aliases').style.display = 'none';
+  document.getElementById('st-type-row').style.display = 'none';
+  document.getElementById('st-multi-hint').style.display = 'none';
   document.getElementById('st-status').textContent = '능력치를 보고 포켓몬 이름을 맞춰보세요';
   document.getElementById('st-status').className = 'status';
   document.getElementById('st-guess-input').value = '';
@@ -2465,6 +2490,7 @@ function stLoadPokemon() {
 
   stGroup = DB.statsGroups[stGetNextIdx()];
   stRenderStats(stGroup.stats);
+  stShowType();
   document.getElementById('st-info-panel').style.display = 'flex';
   document.getElementById('st-guess-input').focus();
 }
