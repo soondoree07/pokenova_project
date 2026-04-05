@@ -6,6 +6,7 @@
     { "source": "/movedex", "destination": "/movedex.html" },
     { "source": "/itemdex", "destination": "/itemdex.html" },
     { "source": "/entry", "destination": "/entry.html" },
-    { "source": "/admin", "destination": "/admin.html" }
+    { "source": "/admin", "destination": "/admin.html" },
+    { "source": "/record", "destination": "/record.html" }
   ]
 }
