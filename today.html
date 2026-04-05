@@ -573,8 +573,9 @@ function fillCard(p) {
   document.getElementById('poke-types').innerHTML = (p.types||[]).map(t =>
     `<span class="type-badge" style="background:${TYPE_COLOR[t]||'#555'}">${t}</span>`
   ).join('');
-  // 특성
-  const ability = getRandomAbility(p.abilities);
+  // 특성 — pokemonDB에서 id로 직접 참조 (daily record에 abilities 없는 경우 대비)
+  const fullP = pokemonDB.find(x => x.id === p.id) || p;
+  const ability = getRandomAbility(fullP.abilities);
   document.getElementById('poke-ability').textContent = ability || '—';
   // 능력치
   renderStatsMini(statsMap[p.ko] || null, 'poke-stats');
