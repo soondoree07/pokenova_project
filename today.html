@@ -453,6 +453,7 @@ function onStageClick() {
 }
 
 function onVideoEnded() {
+  document.getElementById('video-stage').style.display = 'none';
   revealPokemon();
 }
 
@@ -557,6 +558,7 @@ function drawAgain() {
   const hint = document.getElementById('click-hint');
   hint.classList.remove('hidden');
   // 비디오 리셋
+  document.getElementById('video-stage').style.display = '';
   if (videoOk) {
     video.currentTime = 0;
     video.pause();
