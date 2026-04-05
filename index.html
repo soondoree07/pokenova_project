@@ -1280,7 +1280,8 @@ async function loadAllData() {
       } else {
         en = f.name_en;
       }
-      formEntries.push({ id: base.id, ko: displayKo, en, sprite: f.sprite, types: f.types || base.types, isForm: true, baseKo: base.ko });
+      const isStrictForm = f.type === 'mega' || f.type === 'gmax';
+      formEntries.push({ id: base.id, ko: displayKo, en, sprite: f.sprite, types: f.types || base.types, isForm: true, baseKo: isStrictForm ? '' : base.ko });
     });
   });
   DB.pokemon = p.concat(formEntries);
