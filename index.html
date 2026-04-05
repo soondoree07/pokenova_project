@@ -2427,7 +2427,8 @@ let stLives = 10, stSessionC = 0, stSessionW = 0;
 
 function stUpdateLives() {
   const el = document.getElementById('st-lives');
-  el.textContent = '❤️'.repeat(Math.max(0, stLives)) + '🖤'.repeat(Math.max(0, 10 - stLives));
+  const hearts = Array.from({length:10}, (_,i) => i < stLives ? '❤️' : '🖤');
+  el.innerHTML = hearts.slice(0,5).join('') + '<br>' + hearts.slice(5).join('');
 }
 
 function stUpdateScore() {
