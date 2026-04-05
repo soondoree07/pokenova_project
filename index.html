@@ -854,7 +854,7 @@
       </div>
     </div>
 
-    <div class="name-revealed" id="m-name-revealed"></div>
+    <div class="name-revealed" id="m-name-revealed" style="display:none"></div>
     <div class="status"        id="m-status" style="display:none"></div>
 
     <div class="input-row" id="m-input-row" style="display:none">
@@ -1707,6 +1707,7 @@ function mLoadMove() {
   document.getElementById('m-btn-next').style.display='none';
   document.getElementById('m-name-revealed').textContent='';
   document.getElementById('m-name-revealed').className='name-revealed';
+  document.getElementById('m-name-revealed').style.display='';
   document.getElementById('m-diff-badge').style.display='none';
   hideRankCard('m');
 
@@ -1816,6 +1817,7 @@ function mResetGame() {
   document.getElementById('m-status').style.display = 'none';
   document.getElementById('m-info-panel').style.display = 'none';
   document.getElementById('m-name-revealed').textContent = '';
+  document.getElementById('m-name-revealed').style.display = 'none';
   document.getElementById('m-btn-hint').style.display = 'none';
   document.getElementById('m-btn-skip').style.display = 'none';
   document.getElementById('m-btn-report').style.display = 'none';
