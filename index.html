@@ -1714,7 +1714,7 @@ function mGetNextId() {
 }
 
 let mDifficulty='easy', mMove=null, mKoName='', mEnName='', mRevealed=false, mGameStarted=false;
-let mLives = 3, mSessionC = 0, mSessionW = 0, mWrongThisRound = false;
+let mLives = 3, mSessionC = 0, mSessionW = 0, mWrongThisRound = false, mQuestionsPlayed = 0;
 let mScoreC=parseInt(localStorage.getItem('mc')||'0');
 let mScoreW=parseInt(localStorage.getItem('mw')||'0');
 let mScoreS=parseInt(localStorage.getItem('ms')||'0');
@@ -1737,7 +1737,7 @@ function mStartGame() {
   // hard 난이도에서만 Z기술 포함
   mCurrentMoves = mDifficulty === 'hard' ? [...DB.moves, ...DB.zmoves] : DB.moves;
   mPool = []; mPoolIdx = 0; // 풀 초기화
-  mSessionC = 0; mSessionW = 0;
+  mSessionC = 0; mSessionW = 0; mQuestionsPlayed = 0;
   ['easy','normal','hard'].forEach(x => document.getElementById('diff-'+x).classList.add('locked'));
   document.getElementById('m-btn-start').style.display   = 'none';
   document.getElementById('m-game-info').style.display   = 'flex';
@@ -1881,6 +1881,13 @@ function mReveal(isCorrect) {
     document.getElementById('m-status').textContent=`정답! 🎉 ${displayName}`;
     document.getElementById('m-status').className='status correct';
     launchConfetti();
+    if (mDifficulty === 'normal') {
+      mQuestionsPlayed++;
+      if (mQuestionsPlayed % 5 === 0) {
+        document.getElementById('m-btn-hint').disabled = false;
+        document.getElementById('m-status').textContent += '  (+힌트 1개 회복!)';
+      }
+    }
   } else {
     document.getElementById('m-status').textContent=`정답: ${displayName}`;
     document.getElementById('m-status').className='status hint';
@@ -1986,7 +1993,7 @@ function aGetNextId() {
 }
 
 let aAbility = null, aKoName = '', aEnName = '', aRevealed = false, aWrongThisRound = false;
-let aLives = 3, aHints = 3, aSessionC = 0, aSessionW = 0;
+let aLives = 3, aHints = 3, aSessionC = 0, aSessionW = 0, aQuestionsPlayed = 0;
 let aHintText = '';
 let aScoreC = parseInt(localStorage.getItem('ac')||'0');
 let aScoreW_total = parseInt(localStorage.getItem('aw')||'0');
@@ -2072,6 +2079,11 @@ function aReveal(isCorrect) {
     document.getElementById('a-status').textContent = `정답! 🎉 ${displayName}`;
     document.getElementById('a-status').className = 'status correct';
     launchConfetti();
+    aQuestionsPlayed++;
+    if (aQuestionsPlayed % 5 === 0) {
+      aHints++; aUpdateHintBadge();
+      document.getElementById('a-status').textContent += '  (+힌트 1개 회복!)';
+    }
   } else {
     document.getElementById('a-status').textContent = `정답: ${displayName}`;
     document.getElementById('a-status').className = 'status hint';
@@ -2090,7 +2102,7 @@ function aGameOver() {
 }
 
 function aStartGame() {
-  aSessionC = 0; aSessionW = 0; aLives = 3; aHints = 3;
+  aSessionC = 0; aSessionW = 0; aLives = 3; aHints = 3; aQuestionsPlayed = 0;
   aUpdateLives(); aUpdateHintBadge();
   document.getElementById('a-btn-start').style.display = 'none';
   document.getElementById('a-game-info').style.display = 'flex';
@@ -2120,7 +2132,7 @@ function aGoToStart() {
 }
 
 function aResetGame() {
-  aLives = 3; aHints = 3; aSessionC = 0; aSessionW = 0;
+  aLives = 3; aHints = 3; aSessionC = 0; aSessionW = 0; aQuestionsPlayed = 0;
   aUpdateLives();
   document.getElementById('a-gameover').style.display = 'none';
   document.getElementById('a-btn-start').style.display = '';
@@ -2197,7 +2209,7 @@ function iGetNextId() {
 }
 
 let iItem = null, iKoName = '', iEnName = '', iRevealed = false, iHintText = '', iWrongThisRound = false;
-let iLives = 3, iHints = 3, iSessionC = 0, iSessionW = 0;
+let iLives = 3, iHints = 3, iSessionC = 0, iSessionW = 0, iQuestionsPlayed = 0;
 
 function iUpdateHintBadge() {
   document.getElementById('i-hint-badge').textContent = `힌트 ${iHints}개`;
@@ -2311,6 +2323,11 @@ function iReveal(isCorrect) {
     document.getElementById('i-status').textContent = `정답! 🎉 ${displayName}`;
     document.getElementById('i-status').className = 'status correct';
     launchConfetti();
+    iQuestionsPlayed++;
+    if (iQuestionsPlayed % 5 === 0) {
+      iHints++; iUpdateHintBadge();
+      document.getElementById('i-status').textContent += '  (+힌트 1개 회복!)';
+    }
   } else {
     document.getElementById('i-status').textContent = `정답: ${displayName}`;
     document.getElementById('i-status').className = 'status hint';
@@ -2338,7 +2355,7 @@ function iGameOver() {
 }
 
 function iStartGame() {
-  iSessionC = 0; iSessionW = 0; iLives = 3; iHints = 3;
+  iSessionC = 0; iSessionW = 0; iLives = 3; iHints = 3; iQuestionsPlayed = 0;
   iUpdateLives(); iUpdateHintBadge();
   document.getElementById('i-btn-start').style.display = 'none';
   document.getElementById('i-game-info').style.display = 'flex';
@@ -2369,7 +2386,7 @@ function iGoToStart() {
 }
 
 function iResetGame() {
-  iLives = 3; iHints = 3; iSessionC = 0; iSessionW = 0;
+  iLives = 3; iHints = 3; iSessionC = 0; iSessionW = 0; iQuestionsPlayed = 0;
   iUpdateLives();
   document.getElementById('i-gameover').style.display = 'none';
   document.getElementById('i-btn-start').style.display = '';
@@ -2433,7 +2450,7 @@ function stGetNextIdx() {
 }
 
 let stGroup = null, stRevealed = false, stWrongThisRound = false;
-let stLives = 10, stSessionC = 0, stSessionW = 0;
+let stLives = 10, stSessionC = 0, stSessionW = 0, stQuestionsPlayed = 0;
 
 function stUpdateLives() {
   const el = document.getElementById('st-lives');
@@ -2545,6 +2562,11 @@ function stReveal(isCorrect) {
     document.getElementById('st-status').textContent = `정답! 🎉 ${primary}`;
     document.getElementById('st-status').className = 'status correct';
     launchConfetti();
+    stQuestionsPlayed++;
+    if (stQuestionsPlayed % 5 === 0 && stLives < 10) {
+      stLives++; stUpdateLives();
+      document.getElementById('st-status').textContent += '  (+목숨 1개 회복!)';
+    }
   } else {
     document.getElementById('st-status').textContent = `정답: ${primary}`;
     document.getElementById('st-status').className = 'status hint';
@@ -2563,7 +2585,7 @@ function stGameOver() {
 }
 
 function stStartGame() {
-  stSessionC = 0; stSessionW = 0; stLives = 10;
+  stSessionC = 0; stSessionW = 0; stLives = 10; stQuestionsPlayed = 0;
   stPool = []; stPoolIdx = 0;
   stUpdateLives(); stUpdateScore();
   document.getElementById('st-btn-start').style.display = 'none';
@@ -2590,7 +2612,7 @@ function stGoToStart() {
 }
 
 function stResetGame() {
-  stLives = 10; stSessionC = 0; stSessionW = 0;
+  stLives = 10; stSessionC = 0; stSessionW = 0; stQuestionsPlayed = 0;
   document.getElementById('st-gameover').style.display = 'none';
   document.getElementById('st-btn-start').style.display = '';
   document.getElementById('st-game-info').style.display = 'none';
