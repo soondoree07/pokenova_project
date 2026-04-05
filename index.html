@@ -432,12 +432,12 @@
       flex: 1; padding: 11px 6px; border-radius: 12px;
       border: 1.5px solid #252525; background: #0f0f0f; color: #555;
       font-size: 0.85rem; font-weight: 700; cursor: pointer; transition: all .18s; text-align: center;
-      min-height: 44px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      min-height: 44px; display: flex; flex-direction: column; align-items: center; justify-content: center;
     }
     .diff-btn:hover { border-color: #e53935; color: #e53935; }
     .diff-btn.selected { background: #e53935; color: #fff; border-color: #e53935; }
-    .diff-btn .diff-label { font-size: 0.95rem; min-height: 1.3em; }
-    .diff-btn .diff-sub   { font-size: 0.67rem; font-weight: 400; margin-top: 3px; opacity: .8; }
+    .diff-btn .diff-label { font-size: 0.95rem; }
+    .diff-btn .diff-sub   { font-size: 0.67rem; font-weight: 400; margin-top: 3px; opacity: .8; min-height: 2.2em; display: flex; align-items: flex-start; text-align: center; }
 
     .move-info-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 9px; width: 100%; }
     .move-info-card {
@@ -1061,22 +1061,36 @@
 </div>
 
 <script>
-function toggleMobileNav() {
-  const nav = document.querySelector('.site-nav');
-  const btn = document.getElementById('hamburger-btn');
-  const isOpen = nav.classList.toggle('open');
-  btn.textContent = isOpen ? '✕' : '☰';
+const _nav = document.querySelector('.site-nav');
+const _hbBtn = document.getElementById('hamburger-btn');
+
+function applyNavLayout() {
+  if (window.innerWidth <= 768) {
+    _hbBtn.style.display = 'flex';
+    if (!_nav.classList.contains('open')) _nav.style.display = 'none';
+  } else {
+    _hbBtn.style.display = 'none';
+    _nav.style.display = 'flex';
+    _nav.classList.remove('open');
+  }
 }
+
+function toggleMobileNav() {
+  const isOpen = _nav.classList.toggle('open');
+  _nav.style.display = isOpen ? 'flex' : 'none';
+  _hbBtn.textContent = isOpen ? '✕' : '☰';
+}
+
 document.addEventListener('click', function(e) {
-  if (!e.target.closest('.site-header-bar')) {
-    const nav = document.querySelector('.site-nav');
-    const btn = document.getElementById('hamburger-btn');
-    if (nav && nav.classList.contains('open')) {
-      nav.classList.remove('open');
-      if (btn) btn.textContent = '☰';
-    }
+  if (!e.target.closest('.site-header-bar') && _nav.classList.contains('open')) {
+    _nav.classList.remove('open');
+    _nav.style.display = 'none';
+    _hbBtn.textContent = '☰';
   }
 });
+
+window.addEventListener('resize', applyNavLayout);
+applyNavLayout();
 
 /* Firestore db 인스턴스 (firebase-module.js에서 window._db로 설정됨) */
 let db = null;
