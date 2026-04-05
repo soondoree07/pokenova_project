@@ -743,6 +743,7 @@
     <div class="b-game-info" id="b-game-info" style="display:none">
       <div class="b-lives" id="b-lives">❤️❤️❤️</div>
       <div class="b-hint-badge" id="b-hint-badge">힌트 ∞</div>
+      <span style="font-size:0.8rem;color:#aaa;font-weight:700">✅ <span id="b-session-c">0</span></span>
       <button class="btn-ghost" style="padding:4px 10px;font-size:0.75rem;width:auto" onclick="bGoToStart()">↩ 처음으로</button>
     </div>
 
@@ -806,6 +807,7 @@
     <!-- 목숨 & 처음으로 (게임 중) -->
     <div class="b-game-info" id="m-game-info" style="display:none">
       <div class="b-lives" id="m-lives">❤️❤️❤️</div>
+      <span style="font-size:0.8rem;color:#aaa;font-weight:700">✅ <span id="m-session-c">0</span></span>
       <button class="btn-ghost" style="padding:4px 10px;font-size:0.75rem;width:auto" onclick="mGoToStart()">↩ 처음으로</button>
     </div>
 
@@ -882,6 +884,7 @@
     <div class="b-game-info" id="a-game-info" style="display:none">
       <div class="b-lives" id="a-lives">❤️❤️❤️</div>
       <div class="b-hint-badge" id="a-hint-badge">힌트 3개</div>
+      <span style="font-size:0.8rem;color:#aaa;font-weight:700">✅ <span id="a-session-c">0</span></span>
       <button class="btn-ghost" style="padding:4px 10px;font-size:0.75rem;width:auto" onclick="aGoToStart()">↩ 처음으로</button>
     </div>
     <div class="divider"></div>
@@ -921,6 +924,7 @@
     <div class="b-game-info" id="i-game-info" style="display:none">
       <div class="b-lives" id="i-lives">❤️❤️❤️</div>
       <div class="b-hint-badge" id="i-hint-badge">힌트 3개</div>
+      <span style="font-size:0.8rem;color:#aaa;font-weight:700">✅ <span id="i-session-c">0</span></span>
       <button class="btn-ghost" style="padding:4px 10px;font-size:0.75rem;width:auto" onclick="iGoToStart()">↩ 처음으로</button>
     </div>
     <div class="divider"></div>
@@ -1238,6 +1242,7 @@ let bScoreS = parseInt(localStorage.getItem('bs')||'0');
 
 function bUpdateScore() {
   localStorage.setItem('bs',bScoreS);
+  document.getElementById('b-session-c').textContent = bSessionC;
 }
 bUpdateScore();
 
@@ -1585,6 +1590,7 @@ let mScoreS=parseInt(localStorage.getItem('ms')||'0');
 
 function mUpdateScore() {
   localStorage.setItem('ms',mScoreS);
+  document.getElementById('m-session-c').textContent = mSessionC;
 }
 mUpdateScore();
 
@@ -1854,6 +1860,7 @@ let aScoreS = parseInt(localStorage.getItem('as')||'0');
 
 function aUpdateScore() {
   localStorage.setItem('as', aScoreS);
+  document.getElementById('a-session-c').textContent = aSessionC;
 }
 aUpdateScore();
 
@@ -2058,6 +2065,7 @@ let iScoreS = parseInt(localStorage.getItem('is')||'0');
 
 function iUpdateScore() {
   localStorage.setItem('is', iScoreS);
+  document.getElementById('i-session-c').textContent = iSessionC;
 }
 iUpdateScore();
 
