@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://soondoree07.github.io/pokenova_project/</loc>
+    <loc>https://pokenova.vercel.app/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://soondoree07.github.io/pokenova_project/pokedex.html</loc>
+    <loc>https://pokenova.vercel.app/pokedex</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://soondoree07.github.io/pokenova_project/movedex.html</loc>
+    <loc>https://pokenova.vercel.app/movedex</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://soondoree07.github.io/pokenova_project/entry.html</loc>
+    <loc>https://pokenova.vercel.app/entry</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://soondoree07.github.io/pokenova_project/itemdex.html</loc>
+    <loc>https://pokenova.vercel.app/itemdex</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
