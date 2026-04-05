@@ -143,12 +143,24 @@
     .pokemon-name-en { font-size: 0.8rem; color: #555; margin-top: -6px; }
     .types-wrap { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
     .type-badge { padding: 4px 14px; border-radius: 20px; font-size: 0.78rem; font-weight: 700; color: #fff; letter-spacing: 0.5px; }
-    .flavor-box {
-      background: #0d0d0d; border: 1px solid #1e1e1e; border-radius: 12px;
-      padding: 14px 16px; font-size: 0.88rem; line-height: 1.8;
-      color: #bbb; text-align: center; width: 100%; min-height: 52px;
+    /* 특성 */
+    .ability-row {
+      display: flex; align-items: center; gap: 8px;
+      background: #0d0d0d; border: 1px solid #1e1e1e;
+      border-radius: 10px; padding: 9px 14px; width: 100%;
     }
-    .flavor-loading { color: #444; font-size: 0.8rem; }
+    .ability-label { font-size: 0.68rem; color: #555; letter-spacing: 1px; white-space: nowrap; }
+    .ability-name { font-size: 0.92rem; font-weight: 700; color: #f0f0f0; }
+    /* 능력치 미니 그리드 */
+    .stats-mini { display: grid; grid-template-columns: repeat(6,1fr); gap: 6px; width: 100%; }
+    .stat-mini {
+      background: #0d0d0d; border: 1px solid #1e1e1e; border-radius: 8px;
+      padding: 7px 2px; display: flex; flex-direction: column; align-items: center; gap: 3px;
+    }
+    .stat-mini-label { font-size: 0.58rem; color: #555; letter-spacing: .5px; font-weight: 700; text-transform: uppercase; }
+    .stat-mini-val { font-size: 1.05rem; font-weight: 900; line-height: 1; }
+    .stat-mini-bar { width: 80%; height: 3px; background: #252525; border-radius: 2px; overflow: hidden; }
+    .stat-mini-fill { height: 100%; border-radius: 2px; }
 
     /* 액션 버튼 */
     .action-btns { display: flex; gap: 10px; width: 100%; }
@@ -312,10 +324,10 @@
       border-radius: 20px; padding: 4px 14px;
     }
     .detail-caught span { color: #888; }
-    .detail-flavor {
-      background: #0d0d0d; border: 1px solid #1e1e1e; border-radius: 12px;
-      padding: 12px 14px; font-size: 0.85rem; line-height: 1.8;
-      color: #bbb; text-align: center; width: 100%;
+    .detail-ability-row {
+      display: flex; align-items: center; gap: 8px;
+      background: #0d0d0d; border: 1px solid #1e1e1e;
+      border-radius: 10px; padding: 8px 12px; width: 100%;
     }
   </style>
 </head>
@@ -364,7 +376,11 @@
     <div class="pokemon-name" id="poke-name">—</div>
     <div class="pokemon-name-en" id="poke-name-en">—</div>
     <div class="types-wrap" id="poke-types"></div>
-    <div class="flavor-box" id="poke-flavor"><span class="flavor-loading">설명을 불러오는 중...</span></div>
+    <div class="ability-row" id="poke-ability-row">
+      <span class="ability-label">특성</span>
+      <span class="ability-name" id="poke-ability">—</span>
+    </div>
+    <div class="stats-mini" id="poke-stats"></div>
     <div class="action-btns" id="action-btns">
       <button class="btn-keep"    onclick="keepPokemon()">🎒 보관하기</button>
       <button class="btn-release" onclick="releasePokemon()">🌿 놓아주기</button>
@@ -414,7 +430,11 @@
     <div class="detail-name-en" id="d-name-en"></div>
     <div class="types-wrap" id="d-types"></div>
     <div class="detail-caught">📅 <span id="d-date"></span> 에 만남</div>
-    <div class="detail-flavor" id="d-flavor">불러오는 중...</div>
+    <div class="detail-ability-row">
+      <span class="ability-label">특성</span>
+      <span class="ability-name" id="d-ability">—</span>
+    </div>
+    <div class="stats-mini" id="d-stats"></div>
   </div>
 </div>
 
@@ -442,8 +462,39 @@ const TYPE_COLOR = {
 
 /* ══ 상태 ══ */
 let pokemonDB = [];
+let statsMap = {};  // ko → stats
 let currentPokemon = null;
 let revealed = false;
+
+const STAT_META = [
+  { key:'H', label:'HP',  color:'#f08030' },
+  { key:'A', label:'ATK', color:'#e53935' },
+  { key:'B', label:'DEF', color:'#f5c518' },
+  { key:'C', label:'S.ATK',color:'#7c4dff'},
+  { key:'D', label:'S.DEF',color:'#00acc1'},
+  { key:'S', label:'SPD', color:'#43a047' },
+];
+
+function renderStatsMini(stats, containerId) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  if (!stats) { el.innerHTML = ''; return; }
+  el.innerHTML = STAT_META.map(m => {
+    const val = stats[m.key] || 0;
+    const pct = Math.round(val / 255 * 100);
+    return `<div class="stat-mini">
+      <div class="stat-mini-label">${m.label}</div>
+      <div class="stat-mini-val" style="color:${m.color}">${val}</div>
+      <div class="stat-mini-bar"><div class="stat-mini-fill" style="width:${pct}%;background:${m.color}"></div></div>
+    </div>`;
+  }).join('');
+}
+
+function getRandomAbility(abilities) {
+  if (!abilities || !abilities.length) return null;
+  const names = abilities.map(a => typeof a === 'string' ? a : (a.ko || '')).filter(Boolean);
+  return names.length ? names[Math.floor(Math.random() * names.length)] : null;
+}
 
 /* ══ 날짜 유틸 ══ */
 function todayStr() {
@@ -474,8 +525,12 @@ function getCollection() {
 /* ══ 데이터 로드 ══ */
 async function loadData() {
   try {
-    const raw = await fetch('data/quiz_pokemon.json').then(r => r.json());
+    const [raw, statsRaw] = await Promise.all([
+      fetch('data/quiz_pokemon.json').then(r => r.json()),
+      fetch('data/pokemon_stats.json').then(r => r.json()),
+    ]);
     pokemonDB = raw.filter(p => p.id && p.id <= 1025);
+    statsRaw.forEach(p => { if (p.ko) statsMap[p.ko] = p.stats; });
   } catch(e) { console.warn('데이터 로드 실패', e); }
 }
 
@@ -509,7 +564,7 @@ function pickRandom() {
 }
 
 /* ══ 포켓몬 카드 채우기 ══ */
-function fillCard(p, flavor) {
+function fillCard(p) {
   document.getElementById('poke-number').textContent = `#${String(p.id).padStart(4,'0')}`;
   document.getElementById('poke-sprite').src = p.sprite;
   document.getElementById('poke-sprite').alt = p.ko;
@@ -518,48 +573,27 @@ function fillCard(p, flavor) {
   document.getElementById('poke-types').innerHTML = (p.types||[]).map(t =>
     `<span class="type-badge" style="background:${TYPE_COLOR[t]||'#555'}">${t}</span>`
   ).join('');
-  const flavorEl = document.getElementById('poke-flavor');
-  if (flavor) {
-    flavorEl.textContent = flavor;
-  } else {
-    flavorEl.innerHTML = '<span class="flavor-loading">설명을 불러오는 중...</span>';
-  }
+  // 특성
+  const ability = getRandomAbility(p.abilities);
+  document.getElementById('poke-ability').textContent = ability || '—';
+  // 능력치
+  renderStatsMini(statsMap[p.ko] || null, 'poke-stats');
   document.getElementById('pokemon-card').classList.add('visible');
 }
 
 /* ══ 포켓몬 공개 ══ */
-async function revealPokemon() {
+function revealPokemon() {
   revealed = true;
   const p = pickRandom();
   if (!p) return;
   currentPokemon = p;
 
-  // 오늘 기록 저장 (action 미정)
-  const rec = { date: todayStr(), id: p.id, ko: p.ko, en: p.en, sprite: p.sprite, types: p.types, flavor: null, action: null };
+  const rec = { date: todayStr(), id: p.id, ko: p.ko, en: p.en, sprite: p.sprite, types: p.types, abilities: p.abilities, action: null };
   saveDailyRecord(rec);
 
-  fillCard(p, null);
+  fillCard(p);
   document.getElementById('action-btns').style.display = 'flex';
   document.getElementById('daily-done-msg').style.display = 'none';
-
-  // 플레이버 텍스트 로드 후 기록에도 저장
-  const flavor = await fetchFlavor(p.id);
-  document.getElementById('poke-flavor').textContent = flavor;
-  rec.flavor = flavor;
-  saveDailyRecord(rec);
-}
-
-/* ══ PokeAPI 플레이버 텍스트 ══ */
-async function fetchFlavor(id) {
-  try {
-    const res = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}/`);
-    const data = await res.json();
-    const entries = data.flavor_text_entries || [];
-    const ko = entries.find(e => e.language.name === 'ko');
-    const en = entries.find(e => e.language.name === 'en');
-    const t = ko || en;
-    return t ? t.flavor_text.replace(/\f/g,' ').replace(/\u00ad/g,'') : '설명 정보가 없어요.';
-  } catch(e) { return '설명을 불러오지 못했어요.'; }
 }
 
 /* ══ 보관하기 ══ */
@@ -575,7 +609,6 @@ function keepPokemon() {
 
 function doKeep(releaseIdx = -1) {
   const p = currentPokemon;
-  const flavor = document.getElementById('poke-flavor').textContent;
   const coll = getCollection();
   const dateStr = todayStr();
   if (releaseIdx >= 0) {
@@ -584,7 +617,7 @@ function doKeep(releaseIdx = -1) {
   } else {
     showToast(`🎉 ${p.ko}을(를) 보관했어요!`);
   }
-  coll.unshift({ id: p.id, ko: p.ko, en: p.en, sprite: p.sprite, types: p.types, caughtAt: dateStr, flavor });
+  coll.unshift({ id: p.id, ko: p.ko, en: p.en, sprite: p.sprite, types: p.types, abilities: p.abilities, caughtAt: dateStr });
   localStorage.setItem('pokenova_collection', JSON.stringify(coll));
   const rec = getDailyRecord();
   if (rec) { rec.action = 'keep'; saveDailyRecord(rec); }
@@ -717,18 +750,8 @@ function openDetail(idx) {
     `<span class="type-badge" style="background:${TYPE_COLOR[t]||'#555'}">${t}</span>`
   ).join('');
   document.getElementById('d-date').textContent = displayDate(p.caughtAt);
-  const flavorEl = document.getElementById('d-flavor');
-  if (p.flavor) {
-    flavorEl.textContent = p.flavor;
-  } else {
-    flavorEl.textContent = '불러오는 중...';
-    fetchFlavor(p.id).then(f => {
-      flavorEl.textContent = f;
-      // 캐시 저장
-      const c = getCollection();
-      if (c[idx]) { c[idx].flavor = f; localStorage.setItem('pokenova_collection', JSON.stringify(c)); }
-    });
-  }
+  document.getElementById('d-ability').textContent = getRandomAbility(p.abilities) || '—';
+  renderStatsMini(statsMap[p.ko] || null, 'd-stats');
   document.getElementById('detail-overlay').classList.add('open');
 }
 
@@ -750,16 +773,9 @@ function onOverlayClick(e) {
   if (rec && rec.date === today) {
     // 오늘 이미 뽑음
     document.getElementById('video-stage').style.display = 'none';
-    currentPokemon = { id: rec.id, ko: rec.ko, en: rec.en, sprite: rec.sprite, types: rec.types };
+    currentPokemon = { id: rec.id, ko: rec.ko, en: rec.en, sprite: rec.sprite, types: rec.types, abilities: rec.abilities };
     revealed = true;
-    fillCard(currentPokemon, rec.flavor || null);
-
-    if (!rec.flavor) {
-      fetchFlavor(rec.id).then(f => {
-        document.getElementById('poke-flavor').textContent = f;
-        rec.flavor = f; saveDailyRecord(rec);
-      });
-    }
+    fillCard(currentPokemon);
 
     if (rec.action) {
       // 이미 보관/놓아줌
