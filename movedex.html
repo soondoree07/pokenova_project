@@ -138,6 +138,13 @@ h1{font-size:1.3rem;font-weight:700;margin-bottom:18px;color:#fff}
 .site-footer a:hover{color:#e53935}
 .site-footer .footer-name{color:#888;font-weight:600}
 
+/* ── 오류 신고 ── */
+.btn-report{width:100%;background:transparent;color:#555;border:1.5px solid #252525;padding:9px;font-size:0.78rem;border-radius:10px;cursor:pointer;transition:border-color .15s,color .15s;margin-top:16px}
+.btn-report:hover{border-color:#ff9800;color:#ff9800}
+.report-type-btn{padding:8px 14px;border-radius:8px;border:1.5px solid #252525;background:transparent;color:#888;font-size:0.82rem;cursor:pointer;transition:all .15s}
+.report-type-btn:hover{border-color:#ff9800;color:#ff9800}
+.report-type-btn.selected{border-color:#ff9800;background:rgba(255,152,0,.1);color:#ff9800}
+
 /* ── 모달 ── */
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:200;align-items:flex-start;justify-content:center;padding:40px 16px;overflow-y:auto}
 .modal-overlay.open{display:flex}
@@ -255,6 +262,29 @@ h1{font-size:1.3rem;font-weight:700;margin-bottom:18px;color:#fff}
   <div class="modal-box" id="modal-box">
     <button class="modal-close" onclick="closeModalDirect()">✕</button>
     <div id="modal-content"></div>
+    <button class="btn-report" id="modal-report-btn" style="display:none" onclick="openReport()">⚠️ 오류 신고</button>
+  </div>
+</div>
+
+<!-- 오류 신고 모달 -->
+<div id="report-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:1000;align-items:center;justify-content:center;backdrop-filter:blur(6px)" onclick="if(event.target===this)closeReportModal()">
+  <div style="background:#141414;border:1px solid #252525;border-radius:20px;padding:32px;width:90%;max-width:400px;display:flex;flex-direction:column;gap:16px">
+    <div style="font-size:1.1rem;font-weight:900;color:#ff9800">⚠️ 오류 신고</div>
+    <div style="font-size:0.82rem;color:#555;line-height:1.5" id="report-context-label"></div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div style="font-size:0.7rem;color:#555;letter-spacing:1px">신고 유형</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="report-type-btn" onclick="selectReportType(this,'정보 오류')">정보 오류</button>
+        <button class="report-type-btn" onclick="selectReportType(this,'이미지 오류')">이미지 오류</button>
+        <button class="report-type-btn" onclick="selectReportType(this,'기타')">기타</button>
+      </div>
+      <div style="font-size:0.7rem;color:#555;letter-spacing:1px;margin-top:2px">메모 (선택)</div>
+      <textarea id="report-memo" rows="3" placeholder="자세한 내용을 입력해주세요..." style="background:#0f0f0f;border:1.5px solid #252525;border-radius:10px;color:#f0f0f0;font-size:0.88rem;padding:10px 14px;resize:none;outline:none;width:100%;font-family:inherit"></textarea>
+    </div>
+    <div style="display:flex;gap:8px">
+      <button onclick="closeReportModal()" style="flex:1;padding:11px;border-radius:12px;border:1.5px solid #252525;background:transparent;color:#888;cursor:pointer;font-family:inherit">취소</button>
+      <button id="report-submit-btn" onclick="submitReport()" disabled style="flex:1;padding:11px;border-radius:12px;border:none;background:#ff9800;color:#fff;font-weight:700;cursor:pointer;opacity:0.5;font-family:inherit">신고하기</button>
+    </div>
   </div>
 </div>
 
@@ -554,13 +584,51 @@ function openModal(m) {
     ${learnerSection}
   `;
 
+  _reportCtx = { mode: 'movedex', label: '기술 도감', ko: m.ko, en: m.en };
+  document.getElementById('modal-report-btn').style.display = '';
   document.getElementById('modal-overlay').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
 
 function closeModalDirect() {
+  document.getElementById('modal-report-btn').style.display = 'none';
   document.getElementById('modal-overlay').classList.remove('open');
   document.body.style.overflow = '';
+}
+
+/* ── 오류 신고 ── */
+let _reportCtx = {}, _reportType = '';
+function openReport() {
+  document.getElementById('report-context-label').textContent =
+    `${_reportCtx.ko}${_reportCtx.en ? ' / ' + _reportCtx.en : ''} — ${_reportCtx.label}`;
+  _reportType = '';
+  document.querySelectorAll('.report-type-btn').forEach(b => b.classList.remove('selected'));
+  document.getElementById('report-memo').value = '';
+  document.getElementById('report-submit-btn').disabled = true;
+  document.getElementById('report-submit-btn').style.opacity = '0.5';
+  document.getElementById('report-modal').style.display = 'flex';
+}
+function closeReportModal() { document.getElementById('report-modal').style.display = 'none'; }
+function selectReportType(btn, type) {
+  _reportType = type;
+  document.querySelectorAll('.report-type-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  document.getElementById('report-submit-btn').disabled = false;
+  document.getElementById('report-submit-btn').style.opacity = '1';
+}
+function submitReport() {
+  const report = {
+    id: Date.now().toString(36) + Math.random().toString(36).slice(2),
+    mode: _reportCtx.mode, modeLabel: _reportCtx.label,
+    ko: _reportCtx.ko, en: _reportCtx.en,
+    type: _reportType, memo: document.getElementById('report-memo').value.trim(),
+    ts: Date.now(), resolved: false
+  };
+  const arr = JSON.parse(localStorage.getItem('pq_reports') || '[]');
+  arr.unshift(report);
+  if (arr.length > 500) arr.length = 500;
+  localStorage.setItem('pq_reports', JSON.stringify(arr));
+  closeReportModal();
 }
 
 function closeModal(e) {
