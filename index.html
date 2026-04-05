@@ -1989,7 +1989,17 @@ function aResetGame() {
   aLives = 3; aHints = 3; aSessionC = 0; aSessionW = 0;
   aUpdateLives();
   document.getElementById('a-gameover').style.display = 'none';
-  aLoadAbility();
+  document.getElementById('a-btn-start').style.display = '';
+  document.getElementById('a-game-info').style.display = 'none';
+  document.getElementById('a-loading').style.display = 'none';
+  document.getElementById('a-info-panel').style.display = 'none';
+  document.getElementById('a-status').style.display = 'none';
+  document.getElementById('a-input-row').style.display = 'none';
+  document.getElementById('a-name-revealed').style.display = 'none';
+  document.getElementById('a-btn-hint').style.display = 'none';
+  document.getElementById('a-btn-skip').style.display = 'none';
+  document.getElementById('a-btn-report').style.display = 'none';
+  document.getElementById('a-btn-next').style.display = 'none';
 }
 
 function aNextAbility() { aLoadAbility(); }
@@ -2228,7 +2238,18 @@ function iResetGame() {
   iLives = 3; iHints = 3; iSessionC = 0; iSessionW = 0;
   iUpdateLives();
   document.getElementById('i-gameover').style.display = 'none';
-  iLoadItem();
+  document.getElementById('i-btn-start').style.display = '';
+  document.getElementById('i-game-info').style.display = 'none';
+  document.getElementById('i-loading').style.display = 'none';
+  document.getElementById('i-info-panel').style.display = 'none';
+  document.getElementById('i-sprite-box').style.display = 'none';
+  document.getElementById('i-status').style.display = 'none';
+  document.getElementById('i-input-row').style.display = 'none';
+  document.getElementById('i-name-revealed').style.display = 'none';
+  document.getElementById('i-btn-hint').style.display = 'none';
+  document.getElementById('i-btn-skip').style.display = 'none';
+  document.getElementById('i-btn-report').style.display = 'none';
+  document.getElementById('i-btn-next').style.display = 'none';
 }
 
 function iNextItem() { iLoadItem(); }
