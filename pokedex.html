@@ -1245,7 +1245,7 @@ function openModal(p) {
       const name   = typeof a === 'string' ? a : (a.ko || a.en || '');
       const en     = typeof a === 'object' ? (a.en || '') : '';
       const hidden = typeof a === 'object' ? a.hidden : false;
-      const koDesc = ABILITY_DESC[name] || '';
+      const koDesc = (typeof a === 'object' && a.desc) ? a.desc : (ABILITY_DESC[name] || '');
       const subLine = koDesc
         ? `<div class="ability-en">${koDesc}</div>`
         : (en ? `<div class="ability-en">${en}</div>` : '');
