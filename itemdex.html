@@ -252,6 +252,28 @@ const CAT_KO = {
   'evolution':        '진화 아이템',
 };
 
+// 메가스톤 게임 등장 순서 (en 기준)
+// 1 = XY (2013), 2 = ORAS (2014), 3 = 커스텀/비공식
+const MEGA_GEN = {
+  // XY
+  'venusaurite':1,'charizardite x':1,'charizardite y':1,'blastoisinite':1,
+  'alakazite':1,'gengarite':1,'kangaskhanite':1,'pinsirite':1,
+  'gyaradosite':1,'aerodactylite':1,'mewtwonite x':1,'mewtwonite y':1,
+  'ampharosite':1,'scizorite':1,'heracronite':1,'banettite':1,
+  'tyranitarite':1,'absolite':1,'mawilite':1,'medichamite':1,
+  'manectite':1,'houndoominite':1,'abomasite':1,'garchompite':1,'lucarionite':1,
+  // ORAS
+  'sceptilite':2,'swampertite':2,'blazikenite':2,'sablenite':2,'altarianite':2,
+  'galladite':2,'audinite':2,'metagrossite':2,'sharpedonite':2,'slowbronite':2,
+  'steelixite':2,'pidgeotite':2,'glalitite':2,'diancite':2,'cameruptite':2,
+  'lopunnite':2,'salamencite':2,'beedrillite':2,'latiasite':2,'latiosite':2,
+  'aggronite':2,'blue orb':2,'red orb':2,
+};
+
+function megaGenOrder(item) {
+  return MEGA_GEN[item.en] || 3;
+}
+
 async function init() {
   try {
     const raw = await fetch('data/quiz_items.json').then(r => r.json());
@@ -295,6 +317,15 @@ function render() {
       (it.ko || '').toLowerCase().includes(q) ||
       (it.en || '').toLowerCase().includes(q)
     );
+  }
+
+  // 메가스톤 탭: 게임 등장 순서 → 가나다 순
+  if (activeTab === '메가스톤') {
+    list = [...list].sort((a, b) => {
+      const ga = megaGenOrder(a), gb = megaGenOrder(b);
+      if (ga !== gb) return ga - gb;
+      return (a.ko || '').localeCompare(b.ko || '', 'ko');
+    });
   }
 
   document.getElementById('count-label').textContent = `${list.length}개`;
