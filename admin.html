@@ -532,7 +532,8 @@ function doLogout() {
 if (sessionStorage.getItem('admin_auth') === '1') {
   document.getElementById('screen-login').style.display = 'none';
   document.getElementById('screen-dashboard').style.display = 'block';
-  setTimeout(loadDashboard, 0);
+  // Firebase 모듈 초기화 완료 후 loadDashboard 호출됨 (아래 module 스크립트에서)
+  window._pendingDashboardLoad = true;
 }
 
 /* ══ 시간 포맷 ══ */
@@ -931,6 +932,12 @@ async function clearAllData() {
     banner.style.borderColor = 'rgba(76,175,80,0.4)';
     banner.querySelector('span:last-child').textContent = 'Firebase 연결됨 — 전체 유저 데이터를 표시합니다.';
     banner.querySelector('.firebase-banner-icon').textContent = '✅';
+  }
+
+  // 세션 유지로 자동 로그인된 경우 Firebase 초기화 완료 후 대시보드 로드
+  if (window._pendingDashboardLoad) {
+    window._pendingDashboardLoad = false;
+    loadDashboard();
   }
 </script>
 </body>
