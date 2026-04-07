@@ -1218,39 +1218,16 @@ const DB = { pokemon: [], moves: [], abilities: [], items: [], statsGroups: [] }
 function hasKorean(str) { return /[\uAC00-\uD7A3]/.test(str); }
 
 async function loadAllData() {
-  const [p, m, a, i, zm, statsRaw] = await Promise.all([
+  const [p, m, a, i, zm, statsRaw, canonicalMegaArr] = await Promise.all([
     fetch('data/quiz_pokemon.json').then(r => r.json()),
     fetch('data/quiz_moves.json').then(r => r.json()),
     fetch('data/quiz_abilities.json').then(r => r.json()),
     fetch('data/quiz_items.json').then(r => r.json()),
     fetch('data/quiz_zmoves.json').then(r => r.json()),
     fetch('data/pokemon_stats.json').then(r => r.json()),
+    fetch('data/canonical_mega.json').then(r => r.json()),
   ]);
-  // 실제 게임에 존재하는 메가진화 목록 (PokeAPI에 가짜 메가가 다수 포함되어 있어 화이트리스트 사용)
-  const CANONICAL_MEGA = new Set([
-    'venusaur-mega','charizard-mega-x','charizard-mega-y','blastoise-mega',
-    'beedrill-mega','pidgeot-mega','alakazam-mega','slowbro-mega','gengar-mega',
-    'kangaskhan-mega','pinsir-mega','gyarados-mega','aerodactyl-mega',
-    'mewtwo-mega-x','mewtwo-mega-y','ampharos-mega','steelix-mega','scizor-mega',
-    'heracross-mega','houndoom-mega','tyranitar-mega','sceptile-mega','blaziken-mega',
-    'swampert-mega','gardevoir-mega','sableye-mega','mawile-mega','aggron-mega',
-    'medicham-mega','manectric-mega','sharpedo-mega','camerupt-mega','altaria-mega',
-    'banette-mega','absol-mega','glalie-mega','salamence-mega','metagross-mega',
-    'latias-mega','latios-mega','rayquaza-mega','lopunny-mega','garchomp-mega',
-    'lucario-mega','abomasnow-mega','gallade-mega','audino-mega','diancie-mega',
-    // 레전드 Z-A 신규 메가진화
-    'clefable-mega','victreebel-mega','starmie-mega','dragonite-mega','meganium-mega',
-    'feraligatr-mega','skarmory-mega','froslass-mega','emboar-mega','excadrill-mega',
-    'scolipede-mega','scrafty-mega','eelektross-mega','chandelure-mega','chesnaught-mega',
-    'delphox-mega','greninja-mega','pyroar-mega','floette-mega','malamar-mega',
-    'barbaracle-mega','dragalge-mega','hawlucha-mega','zygarde-mega','drampa-mega','falinks-mega',
-    // 추가 메가진화 (Z-A 신규)
-    'garchomp-mega-z','magearna-mega','tatsugiri-stretchy-mega',
-    'raichu-mega-x','raichu-mega-y','absol-mega-z','staraptor-mega',
-    'lucario-mega-z','heatran-mega','darkrai-mega','golurk-mega',
-    'meowstic-mega','zeraora-mega','scovillain-mega',
-    'chimecho-mega','crabominable-mega','golisopod-mega','glimmora-mega','baxcalibur-mega'
-  ]);
+  const CANONICAL_MEGA = new Set(canonicalMegaArr);
   const seenFormKo = new Set();
   const formEntries = [];
   p.forEach(base => {

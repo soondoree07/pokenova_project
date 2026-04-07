@@ -837,31 +837,8 @@ function getGen(id) {
   return 0;
 }
 
-// ─── 실제 게임 메가진화 목록 (PokeAPI에 가짜 메가 다수 포함) ───
-const CANONICAL_MEGA = new Set([
-  'venusaur-mega','charizard-mega-x','charizard-mega-y','blastoise-mega',
-  'beedrill-mega','pidgeot-mega','alakazam-mega','slowbro-mega','gengar-mega',
-  'kangaskhan-mega','pinsir-mega','gyarados-mega','aerodactyl-mega',
-  'mewtwo-mega-x','mewtwo-mega-y','ampharos-mega','steelix-mega','scizor-mega',
-  'heracross-mega','houndoom-mega','tyranitar-mega','sceptile-mega','blaziken-mega',
-  'swampert-mega','gardevoir-mega','sableye-mega','mawile-mega','aggron-mega',
-  'medicham-mega','manectric-mega','sharpedo-mega','camerupt-mega','altaria-mega',
-  'banette-mega','absol-mega','glalie-mega','salamence-mega','metagross-mega',
-  'latias-mega','latios-mega','rayquaza-mega','lopunny-mega','garchomp-mega',
-  'lucario-mega','abomasnow-mega','gallade-mega','audino-mega','diancie-mega',
-  // 레전드 Z-A 신규 메가진화 (26종)
-  'clefable-mega','victreebel-mega','starmie-mega','dragonite-mega','meganium-mega',
-  'feraligatr-mega','skarmory-mega','froslass-mega','emboar-mega','excadrill-mega',
-  'scolipede-mega','scrafty-mega','eelektross-mega','chandelure-mega','chesnaught-mega',
-  'delphox-mega','greninja-mega','pyroar-mega','floette-mega','malamar-mega',
-  'barbaracle-mega','dragalge-mega','hawlucha-mega','zygarde-mega','drampa-mega','falinks-mega',
-  // 추가 메가진화 (Z-A 신규)
-  'garchomp-mega-z','magearna-mega','tatsugiri-stretchy-mega',
-  'raichu-mega-x','raichu-mega-y','absol-mega-z','staraptor-mega',
-  'lucario-mega-z','heatran-mega','darkrai-mega','golurk-mega',
-  'meowstic-mega','zeraora-mega','scovillain-mega',
-  'chimecho-mega','crabominable-mega','golisopod-mega','glimmora-mega','baxcalibur-mega'
-]);
+// ─── 실제 게임 메가진화 목록 (data/canonical_mega.json에서 로드) ───
+let CANONICAL_MEGA = new Set();
 
 // ─── 거다이맥스 전용기 (공식 한국어 이름) ───
 const GMAX_MOVES = {
@@ -1454,9 +1431,11 @@ document.getElementById('ability-modal-overlay').addEventListener('click', e => 
 Promise.all([
   fetch('data/quiz_pokemon.json').then(r => r.json()),
   fetch('data/quiz_abilities.json').then(r => r.json()),
-  fetch('data/pokemon_stats.json').then(r => r.json())
+  fetch('data/pokemon_stats.json').then(r => r.json()),
+  fetch('data/canonical_mega.json').then(r => r.json()),
 ])
-  .then(([pokemonData, abilitiesData, statsData]) => {
+  .then(([pokemonData, abilitiesData, statsData, canonicalMegaArr]) => {
+    CANONICAL_MEGA = new Set(canonicalMegaArr);
     statsData.forEach(s => { STATS_MAP[(s.en || '').toLowerCase()] = s; });
     abilitiesData.forEach(a => {
       const name = a.ko || a.en || '';
