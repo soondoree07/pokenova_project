@@ -199,8 +199,13 @@
       gap: 14px;
     }
     .history-mode-icon {
-      font-size: 1.4rem;
+      width: 32px;
+      height: 32px;
       flex-shrink: 0;
+    }
+    .history-mode-icon img {
+      width: 32px;
+      height: 32px;
     }
     .history-info { flex: 1; min-width: 0; }
     .history-mode-label {
@@ -340,11 +345,14 @@ function toggleNav() {
   document.getElementById('site-nav').classList.toggle('open');
 }
 
+const BALL = p => `<img src="sprites/items/${p}" style="width:24px;height:24px;vertical-align:middle;margin-right:4px">`;
+const BALL32 = p => `<img src="sprites/items/${p}">`;
+
 const MODES = [
-  { key: 'pokemon', label: '포켓몬 맞추기', icon: '🎴' },
-  { key: 'move',    label: '기술 맞추기',   icon: '⚔️' },
-  { key: 'ability', label: '특성 맞추기',   icon: '✨' },
-  { key: 'item',    label: '도구 맞추기',   icon: '🎒' },
+  { key: 'pokemon', label: '포켓몬 맞추기', icon: BALL32('master__sprites__items__poke-ball.png'),   iconInline: BALL('master__sprites__items__poke-ball.png') },
+  { key: 'move',    label: '기술 맞추기',   icon: BALL32('master__sprites__items__ultra-ball.png'),  iconInline: BALL('master__sprites__items__ultra-ball.png') },
+  { key: 'ability', label: '특성 맞추기',   icon: BALL32('master__sprites__items__great-ball.png'),  iconInline: BALL('master__sprites__items__great-ball.png') },
+  { key: 'item',    label: '도구 맞추기',   icon: BALL32('master__sprites__items__master-ball.png'), iconInline: BALL('master__sprites__items__master-ball.png') },
 ];
 
 const DIFF_LABEL = { easy: '쉬움', normal: '보통', hard: '어려움', '-': '' };
@@ -383,14 +391,14 @@ function render() {
 
   // 포켓몬/기술: 난이도별 카드
   const diffModes = [
-    { key: 'pokemon', label: '포켓몬 맞추기', icon: '🎴' },
-    { key: 'move',    label: '기술 맞추기',   icon: '⚔️' },
+    { key: 'pokemon', label: '포켓몬 맞추기', iconInline: BALL('master__sprites__items__poke-ball.png') },
+    { key: 'move',    label: '기술 맞추기',   iconInline: BALL('master__sprites__items__ultra-ball.png') },
   ];
   const wideCards = diffModes.map(m => {
     const records = sessions.filter(s => s.mode === m.key);
     return `
       <div class="best-card-wide">
-        <div class="best-card-wide-title">${m.icon} ${m.label}</div>
+        <div class="best-card-wide-title">${m.iconInline}${m.label}</div>
         <div class="best-diff-row">
           ${bestDiffCell(records, 'easy')}
           ${bestDiffCell(records, 'normal')}
@@ -401,21 +409,21 @@ function render() {
 
   // 특성/도구: 단일 카드 그리드
   const simpleModes = [
-    { key: 'ability', label: '특성 맞추기', icon: '✨' },
-    { key: 'item',    label: '도구 맞추기', icon: '🎒' },
+    { key: 'ability', label: '특성 맞추기', iconInline: BALL('master__sprites__items__great-ball.png') },
+    { key: 'item',    label: '도구 맞추기', iconInline: BALL('master__sprites__items__master-ball.png') },
   ];
   const simpleCards = simpleModes.map(m => {
     const records = sessions.filter(s => s.mode === m.key);
     if (!records.length) return `
       <div class="best-card">
-        <div class="best-card-mode">${m.icon} ${m.label}</div>
+        <div class="best-card-mode">${m.iconInline}${m.label}</div>
         <div class="best-card-score" style="color:#333">—</div>
         <div class="best-card-label">기록 없음</div>
       </div>`;
     const best = records.reduce((a, b) => a.correct >= b.correct ? a : b);
     return `
       <div class="best-card">
-        <div class="best-card-mode">${m.icon} ${m.label}</div>
+        <div class="best-card-mode">${m.iconInline}${m.label}</div>
         <div class="best-card-score">${best.correct}<span> 정답</span></div>
         <div class="best-card-label">오답 ${best.wrong}개</div>
       </div>`;
@@ -439,7 +447,7 @@ function render() {
 
   const modeMap = Object.fromEntries(MODES.map(m => [m.key, m]));
   historyList.innerHTML = sessions.slice(0, 50).map(s => {
-    const m = modeMap[s.mode] || { label: s.modeLabel, icon: '🎮' };
+    const m = modeMap[s.mode] || { label: s.modeLabel, icon: BALL32('master__sprites__items__poke-ball.png') };
     const diffText = s.difficulty && s.difficulty !== '-' ? ` · ${DIFF_LABEL[s.difficulty] || s.difficulty}` : '';
     return `
       <div class="history-item">
