@@ -1352,7 +1352,7 @@ const BARCODE_DIFF = {
 };
 let bDifficulty = 'easy';
 let bGameStarted = false;
-let bLives = 3, bHints = 0, bQuestionsPlayed = 0;
+let bLives = 3, bHints = 0, bQuestionsPlayed = 0, bCorrectStreak = 0;
 let bSessionC = 0, bSessionW = 0;
 
 // 중복 방지: 셔플 풀
@@ -1399,7 +1399,7 @@ function bUpdateHintBadge() {
 
 function bStartGame() {
   bGameStarted = true;
-  bSessionC = 0; bSessionW = 0; bQuestionsPlayed = 0;
+  bSessionC = 0; bSessionW = 0; bQuestionsPlayed = 0; bCorrectStreak = 0;
   bPool = []; bPoolIdx = 0;
 
   // 난이도별 목숨·힌트 초기화
@@ -1613,10 +1613,19 @@ function bReveal(isCorrect) {
   animateReveal(bLoadedImg);
   if (isCorrect) {
     bScoreC++; bScoreS++; bSessionC++; bUpdateScore();
-    document.getElementById('b-status').textContent = `정답! 🎉 ${displayName}`;
+    let msg = `정답! 🎉 ${displayName}`;
+    if (bDifficulty === 'normal') {
+      bCorrectStreak++;
+      if (bCorrectStreak % 5 === 0 && bLives < 3) {
+        bLives++; bUpdateLives();
+        msg += '  (+목숨 1개 회복!)';
+      }
+    }
+    document.getElementById('b-status').textContent = msg;
     document.getElementById('b-status').className   = 'status correct';
     launchConfetti();
   } else {
+    if (bDifficulty === 'normal') bCorrectStreak = 0;
     document.getElementById('b-status').textContent = `정답: ${displayName}`;
     document.getElementById('b-status').className   = 'status hint';
   }
@@ -1633,10 +1642,6 @@ function bShowHint() {
 }
 function bNextPokemon() {
   bQuestionsPlayed++;
-  if (bDifficulty === 'normal' && bQuestionsPlayed % 5 === 0) {
-    bHints++;
-    bUpdateHintBadge();
-  }
   bLoadPokemon();
 }
 
