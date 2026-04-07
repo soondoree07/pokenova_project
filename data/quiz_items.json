@@ -903,7 +903,7 @@
     "id": 146,
     "ko": "유석열매",
     "en": "pomeg berry",
-    "desc": "HP 노력치를 10 내린다. 기쁨이 오른다.",
+    "desc": "HP 노력치를 10 내린다. 친밀도가 상승한다.",
     "desc_lang": "ko",
     "sprite": "sprites/items/master__sprites__items__pomeg-berry.png",
     "category": "effort-drop"
@@ -912,7 +912,7 @@
     "id": 147,
     "ko": "시마열매",
     "en": "kelpsy berry",
-    "desc": "공격 노력치를 10 내린다. 기쁨이 오른다.",
+    "desc": "공격 노력치를 10 내린다. 친밀도가 상승한다.",
     "desc_lang": "ko",
     "sprite": "sprites/items/master__sprites__items__kelpsy-berry.png",
     "category": "effort-drop"
@@ -921,7 +921,7 @@
     "id": 148,
     "ko": "파비열매",
     "en": "qualot berry",
-    "desc": "방어 노력치를 10 내린다. 기쁨이 오른다.",
+    "desc": "방어 노력치를 10 내린다. 친밀도가 상승한다.",
     "desc_lang": "ko",
     "sprite": "sprites/items/master__sprites__items__qualot-berry.png",
     "category": "effort-drop"
@@ -930,7 +930,7 @@
     "id": 149,
     "ko": "로매열매",
     "en": "hondew berry",
-    "desc": "특공 노력치를 10 내린다. 기쁨이 오른다.",
+    "desc": "특공 노력치를 10 내린다. 친밀도가 상승한다.",
     "desc_lang": "ko",
     "sprite": "sprites/items/master__sprites__items__hondew-berry.png",
     "category": "effort-drop"
@@ -939,7 +939,7 @@
     "id": 150,
     "ko": "또뽀열매",
     "en": "grepa berry",
-    "desc": "특방 노력치를 10 내린다. 기쁨이 오른다.",
+    "desc": "특방 노력치를 10 내린다. 친밀도가 상승한다.",
     "desc_lang": "ko",
     "sprite": "sprites/items/master__sprites__items__grepa-berry.png",
     "category": "effort-drop"
@@ -948,7 +948,7 @@
     "id": 151,
     "ko": "토망열매",
     "en": "tamato berry",
-    "desc": "스피드 노력치를 10 내린다. 기쁨이 오른다.",
+    "desc": "스피드 노력치를 10 내린다. 친밀도가 상승한다.",
     "desc_lang": "ko",
     "sprite": "sprites/items/master__sprites__items__tamato-berry.png",
     "category": "effort-drop"
