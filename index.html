@@ -1192,7 +1192,7 @@ window.addEventListener('fb-ready', () => { db = window._db; });
    공통 유틸
 ═══════════════════════════════════════════════════════════ */
 function normalize(s) {
-  return s.toLowerCase().replace(/[\s\-\.·]/g,'').replace(/♂/g,'m').replace(/♀/g,'f');
+  return s.toLowerCase().replace(/[\s\-\.·]/g,'').replace(/[♂♀]/g,'');
 }
 
 function launchConfetti() {
