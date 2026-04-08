@@ -743,6 +743,8 @@ async function init() {
   allMoves.forEach(m => {
     moveByEn[m.en] = m;
     moveByEn[m.en.replace(/ /g, '-')] = m;
+    moveByEn[m.en.toLowerCase()] = m;
+    moveByEn[m.en.toLowerCase().replace(/ /g, '-')] = m;
   });
 
   // 메가스톤·전용도구 룩업 맵 빌드 (mega_en → item)
