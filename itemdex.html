@@ -280,7 +280,7 @@ async function init() {
     const raw = await fetch(POCHAMS_API + '/api/data/items').then(r => r.json());
     allItems = raw.filter(it =>
       !it.needs_ko &&
-      it.desc_lang === 'ko' &&
+      (it.desc_lang === 'ko' || it.desc_lang == null) &&
       it.category !== 'all-machines' &&
       !(it.category === 'jewels' && it.ko !== '노말주얼')
     );
