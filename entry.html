@@ -720,11 +720,12 @@ const LEARN_METHOD_KO = {
 async function init() {
   let pokeRes, itemRes, moveRes, learnRes, zmoveRes;
   try {
+    const POCHAMS_API = 'https://pochamsproject.vercel.app';
     [pokeRes, itemRes, moveRes, learnRes, zmoveRes] = await Promise.all([
-      fetch('data/quiz_pokemon.json'),
-      fetch('data/quiz_items.json'),
-      fetch('data/quiz_moves.json'),
-      fetch('data/learnsets.json').catch(() => null),
+      fetch(POCHAMS_API + '/api/data/pokemon'),
+      fetch(POCHAMS_API + '/api/data/items'),
+      fetch(POCHAMS_API + '/api/data/moves'),
+      fetch(POCHAMS_API + '/data/learnsets.json').catch(() => null),
       fetch('data/quiz_zmoves.json').catch(() => null),
     ]);
   } catch(e) {

@@ -347,10 +347,11 @@ function buildLSKeyMap() {
 
 async function init() {
   try {
+    const POCHAMS_API = 'https://pochamsproject.vercel.app';
     [allMoves, allPokemon, learnsets, allZmoves] = await Promise.all([
-      fetch('data/quiz_moves.json').then(r => r.json()),
-      fetch('data/quiz_pokemon.json').then(r => r.json()),
-      fetch('data/learnsets.json').then(r => r.json()),
+      fetch(POCHAMS_API + '/api/data/moves').then(r => r.json()),
+      fetch(POCHAMS_API + '/api/data/pokemon').then(r => r.json()),
+      fetch(POCHAMS_API + '/data/learnsets.json').then(r => r.json()),
       fetch('data/quiz_zmoves.json').then(r => r.json()),
     ]);
     allMoves = allMoves.filter(m => !m.is_zmove && (!m.hidden || isDynamax(m) || isGmax(m)));

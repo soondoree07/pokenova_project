@@ -276,7 +276,8 @@ function megaGenOrder(item) {
 
 async function init() {
   try {
-    const raw = await fetch('data/quiz_items.json').then(r => r.json());
+    const POCHAMS_API = 'https://pochamsproject.vercel.app';
+    const raw = await fetch(POCHAMS_API + '/api/data/items').then(r => r.json());
     allItems = raw.filter(it =>
       !it.needs_ko &&
       it.desc_lang === 'ko' &&

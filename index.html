@@ -1226,11 +1226,12 @@ const DB = { pokemon: [], moves: [], abilities: [], items: [], statsGroups: [] }
 function hasKorean(str) { return /[\uAC00-\uD7A3]/.test(str); }
 
 async function loadAllData() {
+  const POCHAMS_API = 'https://pochamsproject.vercel.app';
   const [p, m, a, i, zm, statsRaw, canonicalMegaArr] = await Promise.all([
-    fetch('data/quiz_pokemon.json').then(r => r.json()),
-    fetch('data/quiz_moves.json').then(r => r.json()),
-    fetch('data/quiz_abilities.json').then(r => r.json()),
-    fetch('data/quiz_items.json').then(r => r.json()),
+    fetch(POCHAMS_API + '/api/data/pokemon').then(r => r.json()),
+    fetch(POCHAMS_API + '/api/data/moves').then(r => r.json()),
+    fetch(POCHAMS_API + '/api/data/abilities').then(r => r.json()),
+    fetch(POCHAMS_API + '/api/data/items').then(r => r.json()),
     fetch('data/quiz_zmoves.json').then(r => r.json()),
     fetch('data/pokemon_stats.json').then(r => r.json()),
     fetch('data/canonical_mega.json').then(r => r.json()),

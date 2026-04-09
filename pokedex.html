@@ -1436,9 +1436,10 @@ document.getElementById('ability-modal-overlay').addEventListener('click', e => 
   if (e.target === document.getElementById('ability-modal-overlay')) closeAbilityModal();
 });
 
+const POCHAMS_API = 'https://pochamsproject.vercel.app';
 Promise.all([
-  fetch('data/quiz_pokemon.json').then(r => r.json()),
-  fetch('data/quiz_abilities.json').then(r => r.json()),
+  fetch(POCHAMS_API + '/api/data/pokemon').then(r => r.json()),
+  fetch(POCHAMS_API + '/api/data/abilities').then(r => r.json()),
   fetch('data/pokemon_stats.json').then(r => r.json()),
   fetch('data/canonical_mega.json').then(r => r.json()),
 ])

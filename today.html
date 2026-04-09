@@ -539,8 +539,9 @@ function getCollection() {
 /* ══ 데이터 로드 ══ */
 async function loadData() {
   try {
+    const POCHAMS_API = 'https://pochamsproject.vercel.app';
     const [raw, statsRaw] = await Promise.all([
-      fetch('data/quiz_pokemon.json').then(r => r.json()),
+      fetch(POCHAMS_API + '/api/data/pokemon').then(r => r.json()),
       fetch('data/pokemon_stats.json').then(r => r.json()),
     ]);
     pokemonDB = raw.filter(p => p.id && p.id <= 1025);
