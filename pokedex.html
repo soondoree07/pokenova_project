@@ -1436,7 +1436,7 @@ document.getElementById('ability-modal-overlay').addEventListener('click', e => 
   if (e.target === document.getElementById('ability-modal-overlay')) closeAbilityModal();
 });
 
-const POCHAMS_API = 'https://pochamsproject.vercel.app';
+const POCHAMS_API = 'https://pochams-battle.vercel.app';
 Promise.all([
   fetch(POCHAMS_API + '/api/data/pokemon').then(r => r.json()),
   fetch(POCHAMS_API + '/api/data/abilities').then(r => r.json()),

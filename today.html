@@ -539,7 +539,7 @@ function getCollection() {
 /* ══ 데이터 로드 ══ */
 async function loadData() {
   try {
-    const POCHAMS_API = 'https://pochamsproject.vercel.app';
+    const POCHAMS_API = 'https://pochams-battle.vercel.app';
     const [raw, statsRaw] = await Promise.all([
       fetch(POCHAMS_API + '/api/data/pokemon').then(r => r.json()),
       fetch('data/pokemon_stats.json').then(r => r.json()),
