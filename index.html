@@ -438,6 +438,24 @@
     .barcode-label span { display: block; width: 2px; background: #e53935; }
 
     /* ══ 기술 맞추기 ══ */
+    /* ══ 세대 필터 ══ */
+    .gen-selector { display: flex; flex-wrap: wrap; gap: 6px; width: 100%; }
+    .gen-btn {
+      padding: 7px 12px; border-radius: 10px;
+      border: 1.5px solid #252525; background: #0f0f0f; color: #555;
+      font-size: 0.8rem; font-weight: 700; cursor: pointer; transition: all .18s;
+      min-height: 36px;
+    }
+    .gen-btn:hover { border-color: #5c6bc0; color: #5c6bc0; }
+    .gen-btn.selected { background: #5c6bc0; color: #fff; border-color: #5c6bc0; }
+    .gen-btn.all-btn { flex: 0 0 100%; }
+    .gen-btn.locked { opacity: 0.45; cursor: not-allowed; pointer-events: none; }
+    .gen-filter-notice {
+      font-size: 0.72rem; color: #f5c518; background: rgba(245,197,24,.08);
+      border: 1px solid rgba(245,197,24,.3); border-radius: 8px;
+      padding: 5px 10px; width: 100%; text-align: center;
+    }
+
     .diff-selector { display: flex; gap: 8px; width: 100%; }
     .diff-btn {
       flex: 1; padding: 11px 6px; border-radius: 12px;
@@ -585,6 +603,9 @@
       /* 리더보드 탭·닉네임 입력 */
       .lb-diff-tab { min-height: 44px; }
       .lb-nick-input { font-size: 1rem; min-height: 44px; }
+
+      /* 세대 필터 */
+      .gen-btn { min-height: 36px; padding: 6px 10px; font-size: 0.75rem; }
 
       /* 신고 버튼 */
       .btn-report { min-height: 44px; font-size: 0.82rem; padding: 10px; }
@@ -758,6 +779,24 @@
 <div id="tab-barcode" class="section">
   <div class="card">
     <button class="btn-ghost" style="width:100%;margin-bottom:8px;font-size:0.82rem" onclick="toggleLb('b')">🏆 리더보드 보기</button>
+
+    <div class="divider"></div>
+
+    <div style="font-size:.75rem;color:#444;letter-spacing:1px;align-self:flex-start">GENERATION</div>
+    <!-- 세대 필터 -->
+    <div class="gen-selector" id="b-gen-selector">
+      <button class="gen-btn all-btn selected" id="b-gen-all" onclick="bSetGen('all')">전체 (1~9세대)</button>
+      <button class="gen-btn" id="b-gen-1" onclick="bSetGen(1)">1세대</button>
+      <button class="gen-btn" id="b-gen-2" onclick="bSetGen(2)">2세대</button>
+      <button class="gen-btn" id="b-gen-3" onclick="bSetGen(3)">3세대</button>
+      <button class="gen-btn" id="b-gen-4" onclick="bSetGen(4)">4세대</button>
+      <button class="gen-btn" id="b-gen-5" onclick="bSetGen(5)">5세대</button>
+      <button class="gen-btn" id="b-gen-6" onclick="bSetGen(6)">6세대</button>
+      <button class="gen-btn" id="b-gen-7" onclick="bSetGen(7)">7세대</button>
+      <button class="gen-btn" id="b-gen-8" onclick="bSetGen(8)">8세대</button>
+      <button class="gen-btn" id="b-gen-9" onclick="bSetGen(9)">9세대</button>
+    </div>
+    <div class="gen-filter-notice" id="b-gen-notice" style="display:none">⚠️ 세대 한정 모드: 리더보드 등록 불가</div>
 
     <div class="divider"></div>
 
@@ -1337,16 +1376,72 @@ const BARCODE_DIFF = {
   normal: { strips: 4, stripH: 4 },
   hard:   { strips: 2, stripH: 3 }
 };
+
+// 세대별 포켓몬 ID 범위
+const GEN_RANGES = {
+  1: [1,   151],
+  2: [152,  251],
+  3: [252,  386],
+  4: [387,  493],
+  5: [494,  649],
+  6: [650,  721],
+  7: [722,  809],
+  8: [810,  905],
+  9: [906, 1025]
+};
+
+let bSelectedGens = new Set(); // 비어있으면 전체
 let bDifficulty = 'easy';
 let bGameStarted = false;
 let bLives = 3, bHints = 0, bQuestionsPlayed = 0;
 let bSessionC = 0, bSessionW = 0;
 
+function bSetGen(g) {
+  if (bGameStarted) return;
+  if (g === 'all') {
+    bSelectedGens.clear();
+    // UI: 전체 선택
+    document.getElementById('b-gen-all').classList.add('selected');
+    for (let i = 1; i <= 9; i++) {
+      document.getElementById('b-gen-' + i).classList.remove('selected');
+    }
+  } else {
+    // 세대 토글
+    if (bSelectedGens.has(g)) {
+      bSelectedGens.delete(g);
+    } else {
+      bSelectedGens.add(g);
+    }
+    // 전체 버튼은 항상 해제
+    document.getElementById('b-gen-all').classList.remove('selected');
+    document.getElementById('b-gen-' + g).classList.toggle('selected', bSelectedGens.has(g));
+    // 아무것도 선택 안 됐으면 전체로 복귀
+    if (bSelectedGens.size === 0) {
+      document.getElementById('b-gen-all').classList.add('selected');
+    }
+  }
+  // 안내 문구 표시
+  document.getElementById('b-gen-notice').style.display = (bSelectedGens.size > 0) ? '' : 'none';
+}
+
+function bGetFilteredPool() {
+  if (bSelectedGens.size === 0) {
+    return Array.from({length: DB.pokemon.length}, (_,i)=>i);
+  }
+  return DB.pokemon.reduce((acc, p, i) => {
+    for (const g of bSelectedGens) {
+      const [lo, hi] = GEN_RANGES[g];
+      if (p.id >= lo && p.id <= hi) { acc.push(i); break; }
+    }
+    return acc;
+  }, []);
+}
+
 // 중복 방지: 셔플 풀
 let bPool = [], bPoolIdx = 0;
 function bGetNextId() {
   if (bPoolIdx >= bPool.length) {
-    bPool = Array.from({length: DB.pokemon.length}, (_,i)=>i).sort(()=>Math.random()-.5);
+    bPool = bGetFilteredPool().sort(()=>Math.random()-.5);
     bPoolIdx = 0;
   }
   return bPool[bPoolIdx++];
@@ -1398,6 +1493,10 @@ function bStartGame() {
   ['easy','normal','hard'].forEach(x =>
     document.getElementById('b-diff-' + x).classList.add('locked')
   );
+  // 세대 버튼 잠금
+  ['all',1,2,3,4,5,6,7,8,9].forEach(x =>
+    document.getElementById('b-gen-' + x).classList.add('locked')
+  );
 
   // 시작 버튼 숨기고 게임 UI 표시
   document.getElementById('b-btn-start').style.display = 'none';
@@ -1417,9 +1516,15 @@ function bGameOver() {
   bGameStarted = false;
   document.getElementById('b-gameover-score').innerHTML =
     `이번 게임 결과<br><b>${bSessionC}</b>개 정답 &nbsp;/&nbsp; <b>${bSessionW}</b>개 오답`;
-  if (bDifficulty === 'easy') {
+  const isGenFiltered = bSelectedGens.size > 0;
+  if (bDifficulty === 'easy' || isGenFiltered) {
     document.getElementById('b-lb-form').style.display = 'none';
     document.getElementById('b-lb-done').style.display = 'flex';
+    if (isGenFiltered) {
+      const genNames = [...bSelectedGens].sort().map(g => g + '세대').join(', ');
+      document.getElementById('b-gameover-score').innerHTML +=
+        `<br><span style="font-size:0.78rem;color:#f5c518">⚠️ ${genNames} 한정 모드 — 리더보드 등록 불가</span>`;
+    }
   } else {
     document.getElementById('b-lb-form').style.display = 'flex';
     document.getElementById('b-lb-done').style.display = 'none';
@@ -1436,6 +1541,10 @@ function bResetGame() {
   // 난이도 버튼 잠금 해제
   ['easy','normal','hard'].forEach(x =>
     document.getElementById('b-diff-' + x).classList.remove('locked')
+  );
+  // 세대 버튼 잠금 해제
+  ['all',1,2,3,4,5,6,7,8,9].forEach(x =>
+    document.getElementById('b-gen-' + x).classList.remove('locked')
   );
 
   // 게임 UI 숨기고 시작 버튼 표시
