@@ -1052,7 +1052,7 @@ function renderForms(data) {
           sprite: f.sprite, types: f.types || base.types,
           abilities: f.abilities || base.abilities,
           gmaxMove: GMAX_MOVES[f.name_en], formType: 'gmax',
-          inChampions: base.inChampions
+          inChampions: false
         };
         if (!SIBLING_MAP[entry.id]) SIBLING_MAP[entry.id] = [];
         SIBLING_MAP[entry.id].push(entry);
