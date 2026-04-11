@@ -1309,7 +1309,14 @@ async function loadAllData() {
         en = f.name_en;
       }
       const isStrictForm = f.type === 'mega' || f.type === 'gmax';
-      formEntries.push({ id: base.id, ko: displayKo, en, sprite: f.sprite, types: f.types || base.types, isForm: true, baseKo: isStrictForm ? '' : base.ko });
+      const FORM_GEN_MAP = { alola: 7, galar: 8, hisui: 8, paldea: 9, mega: 6, gmax: 8, primal: 6 };
+      const formGenNum = FORM_GEN_MAP[f.type] !== undefined ? FORM_GEN_MAP[f.type] : (() => {
+        for (const [g, [lo, hi]] of Object.entries(GEN_RANGES)) {
+          if (base.id >= lo && base.id <= hi) return +g;
+        }
+        return 0;
+      })();
+      formEntries.push({ id: base.id, ko: displayKo, en, sprite: f.sprite, types: f.types || base.types, isForm: true, baseKo: isStrictForm ? '' : base.ko, genNum: formGenNum });
     });
   });
   DB.pokemon = p.concat(formEntries);
@@ -1429,10 +1436,13 @@ function bGetFilteredPool() {
     return Array.from({length: DB.pokemon.length}, (_,i)=>i);
   }
   return DB.pokemon.reduce((acc, p, i) => {
-    for (const g of bSelectedGens) {
-      const [lo, hi] = GEN_RANGES[g];
-      if (p.id >= lo && p.id <= hi) { acc.push(i); break; }
-    }
+    const gen = p.genNum !== undefined ? p.genNum : (() => {
+      for (const [g, [lo, hi]] of Object.entries(GEN_RANGES)) {
+        if (p.id >= lo && p.id <= hi) return +g;
+      }
+      return 0;
+    })();
+    if (bSelectedGens.has(gen)) acc.push(i);
     return acc;
   }, []);
 }
