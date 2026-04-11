@@ -157,6 +157,7 @@ h1{font-size:1.3rem;font-weight:700;margin-bottom:18px;color:#fff}
       <input id="search" type="text" placeholder="아이템명 검색..." oninput="render()" autocomplete="off" spellcheck="false">
     </div>
     <div class="filter-chips" id="tab-chips"></div>
+    <button id="champions-btn" onclick="toggleChampions()" style="padding:6px 12px;border-radius:20px;border:1.5px solid #f5c518;background:transparent;color:#f5c518;font-size:0.8rem;font-weight:700;cursor:pointer;white-space:nowrap;transition:all .15s">⚔️ 포챔스</button>
     <span class="count-label" id="count-label"></span>
   </div>
 
@@ -183,6 +184,7 @@ document.addEventListener('click', function(e) {
 
 let allItems = [];
 let activeTab = '전체';
+let championsOnly = false;
 
 // ── 탭 정의 ──
 const TABS = ['전체','지닌도구','열매','메가스톤','전용도구','볼','기타'];
@@ -306,10 +308,21 @@ function setTab(t) {
   render();
 }
 
+function toggleChampions() {
+  championsOnly = !championsOnly;
+  const btn = document.getElementById('champions-btn');
+  btn.style.background = championsOnly ? '#f5c518' : 'transparent';
+  btn.style.color = championsOnly ? '#000' : '#f5c518';
+  render();
+}
+
 function render() {
   const q = document.getElementById('search').value.trim().toLowerCase();
 
   let list = allItems;
+  if (championsOnly) {
+    list = list.filter(it => it.inChampions);
+  }
   if (activeTab !== '전체') {
     list = list.filter(it => getItemTab(it) === activeTab);
   }
