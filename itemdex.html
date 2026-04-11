@@ -293,7 +293,7 @@ async function fetchWithCache(url, key) {
 
 async function init() {
   try {
-    const raw = await fetchWithCache(POCHAMS_API + '/api/data/items', 'pkdex_items');
+    const raw = await fetchWithCache(POCHAMS_API + '/api/data/items', 'pkdex_items_v2');
     allItems = raw.filter(it =>
       !it.needs_ko &&
       (it.desc_lang === 'ko' || it.desc_lang == null) &&

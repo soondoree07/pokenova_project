@@ -363,9 +363,9 @@ async function fetchWithCache(url, key) {
 async function init() {
   try {
     [allMoves, allPokemon, learnsets, allZmoves] = await Promise.all([
-      fetchWithCache(POCHAMS_API + '/api/data/moves',   'pkdex_moves'),
+      fetchWithCache(POCHAMS_API + '/api/data/moves',   'pkdex_moves_v2'),
       fetchWithCache(POCHAMS_API + '/api/data/pokemon', 'pkdex_pokemon'),
-      fetchWithCache(POCHAMS_API + '/data/learnsets.json', 'pkdex_learnsets'),
+      fetchWithCache(POCHAMS_API + '/data/learnsets.json', 'pkdex_learnsets_v2'),
       fetch('data/quiz_zmoves.json').then(r => r.json()),
     ]);
     allMoves = allMoves.filter(m => !m.is_zmove && (!m.hidden || isDynamax(m) || isGmax(m)));

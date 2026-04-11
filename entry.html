@@ -737,9 +737,9 @@ async function init() {
   try {
     const [pokeData, itemData, moveData, learnData, zmoveData] = await Promise.all([
       fetchWithCache(POCHAMS_API + '/api/data/pokemon',    'pkdex_pokemon'),
-      fetchWithCache(POCHAMS_API + '/api/data/items',      'pkdex_items'),
-      fetchWithCache(POCHAMS_API + '/api/data/moves',      'pkdex_moves'),
-      fetchWithCache(POCHAMS_API + '/data/learnsets.json', 'pkdex_learnsets'),
+      fetchWithCache(POCHAMS_API + '/api/data/items',      'pkdex_items_v2'),
+      fetchWithCache(POCHAMS_API + '/api/data/moves',      'pkdex_moves_v2'),
+      fetchWithCache(POCHAMS_API + '/data/learnsets.json', 'pkdex_learnsets_v2'),
       fetch('data/quiz_zmoves.json').then(r=>r.json()).catch(()=>null),
     ]);
     allItems  = itemData;
