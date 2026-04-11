@@ -716,28 +716,36 @@ const LEARN_METHOD_KO = {
   'egg': '교배기', 'tutor': '가르침', 'form-change': '폼체인지', 'all': '전체기술',
 };
 
+// ─── 캐시 헬퍼 ───
+const POCHAMS_API = 'https://pochams-battle.vercel.app';
+const CACHE_TTL = 6 * 60 * 60 * 1000;
+function getCached(key) {
+  try { const {ts,data}=JSON.parse(localStorage.getItem(key)); if(Date.now()-ts<CACHE_TTL)return data; } catch(e){}
+  return null;
+}
+function setCache(key,data) {
+  try { localStorage.setItem(key,JSON.stringify({ts:Date.now(),data})); } catch(e){}
+}
+async function fetchWithCache(url, key) {
+  const c = getCached(key); if(c) return c;
+  const data = await fetch(url).then(r=>r.json());
+  setCache(key, data); return data;
+}
+
 // ─── 초기화 ───
 async function init() {
-  let pokeRes, itemRes, moveRes, learnRes, zmoveRes;
   try {
-    const POCHAMS_API = 'https://pochams-battle.vercel.app';
-    [pokeRes, itemRes, moveRes, learnRes, zmoveRes] = await Promise.all([
-      fetch(POCHAMS_API + '/api/data/pokemon'),
-      fetch(POCHAMS_API + '/api/data/items'),
-      fetch(POCHAMS_API + '/api/data/moves'),
-      fetch(POCHAMS_API + '/data/learnsets.json').catch(() => null),
-      fetch('data/quiz_zmoves.json').catch(() => null),
+    const [pokeData, itemData, moveData, learnData, zmoveData] = await Promise.all([
+      fetchWithCache(POCHAMS_API + '/api/data/pokemon',    'pkdex_pokemon'),
+      fetchWithCache(POCHAMS_API + '/api/data/items',      'pkdex_items'),
+      fetchWithCache(POCHAMS_API + '/api/data/moves',      'pkdex_moves'),
+      fetchWithCache(POCHAMS_API + '/data/learnsets.json', 'pkdex_learnsets'),
+      fetch('data/quiz_zmoves.json').then(r=>r.json()).catch(()=>null),
     ]);
-  } catch(e) {
-    document.getElementById('poke-grid').innerHTML =
-      '<p style="color:#e53935;padding:20px">데이터를 불러올 수 없습니다. 새로고침 해주세요.</p>';
-    return;
-  }
-  const pokeData = await pokeRes.json();
-  allItems  = await itemRes.json();
-  allMoves  = (await moveRes.json()).filter(m => !m.is_zmove);
-  if (learnRes) learnsets = await learnRes.json();
-  if (zmoveRes) allZmoves = await zmoveRes.json();
+    allItems  = itemData;
+    allMoves  = moveData.filter(m => !m.is_zmove);
+    if (learnData) learnsets = learnData;
+    if (zmoveData) allZmoves = zmoveData;
 
   // 기술 en → 객체 룩업 (공백 키 + 하이픈 키 둘 다 등록)
   // learnsets.json은 PokeAPI 하이픈 형식, quiz_moves.json은 공백 형식
@@ -821,6 +829,10 @@ async function init() {
   loadSaved();
   renderTeamTabs();
   renderGrids();
+  } catch(e) {
+    document.getElementById('poke-grid').innerHTML =
+      '<p style="color:#e53935;padding:20px">데이터를 불러올 수 없습니다. 새로고침 해주세요.</p>';
+  }
 }
 
 // ─── 저장/불러오기 ───

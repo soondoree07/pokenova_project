@@ -276,10 +276,24 @@ function megaGenOrder(item) {
   return MEGA_GEN[item.en] || 3;
 }
 
+const POCHAMS_API = 'https://pochams-battle.vercel.app';
+const CACHE_TTL = 6 * 60 * 60 * 1000;
+function getCached(key) {
+  try { const {ts,data}=JSON.parse(localStorage.getItem(key)); if(Date.now()-ts<CACHE_TTL)return data; } catch(e){}
+  return null;
+}
+function setCache(key,data) {
+  try { localStorage.setItem(key,JSON.stringify({ts:Date.now(),data})); } catch(e){}
+}
+async function fetchWithCache(url, key) {
+  const c = getCached(key); if(c) return c;
+  const data = await fetch(url).then(r=>r.json());
+  setCache(key, data); return data;
+}
+
 async function init() {
   try {
-    const POCHAMS_API = 'https://pochams-battle.vercel.app';
-    const raw = await fetch(POCHAMS_API + '/api/data/items').then(r => r.json());
+    const raw = await fetchWithCache(POCHAMS_API + '/api/data/items', 'pkdex_items');
     allItems = raw.filter(it =>
       !it.needs_ko &&
       (it.desc_lang === 'ko' || it.desc_lang == null) &&
