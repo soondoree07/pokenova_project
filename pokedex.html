@@ -1460,6 +1460,8 @@ Promise.all([
     const regionCount = document.querySelectorAll('.pokemon-card[data-cat="region"]').length;
     totalAll = DB.length + formCount + regionCount;
     updateCount(totalAll);
+    // 데이터 로딩 전에 누른 필터가 있으면 즉시 적용
+    applyFilters();
   })
   .catch(() => {
     document.getElementById('pokemon-grid').innerHTML =
