@@ -17703,6 +17703,36 @@
         "ko": "메테오빔",
         "method": "tutor",
         "level": 0
+      },
+      {
+        "en": "curse",
+        "ko": "저주",
+        "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "dragon_rush",
+        "ko": "드래곤다이브",
+        "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "endeavor",
+        "ko": "죽기살기",
+        "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "head_smash",
+        "ko": "양날박치기",
+        "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "mud_slap",
+        "ko": "진흙뿌리기",
+        "method": "egg",
+        "level": 0
       }
     ]
   },
@@ -18708,6 +18738,36 @@
         "ko": "퀵턴",
         "method": "tutor",
         "level": 0
+      },
+      {
+        "en": "agility",
+        "ko": "고속이동",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "liquidation",
+        "ko": "아쿠아브레이크",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "ancient_power",
+        "ko": "원시의힘",
+        "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "thrash",
+        "ko": "난동부리기",
+        "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "water_pulse",
+        "ko": "물의파동",
+        "method": "egg",
+        "level": 0
       }
     ]
   },
@@ -19073,6 +19133,36 @@
       {
         "en": "howl",
         "ko": "멀리짖기",
+        "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "explosion",
+        "ko": "대폭발",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "rock_polish",
+        "ko": "록커트",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "spit_up",
+        "ko": "토해내기",
+        "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "stockpile",
+        "ko": "비축하기",
+        "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "swallow",
+        "ko": "꿀꺽",
         "method": "egg",
         "level": 0
       }
@@ -20730,6 +20820,18 @@
         "ko": "사슬묶기",
         "method": "egg",
         "level": 0
+      },
+      {
+        "en": "gunk_shot",
+        "ko": "더스트슈트",
+        "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "imprison",
+        "ko": "봉인",
+        "method": "egg",
+        "level": 0
       }
     ]
   },
@@ -21083,6 +21185,36 @@
       {
         "en": "ally_switch",
         "ko": "사이드체인지",
+        "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "entrainment",
+        "ko": "동료만들기",
+        "method": "level-up",
+        "level": 0
+      },
+      {
+        "en": "recycle",
+        "ko": "리사이클",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "torment",
+        "ko": "트집",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "future_sight",
+        "ko": "미래예지",
+        "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "perish_song",
+        "ko": "멸망의노래",
         "method": "egg",
         "level": 0
       }
@@ -24538,6 +24670,24 @@
         "ko": "가드셰어",
         "method": "egg",
         "level": 0
+      },
+      {
+        "en": "rock_polish",
+        "ko": "록커트",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "torment",
+        "ko": "트집",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "curse",
+        "ko": "저주",
+        "method": "egg",
+        "level": 0
       }
     ]
   },
@@ -25259,6 +25409,36 @@
         "en": "ally_switch",
         "ko": "사이드체인지",
         "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "uproar",
+        "ko": "소란피기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "ally_switch",
+        "ko": "사이드체인지",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "burning_jealousy",
+        "ko": "질투의불꽃",
+        "method": "tutor",
+        "level": 0
+      },
+      {
+        "en": "lash_out",
+        "ko": "분풀이",
+        "method": "tutor",
+        "level": 0
+      },
+      {
+        "en": "poltergeist",
+        "ko": "폴터가이스트",
+        "method": "tutor",
         "level": 0
       }
     ]
@@ -27113,6 +27293,48 @@
         "ko": "하드프레스",
         "method": "machine",
         "level": 0
+      },
+      {
+        "en": "mega_kick",
+        "ko": "메가톤킥",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "light_screen",
+        "ko": "빛의장막",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "safeguard",
+        "ko": "신비의부적",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "iron_tail",
+        "ko": "아이언테일",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "shadow_ball",
+        "ko": "섀도볼",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "growth",
+        "ko": "성장",
+        "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "grassy_glide",
+        "ko": "그래스슬라이더",
+        "method": "tutor",
+        "level": 0
       }
     ]
   },
@@ -27996,6 +28218,36 @@
         "en": "guard_split",
         "ko": "가드셰어",
         "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "whirlpool",
+        "ko": "바다회오리",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "megahorn",
+        "ko": "메가혼",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "iron_tail",
+        "ko": "아이언테일",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "scorching_sands",
+        "ko": "열사의대지",
+        "method": "tutor",
+        "level": 0
+      },
+      {
+        "en": "aqua_tail",
+        "ko": "아쿠아테일",
+        "method": "tutor",
         "level": 0
       }
     ]
@@ -29008,6 +29260,54 @@
         "ko": "크로스포이즌",
         "method": "egg",
         "level": 0
+      },
+      {
+        "en": "mud_slap",
+        "ko": "진흙뿌리기",
+        "method": "level-up",
+        "level": 0
+      },
+      {
+        "en": "iron_tail",
+        "ko": "아이언테일",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "roost",
+        "ko": "날개쉬기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "defog",
+        "ko": "안개제거",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "agility",
+        "ko": "고속이동",
+        "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "baton_pass",
+        "ko": "배턴터치",
+        "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "night_slash",
+        "ko": "깜짝베기",
+        "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "power_trick",
+        "ko": "파워트릭",
+        "method": "egg",
+        "level": 0
       }
     ]
   },
@@ -29368,6 +29668,12 @@
         "en": "freeze_dry",
         "ko": "프리즈드라이",
         "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "light_screen",
+        "ko": "빛의장막",
+        "method": "machine",
         "level": 0
       }
     ]
@@ -31956,6 +32262,30 @@
         "ko": "분함의발구르기",
         "method": "tutor",
         "level": 0
+      },
+      {
+        "en": "psych_up",
+        "ko": "자기암시",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "bullet_seed",
+        "ko": "씨기관총",
+        "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "flail",
+        "ko": "바둥바둥",
+        "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "iron_tail",
+        "ko": "아이언테일",
+        "method": "egg",
+        "level": 0
       }
     ]
   },
@@ -32238,6 +32568,48 @@
         "en": "lash_out",
         "ko": "분풀이",
         "method": "tutor",
+        "level": 0
+      },
+      {
+        "en": "assurance",
+        "ko": "승부굳히기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "play_rough",
+        "ko": "치근거리기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "copycat",
+        "ko": "흉내쟁이",
+        "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "covet",
+        "ko": "탐내기",
+        "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "double_team",
+        "ko": "그림자분신",
+        "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "quick_attack",
+        "ko": "전광석화",
+        "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "yawn",
+        "ko": "하품",
+        "method": "egg",
         "level": 0
       }
     ]
@@ -34646,6 +35018,24 @@
         "ko": "바꿔치기",
         "method": "egg",
         "level": 0
+      },
+      {
+        "en": "safeguard",
+        "ko": "신비의부적",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "memento",
+        "ko": "추억의선물",
+        "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "grassy_glide",
+        "ko": "그래스슬라이더",
+        "method": "tutor",
+        "level": 0
       }
     ]
   },
@@ -36463,6 +36853,60 @@
         "ko": "녹기",
         "method": "egg",
         "level": 0
+      },
+      {
+        "en": "safeguard",
+        "ko": "신비의부적",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "power_swap",
+        "ko": "파워스왑",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "guard_swap",
+        "ko": "가드스왑",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "superpower",
+        "ko": "엄청난힘",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "ally_switch",
+        "ko": "사이드체인지",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "future_sight",
+        "ko": "미래예지",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "wonder_room",
+        "ko": "원더룸",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "expanding_force",
+        "ko": "와이드포스",
+        "method": "tutor",
+        "level": 0
+      },
+      {
+        "en": "steel_roller",
+        "ko": "아이언롤러",
+        "method": "tutor",
+        "level": 0
       }
     ]
   },
@@ -37252,6 +37696,48 @@
         "ko": "클리어스모그",
         "method": "egg",
         "level": 0
+      },
+      {
+        "en": "safeguard",
+        "ko": "신비의부적",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "mystical_fire",
+        "ko": "매지컬플레임",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "ally_switch",
+        "ko": "사이드체인지",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "imprison",
+        "ko": "봉인",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "burning_jealousy",
+        "ko": "질투의불꽃",
+        "method": "tutor",
+        "level": 0
+      },
+      {
+        "en": "poltergeist",
+        "ko": "폴터가이스트",
+        "method": "tutor",
+        "level": 0
+      },
+      {
+        "en": "skitter_smack",
+        "ko": "엄습하는일격",
+        "method": "tutor",
+        "level": 0
       }
     ]
   },
@@ -37974,6 +38460,18 @@
         "ko": "분풀이",
         "method": "tutor",
         "level": 0
+      },
+      {
+        "en": "electric_terrain",
+        "ko": "일렉트릭필드",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "muddy_water",
+        "ko": "탁류",
+        "method": "machine",
+        "level": 0
       }
     ]
   },
@@ -38406,6 +38904,54 @@
         "en": "focus_punch",
         "ko": "힘껏펀치",
         "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "mud_slap",
+        "ko": "진흙뿌리기",
+        "method": "level-up",
+        "level": 0
+      },
+      {
+        "en": "focus_punch",
+        "ko": "힘껏펀치",
+        "method": "level-up",
+        "level": 0
+      },
+      {
+        "en": "self_destruct",
+        "ko": "자폭",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "safeguard",
+        "ko": "신비의부적",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "ally_switch",
+        "ko": "사이드체인지",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "darkest_lariat",
+        "ko": "DD래리어트",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "poltergeist",
+        "ko": "폴터가이스트",
+        "method": "tutor",
+        "level": 0
+      },
+      {
+        "en": "scorching_sands",
+        "ko": "열사의대지",
+        "method": "tutor",
         "level": 0
       }
     ]
