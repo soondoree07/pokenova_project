@@ -24203,6 +24203,12 @@
         "ko": "트리플악셀",
         "method": "tutor",
         "level": 0
+      },
+      {
+        "en": "fake_out",
+        "ko": "속이기",
+        "method": "level-up",
+        "level": 0
       }
     ]
   },
