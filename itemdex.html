@@ -335,7 +335,7 @@ function render() {
 
   let list = allItems;
   if (championsOnly) {
-    list = list.filter(it => it.inChampions);
+    list = list.filter(it => it.in_champions);
   }
   if (activeTab !== '전체') {
     list = list.filter(it => getItemTab(it) === activeTab);
