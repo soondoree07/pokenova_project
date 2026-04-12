@@ -3807,12 +3807,6 @@
         "level": 0
       },
       {
-        "en": "raging_fury",
-        "ko": "대격분",
-        "method": "egg",
-        "level": 0
-      },
-      {
         "en": "thrash",
         "ko": "난동부리기",
         "method": "egg",
@@ -22435,12 +22429,6 @@
         "level": 0
       },
       {
-        "en": "double_edge",
-        "ko": "이판사판태클",
-        "method": "machine",
-        "level": 0
-      },
-      {
         "en": "roar",
         "ko": "울부짖기",
         "method": "machine",
@@ -22455,12 +22443,6 @@
       {
         "en": "hyper_beam",
         "ko": "파괴광선",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "low_kick",
-        "ko": "안다리걸기",
         "method": "machine",
         "level": 0
       },
@@ -22519,20 +22501,8 @@
         "level": 0
       },
       {
-        "en": "reversal",
-        "ko": "기사회생",
-        "method": "machine",
-        "level": 0
-      },
-      {
         "en": "protect",
         "ko": "방어",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "scary_face",
-        "ko": "겁나는얼굴",
         "method": "machine",
         "level": 0
       },
@@ -22669,12 +22639,6 @@
         "level": 0
       },
       {
-        "en": "drain_punch",
-        "ko": "드레인펀치",
-        "method": "machine",
-        "level": 0
-      },
-      {
         "en": "vacuum_wave",
         "ko": "진공파",
         "method": "machine",
@@ -22701,12 +22665,6 @@
       {
         "en": "shadow_claw",
         "ko": "새도클로",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "zen_headbutt",
-        "ko": "사념의박치기",
         "method": "machine",
         "level": 0
       },
@@ -22773,12 +22731,6 @@
       {
         "en": "lash_out",
         "ko": "분풀이",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "coaching",
-        "ko": "코칭",
         "method": "machine",
         "level": 0
       },
@@ -22855,9 +22807,27 @@
         "level": 0
       },
       {
-        "en": "switcheroo",
-        "ko": "바꿔치기",
+        "en": "scary_face",
+        "ko": "겁나는얼굴",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "blaze_kick",
+        "ko": "블레이즈킥",
         "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "quick_guard",
+        "ko": "패스트가드",
+        "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "blast_burn",
+        "ko": "블라스트번",
+        "method": "tutor",
         "level": 0
       }
     ]
@@ -28562,6 +28532,12 @@
         "ko": "판별",
         "method": "egg",
         "level": 0
+      },
+      {
+        "en": "curse",
+        "ko": "저주",
+        "method": "egg",
+        "level": 0
       }
     ]
   },
@@ -31588,6 +31564,12 @@
         "ko": "기습",
         "method": "egg",
         "level": 0
+      },
+      {
+        "en": "flame_charge",
+        "ko": "니트로차지",
+        "method": "machine",
+        "level": 0
       }
     ]
   },
@@ -31801,12 +31783,6 @@
         "level": 0
       },
       {
-        "en": "dark_pulse",
-        "ko": "악의파동",
-        "method": "machine",
-        "level": 0
-      },
-      {
         "en": "x_scissor",
         "ko": "시저크로스",
         "method": "machine",
@@ -31849,18 +31825,6 @@
         "level": 0
       },
       {
-        "en": "snarl",
-        "ko": "바크아웃",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "throat_chop",
-        "ko": "지옥찌르기",
-        "method": "machine",
-        "level": 0
-      },
-      {
         "en": "smart_strike",
         "ko": "스마트혼",
         "method": "machine",
@@ -31869,12 +31833,6 @@
       {
         "en": "liquidation",
         "ko": "아쿠아브레이크",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "lash_out",
-        "ko": "분풀이",
         "method": "machine",
         "level": 0
       },
@@ -40916,9 +40874,9 @@
         "level": 0
       },
       {
-        "en": "switcheroo",
-        "ko": "바꿔치기",
-        "method": "egg",
+        "en": "water_pulse",
+        "ko": "물의파동",
+        "method": "machine",
         "level": 0
       }
     ]
@@ -46075,9 +46033,9 @@
         "level": 0
       },
       {
-        "en": "quick_guard",
-        "ko": "패스트가드",
-        "method": "egg",
+        "en": "endeavor",
+        "ko": "죽기살기",
+        "method": "machine",
         "level": 0
       }
     ]
@@ -48375,12 +48333,6 @@
         "level": 0
       },
       {
-        "en": "reversal",
-        "ko": "기사회생",
-        "method": "machine",
-        "level": 0
-      },
-      {
         "en": "protect",
         "ko": "방어",
         "method": "machine",
@@ -48441,26 +48393,8 @@
         "level": 0
       },
       {
-        "en": "focus_punch",
-        "ko": "힘껏펀치",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "taunt",
-        "ko": "도발",
-        "method": "machine",
-        "level": 0
-      },
-      {
         "en": "helping_hand",
         "ko": "도우미",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "brick_break",
-        "ko": "깨트리기",
         "method": "machine",
         "level": 0
       },
@@ -48473,12 +48407,6 @@
       {
         "en": "air_cutter",
         "ko": "에어커터",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "rock_tomb",
-        "ko": "암석봉인",
         "method": "machine",
         "level": 0
       },
@@ -48501,12 +48429,6 @@
         "level": 0
       },
       {
-        "en": "bulk_up",
-        "ko": "벌크업",
-        "method": "machine",
-        "level": 0
-      },
-      {
         "en": "tailwind",
         "ko": "순풍",
         "method": "machine",
@@ -48519,12 +48441,6 @@
         "level": 0
       },
       {
-        "en": "aura_sphere",
-        "ko": "파동탄",
-        "method": "machine",
-        "level": 0
-      },
-      {
         "en": "seed_bomb",
         "ko": "씨폭탄",
         "method": "machine",
@@ -48533,12 +48449,6 @@
       {
         "en": "air_slash",
         "ko": "에어슬래시",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "focus_blast",
-        "ko": "기합구슬",
         "method": "machine",
         "level": 0
       },
@@ -48623,12 +48533,6 @@
       {
         "en": "poltergeist",
         "ko": "폴터가이스트",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "coaching",
-        "ko": "코칭",
         "method": "machine",
         "level": 0
       },
