@@ -3233,7 +3233,7 @@
   },
   {
     "id": 196,
-    "ko": "얼다바람",
+    "ko": "얼어붙은바람",
     "en": "icy_wind",
     "type": "얼음",
     "type_en": "ice",
@@ -4636,7 +4636,7 @@
   },
   {
     "id": 280,
-    "ko": "깨트리다",
+    "ko": "깨트리기",
     "en": "brick_break",
     "type": "격투",
     "type_en": "fighting",
