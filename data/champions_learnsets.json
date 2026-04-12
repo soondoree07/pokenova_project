@@ -204,7 +204,7 @@
       },
       {
         "en": "bullet_seed",
-        "ko": "기관총",
+        "ko": "씨기관총",
         "method": "machine",
         "level": 0
       },
@@ -331,7 +331,7 @@
       },
       {
         "en": "dragon_claw",
-        "ko": "드래곤크루",
+        "ko": "드래곤클로",
         "method": "level-up",
         "level": 1
       },
@@ -535,7 +535,7 @@
       },
       {
         "en": "blast_burn",
-        "ko": "블러스트번",
+        "ko": "블라스트번",
         "method": "machine",
         "level": 0
       },
@@ -547,7 +547,7 @@
       },
       {
         "en": "air_cutter",
-        "ko": "에어컷터",
+        "ko": "에어커터",
         "method": "machine",
         "level": 0
       },
@@ -601,7 +601,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -944,7 +944,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -1335,7 +1335,7 @@
       },
       {
         "en": "bug_bite",
-        "ko": "벌레먹음",
+        "ko": "벌레먹기",
         "method": "tutor",
         "level": 0
       },
@@ -1805,7 +1805,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -1931,7 +1931,7 @@
       },
       {
         "en": "poison_fang",
-        "ko": "독엄니",
+        "ko": "맹독엄니",
         "method": "egg",
         "level": 0
       },
@@ -2118,7 +2118,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -2425,7 +2425,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -2750,7 +2750,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "machine",
         "level": 0
       },
@@ -2996,13 +2996,13 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "egg",
         "level": 0
       },
       {
         "en": "moonlight",
-        "ko": "달의불빛",
+        "ko": "달빛",
         "method": "egg",
         "level": 0
       },
@@ -3195,13 +3195,13 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "machine",
         "level": 0
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -3381,7 +3381,7 @@
       },
       {
         "en": "howl",
-        "ko": "멀리짖음",
+        "ko": "멀리짖기",
         "method": "egg",
         "level": 0
       },
@@ -3454,7 +3454,7 @@
       },
       {
         "en": "howl",
-        "ko": "멀리짖음",
+        "ko": "멀리짖기",
         "method": "level-up",
         "level": 1
       },
@@ -3881,7 +3881,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -3947,13 +3947,13 @@
       },
       {
         "en": "power_swap",
-        "ko": "파워스웹",
+        "ko": "파워스왑",
         "method": "machine",
         "level": 0
       },
       {
         "en": "guard_swap",
-        "ko": "가드스웹",
+        "ko": "가드스왑",
         "method": "machine",
         "level": 0
       },
@@ -4049,7 +4049,7 @@
       },
       {
         "en": "speed_swap",
-        "ko": "스피드스웹",
+        "ko": "스피드스왑",
         "method": "machine",
         "level": 0
       },
@@ -4260,7 +4260,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -4308,7 +4308,7 @@
       },
       {
         "en": "rock_blast",
-        "ko": "락블레스트",
+        "ko": "록블라스트",
         "method": "machine",
         "level": 0
       },
@@ -4543,7 +4543,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -4573,7 +4573,7 @@
       },
       {
         "en": "bullet_seed",
-        "ko": "기관총",
+        "ko": "씨기관총",
         "method": "machine",
         "level": 0
       },
@@ -4609,7 +4609,7 @@
       },
       {
         "en": "bug_bite",
-        "ko": "벌레먹음",
+        "ko": "벌레먹기",
         "method": "machine",
         "level": 0
       },
@@ -5006,7 +5006,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -5373,7 +5373,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -5499,7 +5499,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -5632,7 +5632,7 @@
       },
       {
         "en": "last_resort",
-        "ko": "뒀다쓰기",
+        "ko": "비장의무기",
         "method": "level-up",
         "level": 52
       },
@@ -5914,7 +5914,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -6300,7 +6300,7 @@
       },
       {
         "en": "bug_bite",
-        "ko": "벌레먹음",
+        "ko": "벌레먹기",
         "method": "level-up",
         "level": 16
       },
@@ -6841,7 +6841,7 @@
       },
       {
         "en": "smart_strike",
-        "ko": "스마트호른",
+        "ko": "스마트혼",
         "method": "machine",
         "level": 0
       },
@@ -7258,7 +7258,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "level-up",
         "level": 1
       },
@@ -7270,7 +7270,7 @@
       },
       {
         "en": "covet",
-        "ko": "탐내다",
+        "ko": "탐내기",
         "method": "level-up",
         "level": 1
       },
@@ -7330,7 +7330,7 @@
       },
       {
         "en": "last_resort",
-        "ko": "뒀다쓰기",
+        "ko": "비장의무기",
         "method": "level-up",
         "level": 55
       },
@@ -7559,7 +7559,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "level-up",
         "level": 1
       },
@@ -7571,7 +7571,7 @@
       },
       {
         "en": "covet",
-        "ko": "탐내다",
+        "ko": "탐내기",
         "method": "level-up",
         "level": 1
       },
@@ -7631,7 +7631,7 @@
       },
       {
         "en": "last_resort",
-        "ko": "뒀다쓰기",
+        "ko": "비장의무기",
         "method": "level-up",
         "level": 55
       },
@@ -7854,7 +7854,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "level-up",
         "level": 1
       },
@@ -7866,7 +7866,7 @@
       },
       {
         "en": "covet",
-        "ko": "탐내다",
+        "ko": "탐내기",
         "method": "level-up",
         "level": 1
       },
@@ -7926,7 +7926,7 @@
       },
       {
         "en": "last_resort",
-        "ko": "뒀다쓰기",
+        "ko": "비장의무기",
         "method": "level-up",
         "level": 55
       },
@@ -8323,7 +8323,7 @@
       },
       {
         "en": "dragon_claw",
-        "ko": "드래곤크루",
+        "ko": "드래곤클로",
         "method": "machine",
         "level": 0
       },
@@ -8335,7 +8335,7 @@
       },
       {
         "en": "rock_blast",
-        "ko": "락블레스트",
+        "ko": "록블라스트",
         "method": "machine",
         "level": 0
       },
@@ -8504,7 +8504,7 @@
       },
       {
         "en": "covet",
-        "ko": "탐내다",
+        "ko": "탐내기",
         "method": "level-up",
         "level": 1
       },
@@ -8516,7 +8516,7 @@
       },
       {
         "en": "last_resort",
-        "ko": "뒀다쓰기",
+        "ko": "비장의무기",
         "method": "level-up",
         "level": 1
       },
@@ -8744,7 +8744,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -9189,7 +9189,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -9237,7 +9237,7 @@
       },
       {
         "en": "air_cutter",
-        "ko": "에어컷터",
+        "ko": "에어커터",
         "method": "machine",
         "level": 0
       },
@@ -9255,7 +9255,7 @@
       },
       {
         "en": "dragon_claw",
-        "ko": "드래곤크루",
+        "ko": "드래곤클로",
         "method": "machine",
         "level": 0
       },
@@ -9532,7 +9532,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -9580,7 +9580,7 @@
       },
       {
         "en": "bullet_seed",
-        "ko": "기관총",
+        "ko": "씨기관총",
         "method": "machine",
         "level": 0
       },
@@ -9941,7 +9941,7 @@
       },
       {
         "en": "blast_burn",
-        "ko": "블러스트번",
+        "ko": "블라스트번",
         "method": "machine",
         "level": 0
       },
@@ -9989,7 +9989,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -10091,13 +10091,13 @@
       },
       {
         "en": "howl",
-        "ko": "멀리짖음",
+        "ko": "멀리짖기",
         "method": "egg",
         "level": 0
       },
       {
         "en": "covet",
-        "ko": "탐내다",
+        "ko": "탐내기",
         "method": "egg",
         "level": 0
       }
@@ -10404,7 +10404,7 @@
       },
       {
         "en": "dragon_claw",
-        "ko": "드래곤크루",
+        "ko": "드래곤클로",
         "method": "machine",
         "level": 0
       },
@@ -10446,7 +10446,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -10579,7 +10579,7 @@
       },
       {
         "en": "bug_bite",
-        "ko": "벌레먹음",
+        "ko": "벌레먹기",
         "method": "level-up",
         "level": 1
       },
@@ -10747,7 +10747,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "machine",
         "level": 0
       },
@@ -10843,7 +10843,7 @@
       },
       {
         "en": "smart_strike",
-        "ko": "스마트호른",
+        "ko": "스마트혼",
         "method": "machine",
         "level": 0
       },
@@ -10873,7 +10873,7 @@
       },
       {
         "en": "megahorn",
-        "ko": "메가폰",
+        "ko": "메가혼",
         "method": "egg",
         "level": 0
       },
@@ -11259,7 +11259,7 @@
       },
       {
         "en": "bounce",
-        "ko": "뛰어오르다",
+        "ko": "뛰어오르기",
         "method": "level-up",
         "level": 15
       },
@@ -11409,7 +11409,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -11463,7 +11463,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -11566,7 +11566,7 @@
     "moves": [
       {
         "en": "bounce",
-        "ko": "뛰어오르다",
+        "ko": "뛰어오르기",
         "method": "level-up",
         "level": 0
       },
@@ -11710,7 +11710,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -11848,7 +11848,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "egg",
         "level": 0
       },
@@ -11891,7 +11891,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "level-up",
         "level": 1
       },
@@ -11903,7 +11903,7 @@
       },
       {
         "en": "covet",
-        "ko": "탐내다",
+        "ko": "탐내기",
         "method": "level-up",
         "level": 1
       },
@@ -11933,7 +11933,7 @@
       },
       {
         "en": "power_swap",
-        "ko": "파워스웹",
+        "ko": "파워스왑",
         "method": "level-up",
         "level": 35
       },
@@ -11957,7 +11957,7 @@
       },
       {
         "en": "last_resort",
-        "ko": "뒀다쓰기",
+        "ko": "비장의무기",
         "method": "level-up",
         "level": 55
       },
@@ -12246,7 +12246,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "level-up",
         "level": 1
       },
@@ -12258,7 +12258,7 @@
       },
       {
         "en": "covet",
-        "ko": "탐내다",
+        "ko": "탐내기",
         "method": "level-up",
         "level": 1
       },
@@ -12294,13 +12294,13 @@
       },
       {
         "en": "moonlight",
-        "ko": "달의불빛",
+        "ko": "달빛",
         "method": "level-up",
         "level": 30
       },
       {
         "en": "guard_swap",
-        "ko": "가드스웹",
+        "ko": "가드스왑",
         "method": "level-up",
         "level": 35
       },
@@ -12324,7 +12324,7 @@
       },
       {
         "en": "last_resort",
-        "ko": "뒀다쓰기",
+        "ko": "비장의무기",
         "method": "level-up",
         "level": 55
       },
@@ -12859,7 +12859,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -13040,7 +13040,7 @@
       },
       {
         "en": "bug_bite",
-        "ko": "벌레먹음",
+        "ko": "벌레먹기",
         "method": "level-up",
         "level": 1
       },
@@ -13238,7 +13238,7 @@
       },
       {
         "en": "rock_blast",
-        "ko": "락블레스트",
+        "ko": "록블라스트",
         "method": "machine",
         "level": 0
       },
@@ -13340,7 +13340,7 @@
       },
       {
         "en": "smart_strike",
-        "ko": "스마트호른",
+        "ko": "스마트혼",
         "method": "machine",
         "level": 0
       },
@@ -13599,7 +13599,7 @@
       },
       {
         "en": "rock_blast",
-        "ko": "락블레스트",
+        "ko": "록블라스트",
         "method": "machine",
         "level": 0
       },
@@ -13888,7 +13888,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "machine",
         "level": 0
       },
@@ -13930,7 +13930,7 @@
       },
       {
         "en": "air_cutter",
-        "ko": "에어컷터",
+        "ko": "에어커터",
         "method": "machine",
         "level": 0
       },
@@ -13990,7 +13990,7 @@
       },
       {
         "en": "bug_bite",
-        "ko": "벌레먹음",
+        "ko": "벌레먹기",
         "method": "machine",
         "level": 0
       },
@@ -14105,7 +14105,7 @@
       },
       {
         "en": "megahorn",
-        "ko": "메가폰",
+        "ko": "메가혼",
         "method": "level-up",
         "level": 55
       },
@@ -14249,7 +14249,7 @@
       },
       {
         "en": "bullet_seed",
-        "ko": "기관총",
+        "ko": "씨기관총",
         "method": "machine",
         "level": 0
       },
@@ -14267,7 +14267,7 @@
       },
       {
         "en": "rock_blast",
-        "ko": "락블레스트",
+        "ko": "록블라스트",
         "method": "machine",
         "level": 0
       },
@@ -14303,7 +14303,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -14315,7 +14315,7 @@
       },
       {
         "en": "bug_bite",
-        "ko": "벌레먹음",
+        "ko": "벌레먹기",
         "method": "machine",
         "level": 0
       },
@@ -14351,7 +14351,7 @@
       },
       {
         "en": "smart_strike",
-        "ko": "스마트호른",
+        "ko": "스마트혼",
         "method": "machine",
         "level": 0
       },
@@ -14682,7 +14682,7 @@
       },
       {
         "en": "air_cutter",
-        "ko": "에어컷터",
+        "ko": "에어커터",
         "method": "egg",
         "level": 0
       },
@@ -14713,7 +14713,7 @@
     "moves": [
       {
         "en": "howl",
-        "ko": "멀리짖음",
+        "ko": "멀리짖기",
         "method": "level-up",
         "level": 1
       },
@@ -14977,7 +14977,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -15404,13 +15404,13 @@
       },
       {
         "en": "dragon_claw",
-        "ko": "드래곤크루",
+        "ko": "드래곤클로",
         "method": "machine",
         "level": 0
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -15422,7 +15422,7 @@
       },
       {
         "en": "rock_blast",
-        "ko": "락블레스트",
+        "ko": "록블라스트",
         "method": "machine",
         "level": 0
       },
@@ -15464,7 +15464,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -15753,7 +15753,7 @@
       },
       {
         "en": "air_cutter",
-        "ko": "에어컷터",
+        "ko": "에어커터",
         "method": "machine",
         "level": 0
       },
@@ -16048,7 +16048,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -16295,7 +16295,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "level-up",
         "level": 33
       },
@@ -16469,7 +16469,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -16565,7 +16565,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -17046,13 +17046,13 @@
       },
       {
         "en": "dragon_claw",
-        "ko": "드래곤크루",
+        "ko": "드래곤클로",
         "method": "machine",
         "level": 0
       },
       {
         "en": "rock_blast",
-        "ko": "락블레스트",
+        "ko": "록블라스트",
         "method": "machine",
         "level": 0
       },
@@ -17106,7 +17106,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -17148,7 +17148,7 @@
       },
       {
         "en": "smart_strike",
-        "ko": "스마트호른",
+        "ko": "스마트혼",
         "method": "machine",
         "level": 0
       },
@@ -17377,7 +17377,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "machine",
         "level": 0
       },
@@ -17588,7 +17588,7 @@
       },
       {
         "en": "howl",
-        "ko": "멀리짖음",
+        "ko": "멀리짖기",
         "method": "level-up",
         "level": 1
       },
@@ -17853,7 +17853,7 @@
       },
       {
         "en": "poison_fang",
-        "ko": "독엄니",
+        "ko": "맹독엄니",
         "method": "level-up",
         "level": 1
       },
@@ -18057,7 +18057,7 @@
       },
       {
         "en": "bounce",
-        "ko": "뛰어오르다",
+        "ko": "뛰어오르기",
         "method": "machine",
         "level": 0
       },
@@ -18388,7 +18388,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -19074,7 +19074,7 @@
       },
       {
         "en": "dragon_claw",
-        "ko": "드래곤크루",
+        "ko": "드래곤클로",
         "method": "machine",
         "level": 0
       },
@@ -19387,7 +19387,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -19724,7 +19724,7 @@
       },
       {
         "en": "guard_swap",
-        "ko": "가드스웹",
+        "ko": "가드스왑",
         "method": "egg",
         "level": 0
       },
@@ -19772,7 +19772,7 @@
       },
       {
         "en": "last_resort",
-        "ko": "뒀다쓰기",
+        "ko": "비장의무기",
         "method": "tutor",
         "level": 0
       },
@@ -19965,7 +19965,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -20049,7 +20049,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -20260,13 +20260,13 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "machine",
         "level": 0
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -20675,13 +20675,13 @@
       },
       {
         "en": "megahorn",
-        "ko": "메가폰",
+        "ko": "메가혼",
         "method": "machine",
         "level": 0
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "machine",
         "level": 0
       },
@@ -20735,7 +20735,7 @@
       },
       {
         "en": "bounce",
-        "ko": "뛰어오르다",
+        "ko": "뛰어오르기",
         "method": "machine",
         "level": 0
       },
@@ -20789,7 +20789,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -21361,7 +21361,7 @@
       },
       {
         "en": "bullet_seed",
-        "ko": "기관총",
+        "ko": "씨기관총",
         "method": "machine",
         "level": 0
       },
@@ -21379,13 +21379,13 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
       {
         "en": "rock_blast",
-        "ko": "락블레스트",
+        "ko": "록블라스트",
         "method": "machine",
         "level": 0
       },
@@ -21824,7 +21824,7 @@
       },
       {
         "en": "blast_burn",
-        "ko": "블러스트번",
+        "ko": "블라스트번",
         "method": "machine",
         "level": 0
       },
@@ -21914,7 +21914,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -22034,7 +22034,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "egg",
         "level": 0
       },
@@ -22305,7 +22305,7 @@
       },
       {
         "en": "air_cutter",
-        "ko": "에어컷터",
+        "ko": "에어커터",
         "method": "machine",
         "level": 0
       },
@@ -22371,7 +22371,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -22973,7 +22973,7 @@
       },
       {
         "en": "bullet_seed",
-        "ko": "기관총",
+        "ko": "씨기관총",
         "method": "machine",
         "level": 0
       },
@@ -23310,13 +23310,13 @@
       },
       {
         "en": "dragon_claw",
-        "ko": "드래곤크루",
+        "ko": "드래곤클로",
         "method": "machine",
         "level": 0
       },
       {
         "en": "rock_blast",
-        "ko": "락블레스트",
+        "ko": "록블라스트",
         "method": "machine",
         "level": 0
       },
@@ -23695,7 +23695,7 @@
       },
       {
         "en": "rock_blast",
-        "ko": "락블레스트",
+        "ko": "록블라스트",
         "method": "machine",
         "level": 0
       },
@@ -23876,7 +23876,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "level-up",
         "level": 28
       },
@@ -23900,7 +23900,7 @@
       },
       {
         "en": "bounce",
-        "ko": "뛰어오르다",
+        "ko": "뛰어오르기",
         "method": "level-up",
         "level": 48
       },
@@ -24044,7 +24044,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -24544,7 +24544,7 @@
       },
       {
         "en": "dragon_claw",
-        "ko": "드래곤크루",
+        "ko": "드래곤클로",
         "method": "level-up",
         "level": 42
       },
@@ -24712,7 +24712,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -24754,7 +24754,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -24929,13 +24929,13 @@
       },
       {
         "en": "quick_guard",
-        "ko": "퍼스트가드",
+        "ko": "패스트가드",
         "method": "level-up",
         "level": 32
       },
       {
         "en": "bone_rush",
-        "ko": "본러쉬",
+        "ko": "본러시",
         "method": "level-up",
         "level": 36
       },
@@ -25199,7 +25199,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -25446,7 +25446,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -25711,13 +25711,13 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "machine",
         "level": 0
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -25789,7 +25789,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -25843,7 +25843,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -26132,7 +26132,7 @@
       },
       {
         "en": "bullet_seed",
-        "ko": "기관총",
+        "ko": "씨기관총",
         "method": "machine",
         "level": 0
       },
@@ -26433,7 +26433,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "machine",
         "level": 0
       },
@@ -26547,7 +26547,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -26644,7 +26644,7 @@
       },
       {
         "en": "rock_blast",
-        "ko": "락블레스트",
+        "ko": "록블라스트",
         "method": "level-up",
         "level": 30
       },
@@ -26668,7 +26668,7 @@
       },
       {
         "en": "megahorn",
-        "ko": "메가폰",
+        "ko": "메가혼",
         "method": "level-up",
         "level": 61
       },
@@ -26926,7 +26926,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -26974,7 +26974,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -27040,7 +27040,7 @@
       },
       {
         "en": "smart_strike",
-        "ko": "스마트호른",
+        "ko": "스마트혼",
         "method": "machine",
         "level": 0
       },
@@ -27149,7 +27149,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "level-up",
         "level": 1
       },
@@ -27161,7 +27161,7 @@
       },
       {
         "en": "covet",
-        "ko": "탐내다",
+        "ko": "탐내기",
         "method": "level-up",
         "level": 1
       },
@@ -27221,7 +27221,7 @@
       },
       {
         "en": "last_resort",
-        "ko": "뒀다쓰기",
+        "ko": "비장의무기",
         "method": "level-up",
         "level": 55
       },
@@ -27341,7 +27341,7 @@
       },
       {
         "en": "bullet_seed",
-        "ko": "기관총",
+        "ko": "씨기관총",
         "method": "machine",
         "level": 0
       },
@@ -27353,7 +27353,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -27456,7 +27456,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "level-up",
         "level": 1
       },
@@ -27468,7 +27468,7 @@
       },
       {
         "en": "covet",
-        "ko": "탐내다",
+        "ko": "탐내기",
         "method": "level-up",
         "level": 1
       },
@@ -27534,7 +27534,7 @@
       },
       {
         "en": "last_resort",
-        "ko": "뒀다쓰기",
+        "ko": "비장의무기",
         "method": "level-up",
         "level": 55
       },
@@ -27666,7 +27666,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -27799,7 +27799,7 @@
       },
       {
         "en": "crabhammer",
-        "ko": "찝게햄머",
+        "ko": "집게해머",
         "method": "level-up",
         "level": 45
       },
@@ -27907,7 +27907,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "machine",
         "level": 0
       },
@@ -27967,7 +27967,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -28334,13 +28334,13 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
       {
         "en": "rock_blast",
-        "ko": "락블레스트",
+        "ko": "록블라스트",
         "method": "machine",
         "level": 0
       },
@@ -28605,7 +28605,7 @@
       },
       {
         "en": "quick_guard",
-        "ko": "퍼스트가드",
+        "ko": "패스트가드",
         "method": "level-up",
         "level": 56
       },
@@ -28755,7 +28755,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -28911,7 +28911,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -29790,7 +29790,7 @@
       },
       {
         "en": "bullet_seed",
-        "ko": "기관총",
+        "ko": "씨기관총",
         "method": "machine",
         "level": 0
       },
@@ -30151,7 +30151,7 @@
       },
       {
         "en": "blast_burn",
-        "ko": "블러스트번",
+        "ko": "블라스트번",
         "method": "machine",
         "level": 0
       },
@@ -30362,7 +30362,7 @@
     "moves": [
       {
         "en": "megahorn",
-        "ko": "메가폰",
+        "ko": "메가혼",
         "method": "level-up",
         "level": 1
       },
@@ -30404,7 +30404,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "level-up",
         "level": 39
       },
@@ -30626,7 +30626,7 @@
       },
       {
         "en": "smart_strike",
-        "ko": "스마트호른",
+        "ko": "스마트혼",
         "method": "machine",
         "level": 0
       },
@@ -30783,7 +30783,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "level-up",
         "level": 46
       },
@@ -30987,13 +30987,13 @@
       },
       {
         "en": "covet",
-        "ko": "탐내다",
+        "ko": "탐내기",
         "method": "tutor",
         "level": 0
       },
       {
         "en": "last_resort",
-        "ko": "뒀다쓰기",
+        "ko": "비장의무기",
         "method": "tutor",
         "level": 0
       },
@@ -31150,13 +31150,13 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "machine",
         "level": 0
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -31246,7 +31246,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -31463,7 +31463,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -31571,7 +31571,7 @@
       },
       {
         "en": "covet",
-        "ko": "탐내다",
+        "ko": "탐내기",
         "method": "tutor",
         "level": 0
       },
@@ -31764,7 +31764,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -31878,7 +31878,7 @@
       },
       {
         "en": "covet",
-        "ko": "탐내다",
+        "ko": "탐내기",
         "method": "tutor",
         "level": 0
       },
@@ -32065,7 +32065,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -32173,7 +32173,7 @@
       },
       {
         "en": "covet",
-        "ko": "탐내다",
+        "ko": "탐내기",
         "method": "tutor",
         "level": 0
       },
@@ -32240,7 +32240,7 @@
       },
       {
         "en": "crush_claw",
-        "ko": "브레이크크루",
+        "ko": "브레이크클로",
         "method": "level-up",
         "level": 24
       },
@@ -32390,13 +32390,13 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
       {
         "en": "rock_blast",
-        "ko": "락블레스트",
+        "ko": "록블라스트",
         "method": "machine",
         "level": 0
       },
@@ -32438,7 +32438,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -32474,7 +32474,7 @@
       },
       {
         "en": "smart_strike",
-        "ko": "스마트호른",
+        "ko": "스마트혼",
         "method": "machine",
         "level": 0
       },
@@ -32577,7 +32577,7 @@
       },
       {
         "en": "last_resort",
-        "ko": "뒀다쓰기",
+        "ko": "비장의무기",
         "method": "level-up",
         "level": 60
       },
@@ -32763,7 +32763,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -33130,7 +33130,7 @@
       },
       {
         "en": "rock_blast",
-        "ko": "락블레스트",
+        "ko": "록블라스트",
         "method": "machine",
         "level": 0
       },
@@ -33413,7 +33413,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -33768,7 +33768,7 @@
       },
       {
         "en": "dragon_claw",
-        "ko": "드래곤크루",
+        "ko": "드래곤클로",
         "method": "machine",
         "level": 0
       },
@@ -33780,7 +33780,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -33828,7 +33828,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -33955,7 +33955,7 @@
     "moves": [
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "level-up",
         "level": 0
       },
@@ -34159,13 +34159,13 @@
       },
       {
         "en": "power_swap",
-        "ko": "파워스웹",
+        "ko": "파워스왑",
         "method": "machine",
         "level": 0
       },
       {
         "en": "guard_swap",
-        "ko": "가드스웹",
+        "ko": "가드스왑",
         "method": "machine",
         "level": 0
       },
@@ -34454,7 +34454,7 @@
       },
       {
         "en": "rock_blast",
-        "ko": "락블레스트",
+        "ko": "록블라스트",
         "method": "machine",
         "level": 0
       },
@@ -34839,7 +34839,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -35062,7 +35062,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -35490,7 +35490,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "level-up",
         "level": 35
       },
@@ -35592,7 +35592,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "machine",
         "level": 0
       },
@@ -35682,7 +35682,7 @@
       },
       {
         "en": "speed_swap",
-        "ko": "스피드스웹",
+        "ko": "스피드스왑",
         "method": "machine",
         "level": 0
       },
@@ -35694,7 +35694,7 @@
       },
       {
         "en": "covet",
-        "ko": "탐내다",
+        "ko": "탐내기",
         "method": "egg",
         "level": 0
       },
@@ -36230,7 +36230,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -36302,7 +36302,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -36350,7 +36350,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -36453,7 +36453,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "level-up",
         "level": 10
       },
@@ -36477,7 +36477,7 @@
       },
       {
         "en": "bounce",
-        "ko": "뛰어오르다",
+        "ko": "뛰어오르기",
         "method": "level-up",
         "level": 35
       },
@@ -37626,7 +37626,7 @@
       },
       {
         "en": "bug_bite",
-        "ko": "벌레먹음",
+        "ko": "벌레먹기",
         "method": "level-up",
         "level": 24
       },
@@ -37782,7 +37782,7 @@
       },
       {
         "en": "air_cutter",
-        "ko": "에어컷터",
+        "ko": "에어커터",
         "method": "machine",
         "level": 0
       },
@@ -37927,7 +37927,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "level-up",
         "level": 41
       },
@@ -38149,7 +38149,7 @@
       },
       {
         "en": "bullet_seed",
-        "ko": "기관총",
+        "ko": "씨기관총",
         "method": "machine",
         "level": 0
       },
@@ -38167,7 +38167,7 @@
       },
       {
         "en": "dragon_claw",
-        "ko": "드래곤크루",
+        "ko": "드래곤클로",
         "method": "machine",
         "level": 0
       },
@@ -38221,7 +38221,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -38353,7 +38353,7 @@
       },
       {
         "en": "quick_guard",
-        "ko": "퍼스트가드",
+        "ko": "패스트가드",
         "method": "egg",
         "level": 0
       }
@@ -38390,7 +38390,7 @@
       },
       {
         "en": "howl",
-        "ko": "멀리짖음",
+        "ko": "멀리짖기",
         "method": "level-up",
         "level": 1
       },
@@ -38564,7 +38564,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -38618,7 +38618,7 @@
       },
       {
         "en": "blast_burn",
-        "ko": "블러스트번",
+        "ko": "블라스트번",
         "method": "machine",
         "level": 0
       },
@@ -38630,7 +38630,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -38997,7 +38997,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -39124,7 +39124,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "level-up",
         "level": 12
       },
@@ -39148,7 +39148,7 @@
       },
       {
         "en": "bounce",
-        "ko": "뛰어오르다",
+        "ko": "뛰어오르기",
         "method": "level-up",
         "level": 33
       },
@@ -39653,7 +39653,7 @@
       },
       {
         "en": "air_cutter",
-        "ko": "에어컷터",
+        "ko": "에어커터",
         "method": "machine",
         "level": 0
       },
@@ -39864,7 +39864,7 @@
       },
       {
         "en": "air_cutter",
-        "ko": "에어컷터",
+        "ko": "에어커터",
         "method": "machine",
         "level": 0
       },
@@ -39906,7 +39906,7 @@
       },
       {
         "en": "bug_bite",
-        "ko": "벌레먹음",
+        "ko": "벌레먹기",
         "method": "machine",
         "level": 0
       },
@@ -40051,7 +40051,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "machine",
         "level": 0
       },
@@ -40292,7 +40292,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "machine",
         "level": 0
       },
@@ -40689,7 +40689,7 @@
       },
       {
         "en": "dragon_claw",
-        "ko": "드래곤크루",
+        "ko": "드래곤클로",
         "method": "machine",
         "level": 0
       },
@@ -40755,7 +40755,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -41056,7 +41056,7 @@
       },
       {
         "en": "last_resort",
-        "ko": "뒀다쓰기",
+        "ko": "비장의무기",
         "method": "tutor",
         "level": 0
       },
@@ -41074,26 +41074,32 @@
     "en": "meowstic",
     "moves": [
       {
+        "en": "mean_look",
+        "ko": "검은눈빛",
+        "method": "level-up",
+        "level": 0
+      },
+      {
         "en": "fake_out",
         "ko": "속이기",
         "method": "level-up",
-        "level": 1
+        "level": 0
       },
       {
-        "en": "stored_power",
-        "ko": "어시스트파워",
+        "en": "helping_hand",
+        "ko": "도우미",
         "method": "level-up",
         "level": 12
       },
       {
-        "en": "charge_beam",
-        "ko": "차지빔",
+        "en": "charm",
+        "ko": "애교부리기",
         "method": "level-up",
         "level": 15
       },
       {
         "en": "covet",
-        "ko": "탐내다",
+        "ko": "탐내기",
         "method": "level-up",
         "level": 18
       },
@@ -41128,14 +41134,14 @@
         "level": 39
       },
       {
-        "en": "extrasensory",
-        "ko": "신통력",
+        "en": "imprison",
+        "ko": "봉인",
         "method": "level-up",
         "level": 44
       },
       {
-        "en": "shadow_ball",
-        "ko": "섀도볼",
+        "en": "quick_guard",
+        "ko": "패스트가드",
         "method": "level-up",
         "level": 49
       },
@@ -41146,116 +41152,14 @@
         "level": 54
       },
       {
-        "en": "future_sight",
-        "ko": "미래예지",
+        "en": "misty_terrain",
+        "ko": "미스트필드",
         "method": "level-up",
         "level": 59
       },
       {
-        "en": "hyper_beam",
-        "ko": "파괴광선",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "thunderbolt",
-        "ko": "10만볼트",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "thunder_wave",
-        "ko": "전기자석파",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "dig",
-        "ko": "구멍파기",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "rest",
-        "ko": "잠자기",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "substitute",
-        "ko": "대타출동",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "protect",
-        "ko": "방어",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "endure",
-        "ko": "버티기",
-        "method": "machine",
-        "level": 0
-      },
-      {
         "en": "charm",
         "ko": "애교부리기",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "sleep_talk",
-        "ko": "잠꼬대",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "baton_pass",
-        "ko": "바톤터치",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "rain_dance",
-        "ko": "비바라기",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "sunny_day",
-        "ko": "쾌청",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "psych_up",
-        "ko": "자기암시",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "facade",
-        "ko": "객기",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "helping_hand",
-        "ko": "도우미",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "trick",
-        "ko": "트릭",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "skill_swap",
-        "ko": "스킬스왑",
         "method": "machine",
         "level": 0
       },
@@ -41266,38 +41170,62 @@
         "level": 0
       },
       {
-        "en": "calm_mind",
-        "ko": "명상",
+        "en": "protect",
+        "ko": "방어",
         "method": "machine",
         "level": 0
       },
       {
-        "en": "gravity",
-        "ko": "중력",
+        "en": "trailblaze",
+        "ko": "개척하기",
         "method": "machine",
         "level": 0
       },
       {
-        "en": "dark_pulse",
-        "ko": "악의파동",
+        "en": "charge_beam",
+        "ko": "차지빔",
         "method": "machine",
         "level": 0
       },
       {
-        "en": "energy_ball",
-        "ko": "에너지볼",
+        "en": "facade",
+        "ko": "객기",
         "method": "machine",
         "level": 0
       },
       {
-        "en": "giga_impact",
-        "ko": "기가임팩트",
+        "en": "stored_power",
+        "ko": "어시스트파워",
         "method": "machine",
         "level": 0
       },
       {
-        "en": "nasty_plot",
-        "ko": "나쁜음모",
+        "en": "endure",
+        "ko": "버티기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "sunny_day",
+        "ko": "쾌청",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "rain_dance",
+        "ko": "비바라기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "psyshock",
+        "ko": "사이코쇼크",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "dig",
+        "ko": "구멍파기",
         "method": "machine",
         "level": 0
       },
@@ -41308,8 +41236,86 @@
         "level": 0
       },
       {
-        "en": "trick_room",
-        "ko": "트릭룸",
+        "en": "sleep_talk",
+        "ko": "잠꼬대",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "reflect",
+        "ko": "리플렉터",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "light_screen",
+        "ko": "빛의장막",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "thunder_wave",
+        "ko": "전기자석파",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "rest",
+        "ko": "잠자기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "imprison",
+        "ko": "봉인",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "dark_pulse",
+        "ko": "악의파동",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "skill_swap",
+        "ko": "스킬스왑",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "substitute",
+        "ko": "대타출동",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "trick",
+        "ko": "트릭",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "shadow_ball",
+        "ko": "섀도볼",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "energy_ball",
+        "ko": "에너지볼",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "psychic",
+        "ko": "사이코키네시스",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "thunderbolt",
+        "ko": "10만볼트",
         "method": "machine",
         "level": 0
       },
@@ -41320,20 +41326,74 @@
         "level": 0
       },
       {
+        "en": "calm_mind",
+        "ko": "명상",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "helping_hand",
+        "ko": "도우미",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "baton_pass",
+        "ko": "배턴터치",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "psychic_terrain",
         "ko": "사이코필드",
         "method": "machine",
         "level": 0
       },
       {
-        "en": "expanding_force",
-        "ko": "와이드포스",
+        "en": "misty_terrain",
+        "ko": "미스트필드",
         "method": "machine",
         "level": 0
       },
       {
-        "en": "trailblaze",
-        "ko": "개척하기",
+        "en": "nasty_plot",
+        "ko": "나쁜음모",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "giga_impact",
+        "ko": "기가임팩트",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "trick_room",
+        "ko": "트릭룸",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "hyper_beam",
+        "ko": "파괴광선",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "gravity",
+        "ko": "중력",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "psych_up",
+        "ko": "자기암시",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "expanding_force",
+        "ko": "와이드포스",
         "method": "machine",
         "level": 0
       },
@@ -41347,18 +41407,6 @@
         "en": "psychic_noise",
         "ko": "사이코노이즈",
         "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "yawn",
-        "ko": "하품",
-        "method": "egg",
-        "level": 0
-      },
-      {
-        "en": "tickle",
-        "ko": "간지르기",
-        "method": "egg",
         "level": 0
       }
     ]
@@ -41562,7 +41610,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -41761,7 +41809,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -42171,7 +42219,7 @@
       },
       {
         "en": "bounce",
-        "ko": "뛰어오르다",
+        "ko": "뛰어오르기",
         "method": "level-up",
         "level": 49
       },
@@ -42183,7 +42231,7 @@
       },
       {
         "en": "crabhammer",
-        "ko": "찝게햄머",
+        "ko": "집게해머",
         "method": "level-up",
         "level": 63
       },
@@ -42327,7 +42375,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -42779,7 +42827,7 @@
       },
       {
         "en": "dragon_claw",
-        "ko": "드래곤크루",
+        "ko": "드래곤클로",
         "method": "level-up",
         "level": 36
       },
@@ -42947,7 +42995,7 @@
       },
       {
         "en": "rock_blast",
-        "ko": "락블레스트",
+        "ko": "록블라스트",
         "method": "machine",
         "level": 0
       },
@@ -43104,7 +43152,7 @@
     "moves": [
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "level-up",
         "level": 1
       },
@@ -43314,7 +43362,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -43326,7 +43374,7 @@
       },
       {
         "en": "rock_blast",
-        "ko": "락블레스트",
+        "ko": "록블라스트",
         "method": "machine",
         "level": 0
       },
@@ -43423,7 +43471,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "level-up",
         "level": 1
       },
@@ -43435,7 +43483,7 @@
       },
       {
         "en": "covet",
-        "ko": "탐내다",
+        "ko": "탐내기",
         "method": "level-up",
         "level": 1
       },
@@ -43495,7 +43543,7 @@
       },
       {
         "en": "last_resort",
-        "ko": "뒀다쓰기",
+        "ko": "비장의무기",
         "method": "level-up",
         "level": 55
       },
@@ -43688,7 +43736,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "level-up",
         "level": 16
       },
@@ -43706,7 +43754,7 @@
       },
       {
         "en": "bounce",
-        "ko": "뛰어오르다",
+        "ko": "뛰어오르기",
         "method": "level-up",
         "level": 28
       },
@@ -43850,7 +43898,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "machine",
         "level": 0
       },
@@ -44060,7 +44108,7 @@
       },
       {
         "en": "quick_guard",
-        "ko": "퍼스트가드",
+        "ko": "패스트가드",
         "method": "egg",
         "level": 0
       }
@@ -44337,7 +44385,7 @@
       },
       {
         "en": "covet",
-        "ko": "탐내다",
+        "ko": "탐내기",
         "method": "egg",
         "level": 0
       },
@@ -44590,13 +44638,13 @@
       },
       {
         "en": "dragon_claw",
-        "ko": "드래곤크루",
+        "ko": "드래곤클로",
         "method": "machine",
         "level": 0
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -44753,7 +44801,7 @@
       },
       {
         "en": "last_resort",
-        "ko": "뒀다쓰기",
+        "ko": "비장의무기",
         "method": "level-up",
         "level": 52
       },
@@ -44940,7 +44988,7 @@
     "moves": [
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "level-up",
         "level": 0
       },
@@ -44976,7 +45024,7 @@
       },
       {
         "en": "horn_leech",
-        "ko": "우드호른",
+        "ko": "우드혼",
         "method": "level-up",
         "level": 28
       },
@@ -45620,7 +45668,7 @@
       },
       {
         "en": "moonlight",
-        "ko": "달의불빛",
+        "ko": "달빛",
         "method": "level-up",
         "level": 1
       },
@@ -45638,7 +45686,7 @@
       },
       {
         "en": "air_cutter",
-        "ko": "에어컷터",
+        "ko": "에어커터",
         "method": "level-up",
         "level": 24
       },
@@ -45848,7 +45896,7 @@
       },
       {
         "en": "dragon_claw",
-        "ko": "드래곤크루",
+        "ko": "드래곤클로",
         "method": "machine",
         "level": 0
       },
@@ -45896,7 +45944,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -46131,7 +46179,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "machine",
         "level": 0
       },
@@ -46191,7 +46239,7 @@
       },
       {
         "en": "air_cutter",
-        "ko": "에어컷터",
+        "ko": "에어커터",
         "method": "machine",
         "level": 0
       },
@@ -46203,7 +46251,7 @@
       },
       {
         "en": "bullet_seed",
-        "ko": "기관총",
+        "ko": "씨기관총",
         "method": "machine",
         "level": 0
       },
@@ -46275,7 +46323,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -46582,7 +46630,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "machine",
         "level": 0
       },
@@ -46654,7 +46702,7 @@
       },
       {
         "en": "blast_burn",
-        "ko": "블러스트번",
+        "ko": "블라스트번",
         "method": "machine",
         "level": 0
       },
@@ -46720,7 +46768,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -46865,7 +46913,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "level-up",
         "level": 30
       },
@@ -47190,7 +47238,7 @@
       },
       {
         "en": "rock_blast",
-        "ko": "락블레스트",
+        "ko": "록블라스트",
         "method": "level-up",
         "level": 1
       },
@@ -47220,7 +47268,7 @@
       },
       {
         "en": "bullet_seed",
-        "ko": "기관총",
+        "ko": "씨기관총",
         "method": "level-up",
         "level": 40
       },
@@ -47298,7 +47346,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -47358,7 +47406,7 @@
       },
       {
         "en": "air_cutter",
-        "ko": "에어컷터",
+        "ko": "에어커터",
         "method": "machine",
         "level": 0
       },
@@ -47695,7 +47743,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -47810,7 +47858,7 @@
       },
       {
         "en": "quick_guard",
-        "ko": "퍼스트가드",
+        "ko": "패스트가드",
         "method": "level-up",
         "level": 0
       },
@@ -47834,7 +47882,7 @@
       },
       {
         "en": "howl",
-        "ko": "멀리짖음",
+        "ko": "멀리짖기",
         "method": "level-up",
         "level": 16
       },
@@ -48020,7 +48068,7 @@
       },
       {
         "en": "rock_blast",
-        "ko": "락블레스트",
+        "ko": "록블라스트",
         "method": "machine",
         "level": 0
       },
@@ -48345,7 +48393,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -48586,7 +48634,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -48677,7 +48725,7 @@
       },
       {
         "en": "bug_bite",
-        "ko": "벌레먹음",
+        "ko": "벌레먹기",
         "method": "level-up",
         "level": 1
       },
@@ -48966,7 +49014,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "level-up",
         "level": 1
       },
@@ -48990,7 +49038,7 @@
       },
       {
         "en": "poison_fang",
-        "ko": "독엄니",
+        "ko": "맹독엄니",
         "method": "level-up",
         "level": 15
       },
@@ -49176,7 +49224,7 @@
       },
       {
         "en": "dragon_claw",
-        "ko": "드래곤크루",
+        "ko": "드래곤클로",
         "method": "machine",
         "level": 0
       },
@@ -49218,7 +49266,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -49477,7 +49525,7 @@
       },
       {
         "en": "bullet_seed",
-        "ko": "기관총",
+        "ko": "씨기관총",
         "method": "machine",
         "level": 0
       },
@@ -49766,7 +49814,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -49928,7 +49976,7 @@
       },
       {
         "en": "last_resort",
-        "ko": "뒀다쓰기",
+        "ko": "비장의무기",
         "method": "egg",
         "level": 0
       }
@@ -50079,7 +50127,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "machine",
         "level": 0
       },
@@ -50277,7 +50325,7 @@
       },
       {
         "en": "quick_guard",
-        "ko": "퍼스트가드",
+        "ko": "패스트가드",
         "method": "egg",
         "level": 0
       }
@@ -50530,7 +50578,7 @@
       },
       {
         "en": "dragon_claw",
-        "ko": "드래곤크루",
+        "ko": "드래곤클로",
         "method": "machine",
         "level": 0
       },
@@ -50572,7 +50620,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -50699,7 +50747,7 @@
       },
       {
         "en": "dragon_claw",
-        "ko": "드래곤크루",
+        "ko": "드래곤클로",
         "method": "level-up",
         "level": 32
       },
@@ -50975,7 +51023,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -51264,7 +51312,7 @@
       },
       {
         "en": "air_cutter",
-        "ko": "에어컷터",
+        "ko": "에어커터",
         "method": "machine",
         "level": 0
       },
@@ -51523,7 +51571,7 @@
       },
       {
         "en": "bullet_seed",
-        "ko": "기관총",
+        "ko": "씨기관총",
         "method": "machine",
         "level": 0
       },
@@ -51662,7 +51710,7 @@
       },
       {
         "en": "bullet_seed",
-        "ko": "기관총",
+        "ko": "씨기관총",
         "method": "level-up",
         "level": 20
       },
@@ -52065,13 +52113,13 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
       {
         "en": "rock_blast",
-        "ko": "락블레스트",
+        "ko": "록블라스트",
         "method": "machine",
         "level": 0
       },
@@ -52318,7 +52366,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "machine",
         "level": 0
       },
@@ -52565,7 +52613,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "machine",
         "level": 0
       },
@@ -52637,7 +52685,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -53071,7 +53119,7 @@
     "moves": [
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "level-up",
         "level": 0
       },
@@ -53311,7 +53359,7 @@
       },
       {
         "en": "rock_blast",
-        "ko": "락블레스트",
+        "ko": "록블라스트",
         "method": "machine",
         "level": 0
       },
@@ -53323,13 +53371,13 @@
       },
       {
         "en": "power_swap",
-        "ko": "파워스웹",
+        "ko": "파워스왑",
         "method": "machine",
         "level": 0
       },
       {
         "en": "guard_swap",
-        "ko": "가드스웹",
+        "ko": "가드스왑",
         "method": "machine",
         "level": 0
       },
@@ -53594,7 +53642,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -53696,7 +53744,7 @@
       },
       {
         "en": "last_resort",
-        "ko": "뒀다쓰기",
+        "ko": "비장의무기",
         "method": "egg",
         "level": 0
       },
@@ -53805,7 +53853,7 @@
       },
       {
         "en": "last_resort",
-        "ko": "뒀다쓰기",
+        "ko": "비장의무기",
         "method": "level-up",
         "level": 78
       },
@@ -53943,7 +53991,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "machine",
         "level": 0
       },
@@ -53979,7 +54027,7 @@
       },
       {
         "en": "dragon_claw",
-        "ko": "드래곤크루",
+        "ko": "드래곤클로",
         "method": "machine",
         "level": 0
       },
@@ -54094,7 +54142,7 @@
       },
       {
         "en": "megahorn",
-        "ko": "메가폰",
+        "ko": "메가혼",
         "method": "level-up",
         "level": 62
       },
@@ -54527,7 +54575,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "machine",
         "level": 0
       },
@@ -54557,7 +54605,7 @@
       },
       {
         "en": "air_cutter",
-        "ko": "에어컷터",
+        "ko": "에어커터",
         "method": "machine",
         "level": 0
       },
@@ -54575,7 +54623,7 @@
       },
       {
         "en": "rock_blast",
-        "ko": "락블레스트",
+        "ko": "록블라스트",
         "method": "machine",
         "level": 0
       },
@@ -54635,7 +54683,7 @@
       },
       {
         "en": "bug_bite",
-        "ko": "벌레먹음",
+        "ko": "벌레먹기",
         "method": "machine",
         "level": 0
       },
@@ -54894,7 +54942,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
@@ -55225,7 +55273,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -55514,7 +55562,7 @@
       },
       {
         "en": "bullet_seed",
-        "ko": "기관총",
+        "ko": "씨기관총",
         "method": "machine",
         "level": 0
       },
@@ -55574,7 +55622,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -55845,7 +55893,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -55887,7 +55935,7 @@
       },
       {
         "en": "blast_burn",
-        "ko": "블러스트번",
+        "ko": "블라스트번",
         "method": "machine",
         "level": 0
       },
@@ -55917,7 +55965,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -56152,13 +56200,13 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "machine",
         "level": 0
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -56224,7 +56272,7 @@
       },
       {
         "en": "air_cutter",
-        "ko": "에어컷터",
+        "ko": "에어커터",
         "method": "machine",
         "level": 0
       },
@@ -56339,7 +56387,7 @@
       },
       {
         "en": "rock_blast",
-        "ko": "락블레스트",
+        "ko": "록블라스트",
         "method": "level-up",
         "level": 1
       },
@@ -56351,7 +56399,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "level-up",
         "level": 7
       },
@@ -56953,7 +57001,7 @@
     "moves": [
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "level-up",
         "level": 0
       },
@@ -57157,7 +57205,7 @@
       },
       {
         "en": "dragon_claw",
-        "ko": "드래곤크루",
+        "ko": "드래곤클로",
         "method": "machine",
         "level": 0
       },
@@ -57247,7 +57295,7 @@
       },
       {
         "en": "quick_guard",
-        "ko": "퍼스트가드",
+        "ko": "패스트가드",
         "method": "egg",
         "level": 0
       },
@@ -57284,7 +57332,7 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "level-up",
         "level": 24
       },
@@ -57531,7 +57579,7 @@
       },
       {
         "en": "bullet_seed",
-        "ko": "기관총",
+        "ko": "씨기관총",
         "method": "level-up",
         "level": 21
       },
@@ -57802,7 +57850,7 @@
       },
       {
         "en": "last_resort",
-        "ko": "뒀다쓰기",
+        "ko": "비장의무기",
         "method": "level-up",
         "level": 54
       },
@@ -57904,7 +57952,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "machine",
         "level": 0
       },
@@ -58085,7 +58133,7 @@
       },
       {
         "en": "covet",
-        "ko": "탐내다",
+        "ko": "탐내기",
         "method": "level-up",
         "level": 11
       },
@@ -58211,7 +58259,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "machine",
         "level": 0
       },
@@ -58380,7 +58428,7 @@
       },
       {
         "en": "encore",
-        "ko": "앵콜",
+        "ko": "앙코르",
         "method": "level-up",
         "level": 34
       },
@@ -58819,13 +58867,13 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
       {
         "en": "rock_blast",
-        "ko": "락블레스트",
+        "ko": "록블라스트",
         "method": "machine",
         "level": 0
       },
@@ -59114,13 +59162,13 @@
       },
       {
         "en": "mud_shot",
-        "ko": "머드숏",
+        "ko": "머드샷",
         "method": "machine",
         "level": 0
       },
       {
         "en": "rock_blast",
-        "ko": "락블레스트",
+        "ko": "록블라스트",
         "method": "machine",
         "level": 0
       },
@@ -59181,13 +59229,13 @@
     "moves": [
       {
         "en": "power_swap",
-        "ko": "파워스웹",
+        "ko": "파워스왑",
         "method": "level-up",
         "level": 1
       },
       {
         "en": "guard_swap",
-        "ko": "가드스웹",
+        "ko": "가드스왑",
         "method": "level-up",
         "level": 1
       },
@@ -59223,7 +59271,7 @@
       },
       {
         "en": "baton_pass",
-        "ko": "바톤터치",
+        "ko": "배턴터치",
         "method": "level-up",
         "level": 41
       },
@@ -59800,7 +59848,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "섀도크루",
+        "ko": "새도클로",
         "method": "machine",
         "level": 0
       },
@@ -60126,7 +60174,7 @@
       },
       {
         "en": "dragon_claw",
-        "ko": "드래곤크루",
+        "ko": "드래곤클로",
         "method": "level-up",
         "level": 48
       },
@@ -60439,7 +60487,7 @@
       },
       {
         "en": "bullet_seed",
-        "ko": "기관총",
+        "ko": "씨기관총",
         "method": "level-up",
         "level": 20
       },
@@ -60625,7 +60673,7 @@
       },
       {
         "en": "bug_bite",
-        "ko": "벌레먹음",
+        "ko": "벌레먹기",
         "method": "machine",
         "level": 0
       },
