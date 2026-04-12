@@ -12080,9 +12080,9 @@
     "is_mythical": true,
     "forms": [
       {
-        "type": "alt",
+        "type": "base",
         "name_ko": "테오키스 노말폼",
-        "name_en": "deoxys_normal",
+        "name_en": "deoxys",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__386.png",
         "types": [
           "에스퍼"
@@ -12779,9 +12779,9 @@
     ],
     "forms": [
       {
-        "type": "alt",
+        "type": "base",
         "name_ko": "초록도롱",
-        "name_en": "burmy_plant",
+        "name_en": "burmy",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__412.png",
         "types": [
           "벌레"
@@ -12869,9 +12869,9 @@
     ],
     "forms": [
       {
-        "type": "alt",
+        "type": "base",
         "name_ko": "초록도롱마담",
-        "name_en": "wormadam_plant",
+        "name_en": "wormadam",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__413.png",
         "types": [
           "벌레",
@@ -15042,9 +15042,9 @@
     "is_legendary": true,
     "forms": [
       {
-        "type": "alt",
+        "type": "base",
         "name_ko": "어나더폼 기라티나",
-        "name_en": "giratina_altered",
+        "name_en": "giratina",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__487.png",
         "types": [
           "고스트",
@@ -15186,9 +15186,9 @@
     "is_mythical": true,
     "forms": [
       {
-        "type": "alt",
+        "type": "base",
         "name_ko": "쉐이미 랜드폼",
-        "name_en": "shaymin_land",
+        "name_en": "shaymin",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__492.png",
         "types": [
           "풀"
@@ -16832,9 +16832,9 @@
     ],
     "forms": [
       {
-        "type": "alt",
+        "type": "base",
         "name_ko": "적색근의 모습",
-        "name_en": "basculin_red_striped",
+        "name_en": "basculin",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__550.png",
         "types": [
           "물"
@@ -18322,9 +18322,9 @@
     ],
     "forms": [
       {
-        "type": "alt",
+        "type": "base",
         "name_ko": "탱그릴 (수컷)",
-        "name_en": "frillish_male",
+        "name_en": "frillish",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__592.png",
         "types": [
           "물",
@@ -18406,9 +18406,9 @@
     ],
     "forms": [
       {
-        "type": "alt",
+        "type": "base",
         "name_ko": "탱탱겔 (수컷)",
-        "name_en": "jellicent_male",
+        "name_en": "jellicent",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__593.png",
         "types": [
           "물",
@@ -19752,9 +19752,9 @@
     "is_legendary": true,
     "forms": [
       {
-        "type": "alt",
+        "type": "base",
         "name_ko": "토네로스 화신폼",
-        "name_en": "tornadus_incarnate",
+        "name_en": "tornadus",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__641.png",
         "types": [
           "비행"
@@ -19815,9 +19815,9 @@
     "is_legendary": true,
     "forms": [
       {
-        "type": "alt",
+        "type": "base",
         "name_ko": "볼트로스 화신폼",
-        "name_en": "thundurus_incarnate",
+        "name_en": "thundurus",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__642.png",
         "types": [
           "전기",
@@ -19918,9 +19918,9 @@
     "is_legendary": true,
     "forms": [
       {
-        "type": "alt",
+        "type": "base",
         "name_ko": "랜드로스 화신폼",
-        "name_en": "landorus_incarnate",
+        "name_en": "landorus",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__645.png",
         "types": [
           "땅",
@@ -20030,9 +20030,9 @@
     ],
     "forms": [
       {
-        "type": "alt",
+        "type": "base",
         "name_ko": "케르디오 평상시",
-        "name_en": "keldeo_ordinary",
+        "name_en": "keldeo",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__647.png",
         "types": [
           "물",
@@ -20087,9 +20087,9 @@
     "is_mythical": true,
     "forms": [
       {
-        "type": "alt",
+        "type": "base",
         "name_ko": "메로엣타 보이스폼",
-        "name_en": "meloetta_aria",
+        "name_en": "meloetta",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__648.png",
         "types": [
           "노말",
@@ -20970,9 +20970,9 @@
     ],
     "forms": [
       {
-        "type": "alt",
+        "type": "base",
         "name_ko": "냐오닉스 (수컷)",
-        "name_en": "meowstic_male",
+        "name_en": "meowstic",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__678.png",
         "types": [
           "에스퍼"
@@ -21094,9 +21094,9 @@
     ],
     "forms": [
       {
-        "type": "alt",
+        "type": "base",
         "name_ko": "킬가르도 실드폼",
-        "name_en": "aegislash_shield",
+        "name_en": "aegislash",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__681.png",
         "types": [
           "강철",
@@ -22194,9 +22194,9 @@
     ],
     "forms": [
       {
-        "type": "alt",
+        "type": "base",
         "name_ko": "지가르데 50% 폼",
-        "name_en": "zygarde_50",
+        "name_en": "zygarde",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__718.png",
         "types": [
           "드래곤",
@@ -22863,9 +22863,9 @@
     ],
     "forms": [
       {
-        "type": "alt",
+        "type": "base",
         "name_ko": "이글이글스타일",
-        "name_en": "oricorio_baile",
+        "name_en": "oricorio",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__741.png",
         "types": [
           "불꽃",
@@ -23043,9 +23043,9 @@
     ],
     "forms": [
       {
-        "type": "alt",
+        "type": "base",
         "name_ko": "루가루암 한낮의 모습",
-        "name_en": "lycanroc_midday",
+        "name_en": "lycanroc",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__745.png",
         "types": [
           "바위"
@@ -23130,9 +23130,9 @@
     ],
     "forms": [
       {
-        "type": "alt",
+        "type": "base",
         "name_ko": "약어리 단독의 모습",
-        "name_en": "wishiwashi_solo",
+        "name_en": "wishiwashi",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__746.png",
         "types": [
           "물"
@@ -25977,9 +25977,9 @@
     ],
     "forms": [
       {
-        "type": "alt",
+        "type": "base",
         "name_ko": "스트린더 하이한 모습",
-        "name_en": "toxtricity_amped",
+        "name_en": "toxtricity",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__849.png",
         "types": [
           "전기",
@@ -26836,9 +26836,9 @@
     ],
     "forms": [
       {
-        "type": "alt",
+        "type": "base",
         "name_ko": "에써르 수컷",
-        "name_en": "indeedee_male",
+        "name_en": "indeedee",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__876.png",
         "types": [
           "에스퍼",
@@ -27375,9 +27375,9 @@
     ],
     "forms": [
       {
-        "type": "alt",
+        "type": "base",
         "name_ko": "우라오스 (일격의 태세)",
-        "name_en": "urshifu_single_strike",
+        "name_en": "urshifu",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__892.png",
         "types": [
           "격투",
@@ -27747,9 +27747,9 @@
     ],
     "forms": [
       {
-        "type": "alt",
+        "type": "base",
         "name_ko": "대쓰여너 (수컷)",
-        "name_en": "basculegion_male",
+        "name_en": "basculegion",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__902.png",
         "types": [
           "물",
@@ -27889,9 +27889,9 @@
     "is_legendary": true,
     "forms": [
       {
-        "type": "alt",
+        "type": "base",
         "name_ko": "러브로스 화신폼",
-        "name_en": "enamorus_incarnate",
+        "name_en": "enamorus",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__905.png",
         "types": [
           "페어리",
@@ -28187,9 +28187,9 @@
     ],
     "forms": [
       {
-        "type": "alt",
+        "type": "base",
         "name_ko": "퍼퓨돈 (수컷)",
-        "name_en": "oinkologne_male",
+        "name_en": "oinkologne",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__916.png",
         "types": [
           "노말"
@@ -29458,9 +29458,9 @@
     ],
     "forms": [
       {
-        "type": "alt",
+        "type": "base",
         "name_ko": "돌핀맨 (나이브폼)",
-        "name_en": "palafin_zero",
+        "name_en": "palafin",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__964.png",
         "types": [
           "물"
@@ -29846,9 +29846,9 @@
     ],
     "forms": [
       {
-        "type": "alt",
+        "type": "base",
         "name_ko": "싸리용 젖힌 모습",
-        "name_en": "tatsugiri_curly",
+        "name_en": "tatsugiri",
         "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__978.png",
         "types": [
           "드래곤",
