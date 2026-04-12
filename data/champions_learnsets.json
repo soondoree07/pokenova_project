@@ -50335,7 +50335,344 @@
     "id": 778,
     "ko": "따라큐",
     "en": "mimikyu",
-    "moves": []
+    "moves": [
+      {
+        "en": "wood_hammer",
+        "ko": "우드해머",
+        "method": "level-up",
+        "level": 0
+      },
+      {
+        "en": "copycat",
+        "ko": "흉내쟁이",
+        "method": "level-up",
+        "level": 0
+      },
+      {
+        "en": "shadow_sneak",
+        "ko": "야습",
+        "method": "level-up",
+        "level": 6
+      },
+      {
+        "en": "double_team",
+        "ko": "그림자분신",
+        "method": "level-up",
+        "level": 12
+      },
+      {
+        "en": "baby_doll_eyes",
+        "ko": "초롱초롱눈동자",
+        "method": "level-up",
+        "level": 18
+      },
+      {
+        "en": "shadow_claw",
+        "ko": "새도클로",
+        "method": "level-up",
+        "level": 42
+      },
+      {
+        "en": "charm",
+        "ko": "애교부리기",
+        "method": "level-up",
+        "level": 48
+      },
+      {
+        "en": "play_rough",
+        "ko": "치근거리기",
+        "method": "level-up",
+        "level": 54
+      },
+      {
+        "en": "pain_split",
+        "ko": "아픔나누기",
+        "method": "level-up",
+        "level": 60
+      },
+      {
+        "en": "charm",
+        "ko": "애교부리기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "protect",
+        "ko": "방어",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "confuse_ray",
+        "ko": "이상한빛",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "thief",
+        "ko": "도둑질",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "trailblaze",
+        "ko": "개척하기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "pounce",
+        "ko": "달려들기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "facade",
+        "ko": "객기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "hex",
+        "ko": "병상첨병",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "draining_kiss",
+        "ko": "드레인키스",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "night_shade",
+        "ko": "나이트헤드",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "endure",
+        "ko": "버티기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "sunny_day",
+        "ko": "쾌청",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "rain_dance",
+        "ko": "비바라기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "shadow_claw",
+        "ko": "새도클로",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "bulk_up",
+        "ko": "벌크업",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "sleep_talk",
+        "ko": "잠꼬대",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "drain_punch",
+        "ko": "드레인펀치",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "light_screen",
+        "ko": "빛의장막",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "dazzling_gleam",
+        "ko": "매지컬샤인",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "thunder_wave",
+        "ko": "전기자석파",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "rest",
+        "ko": "잠자기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "taunt",
+        "ko": "도발",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swords_dance",
+        "ko": "칼춤",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "dark_pulse",
+        "ko": "악의파동",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "leech_life",
+        "ko": "흡혈",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "substitute",
+        "ko": "대타출동",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "x_scissor",
+        "ko": "시저크로스",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "will_o_wisp",
+        "ko": "도깨비불",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "trick",
+        "ko": "트릭",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "giga_drain",
+        "ko": "기가드레인",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "shadow_ball",
+        "ko": "섀도볼",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "psychic",
+        "ko": "사이코키네시스",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "thunderbolt",
+        "ko": "10만볼트",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "play_rough",
+        "ko": "치근거리기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "misty_terrain",
+        "ko": "미스트필드",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "phantom_force",
+        "ko": "고스트다이브",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "giga_impact",
+        "ko": "기가임팩트",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "trick_room",
+        "ko": "트릭룸",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "hyper_beam",
+        "ko": "파괴광선",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "thunder",
+        "ko": "번개",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "spite",
+        "ko": "원한",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "burning_jealousy",
+        "ko": "질투의불꽃",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "pain_split",
+        "ko": "아픔나누기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "psych_up",
+        "ko": "자기암시",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "curse",
+        "ko": "저주",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "destiny_bond",
+        "ko": "길동무",
+        "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "curse",
+        "ko": "저주",
+        "method": "egg",
+        "level": 0
+      }
+    ]
   },
   {
     "id": 780,
@@ -55341,6 +55678,12 @@
         "en": "trailblaze",
         "ko": "개척하기",
         "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "fake_out",
+        "ko": "속이기",
+        "method": "level-up",
         "level": 0
       }
     ]
