@@ -326,20 +326,18 @@ let classFilter = '전체';
 const isGmax    = m => !!m.is_gmax;
 const isDynamax = m => !!m.is_dmax;
 
-// learnsets의 en은 하이픈, quiz_moves의 en은 공백 → 통일
-function moveKey(en) { return (en || '').toLowerCase().replace(/\s+/g, '-'); }
+// en 필드는 DB에서 이미 underscore 정규화됨
+function moveKey(en) { return en || ''; }
 
-// learnsets 키 → quiz_pokemon 매핑 (폼 포함, 특수 이름 처리)
+// learnsets 키 → quiz_pokemon 매핑 (폼 포함)
 let lsKeyToPokeMap = null;
 function buildLSKeyMap() {
   lsKeyToPokeMap = new Map();
   for (const p of allPokemon) {
-    const key = p.en.toLowerCase();
-    lsKeyToPokeMap.set(key, p);
-    lsKeyToPokeMap.set(key.replace(/\s/g, '-'), p); // 'mr. mime' → 'mr.-mime'
+    lsKeyToPokeMap.set(p.en, p);
     if (p.forms) {
       for (const f of p.forms) {
-        if (f.name_en) lsKeyToPokeMap.set(f.name_en.toLowerCase(), p);
+        if (f.name_en) lsKeyToPokeMap.set(f.name_en, p);
       }
     }
   }

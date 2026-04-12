@@ -28,7 +28,7 @@
   {
     "id": 3,
     "ko": "가속",
-    "en": "speed boost",
+    "en": "speed_boost",
     "desc": "조금씩 스피드가 높아진다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -41,7 +41,7 @@
   {
     "id": 4,
     "ko": "전투무장",
-    "en": "battle armor",
+    "en": "battle_armor",
     "desc": "상대의 공격이 급소에 맞지 않는다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -101,7 +101,7 @@
   {
     "id": 8,
     "ko": "모래숨기",
-    "en": "sand veil",
+    "en": "sand_veil",
     "desc": "모래바람으로 회피율이 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -131,7 +131,7 @@
   {
     "id": 10,
     "ko": "축전",
-    "en": "volt absorb",
+    "en": "volt_absorb",
     "desc": "전기를 받으면 회복한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -146,7 +146,7 @@
   {
     "id": 11,
     "ko": "저수",
-    "en": "water absorb",
+    "en": "water_absorb",
     "desc": "물을 받으면 회복한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -176,7 +176,7 @@
   {
     "id": 13,
     "ko": "날씨부정",
-    "en": "cloud nine",
+    "en": "cloud_nine",
     "desc": "날씨의 영향이 없어진다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -187,7 +187,7 @@
   {
     "id": 14,
     "ko": "복안",
-    "en": "compound eyes",
+    "en": "compound_eyes",
     "desc": "기술의 명중률이 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -217,7 +217,7 @@
   {
     "id": 16,
     "ko": "변색",
-    "en": "color change",
+    "en": "color_change",
     "desc": "받은 기술의 타입으로 변화한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -239,7 +239,7 @@
   {
     "id": 18,
     "ko": "타오르는불꽃",
-    "en": "flash fire",
+    "en": "flash_fire",
     "desc": "불꽃을 받으면 불꽃 기술이 강해진다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -254,7 +254,7 @@
   {
     "id": 19,
     "ko": "인분",
-    "en": "shield dust",
+    "en": "shield_dust",
     "desc": "기술의 추가 효과를 받지 않는다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -269,7 +269,7 @@
   {
     "id": 20,
     "ko": "마이페이스",
-    "en": "own tempo",
+    "en": "own_tempo",
     "desc": "혼란 상태가 되지 않는다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -284,7 +284,7 @@
   {
     "id": 21,
     "ko": "흡반",
-    "en": "suction cups",
+    "en": "suction_cups",
     "desc": "교체시키는 기술이나 도구의 효과를 받지 않는다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -313,7 +313,7 @@
   {
     "id": 23,
     "ko": "그림자밟기",
-    "en": "shadow tag",
+    "en": "shadow_tag",
     "desc": "상대의 그림자를 밟아 도망칠 수 없게 한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -325,7 +325,7 @@
   {
     "id": 24,
     "ko": "까칠한피부",
-    "en": "rough skin",
+    "en": "rough_skin",
     "desc": "접촉한 상대에게 상처를 입힌다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -337,7 +337,7 @@
   {
     "id": 25,
     "ko": "불가사의부적",
-    "en": "wonder guard",
+    "en": "wonder_guard",
     "desc": "효과가 굉장한 기술밖에 맞지 않는다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -364,7 +364,7 @@
   {
     "id": 27,
     "ko": "포자",
-    "en": "effect spore",
+    "en": "effect_spore",
     "desc": "스치면 독, 마비, 잠듦 상태가 될 때가 있다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -394,7 +394,7 @@
   {
     "id": 29,
     "ko": "클리어바디",
-    "en": "clear body",
+    "en": "clear_body",
     "desc": "상대가 능력을 떨어뜨릴 수 없다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -409,7 +409,7 @@
   {
     "id": 30,
     "ko": "자연회복",
-    "en": "natural cure",
+    "en": "natural_cure",
     "desc": "배틀에서 일단 물러나면 상태 이상이 회복된다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -424,7 +424,7 @@
   {
     "id": 31,
     "ko": "피뢰침",
-    "en": "lightning rod",
+    "en": "lightning_rod",
     "desc": "전기를 끌어모아 특수공격을 올린다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -439,7 +439,7 @@
   {
     "id": 32,
     "ko": "하늘의은총",
-    "en": "serene grace",
+    "en": "serene_grace",
     "desc": "기술의 추가 효과가 나오기 쉽다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -454,7 +454,7 @@
   {
     "id": 33,
     "ko": "쓱쓱",
-    "en": "swift swim",
+    "en": "swift_swim",
     "desc": "비가 올 때 스피드가 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -515,7 +515,7 @@
   {
     "id": 37,
     "ko": "천하장사",
-    "en": "huge power",
+    "en": "huge_power",
     "desc": "물리공격의 위력이 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -529,7 +529,7 @@
   {
     "id": 38,
     "ko": "독가시",
-    "en": "poison point",
+    "en": "poison_point",
     "desc": "접촉한 상대를 중독시킬 때가 있다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -544,7 +544,7 @@
   {
     "id": 39,
     "ko": "정신력",
-    "en": "inner focus",
+    "en": "inner_focus",
     "desc": "풀죽지 않는다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -559,7 +559,7 @@
   {
     "id": 40,
     "ko": "마그마의무장",
-    "en": "magma armor",
+    "en": "magma_armor",
     "desc": "얼음 상태가 되지 않는다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -571,7 +571,7 @@
   {
     "id": 41,
     "ko": "수의베일",
-    "en": "water veil",
+    "en": "water_veil",
     "desc": "화상 상태가 되지 않는다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -585,7 +585,7 @@
   {
     "id": 42,
     "ko": "자력",
-    "en": "magnet pull",
+    "en": "magnet_pull",
     "desc": "강철의 포켓몬을 도망칠 수 없게 한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -615,7 +615,7 @@
   {
     "id": 44,
     "ko": "젖은접시",
-    "en": "rain dish",
+    "en": "rain_dish",
     "desc": "비가 올 때 조금씩 HP를 회복한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -627,7 +627,7 @@
   {
     "id": 45,
     "ko": "모래날림",
-    "en": "sand stream",
+    "en": "sand_stream",
     "desc": "배틀에서 모래바람을 일으킨다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -656,7 +656,7 @@
   {
     "id": 47,
     "ko": "두꺼운지방",
-    "en": "thick fat",
+    "en": "thick_fat",
     "desc": "불꽃과 얼음타입의 기술에 강하다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -671,7 +671,7 @@
   {
     "id": 48,
     "ko": "일찍기상",
-    "en": "early bird",
+    "en": "early_bird",
     "desc": "잠듦 상태에서 빨리 깨어난다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -686,7 +686,7 @@
   {
     "id": 49,
     "ko": "불꽃몸",
-    "en": "flame body",
+    "en": "flame_body",
     "desc": "접촉한 상대에게 화상을 입힐 때가 있다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -701,7 +701,7 @@
   {
     "id": 50,
     "ko": "도주",
-    "en": "run away",
+    "en": "run_away",
     "desc": "야생 포켓몬으로부터 반드시 도망칠 수 있다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -716,7 +716,7 @@
   {
     "id": 51,
     "ko": "날카로운눈",
-    "en": "keen eye",
+    "en": "keen_eye",
     "desc": "명중률이 떨어지지 않는다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -731,7 +731,7 @@
   {
     "id": 52,
     "ko": "괴력집게",
-    "en": "hyper cutter",
+    "en": "hyper_cutter",
     "desc": "상대가 공격을 떨어뜨리지 못한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -787,7 +787,7 @@
   {
     "id": 56,
     "ko": "헤롱헤롱바디",
-    "en": "cute charm",
+    "en": "cute_charm",
     "desc": "스치면 헤롱헤롱 상태가 될 때가 있다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -842,7 +842,7 @@
   {
     "id": 60,
     "ko": "점착",
-    "en": "sticky hold",
+    "en": "sticky_hold",
     "desc": "달라붙어서 도구를 지킨다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -857,7 +857,7 @@
   {
     "id": 61,
     "ko": "탈피",
-    "en": "shed skin",
+    "en": "shed_skin",
     "desc": "상태 이상을 회복할 때가 있다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -887,7 +887,7 @@
   {
     "id": 63,
     "ko": "이상한비늘",
-    "en": "marvel scale",
+    "en": "marvel_scale",
     "desc": "상태 이상이 되면 방어가 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -897,7 +897,7 @@
   {
     "id": 64,
     "ko": "해감액",
-    "en": "liquid ooze",
+    "en": "liquid_ooze",
     "desc": "흡수한 상대의 HP를 줄인다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -970,7 +970,7 @@
   {
     "id": 69,
     "ko": "돌머리",
-    "en": "rock head",
+    "en": "rock_head",
     "desc": "부딪쳐도 반동을 받지 않는다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -997,7 +997,7 @@
   {
     "id": 71,
     "ko": "개미지옥",
-    "en": "arena trap",
+    "en": "arena_trap",
     "desc": "배틀에서 상대를 도망칠 수 없게 한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1009,7 +1009,7 @@
   {
     "id": 72,
     "ko": "의기양양",
-    "en": "vital spirit",
+    "en": "vital_spirit",
     "desc": "잠듦 상태가 되지 않는다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1024,7 +1024,7 @@
   {
     "id": 73,
     "ko": "하얀연기",
-    "en": "white smoke",
+    "en": "white_smoke",
     "desc": "상대가 능력을 떨어뜨릴 수 없다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1037,7 +1037,7 @@
   {
     "id": 74,
     "ko": "순수한힘",
-    "en": "pure power",
+    "en": "pure_power",
     "desc": "물리공격의 위력이 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1049,7 +1049,7 @@
   {
     "id": 75,
     "ko": "조가비갑옷",
-    "en": "shell armor",
+    "en": "shell_armor",
     "desc": "상대의 공격이 급소에 맞지 않는다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1064,7 +1064,7 @@
   {
     "id": 76,
     "ko": "에어록",
-    "en": "air lock",
+    "en": "air_lock",
     "desc": "날씨의 영향이 없어진다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1074,7 +1074,7 @@
   {
     "id": 77,
     "ko": "갈지자걸음",
-    "en": "tangled feet",
+    "en": "tangled_feet",
     "desc": "혼란에 빠져있으면 회피하기 쉬워진다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1089,7 +1089,7 @@
   {
     "id": 78,
     "ko": "전기엔진",
-    "en": "motor drive",
+    "en": "motor_drive",
     "desc": "전기를 받으면 스피드가 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1131,7 +1131,7 @@
   {
     "id": 81,
     "ko": "눈숨기",
-    "en": "snow cloak",
+    "en": "snow_cloak",
     "desc": "날씨가 싸라기눈일 때 회피율이 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1161,7 +1161,7 @@
   {
     "id": 83,
     "ko": "분노의경혈",
-    "en": "anger point",
+    "en": "anger_point",
     "desc": "급소에 맞으면 공격이 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1215,7 +1215,7 @@
   {
     "id": 87,
     "ko": "건조피부",
-    "en": "dry skin",
+    "en": "dry_skin",
     "desc": "더우면 HP가 줄어든다. 물로 HP를 회복한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1243,7 +1243,7 @@
   {
     "id": 89,
     "ko": "철주먹",
-    "en": "iron fist",
+    "en": "iron_fist",
     "desc": "펀치를 사용하는 기술의 위력이 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1259,7 +1259,7 @@
   {
     "id": 90,
     "ko": "포이즌힐",
-    "en": "poison heal",
+    "en": "poison_heal",
     "desc": "독 상태가 되면 HP를 회복한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1285,7 +1285,7 @@
   {
     "id": 92,
     "ko": "스킬링크",
-    "en": "skill link",
+    "en": "skill_link",
     "desc": "연속 기술을 많이 쓸 수 있다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1315,7 +1315,7 @@
   {
     "id": 94,
     "ko": "선파워",
-    "en": "solar power",
+    "en": "solar_power",
     "desc": "맑으면 HP가 줄지만 특수공격이 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1328,7 +1328,7 @@
   {
     "id": 95,
     "ko": "속보",
-    "en": "quick feet",
+    "en": "quick_feet",
     "desc": "상태 이상이 되면 스피드가 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1368,7 +1368,7 @@
   {
     "id": 98,
     "ko": "매직가드",
-    "en": "magic guard",
+    "en": "magic_guard",
     "desc": "공격 이외에는 데미지를 입지 않는다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1383,7 +1383,7 @@
   {
     "id": 99,
     "ko": "노가드",
-    "en": "no guard",
+    "en": "no_guard",
     "desc": "서로의 기술이 반드시 맞는다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1424,7 +1424,7 @@
   {
     "id": 102,
     "ko": "리프가드",
-    "en": "leaf guard",
+    "en": "leaf_guard",
     "desc": "맑을 때는 상태 이상이 되지 않는다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1454,7 +1454,7 @@
   {
     "id": 104,
     "ko": "틀깨기",
-    "en": "mold breaker",
+    "en": "mold_breaker",
     "desc": "특성에 관계없이 상대에게 기술을 쓸 수 있다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1470,7 +1470,7 @@
   {
     "id": 105,
     "ko": "대운",
-    "en": "super luck",
+    "en": "super_luck",
     "desc": "상대의 급소에 공격이 맞기 쉽다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1543,7 +1543,7 @@
   {
     "id": 110,
     "ko": "색안경",
-    "en": "tinted lens",
+    "en": "tinted_lens",
     "desc": "효과가 별로인 기술이 강해진다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1568,7 +1568,7 @@
   {
     "id": 112,
     "ko": "슬로스타트",
-    "en": "slow start",
+    "en": "slow_start",
     "desc": "공격과 스피드가 잠시 동안 절반이 된다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1591,7 +1591,7 @@
   {
     "id": 114,
     "ko": "마중물",
-    "en": "storm drain",
+    "en": "storm_drain",
     "desc": "물을 끌어모아 특수공격을 올린다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1604,7 +1604,7 @@
   {
     "id": 115,
     "ko": "아이스바디",
-    "en": "ice body",
+    "en": "ice_body",
     "desc": "싸라기눈일 때 HP를 조금씩 회복한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1619,7 +1619,7 @@
   {
     "id": 116,
     "ko": "하드록",
-    "en": "solid rock",
+    "en": "solid_rock",
     "desc": "효과가 굉장한 기술의 위력을 약하게 한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1632,7 +1632,7 @@
   {
     "id": 117,
     "ko": "눈퍼뜨리기",
-    "en": "snow warning",
+    "en": "snow_warning",
     "desc": "배틀에 나가면 싸라기눈을 내리게 한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1646,7 +1646,7 @@
   {
     "id": 118,
     "ko": "꿀모으기",
-    "en": "honey gather",
+    "en": "honey_gather",
     "desc": "달콤한꿀을 모아서 올 때가 있다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1696,7 +1696,7 @@
   {
     "id": 122,
     "ko": "플라워기프트",
-    "en": "flower gift",
+    "en": "flower_gift",
     "desc": "맑을 때 자신과 같은 편이 강해진다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1706,7 +1706,7 @@
   {
     "id": 123,
     "ko": "나이트메어",
-    "en": "bad dreams",
+    "en": "bad_dreams",
     "desc": "잠들어 있는 상대의 HP를 줄인다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1726,7 +1726,7 @@
   {
     "id": 125,
     "ko": "우격다짐",
-    "en": "sheer force",
+    "en": "sheer_force",
     "desc": "힘이 강해지지만 추가 효과가 없어진다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1792,7 +1792,7 @@
   {
     "id": 130,
     "ko": "저주받은바디",
-    "en": "cursed body",
+    "en": "cursed_body",
     "desc": "공격받으면 가끔 상대를 사슬묶기 상태로 만든다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1822,7 +1822,7 @@
   {
     "id": 132,
     "ko": "프렌드가드",
-    "en": "friend guard",
+    "en": "friend_guard",
     "desc": "같은 편의 데미지를 줄일 수 있다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1832,7 +1832,7 @@
   {
     "id": 133,
     "ko": "깨어진갑옷",
-    "en": "weak armor",
+    "en": "weak_armor",
     "desc": "물리 기술을 받으면 방어가 떨어지고 스피드가 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1847,7 +1847,7 @@
   {
     "id": 134,
     "ko": "헤비메탈",
-    "en": "heavy metal",
+    "en": "heavy_metal",
     "desc": "자신의 무게가 2배가 된다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1858,7 +1858,7 @@
   {
     "id": 135,
     "ko": "라이트메탈",
-    "en": "light metal",
+    "en": "light_metal",
     "desc": "자신의 무게가 절반이 된다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1880,7 +1880,7 @@
   {
     "id": 137,
     "ko": "독폭주",
-    "en": "toxic boost",
+    "en": "toxic_boost",
     "desc": "독 상태일 때 물리공격의 위력이 올라간다.",
     "desc_lang": "ko",
     "pokemon": []
@@ -1888,7 +1888,7 @@
   {
     "id": 138,
     "ko": "열폭주",
-    "en": "flare boost",
+    "en": "flare_boost",
     "desc": "화상 상태일 때 특수공격의 위력이 올라간다.",
     "desc_lang": "ko",
     "pokemon": []
@@ -1939,7 +1939,7 @@
   {
     "id": 143,
     "ko": "독수",
-    "en": "poison touch",
+    "en": "poison_touch",
     "desc": "접촉하기만 해도 상대를 독 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1969,7 +1969,7 @@
   {
     "id": 145,
     "ko": "부풀린가슴",
-    "en": "big pecks",
+    "en": "big_pecks",
     "desc": "방어를 떨어뜨리는 공격을 받지 않는다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1984,7 +1984,7 @@
   {
     "id": 146,
     "ko": "모래헤치기",
-    "en": "sand rush",
+    "en": "sand_rush",
     "desc": "모래바람으로 스피드가 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -1999,7 +1999,7 @@
   {
     "id": 147,
     "ko": "미라클스킨",
-    "en": "wonder skin",
+    "en": "wonder_skin",
     "desc": "변화 기술을 받기 어려운 몸으로 되어 있다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2118,7 +2118,7 @@
   {
     "id": 156,
     "ko": "매직미러",
-    "en": "magic bounce",
+    "en": "magic_bounce",
     "desc": "변화 기술을 되받아칠 수 있다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2131,7 +2131,7 @@
   {
     "id": 157,
     "ko": "초식",
-    "en": "sap sipper",
+    "en": "sap_sipper",
     "desc": "풀 기술을 받으면 공격이 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2161,7 +2161,7 @@
   {
     "id": 159,
     "ko": "모래의힘",
-    "en": "sand force",
+    "en": "sand_force",
     "desc": "모래바람으로 위력이 올라가는 기술이 있다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2175,7 +2175,7 @@
   {
     "id": 160,
     "ko": "철가시",
-    "en": "iron barbs",
+    "en": "iron_barbs",
     "desc": "접촉한 상대에게 상처를 입힌다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2187,7 +2187,7 @@
   {
     "id": 161,
     "ko": "달마모드",
-    "en": "zen mode",
+    "en": "zen_mode",
     "desc": "위급할 때 모습이 변화한다.",
     "desc_lang": "ko",
     "pokemon": []
@@ -2195,7 +2195,7 @@
   {
     "id": 162,
     "ko": "승리의별",
-    "en": "victory star",
+    "en": "victory_star",
     "desc": "자신과 같은 편의 명중률이 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2227,7 +2227,7 @@
   {
     "id": 165,
     "ko": "아로마베일",
-    "en": "aroma veil",
+    "en": "aroma_veil",
     "desc": "같은 편으로 향하는 멘탈 공격을 막는다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2237,7 +2237,7 @@
   {
     "id": 166,
     "ko": "플라워베일",
-    "en": "flower veil",
+    "en": "flower_veil",
     "desc": "같은 편의 풀타입 포켓몬은 능력이 떨어지지 않는다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2251,7 +2251,7 @@
   {
     "id": 167,
     "ko": "볼주머니",
-    "en": "cheek pouch",
+    "en": "cheek_pouch",
     "desc": "나무열매를 먹으면 HP도 회복한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2276,7 +2276,7 @@
   {
     "id": 169,
     "ko": "퍼코트",
-    "en": "fur coat",
+    "en": "fur_coat",
     "desc": "물리 기술의 데미지가 절반이 된다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2326,7 +2326,7 @@
   {
     "id": 173,
     "ko": "옹골찬턱",
-    "en": "strong jaw",
+    "en": "strong_jaw",
     "desc": "턱이 튼튼하여 무는 힘이 강하다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2353,7 +2353,7 @@
   {
     "id": 175,
     "ko": "스위트베일",
-    "en": "sweet veil",
+    "en": "sweet_veil",
     "desc": "같은 편의 포켓몬이 잠들지 않게 된다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2367,7 +2367,7 @@
   {
     "id": 176,
     "ko": "배틀스위치",
-    "en": "stance change",
+    "en": "stance_change",
     "desc": "배틀모드에서 모습이 바뀐다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2377,7 +2377,7 @@
   {
     "id": 177,
     "ko": "질풍날개",
-    "en": "gale wings",
+    "en": "gale_wings",
     "desc": "비행타입의 기술이 먼저 나오게 된다.",
     "desc_lang": "ko",
     "pokemon": []
@@ -2385,7 +2385,7 @@
   {
     "id": 178,
     "ko": "메가런처",
-    "en": "mega launcher",
+    "en": "mega_launcher",
     "desc": "파동 기술의 위력이 크다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2397,7 +2397,7 @@
   {
     "id": 179,
     "ko": "풀모피",
-    "en": "grass pelt",
+    "en": "grass_pelt",
     "desc": "그래스필드일 때 방어가 올라간다.",
     "desc_lang": "ko",
     "pokemon": []
@@ -2413,7 +2413,7 @@
   {
     "id": 181,
     "ko": "단단한발톱",
-    "en": "tough claws",
+    "en": "tough_claws",
     "desc": "접촉하는 기술의 위력이 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2461,7 +2461,7 @@
   {
     "id": 185,
     "ko": "부자유친",
-    "en": "parental bond",
+    "en": "parental_bond",
     "desc": "부모와 자식 2마리가 공격한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2471,7 +2471,7 @@
   {
     "id": 186,
     "ko": "다크오라",
-    "en": "dark aura",
+    "en": "dark_aura",
     "desc": "전원의 악타입 기술이 강해진다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2481,7 +2481,7 @@
   {
     "id": 187,
     "ko": "페어리오라",
-    "en": "fairy aura",
+    "en": "fairy_aura",
     "desc": "전원의 페어리타입 기술이 강해진다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2492,7 +2492,7 @@
   {
     "id": 188,
     "ko": "오라브레이크",
-    "en": "aura break",
+    "en": "aura_break",
     "desc": "오라의 효과가 반대가 된다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2503,7 +2503,7 @@
   {
     "id": 189,
     "ko": "시작의 바다",
-    "en": "primordial sea",
+    "en": "primordial_sea",
     "desc": "불꽃타입의 공격을 받지 않는 날씨로 만든다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2513,7 +2513,7 @@
   {
     "id": 190,
     "ko": "끝의 대지",
-    "en": "desolate land",
+    "en": "desolate_land",
     "desc": "물타입의 공격을 받지 않는 날씨로 만든다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2523,7 +2523,7 @@
   {
     "id": 191,
     "ko": "델타스트림",
-    "en": "delta stream",
+    "en": "delta_stream",
     "desc": "비행타입의 약점이 없어지는 날씨로 만든다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2545,7 +2545,7 @@
   {
     "id": 193,
     "ko": "도망태세",
-    "en": "wimp out",
+    "en": "wimp_out",
     "desc": "HP가 절반이 되면 황급히 도망쳐서 지닌 포켓몬으로 돌아간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2555,7 +2555,7 @@
   {
     "id": 194,
     "ko": "위기회피",
-    "en": "emergency exit",
+    "en": "emergency_exit",
     "desc": "HP가 절반이 되면 위험을 회피하기 위해 지닌 포켓몬으로 돌아간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2565,7 +2565,7 @@
   {
     "id": 195,
     "ko": "꾸덕꾸덕굳기",
-    "en": "water compaction",
+    "en": "water_compaction",
     "desc": "물타입의 기술을 받으면 방어가 크게 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2587,7 +2587,7 @@
   {
     "id": 197,
     "ko": "리밋실드",
-    "en": "shields down",
+    "en": "shields_down",
     "desc": "HP가 절반이 되면 껍질이 깨져 공격적으로 된다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2609,7 +2609,7 @@
   {
     "id": 199,
     "ko": "수포",
-    "en": "water bubble",
+    "en": "water_bubble",
     "desc": "자신을 향하는 불꽃타입 기술의 위력을 떨어뜨린다. 화상을 입지 않는다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2642,7 +2642,7 @@
   {
     "id": 202,
     "ko": "눈치우기",
-    "en": "slush rush",
+    "en": "slush_rush",
     "desc": "날씨가 싸라기눈일 때 스피드가 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2654,7 +2654,7 @@
   {
     "id": 203,
     "ko": "원격",
-    "en": "long reach",
+    "en": "long_reach",
     "desc": "모든 기술을 상대에게 접촉하지 않고 사용할 수 있다.",
     "desc_lang": "ko",
     "pokemon": []
@@ -2662,7 +2662,7 @@
   {
     "id": 204,
     "ko": "촉촉보이스",
-    "en": "liquid voice",
+    "en": "liquid_voice",
     "desc": "모든 소리 기술이 물타입이 된다.",
     "desc_lang": "ko",
     "pokemon": []
@@ -2688,7 +2688,7 @@
   {
     "id": 207,
     "ko": "서핑테일",
-    "en": "surge surfer",
+    "en": "surge_surfer",
     "desc": "일렉트릭필드일 때 스피드가 2배가 된다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2718,7 +2718,7 @@
   {
     "id": 211,
     "ko": "스웜체인지",
-    "en": "power construct",
+    "en": "power_construct",
     "desc": "HP가 절반이 되면 셀들이 응원하러 달려와 퍼펙트폼으로 모습이 변한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2751,7 +2751,7 @@
   {
     "id": 214,
     "ko": "여왕의위엄",
-    "en": "queenly majesty",
+    "en": "queenly_majesty",
     "desc": "상대에게 위압감을 줘서 이쪽을 향한 선제 기술을 사용할 수 없게 한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2761,7 +2761,7 @@
   {
     "id": 215,
     "ko": "내용물분출",
-    "en": "innards out",
+    "en": "innards_out",
     "desc": "상대가 쓰러뜨렸을 때 HP의 남은 양만큼 상대에게 데미지를 준다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2815,7 +2815,7 @@
   {
     "id": 220,
     "ko": "소울하트",
-    "en": "soul-heart",
+    "en": "soul_heart",
     "desc": "포켓몬이 기절할 때마다 특수공격이 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2825,7 +2825,7 @@
   {
     "id": 221,
     "ko": "컬리헤어",
-    "en": "tangling hair",
+    "en": "tangling_hair",
     "desc": "공격으로 자신과 접촉한 상대의 스피드를 떨어뜨린다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2846,7 +2846,7 @@
   {
     "id": 223,
     "ko": "과학의힘",
-    "en": "power of alchemy",
+    "en": "power_of_alchemy",
     "desc": "쓰러진 같은 편의 특성을 이어받아 같은 특성으로 바뀐다.",
     "desc_lang": "ko",
     "pokemon": []
@@ -2854,7 +2854,7 @@
   {
     "id": 224,
     "ko": "비스트부스트",
-    "en": "beast boost",
+    "en": "beast_boost",
     "desc": "상대를 기절시켰을 때 자신의 가장 높은 능력이 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2869,7 +2869,7 @@
   {
     "id": 225,
     "ko": "AR시스템",
-    "en": "rks system",
+    "en": "rks_system",
     "desc": "지니고 있는 메모리로 자신의 타입이 변한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2879,7 +2879,7 @@
   {
     "id": 226,
     "ko": "일렉트릭메이커",
-    "en": "electric surge",
+    "en": "electric_surge",
     "desc": "등장했을 때 일렉트릭필드를 사용한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2889,7 +2889,7 @@
   {
     "id": 227,
     "ko": "사이코메이커",
-    "en": "psychic surge",
+    "en": "psychic_surge",
     "desc": "등장했을 때 사이코필드를 사용한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2899,7 +2899,7 @@
   {
     "id": 228,
     "ko": "미스트메이커",
-    "en": "misty surge",
+    "en": "misty_surge",
     "desc": "등장했을 때 미스트필드를 사용한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2909,7 +2909,7 @@
   {
     "id": 229,
     "ko": "그래스메이커",
-    "en": "grassy surge",
+    "en": "grassy_surge",
     "desc": "등장했을 때 그래스필드를 사용한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2919,7 +2919,7 @@
   {
     "id": 230,
     "ko": "메탈프로텍트",
-    "en": "full metal body",
+    "en": "full_metal_body",
     "desc": "상대 기술이나 특성으로 능력을 떨어뜨릴 수 없다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2929,7 +2929,7 @@
   {
     "id": 231,
     "ko": "스펙터가드",
-    "en": "shadow shield",
+    "en": "shadow_shield",
     "desc": "HP가 꽉 찼을 때 받는 데미지가 줄어든다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2939,7 +2939,7 @@
   {
     "id": 232,
     "ko": "프리즘아머",
-    "en": "prism armor",
+    "en": "prism_armor",
     "desc": "효과가 굉장한 공격의 위력을 약하게 만든다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2961,7 +2961,7 @@
   {
     "id": 234,
     "ko": "불요의검",
-    "en": "intrepid sword",
+    "en": "intrepid_sword",
     "desc": "등장했을 때 공격이 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2971,7 +2971,7 @@
   {
     "id": 235,
     "ko": "불굴의방패",
-    "en": "dauntless shield",
+    "en": "dauntless_shield",
     "desc": "등장했을 때 방어가 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2989,7 +2989,7 @@
   {
     "id": 237,
     "ko": "볼줍기",
-    "en": "ball fetch",
+    "en": "ball_fetch",
     "desc": "도구를 지니고 있지 않은 경우 첫 번째로 던져서 실패한 몬스터볼을 주워온다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -2999,7 +2999,7 @@
   {
     "id": 238,
     "ko": "솜털",
-    "en": "cotton down",
+    "en": "cotton_down",
     "desc": "공격을 받으면 솜털을 흩뿌려서 자신을 제외한 모든 포켓몬의 스피드를 떨어뜨린다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3010,7 +3010,7 @@
   {
     "id": 239,
     "ko": "스크루지느러미",
-    "en": "propeller tail",
+    "en": "propeller_tail",
     "desc": "상대의 기술을 끌어모으는 특성이나 기술의 영향을 받지 않는다.",
     "desc_lang": "ko",
     "pokemon": []
@@ -3018,7 +3018,7 @@
   {
     "id": 240,
     "ko": "미러아머",
-    "en": "mirror armor",
+    "en": "mirror_armor",
     "desc": "자신이 받는 능력 다운 효과에 한해 되받아친다.",
     "desc_lang": "ko",
     "pokemon": []
@@ -3026,7 +3026,7 @@
   {
     "id": 241,
     "ko": "그대로꿀꺽미사일",
-    "en": "gulp missile",
+    "en": "gulp_missile",
     "desc": "파도타기나 다이빙을 쓰면 먹이를 물어온다. 데미지를 받으면 먹이를 토해내서 공격한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3046,7 +3046,7 @@
   {
     "id": 243,
     "ko": "증기기관",
-    "en": "steam engine",
+    "en": "steam_engine",
     "desc": "물타입이나 불꽃타입 기술을 받으면 스피드가 매우 크게 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3059,7 +3059,7 @@
   {
     "id": 244,
     "ko": "펑크록",
-    "en": "punk rock",
+    "en": "punk_rock",
     "desc": "소리 기술의 위력이 올라간다. 상대로부터 받는 소리 기술의 데미지는 절반이 된다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3070,7 +3070,7 @@
   {
     "id": 245,
     "ko": "모래뿜기",
-    "en": "sand spit",
+    "en": "sand_spit",
     "desc": "공격을 받으면 모래바람을 일으킨다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3082,7 +3082,7 @@
   {
     "id": 246,
     "ko": "얼음인분",
-    "en": "ice scales",
+    "en": "ice_scales",
     "desc": "얼음인분의 보호를 받아 특수공격으로 받는 데미지가 절반이 된다.",
     "desc_lang": "ko",
     "pokemon": []
@@ -3104,7 +3104,7 @@
   {
     "id": 248,
     "ko": "아이스페이스",
-    "en": "ice face",
+    "en": "ice_face",
     "desc": "물리공격을 머리의 얼음이 대신 맞아주지만 모습도 바뀐다. 얼음은 싸라기눈이 내리면 원래대로 돌아온다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3114,7 +3114,7 @@
   {
     "id": 249,
     "ko": "파워스폿",
-    "en": "power spot",
+    "en": "power_spot",
     "desc": "옆에 있기만 해도 기술의 위력이 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3132,7 +3132,7 @@
   {
     "id": 251,
     "ko": "배리어프리",
-    "en": "screen cleaner",
+    "en": "screen_cleaner",
     "desc": "등장했을 때 상대와 같은 편의 빛의장막, 리플렉터, 오로라베일의 효과가 사라진다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3143,7 +3143,7 @@
   {
     "id": 252,
     "ko": "강철정신",
-    "en": "steely spirit",
+    "en": "steely_spirit",
     "desc": "같은 편의 강철타입 공격의 위력이 올라간다.",
     "desc_lang": "ko",
     "pokemon": []
@@ -3151,7 +3151,7 @@
   {
     "id": 253,
     "ko": "멸망의바디",
-    "en": "perish body",
+    "en": "perish_body",
     "desc": "접촉하는 기술을 받으면 3턴 후에 양쪽 모두 기절한다. 교체되면 효과가 없어진다.",
     "desc_lang": "ko",
     "pokemon": []
@@ -3159,7 +3159,7 @@
   {
     "id": 254,
     "ko": "떠도는영혼",
-    "en": "wandering spirit",
+    "en": "wandering_spirit",
     "desc": "접촉하는 기술로 공격해온 포켓몬과 특성을 바꾼다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3170,7 +3170,7 @@
   {
     "id": 255,
     "ko": "무아지경",
-    "en": "gorilla tactics",
+    "en": "gorilla_tactics",
     "desc": "공격이 올라가지만 처음에 선택한 기술 외에는 쓸 수 없게 된다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3180,7 +3180,7 @@
   {
     "id": 256,
     "ko": "화학변화가스",
-    "en": "neutralizing gas",
+    "en": "neutralizing_gas",
     "desc": "화학변화가스를 가진 포켓몬이 배틀에 나와 있으면 모든 포켓몬이 가진 특성의 효과가 사라지거나 발동하지 않게 된다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3192,7 +3192,7 @@
   {
     "id": 257,
     "ko": "파스텔베일",
-    "en": "pastel veil",
+    "en": "pastel_veil",
     "desc": "자신과 같은 편이 독의 상태 이상 효과를 받지 않게 된다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3203,7 +3203,7 @@
   {
     "id": 258,
     "ko": "꼬르륵스위치",
-    "en": "hunger switch",
+    "en": "hunger_switch",
     "desc": "턴이 끝날 때마다 배부른 모양, 배고픈 모양, 배부른 모양...으로 번갈아서 모습을 바꾼다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3213,7 +3213,7 @@
   {
     "id": 259,
     "ko": "퀵드로",
-    "en": "quick draw",
+    "en": "quick_draw",
     "desc": "상대보다 먼저 행동할 수도 있다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3223,7 +3223,7 @@
   {
     "id": 260,
     "ko": "보이지않는주먹",
-    "en": "unseen fist",
+    "en": "unseen_fist",
     "desc": "상대에게 접촉하는 기술을 사용하면 방어의 효과를 무시하고 공격할 수 있다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3236,7 +3236,7 @@
   {
     "id": 261,
     "ko": "기묘한약",
-    "en": "curious medicine",
+    "en": "curious_medicine",
     "desc": "등장했을 때 조개껍질에서 약을 흩뿌려서 능력 변화를 원래대로 되돌린다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3256,7 +3256,7 @@
   {
     "id": 263,
     "ko": "용의턱",
-    "en": "dragon’s maw",
+    "en": "dragons_maw",
     "desc": "드래곤타입 기술의 위력이 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3266,7 +3266,7 @@
   {
     "id": 264,
     "ko": "백의울음",
-    "en": "chilling neigh",
+    "en": "chilling_neigh",
     "desc": "상대를 쓰러뜨리면 차가운 울음소리를 내면서 공격이 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3276,7 +3276,7 @@
   {
     "id": 265,
     "ko": "흑의울음",
-    "en": "grim neigh",
+    "en": "grim_neigh",
     "desc": "상대를 쓰러뜨리면 무서운 울음소리를 내면서 특수공격이 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3286,7 +3286,7 @@
   {
     "id": 266,
     "ko": "혼연일체",
-    "en": "as one",
+    "en": "as_one",
     "desc": "버드렉스의 긴장감과 블리자포스의 백의울음 두 가지 특성을 겸비한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3296,7 +3296,7 @@
   {
     "id": 267,
     "ko": "혼연일체",
-    "en": "as one",
+    "en": "as_one",
     "desc": "버드렉스의 긴장감과 레이스포스의 흑의울음 두 가지 특성을 겸비한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3306,7 +3306,7 @@
   {
     "id": 268,
     "ko": "가시지않는향기",
-    "en": "lingering aroma",
+    "en": "lingering_aroma",
     "desc": "상대가 접촉하면 가시지 않는 향기가 상대에게 배어 버린다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3316,7 +3316,7 @@
   {
     "id": 269,
     "ko": "넘치는씨",
-    "en": "seed sower",
+    "en": "seed_sower",
     "desc": "공격을 받으면 필드를 그래스필드로 만든다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3326,7 +3326,7 @@
   {
     "id": 270,
     "ko": "열교환",
-    "en": "thermal exchange",
+    "en": "thermal_exchange",
     "desc": "불꽃타입 기술로 공격받으면 공격이 올라간다. 화상 상태가 되지 않는다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3338,7 +3338,7 @@
   {
     "id": 271,
     "ko": "분노의껍질",
-    "en": "anger shell",
+    "en": "anger_shell",
     "desc": "상대의 공격에 의해 HP가 절반이 되면 화가 나서 방어와 특수방어가 떨어지지만 공격, 특수공격, 스피드가 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3348,7 +3348,7 @@
   {
     "id": 272,
     "ko": "정화의소금",
-    "en": "purifying salt",
+    "en": "purifying_salt",
     "desc": "깨끗한 소금에 의해 상태 이상이 되지 않는다. 고스트타입 기술의 데미지를 반감시킨다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3360,7 +3360,7 @@
   {
     "id": 273,
     "ko": "노릇노릇바디",
-    "en": "well-baked body",
+    "en": "well_baked_body",
     "desc": "불꽃타입 기술로 공격받으면 데미지를 입지 않고 방어가 크게 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3370,7 +3370,7 @@
   {
     "id": 274,
     "ko": "바람타기",
-    "en": "wind rider",
+    "en": "wind_rider",
     "desc": "순풍이 불거나 바람 기술로 공격받으면 데미지를 받지 않고 공격이 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3382,7 +3382,7 @@
   {
     "id": 275,
     "ko": "파수견",
-    "en": "guard dog",
+    "en": "guard_dog",
     "desc": "위협을 받으면 공격이 올라간다. 포켓몬을 교체시키는 기술이나 도구의 효과를 받지 않는다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3392,7 +3392,7 @@
   {
     "id": 276,
     "ko": "바위나르기",
-    "en": "rocky payload",
+    "en": "rocky_payload",
     "desc": "바위타입 기술의 위력이 올라간다.",
     "desc_lang": "ko",
     "pokemon": []
@@ -3400,7 +3400,7 @@
   {
     "id": 277,
     "ko": "풍력발전",
-    "en": "wind power",
+    "en": "wind_power",
     "desc": "바람 기술을 받으면 충전 상태가 된다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3411,7 +3411,7 @@
   {
     "id": 278,
     "ko": "마이티체인지",
-    "en": "zero to hero",
+    "en": "zero_to_hero",
     "desc": "지닌 포켓몬으로 돌아오면 마이티폼으로 변한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3457,7 +3457,7 @@
   {
     "id": 282,
     "ko": "쿼크차지",
-    "en": "quark drive",
+    "en": "quark_drive",
     "desc": "부스트에너지를 지니고 있거나 일렉트릭필드일 때 가장 높은 능력이 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3472,7 +3472,7 @@
   {
     "id": 283,
     "ko": "황금몸",
-    "en": "good as gold",
+    "en": "good_as_gold",
     "desc": "산화하지 않는 튼튼한 황금몸 덕분에 상대의 변화 기술의 영향을 받지 않는다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3482,7 +3482,7 @@
   {
     "id": 284,
     "ko": "재앙의 그릇",
-    "en": "vessel of ruin",
+    "en": "vessel_of_ruin",
     "desc": "재앙을 부르는 그릇의 힘으로 자신을 제외한 모든 포켓몬의 특수 공격을 약하게 만든다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3492,7 +3492,7 @@
   {
     "id": 285,
     "ko": "재앙의검",
-    "en": "sword of ruin",
+    "en": "sword_of_ruin",
     "desc": "재앙을 부르는 검의 힘으로 자신을 제외한 모든 포켓몬의 방어를 약하게 만든다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3502,7 +3502,7 @@
   {
     "id": 286,
     "ko": "재앙의 목간",
-    "en": "tablets of ruin",
+    "en": "tablets_of_ruin",
     "desc": "재앙을 부르는 목간의 힘으로 자신을 제외한 모든 포켓몬의 공격을 약하게 만든다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3512,7 +3512,7 @@
   {
     "id": 287,
     "ko": "재앙의 구슬",
-    "en": "beads of ruin",
+    "en": "beads_of_ruin",
     "desc": "재앙을 부르는 곡옥의 힘으로 자신을 제외한 모든 포켓몬의 특수방어를 약하게 만든다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3522,7 +3522,7 @@
   {
     "id": 288,
     "ko": "진홍빛고동",
-    "en": "orichalcum pulse",
+    "en": "orichalcum_pulse",
     "desc": "등장했을 때 날씨를 맑음으로 만든다. 햇살이 강하면 고대의 고동에 의해 공격이 강화된다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3532,7 +3532,7 @@
   {
     "id": 289,
     "ko": "하드론엔진",
-    "en": "hadron engine",
+    "en": "hadron_engine",
     "desc": "등장했을 때 일렉트릭필드를 전개한다. 일렉트릭필드일 때 미래 기관에 의해 특수공격이 강화된다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3552,7 +3552,7 @@
   {
     "id": 291,
     "ko": "되새김질",
-    "en": "cud chew",
+    "en": "cud_chew",
     "desc": "나무열매를 먹으면 다음 턴이 끝날 때 한 번 더 먹는다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3572,7 +3572,7 @@
   {
     "id": 293,
     "ko": "총대장",
-    "en": "supreme overlord",
+    "en": "supreme_overlord",
     "desc": "등장했을 때 지금까지 쓰러진 같은 편의 수가 많을수록 공격과 특수공격이 조금씩 올라간다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3590,7 +3590,7 @@
   {
     "id": 295,
     "ko": "독치장",
-    "en": "toxic debris",
+    "en": "toxic_debris",
     "desc": "물리 기술로 데미지를 입으면 상대의 발밑에 독압정을 뿌린다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3601,7 +3601,7 @@
   {
     "id": 296,
     "ko": "테일아머",
-    "en": "armor tail",
+    "en": "armor_tail",
     "desc": "머리를 감싸고 있는 수수께끼의 꼬리가 이쪽을 향한 선제 기술을 사용할 수 없게 한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3611,7 +3611,7 @@
   {
     "id": 297,
     "ko": "흙먹기",
-    "en": "earth eater",
+    "en": "earth_eater",
     "desc": "땅타입 기술로 공격받으면 데미지를 받지 않고 HP를 회복한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3621,7 +3621,7 @@
   {
     "id": 298,
     "ko": "균사의힘",
-    "en": "mycelium might",
+    "en": "mycelium_might",
     "desc": "변화 기술을 사용할 때 반드시 행동이 느려지지만 상대 특성에 방해받지 않는다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3632,7 +3632,7 @@
   {
     "id": 299,
     "ko": "심안",
-    "en": "mind’s eye",
+    "en": "minds_eye",
     "desc": "노말타입과 격투타입 기술을 고스트타입에게 맞힐 수 있다. 상대의 회피율 변화를 무시하고 명중률도 떨어지지 않는다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3642,7 +3642,7 @@
   {
     "id": 300,
     "ko": "감미로운꿀",
-    "en": "supersweet syrup",
+    "en": "supersweet_syrup",
     "desc": "등장했을 때 상대 포켓몬의 회피율을 1단계 떨어뜨린다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3664,7 +3664,7 @@
   {
     "id": 302,
     "ko": "독사슬",
-    "en": "toxic chain",
+    "en": "toxic_chain",
     "desc": "공격을 맞히면 상대를 맹독 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3676,7 +3676,7 @@
   {
     "id": 303,
     "ko": "초상투영",
-    "en": "embody aspect",
+    "en": "embody_aspect",
     "desc": "마음속에 깃든 추억의 힘으로 가면을 빛나게 하여 자신의 능력을 올린다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3689,7 +3689,7 @@
   {
     "id": 304,
     "ko": "테라체인지",
-    "en": "tera shift",
+    "en": "tera_shift",
     "desc": "등장했을 때 주위의 에너지를 흡수하여 테라스탈폼으로 변화한다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3699,7 +3699,7 @@
   {
     "id": 305,
     "ko": "테라셸",
-    "en": "tera shell",
+    "en": "tera_shell",
     "desc": "모든 타입의 힘이 담긴 등껍질이 HP가 꽉 찼을 때 받는 데미지를 모두 효과가 별로이게 만든다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3709,7 +3709,7 @@
   {
     "id": 306,
     "ko": "제로포밍",
-    "en": "teraform zero",
+    "en": "teraform_zero",
     "desc": "테라파고스가 스텔라폼이 되었을 때 숨겨진 힘에 의해 날씨와 필드의 영향을 모두 무효로 만든다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3719,7 +3719,7 @@
   {
     "id": 307,
     "ko": "독조종",
-    "en": "poison puppeteer",
+    "en": "poison_puppeteer",
     "desc": "복숭악동의 기술에 의해 독 상태가 된 상대는 혼란 상태도 되어 버린다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3729,7 +3729,7 @@
   {
     "id": 308,
     "ko": "드래곤스킨",
-    "en": "dragon skin",
+    "en": "dragon_skin",
     "desc": "사용하는 노말 타입 기술이 위력이 1.2배가 되며 모두 드래곤 타입이 된다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3739,7 +3739,7 @@
   {
     "id": 309,
     "ko": "메가솔라",
-    "en": "mega solar",
+    "en": "mega_solar",
     "desc": "이 특성을 가진 포켓몬이 기술을 사용하면, 쾌청 상태일 때와 같은 효과를 받는다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3749,7 +3749,7 @@
   {
     "id": 310,
     "ko": "관통드릴",
-    "en": "drill pierce",
+    "en": "drill_pierce",
     "desc": "자신이 접촉기 사용시, 상대의 방어기술을 무시하고 본래 데미지의 4분의1 데미지를 입힌다.",
     "desc_lang": "ko",
     "pokemon": [
@@ -3759,7 +3759,7 @@
   {
     "id": 311,
     "ko": "하바네로분출",
-    "en": "habanero burst",
+    "en": "habanero_burst",
     "desc": "기술로 데미지를 입을 경우 상대를 화상상태로 만든다.",
     "desc_lang": "ko",
     "pokemon": [

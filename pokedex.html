@@ -1270,7 +1270,7 @@ function openModal(p) {
   }
 
   // 기본 스탯 표시
-  const statsEntry = STATS_MAP[(p.en || '').toLowerCase()];
+  const statsEntry = STATS_MAP[p.en || ''];
   if (statsEntry && statsEntry.stats) {
     const st = statsEntry.stats;
     const STAT_KEYS = ['H','A','B','C','D','S'];
@@ -1482,7 +1482,7 @@ async function fetchWithCache(url, key) {
 
 function initDex([pokemonData, abilitiesData, statsData, canonicalMegaArr]) {
   CANONICAL_MEGA = new Set(canonicalMegaArr);
-  statsData.forEach(s => { STATS_MAP[(s.en || '').toLowerCase()] = s; });
+  statsData.forEach(s => { STATS_MAP[s.en || ''] = s; });
   abilitiesData.forEach(a => {
     const name = a.ko || a.en || '';
     if (name && a.desc && /[\uAC00-\uD7A3]/.test(a.desc)) {
