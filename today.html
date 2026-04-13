@@ -576,8 +576,16 @@ video.addEventListener('error', () => {
 /* ══ 스테이지 클릭 ══ */
 function onStageClick() {
   if (revealed) return;
+  const stage = document.getElementById('video-stage');
+  // 영상 재생 중 → 바로 스킵
+  if (stage.classList.contains('started')) {
+    video.pause();
+    stage.style.display = 'none';
+    revealPokemon();
+    return;
+  }
   document.getElementById('click-hint').classList.add('hidden');
-  document.getElementById('video-stage').classList.add('started');
+  stage.classList.add('started');
   video.currentTime = 0;
   video.play().catch(() => revealPokemon());
 }
