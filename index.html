@@ -1449,6 +1449,7 @@ function bGetFilteredPool() {
 
 // 중복 방지: 셔플 풀
 let bPool = [], bPoolIdx = 0;
+let bAnsweredSet = new Set();
 function bGetNextId() {
   if (bPoolIdx >= bPool.length) {
     bPool = bGetFilteredPool().sort(()=>Math.random()-.5);
@@ -1492,7 +1493,7 @@ function bUpdateHintBadge() {
 function bStartGame() {
   bGameStarted = true;
   bSessionC = 0; bSessionW = 0; bQuestionsPlayed = 0;
-  bPool = []; bPoolIdx = 0;
+  bPool = []; bPoolIdx = 0; bAnsweredSet = new Set();
 
   // 난이도별 목숨·힌트 초기화
   if (bDifficulty === 'easy')        { bLives = Infinity; bHints = Infinity; }
@@ -1547,6 +1548,8 @@ function bGameOver() {
 
 function bResetGame() {
   document.getElementById('b-gameover').style.display = 'none';
+  bAnsweredSet = new Set();
+  document.querySelector('#b-gameover .gameover-title').textContent = '💀 게임 오버';
 
   // 난이도 버튼 잠금 해제
   ['easy','normal','hard'].forEach(x =>
@@ -1719,6 +1722,7 @@ function bReveal(isCorrect) {
   animateReveal(bLoadedImg);
   if (isCorrect) {
     bScoreC++; bScoreS++; bSessionC++; bUpdateScore();
+    bAnsweredSet.add(bPokemon.id);
     let msg = `정답! 🎉 ${displayName}`;
     if (bDifficulty === 'normal') {
       if (bSessionC % 5 === 0) {
@@ -1746,7 +1750,30 @@ function bShowHint() {
 }
 function bNextPokemon() {
   bQuestionsPlayed++;
+  if (bAnsweredSet.size >= bGetFilteredPool().length) { bAllClear(); return; }
   bLoadPokemon();
+}
+function bAllClear() {
+  bGameStarted = false;
+  const isGenFiltered = bSelectedGens.size > 0;
+  const canLB = !isGenFiltered && bDifficulty !== 'easy';
+  const total = bGetFilteredPool().length;
+  const genLabel = isGenFiltered ? [...bSelectedGens].sort().map(g=>g+'세대').join(', ')+' ' : '';
+  document.querySelector('#b-gameover .gameover-title').textContent = '🎉 완전 정복!';
+  document.getElementById('b-gameover-score').innerHTML =
+    `<span style="color:#f5c518;font-size:1rem">⭐ ${genLabel}포켓몬 ${total}마리 전부 맞췄어요!</span><br><b>${bSessionC}</b>개 정답 &nbsp;/&nbsp; <b>${bSessionW}</b>개 오답`;
+  if (canLB) {
+    document.getElementById('b-lb-form').style.display = 'flex';
+    document.getElementById('b-lb-done').style.display = 'none';
+    document.getElementById('b-lb-nick').value = '';
+    document.getElementById('b-lb-err').textContent = '';
+  } else {
+    document.getElementById('b-lb-form').style.display = 'none';
+    document.getElementById('b-lb-done').style.display = 'flex';
+  }
+  document.getElementById('b-gameover').style.display = 'flex';
+  saveSession('pokemon', '포켓몬 맞추기', bDifficulty, bSessionC, bSessionW);
+  launchConfetti();
 }
 
 function bSkip() {
@@ -1813,6 +1840,7 @@ const DIFF_CONFIG = {
 
 // 중복 방지: 기술 셔플 풀
 let mPool = [], mPoolIdx = 0;
+let mAnsweredSet = new Set();
 let mCurrentMoves = []; // 현재 게임에서 사용할 기술 목록 (난이도에 따라 다름)
 function mGetNextId() {
   if (mPoolIdx >= mPool.length) {
@@ -1845,7 +1873,7 @@ function mStartGame() {
   mLives = (mDifficulty === 'easy') ? Infinity : 3;
   // hard 난이도에서만 Z기술 포함
   mCurrentMoves = mDifficulty === 'hard' ? [...DB.moves, ...DB.zmoves] : DB.moves;
-  mPool = []; mPoolIdx = 0; // 풀 초기화
+  mPool = []; mPoolIdx = 0; mAnsweredSet = new Set(); // 풀 초기화
   mSessionC = 0; mSessionW = 0; mQuestionsPlayed = 0;
   ['easy','normal','hard'].forEach(x => document.getElementById('diff-'+x).classList.add('locked'));
   document.getElementById('m-btn-start').style.display   = 'none';
@@ -1987,6 +2015,7 @@ function mReveal(isCorrect) {
   setTimeout(()=>nameEl.classList.add('show'),80);
   if (isCorrect) {
     mScoreC++; mScoreS++; mSessionC++; mUpdateScore();
+    mAnsweredSet.add(mMove.en);
     document.getElementById('m-status').textContent=`정답! 🎉 ${displayName}`;
     document.getElementById('m-status').className='status correct';
     launchConfetti();
@@ -2008,7 +2037,30 @@ function mShowHint() {
   document.getElementById('m-status').className='status hint';
   document.getElementById('m-btn-hint').disabled=true;
 }
-function mNextMove() { mLoadMove(); }
+function mNextMove() {
+  if (mAnsweredSet.size >= mCurrentMoves.length) { mAllClear(); return; }
+  mLoadMove();
+}
+function mAllClear() {
+  mGameStarted = false;
+  const canLB = mDifficulty !== 'easy';
+  const total = mCurrentMoves.length;
+  document.querySelector('#m-gameover .gameover-title').textContent = '🎉 완전 정복!';
+  document.getElementById('m-gameover-score').innerHTML =
+    `<span style="color:#f5c518;font-size:1rem">⭐ 기술 ${total}개 전부 맞췄어요!</span><br><b>${mSessionC}</b>개 정답 &nbsp;/&nbsp; <b>${mSessionW}</b>개 오답`;
+  if (canLB) {
+    document.getElementById('m-lb-form').style.display = 'flex';
+    document.getElementById('m-lb-done').style.display = 'none';
+    document.getElementById('m-lb-nick').value = '';
+    document.getElementById('m-lb-err').textContent = '';
+  } else {
+    document.getElementById('m-lb-form').style.display = 'none';
+    document.getElementById('m-lb-done').style.display = 'flex';
+  }
+  document.getElementById('m-gameover').style.display = 'flex';
+  saveSession('move', '기술 맞추기', mDifficulty, mSessionC, mSessionW);
+  launchConfetti();
+}
 
 function mUpdateLives() {
   const el = document.getElementById('m-lives');
@@ -2039,6 +2091,8 @@ function mGameOver() {
 function mResetGame() {
   mGameStarted = false;
   document.getElementById('m-gameover').style.display = 'none';
+  mAnsweredSet = new Set();
+  document.querySelector('#m-gameover .gameover-title').textContent = '💀 게임 오버';
   ['easy','normal','hard'].forEach(x => document.getElementById('diff-'+x).classList.remove('locked'));
   document.getElementById('m-btn-start').style.display = '';
   document.getElementById('m-game-info').style.display = 'none';
@@ -2092,6 +2146,7 @@ document.addEventListener('keydown', e => {
    탭3: 특성 맞추기
 ═══════════════════════════════════════════════════════════ */
 let aPool = [], aPoolIdx = 0;
+let aAnsweredSet = new Set();
 function aGetNextId() {
   if (aPoolIdx >= aPool.length) {
     aPool = Array.from({length: DB.abilities.length}, (_,i)=>i).sort(()=>Math.random()-.5);
@@ -2184,6 +2239,7 @@ function aReveal(isCorrect) {
   setTimeout(() => nameEl.classList.add('show'), 80);
   if (isCorrect) {
     aScoreC++; aScoreS++; aSessionC++; aUpdateScore();
+    aAnsweredSet.add(aAbility.en);
     document.getElementById('a-status').textContent = `정답! 🎉 ${displayName}`;
     document.getElementById('a-status').className = 'status correct';
     launchConfetti();
@@ -2210,7 +2266,7 @@ function aGameOver() {
 }
 
 function aStartGame() {
-  aSessionC = 0; aSessionW = 0; aLives = 3; aHints = 3; aQuestionsPlayed = 0;
+  aSessionC = 0; aSessionW = 0; aLives = 3; aHints = 3; aQuestionsPlayed = 0; aAnsweredSet = new Set();
   aUpdateLives(); aUpdateHintBadge();
   document.getElementById('a-btn-start').style.display = 'none';
   document.getElementById('a-game-info').style.display = 'flex';
@@ -2240,9 +2296,10 @@ function aGoToStart() {
 }
 
 function aResetGame() {
-  aLives = 3; aHints = 3; aSessionC = 0; aSessionW = 0; aQuestionsPlayed = 0;
+  aLives = 3; aHints = 3; aSessionC = 0; aSessionW = 0; aQuestionsPlayed = 0; aAnsweredSet = new Set();
   aUpdateLives();
   document.getElementById('a-gameover').style.display = 'none';
+  document.querySelector('#a-gameover .gameover-title').textContent = '💀 게임 오버';
   document.getElementById('a-btn-start').style.display = '';
   document.getElementById('a-game-info').style.display = 'none';
   document.getElementById('a-loading').style.display = 'none';
@@ -2256,7 +2313,23 @@ function aResetGame() {
   document.getElementById('a-btn-next').style.display = 'none';
 }
 
-function aNextAbility() { aLoadAbility(); }
+function aNextAbility() {
+  if (aAnsweredSet.size >= DB.abilities.length) { aAllClear(); return; }
+  aLoadAbility();
+}
+function aAllClear() {
+  const total = DB.abilities.length;
+  document.querySelector('#a-gameover .gameover-title').textContent = '🎉 완전 정복!';
+  document.getElementById('a-gameover-score').innerHTML =
+    `<span style="color:#f5c518;font-size:1rem">⭐ 특성 ${total}개 전부 맞췄어요!</span><br><b>${aSessionC}</b>개 정답 &nbsp;/&nbsp; <b>${aSessionW}</b>개 오답`;
+  document.getElementById('a-lb-form').style.display = 'flex';
+  document.getElementById('a-lb-done').style.display = 'none';
+  document.getElementById('a-lb-nick').value = '';
+  document.getElementById('a-lb-err').textContent = '';
+  document.getElementById('a-gameover').style.display = 'flex';
+  saveSession('ability', '특성 맞추기', '-', aSessionC, aSessionW);
+  launchConfetti();
+}
 
 function aShowHint() {
   if (aRevealed || !aKoName || aHints <= 0) return;
@@ -2308,6 +2381,7 @@ function iBuildCatItems() {
 }
 
 let iPool = [], iPoolIdx = 0;
+let iAnsweredSet = new Set();
 function iGetNextId() {
   if (iPoolIdx >= iPool.length) {
     iPool = Array.from({length: iCatItems.length}, (_,i)=>i).sort(()=>Math.random()-.5);
@@ -2428,6 +2502,7 @@ function iReveal(isCorrect) {
   }
   if (isCorrect) {
     iScoreC++; iScoreS++; iSessionC++; iUpdateScore();
+    iAnsweredSet.add(iItem.en);
     document.getElementById('i-status').textContent = `정답! 🎉 ${displayName}`;
     document.getElementById('i-status').className = 'status correct';
     launchConfetti();
@@ -2463,7 +2538,7 @@ function iGameOver() {
 }
 
 function iStartGame() {
-  iSessionC = 0; iSessionW = 0; iLives = 3; iHints = 3; iQuestionsPlayed = 0;
+  iSessionC = 0; iSessionW = 0; iLives = 3; iHints = 3; iQuestionsPlayed = 0; iAnsweredSet = new Set();
   iUpdateLives(); iUpdateHintBadge();
   document.getElementById('i-btn-start').style.display = 'none';
   document.getElementById('i-game-info').style.display = 'flex';
@@ -2494,9 +2569,10 @@ function iGoToStart() {
 }
 
 function iResetGame() {
-  iLives = 3; iHints = 3; iSessionC = 0; iSessionW = 0; iQuestionsPlayed = 0;
+  iLives = 3; iHints = 3; iSessionC = 0; iSessionW = 0; iQuestionsPlayed = 0; iAnsweredSet = new Set();
   iUpdateLives();
   document.getElementById('i-gameover').style.display = 'none';
+  document.querySelector('#i-gameover .gameover-title').textContent = '💀 게임 오버';
   document.getElementById('i-btn-start').style.display = '';
   document.getElementById('i-game-info').style.display = 'none';
   document.getElementById('i-loading').style.display = 'none';
@@ -2511,7 +2587,23 @@ function iResetGame() {
   document.getElementById('i-btn-next').style.display = 'none';
 }
 
-function iNextItem() { iLoadItem(); }
+function iNextItem() {
+  if (iAnsweredSet.size >= iCatItems.length) { iAllClear(); return; }
+  iLoadItem();
+}
+function iAllClear() {
+  const total = iCatItems.length;
+  document.querySelector('#i-gameover .gameover-title').textContent = '🎉 완전 정복!';
+  document.getElementById('i-gameover-score').innerHTML =
+    `<span style="color:#f5c518;font-size:1rem">⭐ 도구 ${total}개 전부 맞췄어요!</span><br><b>${iSessionC}</b>개 정답 &nbsp;/&nbsp; <b>${iSessionW}</b>개 오답`;
+  document.getElementById('i-lb-form').style.display = 'flex';
+  document.getElementById('i-lb-done').style.display = 'none';
+  document.getElementById('i-lb-nick').value = '';
+  document.getElementById('i-lb-err').textContent = '';
+  document.getElementById('i-gameover').style.display = 'flex';
+  saveSession('item', '도구 맞추기', '-', iSessionC, iSessionW);
+  launchConfetti();
+}
 
 function iSkip() {
   if (iRevealed) return;
@@ -2549,6 +2641,8 @@ const ST_STAT_META = [
 const ST_MAX = 255; // 능력치 최대값 (바 기준)
 
 let stPool = [], stPoolIdx = 0;
+let stAnsweredSet = new Set();
+let stCurrentIdx = -1;
 function stGetNextIdx() {
   if (stPoolIdx >= stPool.length) {
     stPool = Array.from({length: DB.statsGroups.length}, (_, i) => i).sort(() => Math.random() - .5);
@@ -2613,7 +2707,8 @@ function stLoadPokemon() {
   document.getElementById('st-name-revealed').className = 'name-revealed';
   stUpdateLives();
 
-  stGroup = DB.statsGroups[stGetNextIdx()];
+  stCurrentIdx = stGetNextIdx();
+  stGroup = DB.statsGroups[stCurrentIdx];
   stRenderStats(stGroup.stats);
   stShowType();
   document.getElementById('st-info-panel').style.display = 'flex';
@@ -2667,6 +2762,7 @@ function stReveal(isCorrect) {
 
   if (isCorrect) {
     stSessionC++; stUpdateScore();
+    stAnsweredSet.add(stCurrentIdx);
     document.getElementById('st-status').textContent = `정답! 🎉 ${primary}`;
     document.getElementById('st-status').className = 'status correct';
     launchConfetti();
@@ -2694,7 +2790,7 @@ function stGameOver() {
 
 function stStartGame() {
   stSessionC = 0; stSessionW = 0; stLives = 10; stQuestionsPlayed = 0;
-  stPool = []; stPoolIdx = 0;
+  stPool = []; stPoolIdx = 0; stAnsweredSet = new Set();
   stUpdateLives(); stUpdateScore();
   document.getElementById('st-btn-start').style.display = 'none';
   document.getElementById('st-game-info').style.display = 'flex';
@@ -2720,8 +2816,9 @@ function stGoToStart() {
 }
 
 function stResetGame() {
-  stLives = 10; stSessionC = 0; stSessionW = 0; stQuestionsPlayed = 0;
+  stLives = 10; stSessionC = 0; stSessionW = 0; stQuestionsPlayed = 0; stAnsweredSet = new Set();
   document.getElementById('st-gameover').style.display = 'none';
+  document.querySelector('#st-gameover .gameover-title').textContent = '💀 게임 오버';
   document.getElementById('st-btn-start').style.display = '';
   document.getElementById('st-game-info').style.display = 'none';
   document.getElementById('st-info-panel').style.display = 'none';
@@ -2733,7 +2830,23 @@ function stResetGame() {
   document.getElementById('st-btn-next').style.display = 'none';
 }
 
-function stNextPokemon() { stLoadPokemon(); }
+function stNextPokemon() {
+  if (stAnsweredSet.size >= DB.statsGroups.length) { stAllClear(); return; }
+  stLoadPokemon();
+}
+function stAllClear() {
+  const total = DB.statsGroups.length;
+  document.querySelector('#st-gameover .gameover-title').textContent = '🎉 완전 정복!';
+  document.getElementById('st-gameover-score').innerHTML =
+    `<span style="color:#f5c518;font-size:1rem">⭐ 능력치 ${total}종 전부 맞췄어요!</span><br><b>${stSessionC}</b>개 정답 &nbsp;/&nbsp; <b>${stSessionW}</b>개 오답`;
+  document.getElementById('st-lb-form').style.display = 'flex';
+  document.getElementById('st-lb-done').style.display = 'none';
+  document.getElementById('st-lb-nick').value = '';
+  document.getElementById('st-lb-err').textContent = '';
+  document.getElementById('st-gameover').style.display = 'flex';
+  saveSession('stats', '능력치 맞추기', '-', stSessionC, stSessionW);
+  launchConfetti();
+}
 
 function stSkip() {
   if (stRevealed) return;
