@@ -967,7 +967,8 @@ function renderAll(data) {
   const entries = [];
 
   const formCounters = {};
-  data.forEach(p => {
+  // 기본형만 처리 (메가 100000+, 알트폼 200000+ 별도 행은 forms 배열로 인라인 렌더링되므로 스킵)
+  data.filter(p => p.id < 100000).forEach(p => {
     entries.push({ ...p, displayId: p.id });
     if (!p.forms) return;
     const seenKo = new Set();
@@ -1495,14 +1496,14 @@ function initDex([pokemonData, abilitiesData, statsData, canonicalMegaArr]) {
   renderAll(DB);
   const formCount = renderForms(pokemonData);
   const regionCount = document.querySelectorAll('.pokemon-card[data-cat="region"]').length;
-  totalAll = DB.length + formCount + regionCount;
+  totalAll = document.querySelectorAll('.pokemon-card').length;
   updateCount(totalAll);
   // 데이터 로딩 전에 누른 필터가 있으면 즉시 적용
   applyFilters();
 }
 
 Promise.all([
-  fetchWithCache(POCHAMS_API + '/api/data/pokemon', 'pkdex_pokemon_v4'),
+  fetchWithCache(POCHAMS_API + '/api/data/pokemon', 'pkdex_pokemon_v5'),
   fetchWithCache(POCHAMS_API + '/api/data/abilities', 'pkdex_abilities'),
   fetch('data/pokemon_stats.json').then(r => r.json()),
   fetch('data/canonical_mega.json').then(r => r.json()),
