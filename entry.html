@@ -717,7 +717,7 @@ const LEARN_METHOD_KO = {
 };
 
 // ─── 캐시 헬퍼 ───
-const POCHAMS_API = 'https://pochams-battle.vercel.app';
+const POCHAMS_API = 'https://pochams.com';
 const CACHE_TTL = 6 * 60 * 60 * 1000;
 function getCached(key) {
   try { const {ts,data}=JSON.parse(localStorage.getItem(key)); if(Date.now()-ts<CACHE_TTL)return data; } catch(e){}
