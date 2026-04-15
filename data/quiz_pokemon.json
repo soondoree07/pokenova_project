@@ -11021,7 +11021,7 @@
     "forms": [
       {
         "type": "alt",
-        "name_ko": "태양의 모습",
+        "name_ko": "캐스퐁 태양의 모습",
         "name_en": "castform_sunny",
         "sprite": "sprites/pokemon/za_castform_sunny.png",
         "types": [
@@ -11037,7 +11037,7 @@
       },
       {
         "type": "alt",
-        "name_ko": "빗방울의 모습",
+        "name_ko": "캐스퐁 빗방울의 모습",
         "name_en": "castform_rainy",
         "sprite": "sprites/pokemon/za_castform_rainy.png",
         "types": [
@@ -11053,7 +11053,7 @@
       },
       {
         "type": "alt",
-        "name_ko": "설운의 모습",
+        "name_ko": "캐스퐁 설운의 모습",
         "name_en": "castform_snowy",
         "sprite": "sprites/pokemon/za_castform_snowy.png",
         "types": [
@@ -23017,7 +23017,7 @@
   },
   {
     "id": 745,
-    "ko": "루가루암",
+    "ko": "루가루암 한낮의 모습",
     "en": "lycanroc",
     "formLabel": "한낮의 모습",
     "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__745.png",
@@ -27719,7 +27719,7 @@
   },
   {
     "id": 902,
-    "ko": "대쓰여너",
+    "ko": "대쓰여너 (수컷)",
     "en": "basculegion",
     "formLabel": "수컷",
     "regionType": "hisui",
