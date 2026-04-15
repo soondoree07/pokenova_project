@@ -215,6 +215,12 @@
         "level": 0
       },
       {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "poison_jab",
         "ko": "독찌르기",
         "method": "machine",
@@ -283,6 +289,12 @@
       {
         "en": "grassy_glide",
         "ko": "그래스슬라이더",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -440,6 +452,12 @@
       {
         "en": "fire_blast",
         "ko": "불대문자",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -644,6 +662,12 @@
       {
         "en": "scorching_sands",
         "ko": "열사의대지",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -1023,6 +1047,12 @@
       {
         "en": "flip_turn",
         "ko": "퀵턴",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -1527,6 +1557,12 @@
         "level": 0
       },
       {
+        "en": "work_up",
+        "ko": "분발",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "sky_attack",
         "ko": "불새",
         "method": "tutor",
@@ -1936,6 +1972,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
         "method": "machine",
@@ -2095,6 +2137,12 @@
       {
         "en": "reflect",
         "ko": "리플렉터",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -2261,6 +2309,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
         "method": "machine",
@@ -2269,6 +2323,12 @@
       {
         "en": "alluring_voice",
         "ko": "매혹의보이스",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "upper_hand",
+        "ko": "기선제압",
         "method": "machine",
         "level": 0
       },
@@ -2414,6 +2474,12 @@
       {
         "en": "reflect",
         "ko": "리플렉터",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -2586,6 +2652,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
         "method": "machine",
@@ -2594,6 +2666,12 @@
       {
         "en": "alluring_voice",
         "ko": "매혹의보이스",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "upper_hand",
+        "ko": "기선제압",
         "method": "machine",
         "level": 0
       },
@@ -2767,6 +2845,12 @@
         "level": 0
       },
       {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "amnesia",
         "ko": "망각술",
         "method": "machine",
@@ -2923,6 +3007,12 @@
         "level": 0
       },
       {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "calm_mind",
         "ko": "명상",
         "method": "machine",
@@ -3027,6 +3117,12 @@
       {
         "en": "dual_wingbeat",
         "ko": "더블윙",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -3208,6 +3304,12 @@
       {
         "en": "fire_blast",
         "ko": "불대문자",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -3422,6 +3524,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "roar",
         "ko": "울부짖기",
         "method": "egg",
@@ -3615,6 +3723,12 @@
         "level": 0
       },
       {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "rest",
         "ko": "잠자기",
         "method": "machine",
@@ -3789,6 +3903,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "temper_flare",
         "ko": "열불내기",
         "method": "machine",
@@ -3924,6 +4044,12 @@
       {
         "en": "light_screen",
         "ko": "빛의장막",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -4493,6 +4619,12 @@
         "level": 0
       },
       {
+        "en": "work_up",
+        "ko": "분발",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "darkest_lariat",
         "ko": "DD래리어트",
         "method": "machine",
@@ -4586,6 +4718,12 @@
       {
         "en": "reflect",
         "ko": "리플렉터",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -4686,6 +4824,12 @@
         "level": 0
       },
       {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "poison_jab",
         "ko": "독찌르기",
         "method": "machine",
@@ -4754,6 +4898,12 @@
       {
         "en": "grassy_glide",
         "ko": "그래스슬라이더",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -4999,6 +5149,12 @@
         "level": 0
       },
       {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "rest",
         "ko": "잠자기",
         "method": "machine",
@@ -5223,6 +5379,12 @@
       {
         "en": "expanding_force",
         "ko": "와이드포스",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -5690,6 +5852,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "psychic_noise",
         "ko": "사이코노이즈",
         "method": "machine",
@@ -6057,6 +6225,12 @@
         "level": 0
       },
       {
+        "en": "work_up",
+        "ko": "분발",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "double_edge",
         "ko": "이판사판태클",
         "method": "egg",
@@ -6144,6 +6318,12 @@
       {
         "en": "light_screen",
         "ko": "빛의장막",
+        "method": "level-up",
+        "level": 1
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "level-up",
         "level": 1
       },
@@ -6696,6 +6876,12 @@
     "en": "tauros",
     "moves": [
       {
+        "en": "work_up",
+        "ko": "분발",
+        "method": "level-up",
+        "level": 5
+      },
+      {
         "en": "payback",
         "ko": "보복",
         "method": "level-up",
@@ -6980,6 +7166,12 @@
       {
         "en": "lash_out",
         "ko": "분풀이",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -7327,6 +7519,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "chilling_water",
         "ko": "찬물끼얹기",
         "method": "machine",
@@ -7373,6 +7571,12 @@
       {
         "en": "bite",
         "ko": "물기",
+        "method": "level-up",
+        "level": 1
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "level-up",
         "level": 1
       },
@@ -7641,6 +7845,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
         "method": "machine",
@@ -7704,6 +7914,12 @@
       {
         "en": "bite",
         "ko": "물기",
+        "method": "level-up",
+        "level": 1
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "level-up",
         "level": 1
       },
@@ -7978,6 +8194,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
         "method": "machine",
@@ -8029,6 +8251,12 @@
       {
         "en": "double_edge",
         "ko": "이판사판태클",
+        "method": "level-up",
+        "level": 1
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "level-up",
         "level": 1
       },
@@ -8291,6 +8519,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
         "method": "machine",
@@ -8438,6 +8672,12 @@
       {
         "en": "fire_blast",
         "ko": "불대문자",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -9097,6 +9337,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
         "method": "machine",
@@ -9356,6 +9602,12 @@
         "level": 0
       },
       {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "rest",
         "ko": "잠자기",
         "method": "machine",
@@ -9572,6 +9824,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "ice_spinner",
         "ko": "아이스스피너",
         "method": "machine",
@@ -9637,6 +9895,12 @@
         "ko": "리플렉터",
         "method": "level-up",
         "level": 18
+      },
+      {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
+        "method": "level-up",
+        "level": 22
       },
       {
         "en": "leech_seed",
@@ -9897,6 +10161,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
         "method": "machine",
@@ -9962,6 +10232,12 @@
         "ko": "전광석화",
         "method": "level-up",
         "level": 13
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "level-up",
+        "level": 31
       },
       {
         "en": "flame_charge",
@@ -10290,6 +10566,12 @@
       {
         "en": "scorching_sands",
         "ko": "열사의대지",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -10739,6 +11021,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
         "method": "machine",
@@ -11082,6 +11370,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "pounce",
         "ko": "달려들기",
         "method": "machine",
@@ -11287,6 +11581,12 @@
         "level": 0
       },
       {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "rest",
         "ko": "잠자기",
         "method": "machine",
@@ -11449,6 +11749,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
         "method": "machine",
@@ -11596,6 +11902,12 @@
       {
         "en": "waterfall",
         "ko": "폭포오르기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -11764,6 +12076,12 @@
       {
         "en": "misty_explosion",
         "ko": "미스트버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -11937,6 +12255,12 @@
         "level": 0
       },
       {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "amnesia",
         "ko": "망각술",
         "method": "machine",
@@ -12075,6 +12399,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "chilling_water",
         "ko": "찬물끼얹기",
         "method": "machine",
@@ -12206,6 +12536,12 @@
         "ko": "초롱초롱눈동자",
         "method": "level-up",
         "level": 15
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "level-up",
+        "level": 20
       },
       {
         "en": "morning_sun",
@@ -12394,6 +12730,12 @@
         "level": 0
       },
       {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "calm_mind",
         "ko": "명상",
         "method": "machine",
@@ -12478,6 +12820,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
         "method": "machine",
@@ -12547,6 +12895,12 @@
       {
         "en": "bite",
         "ko": "물기",
+        "method": "level-up",
+        "level": 1
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "level-up",
         "level": 1
       },
@@ -12851,6 +13205,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
         "method": "machine",
@@ -13086,6 +13446,12 @@
         "level": 0
       },
       {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "rest",
         "ko": "잠자기",
         "method": "machine",
@@ -13314,6 +13680,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "snowscape",
         "ko": "설경",
         "method": "machine",
@@ -13503,6 +13875,12 @@
       {
         "en": "reflect",
         "ko": "리플렉터",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -13723,6 +14101,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "ice_spinner",
         "ko": "아이스스피너",
         "method": "machine",
@@ -13812,6 +14196,12 @@
         "ko": "떨어뜨리기",
         "method": "level-up",
         "level": 4
+      },
+      {
+        "en": "autotomize",
+        "ko": "바디퍼지",
+        "method": "level-up",
+        "level": 8
       },
       {
         "en": "curse",
@@ -14229,6 +14619,12 @@
         "level": 0
       },
       {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "rest",
         "ko": "잠자기",
         "method": "machine",
@@ -14429,6 +14825,12 @@
       {
         "en": "dual_wingbeat",
         "ko": "더블윙",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -14800,6 +15202,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "pounce",
         "ko": "달려들기",
         "method": "machine",
@@ -14808,6 +15216,12 @@
       {
         "en": "trailblaze",
         "ko": "개척하기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "upper_hand",
+        "ko": "기선제압",
         "method": "machine",
         "level": 0
       },
@@ -14917,6 +15331,12 @@
       {
         "en": "hyper_beam",
         "ko": "파괴광선",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -15091,6 +15511,12 @@
       {
         "en": "dual_wingbeat",
         "ko": "더블윙",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -15464,6 +15890,12 @@
       {
         "en": "lash_out",
         "ko": "분풀이",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -15991,6 +16423,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "hard_press",
         "ko": "하드프레스",
         "method": "machine",
@@ -16148,6 +16586,12 @@
         "level": 0
       },
       {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "rest",
         "ko": "잠자기",
         "method": "machine",
@@ -16288,6 +16732,12 @@
       {
         "en": "dual_wingbeat",
         "ko": "더블윙",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -16479,6 +16929,12 @@
         "level": 0
       },
       {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "rest",
         "ko": "잠자기",
         "method": "machine",
@@ -16611,6 +17067,12 @@
         "level": 0
       },
       {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "gravity",
         "ko": "중력",
         "method": "machine",
@@ -16709,6 +17171,12 @@
       {
         "en": "triple_axel",
         "ko": "트리플악셀",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -17200,6 +17668,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "recover",
         "ko": "HP회복",
         "method": "egg",
@@ -17277,6 +17751,12 @@
         "ko": "금속음",
         "method": "level-up",
         "level": 35
+      },
+      {
+        "en": "autotomize",
+        "ko": "바디퍼지",
+        "method": "level-up",
+        "level": 48
       },
       {
         "en": "iron_tail",
@@ -17760,6 +18240,12 @@
         "level": 1
       },
       {
+        "en": "work_up",
+        "ko": "분발",
+        "method": "level-up",
+        "level": 1
+      },
+      {
         "en": "endure",
         "ko": "버티기",
         "method": "level-up",
@@ -17864,6 +18350,12 @@
       {
         "en": "reflect",
         "ko": "리플렉터",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -18108,8 +18600,20 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "upper_hand",
+        "ko": "기선제압",
         "method": "machine",
         "level": 0
       },
@@ -18267,6 +18771,12 @@
       {
         "en": "light_screen",
         "ko": "빛의장막",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -18538,6 +19048,12 @@
       {
         "en": "waterfall",
         "ko": "폭포오르기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -19101,6 +19617,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
         "method": "machine",
@@ -19456,6 +19978,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "temper_flare",
         "ko": "열불내기",
         "method": "machine",
@@ -19621,6 +20149,12 @@
       {
         "en": "fire_blast",
         "ko": "불대문자",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -19811,6 +20345,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "snowscape",
         "ko": "설경",
         "method": "machine",
@@ -19986,6 +20526,12 @@
         "level": 0
       },
       {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "rest",
         "ko": "잠자기",
         "method": "machine",
@@ -20144,6 +20690,12 @@
       {
         "en": "triple_axel",
         "ko": "트리플악셀",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -20373,6 +20925,12 @@
       {
         "en": "scald",
         "ko": "열탕",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "work_up",
+        "ko": "분발",
         "method": "machine",
         "level": 0
       },
@@ -20792,6 +21350,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "pounce",
         "ko": "달려들기",
         "method": "machine",
@@ -20915,6 +21479,12 @@
       {
         "en": "reflect",
         "ko": "리플렉터",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -21129,6 +21699,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "psychic_noise",
         "ko": "사이코노이즈",
         "method": "machine",
@@ -21336,6 +21912,12 @@
       {
         "en": "fire_blast",
         "ko": "불대문자",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -21893,6 +22475,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "ice_spinner",
         "ko": "아이스스피너",
         "method": "machine",
@@ -22164,6 +22752,12 @@
         "level": 0
       },
       {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "rock_blast",
         "ko": "록블라스트",
         "method": "machine",
@@ -22274,6 +22868,12 @@
       {
         "en": "scorching_sands",
         "ko": "열사의대지",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -22473,6 +23073,12 @@
       {
         "en": "fire_blast",
         "ko": "불대문자",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -22741,8 +23347,20 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "temper_flare",
         "ko": "열불내기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "upper_hand",
+        "ko": "기선제압",
         "method": "machine",
         "level": 0
       },
@@ -22942,6 +23560,12 @@
       {
         "en": "waterfall",
         "ko": "폭포오르기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -23198,6 +23822,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "ice_spinner",
         "ko": "아이스스피너",
         "method": "machine",
@@ -23373,6 +24003,12 @@
         "level": 0
       },
       {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "rest",
         "ko": "잠자기",
         "method": "machine",
@@ -23511,6 +24147,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
         "method": "machine",
@@ -23608,6 +24250,12 @@
         "level": 1
       },
       {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
+        "method": "level-up",
+        "level": 1
+      },
+      {
         "en": "worry_seed",
         "ko": "고민씨",
         "method": "level-up",
@@ -23658,6 +24306,12 @@
       {
         "en": "solar_beam",
         "ko": "솔라빔",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -24221,6 +24875,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
         "method": "machine",
@@ -24594,6 +25254,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
         "method": "machine",
@@ -24817,6 +25483,12 @@
         "level": 0
       },
       {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "rest",
         "ko": "잠자기",
         "method": "machine",
@@ -25005,6 +25677,12 @@
       {
         "en": "acrobatics",
         "ko": "애크러뱃",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "work_up",
+        "ko": "분발",
         "method": "machine",
         "level": 0
       },
@@ -25358,6 +26036,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "disable",
         "ko": "사슬묶기",
         "method": "egg",
@@ -25511,6 +26195,12 @@
       {
         "en": "fire_blast",
         "ko": "불대문자",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -25731,6 +26421,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "dragon_cheer",
         "ko": "드래곤옐",
         "method": "machine",
@@ -25820,6 +26516,12 @@
         "ko": "카운터",
         "method": "level-up",
         "level": 12
+      },
+      {
+        "en": "work_up",
+        "ko": "분발",
+        "method": "level-up",
+        "level": 16
       },
       {
         "en": "calm_mind",
@@ -25938,6 +26640,12 @@
       {
         "en": "agility",
         "ko": "고속이동",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -26152,8 +26860,20 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "upper_hand",
+        "ko": "기선제압",
         "method": "machine",
         "level": 0
       },
@@ -26455,6 +27175,12 @@
       {
         "en": "scorching_sands",
         "ko": "열사의대지",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -26874,8 +27600,20 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "chilling_water",
         "ko": "찬물끼얹기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "upper_hand",
+        "ko": "기선제압",
         "method": "machine",
         "level": 0
       },
@@ -27151,6 +27889,12 @@
         "level": 0
       },
       {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "water_pulse",
         "ko": "물의파동",
         "method": "machine",
@@ -27231,6 +27975,12 @@
       {
         "en": "grassy_glide",
         "ko": "그래스슬라이더",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -27356,6 +28106,12 @@
         "level": 24
       },
       {
+        "en": "hone_claws",
+        "ko": "손톱갈기",
+        "method": "level-up",
+        "level": 36
+      },
+      {
         "en": "fling",
         "ko": "내던지기",
         "method": "level-up",
@@ -27430,6 +28186,12 @@
       {
         "en": "dig",
         "ko": "구멍파기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -27638,6 +28400,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "ice_spinner",
         "ko": "아이스스피너",
         "method": "machine",
@@ -27658,6 +28426,12 @@
       {
         "en": "chilling_water",
         "ko": "찬물끼얹기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "upper_hand",
+        "ko": "기선제압",
         "method": "machine",
         "level": 0
       },
@@ -28143,6 +28917,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "temper_flare",
         "ko": "열불내기",
         "method": "machine",
@@ -28240,6 +29020,12 @@
         "level": 1
       },
       {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "level-up",
+        "level": 1
+      },
+      {
         "en": "charm",
         "ko": "애교부리기",
         "method": "level-up",
@@ -28286,6 +29072,12 @@
         "ko": "씨뿌리기",
         "method": "level-up",
         "level": 20
+      },
+      {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
+        "method": "level-up",
+        "level": 25
       },
       {
         "en": "synthesis",
@@ -28516,6 +29308,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
         "method": "machine",
@@ -28555,6 +29353,12 @@
       {
         "en": "double_edge",
         "ko": "이판사판태클",
+        "method": "level-up",
+        "level": 1
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "level-up",
         "level": 1
       },
@@ -28823,6 +29627,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "chilling_water",
         "ko": "찬물끼얹기",
         "method": "machine",
@@ -28952,6 +29762,12 @@
       {
         "en": "agility",
         "ko": "고속이동",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -29210,6 +30026,12 @@
       {
         "en": "dual_wingbeat",
         "ko": "더블윙",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -29593,6 +30415,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "snowscape",
         "ko": "설경",
         "method": "machine",
@@ -29728,6 +30556,12 @@
       {
         "en": "life_dew",
         "ko": "생명의물방울",
+        "method": "level-up",
+        "level": 1
+      },
+      {
+        "en": "aqua_cutter",
+        "ko": "아쿠아커터",
         "method": "level-up",
         "level": 1
       },
@@ -29872,6 +30706,12 @@
       {
         "en": "reflect",
         "ko": "리플렉터",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -30022,6 +30862,12 @@
       {
         "en": "bulk_up",
         "ko": "벌크업",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
         "method": "machine",
         "level": 0
       },
@@ -30200,8 +31046,20 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "alluring_voice",
         "ko": "매혹의보이스",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "upper_hand",
+        "ko": "기선제압",
         "method": "machine",
         "level": 0
       }
@@ -30543,6 +31401,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "ice_spinner",
         "ko": "아이스스피너",
         "method": "machine",
@@ -30654,6 +31518,12 @@
       {
         "en": "reflect",
         "ko": "리플렉터",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -30802,6 +31672,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "overheat",
         "ko": "오버히트",
         "method": "form-change",
@@ -30849,6 +31725,12 @@
         "ko": "성장",
         "method": "level-up",
         "level": 13
+      },
+      {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
+        "method": "level-up",
+        "level": 16
       },
       {
         "en": "leech_seed",
@@ -30925,6 +31807,12 @@
       {
         "en": "reflect",
         "ko": "리플렉터",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -31087,6 +31975,12 @@
       {
         "en": "grassy_glide",
         "ko": "그래스슬라이더",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -31512,6 +32406,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
         "method": "machine",
@@ -31687,6 +32587,12 @@
         "level": 0
       },
       {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "rest",
         "ko": "잠자기",
         "method": "machine",
@@ -31843,6 +32749,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "snowscape",
         "ko": "설경",
         "method": "machine",
@@ -31851,6 +32763,12 @@
       {
         "en": "chilling_water",
         "ko": "찬물끼얹기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "upper_hand",
+        "ko": "기선제압",
         "method": "machine",
         "level": 0
       },
@@ -31893,6 +32811,12 @@
       {
         "en": "sacred_sword",
         "ko": "성스러운칼",
+        "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "aqua_cutter",
+        "ko": "아쿠아커터",
         "method": "egg",
         "level": 0
       }
@@ -32126,6 +33050,12 @@
         "level": 0
       },
       {
+        "en": "work_up",
+        "ko": "분발",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "fire_punch",
         "ko": "불꽃펀치",
         "method": "tutor",
@@ -32271,6 +33201,12 @@
         "level": 23
       },
       {
+        "en": "hone_claws",
+        "ko": "손톱갈기",
+        "method": "level-up",
+        "level": 28
+      },
+      {
         "en": "sucker_punch",
         "ko": "기습",
         "method": "level-up",
@@ -32309,6 +33245,12 @@
       {
         "en": "screech",
         "ko": "싫은소리",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -32752,6 +33694,12 @@
         "level": 0
       },
       {
+        "en": "work_up",
+        "ko": "분발",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "low_kick",
         "ko": "안다리걸기",
         "method": "tutor",
@@ -33137,6 +34085,12 @@
         "level": 0
       },
       {
+        "en": "work_up",
+        "ko": "분발",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "fire_punch",
         "ko": "불꽃펀치",
         "method": "tutor",
@@ -33474,6 +34428,12 @@
         "level": 0
       },
       {
+        "en": "work_up",
+        "ko": "분발",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "ice_punch",
         "ko": "냉동펀치",
         "method": "tutor",
@@ -33669,6 +34629,12 @@
       {
         "en": "rapid_spin",
         "ko": "고속스핀",
+        "method": "level-up",
+        "level": 1
+      },
+      {
+        "en": "hone_claws",
+        "ko": "손톱갈기",
         "method": "level-up",
         "level": 1
       },
@@ -33933,6 +34899,12 @@
       {
         "en": "scorching_sands",
         "ko": "열사의대지",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -34304,6 +35276,12 @@
         "level": 0
       },
       {
+        "en": "work_up",
+        "ko": "분발",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "wild_charge",
         "ko": "와일드볼트",
         "method": "machine",
@@ -34659,8 +35637,20 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "hard_press",
         "ko": "하드프레스",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "upper_hand",
+        "ko": "기선제압",
         "method": "machine",
         "level": 0
       },
@@ -34822,6 +35812,12 @@
         "level": 0
       },
       {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "rest",
         "ko": "잠자기",
         "method": "machine",
@@ -34954,6 +35950,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "beat_up",
         "ko": "집단구타",
         "method": "egg",
@@ -35002,6 +36004,12 @@
     "ko": "악비아르",
     "en": "krookodile",
     "moves": [
+      {
+        "en": "hone_claws",
+        "ko": "손톱갈기",
+        "method": "level-up",
+        "level": 1
+      },
       {
         "en": "power_trip",
         "ko": "기어오르기",
@@ -35407,6 +36415,12 @@
       {
         "en": "scorching_sands",
         "ko": "열사의대지",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -36128,6 +37142,12 @@
         "level": 1
       },
       {
+        "en": "hone_claws",
+        "ko": "손톱갈기",
+        "method": "level-up",
+        "level": 1
+      },
+      {
         "en": "taunt",
         "ko": "도발",
         "method": "level-up",
@@ -36238,6 +37258,12 @@
       {
         "en": "confuse_ray",
         "ko": "이상한빛",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -36452,6 +37478,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "encore",
         "ko": "앙코르",
         "method": "machine",
@@ -36593,6 +37625,12 @@
       {
         "en": "night_shade",
         "ko": "나이트헤드",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -36791,6 +37829,12 @@
       {
         "en": "expanding_force",
         "ko": "와이드포스",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -37177,6 +38221,12 @@
       {
         "en": "thunder",
         "ko": "번개",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -37616,6 +38666,12 @@
       {
         "en": "poltergeist",
         "ko": "폴터가이스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -38091,6 +39147,12 @@
       {
         "en": "body_press",
         "ko": "바디프레스",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -38847,6 +39909,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "hard_press",
         "ko": "하드프레스",
         "method": "machine",
@@ -38954,6 +40022,12 @@
         "ko": "승부굳히기",
         "method": "level-up",
         "level": 16
+      },
+      {
+        "en": "work_up",
+        "ko": "분발",
+        "method": "level-up",
+        "level": 24
       },
       {
         "en": "crunch",
@@ -39310,6 +40384,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "dragon_cheer",
         "ko": "드래곤옐",
         "method": "machine",
@@ -39629,6 +40709,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "pounce",
         "ko": "달려들기",
         "method": "machine",
@@ -39798,6 +40884,12 @@
         "level": 0
       },
       {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "rest",
         "ko": "잠자기",
         "method": "machine",
@@ -39954,6 +41046,12 @@
         "level": 0
       },
       {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "gyro_ball",
         "ko": "자이로볼",
         "method": "machine",
@@ -40082,6 +41180,12 @@
       {
         "en": "coaching",
         "ko": "코칭",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -40287,6 +41391,12 @@
       {
         "en": "reflect",
         "ko": "리플렉터",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -40507,6 +41617,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "psychic_noise",
         "ko": "사이코노이즈",
         "method": "machine",
@@ -40672,6 +41788,12 @@
       {
         "en": "waterfall",
         "ko": "폭포오르기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -40844,6 +41966,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "snowscape",
         "ko": "설경",
         "method": "machine",
@@ -40858,6 +41986,12 @@
       {
         "en": "chilling_water",
         "ko": "찬물끼얹기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "upper_hand",
+        "ko": "기선제압",
         "method": "machine",
         "level": 0
       },
@@ -41193,6 +42327,12 @@
         "level": 0
       },
       {
+        "en": "work_up",
+        "ko": "분발",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "wild_charge",
         "ko": "와일드볼트",
         "method": "machine",
@@ -41368,6 +42508,12 @@
         "level": 0
       },
       {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "rest",
         "ko": "잠자기",
         "method": "machine",
@@ -41494,8 +42640,20 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "temper_flare",
         "ko": "열불내기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "upper_hand",
+        "ko": "기선제압",
         "method": "machine",
         "level": 0
       },
@@ -41599,6 +42757,12 @@
       {
         "en": "confuse_ray",
         "ko": "이상한빛",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -41735,6 +42899,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "pounce",
         "ko": "달려들기",
         "method": "machine",
@@ -41764,6 +42934,12 @@
         "ko": "희망사항",
         "method": "level-up",
         "level": 20
+      },
+      {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
+        "method": "level-up",
+        "level": 25
       },
       {
         "en": "grassy_terrain",
@@ -41816,6 +42992,12 @@
       {
         "en": "light_screen",
         "ko": "빛의장막",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -41958,6 +43140,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
         "method": "machine",
@@ -42013,6 +43201,12 @@
         "level": 1
       },
       {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
+        "method": "level-up",
+        "level": 1
+      },
+      {
         "en": "grass_knot",
         "ko": "풀묶기",
         "method": "level-up",
@@ -42057,6 +43251,12 @@
       {
         "en": "light_screen",
         "ko": "빛의장막",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -42205,6 +43405,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
         "method": "machine",
@@ -42264,6 +43470,12 @@
         "ko": "로킥",
         "method": "level-up",
         "level": 16
+      },
+      {
+        "en": "work_up",
+        "ko": "분발",
+        "method": "level-up",
+        "level": 20
       },
       {
         "en": "crunch",
@@ -42831,6 +44043,12 @@
         "level": 0
       },
       {
+        "en": "work_up",
+        "ko": "분발",
+        "method": "egg",
+        "level": 0
+      },
+      {
         "en": "snore",
         "ko": "코골기",
         "method": "tutor",
@@ -43066,6 +44284,12 @@
         "level": 0
       },
       {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "stored_power",
         "ko": "어시스트파워",
         "method": "machine",
@@ -43252,6 +44476,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "gravity",
         "ko": "중력",
         "method": "machine",
@@ -43357,6 +44587,12 @@
       {
         "en": "head_smash",
         "ko": "양날박치기",
+        "method": "level-up",
+        "level": 1
+      },
+      {
+        "en": "autotomize",
+        "ko": "바디퍼지",
         "method": "level-up",
         "level": 1
       },
@@ -44084,6 +45320,12 @@
         "level": 20
       },
       {
+        "en": "hone_claws",
+        "ko": "손톱갈기",
+        "method": "level-up",
+        "level": 25
+      },
+      {
         "en": "water_pulse",
         "ko": "물의파동",
         "method": "level-up",
@@ -44312,6 +45554,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "pounce",
         "ko": "달려들기",
         "method": "machine",
@@ -44471,6 +45719,12 @@
       {
         "en": "light_screen",
         "ko": "빛의장막",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -45402,6 +46656,12 @@
         "level": 15
       },
       {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "level-up",
+        "level": 20
+      },
+      {
         "en": "light_screen",
         "ko": "빛의장막",
         "method": "level-up",
@@ -45558,6 +46818,12 @@
         "level": 0
       },
       {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "calm_mind",
         "ko": "명상",
         "method": "machine",
@@ -45596,6 +46862,12 @@
       {
         "en": "misty_explosion",
         "ko": "미스트버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -45648,6 +46920,12 @@
     "ko": "루차불",
     "en": "hawlucha",
     "moves": [
+      {
+        "en": "hone_claws",
+        "ko": "손톱갈기",
+        "method": "level-up",
+        "level": 1
+      },
       {
         "en": "detect",
         "ko": "판별",
@@ -45771,6 +47049,12 @@
       {
         "en": "agility",
         "ko": "고속이동",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -45997,8 +47281,20 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "upper_hand",
+        "ko": "기선제압",
         "method": "machine",
         "level": 0
       },
@@ -46160,6 +47456,12 @@
         "level": 0
       },
       {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "substitute",
         "ko": "대타출동",
         "method": "machine",
@@ -46300,6 +47602,12 @@
       {
         "en": "dazzling_gleam",
         "ko": "매지컬샤인",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -46647,6 +47955,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "chilling_water",
         "ko": "찬물끼얹기",
         "method": "machine",
@@ -46758,6 +48072,12 @@
       {
         "en": "reflect",
         "ko": "리플렉터",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -46890,6 +48210,12 @@
       {
         "en": "skitter_smack",
         "ko": "엄습하는일격",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -47159,6 +48485,12 @@
         "level": 0
       },
       {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "calm_mind",
         "ko": "명상",
         "method": "machine",
@@ -47275,6 +48607,12 @@
       {
         "en": "poltergeist",
         "ko": "폴터가이스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -47809,6 +49147,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "ice_spinner",
         "ko": "아이스스피너",
         "method": "machine",
@@ -47956,6 +49300,12 @@
       {
         "en": "agility",
         "ko": "고속이동",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -48158,6 +49508,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "dragon_cheer",
         "ko": "드래곤옐",
         "method": "machine",
@@ -48315,6 +49671,12 @@
         "level": 0
       },
       {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "rest",
         "ko": "잠자기",
         "method": "machine",
@@ -48425,6 +49787,12 @@
       {
         "en": "frenzy_plant",
         "ko": "하드플랜트",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
         "method": "machine",
         "level": 0
       },
@@ -48543,8 +49911,20 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "upper_hand",
+        "ko": "기선제압",
         "method": "machine",
         "level": 0
       },
@@ -48976,6 +50356,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
         "method": "machine",
@@ -49135,6 +50521,12 @@
       {
         "en": "waterfall",
         "ko": "폭포오르기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -49313,6 +50705,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "ice_spinner",
         "ko": "아이스스피너",
         "method": "machine",
@@ -49436,6 +50834,12 @@
       {
         "en": "hyper_beam",
         "ko": "파괴광선",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -49638,6 +51042,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "temper_flare",
         "ko": "열불내기",
         "method": "machine",
@@ -49761,6 +51171,12 @@
       {
         "en": "dig",
         "ko": "구멍파기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -49957,6 +51373,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "ice_spinner",
         "ko": "아이스스피너",
         "method": "machine",
@@ -49981,6 +51403,12 @@
         "level": 0
       },
       {
+        "en": "upper_hand",
+        "ko": "기선제압",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "superpower",
         "ko": "엄청난힘",
         "method": "egg",
@@ -49996,7 +51424,7 @@
   },
   {
     "id": 745,
-    "ko": "루가루암",
+    "ko": "루가루암 한낮의 모습",
     "en": "lycanroc",
     "moves": [
       {
@@ -50146,6 +51574,12 @@
       {
         "en": "snarl",
         "ko": "바크아웃",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -50326,6 +51760,12 @@
       {
         "en": "close_combat",
         "ko": "인파이트",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -50631,6 +52071,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "ice_spinner",
         "ko": "아이스스피너",
         "method": "machine",
@@ -50926,6 +52372,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "fissure",
         "ko": "땅가르기",
         "method": "egg",
@@ -51167,6 +52619,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "pounce",
         "ko": "달려들기",
         "method": "machine",
@@ -51326,6 +52784,12 @@
       {
         "en": "fire_blast",
         "ko": "불대문자",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -51552,6 +53016,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
         "method": "machine",
@@ -51637,6 +53107,12 @@
         "level": 16
       },
       {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
+        "method": "level-up",
+        "level": 22
+      },
+      {
         "en": "teeter_dance",
         "ko": "흔들흔들댄스",
         "method": "level-up",
@@ -51687,6 +53163,12 @@
       {
         "en": "reflect",
         "ko": "리플렉터",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -51877,6 +53359,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
         "method": "machine",
@@ -52018,6 +53506,12 @@
       {
         "en": "reflect",
         "ko": "리플렉터",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -52198,6 +53692,12 @@
       {
         "en": "expanding_force",
         "ko": "와이드포스",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -52539,6 +54039,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
         "method": "machine",
@@ -52547,6 +54053,12 @@
       {
         "en": "chilling_water",
         "ko": "찬물끼얹기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "upper_hand",
+        "ko": "기선제압",
         "method": "machine",
         "level": 0
       },
@@ -52622,6 +54134,12 @@
         "ko": "초롱초롱눈동자",
         "method": "level-up",
         "level": 18
+      },
+      {
+        "en": "hone_claws",
+        "ko": "손톱갈기",
+        "method": "level-up",
+        "level": 30
       },
       {
         "en": "shadow_claw",
@@ -52888,6 +54406,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "spite",
         "ko": "원한",
         "method": "machine",
@@ -53069,6 +54593,12 @@
         "level": 0
       },
       {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "amnesia",
         "ko": "망각술",
         "method": "machine",
@@ -53243,6 +54773,12 @@
         "level": 0
       },
       {
+        "en": "work_up",
+        "ko": "분발",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "hurricane",
         "ko": "폭풍",
         "method": "machine",
@@ -53332,6 +54868,12 @@
         "ko": "겁나는얼굴",
         "method": "level-up",
         "level": 12
+      },
+      {
+        "en": "work_up",
+        "ko": "분발",
+        "method": "level-up",
+        "level": 20
       },
       {
         "en": "screech",
@@ -53694,8 +55236,20 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "dragon_cheer",
         "ko": "드래곤옐",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "upper_hand",
+        "ko": "기선제압",
         "method": "machine",
         "level": 0
       },
@@ -53745,6 +55299,12 @@
       {
         "en": "iron_defense",
         "ko": "철벽",
+        "method": "level-up",
+        "level": 1
+      },
+      {
+        "en": "hone_claws",
+        "ko": "손톱갈기",
         "method": "level-up",
         "level": 1
       },
@@ -53829,6 +55389,12 @@
       {
         "en": "reflect",
         "ko": "리플렉터",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -53997,6 +55563,12 @@
       {
         "en": "dual_wingbeat",
         "ko": "더블윙",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -54182,6 +55754,12 @@
         "level": 0
       },
       {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "u_turn",
         "ko": "유턴",
         "method": "machine",
@@ -54250,6 +55828,12 @@
       {
         "en": "dual_wingbeat",
         "ko": "더블윙",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -54453,6 +56037,12 @@
         "level": 0
       },
       {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "gyro_ball",
         "ko": "자이로볼",
         "method": "machine",
@@ -54545,6 +56135,12 @@
       {
         "en": "grassy_glide",
         "ko": "그래스슬라이더",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -54826,6 +56422,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "belch",
         "ko": "트림",
         "method": "egg",
@@ -55031,6 +56633,12 @@
         "level": 0
       },
       {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "calm_mind",
         "ko": "명상",
         "method": "machine",
@@ -55087,6 +56695,12 @@
       {
         "en": "poltergeist",
         "ko": "폴터가이스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -55200,6 +56814,12 @@
         "level": 0
       },
       {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "rest",
         "ko": "잠자기",
         "method": "machine",
@@ -55302,6 +56922,12 @@
         "level": 0
       },
       {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "gravity",
         "ko": "중력",
         "method": "machine",
@@ -55376,6 +57002,12 @@
       {
         "en": "misty_explosion",
         "ko": "미스트버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -56343,6 +57975,12 @@
         "level": 0
       },
       {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "calm_mind",
         "ko": "명상",
         "method": "machine",
@@ -56393,6 +58031,12 @@
       {
         "en": "misty_explosion",
         "ko": "미스트버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -56544,6 +58188,12 @@
       {
         "en": "snarl",
         "ko": "바크아웃",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -56706,6 +58356,12 @@
       {
         "en": "thunder",
         "ko": "번개",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -56993,6 +58649,12 @@
         "level": 0
       },
       {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "rest",
         "ko": "잠자기",
         "method": "machine",
@@ -57121,6 +58783,12 @@
       {
         "en": "breaking_swipe",
         "ko": "와이드브레이커",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -57296,6 +58964,12 @@
       {
         "en": "reflect",
         "ko": "리플렉터",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -57498,6 +59172,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
         "method": "machine",
@@ -57615,6 +59295,12 @@
       {
         "en": "light_screen",
         "ko": "빛의장막",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -57817,6 +59503,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "pounce",
         "ko": "달려들기",
         "method": "machine",
@@ -57868,7 +59560,7 @@
   },
   {
     "id": 902,
-    "ko": "대쓰여너",
+    "ko": "대쓰여너 (수컷)",
     "en": "basculegion",
     "moves": [
       {
@@ -58130,6 +59822,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "snowscape",
         "ko": "설경",
         "method": "machine",
@@ -58209,6 +59907,12 @@
         "level": 30
       },
       {
+        "en": "hone_claws",
+        "ko": "손톱갈기",
+        "method": "level-up",
+        "level": 36
+      },
+      {
         "en": "agility",
         "ko": "고속이동",
         "method": "level-up",
@@ -58259,6 +59963,12 @@
       {
         "en": "toxic",
         "ko": "맹독",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -58485,8 +60195,20 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "trailblaze",
         "ko": "개척하기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "upper_hand",
+        "ko": "기선제압",
         "method": "machine",
         "level": 0
       },
@@ -58550,6 +60272,18 @@
         "ko": "물기",
         "method": "level-up",
         "level": 7
+      },
+      {
+        "en": "hone_claws",
+        "ko": "손톱갈기",
+        "method": "level-up",
+        "level": 10
+      },
+      {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
+        "method": "level-up",
+        "level": 13
       },
       {
         "en": "quick_attack",
@@ -58638,6 +60372,12 @@
       {
         "en": "agility",
         "ko": "고속이동",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -58878,6 +60618,12 @@
       {
         "en": "triple_axel",
         "ko": "트리플악셀",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -59231,6 +60977,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "alluring_voice",
         "ko": "매혹의보이스",
         "method": "machine",
@@ -59286,6 +61038,12 @@
         "level": 1
       },
       {
+        "en": "work_up",
+        "ko": "분발",
+        "method": "level-up",
+        "level": 7
+      },
+      {
         "en": "aqua_jet",
         "ko": "아쿠아제트",
         "method": "level-up",
@@ -59302,6 +61060,12 @@
         "ko": "로킥",
         "method": "level-up",
         "level": 17
+      },
+      {
+        "en": "aqua_cutter",
+        "ko": "아쿠아커터",
+        "method": "level-up",
+        "level": 21
       },
       {
         "en": "air_slash",
@@ -59384,6 +61148,12 @@
       {
         "en": "agility",
         "ko": "고속이동",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -59574,6 +61344,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "ice_spinner",
         "ko": "아이스스피너",
         "method": "machine",
@@ -59582,6 +61358,12 @@
       {
         "en": "chilling_water",
         "ko": "찬물끼얹기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "upper_hand",
+        "ko": "기선제압",
         "method": "machine",
         "level": 0
       },
@@ -59779,6 +61561,12 @@
         "level": 0
       },
       {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "mud_shot",
         "ko": "머드샷",
         "method": "machine",
@@ -59913,6 +61701,12 @@
       {
         "en": "hyper_beam",
         "ko": "파괴광선",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -60272,6 +62066,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "hard_press",
         "ko": "하드프레스",
         "method": "machine",
@@ -60603,6 +62403,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "destiny_bond",
         "ko": "길동무",
         "method": "egg",
@@ -60904,6 +62710,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "night_slash",
         "ko": "깜짝베기",
         "method": "egg",
@@ -61055,6 +62867,12 @@
         "level": 0
       },
       {
+        "en": "swift",
+        "ko": "스피드스타",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "rest",
         "ko": "잠자기",
         "method": "machine",
@@ -61153,6 +62971,12 @@
       {
         "en": "eerie_impulse",
         "ko": "괴전파",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -61362,6 +63186,12 @@
         "level": 0
       },
       {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "energy_ball",
         "ko": "에너지볼",
         "method": "machine",
@@ -61412,6 +63242,12 @@
       {
         "en": "lash_out",
         "ko": "분풀이",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -61563,6 +63399,12 @@
       {
         "en": "reflect",
         "ko": "리플렉터",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -61767,6 +63609,12 @@
       {
         "en": "expanding_force",
         "ko": "와이드포스",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -62042,6 +63890,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "pounce",
         "ko": "달려들기",
         "method": "machine",
@@ -62207,6 +64061,12 @@
       {
         "en": "waterfall",
         "ko": "폭포오르기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -62387,6 +64247,12 @@
       {
         "en": "liquidation",
         "ko": "아쿠아브레이크",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -62652,6 +64518,12 @@
       {
         "en": "steel_beam",
         "ko": "철제광선",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -62945,6 +64817,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "explosion",
         "ko": "대폭발",
         "method": "egg",
@@ -63098,6 +64976,12 @@
       {
         "en": "reflect",
         "ko": "리플렉터",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "swift",
+        "ko": "스피드스타",
         "method": "machine",
         "level": 0
       },
@@ -63338,6 +65222,12 @@
       {
         "en": "expanding_force",
         "ko": "와이드포스",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
@@ -63685,6 +65575,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "mean_look",
         "ko": "검은눈빛",
         "method": "egg",
@@ -63872,6 +65768,12 @@
         "level": 0
       },
       {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "calm_mind",
         "ko": "명상",
         "method": "machine",
@@ -63918,6 +65820,12 @@
         "ko": "폴터가이스트",
         "method": "machine",
         "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
       }
     ]
   },
@@ -63926,6 +65834,12 @@
     "ko": "브리두라스",
     "en": "archaludon",
     "moves": [
+      {
+        "en": "hone_claws",
+        "ko": "손톱갈기",
+        "method": "level-up",
+        "level": 12
+      },
       {
         "en": "metal_sound",
         "ko": "금속음",
@@ -64209,6 +66123,12 @@
         "level": 0
       },
       {
+        "en": "tera_blast",
+        "ko": "테라버스트",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "hard_press",
         "ko": "하드프레스",
         "method": "machine",
@@ -64408,6 +66328,12 @@
         "level": 0
       },
       {
+        "en": "magical_leaf",
+        "ko": "매지컬리프",
+        "method": "machine",
+        "level": 0
+      },
+      {
         "en": "gyro_ball",
         "ko": "자이로볼",
         "method": "machine",
@@ -64494,6 +66420,12 @@
       {
         "en": "grassy_glide",
         "ko": "그래스슬라이더",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "tera_blast",
+        "ko": "테라버스트",
         "method": "machine",
         "level": 0
       },
