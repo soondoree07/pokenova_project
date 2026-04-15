@@ -3760,7 +3760,7 @@
     "power": null,
     "accuracy": 100,
     "gen": "2세대",
-    "desc": "상대가 마지막으로 사용한 기술을 3턴 동안 계속 쓰게 한다.",
+    "desc": "상대가 마지막으로 사용한 기술을 3턴 동안 계속 쓰게 한다. 앙코르 대상 기술의 우선도가 그대로 적용된다.",
     "desc_lang": "ko",
     "contact": false,
     "in_champions": true
@@ -3843,7 +3843,10 @@
     "desc": "강철의 발톱으로 상대를 베어 갈라 공격한다. 자신의 공격이 올라갈 때도 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "move_categories": [
+      "slicing_move"
+    ]
   },
   {
     "id": 233,
@@ -4175,7 +4178,7 @@
     "power": 40,
     "accuracy": 100,
     "gen": "3세대",
-    "desc": "선제공격으로 상대를 풀죽게 한다. 배틀에 나가서 바로 쓰지 않으면 성공할 수 없다.",
+    "desc": "선제공격으로 상대를 풀죽게 한다. 배틀에 나가서 첫 번째 턴에만 쓸 수 있다.",
     "desc_lang": "ko",
     "move_categories": [
       "priority_move"
@@ -7034,7 +7037,7 @@
   },
   {
     "id": 421,
-    "ko": "새도클로",
+    "ko": "섀도클로",
     "en": "shadow_claw",
     "type": "고스트",
     "type_en": "ghost",
@@ -7407,7 +7410,7 @@
     "power": 80,
     "accuracy": 100,
     "gen": "4세대",
-    "desc": "강철과 같은 단단한 머리로 공격한다. 상대를 풀죽게 만들 때가 있다.",
+    "desc": "강철과 같은 단단한 머리로 공격한다. 20%의 확률로 상대를 풀죽게 만든다.",
     "desc_lang": "ko",
     "contact": true,
     "in_champions": true
@@ -9778,7 +9781,7 @@
     "power": 95,
     "accuracy": 100,
     "gen": "6세대",
-    "desc": "달의 파워를 빌려서 상대를 공격한다. 상대의 특수공격을 떨어뜨릴 때가 있다.",
+    "desc": "달의 파워를 빌려서 상대를 공격한다. 10%의 확률로 상대의 특수공격을 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
     "in_champions": true
@@ -10959,7 +10962,7 @@
     "power": null,
     "accuracy": 100,
     "gen": "7세대",
-    "desc": "독이 섞인 실을 뿜어낸다. 상대를 독 상태로 만들고 스피드를 떨어뜨린다.",
+    "desc": "독이 섞인 실을 뿜어낸다. 상대를 독 상태로 만들고 스피드를 2랭크 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
     "in_champions": true
@@ -12753,8 +12756,8 @@
     "id": 779,
     "ko": "집게덫",
     "en": "snap_trap",
-    "type": "풀",
-    "type_en": "grass",
+    "type": "강철",
+    "type_en": "steel",
     "class": "물리",
     "pp": 16,
     "power": 35,
@@ -13553,7 +13556,7 @@
     "power": 80,
     "accuracy": 100,
     "gen": "8세대",
-    "desc": "이 기술에 맞으면 50%로 독, 마비, 잠듦 중 하나의 상태이상에 걸린다.",
+    "desc": "이 기술에 맞으면 30%로 독, 마비, 잠듦 중 하나의 상태이상에 걸린다.",
     "desc_lang": "ko",
     "move_categories": [
       "slicing_move"
@@ -14165,7 +14168,7 @@
     "power": 40,
     "accuracy": 100,
     "gen": "9세대",
-    "desc": "상대를 소금절이 상태로 만들어 매 턴 데미지를 준다. 강철타입이나 물타입에게 더 고통스럽다.",
+    "desc": "상대를 소금절이 상태로 만들어 매 턴 최대HP의 1/16 데미지를 준다. 강철타입이나 물타입은 1/8 데미지를 받는다.",
     "desc_lang": "ko",
     "contact": false,
     "in_champions": true
@@ -14731,7 +14734,7 @@
     "class": "특수",
     "pp": 10,
     "power": 60,
-    "accuracy": 85,
+    "accuracy": 90,
     "gen": "9세대",
     "desc": "끈적끈적한 물엿을 폭발시킨다. 상대를 물엿범벅 상태로 만들어서 3턴 동안 계속 스피드를 떨어뜨린다.",
     "desc_lang": "ko",

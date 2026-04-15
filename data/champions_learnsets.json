@@ -619,7 +619,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -5660,12 +5660,6 @@
         "level": 0
       },
       {
-        "en": "encore",
-        "ko": "앙코르",
-        "method": "machine",
-        "level": 0
-      },
-      {
         "en": "rain_dance",
         "ko": "비바라기",
         "method": "machine",
@@ -5787,7 +5781,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -6208,7 +6202,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -7539,6 +7533,12 @@
       {
         "en": "temper_flare",
         "ko": "열불내기",
+        "method": "machine",
+        "level": 0
+      },
+      {
+        "en": "power_whip",
+        "ko": "파워휩",
         "method": "machine",
         "level": 0
       }
@@ -9662,12 +9662,6 @@
         "level": 0
       },
       {
-        "en": "encore",
-        "ko": "앙코르",
-        "method": "machine",
-        "level": 0
-      },
-      {
         "en": "sunny_day",
         "ko": "쾌청",
         "method": "machine",
@@ -10493,7 +10487,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -10956,7 +10950,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -11782,6 +11776,12 @@
         "en": "flatter",
         "ko": "부추기기",
         "method": "egg",
+        "level": 0
+      },
+      {
+        "en": "parabolic_charge",
+        "ko": "파라볼라차지",
+        "method": "machine",
         "level": 0
       }
     ]
@@ -15137,7 +15137,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -16352,7 +16352,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -17273,7 +17273,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "level-up",
         "level": 33
       },
@@ -18096,7 +18096,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -20977,12 +20977,6 @@
         "level": 0
       },
       {
-        "en": "reflect_type",
-        "ko": "미러타입",
-        "method": "egg",
-        "level": 0
-      },
-      {
         "en": "snore",
         "ko": "코골기",
         "method": "tutor",
@@ -21285,7 +21279,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -22103,7 +22097,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -23270,7 +23264,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -23751,7 +23745,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -26344,7 +26338,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -26813,7 +26807,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -27535,7 +27529,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -28359,7 +28353,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -28816,7 +28810,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -29874,12 +29868,6 @@
         "level": 0
       },
       {
-        "en": "taunt",
-        "ko": "도발",
-        "method": "machine",
-        "level": 0
-      },
-      {
         "en": "brick_break",
         "ko": "깨트리기",
         "method": "machine",
@@ -30933,7 +30921,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -33406,7 +33394,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -33665,7 +33653,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -34050,7 +34038,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -34399,7 +34387,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -34844,7 +34832,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -36300,7 +36288,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -36439,7 +36427,7 @@
     "moves": [
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "level-up",
         "level": 0
       },
@@ -37425,7 +37413,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -39086,7 +39074,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -41095,7 +41083,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -43779,7 +43767,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -44730,7 +44718,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -44768,6 +44756,12 @@
         "en": "steel_beam",
         "ko": "철제광선",
         "method": "tutor",
+        "level": 0
+      },
+      {
+        "en": "poltergeist",
+        "ko": "폴터가이스트",
+        "method": "machine",
         "level": 0
       }
     ]
@@ -48240,7 +48234,7 @@
     "moves": [
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "level-up",
         "level": 0
       },
@@ -48823,7 +48817,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -49467,7 +49461,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -49834,7 +49828,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -50206,12 +50200,6 @@
         "level": 0
       },
       {
-        "en": "knock_off",
-        "ko": "탁쳐서떨구기",
-        "method": "machine",
-        "level": 0
-      },
-      {
         "en": "endeavor",
         "ko": "죽기살기",
         "method": "machine",
@@ -50232,12 +50220,6 @@
       {
         "en": "aerial_ace",
         "ko": "제비반환",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "u_turn",
-        "ko": "유턴",
         "method": "machine",
         "level": 0
       },
@@ -50285,7 +50267,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -51825,7 +51807,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       }
@@ -52951,7 +52933,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -54143,7 +54125,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "level-up",
         "level": 42
       },
@@ -54245,7 +54227,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -54750,7 +54732,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -55165,7 +55147,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -56947,7 +56929,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -57411,7 +57393,7 @@
     "moves": [
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "level-up",
         "level": 0
       },
@@ -60130,7 +60112,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -60551,7 +60533,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -60924,7 +60906,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -61616,7 +61598,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
@@ -62429,7 +62411,7 @@
     "moves": [
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "level-up",
         "level": 0
       },
@@ -65504,7 +65486,7 @@
       },
       {
         "en": "shadow_claw",
-        "ko": "새도클로",
+        "ko": "섀도클로",
         "method": "machine",
         "level": 0
       },
