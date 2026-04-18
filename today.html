@@ -53,15 +53,15 @@
     }
     .site-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
     .logo-ball {
-      width: 22px; height: 22px; border-radius: 50%;
-      background: linear-gradient(180deg, #e53935 50%, #fff 50%);
-      border: 2px solid #333; position: relative;
+      width: 28px; height: 28px; background: #f0f0f0;
+      border-radius: 50%; position: relative; overflow: hidden;
+      border: 2.5px solid #555; flex-shrink: 0;
     }
+    .logo-ball::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 50%; background: #e53935; }
     .logo-ball::after {
-      content: ''; position: absolute;
-      left: 50%; top: 50%; transform: translate(-50%,-50%);
-      width: 6px; height: 6px;
-      background: #fff; border-radius: 50%; border: 1.5px solid #555;
+      content: ''; position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%); width: 9px; height: 9px;
+      background: #f0f0f0; border-radius: 50%; border: 2px solid #555; z-index: 1;
     }
     .logo-text { font-size: 1.05rem; font-weight: 900; color: #f0f0f0; letter-spacing: -0.3px; }
     .logo-text span { color: #e53935; }
