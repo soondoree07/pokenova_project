@@ -27719,7 +27719,7 @@
   },
   {
     "id": 902,
-    "ko": "대쓰여너 (수컷)",
+    "ko": "대쓰여너",
     "en": "basculegion",
     "formLabel": "수컷",
     "regionType": "hisui",
@@ -27746,33 +27746,6 @@
       }
     ],
     "forms": [
-      {
-        "type": "base",
-        "name_ko": "대쓰여너 (수컷)",
-        "name_en": "basculegion",
-        "sprite": "sprites/pokemon/master__sprites__pokemon__other__official-artwork__902.png",
-        "types": [
-          "물",
-          "고스트"
-        ],
-        "abilities": [
-          {
-            "ko": "쓱쓱",
-            "en": "swift swim",
-            "hidden": false
-          },
-          {
-            "ko": "적응력",
-            "en": "adaptability",
-            "hidden": false
-          },
-          {
-            "ko": "틀깨기",
-            "en": "mold breaker",
-            "hidden": true
-          }
-        ]
-      },
       {
         "type": "hisui",
         "name_ko": "대쓰여너 (암컷)",
