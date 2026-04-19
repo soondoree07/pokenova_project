@@ -8,6 +8,10 @@
 import json, time, os
 import urllib.request, urllib.error
 
+def normalize(name):
+    """quiz_moves.json 과 PokeAPI 이름을 동일 형식으로 정규화 (소문자+하이픈, 따옴표 제거)"""
+    return name.lower().replace(' ', '-').replace("'", '')
+
 SV_GROUPS = {'scarlet-violet', 'the-teal-mask', 'the-indigo-disk'}
 
 VERSION_PRIORITY = [
@@ -158,9 +162,53 @@ for fname in to_inherit:
     learnsets[fname] = learnsets.get(base, [])
     print(f"  {fname} ← {base} ({len(learnsets[fname])}개)")
 
-# 최종 저장
+# quiz_moves.json 기준 허용 기술 목록 (정규화된 이름 → 원본 en)
+with open('data/quiz_moves.json', encoding='utf-8') as f:
+    quiz_moves = json.load(f)
+
+known_moves = {normalize(m['en']): m['en'] for m in quiz_moves}
+print(f"\n[STEP 3] quiz_moves.json 기준 필터링 (허용 기술: {len(known_moves)}개)")
+
+filtered_out = {}
+for poke, moves in learnsets.items():
+    before = len(moves)
+    filtered = [m for m in moves if normalize(m['en']) in known_moves]
+    removed = before - len(filtered)
+    if removed:
+        filtered_out[poke] = [m['en'] for m in moves if normalize(m['en']) not in known_moves]
+    learnsets[poke] = filtered
+
+if filtered_out:
+    print(f"  제거된 기술 있는 포켓몬: {len(filtered_out)}개")
+    for poke, removed in list(filtered_out.items())[:10]:
+        print(f"    {poke}: {removed}")
+    if len(filtered_out) > 10:
+        print(f"    ... 외 {len(filtered_out)-10}개")
+else:
+    print("  제거된 기술 없음 (전부 매칭)")
+
+# 최종 저장 (포켓몬 알파벳순, 기술은 method→level 순 정렬, 가독성 포맷)
+def sort_key(move):
+    order = {'level-up': 0, 'machine': 1, 'egg': 2, 'tutor': 3}
+    return (order.get(move.get('method', ''), 9), move.get('level', 0))
+
+def dedup(moves):
+    # 정렬 후 같은 기술명은 첫 번째(우선순위 높은 것)만 유지
+    seen = set()
+    result = []
+    for m in sorted(moves, key=sort_key):
+        if m['en'] not in seen:
+            seen.add(m['en'])
+            result.append(m)
+    return result
+
+sorted_learnsets = {
+    k: dedup(v)
+    for k, v in sorted(learnsets.items())
+}
+
 with open(LEARNSET_FILE, 'w', encoding='utf-8') as f:
-    json.dump(learnsets, f, ensure_ascii=False)
+    json.dump(sorted_learnsets, f, ensure_ascii=False, indent=2)
 
 total_moves = sum(len(v) for v in learnsets.values())
 print(f"\n✅ 완료: {len(learnsets)}마리, 총 {total_moves}개 기술 레코드")

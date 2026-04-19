@@ -1,6 +1,14 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "pokenova.vercel.app" }],
+      "destination": "https://pokenova.pochams.com/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     { "source": "/pokedex", "destination": "/pokedex.html" },
     { "source": "/movedex", "destination": "/movedex.html" },

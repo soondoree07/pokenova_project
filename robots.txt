@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pokenova.vercel.app/sitemap.xml
+Sitemap: https://pokenova.pochams.com/sitemap.xml

@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://pokenova.vercel.app/</loc>
+    <loc>https://pokenova.pochams.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://pokenova.vercel.app/pokedex</loc>
+    <loc>https://pokenova.pochams.com/pokedex</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pokenova.vercel.app/movedex</loc>
+    <loc>https://pokenova.pochams.com/movedex</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pokenova.vercel.app/entry</loc>
+    <loc>https://pokenova.pochams.com/entry</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pokenova.vercel.app/itemdex</loc>
+    <loc>https://pokenova.pochams.com/itemdex</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
