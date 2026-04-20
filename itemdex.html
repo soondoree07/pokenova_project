@@ -30,9 +30,17 @@ a{text-decoration:none;color:inherit}
 .site-header{padding:0 24px;background:#141414;border-bottom:1px solid #252525;position:sticky;top:0;z-index:100}
 .header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
 .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
-.logo-ball{width:28px;height:28px;background:#f0f0f0;border-radius:50%;position:relative;overflow:hidden;border:2.5px solid #555;flex-shrink:0}
-.logo-ball::before{content:'';position:absolute;top:0;left:0;right:0;height:50%;background:#e53935}
-.logo-ball::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:9px;height:9px;background:#f0f0f0;border-radius:50%;border:2px solid #555;z-index:1}
+    .logo-ball {
+      width:28px; height:28px; background:#f0f0f0;
+      border-radius:50%; position:relative; overflow:hidden;
+      border:2.5px solid #555; flex-shrink:0;
+    }
+    .logo-ball::before { content:''; position:absolute; top:0;left:0;right:0; height:50%; background:#e53935; }
+    .logo-ball::after {
+      content:''; position:absolute; top:50%;left:50%;
+      transform:translate(-50%,-50%); width:9px;height:9px;
+      background:#f0f0f0; border-radius:50%; border:2px solid #555; z-index:1;
+    }
 .logo-text{color:#f0f0f0;font-size:18px;font-weight:900;letter-spacing:-.5px}
 .logo-text span{color:#e53935}
 .site-nav{display:flex;gap:6px;flex-wrap:wrap;flex-shrink:0}
