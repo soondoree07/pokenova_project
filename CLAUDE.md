@@ -28,13 +28,27 @@ pokenova는 포켓몬·기술·도구·특성·배우는기술 데이터를 **Ne
 
 ### 수정 절차
 
+**원칙: JSON 수정 후 반드시 DB에 반영한다. 반영 없이 JSON만 수정하고 끝내지 않는다.**
+
+#### 1개~몇 개만 수정할 때 → upsert (1~2초)
+
 ```bash
-# 이 프로젝트의 JSON 파일을 수정한 뒤
+cd /home/soondoree07/pochams_project
+npm run upsert move <en>        # 기술 1개
+npm run upsert item <en>        # 도구 1개
+npm run upsert ability <en>     # 특성 1개
+npm run upsert pokemon <en>     # 포켓몬 1개 (기본형+메가+알트폼 전부)
+npm run upsert learnset <en>    # 포켓몬 배우는기술
+```
+
+#### 대량 추가·구조 변경할 때 → 전체 seed (20~40초)
+
+```bash
 cd /home/soondoree07/pochams_project
 npm run seed
 ```
 
-> pokenova 자체에는 배포가 필요 없다. seed 재실행만으로 DB가 업데이트되고 pochams API가 즉시 반영된다.
+> pokenova 자체에는 배포가 필요 없다. upsert 또는 seed 재실행만으로 DB가 업데이트되고 pochams API가 즉시 반영된다.
 
 ### champions_learnsets.json 갱신
 
