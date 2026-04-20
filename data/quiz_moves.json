@@ -13,7 +13,8 @@
     "desc": "긴 꼬리나 손 등을 사용하여 상대를 때려서 공격한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "はたく"
   },
   {
     "id": 2,
@@ -30,7 +31,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "からてチョップ"
   },
   {
     "id": 3,
@@ -46,7 +48,8 @@
     "desc": "연속 뺨치기로 상대를 때려서 공격한다. 2-5회 동안 연속으로 쓴다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "おうふくビンタ"
   },
   {
     "id": 4,
@@ -62,7 +65,8 @@
     "desc": "노도 같은 펀치로 상대를 세게 때려서 공격한다. 2-5회 동안 연속으로 쓴다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "れんぞくパンチ"
   },
   {
     "id": 5,
@@ -78,7 +82,8 @@
     "desc": "힘을 담은 펀치로 상대를 공격한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "メガトンパンチ"
   },
   {
     "id": 6,
@@ -94,7 +99,8 @@
     "desc": "상대의 몸에 돈을 세게 던져서 공격한다. 배틀 후에 돈을 받을 수 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ネコにこばん"
   },
   {
     "id": 7,
@@ -113,7 +119,8 @@
       "punching_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ほのおのパンチ"
   },
   {
     "id": 8,
@@ -132,7 +139,8 @@
       "punching_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "れいとうパンチ"
   },
   {
     "id": 9,
@@ -151,7 +159,8 @@
       "punching_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "かみなりパンチ"
   },
   {
     "id": 10,
@@ -167,7 +176,8 @@
     "desc": "단단하고 뾰족한 날카로운 손톱으로 상대를 할퀴어서 공격한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ひっかく"
   },
   {
     "id": 11,
@@ -184,7 +194,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "はさむ"
   },
   {
     "id": 12,
@@ -200,7 +211,8 @@
     "desc": "큰 집게로 상대를 베어 갈라 공격한다. 맞으면 일격에 기절한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ハサミギロチン"
   },
   {
     "id": 13,
@@ -216,7 +228,8 @@
     "desc": "바람의 칼날을 만들어 2턴째에 상대를 공격한다. 급소에 맞기 쉽다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "かまいたち"
   },
   {
     "id": 14,
@@ -235,7 +248,8 @@
       "dance_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "つるぎのまい"
   },
   {
     "id": 15,
@@ -251,7 +265,8 @@
     "desc": "낫이나 발톱 등으로 상대를 베어 공격한다. 가느다란 나무도 자를 수 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "いあいぎり"
   },
   {
     "id": 16,
@@ -267,7 +282,8 @@
     "desc": "날개로 일으킨 격한 바람을 상대에게 부딪쳐서 공격한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "かぜおこし"
   },
   {
     "id": 17,
@@ -283,7 +299,8 @@
     "desc": "크게 펼친 훌륭한 날개를 상대에게 부딪쳐서 공격한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "つばさでうつ"
   },
   {
     "id": 18,
@@ -303,7 +320,8 @@
       "wind_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ふきとばし"
   },
   {
     "id": 19,
@@ -319,7 +337,8 @@
     "desc": "1턴째에 하늘을 날아 2턴째에 상대를 공격한다. 알고 있는 도시로 날아갈 수 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "そらをとぶ"
   },
   {
     "id": 20,
@@ -338,7 +357,8 @@
       "trapping_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "しめつける"
   },
   {
     "id": 21,
@@ -354,7 +374,8 @@
     "desc": "긴 꼬리나 덩굴 등을 사용해 상대를 힘껏 쳐서 공격한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "たたきつける"
   },
   {
     "id": 22,
@@ -370,7 +391,8 @@
     "desc": "채찍처럼 휘어지는 가늘고 긴 덩굴로 상대를 힘껏 쳐서 공격한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "つるのムチ"
   },
   {
     "id": 23,
@@ -386,7 +408,8 @@
     "desc": "큰 발로 상대를 짓밟아서 공격한다. 상대를 풀죽게 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ふみつけ"
   },
   {
     "id": 24,
@@ -402,7 +425,8 @@
     "desc": "2개의 다리로 상대를 걷어차서 공격한다. 2회 연속으로 데미지를 준다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "にどげり"
   },
   {
     "id": 25,
@@ -418,7 +442,8 @@
     "desc": "굉장한 힘을 담은 킥으로 상대를 걷어차서 공격한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "メガトンキック"
   },
   {
     "id": 26,
@@ -435,7 +460,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "とびげり"
   },
   {
     "id": 27,
@@ -452,7 +478,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "まわしげり"
   },
   {
     "id": 28,
@@ -468,7 +495,8 @@
     "desc": "상대의 얼굴에 모래를 뿌려서 명중률을 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "すなかけ"
   },
   {
     "id": 29,
@@ -484,7 +512,8 @@
     "desc": "머리를 내밀어 곧장 돌진하여 공격한다. 상대를 풀죽게 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ずつき"
   },
   {
     "id": 30,
@@ -500,7 +529,8 @@
     "desc": "날카롭고 뾰족한 뿔로 상대를 공격한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "つのでつく"
   },
   {
     "id": 31,
@@ -516,7 +546,8 @@
     "desc": "뿔이나 부리로 상대를 찔러서 공격한다. 2-5회 동안 연속으로 쓴다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "みだれづき"
   },
   {
     "id": 32,
@@ -532,7 +563,8 @@
     "desc": "회전하는 뿔을 상대에게 꿰찔러서 공격한다. 맞으면 일격에 기절한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "つのドリル"
   },
   {
     "id": 33,
@@ -548,7 +580,8 @@
     "desc": "상대를 향해서 몸 전체를 부딪쳐가며 공격한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "たいあたり"
   },
   {
     "id": 34,
@@ -564,7 +597,8 @@
     "desc": "몸 전체로 상대를 덮쳐 눌러 공격한다. 마비 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "のしかかり"
   },
   {
     "id": 35,
@@ -583,7 +617,8 @@
       "trapping_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "まきつく"
   },
   {
     "id": 36,
@@ -599,7 +634,8 @@
     "desc": "굉장한 기세로 상대에게 부딪쳐 공격한다. 자신도 조금 데미지를 입는다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "とっしん"
   },
   {
     "id": 37,
@@ -615,7 +651,8 @@
     "desc": "2-3턴 동안 마구 난동 부려서 상대를 공격한다. 난동 부린 뒤에는 혼란에 빠진다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "あばれる"
   },
   {
     "id": 38,
@@ -634,7 +671,8 @@
       "recoil_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "すてみタックル"
   },
   {
     "id": 39,
@@ -650,7 +688,8 @@
     "desc": "꼬리를 좌우로 귀엽게 흔들어 방심을 유도한다. 상대의 방어를 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "しっぽをふる"
   },
   {
     "id": 40,
@@ -666,7 +705,8 @@
     "desc": "독이 있는 침을 상대에게 꿰찔러서 공격한다. 독 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "どくばり"
   },
   {
     "id": 41,
@@ -682,7 +722,8 @@
     "desc": "2개의 침을 상대에게 꿰찔러 2회 연속으로 데미지를 준다. 독 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ダブルニードル"
   },
   {
     "id": 42,
@@ -701,7 +742,8 @@
       "multi_hit_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ミサイルばり"
   },
   {
     "id": 43,
@@ -717,7 +759,8 @@
     "desc": "날카로운 눈초리로 겁을 주어 상대의 방어를 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "にらみつける"
   },
   {
     "id": 44,
@@ -736,7 +779,8 @@
       "biting_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "かみつく"
   },
   {
     "id": 45,
@@ -752,7 +796,8 @@
     "desc": "귀여운 울음소리를 들려주고 관심을 끌어 방심한 사이에 상대의 공격을 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "なきごえ"
   },
   {
     "id": 46,
@@ -772,7 +817,8 @@
       "sound_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ほえる"
   },
   {
     "id": 47,
@@ -791,7 +837,8 @@
       "sound_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "うたう"
   },
   {
     "id": 48,
@@ -807,7 +854,8 @@
     "desc": "특수한 음파를 몸에서 발산하여 상대를 혼란시킨다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ちょうおんぱ"
   },
   {
     "id": 49,
@@ -824,7 +872,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ソニックブーム"
   },
   {
     "id": 50,
@@ -840,7 +889,8 @@
     "desc": "상대의 움직임을 막아 바로 전에 쓴 기술을 4턴 동안 사용할 수 없게 만든다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "かなしばり"
   },
   {
     "id": 51,
@@ -856,7 +906,8 @@
     "desc": "강한 산을 상대에게 끼얹어 공격한다. 상대의 특수방어를 떨어뜨릴 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ようかいえき"
   },
   {
     "id": 52,
@@ -872,7 +923,8 @@
     "desc": "작은 불꽃을 상대에게 발사하여 공격한다. 화상 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ひのこ"
   },
   {
     "id": 53,
@@ -888,7 +940,8 @@
     "desc": "세찬 불꽃을 상대에게 발사하여 공격한다. 화상 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "かえんほうしゃ"
   },
   {
     "id": 54,
@@ -904,7 +957,8 @@
     "desc": "하얀 안개로 몸을 덮는다. 5턴 동안 상대에 의해 능력이 떨어지지 않게 된다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "しろいきり"
   },
   {
     "id": 55,
@@ -920,7 +974,8 @@
     "desc": "물을 기세 좋게 상대에게 발사하여 공격한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "みずでっぽう"
   },
   {
     "id": 56,
@@ -936,7 +991,8 @@
     "desc": "대량의 물을 세찬 기세로 상대에게 발사하여 공격한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ハイドロポンプ"
   },
   {
     "id": 57,
@@ -952,7 +1008,8 @@
     "desc": "큰 파도로 자신의 주위에 있는 포켓몬을 공격한다. 물 위도 헤엄쳐서 나아간다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "なみのり"
   },
   {
     "id": 58,
@@ -968,7 +1025,8 @@
     "desc": "냉동빔을 상대에게 발사하여 공격한다. 얼음 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "れいとうビーム"
   },
   {
     "id": 59,
@@ -987,7 +1045,8 @@
       "wind_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ふぶき"
   },
   {
     "id": 60,
@@ -1003,7 +1062,8 @@
     "desc": "이상한 광선을 상대에게 발사하여 공격한다. 혼란시킬 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "サイケこうせん"
   },
   {
     "id": 61,
@@ -1019,7 +1079,8 @@
     "desc": "거품을 기세 좋게 상대에게 발사하여 공격한다. 스피드를 떨어뜨릴 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "バブルこうせん"
   },
   {
     "id": 62,
@@ -1035,7 +1096,8 @@
     "desc": "무지개색의 빔을 상대에게 발사하여 공격한다. 공격을 떨어뜨릴 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "オーロラビーム"
   },
   {
     "id": 63,
@@ -1051,7 +1113,8 @@
     "desc": "강한 광선을 상대에게 발사하여 공격한다. 다음 턴은 움직일 수 없다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "はかいこうせん"
   },
   {
     "id": 64,
@@ -1067,7 +1130,8 @@
     "desc": "날카롭고 뾰족한 부리나 뿔로 상대를 쪼아서 공격한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "つつく"
   },
   {
     "id": 65,
@@ -1083,7 +1147,8 @@
     "desc": "회전하면서 뾰족한 부리를 상대에게 꿰찔러 공격한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ドリルくちばし"
   },
   {
     "id": 66,
@@ -1099,7 +1164,8 @@
     "desc": "땅에 자신과 함께 상대를 내던져 공격한다. 자신도 조금 데미지를 입는다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "じごくぐるま"
   },
   {
     "id": 67,
@@ -1115,7 +1181,8 @@
     "desc": "발을 강하게 걸고 상대를 넘어뜨려 공격한다. 상대가 무거울수록 위력이 올라간다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "けたぐり"
   },
   {
     "id": 68,
@@ -1134,7 +1201,8 @@
       "priority_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "カウンター"
   },
   {
     "id": 69,
@@ -1150,7 +1218,8 @@
     "desc": "인력을 사용해 내던진다. 자신의 레벨과 똑같은 데미지를 상대에게 준다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ちきゅうなげ"
   },
   {
     "id": 70,
@@ -1166,7 +1235,8 @@
     "desc": "혼신의 힘으로 상대를 세게 때려서 공격한다. 무거운 돌을 밀 수도 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "かいりき"
   },
   {
     "id": 71,
@@ -1182,7 +1252,8 @@
     "desc": "양분을 흡수하여 공격한다. 상대에게 입힌 데미지의 절반에 해당하는 HP를 회복할 수 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "すいとる"
   },
   {
     "id": 72,
@@ -1198,7 +1269,8 @@
     "desc": "양분을 흡수하여 공격한다. 상대에게 입힌 데미지의 절반에 해당하는 HP를 회복할 수 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "メガドレイン"
   },
   {
     "id": 73,
@@ -1214,7 +1286,8 @@
     "desc": "씨가 뿌려진 상대의 HP를 매 턴 조금씩 흡수하여 자신의 HP를 회복한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "やどりぎのタネ"
   },
   {
     "id": 74,
@@ -1230,7 +1303,8 @@
     "desc": "몸을 일시에 크게 성장시켜 공격과 특수공격을 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "せいちょう"
   },
   {
     "id": 75,
@@ -1246,7 +1320,8 @@
     "desc": "잎사귀를 날려 상대를 베어 공격한다. 급소에 맞기 쉽다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "はっぱカッター"
   },
   {
     "id": 76,
@@ -1262,7 +1337,8 @@
     "desc": "1턴째에 빛을 가득 모아 2턴째에 빛의 다발을 발사하여 공격한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ソーラービーム"
   },
   {
     "id": 77,
@@ -1281,7 +1357,8 @@
       "powder_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "どくのこな"
   },
   {
     "id": 78,
@@ -1300,7 +1377,8 @@
       "powder_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "しびれごな"
   },
   {
     "id": 79,
@@ -1319,7 +1397,8 @@
       "powder_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ねむりごな"
   },
   {
     "id": 80,
@@ -1338,7 +1417,8 @@
       "dance_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "はなびらのまい"
   },
   {
     "id": 81,
@@ -1354,7 +1434,8 @@
     "desc": "입에서 뿜어낸 실을 휘감아서 상대의 스피드를 크게 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "いとをはく"
   },
   {
     "id": 82,
@@ -1371,7 +1452,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "りゅうのいかり"
   },
   {
     "id": 83,
@@ -1390,7 +1472,8 @@
       "trapping_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ほのおのうず"
   },
   {
     "id": 84,
@@ -1406,7 +1489,8 @@
     "desc": "전기 자극을 상대에게 날려서 공격한다. 마비 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "でんきショック"
   },
   {
     "id": 85,
@@ -1422,7 +1506,8 @@
     "desc": "강한 전격을 상대에게 날려서 공격한다. 마비 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "１０まんボルト"
   },
   {
     "id": 86,
@@ -1438,7 +1523,8 @@
     "desc": "약한 전격을 날려서 상대를 마비 상태로 만든다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "でんじは"
   },
   {
     "id": 87,
@@ -1454,7 +1540,8 @@
     "desc": "강한 번개를 상대에게 떨어뜨려 공격한다. 마비 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "かみなり"
   },
   {
     "id": 88,
@@ -1470,7 +1557,8 @@
     "desc": "작은 바위를 들어올려 상대에게 내던져서 공격한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "いわおとし"
   },
   {
     "id": 89,
@@ -1486,7 +1574,8 @@
     "desc": "지진의 충격으로 자신의 주위에 있는 포켓몬을 공격한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "じしん"
   },
   {
     "id": 90,
@@ -1502,7 +1591,8 @@
     "desc": "땅이 갈라진 곳에 상대를 떨어뜨려 공격한다. 맞으면 일격에 기절한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "じわれ"
   },
   {
     "id": 91,
@@ -1518,7 +1608,8 @@
     "desc": "1턴째에 파고들어 2턴째에 상대를 공격한다. 동굴에서 탈출할 수도 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "あなをほる"
   },
   {
     "id": 92,
@@ -1534,7 +1625,8 @@
     "desc": "상대를 맹독의 상태로 만든다. 턴이 진행될수록 독의 데미지가 증가한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "どくどく"
   },
   {
     "id": 93,
@@ -1550,7 +1642,8 @@
     "desc": "약한 염동력을 상대에게 보내어 공격한다. 상대를 혼란시킬 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ねんりき"
   },
   {
     "id": 94,
@@ -1566,7 +1659,8 @@
     "desc": "강한 염동력을 상대에게 보내어 공격한다. 상대의 특수방어를 떨어뜨릴 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "サイコキネシス"
   },
   {
     "id": 95,
@@ -1582,7 +1676,8 @@
     "desc": "졸음을 유도하는 암시를 걸어서 상대를 잠듦 상태로 만든다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "さいみんじゅつ"
   },
   {
     "id": 96,
@@ -1599,7 +1694,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ヨガのポーズ"
   },
   {
     "id": 97,
@@ -1615,7 +1711,8 @@
     "desc": "힘을 빼고 몸을 가볍게 해서 고속으로 움직인다. 자신의 스피드를 크게 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "こうそくいどう"
   },
   {
     "id": 98,
@@ -1634,7 +1731,8 @@
       "priority_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "でんこうせっか"
   },
   {
     "id": 99,
@@ -1650,7 +1748,8 @@
     "desc": "기술을 썼을 때 공격을 받으면 분노의 힘으로 공격이 올라간다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "いかり"
   },
   {
     "id": 100,
@@ -1666,7 +1765,8 @@
     "desc": "야생 포켓몬과 배틀을 그만둔다. 마지막에 들어갔던 포켓몬센터가 있는 도시에도 갈 수 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "テレポート"
   },
   {
     "id": 101,
@@ -1682,7 +1782,8 @@
     "desc": "무시무시한 환상을 보게 해서 자신의 레벨과 똑같은 만큼의 데미지를 상대에게 준다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ナイトヘッド"
   },
   {
     "id": 102,
@@ -1698,7 +1799,8 @@
     "desc": "상대가 마지막에 사용한 기술을 배틀을 하는 동안 자신의 기술로 만들 수 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ものまね"
   },
   {
     "id": 103,
@@ -1717,7 +1819,8 @@
       "sound_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "いやなおと"
   },
   {
     "id": 104,
@@ -1733,7 +1836,8 @@
     "desc": "재빠른 움직임으로 분신을 만들어 상대를 혼란시켜 회피율을 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "かげぶんしん"
   },
   {
     "id": 105,
@@ -1749,7 +1853,8 @@
     "desc": "세포를 재생시켜 자신의 최대 HP의 절반만큼 HP를 회복한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "じこさいせい"
   },
   {
     "id": 106,
@@ -1765,7 +1870,8 @@
     "desc": "전신에 힘을 담아 몸을 단단하게 해서 자신의 방어를 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "かたくなる"
   },
   {
     "id": 107,
@@ -1781,7 +1887,8 @@
     "desc": "몸을 축소하여 작게 보임으로써 자신의 회피율을 크게 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ちいさくなる"
   },
   {
     "id": 108,
@@ -1797,7 +1904,8 @@
     "desc": "연기나 먹물을 내뿜어 상대의 명중률을 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "えんまく"
   },
   {
     "id": 109,
@@ -1813,7 +1921,8 @@
     "desc": "이상한 빛을 상대에게 비춰 당황하게 한다. 상대를 혼란시킨다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "あやしいひかり"
   },
   {
     "id": 110,
@@ -1829,7 +1938,8 @@
     "desc": "껍질에 숨어 몸을 보호하여 자신의 방어를 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "からにこもる"
   },
   {
     "id": 111,
@@ -1845,7 +1955,8 @@
     "desc": "몸을 둥글게 웅크려서 자신의 방어를 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "まるくなる"
   },
   {
     "id": 112,
@@ -1861,7 +1972,8 @@
     "desc": "튼튼한 장막을 만들어 자신의 방어를 크게 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "バリアー"
   },
   {
     "id": 113,
@@ -1877,7 +1989,8 @@
     "desc": "5턴 동안 이상한 장막으로 상대로부터 받는 특수공격의 데미지를 약하게 한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ひかりのかべ"
   },
   {
     "id": 114,
@@ -1893,7 +2006,8 @@
     "desc": "흑안개를 뿜어 배틀에 참가 중인 포켓몬 전원의 능력 변화를 원래대로 돌린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "くろいきり"
   },
   {
     "id": 115,
@@ -1909,7 +2023,8 @@
     "desc": "5턴 동안 이상한 장막으로 상대로부터 받는 물리공격의 데미지를 약하게 한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "リフレクター"
   },
   {
     "id": 116,
@@ -1925,7 +2040,8 @@
     "desc": "깊게 숨을 들이마셔 기합을 넣는다. 자신의 공격이 급소에 맞기 쉬워진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "きあいだめ"
   },
   {
     "id": 117,
@@ -1941,7 +2057,8 @@
     "desc": "2턴 동안 공격을 견뎌 입은 데미지를 2배로 만들어 상대에게 돌려준다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "がまん"
   },
   {
     "id": 118,
@@ -1957,7 +2074,8 @@
     "desc": "손가락을 흔들어 자신의 뇌를 자극해서 모든 기술 중 어느 하나를 날린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ゆびをふる"
   },
   {
     "id": 119,
@@ -1973,7 +2091,8 @@
     "desc": "상대가 사용한 기술을 흉내 내어 자신도 똑같은 기술을 쓴다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "オウムがえし"
   },
   {
     "id": 120,
@@ -1992,7 +2111,8 @@
       "explosive_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "じばく"
   },
   {
     "id": 121,
@@ -2009,7 +2129,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "タマゴばくだん"
   },
   {
     "id": 122,
@@ -2025,7 +2146,8 @@
     "desc": "긴 혀로 상대를 핥아서 공격한다. 마비 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "したでなめる"
   },
   {
     "id": 123,
@@ -2041,7 +2163,8 @@
     "desc": "더러운 가스를 상대에게 내뿜어 공격한다. 독 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "スモッグ"
   },
   {
     "id": 124,
@@ -2057,7 +2180,8 @@
     "desc": "더러운 오물을 상대에게 내던져서 공격한다. 독 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ヘドロこうげき"
   },
   {
     "id": 125,
@@ -2074,7 +2198,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ホネこんぼう"
   },
   {
     "id": 126,
@@ -2090,7 +2215,8 @@
     "desc": "큰 대자의 불꽃으로 상대를 불태운다. 화상 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "だいもんじ"
   },
   {
     "id": 127,
@@ -2106,7 +2232,8 @@
     "desc": "굉장한 기세로 상대에게 돌진한다. 상대를 풀죽게 만들 때가 있다. 폭포도 거슬러 올라갈 수 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "たきのぼり"
   },
   {
     "id": 128,
@@ -2122,7 +2249,8 @@
     "desc": "매우 튼튼하고 두꺼운 껍질에 4-5턴 동안 상대를 끼워서 공격한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "からではさむ"
   },
   {
     "id": 129,
@@ -2138,7 +2266,8 @@
     "desc": "별 모양의 빛을 발사해서 상대를 공격한다. 공격은 반드시 명중한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "スピードスター"
   },
   {
     "id": 130,
@@ -2154,7 +2283,8 @@
     "desc": "1턴째에 머리를 움츠려 방어를 올린다. 2턴째에 상대를 공격한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ロケットずつき"
   },
   {
     "id": 131,
@@ -2171,7 +2301,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "とげキャノン"
   },
   {
     "id": 132,
@@ -2188,7 +2319,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "からみつく"
   },
   {
     "id": 133,
@@ -2204,7 +2336,8 @@
     "desc": "머리를 비워서 순간적으로 무언가를 잊어버림으로써 자신의 특수방어를 크게 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ドわすれ"
   },
   {
     "id": 134,
@@ -2220,7 +2353,8 @@
     "desc": "숟가락을 휘어서 주의를 끌어 상대의 명중률을 낮춘다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "スプーンまげ"
   },
   {
     "id": 135,
@@ -2236,7 +2370,8 @@
     "desc": "자신의 최대 HP 절반을 회복한다. 동료에게 HP를 나누어 줄 수도 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "タマゴうみ"
   },
   {
     "id": 136,
@@ -2252,7 +2387,8 @@
     "desc": "점프해서 무릎차기로 상대를 공격한다. 빗나가면 자신이 데미지를 입는다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "とびひざげり"
   },
   {
     "id": 137,
@@ -2268,7 +2404,8 @@
     "desc": "배의 무늬로 겁을 주어 상대를 마비 상태로 만든다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "へびにらみ"
   },
   {
     "id": 138,
@@ -2284,7 +2421,8 @@
     "desc": "잠자고 있는 상대의 꿈을 먹어 공격한다. 데미지의 절반을 HP로 회복한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ゆめくい"
   },
   {
     "id": 139,
@@ -2300,7 +2438,8 @@
     "desc": "독가스를 상대의 얼굴에 내뿜어 독 상태로 만든다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "どくガス"
   },
   {
     "id": 140,
@@ -2317,7 +2456,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "たまなげ"
   },
   {
     "id": 141,
@@ -2333,7 +2473,8 @@
     "desc": "피를 빨아서 상대를 공격한다. 준 데미지의 절반을 HP로 회복한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "きゅうけつ"
   },
   {
     "id": 142,
@@ -2349,7 +2490,8 @@
     "desc": "무서운 얼굴로 키스한다. 상대를 잠듦 상태로 만든다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "あくまのキッス"
   },
   {
     "id": 143,
@@ -2365,7 +2507,8 @@
     "desc": "2턴째에 상대를 공격한다. 가끔 풀죽게 만든다. 급소에도 맞기 쉽다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ゴッドバード"
   },
   {
     "id": 144,
@@ -2381,7 +2524,8 @@
     "desc": "상대 포켓몬으로 변신하여 상대와 완전히 똑같은 기술을 사용할 수 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "へんしん"
   },
   {
     "id": 145,
@@ -2398,7 +2542,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "あわ"
   },
   {
     "id": 146,
@@ -2414,7 +2559,8 @@
     "desc": "리드미컬한 펀치를 날려 상대를 공격한다. 혼란시킬 때가 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ピヨピヨパンチ"
   },
   {
     "id": 147,
@@ -2433,7 +2579,8 @@
       "powder_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "キノコのほうし"
   },
   {
     "id": 148,
@@ -2450,7 +2597,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "フラッシュ"
   },
   {
     "id": 149,
@@ -2467,7 +2615,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "サイコウェーブ"
   },
   {
     "id": 150,
@@ -2483,7 +2632,8 @@
     "desc": "공격도 하지 않고 팔딱팔딱 튈 뿐 아무 일도 일어나지 않는다...",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "はねる"
   },
   {
     "id": 151,
@@ -2499,7 +2649,8 @@
     "desc": "세포의 변화로 액체가 되어 자신의 방어를 크게 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "とける"
   },
   {
     "id": 152,
@@ -2515,7 +2666,8 @@
     "desc": "큰 집게를 상대에게 내리쳐서 공격한다. 급소에 맞기 쉽다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "クラブハンマー"
   },
   {
     "id": 153,
@@ -2534,7 +2686,8 @@
       "explosive_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "だいばくはつ"
   },
   {
     "id": 154,
@@ -2550,7 +2703,8 @@
     "desc": "손톱이나 낫 등으로 상대를 할퀴어서 공격한다. 2-5회 동안 연속으로 쓴다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "みだれひっかき"
   },
   {
     "id": 155,
@@ -2566,7 +2720,8 @@
     "desc": "손에 들고 있는 뼈를 상대에게 날려서 날아갈 때와 돌아올 때 2회 연속 데미지를 준다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ホネブーメラン"
   },
   {
     "id": 156,
@@ -2582,7 +2737,8 @@
     "desc": "2턴 동안 계속 잠잔다. 자신의 HP와 상태 이상을 모두 회복한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ねむる"
   },
   {
     "id": 157,
@@ -2598,7 +2754,8 @@
     "desc": "큰 바위를 세차게 부딪쳐서 공격한다. 상대를 풀죽게 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "いわなだれ"
   },
   {
     "id": 158,
@@ -2614,7 +2771,8 @@
     "desc": "날카로운 앞니로 강하게 물어서 공격한다. 상대를 풀죽게 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ひっさつまえば"
   },
   {
     "id": 159,
@@ -2631,7 +2789,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "かくばる"
   },
   {
     "id": 160,
@@ -2647,7 +2806,8 @@
     "desc": "자신의 타입을 배운 기술 중 가장 위에 있는 기술과 같은 타입으로 바꾼다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "テクスチャー"
   },
   {
     "id": 161,
@@ -2663,7 +2823,8 @@
     "desc": "3개의 광선으로 공격한다. 마비, 화상 또는 얼음 상태 중 어느 하나로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "トライアタック"
   },
   {
     "id": 162,
@@ -2679,7 +2840,8 @@
     "desc": "날카로운 앞니로 강하게 물어서 공격한다. 상대의 HP는 절반이 된다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "いかりのまえば"
   },
   {
     "id": 163,
@@ -2695,7 +2857,8 @@
     "desc": "발톱이나 낫 등으로 상대를 베어 갈라서 공격한다. 급소에 맞기 쉽다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "きりさく"
   },
   {
     "id": 164,
@@ -2711,7 +2874,8 @@
     "desc": "자신의 HP를 조금 깎아서 분신을 만든다. 분신은 자신의 대타가 된다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "みがわり"
   },
   {
     "id": 165,
@@ -2728,7 +2892,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "わるあがき"
   },
   {
     "id": 166,
@@ -2744,7 +2909,8 @@
     "desc": "상대가 쓴 기술을 자신의 것으로 만든다. 한 번 사용하면 스케치는 사라진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "スケッチ"
   },
   {
     "id": 167,
@@ -2760,7 +2926,8 @@
     "desc": "3회 연속으로 킥을 날려 공격한다. 기술이 맞을 때마다 위력이 올라간다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "トリプルキック"
   },
   {
     "id": 168,
@@ -2776,7 +2943,8 @@
     "desc": "공격과 동시에 도구를 훔친다. 자신이 도구를 지니고 있을 경우에는 훔칠 수 없다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "どろぼう"
   },
   {
     "id": 169,
@@ -2793,7 +2961,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "クモのす"
   },
   {
     "id": 170,
@@ -2809,7 +2978,8 @@
     "desc": "상대의 움직임을 마음으로 읽고 다음 공격이 반드시 상대에게 명중되게 한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "こころのめ"
   },
   {
     "id": 171,
@@ -2826,7 +2996,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "あくむ"
   },
   {
     "id": 172,
@@ -2842,7 +3013,8 @@
     "desc": "불꽃을 둘러 상대에게 돌진하여 공격한다. 화상 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "かえんぐるま"
   },
   {
     "id": 173,
@@ -2861,7 +3033,8 @@
       "sound_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "いびき"
   },
   {
     "id": 174,
@@ -2877,7 +3050,8 @@
     "desc": "기술을 쓰는 포켓몬이 고스트타입일 때와 그 이외의 타입일 때는 효과가 다르다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "のろい"
   },
   {
     "id": 175,
@@ -2893,7 +3067,8 @@
     "desc": "바둥바둥 난동 부려서 공격한다. 자신의 HP가 적을수록 기술의 위력이 올라간다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "じたばた"
   },
   {
     "id": 176,
@@ -2909,7 +3084,8 @@
     "desc": "상대가 마지막으로 쓴 기술에 저항할 수 있도록 자신의 타입을 변화시킨다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "テクスチャー２"
   },
   {
     "id": 177,
@@ -2925,7 +3101,8 @@
     "desc": "공기의 소용돌이를 발사하여 공격한다. 급소에 맞기 쉽다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "エアロブラスト"
   },
   {
     "id": 178,
@@ -2944,7 +3121,8 @@
       "powder_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "わたほうし"
   },
   {
     "id": 179,
@@ -2960,7 +3138,8 @@
     "desc": "힘을 쥐어짜서 공격한다. 자신의 HP가 적을수록 기술의 위력이 올라간다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "きしかいせい"
   },
   {
     "id": 180,
@@ -2976,7 +3155,8 @@
     "desc": "상대가 마지막으로 사용한 기술에 원한을 품어 그 기술의 PP를 4만큼 줄인다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "うらみ"
   },
   {
     "id": 181,
@@ -2992,7 +3172,8 @@
     "desc": "차가운 가랑눈을 상대에게 내뿜어 공격한다. 얼음 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "こなゆき"
   },
   {
     "id": 182,
@@ -3011,7 +3192,8 @@
       "priority_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "まもる"
   },
   {
     "id": 183,
@@ -3031,7 +3213,8 @@
       "punching_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "マッハパンチ"
   },
   {
     "id": 184,
@@ -3047,7 +3230,8 @@
     "desc": "무서운 얼굴로 노려보고 겁주어 상대의 스피드를 크게 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "こわいかお"
   },
   {
     "id": 185,
@@ -3063,7 +3247,8 @@
     "desc": "슬금슬금 상대에게 다가가 방심한 틈을 타서 세게 때린다. 공격은 반드시 명중한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "だましうち"
   },
   {
     "id": 186,
@@ -3079,7 +3264,8 @@
     "desc": "천사처럼 귀엽게 키스하여 상대를 혼란시킨다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "てんしのキッス"
   },
   {
     "id": 187,
@@ -3095,7 +3281,8 @@
     "desc": "자신의 HP를 최대 HP의 절반만큼 감소시켜 자신의 공격을 최대로 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "はらだいこ"
   },
   {
     "id": 188,
@@ -3114,7 +3301,8 @@
       "ball_bomb_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ヘドロばくだん"
   },
   {
     "id": 189,
@@ -3130,7 +3318,8 @@
     "desc": "상대의 얼굴 등에 진흙을 내던져서 공격한다. 명중률을 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "どろかけ"
   },
   {
     "id": 190,
@@ -3146,7 +3335,8 @@
     "desc": "상대의 얼굴 등에 먹물을 내뿜어 공격한다. 명중률을 떨어뜨릴 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "オクタンほう"
   },
   {
     "id": 191,
@@ -3162,7 +3352,8 @@
     "desc": "상대의 발밑에 압정을 뿌린다. 교체된 상대 포켓몬에게 데미지를 준다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "まきびし"
   },
   {
     "id": 192,
@@ -3181,7 +3372,8 @@
       "ball_bomb_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "でんじほう"
   },
   {
     "id": 193,
@@ -3197,7 +3389,8 @@
     "desc": "고스트타입에 효과가 없는 기술이나 회피율이 높은 상대라 할지라도 공격이 맞게 된다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "みやぶる"
   },
   {
     "id": 194,
@@ -3213,7 +3406,8 @@
     "desc": "기술을 쓴 뒤 공격을 받아 기절했을 때 길동무의 대상도 기절하게 한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "みちづれ"
   },
   {
     "id": 195,
@@ -3229,7 +3423,8 @@
     "desc": "노래를 들은 포켓몬은 3턴이 지나면 기절한다. 교체되면 효과가 없어진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ほろびのうた"
   },
   {
     "id": 196,
@@ -3248,7 +3443,8 @@
       "wind_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "こごえるかぜ"
   },
   {
     "id": 197,
@@ -3267,7 +3463,8 @@
       "priority_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "みきり"
   },
   {
     "id": 198,
@@ -3286,7 +3483,8 @@
       "multi_hit_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ボーンラッシュ"
   },
   {
     "id": 199,
@@ -3302,7 +3500,8 @@
     "desc": "조준을 잘 맞춰 다음 공격이 반드시 상대에게 명중하도록 한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ロックオン"
   },
   {
     "id": 200,
@@ -3318,7 +3517,8 @@
     "desc": "2-3턴 동안 마구 난동 부려서 공격한다. 난동 부린 뒤에는 혼란에 빠진다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "げきりん"
   },
   {
     "id": 201,
@@ -3337,7 +3537,8 @@
       "wind_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "すなあらし"
   },
   {
     "id": 202,
@@ -3353,7 +3554,8 @@
     "desc": "양분을 흡수하여 공격한다. 입힌 데미지의 절반에 해당하는 HP를 회복할 수 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ギガドレイン"
   },
   {
     "id": 203,
@@ -3372,7 +3574,8 @@
       "priority_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "こらえる"
   },
   {
     "id": 204,
@@ -3388,7 +3591,8 @@
     "desc": "귀엽게 바라보고 방심을 유도하여 상대의 공격을 크게 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "あまえる"
   },
   {
     "id": 205,
@@ -3404,7 +3608,8 @@
     "desc": "5턴 동안 구르기를 반복하여 공격한다. 기술이 맞을 때마다 위력이 올라간다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ころがる"
   },
   {
     "id": 206,
@@ -3420,7 +3625,8 @@
     "desc": "상대의 HP가 반드시 1만큼 남도록 조절하여 공격한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "みねうち"
   },
   {
     "id": 207,
@@ -3436,7 +3642,8 @@
     "desc": "상대를 화내게 해서 혼란시킨다. 분노로 상대의 공격은 크게 올라가 버린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "いばる"
   },
   {
     "id": 208,
@@ -3452,7 +3659,8 @@
     "desc": "자신의 최대 HP 절반을 회복한다. 동료에게 HP를 나누어 줄 수도 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ミルクのみ"
   },
   {
     "id": 209,
@@ -3468,7 +3676,8 @@
     "desc": "전기를 둘러 상대에게 돌진하여 공격한다. 마비 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "スパーク"
   },
   {
     "id": 210,
@@ -3484,7 +3693,8 @@
     "desc": "낫이나 발톱 등으로 상대를 베어 공격한다. 연속으로 맞히면 위력이 올라간다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "れんぞくぎり"
   },
   {
     "id": 211,
@@ -3500,7 +3710,8 @@
     "desc": "단단한 날개를 상대에게 부딪쳐서 공격한다. 자신의 방어가 올라갈 때가 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "はがねのつばさ"
   },
   {
     "id": 212,
@@ -3516,7 +3727,8 @@
     "desc": "빨려 들어갈 것 같은 까만 눈빛으로 가만히 응시하여 상대를 배틀에서 도망갈 수 없게 한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "くろいまなざし"
   },
   {
     "id": 213,
@@ -3532,7 +3744,8 @@
     "desc": "수컷은 암컷을 암컷은 수컷을 유혹하여 헤롱헤롱하게 만든다. 상대가 기술을 쓰기 어려워진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "メロメロ"
   },
   {
     "id": 214,
@@ -3548,7 +3761,8 @@
     "desc": "자신이 배운 기술 중 하나를 무작위로 날린다. 자신이 잠들어 있을 때만 쓸 수 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ねごと"
   },
   {
     "id": 215,
@@ -3567,7 +3781,8 @@
       "sound_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "いやしのすず"
   },
   {
     "id": 216,
@@ -3583,7 +3798,8 @@
     "desc": "트레이너를 위해 전력으로 상대를 공격한다. 친밀할수록 위력이 올라간다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "おんがえし"
   },
   {
     "id": 217,
@@ -3599,7 +3815,8 @@
     "desc": "덫을 설치한 상자를 상대에게 건네어 공격한다. HP가 회복돼버릴 때도 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "プレゼント"
   },
   {
     "id": 218,
@@ -3615,7 +3832,8 @@
     "desc": "불만을 풀기 위해 전력으로 상대를 공격한다. 친밀하지 않을수록 위력이 올라간다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "やつあたり"
   },
   {
     "id": 219,
@@ -3631,7 +3849,8 @@
     "desc": "5턴 동안 이상한 힘으로 보호받아 상태 이상이 되지 않는다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "しんぴのまもり"
   },
   {
     "id": 220,
@@ -3647,7 +3866,8 @@
     "desc": "자신의 HP와 상대의 HP를 합친 것을 자신과 상대가 사이좋게 나눈다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "いたみわけ"
   },
   {
     "id": 221,
@@ -3663,7 +3883,8 @@
     "desc": "신비한 불꽃으로 상대를 태워서 공격한다. 화상 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "せいなるほのお"
   },
   {
     "id": 222,
@@ -3680,7 +3901,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "マグニチュード"
   },
   {
     "id": 223,
@@ -3699,7 +3921,8 @@
       "punching_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ばくれつパンチ"
   },
   {
     "id": 224,
@@ -3715,7 +3938,8 @@
     "desc": "단단하고 훌륭한 뿔로 마음껏 상대를 꿰찔러서 공격한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "メガホーン"
   },
   {
     "id": 225,
@@ -3731,7 +3955,8 @@
     "desc": "굉장한 숨결을 상대에게 내뿜어 공격한다. 마비 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "りゅうのいぶき"
   },
   {
     "id": 226,
@@ -3747,7 +3972,8 @@
     "desc": "교대 포켓몬과 바뀐다. 능력 변화는 바뀐 포켓몬이 그대로 이어받는다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "バトンタッチ"
   },
   {
     "id": 227,
@@ -3763,7 +3989,8 @@
     "desc": "상대가 마지막으로 사용한 기술을 3턴 동안 계속 쓰게 한다. 앙코르 대상 기술의 우선도가 그대로 적용된다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "アンコール"
   },
   {
     "id": 228,
@@ -3779,7 +4006,8 @@
     "desc": "상대 포켓몬이 교체될 때 기술을 쓰면 2배의 위력으로 공격할 수 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "おいうち"
   },
   {
     "id": 229,
@@ -3795,7 +4023,8 @@
     "desc": "회전해서 상대를 공격한다. 조이기, 김밥말이, 씨뿌리기, 압정뿌리기 등도 날려버린다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "こうそくスピン"
   },
   {
     "id": 230,
@@ -3811,7 +4040,8 @@
     "desc": "향기로 상대의 회피율을 크게 떨어뜨린다. 풀밭 등에서 쓰면 포켓몬이 다가온다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "あまいかおり"
   },
   {
     "id": 231,
@@ -3827,7 +4057,8 @@
     "desc": "단단한 꼬리로 상대를 힘껏 쳐서 공격한다. 상대의 방어를 떨어뜨릴 때가 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "アイアンテール"
   },
   {
     "id": 232,
@@ -3846,7 +4077,8 @@
     "in_champions": false,
     "move_categories": [
       "slicing_move"
-    ]
+    ],
+    "ja": "メタルクロー"
   },
   {
     "id": 233,
@@ -3862,7 +4094,8 @@
     "desc": "상대보다 나중에 공격한다. 그 대신 자신의 공격은 반드시 명중한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "あてみなげ"
   },
   {
     "id": 234,
@@ -3878,7 +4111,8 @@
     "desc": "자신의 HP를 회복한다. 날씨에 따라 회복량이 변한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "あさのひざし"
   },
   {
     "id": 235,
@@ -3894,7 +4128,8 @@
     "desc": "자신의 HP를 회복한다. 날씨에 따라 회복량이 변한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "こうごうせい"
   },
   {
     "id": 236,
@@ -3910,7 +4145,8 @@
     "desc": "자신의 HP를 회복한다. 날씨에 따라 회복량이 변한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "つきのひかり"
   },
   {
     "id": 237,
@@ -3926,7 +4162,8 @@
     "desc": "기술을 쓴 포켓몬에 따라 기술의 타입이 바뀐다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "めざめるパワー"
   },
   {
     "id": 238,
@@ -3942,7 +4179,8 @@
     "desc": "양손으로 당수를 상대에게 힘껏 쳐서 공격한다. 급소에 맞기 쉽다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "クロスチョップ"
   },
   {
     "id": 239,
@@ -3958,7 +4196,8 @@
     "desc": "회오리를 일으켜 상대를 끌어들여 공격한다. 상대를 풀죽게 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "たつまき"
   },
   {
     "id": 240,
@@ -3974,7 +4213,8 @@
     "desc": "5턴 동안 비를 내리게 하여 물타입 기술의 위력을 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "あまごい"
   },
   {
     "id": 241,
@@ -3990,7 +4230,8 @@
     "desc": "5턴 동안 햇살을 강하게 해서 불꽃타입 기술의 위력을 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "にほんばれ"
   },
   {
     "id": 242,
@@ -4009,7 +4250,8 @@
       "biting_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "かみくだく"
   },
   {
     "id": 243,
@@ -4028,7 +4270,8 @@
       "priority_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ミラーコート"
   },
   {
     "id": 244,
@@ -4044,7 +4287,8 @@
     "desc": "자신에게 암시를 걸어서 능력 변화 상태를 상대와 똑같은 상태로 만든다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "じこあんじ"
   },
   {
     "id": 245,
@@ -4063,7 +4307,8 @@
       "priority_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "しんそく"
   },
   {
     "id": 246,
@@ -4079,7 +4324,8 @@
     "desc": "원시의 힘으로 공격한다. 자신의 모든 능력이 오를 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "げんしのちから"
   },
   {
     "id": 247,
@@ -4098,7 +4344,8 @@
       "ball_bomb_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "シャドーボール"
   },
   {
     "id": 248,
@@ -4114,7 +4361,8 @@
     "desc": "기술을 사용한 2턴 뒤에 상대에게 염동력의 덩어리를 보내어 공격한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "みらいよち"
   },
   {
     "id": 249,
@@ -4130,7 +4378,8 @@
     "desc": "펀치로 공격한다. 상대의 방어를 떨어뜨릴 때가 있다. 바위를 깰 수도 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "いわくだき"
   },
   {
     "id": 250,
@@ -4149,7 +4398,8 @@
       "trapping_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "うずしお"
   },
   {
     "id": 251,
@@ -4165,7 +4415,8 @@
     "desc": "같은 편 전원이 공격한다. 동료 포켓몬이 많을수록 기술의 공격 횟수가 증가한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ふくろだたき"
   },
   {
     "id": 252,
@@ -4184,7 +4435,8 @@
       "priority_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ねこだまし"
   },
   {
     "id": 253,
@@ -4203,7 +4455,8 @@
       "sound_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "さわぐ"
   },
   {
     "id": 254,
@@ -4219,7 +4472,8 @@
     "desc": "힘을 비축해서 자신의 방어와 특수방어를 올린다. 최대 3회까지 비축할 수 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "たくわえる"
   },
   {
     "id": 255,
@@ -4235,7 +4489,8 @@
     "desc": "비축된 힘을 상대에게 부딪쳐서 공격한다. 비축된 만큼 위력이 올라간다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "はきだす"
   },
   {
     "id": 256,
@@ -4251,7 +4506,8 @@
     "desc": "비축된 힘을 꿀꺽해서 자신의 HP를 회복한다. 비축된 만큼 회복한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "のみこむ"
   },
   {
     "id": 257,
@@ -4270,7 +4526,8 @@
       "wind_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ねっぷう"
   },
   {
     "id": 258,
@@ -4286,7 +4543,8 @@
     "desc": "5턴 동안 싸라기눈을 내리게 해 얼음타입이 아닌 포켓몬 모두에게 데미지를 준다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "あられ"
   },
   {
     "id": 259,
@@ -4302,7 +4560,8 @@
     "desc": "상대에게 트집을 잡아서 똑같은 기술을 2회 연속으로 쓸 수 없게 한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "いちゃもん"
   },
   {
     "id": 260,
@@ -4318,7 +4577,8 @@
     "desc": "상대를 부추겨서 혼란시킨다. 동시에 상대의 특수공격도 올라가 버린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "おだてる"
   },
   {
     "id": 261,
@@ -4334,7 +4594,8 @@
     "desc": "으스스하고 괴상한 불꽃을 쏘아 상대를 화상 상태로 만든다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "おにび"
   },
   {
     "id": 262,
@@ -4353,7 +4614,8 @@
       "explosive_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "おきみやげ"
   },
   {
     "id": 263,
@@ -4369,7 +4631,8 @@
     "desc": "자신이 독, 마비, 화상 상태일 때 날리면 기술의 위력이 2배가 된다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "からげんき"
   },
   {
     "id": 264,
@@ -4389,7 +4652,8 @@
       "punching_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "きあいパンチ"
   },
   {
     "id": 265,
@@ -4405,7 +4669,8 @@
     "desc": "마비 상태의 상대에게는 위력이 2배가 되지만 대신 상대의 마비가 풀린다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "きつけ"
   },
   {
     "id": 266,
@@ -4424,7 +4689,8 @@
       "priority_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "このゆびとまれ"
   },
   {
     "id": 267,
@@ -4440,7 +4706,8 @@
     "desc": "자연의 힘으로 공격한다. 사용하는 장소에 따라 나오는 기술이 변화한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "しぜんのちから"
   },
   {
     "id": 268,
@@ -4456,7 +4723,8 @@
     "desc": "다음 턴에 쓸 전기타입 기술의 위력을 올린다. 자신의 특수방어도 올라간다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "じゅうでん"
   },
   {
     "id": 269,
@@ -4472,7 +4740,8 @@
     "desc": "상대를 화나게 한다. 3턴 동안 상대는 데미지를 주는 기술밖에 쓸 수 없게 된다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ちょうはつ"
   },
   {
     "id": 270,
@@ -4491,7 +4760,8 @@
       "priority_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "てだすけ"
   },
   {
     "id": 271,
@@ -4507,7 +4777,8 @@
     "desc": "상대의 빈틈을 노려 자신과 상대가 지닌 물건을 교환한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "トリック"
   },
   {
     "id": 272,
@@ -4523,7 +4794,8 @@
     "desc": "상대의 역할을 하여 자신도 상대와 같은 특성으로 변화한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "なりきり"
   },
   {
     "id": 273,
@@ -4539,7 +4811,8 @@
     "desc": "다음 턴에 자신의 HP를 최대 HP의 절반만큼 회복한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ねがいごと"
   },
   {
     "id": 274,
@@ -4555,7 +4828,8 @@
     "desc": "서둘러서 같은 편의 도움을 받아 교대 포켓몬이 기억하고 있는 기술 중 하나를 쓴다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ねこのて"
   },
   {
     "id": 275,
@@ -4571,7 +4845,8 @@
     "desc": "대지에 뿌리를 박아 매 턴마다 자신의 HP를 회복한다. 뿌리 박고 있으므로 교체할 수 없다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ねをはる"
   },
   {
     "id": 276,
@@ -4587,7 +4862,8 @@
     "desc": "엄청난 힘을 발휘하여 상대를 공격한다. 자신의 공격과 방어가 떨어진다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ばかぢから"
   },
   {
     "id": 277,
@@ -4603,7 +4879,8 @@
     "desc": "상대가 상태 이상이 되는 기술이나 씨뿌리기 등을 썼을 때 되받아친다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "マジックコート"
   },
   {
     "id": 278,
@@ -4619,7 +4896,8 @@
     "desc": "배틀 중에 사용하여 없어진 자신의 지닌 물건을 재생시켜 사용할 수 있게 한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "リサイクル"
   },
   {
     "id": 279,
@@ -4635,7 +4913,8 @@
     "desc": "상대에게 기술을 받으면 그 상대에게 주는 데미지가 2배가 된다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "リベンジ"
   },
   {
     "id": 280,
@@ -4651,7 +4930,8 @@
     "desc": "수도로 기세 좋게 내려쳐서 상대를 공격한다. 빛의장막이나 리플렉터도 파괴할 수 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "かわらわり"
   },
   {
     "id": 281,
@@ -4667,7 +4947,8 @@
     "desc": "큰 하품으로 졸음을 유도한다. 다음 턴에 상대를 잠듦 상태로 만든다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "あくび"
   },
   {
     "id": 282,
@@ -4683,7 +4964,8 @@
     "desc": "상대의 지닌 물건을 탁 쳐서 떨어뜨려 배틀이 끝날 때까지 사용할 수 없게 한다. 물건을 가진 상대에게는 데미지를 더 준다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "はたきおとす"
   },
   {
     "id": 283,
@@ -4699,7 +4981,8 @@
     "desc": "상대의 HP가 자신의 HP와 같아지도록 데미지를 준다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "がむしゃら"
   },
   {
     "id": 284,
@@ -4715,7 +4998,8 @@
     "desc": "분노를 폭발시켜 상대를 공격한다. 자신의 HP가 적을수록 기술의 위력이 떨어진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ふんか"
   },
   {
     "id": 285,
@@ -4731,7 +5015,8 @@
     "desc": "초능력으로 자신의 특성과 상대의 특성을 바꾼다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "スキルスワップ"
   },
   {
     "id": 286,
@@ -4747,7 +5032,8 @@
     "desc": "상대가 자신과 같은 기술을 기억하고 있으면 상대만 그 기술을 사용할 수 없게 한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ふういん"
   },
   {
     "id": 287,
@@ -4763,7 +5049,8 @@
     "desc": "몸을 쉬게 하여 자신이 입은 독, 마비, 화상의 상태 이상을 치료한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "リフレッシュ"
   },
   {
     "id": 288,
@@ -4779,7 +5066,8 @@
     "desc": "상대의 기술로 기절하면 원념을 담아 그 기술의 PP를 0으로 만든다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "おんねん"
   },
   {
     "id": 289,
@@ -4795,7 +5083,8 @@
     "desc": "상대가 사용하려고 한 회복 기술이나 능력 변화의 기술을 빼앗아 자신에게 쓴다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "よこどり"
   },
   {
     "id": 290,
@@ -4812,7 +5101,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ひみつのちから"
   },
   {
     "id": 291,
@@ -4828,7 +5118,8 @@
     "desc": "1턴째에 잠수했다가 2턴째에 떠올라 공격한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ダイビング"
   },
   {
     "id": 292,
@@ -4844,7 +5135,8 @@
     "desc": "펼친 양손으로 상대를 번갈아 쳐서 공격한다. 2-5회 동안 연속으로 쓴다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "つっぱり"
   },
   {
     "id": 293,
@@ -4860,7 +5152,8 @@
     "desc": "물가나 풀밭, 동굴 등 있는 장소에 맞춰서 자신의 타입을 바꾼다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ほごしょく"
   },
   {
     "id": 294,
@@ -4876,7 +5169,8 @@
     "desc": "깜빡거리는 빛을 바라보고 자신의 정신을 통일하여 특수공격을 매우 크게 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ほたるび"
   },
   {
     "id": 295,
@@ -4892,7 +5186,8 @@
     "desc": "눈부신 빛을 발산하여 공격한다. 상대의 특수방어를 떨어뜨릴 때가 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ラスターパージ"
   },
   {
     "id": 296,
@@ -4908,7 +5203,8 @@
     "desc": "안개의 깃털로 둘러싸 공격한다. 상대의 특수공격을 떨어뜨릴 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ミストボール"
   },
   {
     "id": 297,
@@ -4927,7 +5223,8 @@
       "dance_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "フェザーダンス"
   },
   {
     "id": 298,
@@ -4946,7 +5243,8 @@
       "dance_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "フラフラダンス"
   },
   {
     "id": 299,
@@ -4962,7 +5260,8 @@
     "desc": "공격한 상대를 화상 상태로 만들 때가 있다. 급소에도 맞기 쉽다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ブレイズキック"
   },
   {
     "id": 300,
@@ -4978,7 +5277,8 @@
     "desc": "주위를 진흙투성이로 만든다. 5턴 동안 전기타입의 기술을 약하게 한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "どろあそび"
   },
   {
     "id": 301,
@@ -4995,7 +5295,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "アイスボール"
   },
   {
     "id": 302,
@@ -5012,7 +5313,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ニードルアーム"
   },
   {
     "id": 303,
@@ -5028,7 +5330,8 @@
     "desc": "게으름 피우며 쉰다. 자신의 HP를 최대 HP의 절반만큼 회복한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "なまける"
   },
   {
     "id": 304,
@@ -5047,7 +5350,8 @@
       "sound_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ハイパーボイス"
   },
   {
     "id": 305,
@@ -5066,7 +5370,8 @@
       "biting_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "どくどくのキバ"
   },
   {
     "id": 306,
@@ -5082,7 +5387,8 @@
     "desc": "단단하고 날카로운 손톱으로 베어 갈라서 공격한다. 상대의 방어를 떨어뜨릴 때가 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ブレイククロー"
   },
   {
     "id": 307,
@@ -5098,7 +5404,8 @@
     "desc": "폭발하는 불꽃으로 상대를 태워서 공격한다. 다음 턴은 움직일 수 없다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ブラストバーン"
   },
   {
     "id": 308,
@@ -5114,7 +5421,8 @@
     "desc": "물의 대포를 상대에게 발사해서 공격한다. 다음 턴은 움직일 수 없다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ハイドロカノン"
   },
   {
     "id": 309,
@@ -5130,7 +5438,8 @@
     "desc": "혜성과 같은 펀치를 날려서 상대를 공격한다. 자신의 공격이 올라갈 때가 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "コメットパンチ"
   },
   {
     "id": 310,
@@ -5146,7 +5455,8 @@
     "desc": "큰 소리 등으로 불시에 놀래켜서 공격한다. 상대를 풀죽게 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "おどろかす"
   },
   {
     "id": 311,
@@ -5165,7 +5475,8 @@
       "ball_bomb_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ウェザーボール"
   },
   {
     "id": 312,
@@ -5181,7 +5492,8 @@
     "desc": "기분 좋은 평온한 향기를 맡게 하여 같은 편 모두의 상태 이상을 회복한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "アロマセラピー"
   },
   {
     "id": 313,
@@ -5197,7 +5509,8 @@
     "desc": "우는 척을 하며 눈물을 흘린다. 난처하게 만들어 상대의 특수방어를 크게 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "うそなき"
   },
   {
     "id": 314,
@@ -5217,7 +5530,8 @@
       "wind_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "エアカッター"
   },
   {
     "id": 315,
@@ -5233,7 +5547,8 @@
     "desc": "풀 파워로 상대를 공격한다. 쓰면 반동으로 자신의 특수공격이 크게 떨어진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "オーバーヒート"
   },
   {
     "id": 316,
@@ -5249,7 +5564,8 @@
     "desc": "고스트타입에 효과가 없는 기술이나 회피율이 높은 상대라 할지라도 공격이 맞게 된다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "かぎわける"
   },
   {
     "id": 317,
@@ -5265,7 +5581,8 @@
     "desc": "암석을 내던져서 공격한다. 상대의 움직임을 봉인함으로써 스피드를 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "がんせきふうじ"
   },
   {
     "id": 318,
@@ -5281,7 +5598,8 @@
     "desc": "바람에 날개 가루를 날려서 상대를 공격한다. 자신의 모든 능력이 올라갈 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ぎんいろのかぜ"
   },
   {
     "id": 319,
@@ -5300,7 +5618,8 @@
       "sound_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "きんぞくおん"
   },
   {
     "id": 320,
@@ -5316,7 +5635,8 @@
     "desc": "기분 좋은 피리 소리를 들려주어 상대를 잠듦 상태로 만든다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "くさぶえ"
   },
   {
     "id": 321,
@@ -5332,7 +5652,8 @@
     "desc": "몸을 간질여 웃게 만들어서 상대의 공격과 방어를 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "くすぐる"
   },
   {
     "id": 322,
@@ -5348,7 +5669,8 @@
     "desc": "우주로부터 신비한 힘을 손에 넣음으로써 자신의 방어와 특수방어를 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "コスモパワー"
   },
   {
     "id": 323,
@@ -5364,7 +5686,8 @@
     "desc": "바닷물을 내뿜어 공격한다. 자신의 HP가 적을수록 기술의 위력이 떨어진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "しおふき"
   },
   {
     "id": 324,
@@ -5380,7 +5703,8 @@
     "desc": "이상한 빛을 발사해서 공격한다. 상대를 혼란시킬 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "シグナルビーム"
   },
   {
     "id": 325,
@@ -5399,7 +5723,8 @@
       "punching_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "シャドーパンチ"
   },
   {
     "id": 326,
@@ -5415,7 +5740,8 @@
     "desc": "보이지 않는 이상한 힘을 보내어 공격한다. 상대를 풀죽게 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "じんつうりき"
   },
   {
     "id": 327,
@@ -5432,7 +5758,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "スカイアッパー"
   },
   {
     "id": 328,
@@ -5451,7 +5778,8 @@
       "trapping_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "すなじごく"
   },
   {
     "id": 329,
@@ -5467,7 +5795,8 @@
     "desc": "절대영도의 추위로 상대를 공격한다. 맞으면 일격에 기절한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ぜったいれいど"
   },
   {
     "id": 330,
@@ -5483,7 +5812,8 @@
     "desc": "탁해진 물을 상대에게 발사하여 공격한다. 명중률을 떨어뜨릴 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "だくりゅう"
   },
   {
     "id": 331,
@@ -5503,7 +5833,8 @@
       "multi_hit_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "タネマシンガン"
   },
   {
     "id": 332,
@@ -5522,7 +5853,8 @@
       "slicing_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "つばめがえし"
   },
   {
     "id": 333,
@@ -5541,7 +5873,8 @@
       "multi_hit_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "つららばり"
   },
   {
     "id": 334,
@@ -5557,7 +5890,8 @@
     "desc": "피부를 쇠처럼 단단하게 함으로써 자신의 방어를 크게 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "てっぺき"
   },
   {
     "id": 335,
@@ -5573,7 +5907,8 @@
     "desc": "양팔을 벌려 막아서서 상대의 도주로를 가로막아 도망칠 수 없게 한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "とおせんぼう"
   },
   {
     "id": 336,
@@ -5589,7 +5924,8 @@
     "desc": "큰 소리로 짖고 기합을 높여 자신의 공격을 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "とおぼえ"
   },
   {
     "id": 337,
@@ -5608,7 +5944,8 @@
       "slicing_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ドラゴンクロー"
   },
   {
     "id": 338,
@@ -5624,7 +5961,8 @@
     "desc": "큰 나무로 상대를 힘껏 쳐서 공격한다. 다음 턴은 움직일 수 없게 된다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ハードプラント"
   },
   {
     "id": 339,
@@ -5640,7 +5978,8 @@
     "desc": "몸에 힘을 담아 근육을 두껍게 해서 자신의 공격과 방어를 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ビルドアップ"
   },
   {
     "id": 340,
@@ -5656,7 +5995,8 @@
     "desc": "하늘 높이 뛰어올라 2턴째에 상대를 공격한다. 마비 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "とびはねる"
   },
   {
     "id": 341,
@@ -5675,7 +6015,8 @@
       "ball_bomb_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "マッドショット"
   },
   {
     "id": 342,
@@ -5691,7 +6032,8 @@
     "desc": "꼬리로 때린다. 독 상태로 만들 때가 있고 급소에도 맞기 쉽다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ポイズンテール"
   },
   {
     "id": 343,
@@ -5707,7 +6049,8 @@
     "desc": "귀엽게 애교부리며 상대에게 다가가 지니고 있는 도구를 뺏는다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ほしがる"
   },
   {
     "id": 344,
@@ -5726,7 +6069,8 @@
       "recoil_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ボルテッカー"
   },
   {
     "id": 345,
@@ -5742,7 +6086,8 @@
     "desc": "상대를 추적하는 이상한 잎사귀를 흩뿌린다. 공격은 반드시 명중한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "マジカルリーフ"
   },
   {
     "id": 346,
@@ -5758,7 +6103,8 @@
     "desc": "주위를 물로 흠뻑 젖게 만든다. 5턴 동안 불꽃타입의 기술을 약하게 한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "みずあそび"
   },
   {
     "id": 347,
@@ -5774,7 +6120,8 @@
     "desc": "조용히 정신을 통일하고 마음을 가라앉혀서 자신의 특수공격과 특수방어를 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "めいそう"
   },
   {
     "id": 348,
@@ -5793,7 +6140,8 @@
       "slicing_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "リーフブレード"
   },
   {
     "id": 349,
@@ -5812,7 +6160,8 @@
       "dance_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "りゅうのまい"
   },
   {
     "id": 350,
@@ -5832,7 +6181,8 @@
       "multi_hit_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ロックブラスト"
   },
   {
     "id": 351,
@@ -5848,7 +6198,8 @@
     "desc": "전격을 재빠르게 상대에게 날린다. 공격은 반드시 명중한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "でんげきは"
   },
   {
     "id": 352,
@@ -5867,7 +6218,8 @@
       "pulse_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "みずのはどう"
   },
   {
     "id": 353,
@@ -5883,7 +6235,8 @@
     "desc": "기술을 사용한 2턴 뒤에 무수한 빛의 다발이 상대를 공격한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "はめつのねがい"
   },
   {
     "id": 354,
@@ -5899,7 +6252,8 @@
     "desc": "풀 파워로 상대를 공격한다. 쓰면 반동으로 자신의 특수공격이 크게 떨어진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "サイコブースト"
   },
   {
     "id": 355,
@@ -5915,7 +6269,8 @@
     "desc": "땅에 내려와 몸을 쉬게 한다. 최대 HP의 절반만큼 HP를 회복한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "はねやすめ"
   },
   {
     "id": 356,
@@ -5931,7 +6286,8 @@
     "desc": "5턴 동안 중력을 강하게 해서 부유나 하늘을 나는 기술을 사용할 수 없게 한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "じゅうりょく"
   },
   {
     "id": 357,
@@ -5948,7 +6304,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ミラクルアイ"
   },
   {
     "id": 358,
@@ -5964,7 +6321,8 @@
     "desc": "잠듦 상태의 상대에게 큰 데미지를 준다. 대신 상대는 잠에서 깬다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "めざましビンタ"
   },
   {
     "id": 359,
@@ -5983,7 +6341,8 @@
       "punching_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "アームハンマー"
   },
   {
     "id": 360,
@@ -6002,7 +6361,8 @@
       "ball_bomb_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ジャイロボール"
   },
   {
     "id": 361,
@@ -6021,7 +6381,8 @@
       "explosive_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "いやしのねがい"
   },
   {
     "id": 362,
@@ -6037,7 +6398,8 @@
     "desc": "상대가 HP의 절반 정도 상처를 입고 있으면 기술의 위력이 2배가 된다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "しおみず"
   },
   {
     "id": 363,
@@ -6053,7 +6415,8 @@
     "desc": "나무열매에서 힘을 얻어 공격한다. 지니게 한 나무열매에 따라 기술의 타입과 위력이 바뀐다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "しぜんのめぐみ"
   },
   {
     "id": 364,
@@ -6072,7 +6435,8 @@
       "priority_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "フェイント"
   },
   {
     "id": 365,
@@ -6088,7 +6452,8 @@
     "desc": "부리로 공격한다. 상대가 나무열매를 지니고 있을 때 먹어서 나무열매의 효과를 받을 수 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ついばむ"
   },
   {
     "id": 366,
@@ -6107,7 +6472,8 @@
       "wind_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "おいかぜ"
   },
   {
     "id": 367,
@@ -6123,7 +6489,8 @@
     "desc": "경혈을 눌러 몸을 활성화시킨다. 능력 중 하나를 크게 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "つぼをつく"
   },
   {
     "id": 368,
@@ -6142,7 +6509,8 @@
       "priority_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "メタルバースト"
   },
   {
     "id": 369,
@@ -6158,7 +6526,8 @@
     "desc": "공격한 뒤 굉장한 스피드로 돌아와서 교대 포켓몬과 교체한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "とんぼがえり"
   },
   {
     "id": 370,
@@ -6174,7 +6543,8 @@
     "desc": "방어를 포기하고 상대 깊숙이 돌격한다. 자신의 방어와 특수방어가 떨어진다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "インファイト"
   },
   {
     "id": 371,
@@ -6190,7 +6560,8 @@
     "desc": "모아서 공격한다. 상대보다 뒤에 공격할 수 있으면 기술의 위력은 2배가 된다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "しっぺがえし"
   },
   {
     "id": 372,
@@ -6206,7 +6577,8 @@
     "desc": "그 턴에 상대가 이미 데미지를 입었다면 기술의 위력은 2배가 된다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ダメおし"
   },
   {
     "id": 373,
@@ -6222,7 +6594,8 @@
     "desc": "지니게 한 도구를 쓸 수 없게 한다. 트레이너도 그 포켓몬에게는 도구를 쓸 수 없다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "さしおさえ"
   },
   {
     "id": 374,
@@ -6238,7 +6611,8 @@
     "desc": "지니게 한 도구를 재빠르게 내던져서 공격한다. 도구에 따라 위력과 효과가 바뀐다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "なげつける"
   },
   {
     "id": 375,
@@ -6254,7 +6628,8 @@
     "desc": "초능력으로 암시를 걸어서 자신에게 걸려 있는 상태 이상을 상대에게 옮긴다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "サイコシフト"
   },
   {
     "id": 376,
@@ -6271,7 +6646,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "きりふだ"
   },
   {
     "id": 377,
@@ -6288,7 +6664,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "かいふくふうじ"
   },
   {
     "id": 378,
@@ -6304,7 +6681,8 @@
     "desc": "강하게 조여 공격을 한다. 상대의 HP가 많이 남아 있을수록 위력이 올라간다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "しぼりとる"
   },
   {
     "id": 379,
@@ -6320,7 +6698,8 @@
     "desc": "초능력으로 자신의 공격과 방어의 힘을 교환한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "パワートリック"
   },
   {
     "id": 380,
@@ -6336,7 +6715,8 @@
     "desc": "상대의 몸에 위액을 내뱉는다. 달라붙은 위액은 상대의 특성 효과를 지운다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "いえき"
   },
   {
     "id": 381,
@@ -6352,7 +6732,8 @@
     "desc": "하늘을 향해 기도를 올려 상대의 공격을 급소에 맞지 않게 한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "おまじない"
   },
   {
     "id": 382,
@@ -6368,7 +6749,8 @@
     "desc": "위력을 올려 상대가 쓰려고 하는 기술을 먼저 쓴다. 먼저 쓰지 않으면 실패한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "さきどり"
   },
   {
     "id": 383,
@@ -6384,7 +6766,8 @@
     "desc": "직전에 나온 기술을 흉내 내어 같은 기술을 쓴다. 기술이 나오지 않았으면 실패한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "まねっこ"
   },
   {
     "id": 384,
@@ -6400,7 +6783,8 @@
     "desc": "초능력으로 자신과 상대의 공격과 특수공격의 능력 변화를 교체한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "パワースワップ"
   },
   {
     "id": 385,
@@ -6416,7 +6800,8 @@
     "desc": "초능력으로 자신과 상대의 방어와 특수방어의 능력 변화를 교체한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ガードスワップ"
   },
   {
     "id": 386,
@@ -6433,7 +6818,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "おしおき"
   },
   {
     "id": 387,
@@ -6449,7 +6835,8 @@
     "desc": "배틀 중에 기억하고 있는 기술을 모두 사용하면 그때부터 쓸 수 있는 필살기이다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "とっておき"
   },
   {
     "id": 388,
@@ -6468,7 +6855,8 @@
       "powder_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "なやみのタネ"
   },
   {
     "id": 389,
@@ -6487,7 +6875,8 @@
       "priority_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ふいうち"
   },
   {
     "id": 390,
@@ -6503,7 +6892,8 @@
     "desc": "상대의 발밑에 독압정을 뿌린다. 교체로 나온 상대 포켓몬에 독을 덮어씌운다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "どくびし"
   },
   {
     "id": 391,
@@ -6519,7 +6909,8 @@
     "desc": "초능력으로 자신과 상대에 걸려있는 능력 변화를 교체한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ハートスワップ"
   },
   {
     "id": 392,
@@ -6535,7 +6926,8 @@
     "desc": "자신의 몸 주변을 물로 만든 베일로 덮는다. 매 턴 HP를 회복한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "アクアリング"
   },
   {
     "id": 393,
@@ -6551,7 +6943,8 @@
     "desc": "전기로 만든 자력의 힘으로 허공에 뜬다. 5턴 동안 부유할 수 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "でんじふゆう"
   },
   {
     "id": 394,
@@ -6570,7 +6963,8 @@
       "recoil_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "フレアドライブ"
   },
   {
     "id": 395,
@@ -6586,7 +6980,8 @@
     "desc": "상대의 몸에 충격파를 부딪쳐 공격한다. 마비 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "はっけい"
   },
   {
     "id": 396,
@@ -6606,7 +7001,8 @@
       "pulse_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "はどうだん"
   },
   {
     "id": 397,
@@ -6622,7 +7018,8 @@
     "desc": "자신의 몸을 갈아 공기의 저항을 적게 한다. 스피드를 크게 올릴 수 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ロックカット"
   },
   {
     "id": 398,
@@ -6638,7 +7035,8 @@
     "desc": "독에 물든 촉수나 팔로 상대를 꿰찌른다. 독 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "どくづき"
   },
   {
     "id": 399,
@@ -6657,7 +7055,8 @@
       "pulse_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "あくのはどう"
   },
   {
     "id": 400,
@@ -6676,7 +7075,8 @@
       "slicing_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "つじぎり"
   },
   {
     "id": 401,
@@ -6692,7 +7092,8 @@
     "desc": "세차게 날뛰는 거친 파도와 같이 큰 꼬리를 흔들어서 상대를 공격한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "アクアテール"
   },
   {
     "id": 402,
@@ -6708,7 +7109,8 @@
     "desc": "단단한 껍질을 가지고 있는 큰 씨앗을 힘껏 내던져 상대를 공격한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "タネばくだん"
   },
   {
     "id": 403,
@@ -6727,7 +7129,8 @@
       "slicing_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "エアスラッシュ"
   },
   {
     "id": 404,
@@ -6746,7 +7149,8 @@
       "slicing_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "シザークロス"
   },
   {
     "id": 405,
@@ -6765,7 +7169,8 @@
       "sound_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "むしのさざめき"
   },
   {
     "id": 406,
@@ -6784,7 +7189,8 @@
       "pulse_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "りゅうのはどう"
   },
   {
     "id": 407,
@@ -6800,7 +7206,8 @@
     "desc": "굉장한 살기로 위압하면서 몸통박치기한다. 상대를 풀죽게 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ドラゴンダイブ"
   },
   {
     "id": 408,
@@ -6816,7 +7223,8 @@
     "desc": "보석처럼 반짝이는 빛을 발사하여 상대를 공격한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "パワージェム"
   },
   {
     "id": 409,
@@ -6835,7 +7243,8 @@
       "punching_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ドレインパンチ"
   },
   {
     "id": 410,
@@ -6854,7 +7263,8 @@
       "priority_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "しんくうは"
   },
   {
     "id": 411,
@@ -6873,7 +7283,8 @@
       "ball_bomb_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "きあいだま"
   },
   {
     "id": 412,
@@ -6892,7 +7303,8 @@
       "ball_bomb_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "エナジーボール"
   },
   {
     "id": 413,
@@ -6911,7 +7323,8 @@
       "recoil_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ブレイブバード"
   },
   {
     "id": 414,
@@ -6927,7 +7340,8 @@
     "desc": "상대의 발밑에 대지의 힘을 방출한다. 상대의 특수방어를 떨어뜨릴 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "だいちのちから"
   },
   {
     "id": 415,
@@ -6943,7 +7357,8 @@
     "desc": "눈에 보이지 않는 속도로 자신과 상대가 지닌 물건을 교환한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "すりかえ"
   },
   {
     "id": 416,
@@ -6959,7 +7374,8 @@
     "desc": "가진 힘을 모두 사용해서 상대에게 돌격한다. 다음 턴은 움직일 수 없다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ギガインパクト"
   },
   {
     "id": 417,
@@ -6975,7 +7391,8 @@
     "desc": "나쁜 일을 생각해서 머리를 활성화시킨다. 자신의 특수공격을 크게 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "わるだくみ"
   },
   {
     "id": 418,
@@ -6995,7 +7412,8 @@
       "punching_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "バレットパンチ"
   },
   {
     "id": 419,
@@ -7014,7 +7432,8 @@
       "priority_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ゆきなだれ"
   },
   {
     "id": 420,
@@ -7033,7 +7452,8 @@
       "priority_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "こおりのつぶて"
   },
   {
     "id": 421,
@@ -7052,7 +7472,8 @@
       "slicing_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "シャドークロー"
   },
   {
     "id": 422,
@@ -7071,7 +7492,8 @@
       "biting_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "かみなりのキバ"
   },
   {
     "id": 423,
@@ -7090,7 +7512,8 @@
       "biting_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "こおりのキバ"
   },
   {
     "id": 424,
@@ -7109,7 +7532,8 @@
       "biting_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ほのおのキバ"
   },
   {
     "id": 425,
@@ -7128,7 +7552,8 @@
       "priority_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "かげうち"
   },
   {
     "id": 426,
@@ -7144,7 +7569,8 @@
     "desc": "단단한 진흙구슬을 상대에게 발사하여 공격한다. 명중률을 떨어뜨릴 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "どろばくだん"
   },
   {
     "id": 427,
@@ -7163,7 +7589,8 @@
       "slicing_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "サイコカッター"
   },
   {
     "id": 428,
@@ -7179,7 +7606,8 @@
     "desc": "사념의 힘을 이마에 모아서 공격한다. 상대를 풀죽게 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "しねんのずつき"
   },
   {
     "id": 429,
@@ -7195,7 +7623,8 @@
     "desc": "갈고 닦은 몸에서 섬광의 힘을 상대에게 쏜다. 명중률을 떨어뜨릴 때가 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ミラーショット"
   },
   {
     "id": 430,
@@ -7211,7 +7640,8 @@
     "desc": "몸의 빛을 한곳에 모아서 힘을 쏜다. 상대의 특수방어를 떨어뜨릴 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ラスターカノン"
   },
   {
     "id": 431,
@@ -7228,7 +7658,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ロッククライム"
   },
   {
     "id": 432,
@@ -7247,7 +7678,8 @@
       "wind_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "きりばらい"
   },
   {
     "id": 433,
@@ -7266,7 +7698,8 @@
       "priority_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "トリックルーム"
   },
   {
     "id": 434,
@@ -7282,7 +7715,8 @@
     "desc": "천공에서 운석을 상대에게 떨어뜨린다. 사용하면 반동으로 자신의 특수공격이 크게 떨어진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "りゅうせいぐん"
   },
   {
     "id": 435,
@@ -7298,7 +7732,8 @@
     "desc": "눈부신 전격으로 자신의 주위에 있는 포켓몬을 공격한다. 마비 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ほうでん"
   },
   {
     "id": 436,
@@ -7314,7 +7749,8 @@
     "desc": "새빨간 불꽃으로 자신의 주위에 있는 포켓몬을 공격한다. 화상 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ふんえん"
   },
   {
     "id": 437,
@@ -7330,7 +7766,8 @@
     "desc": "뾰족한 잎사귀로 상대에게 바람을 일으킨다. 사용하면 반동으로 자신의 특수공격이 크게 떨어진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "リーフストーム"
   },
   {
     "id": 438,
@@ -7346,7 +7783,8 @@
     "desc": "덩굴이나 촉수를 세차게 흔들어 상대를 힘껏 쳐서 공격한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "パワーウィップ"
   },
   {
     "id": 439,
@@ -7362,7 +7800,8 @@
     "desc": "거대한 바위를 상대에게 발사하여 공격한다. 다음 턴은 움직일 수 없게 된다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "がんせきほう"
   },
   {
     "id": 440,
@@ -7381,7 +7820,8 @@
       "slicing_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "クロスポイズン"
   },
   {
     "id": 441,
@@ -7397,7 +7837,8 @@
     "desc": "더러운 쓰레기를 상대에게 부딪쳐서 공격한다. 독 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ダストシュート"
   },
   {
     "id": 442,
@@ -7413,7 +7854,8 @@
     "desc": "강철과 같은 단단한 머리로 공격한다. 20%의 확률로 상대를 풀죽게 만든다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "アイアンヘッド"
   },
   {
     "id": 443,
@@ -7430,7 +7872,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "マグネットボム"
   },
   {
     "id": 444,
@@ -7446,7 +7889,8 @@
     "desc": "뾰족한 바위를 상대에게 꿰찔러서 공격한다. 급소에 맞기 쉽다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ストーンエッジ"
   },
   {
     "id": 445,
@@ -7462,7 +7906,8 @@
     "desc": "수컷은 암컷을 암컷은 수컷을 유혹하여 상대의 특수공격을 크게 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ゆうわく"
   },
   {
     "id": 446,
@@ -7478,7 +7923,8 @@
     "desc": "상대의 주위에 무수한 바위를 띄워 교체해서 나온 상대 포켓몬에게 데미지를 준다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ステルスロック"
   },
   {
     "id": 447,
@@ -7494,7 +7940,8 @@
     "desc": "풀을 휘감아서 상대를 쓰러뜨린다. 상대가 무거울수록 위력이 올라간다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "くさむすび"
   },
   {
     "id": 448,
@@ -7510,7 +7957,8 @@
     "desc": "기억한 말로 음파를 일으켜서 공격한다. 상대를 혼란시킨다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "おしゃべり"
   },
   {
     "id": 449,
@@ -7526,7 +7974,8 @@
     "desc": "무수한 광탄을 상대에게 방출한다. 자신이 가지고 있는 플레이트에 따라 타입이 바뀐다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "さばきのつぶて"
   },
   {
     "id": 450,
@@ -7542,7 +7991,8 @@
     "desc": "물어서 공격한다. 상대가 나무열매를 지니고 있을 때 먹어서 나무열매의 효과를 받을 수 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "むしくい"
   },
   {
     "id": 451,
@@ -7558,7 +8008,8 @@
     "desc": "전격의 다발을 상대에게 발사한다. 전기를 모아서 자신의 특수공격을 올릴 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "チャージビーム"
   },
   {
     "id": 452,
@@ -7577,7 +8028,8 @@
       "recoil_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ウッドハンマー"
   },
   {
     "id": 453,
@@ -7596,7 +8048,8 @@
       "priority_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "アクアジェット"
   },
   {
     "id": 454,
@@ -7612,7 +8065,8 @@
     "desc": "부하를 불러내어 상대를 향해서 공격시킨다. 급소에 맞기 쉽다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "こうげきしれい"
   },
   {
     "id": 455,
@@ -7628,7 +8082,8 @@
     "desc": "부하를 불러내어 자신의 몸을 뒤덮게 한다. 방어와 특수방어를 올릴 수 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ぼうぎょしれい"
   },
   {
     "id": 456,
@@ -7645,7 +8100,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "かいふくしれい"
   },
   {
     "id": 457,
@@ -7664,7 +8120,8 @@
       "recoil_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "もろはのずつき"
   },
   {
     "id": 458,
@@ -7683,7 +8140,8 @@
       "multi_hit_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ダブルアタック"
   },
   {
     "id": 459,
@@ -7699,7 +8157,8 @@
     "desc": "시간이 뒤틀릴 정도의 힘을 사용해서 상대를 공격한다. 다음 턴은 움직일 수 없다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ときのほうこう"
   },
   {
     "id": 460,
@@ -7715,7 +8174,8 @@
     "desc": "주위의 공간과 더불어 상대를 찢어서 데미지를 준다. 급소에 맞기 쉽다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "あくうせつだん"
   },
   {
     "id": 461,
@@ -7731,7 +8191,8 @@
     "desc": "자신은 기절하지만 교대하여 나오는 포켓몬의 모든 상태를 회복한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "みかづきのまい"
   },
   {
     "id": 462,
@@ -7747,7 +8208,8 @@
     "desc": "굉장한 힘으로 상대를 묵사발로 만든다. 상대의 HP가 남아 있을수록 위력이 올라간다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "にぎりつぶす"
   },
   {
     "id": 463,
@@ -7763,7 +8225,8 @@
     "desc": "세차게 타오르는 불꽃 속에 4-5턴 동안 상대를 가두어 공격한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "マグマストーム"
   },
   {
     "id": 464,
@@ -7779,7 +8242,8 @@
     "desc": "암흑의 세계로 끌고 가서 떨어뜨려 상대를 잠듦 상태로 만든다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ダークホール"
   },
   {
     "id": 465,
@@ -7795,7 +8259,8 @@
     "desc": "몸속에서 충격파를 발생시킨다. 상대의 특수방어를 크게 떨어뜨릴 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "シードフレア"
   },
   {
     "id": 466,
@@ -7811,7 +8276,8 @@
     "desc": "소름이 끼칠 만한 돌풍으로 상대를 공격한다. 자신의 모든 능력이 올라갈 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "あやしいかぜ"
   },
   {
     "id": 467,
@@ -7827,7 +8293,8 @@
     "desc": "1턴째에 모습을 감춰 2턴째에 상대를 공격한다. 방어하고 있어도 공격은 맞는다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "シャドーダイブ"
   },
   {
     "id": 468,
@@ -7843,7 +8310,8 @@
     "desc": "손톱을 갈아 날카롭게 한다. 자신의 공격과 명중률을 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "つめとぎ"
   },
   {
     "id": 469,
@@ -7859,7 +8327,8 @@
     "desc": "같은 편 전원에게 향하는 공격을 1턴 동안 막는다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ワイドガード"
   },
   {
     "id": 470,
@@ -7875,7 +8344,8 @@
     "desc": "초능력으로 자신과 상대의 방어와 특수방어를 더해서 반으로 나눈다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ガードシェア"
   },
   {
     "id": 471,
@@ -7891,7 +8361,8 @@
     "desc": "초능력으로 자신과 상대의 공격과 특수공격을 더해서 반으로 나눈다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "パワーシェア"
   },
   {
     "id": 472,
@@ -7910,7 +8381,8 @@
       "priority_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ワンダールーム"
   },
   {
     "id": 473,
@@ -7926,7 +8398,8 @@
     "desc": "이상한 염력파를 실체화하여 상대를 공격한다. 물리적인 데미지를 준다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "サイコショック"
   },
   {
     "id": 474,
@@ -7942,7 +8415,8 @@
     "desc": "특수한 독액을 끼얹는다. 독 상태의 상대에게는 위력이 2배가 된다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ベノムショック"
   },
   {
     "id": 475,
@@ -7958,7 +8432,8 @@
     "desc": "몸의 쓸모없는 부분을 깎는다. 자신의 스피드를 크게 올리고 체중도 가벼워진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ボディパージ"
   },
   {
     "id": 476,
@@ -7978,7 +8453,8 @@
       "priority_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "いかりのこな"
   },
   {
     "id": 477,
@@ -7994,7 +8470,8 @@
     "desc": "초능력으로 상대를 띄운다. 3턴 동안 공격이 상대에게 맞기 쉬워진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "テレキネシス"
   },
   {
     "id": 478,
@@ -8013,7 +8490,8 @@
       "priority_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "マジックルーム"
   },
   {
     "id": 479,
@@ -8029,7 +8507,8 @@
     "desc": "돌이나 구슬을 던져서 날고 있는 상대를 공격한다. 맞은 상대는 땅에 떨어진다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "うちおとす"
   },
   {
     "id": 480,
@@ -8045,7 +8524,8 @@
     "desc": "강렬한 일격을 상대에게 날린다. 공격은 반드시 급소에 맞는다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "やまあらし"
   },
   {
     "id": 481,
@@ -8061,7 +8541,8 @@
     "desc": "맞으면 튀는 불꽃으로 상대를 공격한다. 튕긴 불꽃은 옆의 상대에게도 쏟아진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "はじけるほのお"
   },
   {
     "id": 482,
@@ -8077,7 +8558,8 @@
     "desc": "오물 파도로 자신의 주위에 있는 포켓몬을 공격한다. 독 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ヘドロウェーブ"
   },
   {
     "id": 483,
@@ -8096,7 +8578,8 @@
       "dance_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ちょうのまい"
   },
   {
     "id": 484,
@@ -8112,7 +8595,8 @@
     "desc": "무거운 몸으로 상대에게 부딪쳐 공격한다. 자신이 상대보다 무거울수록 위력이 올라간다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ヘビーボンバー"
   },
   {
     "id": 485,
@@ -8128,7 +8612,8 @@
     "desc": "이상한 전파로 주위에 있는 자신과 같은 타입의 포켓몬에게 데미지를 준다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "シンクロノイズ"
   },
   {
     "id": 486,
@@ -8147,7 +8632,8 @@
       "ball_bomb_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "エレキボール"
   },
   {
     "id": 487,
@@ -8163,7 +8649,8 @@
     "desc": "많은 물을 끼얹어서 상대를 물타입으로 바꾼다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "みずびたし"
   },
   {
     "id": 488,
@@ -8179,7 +8666,8 @@
     "desc": "불꽃을 둘러 상대를 공격한다. 힘을 모아서 자신의 스피드를 올린다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ニトロチャージ"
   },
   {
     "id": 489,
@@ -8195,7 +8683,8 @@
     "desc": "똬리를 틀어서 집중한다. 자신의 공격과 방어와 명중률을 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "とぐろをまく"
   },
   {
     "id": 490,
@@ -8211,7 +8700,8 @@
     "desc": "재빠른 움직임으로 상대의 다리를 노려 공격한다. 상대의 스피드를 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ローキック"
   },
   {
     "id": 491,
@@ -8230,7 +8720,8 @@
       "ball_bomb_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "アシッドボム"
   },
   {
     "id": 492,
@@ -8246,7 +8737,8 @@
     "desc": "상대의 힘을 이용한다. 싸우고 있는 상대의 공격이 높을수록 데미지가 올라간다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "イカサマ"
   },
   {
     "id": 493,
@@ -8262,7 +8754,8 @@
     "desc": "수수께끼의 염력파를 상대에게 보낸다. 염력파를 받은 상대는 특성이 단순으로 바뀐다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "シンプルビーム"
   },
   {
     "id": 494,
@@ -8278,7 +8771,8 @@
     "desc": "이상한 리듬으로 춤춘다. 움직임을 흉내 내게 해서 자신과 상대의 특성을 똑같게 만든다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "なかまづくり"
   },
   {
     "id": 495,
@@ -8294,7 +8788,8 @@
     "desc": "상대의 행동을 도와서 자신이 행동한 뒤에 바로 움직일 수 있도록 한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "おさきにどうぞ"
   },
   {
     "id": 496,
@@ -8313,7 +8808,8 @@
       "sound_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "りんしょう"
   },
   {
     "id": 497,
@@ -8329,7 +8825,8 @@
     "desc": "울리는 목소리로 상대를 공격한다. 매 턴 누군가 기술을 계속해서 쓰면 위력이 올라간다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "エコーボイス"
   },
   {
     "id": 498,
@@ -8346,7 +8843,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "なしくずし"
   },
   {
     "id": 499,
@@ -8362,7 +8860,8 @@
     "desc": "특수한 진흙 덩어리를 상대에게 내던져서 공격한다. 능력 변화를 원래대로 돌린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "クリアスモッグ"
   },
   {
     "id": 500,
@@ -8378,7 +8877,8 @@
     "desc": "축적된 파워로 상대를 공격한다. 자신의 능력이 올라가 있는 만큼 위력이 오른다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "アシストパワー"
   },
   {
     "id": 501,
@@ -8394,7 +8894,8 @@
     "desc": "자신과 같은 편을 상대의 선제공격으로부터 지킨다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ファストガード"
   },
   {
     "id": 502,
@@ -8410,7 +8911,8 @@
     "desc": "이상한 힘으로 순간이동하여 자신과 같은 편이 있는 장소를 바꾼다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "サイドチェンジ"
   },
   {
     "id": 503,
@@ -8426,7 +8928,8 @@
     "desc": "뜨겁게 끓어오르는 물을 상대에게 발사해서 공격한다. 화상 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ねっとう"
   },
   {
     "id": 504,
@@ -8442,7 +8945,8 @@
     "desc": "껍질을 깨서 자신의 방어와 특수방어를 떨어뜨리지만 공격과 특수공격, 스피드를 크게 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "からをやぶる"
   },
   {
     "id": 505,
@@ -8461,7 +8965,8 @@
       "pulse_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "いやしのはどう"
   },
   {
     "id": 506,
@@ -8477,7 +8982,8 @@
     "desc": "엎친 데 덮친 격으로 공격한다. 상태 이상인 상대에게 큰 데미지를 준다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "たたりめ"
   },
   {
     "id": 507,
@@ -8494,7 +9000,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "フリーフォール"
   },
   {
     "id": 508,
@@ -8510,7 +9017,8 @@
     "desc": "톱니바퀴를 돌려서 자신의 공격을 올리는 것뿐만 아니라 스피드도 크게 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ギアチェンジ"
   },
   {
     "id": 509,
@@ -8529,7 +9037,8 @@
       "priority_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ともえなげ"
   },
   {
     "id": 510,
@@ -8545,7 +9054,8 @@
     "desc": "불꽃으로 상대를 공격한다. 상대가 나무열매 등을 지니고 있을 때 불태워서 쓸 수 없게 만든다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "やきつくす"
   },
   {
     "id": 511,
@@ -8561,7 +9071,8 @@
     "desc": "상대를 억눌러서 행동의 순서를 마지막으로 만든다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "さきおくり"
   },
   {
     "id": 512,
@@ -8577,7 +9088,8 @@
     "desc": "경쾌하게 상대를 공격한다. 자신이 도구를 지니고 있지 않을 때 큰 데미지를 준다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "アクロバット"
   },
   {
     "id": 513,
@@ -8593,7 +9105,8 @@
     "desc": "상대의 타입을 반사해서 자신도 똑같은 타입이 된다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ミラータイプ"
   },
   {
     "id": 514,
@@ -8609,7 +9122,8 @@
     "desc": "쓰러진 같은 편의 원수를 갚는다. 앞 턴에서 같은 편이 쓰러졌다면 위력이 올라간다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "かたきうち"
   },
   {
     "id": 515,
@@ -8628,7 +9142,8 @@
       "explosive_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "いのちがけ"
   },
   {
     "id": 516,
@@ -8645,7 +9160,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ギフトパス"
   },
   {
     "id": 517,
@@ -8661,7 +9177,8 @@
     "desc": "격렬한 불꽃으로 상대를 둘러싸 공격한다. 화상 상태로 만든다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "れんごく"
   },
   {
     "id": 518,
@@ -8677,7 +9194,8 @@
     "desc": "물기둥으로 공격한다. 불꽃과 조합하면 위력이 올라가고 하늘에 무지개가 걸린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "みずのちかい"
   },
   {
     "id": 519,
@@ -8693,7 +9211,8 @@
     "desc": "불꽃기둥으로 공격한다. 풀과 조합하면 위력이 올라가고 주위가 불바다가 된다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ほのおのちかい"
   },
   {
     "id": 520,
@@ -8709,7 +9228,8 @@
     "desc": "풀기둥으로 공격한다. 물과 조합하면 위력이 올라가고 주변이 습지초원이 된다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "くさのちかい"
   },
   {
     "id": 521,
@@ -8725,7 +9245,8 @@
     "desc": "공격한 뒤 굉장한 스피드로 돌아와서 교대 포켓몬과 교체한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ボルトチェンジ"
   },
   {
     "id": 522,
@@ -8741,7 +9262,8 @@
     "desc": "저항해서 상대를 공격한다. 상대의 특수공격을 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "むしのていこう"
   },
   {
     "id": 523,
@@ -8757,7 +9279,8 @@
     "desc": "땅을 힘껏 밟아 자신의 주위에 있는 포켓몬을 공격한다. 상대의 스피드를 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "じならし"
   },
   {
     "id": 524,
@@ -8773,7 +9296,8 @@
     "desc": "차가운 숨결을 상대에게 내뿜어 공격한다. 반드시 급소에 맞는다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "こおりのいぶき"
   },
   {
     "id": 525,
@@ -8792,7 +9316,8 @@
       "priority_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ドラゴンテール"
   },
   {
     "id": 526,
@@ -8808,7 +9333,8 @@
     "desc": "스스로 분발해서 공격과 특수공격을 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ふるいたてる"
   },
   {
     "id": 527,
@@ -8824,7 +9350,8 @@
     "desc": "전기 네트로 상대를 붙잡아서 공격한다. 상대의 스피드를 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "エレキネット"
   },
   {
     "id": 528,
@@ -8843,7 +9370,8 @@
       "recoil_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ワイルドボルト"
   },
   {
     "id": 529,
@@ -8859,7 +9387,8 @@
     "desc": "드릴처럼 몸을 회전시켜서 상대에게 몸통박치기한다. 급소에 맞기 쉽다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ドリルライナー"
   },
   {
     "id": 530,
@@ -8875,7 +9404,8 @@
     "desc": "몸의 단단한 부분으로 상대를 때려 공격한다. 2회 연속으로 데미지를 준다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ダブルチョップ"
   },
   {
     "id": 531,
@@ -8892,7 +9422,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ハートスタンプ"
   },
   {
     "id": 532,
@@ -8908,7 +9439,8 @@
     "desc": "뿔을 꿰찔러서 상대의 양분을 흡수한다. 입힌 데미지의 절반에 해당하는 HP를 회복할 수 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ウッドホーン"
   },
   {
     "id": 533,
@@ -8927,7 +9459,8 @@
       "slicing_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "せいなるつるぎ"
   },
   {
     "id": 534,
@@ -8946,7 +9479,8 @@
       "slicing_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "シェルブレード"
   },
   {
     "id": 535,
@@ -8962,7 +9496,8 @@
     "desc": "불타는 몸으로 상대에게 부딪쳐서 공격한다. 자신이 상대보다 무거울수록 위력이 올라간다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ヒートスタンプ"
   },
   {
     "id": 536,
@@ -8978,7 +9513,8 @@
     "desc": "날카로운 잎사귀로 상대를 둘러싸서 공격한다. 명중률을 떨어뜨릴 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "グラスミキサー"
   },
   {
     "id": 537,
@@ -8995,7 +9531,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ハードローラー"
   },
   {
     "id": 538,
@@ -9011,7 +9548,8 @@
     "desc": "푹신푹신한 솜털로 자신의 몸을 둘러싸서 지킨다. 방어를 매우 크게 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "コットンガード"
   },
   {
     "id": 539,
@@ -9027,7 +9565,8 @@
     "desc": "암흑의 충격파를 날려서 상대를 공격한다. 명중률을 떨어뜨릴 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ナイトバースト"
   },
   {
     "id": 540,
@@ -9043,7 +9582,8 @@
     "desc": "이상한 염력파를 실체화하여 상대를 공격한다. 물리적인 데미지를 준다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "サイコブレイク"
   },
   {
     "id": 541,
@@ -9062,7 +9602,8 @@
       "multi_hit_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "スイープビンタ"
   },
   {
     "id": 542,
@@ -9081,7 +9622,8 @@
       "wind_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ぼうふう"
   },
   {
     "id": 543,
@@ -9097,7 +9639,8 @@
     "desc": "굉장한 아프로 머리로 상대에게 돌진하여 공격한다. 자신도 조금 데미지를 입는다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "アフロブレイク"
   },
   {
     "id": 544,
@@ -9113,7 +9656,8 @@
     "desc": "강철의 기어를 상대에게 던져서 공격한다. 2회 연속으로 데미지를 준다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ギアソーサー"
   },
   {
     "id": 545,
@@ -9129,7 +9673,8 @@
     "desc": "새빨간 불꽃으로 자신의 주위에 있는 포켓몬을 공격한다. 화상 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "かえんだん"
   },
   {
     "id": 546,
@@ -9145,7 +9690,8 @@
     "desc": "광탄을 상대에게 방출한다. 자신이 지니고 있는 카세트에 의해 타입이 바뀐다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "テクノバスター"
   },
   {
     "id": 547,
@@ -9161,7 +9707,8 @@
     "desc": "옛노래를 상대에게 들려주고 마음에 호소하여 공격한다. 잠듦 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "いにしえのうた"
   },
   {
     "id": 548,
@@ -9177,7 +9724,8 @@
     "desc": "긴 뿔로 베어 공격한다. 뿔이 머금은 이상한 힘은 물리적인 데미지를 준다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "しんぴのつるぎ"
   },
   {
     "id": 549,
@@ -9193,7 +9741,8 @@
     "desc": "차가운 냉기를 상대에게 내뿜어 공격한다. 상대의 스피드를 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "こごえるせかい"
   },
   {
     "id": 550,
@@ -9209,7 +9758,8 @@
     "desc": "방대한 전기를 몸에 둘러 상대에게 돌진해서 공격한다. 마비 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "らいげき"
   },
   {
     "id": 551,
@@ -9225,7 +9775,8 @@
     "desc": "아름다우면서도 격렬한 푸른불꽃으로 상대를 둘러싸서 공격한다. 화상 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "あおいほのお"
   },
   {
     "id": 552,
@@ -9244,7 +9795,8 @@
       "dance_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ほのおのまい"
   },
   {
     "id": 553,
@@ -9260,7 +9812,8 @@
     "desc": "전기를 두른 얼음 덩어리로 2턴째에 상대를 내리친다. 마비 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "フリーズボルト"
   },
   {
     "id": 554,
@@ -9276,7 +9829,8 @@
     "desc": "모든 것을 얼려버리는 격렬한 냉기로 2턴째에 상대를 둘러싼다. 화상 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "コールドフレア"
   },
   {
     "id": 555,
@@ -9295,7 +9849,8 @@
       "sound_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "バークアウト"
   },
   {
     "id": 556,
@@ -9311,7 +9866,8 @@
     "desc": "큰 고드름을 격렬하게 부딪쳐서 공격한다. 상대를 풀죽게 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "つららおとし"
   },
   {
     "id": 557,
@@ -9327,7 +9883,8 @@
     "desc": "작열하는 불꽃을 이마에서 발생시켜 이판사판으로 몸통박치기한다. 방어, 특수방어, 스피드가 떨어진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "Ｖジェネレート"
   },
   {
     "id": 558,
@@ -9343,7 +9900,8 @@
     "desc": "거대한 불꽃을 내리친다. 거대한 천둥의 영향을 받아 기술의 위력이 올라간다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "クロスフレイム"
   },
   {
     "id": 559,
@@ -9359,7 +9917,8 @@
     "desc": "거대한 천둥을 내리친다. 거대한 불꽃의 영향을 받아 기술의 위력이 올라간다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "クロスサンダー"
   },
   {
     "id": 560,
@@ -9375,7 +9934,8 @@
     "desc": "공중에서 상대에게 다이브한다. 이 기술은 격투타입임과 동시에 비행타입이기도 하다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "フライングプレス"
   },
   {
     "id": 561,
@@ -9392,7 +9952,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "たたみがえし"
   },
   {
     "id": 562,
@@ -9408,7 +9969,8 @@
     "desc": "상대를 향해 트림을 하여 데미지를 준다. 나무열매를 먹지 않으면 쓸 수 없다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ゲップ"
   },
   {
     "id": 563,
@@ -9424,7 +9986,8 @@
     "desc": "땅을 일구어 초목이 자라기 쉽게 한다. 풀타입의 공격과 특수공격이 오른다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "たがやす"
   },
   {
     "id": 564,
@@ -9440,7 +10003,8 @@
     "desc": "상대의 주위에 끈적끈적한 네트를 둘러 펼쳐 교체되어 나온 상대의 스피드를 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ねばねばネット"
   },
   {
     "id": 565,
@@ -9456,7 +10020,8 @@
     "desc": "이 기술을 사용하여 상대를 쓰러뜨리면 공격이 크게 오른다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "とどめばり"
   },
   {
     "id": 566,
@@ -9472,7 +10037,8 @@
     "desc": "1턴째에 어디론가 사라져서 2턴째에 상대를 공격한다. 기술 방어를 무시하고 공격할 수 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ゴーストダイブ"
   },
   {
     "id": 567,
@@ -9488,7 +10054,8 @@
     "desc": "상대를 핼러윈으로 초대한다. 상대 타입에 고스트타입이 추가된다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ハロウィン"
   },
   {
     "id": 568,
@@ -9507,7 +10074,8 @@
       "sound_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "おたけび"
   },
   {
     "id": 569,
@@ -9524,7 +10092,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "プラズマシャワー"
   },
   {
     "id": 570,
@@ -9540,7 +10109,8 @@
     "desc": "주위에 있는 모든 포켓몬에게 데미지를 준다. 준 데미지의 절반을 자신이 회복한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "パラボラチャージ"
   },
   {
     "id": 571,
@@ -9557,7 +10127,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "もりののろい"
   },
   {
     "id": 572,
@@ -9573,7 +10144,8 @@
     "desc": "세찬 꽃보라를 일으켜서 주위에 있는 포켓몬을 공격하여 데미지를 준다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "はなふぶき"
   },
   {
     "id": 573,
@@ -9589,7 +10161,8 @@
     "desc": "상대를 급격히 차갑게 하여 얼음 상태로 만들 때가 있다. 물타입 포켓몬에게도 효과가 굉장해진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "フリーズドライ"
   },
   {
     "id": 574,
@@ -9605,7 +10178,8 @@
     "desc": "매혹적인 울음소리를 내어 상대에게 정신적 데미지를 준다. 공격은 반드시 명중한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "チャームボイス"
   },
   {
     "id": 575,
@@ -9624,7 +10198,8 @@
       "sound_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "すてゼリフ"
   },
   {
     "id": 576,
@@ -9640,7 +10215,8 @@
     "desc": "상대에게 걸려 있는 모든 능력 변화를 뒤집어서 반대로 만든다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ひっくりかえす"
   },
   {
     "id": 577,
@@ -9656,7 +10232,8 @@
     "desc": "키스로 상대로부터 HP를 흡수한다. 준 데미지의 반 이상 HP를 회복한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ドレインキッス"
   },
   {
     "id": 578,
@@ -9672,7 +10249,8 @@
     "desc": "이상한 힘을 사용하여 같은 편을 공격하는 변화 기술을 막는다. 데미지 기술은 받는다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "トリックガード"
   },
   {
     "id": 579,
@@ -9688,7 +10266,8 @@
     "desc": "이상한 힘을 사용하여 배틀에 나와있는 모든 풀타입 포켓몬의 방어를 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "フラワーガード"
   },
   {
     "id": 580,
@@ -9704,7 +10283,8 @@
     "desc": "5턴 동안 발밑을 그래스필드로 만든다. 땅에 있는 포켓몬은 매 턴 회복한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "グラスフィールド"
   },
   {
     "id": 581,
@@ -9720,7 +10300,8 @@
     "desc": "5턴 동안 발밑을 미스트필드로 만든다. 땅에 있으면 상태 이상이 되지 않는다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ミストフィールド"
   },
   {
     "id": 582,
@@ -9736,7 +10317,8 @@
     "desc": "상대가 기술을 쓰기 전에 송전하면 그 턴에 상대가 사용하는 기술은 전기타입이 된다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "そうでん"
   },
   {
     "id": 583,
@@ -9752,7 +10334,8 @@
     "desc": "상대에게 치근거리며 공격한다. 상대의 공격을 떨어뜨릴 때가 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "じゃれつく"
   },
   {
     "id": 584,
@@ -9768,7 +10351,8 @@
     "desc": "요정의 바람을 일으켜 상대에게 몰아쳐서 공격한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ようせいのかぜ"
   },
   {
     "id": 585,
@@ -9784,7 +10368,8 @@
     "desc": "달의 파워를 빌려서 상대를 공격한다. 10%의 확률로 상대의 특수공격을 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ムーンフォース"
   },
   {
     "id": 586,
@@ -9803,7 +10388,8 @@
       "sound_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ばくおんぱ"
   },
   {
     "id": 587,
@@ -9819,7 +10405,8 @@
     "desc": "록을 걸어 다음 턴의 모든 포켓몬을 도망가지 못하게 한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "フェアリーロック"
   },
   {
     "id": 588,
@@ -9838,7 +10425,8 @@
       "priority_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "キングシールド"
   },
   {
     "id": 589,
@@ -9854,7 +10442,8 @@
     "desc": "상대와 친해져서 싸울 마음을 잃게 하여 상대의 공격을 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "なかよくする"
   },
   {
     "id": 590,
@@ -9870,7 +10459,8 @@
     "desc": "비밀 이야기를 하면서 상대의 집중력을 잃게 하여 상대의 특수공격을 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ないしょばなし"
   },
   {
     "id": 591,
@@ -9886,7 +10476,8 @@
     "desc": "다이아 폭풍을 일으켜 데미지를 준다. 자신의 방어를 올릴 때가 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ダイヤストーム"
   },
   {
     "id": 592,
@@ -9902,7 +10493,8 @@
     "desc": "상대에게 굉장히 뜨거운 증기를 뿜는다. 상대는 화상을 입기도 한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "スチームバースト"
   },
   {
     "id": 593,
@@ -9918,7 +10510,8 @@
     "desc": "다른차원홀로 갑자기 상대 바로 옆에 나타나 공격한다. 방어나 판별도 무시할 수 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "いじげんホール"
   },
   {
     "id": 594,
@@ -9938,7 +10531,8 @@
       "priority_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "みずしゅりけん"
   },
   {
     "id": 595,
@@ -9954,7 +10548,8 @@
     "desc": "입에서 내뱉는 아주 뜨거운 불꽃으로 공격한다. 상대의 특수공격을 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "マジカルフレイム"
   },
   {
     "id": 596,
@@ -9973,7 +10568,8 @@
       "priority_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ニードルガード"
   },
   {
     "id": 597,
@@ -9989,7 +10585,8 @@
     "desc": "신비한 아로마 향으로 같은 편의 특수방어를 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "アロマミスト"
   },
   {
     "id": 598,
@@ -10005,7 +10602,8 @@
     "desc": "몸에서 괴전파를 내어 상대에게 쏨으로써 특수공격을 크게 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "かいでんぱ"
   },
   {
     "id": 599,
@@ -10021,7 +10619,8 @@
     "desc": "특수한 독액을 끼얹는다. 독 상태인 상대는 공격, 특수공격, 스피드가 떨어진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ベノムトラップ"
   },
   {
     "id": 600,
@@ -10038,7 +10637,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ふんじん"
   },
   {
     "id": 601,
@@ -10054,7 +10654,8 @@
     "desc": "1턴째에 에너지를 흡수하여 2턴째에 특수공격, 특수방어, 스피드를 크게 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ジオコントロール"
   },
   {
     "id": 602,
@@ -10070,7 +10671,8 @@
     "desc": "자기장 조작으로 인해 특성 플러스와 마이너스의 방어, 특수방어가 오른다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "じばそうさ"
   },
   {
     "id": 603,
@@ -10087,7 +10689,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ハッピータイム"
   },
   {
     "id": 604,
@@ -10103,7 +10706,8 @@
     "desc": "5턴 동안 발밑을 일렉트릭필드로 만든다. 땅에 있는 포켓몬은 잠들지 않게 된다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "エレキフィールド"
   },
   {
     "id": 605,
@@ -10119,7 +10723,8 @@
     "desc": "강력한 빛을 내어 상대에게 데미지를 준다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "マジカルシャイン"
   },
   {
     "id": 606,
@@ -10136,7 +10741,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "おいわい"
   },
   {
     "id": 607,
@@ -10153,7 +10759,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "てをつなぐ"
   },
   {
     "id": 608,
@@ -10169,7 +10776,8 @@
     "desc": "초롱초롱한 눈동자로 상대를 바라보며 공격을 떨어뜨린다. 반드시 선제공격할 수 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "つぶらなひとみ"
   },
   {
     "id": 609,
@@ -10185,7 +10793,8 @@
     "desc": "전기가 흐르는 볼을 비벼서 공격한다. 상대를 마비 상태로 만든다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ほっぺすりすり"
   },
   {
     "id": 610,
@@ -10202,7 +10811,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "てかげん"
   },
   {
     "id": 611,
@@ -10221,7 +10831,8 @@
       "trapping_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "まとわりつく"
   },
   {
     "id": 612,
@@ -10237,7 +10848,8 @@
     "desc": "반복하여 때리면 점점 주먹이 단단해진다. 상대를 때리면 공격이 오른다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "グロウパンチ"
   },
   {
     "id": 613,
@@ -10253,7 +10865,8 @@
     "desc": "조준한 상대로부터 HP를 흡수한다. 준 데미지의 반 이상 HP를 회복한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "デスウイング"
   },
   {
     "id": 614,
@@ -10269,7 +10882,8 @@
     "desc": "떠 있는 포켓몬도 맞힐 수 있다. 떠 있던 상대는 맞아서 땅에 떨어진다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "サウザンアロー"
   },
   {
     "id": 615,
@@ -10285,7 +10899,8 @@
     "desc": "땅 위를 뻗어 나가는 파도로 공격한다. 파도에 휩쓸린 상대는 전투에서 도망칠 수 없게 된다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "サウザンウェーブ"
   },
   {
     "id": 616,
@@ -10301,7 +10916,8 @@
     "desc": "대지의 힘을 모으고 그 힘을 상대에게 집중시켜서 데미지를 준다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "グランドフォース"
   },
   {
     "id": 617,
@@ -10317,7 +10933,8 @@
     "desc": "영원의 꽃의 파워를 빌려서 강력한 광선을 쏜다. 자신도 상당한 데미지를 입는다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "はめつのひかり"
   },
   {
     "id": 618,
@@ -10333,7 +10950,8 @@
     "desc": "파랗게 빛나는 무수한 광선으로 상대를 공격한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "こんげんのはどう"
   },
   {
     "id": 619,
@@ -10349,7 +10967,8 @@
     "desc": "대지의 힘을 칼날로 바꿔 상대를 공격한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "だんがいのつるぎ"
   },
   {
     "id": 620,
@@ -10365,7 +10984,8 @@
     "desc": "넓은 하늘에서 급속으로 강하하여 상대를 공격한다. 자신의 방어와 특수방어가 떨어진다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ガリョウテンセイ"
   },
   {
     "id": 621,
@@ -10381,7 +11001,8 @@
     "desc": "많은 팔을 사용하여 방어와 판별을 무시하는 연속 공격이다. 자신의 방어가 떨어진다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "いじげんラッシュ"
   },
   {
     "id": 622,
@@ -10399,7 +11020,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ウルトラダッシュアタック"
   },
   {
     "id": 624,
@@ -10417,7 +11039,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ぜんりょくむそうげきれつけん"
   },
   {
     "id": 626,
@@ -10435,7 +11058,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ファイナルダイブクラッシュ"
   },
   {
     "id": 628,
@@ -10453,7 +11077,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "アシッドポイズンデリート"
   },
   {
     "id": 630,
@@ -10471,7 +11096,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ライジングランドオーバー"
   },
   {
     "id": 632,
@@ -10489,7 +11115,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ワールズエンドフォール"
   },
   {
     "id": 634,
@@ -10507,7 +11134,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ぜったいほしょくかいてんざん"
   },
   {
     "id": 636,
@@ -10525,7 +11153,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "むげんあんやへのいざない"
   },
   {
     "id": 638,
@@ -10543,7 +11172,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ちょうぜつらせんれんげき"
   },
   {
     "id": 640,
@@ -10561,7 +11191,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ダイナミックフルフレイム"
   },
   {
     "id": 642,
@@ -10579,7 +11210,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "スーパーアクアトルネード"
   },
   {
     "id": 644,
@@ -10597,7 +11229,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ブルームシャインエクストラ"
   },
   {
     "id": 646,
@@ -10615,7 +11248,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "スパーキングギガボルト"
   },
   {
     "id": 648,
@@ -10633,7 +11267,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "マキシマムサイブレイカー"
   },
   {
     "id": 650,
@@ -10651,7 +11286,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "レイジングジオフリーズ"
   },
   {
     "id": 652,
@@ -10669,7 +11305,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "アルティメットドラゴンバーン"
   },
   {
     "id": 654,
@@ -10687,7 +11324,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ブラックホールイクリプス"
   },
   {
     "id": 656,
@@ -10705,7 +11343,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ラブリースターインパクト"
   },
   {
     "id": 658,
@@ -10723,7 +11362,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ひっさつのピカチュート"
   },
   {
     "id": 659,
@@ -10739,7 +11379,8 @@
     "desc": "자신의 최대 HP 절반을 회복한다. 모래바람일 때는 많이 회복한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "すなあつめ"
   },
   {
     "id": 660,
@@ -10758,7 +11399,8 @@
       "priority_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "であいがしら"
   },
   {
     "id": 661,
@@ -10777,7 +11419,8 @@
       "priority_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "トーチカ"
   },
   {
     "id": 662,
@@ -10796,7 +11439,8 @@
       "trapping_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "かげぬい"
   },
   {
     "id": 663,
@@ -10812,7 +11456,8 @@
     "desc": "양팔을 돌려 상대에 부딪친다. 상대의 능력 변화에 상관없이 데미지를 준다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ＤＤラリアット"
   },
   {
     "id": 664,
@@ -10831,7 +11476,8 @@
       "sound_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "うたかたのアリア"
   },
   {
     "id": 665,
@@ -10850,7 +11496,8 @@
       "punching_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "アイスハンマー"
   },
   {
     "id": 666,
@@ -10866,7 +11513,8 @@
     "desc": "최대 HP의 절반만큼 상대의 HP를 회복한다. 그래스필드일 때 효과가 올라간다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "フラワーヒール"
   },
   {
     "id": 667,
@@ -10882,7 +11530,8 @@
     "desc": "온몸을 써서 상대에게 맹렬히 어택한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "１０まんばりき"
   },
   {
     "id": 668,
@@ -10898,7 +11547,8 @@
     "desc": "상대 공격력과 동일하게 자신의 HP를 회복한다. 그리고 상대의 공격을 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ちからをすいとる"
   },
   {
     "id": 669,
@@ -10917,7 +11567,8 @@
       "slicing_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ソーラーブレード"
   },
   {
     "id": 670,
@@ -10933,7 +11584,8 @@
     "desc": "잎을 상대에 맞춰 공격한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "このは"
   },
   {
     "id": 671,
@@ -10949,7 +11601,8 @@
     "desc": "포켓몬에게 스포트라이트를 비춰 그 턴에서 그 포켓몬만 공격할 수 있게 한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "スポットライト"
   },
   {
     "id": 672,
@@ -10965,7 +11618,8 @@
     "desc": "독이 섞인 실을 뿜어낸다. 상대를 독 상태로 만들고 스피드를 2랭크 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "どくのいと"
   },
   {
     "id": 673,
@@ -10981,7 +11635,8 @@
     "desc": "정신을 집중해서 다음 공격을 반드시 급소에 맞춘다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "とぎすます"
   },
   {
     "id": 674,
@@ -10997,7 +11652,8 @@
     "desc": "기어를 넣는 것으로 특성 플러스와 마이너스의 공격과 특수공격이 올라간다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "アシストギア"
   },
   {
     "id": 675,
@@ -11013,7 +11669,8 @@
     "desc": "이 기술에 맞은 상대는 지옥의 고통 때문에 2턴 동안 소리 기술을 낼 수 없다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "じごくづき"
   },
   {
     "id": 676,
@@ -11032,7 +11689,8 @@
       "ball_bomb_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "かふんだんご"
   },
   {
     "id": 677,
@@ -11048,7 +11706,8 @@
     "desc": "앵커를 상대에게 휘감아서 공격한다. 상대는 도망칠 수 없게 된다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "アンカーショット"
   },
   {
     "id": 678,
@@ -11064,7 +11723,8 @@
     "desc": "5턴 동안 땅에 있으면 선제공격을 받지 않는다. 에스퍼타입의 위력이 올라간다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "サイコフィールド"
   },
   {
     "id": 679,
@@ -11080,7 +11740,8 @@
     "desc": "전력으로 상대에게 덤벼들며 공격한다. 상대의 공격을 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "とびかかる"
   },
   {
     "id": 680,
@@ -11096,7 +11757,8 @@
     "desc": "불타는 채찍으로 상대를 친다. 공격을 받은 상대는 방어가 떨어진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ほのおのムチ"
   },
   {
     "id": 681,
@@ -11112,7 +11774,8 @@
     "desc": "자신의 강함을 뻐기고 공격한다. 자신의 능력이 올라가 있는 만큼 위력이 오른다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "つけあがる"
   },
   {
     "id": 682,
@@ -11128,7 +11791,8 @@
     "desc": "전신의 불꽃을 모두 태워서 큰 데미지를 준다. 자신의 불꽃타입이 없어진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "もえつきる"
   },
   {
     "id": 683,
@@ -11144,7 +11808,8 @@
     "desc": "상대의 스피드와 자신의 스피드를 교체한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "スピードスワップ"
   },
   {
     "id": 684,
@@ -11160,7 +11825,8 @@
     "desc": "뾰족한 뿔로 상대를 꿰찔러서 공격한다. 공격은 반드시 명중한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "スマートホーン"
   },
   {
     "id": 685,
@@ -11176,7 +11842,8 @@
     "desc": "상대의 상태 이상을 회복한다. 회복하면 자신은 HP를 회복할 수 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "じょうか"
   },
   {
     "id": 686,
@@ -11192,7 +11859,8 @@
     "desc": "전력으로 춤추며 공격한다. 이 기술의 타입은 자신의 타입과 같아진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "めざめるダンス"
   },
   {
     "id": 687,
@@ -11208,7 +11876,8 @@
     "desc": "데미지를 준 상대가 이미 행동을 끝냈다면 상대의 특성을 없애버린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "コアパニッシャー"
   },
   {
     "id": 688,
@@ -11224,7 +11893,8 @@
     "desc": "남쪽 나라에서 유래된 뜨거운 킥을 상대에게 날린다. 상대의 공격을 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "トロピカルキック"
   },
   {
     "id": 689,
@@ -11240,7 +11910,8 @@
     "desc": "상대에게 지시하여 상대가 쓴 기술을 다시 한 번 쓰게 할 수 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "さいはい"
   },
   {
     "id": 690,
@@ -11256,7 +11927,8 @@
     "desc": "먼저 부리를 가열시킨 다음 공격을 날린다. 가열 중에 만지면 화상을 입는다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "くちばしキャノン"
   },
   {
     "id": 691,
@@ -11275,7 +11947,8 @@
       "sound_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "スケイルノイズ"
   },
   {
     "id": 692,
@@ -11291,7 +11964,8 @@
     "desc": "몸을 해머처럼 써서 상대를 덮쳐 데미지를 준다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ドラゴンハンマー"
   },
   {
     "id": 693,
@@ -11307,7 +11981,8 @@
     "desc": "자신의 몸을 세차게 휘둘러서 상대에게 데미지를 준다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ぶんまわす"
   },
   {
     "id": 694,
@@ -11323,7 +11998,8 @@
     "desc": "5턴 동안 물리와 특수 기술의 데미지를 약하게 한다. 싸라기눈일 때만 쓸 수 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "オーロラベール"
   },
   {
     "id": 695,
@@ -11341,7 +12017,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "シャドーアローズストライク"
   },
   {
     "id": 696,
@@ -11359,7 +12036,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ハイパーダーククラッシャー"
   },
   {
     "id": 697,
@@ -11377,7 +12055,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "わだつみのシンフォニア"
   },
   {
     "id": 698,
@@ -11395,7 +12074,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ガーディアン・デ・アローラ"
   },
   {
     "id": 699,
@@ -11413,7 +12093,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "しちせいだっこんたい"
   },
   {
     "id": 700,
@@ -11431,7 +12112,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ライトニングサーフライド"
   },
   {
     "id": 701,
@@ -11449,7 +12131,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ほんきをだす　こうげき"
   },
   {
     "id": 702,
@@ -11467,7 +12150,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ナインエボルブースト"
   },
   {
     "id": 703,
@@ -11485,7 +12169,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "オリジンズスーパーノヴァ"
   },
   {
     "id": 704,
@@ -11501,7 +12186,8 @@
     "desc": "껍질의 트랩을 설치한다. 상대가 물리 기술을 쓰면 폭발해서 데미지를 준다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "トラップシェル"
   },
   {
     "id": 705,
@@ -11517,7 +12203,8 @@
     "desc": "강력한 빔을 발산한 후 자신의 특수공격이 크게 떨어진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "フルールカノン"
   },
   {
     "id": 706,
@@ -11536,7 +12223,8 @@
       "biting_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "サイコファング"
   },
   {
     "id": 707,
@@ -11552,7 +12240,8 @@
     "desc": "분함을 발판삼아 공격한다. 앞 턴에서 기술이 빗나갔다면 위력이 배가 된다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "じだんだ"
   },
   {
     "id": 708,
@@ -11568,7 +12257,8 @@
     "desc": "영혼이 머물고 있는 뼈로 상대를 세게 때려서 공격한다. 상대의 방어를 떨어뜨릴 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "シャドーボーン"
   },
   {
     "id": 709,
@@ -11587,7 +12277,8 @@
       "priority_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "アクセルロック"
   },
   {
     "id": 710,
@@ -11603,7 +12294,8 @@
     "desc": "물의 힘으로 상대에게 부딪쳐서 공격한다. 상대의 방어를 떨어뜨릴 때가 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "アクアブレイク"
   },
   {
     "id": 711,
@@ -11619,7 +12311,8 @@
     "desc": "프리즘의 힘으로 강력한 광선을 발사한다. 다음 턴은 움직일 수 없다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "プリズムレーザー"
   },
   {
     "id": 712,
@@ -11635,7 +12328,8 @@
     "desc": "상대의 그림자에 숨어들어 상대의 능력이 올라가는 것을 뺏어 공격한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "シャドースチール"
   },
   {
     "id": 713,
@@ -11651,7 +12345,8 @@
     "desc": "유성 같은 기세로 돌진한다. 상대의 특성을 무시하고 공격할 수 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "メテオドライブ"
   },
   {
     "id": 714,
@@ -11667,7 +12362,8 @@
     "desc": "괴상한 광선을 쏘아 공격한다. 상대의 특성을 무시하고 공격할 수 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "シャドーレイ"
   },
   {
     "id": 715,
@@ -11683,7 +12379,8 @@
     "desc": "눈물을 그렁그렁거려 상대의 전의를 상실하게 한다. 상대의 공격과 특수공격이 떨어진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "なみだめ"
   },
   {
     "id": 716,
@@ -11699,7 +12396,8 @@
     "desc": "상대에게 부딪쳐 강력한 전기를 날려서 찌리리따끔따끔하게 만든다. 상대를 풀죽게 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "びりびりちくちく"
   },
   {
     "id": 717,
@@ -11716,7 +12414,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "しぜんのいかり"
   },
   {
     "id": 718,
@@ -11732,7 +12431,8 @@
     "desc": "높은 에너지를 둘러싸 상대에게 부딪쳐 공격한다. 메모리에 따라 타입이 바뀐다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "マルチアタック"
   },
   {
     "id": 719,
@@ -11750,7 +12450,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "１０００まんボルト"
   },
   {
     "id": 720,
@@ -11766,7 +12467,8 @@
     "desc": "자신의 머리를 폭발시켜 주위의 모든 것을 공격한다. 자신도 데미지를 받는다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ビックリヘッド"
   },
   {
     "id": 721,
@@ -11782,7 +12484,8 @@
     "desc": "전기를 두른 주먹으로 공격한다. 노말타입 기술을 전기타입으로 바꿔버린다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "プラズマフィスト"
   },
   {
     "id": 722,
@@ -11798,7 +12501,8 @@
     "desc": "빛의 기둥으로 공격한다. 공격과 특수공격을 비교해서 높은 쪽으로 데미지를 준다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "フォトンゲイザー"
   },
   {
     "id": 723,
@@ -11816,7 +12520,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "てんこがすめつぼうのひかり"
   },
   {
     "id": 724,
@@ -11834,7 +12539,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "サンシャインスマッシャー"
   },
   {
     "id": 725,
@@ -11852,7 +12558,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ムーンライトブラスター"
   },
   {
     "id": 726,
@@ -11870,7 +12577,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ぽかぼかフレンドタイム"
   },
   {
     "id": 727,
@@ -11888,7 +12596,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ラジアルエッジストーム"
   },
   {
     "id": 728,
@@ -11906,7 +12615,8 @@
     "is_zmove": true,
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ブレイジングソウルビート"
   },
   {
     "id": 729,
@@ -11923,7 +12633,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ばちばちアクセル"
   },
   {
     "id": 730,
@@ -11940,7 +12651,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ざぶざぶサーフ"
   },
   {
     "id": 731,
@@ -11957,7 +12669,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ふわふわフォール"
   },
   {
     "id": 732,
@@ -11974,7 +12687,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ピカピカサンダー"
   },
   {
     "id": 733,
@@ -11991,7 +12705,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "いきいきバブル"
   },
   {
     "id": 734,
@@ -12008,7 +12723,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "びりびりエレキ"
   },
   {
     "id": 735,
@@ -12025,7 +12741,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "めらめらバーン"
   },
   {
     "id": 736,
@@ -12042,7 +12759,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "どばどばオーラ"
   },
   {
     "id": 737,
@@ -12059,7 +12777,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "わるわるゾーン"
   },
   {
     "id": 738,
@@ -12076,7 +12795,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "すくすくボンバー"
   },
   {
     "id": 739,
@@ -12093,7 +12813,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "こちこちフロスト"
   },
   {
     "id": 740,
@@ -12110,7 +12831,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "きらきらストーム"
   },
   {
     "id": 741,
@@ -12127,7 +12849,8 @@
     "desc_lang": "ko",
     "hidden": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ブイブイブレイク"
   },
   {
     "id": 742,
@@ -12143,7 +12866,8 @@
     "desc": "가슴의 너트를 축으로 회전시켜 2번 연속 팔로 힘껏 친다. 상대를 풀죽게 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ダブルパンツァー"
   },
   {
     "id": 743,
@@ -12160,7 +12884,8 @@
     "desc_lang": "ko",
     "is_dmax": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ダイウォール"
   },
   {
     "id": 744,
@@ -12176,7 +12901,8 @@
     "desc": "코어에서 빔을 발사해서 공격한다. 상대가 다이맥스 중이면 데미지가 2배가 된다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ダイマックスほう"
   },
   {
     "id": 745,
@@ -12192,7 +12918,8 @@
     "desc": "상대의 기술을 끌어모으는 특성이나 기술의 영향을 무시하고 선택한 상대를 공격할 수 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ねらいうち"
   },
   {
     "id": 746,
@@ -12208,7 +12935,8 @@
     "desc": "어느 한쪽이 기절할 때까지 교체할 수 없게 된다. 한쪽의 포켓몬이 없어지면 효과가 사라진다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "くらいつく"
   },
   {
     "id": 747,
@@ -12224,7 +12952,8 @@
     "desc": "지니고 있는 나무열매를 먹고 방어를 크게 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ほおばる"
   },
   {
     "id": 748,
@@ -12240,7 +12969,8 @@
     "desc": "자신의 모든 능력이 올라가지만 교체하거나 도망칠 수 없게 된다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "はいすいのじん"
   },
   {
     "id": 749,
@@ -12256,7 +12986,8 @@
     "desc": "끈적끈적한 타르를 날려서 상대의 스피드를 떨어뜨린다. 상대는 불꽃이 약점이 된다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "タールショット"
   },
   {
     "id": 750,
@@ -12275,7 +13006,8 @@
       "powder_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "まほうのこな"
   },
   {
     "id": 751,
@@ -12294,7 +13026,8 @@
       "multi_hit_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ドラゴンアロー"
   },
   {
     "id": 752,
@@ -12313,7 +13046,8 @@
       "sound_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "おちゃかい"
   },
   {
     "id": 753,
@@ -12329,7 +13063,8 @@
     "desc": "상대를 도망칠 수 없게 한다. 굳히기에 당한 상대는 매 턴 방어와 특수방어가 떨어진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "たこがため"
   },
   {
     "id": 754,
@@ -12345,7 +13080,8 @@
     "desc": "전기를 두른 부리로 찌른다. 상대보다 먼저 공격하면 기술의 위력은 2배가 된다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "でんげきくちばし"
   },
   {
     "id": 755,
@@ -12361,7 +13097,8 @@
     "desc": "단단한 아가미로 문다. 상대보다 먼저 공격하면 기술의 위력은 2배가 된다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "エラがみ"
   },
   {
     "id": 756,
@@ -12377,7 +13114,8 @@
     "desc": "이상한 힘으로 서로의 필드 효과를 교체한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "コートチェンジ"
   },
   {
     "id": 757,
@@ -12394,7 +13132,8 @@
     "desc_lang": "ko",
     "is_dmax": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ダイバーン"
   },
   {
     "id": 758,
@@ -12411,7 +13150,8 @@
     "desc_lang": "ko",
     "is_dmax": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ダイワーム"
   },
   {
     "id": 759,
@@ -12428,7 +13168,8 @@
     "desc_lang": "ko",
     "is_dmax": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ダイサンダー"
   },
   {
     "id": 760,
@@ -12445,7 +13186,8 @@
     "desc_lang": "ko",
     "is_dmax": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ダイアタック"
   },
   {
     "id": 761,
@@ -12462,7 +13204,8 @@
     "desc_lang": "ko",
     "is_dmax": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ダイナックル"
   },
   {
     "id": 762,
@@ -12479,7 +13222,8 @@
     "desc_lang": "ko",
     "is_dmax": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ダイホロウ"
   },
   {
     "id": 763,
@@ -12496,7 +13240,8 @@
     "desc_lang": "ko",
     "is_dmax": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ダイアイス"
   },
   {
     "id": 764,
@@ -12513,7 +13258,8 @@
     "desc_lang": "ko",
     "is_dmax": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ダイアシッド"
   },
   {
     "id": 765,
@@ -12530,7 +13276,8 @@
     "desc_lang": "ko",
     "is_dmax": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ダイストリーム"
   },
   {
     "id": 766,
@@ -12547,7 +13294,8 @@
     "desc_lang": "ko",
     "is_dmax": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ダイジェット"
   },
   {
     "id": 767,
@@ -12564,7 +13312,8 @@
     "desc_lang": "ko",
     "is_dmax": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ダイフェアリー"
   },
   {
     "id": 768,
@@ -12581,7 +13330,8 @@
     "desc_lang": "ko",
     "is_dmax": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ダイドラグーン"
   },
   {
     "id": 769,
@@ -12598,7 +13348,8 @@
     "desc_lang": "ko",
     "is_dmax": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ダイサイコ"
   },
   {
     "id": 770,
@@ -12615,7 +13366,8 @@
     "desc_lang": "ko",
     "is_dmax": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ダイロック"
   },
   {
     "id": 771,
@@ -12632,7 +13384,8 @@
     "desc_lang": "ko",
     "is_dmax": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ダイアース"
   },
   {
     "id": 772,
@@ -12649,7 +13402,8 @@
     "desc_lang": "ko",
     "is_dmax": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ダイアーク"
   },
   {
     "id": 773,
@@ -12666,7 +13420,8 @@
     "desc_lang": "ko",
     "is_dmax": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ダイソウゲン"
   },
   {
     "id": 774,
@@ -12683,7 +13438,8 @@
     "desc_lang": "ko",
     "is_dmax": true,
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ダイスチル"
   },
   {
     "id": 775,
@@ -12702,7 +13458,8 @@
       "sound_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ソウルビート"
   },
   {
     "id": 776,
@@ -12718,7 +13475,8 @@
     "desc": "몸을 부딪쳐서 공격한다. 방어가 높을수록 주는 데미지가 올라간다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ボディプレス"
   },
   {
     "id": 777,
@@ -12734,7 +13492,8 @@
     "desc": "데코레이션을 해서 상대의 공격과 특수공격을 크게 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "デコレーション"
   },
   {
     "id": 778,
@@ -12750,7 +13509,8 @@
     "desc": "드럼의 뿌리를 연주로 조종해서 공격하는 것으로 상대의 스피드를 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ドラムアタック"
   },
   {
     "id": 779,
@@ -12769,7 +13529,8 @@
       "trapping_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "トラバサミ"
   },
   {
     "id": 780,
@@ -12785,7 +13546,8 @@
     "desc": "작은 돌을 태운 불꽃의 공으로 상대를 공격한다. 화상 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "かえんボール"
   },
   {
     "id": 781,
@@ -12801,7 +13563,8 @@
     "desc": "거대한 검이 되어 베어버린다. 상대가 다이맥스 중이면 데미지가 2배가 된다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "きょじゅうざん"
   },
   {
     "id": 782,
@@ -12817,7 +13580,8 @@
     "desc": "거대한 방패가 되어 부딪친다. 상대가 다이맥스 중이면 데미지가 2배가 된다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "きょじゅうだん"
   },
   {
     "id": 783,
@@ -12833,7 +13597,8 @@
     "desc": "볼주머니에 저장해둔 에너지로 공격하고 자신의 스피드를 올린다. 모르페코의 모습에 따라 타입이 바뀐다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "オーラぐるま"
   },
   {
     "id": 784,
@@ -12849,7 +13614,8 @@
     "desc": "강인한 꼬리를 세차게 휘둘러서 상대를 공격한다. 상대의 공격을 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ワイドブレイカー"
   },
   {
     "id": 785,
@@ -12865,7 +13631,8 @@
     "desc": "날카롭고 뾰족한 가지로 상대를 찔러서 공격한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "えだづき"
   },
   {
     "id": 786,
@@ -12881,7 +13648,8 @@
     "desc": "기타나 베이스를 쳐서 큰 울림과 강한 진동을 상대에게 전달하여 공격한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "オーバードライブ"
   },
   {
     "id": 787,
@@ -12897,7 +13665,8 @@
     "desc": "새콤한 사과에서 만들어 낸 산성 액체로 공격한다. 상대의 특수방어를 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "りんごさん"
   },
   {
     "id": 788,
@@ -12913,7 +13682,8 @@
     "desc": "높은 곳에서 사과를 떨어뜨려서 데미지를 준다. 상대의 방어를 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "Ｇのちから"
   },
   {
     "id": 789,
@@ -12929,7 +13699,8 @@
     "desc": "맞으면 기가 꺾여버릴 것 같은 기세로 공격한다. 상대의 특수공격을 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ソウルクラッシュ"
   },
   {
     "id": 790,
@@ -12945,7 +13716,8 @@
     "desc": "연기를 분출해서 상대를 공격한다. 혼란시킬 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ワンダースチーム"
   },
   {
     "id": 791,
@@ -12961,7 +13733,8 @@
     "desc": "신비한 물을 흩뿌려서 자신과 배틀에 나와 있는 같은 편의 HP를 회복한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "いのちのしずく"
   },
   {
     "id": 792,
@@ -12977,7 +13750,8 @@
     "desc": "상대의 공격을 전혀 받지 않는다. 연속으로 쓰면 실패하기 쉽다. 접촉한 상대의 방어를 크게 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ブロッキング"
   },
   {
     "id": 793,
@@ -12993,7 +13767,8 @@
     "desc": "고개를 숙이는 척하면서 흐트러진 머리카락으로 찌른다. 공격은 반드시 명중한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "どげざつき"
   },
   {
     "id": 794,
@@ -13009,7 +13784,8 @@
     "desc": "굵은 줄기를 휘둘러서 공격한다. 단 자신도 비틀거리기 때문에 다음 턴은 움직일 수 없다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "スターアサルト"
   },
   {
     "id": 795,
@@ -13025,7 +13801,8 @@
     "desc": "본래의 모습이 된 무한다이노 최대의 공격. 다음 턴은 움직일 수 없다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ムゲンダイビーム"
   },
   {
     "id": 796,
@@ -13045,7 +13822,8 @@
       "recoil_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "てっていこうせん"
   },
   {
     "id": 797,
@@ -13061,7 +13839,8 @@
     "desc": "사이코 파워로 상대를 공격한다. 사이코필드일 때는 위력이 오르며 모든 상대에게 데미지를 준다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ワイドフォース"
   },
   {
     "id": 798,
@@ -13077,7 +13856,8 @@
     "desc": "필드를 파괴하면서 공격한다. 필드가 어떤 상태로든 변해 있지 않은 경우 기술은 실패한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "アイアンローラー"
   },
   {
     "id": 799,
@@ -13096,7 +13876,8 @@
       "multi_hit_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "スケイルショット"
   },
   {
     "id": 800,
@@ -13112,7 +13893,8 @@
     "desc": "1턴째에 우주의 힘을 모아서 특수공격을 올리고 2턴째에 상대를 공격한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "メテオビーム"
   },
   {
     "id": 801,
@@ -13128,7 +13910,8 @@
     "desc": "물리와 특수 중 더 많은 데미지를 줄 수 있는 능력으로 공격한다. 독 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "シェルアームズ"
   },
   {
     "id": 802,
@@ -13147,7 +13930,8 @@
       "explosive_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ミストバースト"
   },
   {
     "id": 803,
@@ -13166,7 +13950,8 @@
       "priority_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "グラススライダー"
   },
   {
     "id": 804,
@@ -13182,7 +13967,8 @@
     "desc": "지면에서 올라오는 전격으로 공격한다. 상대가 일렉트릭필드 위에 있을 때 기술의 위력이 2배가 된다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ライジングボルト"
   },
   {
     "id": 805,
@@ -13201,7 +13987,8 @@
       "pulse_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "だいちのはどう"
   },
   {
     "id": 806,
@@ -13217,7 +14004,8 @@
     "desc": "배후에서 엄습해서 공격한다. 상대의 특수공격을 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "はいよるいちげき"
   },
   {
     "id": 807,
@@ -13233,7 +14021,8 @@
     "desc": "질투의 에너지로 상대를 공격한다. 그 턴에 능력이 올라간 포켓몬을 화상 상태로 만든다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "しっとのほのお"
   },
   {
     "id": 808,
@@ -13249,7 +14038,8 @@
     "desc": "상대에 대한 울분이 담긴 공격을 한다. 그 턴에 능력이 떨어져 있으면 기술의 위력이 2배가 된다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "うっぷんばらし"
   },
   {
     "id": 809,
@@ -13265,7 +14055,8 @@
     "desc": "상대의 지닌 물건을 조종해서 공격한다. 상대가 도구를 지니고 있지 않으면 실패한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ポルターガイスト"
   },
   {
     "id": 810,
@@ -13281,7 +14072,8 @@
     "desc": "주위에 있는 모든 것을 강력한 산성 가스로 뒤덮어서 지니고 있는 도구를 녹여버린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ふしょくガス"
   },
   {
     "id": 811,
@@ -13297,7 +14089,8 @@
     "desc": "적절한 지도를 통해서 같은 편 전원의 공격과 방어를 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "コーチング"
   },
   {
     "id": 812,
@@ -13313,7 +14106,8 @@
     "desc": "공격한 뒤 굉장한 스피드로 돌아와서 교대 포켓몬과 교체한다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "クイックターン"
   },
   {
     "id": 813,
@@ -13332,7 +14126,8 @@
       "multi_hit_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "トリプルアクセル"
   },
   {
     "id": 814,
@@ -13351,7 +14146,8 @@
       "multi_hit_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ダブルウイング"
   },
   {
     "id": 815,
@@ -13367,7 +14163,8 @@
     "desc": "뜨겁게 달궈진 모래를 상대에게 부딪쳐서 공격한다. 화상 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ねっさのだいち"
   },
   {
     "id": 816,
@@ -13383,7 +14180,8 @@
     "desc": "정글과 하나가 되어 자신과 배틀에 나와 있는 같은 편의 HP와 모든 상태를 회복한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ジャングルヒール"
   },
   {
     "id": 817,
@@ -13399,7 +14197,8 @@
     "desc": "악의 태세가 극에 달하여 강렬한 일격을 날린다. 반드시 급소에 맞는다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "あんこくきょうだ"
   },
   {
     "id": 818,
@@ -13415,7 +14214,8 @@
     "desc": "물의 태세가 극에 달하여 물 흐르듯 3회의 연격을 날린다. 반드시 급소에 맞는다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "すいりゅうれんだ"
   },
   {
     "id": 819,
@@ -13431,7 +14231,8 @@
     "desc": "전기가 흐르는 우리 안에 4-5턴 동안 상대를 가두어 공격한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "サンダープリズン"
   },
   {
     "id": 820,
@@ -13447,7 +14248,8 @@
     "desc": "생명력을 파워로 바꿔서 상대를 공격한다. 자신의 HP가 적을수록 기술의 위력이 떨어진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ドラゴンエナジー"
   },
   {
     "id": 821,
@@ -13463,7 +14265,8 @@
     "desc": "두 눈에서 사이코 파워를 발사해서 공격한다. 얼음 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "いてつくしせん"
   },
   {
     "id": 822,
@@ -13479,7 +14282,8 @@
     "desc": "분노를 불꽃 같은 오라로 바꿔서 공격한다. 상대를 풀죽게 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "もえあがるいかり"
   },
   {
     "id": 823,
@@ -13495,7 +14299,8 @@
     "desc": "번개 같은 움직임으로 상대를 농락하며 킥을 날린다. 상대의 방어를 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "らいめいげり"
   },
   {
     "id": 824,
@@ -13511,7 +14316,8 @@
     "desc": "눈보라를 두른 얼음의 창을 상대에게 던져서 공격한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ブリザードランス"
   },
   {
     "id": 825,
@@ -13527,7 +14333,8 @@
     "desc": "수많은 작은 영체를 상대에게 부딪쳐서 공격한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "アストラルビット"
   },
   {
     "id": 826,
@@ -13543,7 +14350,8 @@
     "desc": "강력한 사이코 파워로 공격한다. 상대가 마지막으로 사용한 기술의 PP를 3만큼 줄인다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ぶきみなじゅもん"
   },
   {
     "id": 827,
@@ -13562,7 +14370,8 @@
       "slicing_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "フェイタルクロー"
   },
   {
     "id": 828,
@@ -13578,7 +14387,8 @@
     "desc": "사용하면 자신의 방어력이 1랭크 오른다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "バリアーラッシュ"
   },
   {
     "id": 829,
@@ -13594,7 +14404,8 @@
     "desc": "자신의 공격력과 방어력을 바꾼다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "パワーシフト"
   },
   {
     "id": 830,
@@ -13613,7 +14424,8 @@
       "slicing_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "がんせきアックス"
   },
   {
     "id": 831,
@@ -13629,7 +14441,8 @@
     "desc": "애증 섞인 강렬한 바람으로 상대를 둘러싸서 공격한다. 기술을 사용하는 폼에 따라 추가 효과가 달라진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "はるのあらし"
   },
   {
     "id": 832,
@@ -13645,7 +14458,8 @@
     "desc": "신비한 힘으로 자신을 강화한다. 자신의 특수공격이 올라간다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "しんぴのちから"
   },
   {
     "id": 833,
@@ -13661,7 +14475,8 @@
     "desc": "격렬한 불꽃을 방출하면서 마구 날뛰어 공격한다. 기술을 사용한 다음 열중 상태가 된다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "だいふんげき"
   },
   {
     "id": 834,
@@ -13680,7 +14495,8 @@
       "recoil_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ウェーブタックル"
   },
   {
     "id": 835,
@@ -13696,7 +14512,8 @@
     "desc": "엽록소를 모은 뒤 발사하여 공격한다. 자신도 데미지를 입는다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "クロロブラスト"
   },
   {
     "id": 836,
@@ -13712,7 +14529,8 @@
     "desc": "빙산처럼 커다란 얼음덩어리를 부딪쳐서 공격한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ひょうざんおろし"
   },
   {
     "id": 837,
@@ -13728,7 +14546,8 @@
     "desc": "승리를 부르는 춤을 격렬하게 춘다. 자신의 공격, 방어, 스피드를 1랭크 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "しょうりのまい"
   },
   {
     "id": 838,
@@ -13744,7 +14563,8 @@
     "desc": "온 힘을 다한 몸통박치기를 날린다. 자신의 방어력이 떨어진다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ぶちかまし"
   },
   {
     "id": 839,
@@ -13760,7 +14580,8 @@
     "desc": "무수히 많은 독침으로 공격한다. 상대를 독 상태로 만들 때가 있다. 상대가 상태 이상인 경우 위력이 2배가 된다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "どくばりセンボン"
   },
   {
     "id": 840,
@@ -13776,7 +14597,8 @@
     "desc": "오라로 강화한 날개로 베어 가른다. 급소에 맞기 쉽다. 자신의 행동 순서가 빨라진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "オーラウイング"
   },
   {
     "id": 841,
@@ -13792,7 +14614,8 @@
     "desc": "동굴이 서늘해지는 원념으로 공격해서 상대를 동상 상태로 만들 때가 있다. 상대가 상태 이상인 경우 위력이 2배가 된다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "うらみつらみ"
   },
   {
     "id": 842,
@@ -13808,7 +14631,8 @@
     "desc": "피부를 강철 방패처럼 단단하게 만들어서 자신의 방어력을 올린다. 상대의 기술을 회피하기 쉬워진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "たてこもる"
   },
   {
     "id": 843,
@@ -13824,7 +14648,8 @@
     "desc": "발뒤꿈치로 찍은 뒤 3개의 화살을 동시에 발사한다. 자신의 공격이 급소에 맞기 쉬워진다. 상대의 방어력을 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "３ぼんのや"
   },
   {
     "id": 844,
@@ -13840,7 +14665,8 @@
     "desc": "무수히 많은 불덩이로 공격해서 상대를 화상 상태로 만들 때가 있다. 상대가 상태 이상인 경우 위력이 2배가 된다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ひゃっきやこう"
   },
   {
     "id": 845,
@@ -13859,7 +14685,8 @@
       "slicing_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ひけん・ちえなみ"
   },
   {
     "id": 846,
@@ -13875,7 +14702,8 @@
     "desc": "심신을 모두 떨게 만드는 차갑고도 거친 바람으로 공격한다. 상대를 동상 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "こがらしあらし"
   },
   {
     "id": 847,
@@ -13891,7 +14719,8 @@
     "desc": "폭풍을 일으키고 뇌운을 불러서 번개와 바람으로 매섭게 공격한다. 상대를 마비 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "かみなりあらし"
   },
   {
     "id": 848,
@@ -13907,7 +14736,8 @@
     "desc": "뜨겁게 달궈진 모래와 강렬한 바람으로 상대를 둘러싸서 공격한다. 상대를 화상 상태로 만든다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ねっさのあらし"
   },
   {
     "id": 849,
@@ -13923,7 +14753,8 @@
     "desc": "자신의 상태 이상과 HP를 회복한다. 상대의 기술을 회피하기 쉬워진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "みかづきのいのり"
   },
   {
     "id": 850,
@@ -13939,7 +14770,8 @@
     "desc": "기운을 고조시켜서 자신의 상태 이상을 회복하고 공격력과 방어력을 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ブレイブチャージ"
   },
   {
     "id": 851,
@@ -13955,7 +14787,8 @@
     "desc": "테라스탈 중이면, 테라스탈타입의 에너지를 방출해서 공격한다. 공격과 특수공격을 비교해서 높은 쪽으로 데미지를 준다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "テラバースト"
   },
   {
     "id": 852,
@@ -13971,7 +14804,8 @@
     "desc": "실로 함정을 만들어 둘러친다. 상대의 공격을 막음과 동시에 접촉한 상대의 스피드를 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "スレッドトラップ"
   },
   {
     "id": 853,
@@ -13987,7 +14821,8 @@
     "desc": "발꿈치를 들어 올린 뒤 내리찍어 공격한다. 상대를 혼란시킬 때가 있다. 빗나가면 자신이 데미지를 입는다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "かかとおとし"
   },
   {
     "id": 854,
@@ -14003,7 +14838,8 @@
     "desc": "동료의 한을 풀어 주기 위해 공격한다. 쓰러진 같은 편 포켓몬이 많을수록 기술의 위력이 올라간다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "おはかまいり"
   },
   {
     "id": 855,
@@ -14019,7 +14855,8 @@
     "desc": "정신에도 작용하는 기묘한 빛을 발산해서 공격한다. 상대의 특수방어를 크게 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ルミナコリジョン"
   },
   {
     "id": 856,
@@ -14035,7 +14872,8 @@
     "desc": "멋들어진 몸놀림으로 공격한다. 입속에 싸리용이 있으면 싸리용의 모습에 따라 능력이 올라간다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "いっちょうあがり"
   },
   {
     "id": 857,
@@ -14055,7 +14893,8 @@
       "punching_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ジェットパンチ"
   },
   {
     "id": 858,
@@ -14071,7 +14910,8 @@
     "desc": "어마어마하게 매운 엑기스를 발사한다. 상대의 공격이 크게 오르고 방어는 크게 떨어진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ハバネロエキス"
   },
   {
     "id": 859,
@@ -14087,7 +14927,8 @@
     "desc": "발에 부하를 걸어 격렬하게 회전하며 데미지를 준다. 자신의 스피드가 크게 떨어진다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ホイールスピン"
   },
   {
     "id": 860,
@@ -14107,7 +14948,8 @@
       "slicing_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ネズミざん"
   },
   {
     "id": 861,
@@ -14123,7 +14965,8 @@
     "desc": "발에 얇은 얼음을 두르고 빙글빙글 회전하며 부딪친다. 회전 운동에 의해 필드가 파괴된다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "アイススピナー"
   },
   {
     "id": 862,
@@ -14139,7 +14982,8 @@
     "desc": "몸을 내던지는 무모한 돌격. 상대의 다음 턴 공격이 반드시 명중하고 데미지를 2배로 입게 된다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "きょけんとつげき"
   },
   {
     "id": 863,
@@ -14155,7 +14999,8 @@
     "desc": "자애로운 마음으로 기도를 하여 기절한 교대 포켓몬을 HP가 절반인 상태로 부활시킨다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "さいきのいのり"
   },
   {
     "id": 864,
@@ -14171,7 +15016,8 @@
     "desc": "상대를 소금절이 상태로 만들어 매 턴 최대HP의 1/16 데미지를 준다. 강철타입이나 물타입은 1/8 데미지를 받는다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "しおづけ"
   },
   {
     "id": 865,
@@ -14187,7 +15033,8 @@
     "desc": "호흡이 척척 맞게 다이빙해서 상대에게 물보라를 끼얹는다. 3회 연속으로 데미지를 준다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "トリプルダイブ"
   },
   {
     "id": 866,
@@ -14206,7 +15053,8 @@
       "explosive_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "キラースピン"
   },
   {
     "id": 867,
@@ -14222,7 +15070,8 @@
     "desc": "상대의 본질을 꿰뚫어 보고 베껴서 자신과 같은 편을 상대와 같은 특성으로 바꾼다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "うつしえ"
   },
   {
     "id": 868,
@@ -14238,7 +15087,8 @@
     "desc": "자신의 HP를 깎아서 자신의 공격, 특수공격, 스피드를 크게 올린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "みをけずる"
   },
   {
     "id": 869,
@@ -14257,7 +15107,8 @@
       "slicing_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ドゲザン"
   },
   {
     "id": 870,
@@ -14273,7 +15124,8 @@
     "desc": "숨겨진 장치가 있는 꽃다발을 상대에게 던져서 공격한다. 반드시 명중하며 급소에 맞는다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "トリックフラワー"
   },
   {
     "id": 871,
@@ -14292,7 +15144,8 @@
       "sound_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "フレアソング"
   },
   {
     "id": 872,
@@ -14308,7 +15161,8 @@
     "desc": "물 흐르듯 민첩하고 경쾌한 발재간으로 상대를 농락하며 데미지를 준다. 자신의 스피드를 올린다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "アクアステップ"
   },
   {
     "id": 873,
@@ -14324,7 +15178,8 @@
     "desc": "분노해 날뛰는 성난소의 맹렬한 태클. 폼에 따라 기술의 타입이 달라지고 빛의장막이나 리플렉터 등도 파괴할 수 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "レイジングブル"
   },
   {
     "id": 874,
@@ -14340,7 +15195,8 @@
     "desc": "대량의 코인을 날려서 공격한다. 자신의 특수공격이 떨어진다. 배틀 후에 돈을 받을 수 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ゴールドラッシュ"
   },
   {
     "id": 875,
@@ -14356,7 +15212,8 @@
     "desc": "실체가 없는 칼날로 상대를 베어 가른다. 일렉트릭필드 위에 있을 때 기술의 위력이 1.5배가 된다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "サイコブレイド "
   },
   {
     "id": 876,
@@ -14372,7 +15229,8 @@
     "desc": "펄펄 끓는 물을 기세 좋게 뿜어낸다. 햇살이 강할 때 기술의 위력이 떨어지기는커녕 1.5배가 된다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ハイドロスチーム"
   },
   {
     "id": 877,
@@ -14388,7 +15246,8 @@
     "desc": "파멸적인 재앙에 휩쓸리게 하여 상대의 HP를 절반으로 만든다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "カタストロフィ"
   },
   {
     "id": 878,
@@ -14404,7 +15263,8 @@
     "desc": "변형하며 거칠게 낙하한 다음 고대의 대폭발을 일으킨다. 약점인 상대에게는 위력이 더욱 올라간다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "アクセルブレイク"
   },
   {
     "id": 879,
@@ -14420,7 +15280,8 @@
     "desc": "변형하며 초고속으로 달려서 미지의 전격으로 상대를 관통한다. 약점인 상대에게는 위력이 더욱 올라간다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "イナズマドライブ"
   },
   {
     "id": 880,
@@ -14436,7 +15297,8 @@
     "desc": "사용자 HP의 1/2를 깎아서 대타가 되는 분신을 만든 다음, 교대 포켓몬과 교체한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "しっぽきり"
   },
   {
     "id": 881,
@@ -14455,7 +15317,8 @@
       "wind_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "さむいギャグ"
   },
   {
     "id": 882,
@@ -14471,7 +15334,8 @@
     "desc": "압정뿌리기, 스텔스록, 끈적끈적네트, 독압정, 대타출동을 모두 정리한다. 자신의 공격과 스피드가 올라간다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "おかたづけ"
   },
   {
     "id": 883,
@@ -14490,7 +15354,8 @@
       "wind_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ゆきげしき"
   },
   {
     "id": 884,
@@ -14506,7 +15371,8 @@
     "desc": "상대에게 달려들어 공격한다. 상대의 스피드를 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "とびつく"
   },
   {
     "id": 885,
@@ -14522,7 +15388,8 @@
     "desc": "풀숲에서 튀어나오듯이 공격한다. 경쾌한 발재간으로 자신의 스피드를 올린다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "くさわけ"
   },
   {
     "id": 886,
@@ -14538,7 +15405,8 @@
     "desc": "상대의 기운이 빠질 정도로 차가운 물을 끼얹어서 공격한다. 상대의 공격을 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ひやみず"
   },
   {
     "id": 887,
@@ -14554,7 +15422,8 @@
     "desc": "뾰족한 신체 부위를 급속도로 회전시켜 관통한다. 방어나 판별 등도 무시할 수 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ハイパードリル"
   },
   {
     "id": 888,
@@ -14573,7 +15442,8 @@
       "multi_hit_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ツインビーム"
   },
   {
     "id": 889,
@@ -14589,7 +15459,8 @@
     "desc": "분노를 에너지로 바꿔서 공격한다. 받은 공격의 횟수가 많을수록 기술의 위력이 올라간다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "ふんどのこぶし"
   },
   {
     "id": 890,
@@ -14605,7 +15476,8 @@
     "desc": "자신의 갑옷을 활활 타오르는 탄환으로 발사해서 공격한다. 자신의 방어와 특수방어가 떨어진다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "アーマーキャノン"
   },
   {
     "id": 891,
@@ -14624,7 +15496,8 @@
       "slicing_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "むねんのつるぎ"
   },
   {
     "id": 892,
@@ -14640,7 +15513,8 @@
     "desc": "전신의 전기를 모두 방출해서 큰 데미지를 준다. 자신의 전기타입이 없어진다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "でんこうそうげき"
   },
   {
     "id": 893,
@@ -14656,7 +15530,8 @@
     "desc": "거대한 해머를 온몸으로 휘둘러서 공격한다. 이 기술은 2회 연속으로 쓸 수 없다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "デカハンマー"
   },
   {
     "id": 894,
@@ -14675,7 +15550,8 @@
       "priority_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ほうふく"
   },
   {
     "id": 895,
@@ -14691,7 +15567,8 @@
     "desc": "압력을 가한 물을 칼날처럼 분사해서 상대를 베어 가른다. 급소에 맞기 쉽다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "アクアカッター"
   },
   {
     "id": 901,
@@ -14707,7 +15584,8 @@
     "desc": "피와 같이 붉은 보름달에서 혼신의 기백을 발사한다. 이 기술은 2회 연속으로 쓸 수 없다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ブラッドムーン"
   },
   {
     "id": 902,
@@ -14723,7 +15601,8 @@
     "desc": "휘저은 차를 대포처럼 발사해 준 데미지의 절반을 HP로 회복한다. 화상 상태로 만들 때도 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "シャカシャカほう"
   },
   {
     "id": 903,
@@ -14739,7 +15618,8 @@
     "desc": "끈적끈적한 물엿을 폭발시킨다. 상대를 물엿범벅 상태로 만들어서 3턴 동안 계속 스피드를 떨어뜨린다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "みずあめボム"
   },
   {
     "id": 904,
@@ -14755,7 +15635,8 @@
     "desc": "덩굴을 휘감은 방망이로 때린다. 쓰고 있는 가면에 따라 타입이 바뀐다. 급소에 맞기 쉽다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ツタこんぼう"
   },
   {
     "id": 905,
@@ -14771,7 +15652,8 @@
     "desc": "1턴째에 전기를 모아서 특수공격을 올리고 2턴째에 고압의 전기를 발사한다. 비가 오는 날씨일 때는 바로 발사할 수 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "エレクトロビーム"
   },
   {
     "id": 906,
@@ -14787,7 +15669,8 @@
     "desc": "결정의 힘을 내리쬐어 적을 없애 버린다. 테라파고스가 스텔라폼일 때 사용하면 모든 상대에게 데미지를 준다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "テラクラスター"
   },
   {
     "id": 907,
@@ -14803,7 +15686,8 @@
     "desc": "광선을 발사해서 공격한다. 가끔 다른 머리도 협력해서 레이저를 발사하여 위력이 2배가 된다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "きまぐレーザー"
   },
   {
     "id": 908,
@@ -14819,7 +15703,8 @@
     "desc": "상대의 공격을 초고열의 털로 방어하는 동시에 접촉한 상대를 화상 상태로 만든다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "かえんのまもり"
   },
   {
     "id": 909,
@@ -14835,7 +15720,8 @@
     "desc": "상대보다 먼저 전격을 퍼붓는다. 상대가 쓴 기술이 공격 기술이 아니면 실패한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "じんらい"
   },
   {
     "id": 910,
@@ -14851,7 +15737,8 @@
     "desc": "머리에 축적된 빛으로 절단한다. 기술 방어를 무시하고 공격할 수 있다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "パワフルエッジ"
   },
   {
     "id": 911,
@@ -14871,7 +15758,8 @@
       "slicing_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "タキオンカッター"
   },
   {
     "id": 912,
@@ -14887,7 +15775,8 @@
     "desc": "팔이나 집게로 상대를 압박한다. 상대의 HP가 남아 있을수록 위력이 올라간다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ハードプレス"
   },
   {
     "id": 913,
@@ -14903,7 +15792,8 @@
     "desc": "용의 북돋움으로 사기를 높여서 같은 편의 기술이 급소에 맞기 쉬워진다. 드래곤타입이면 더욱더 사기가 북돋는다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "ドラゴンエール"
   },
   {
     "id": 914,
@@ -14922,7 +15812,8 @@
       "sound_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "みわくのボイス"
   },
   {
     "id": 915,
@@ -14938,7 +15829,8 @@
     "desc": "자포자기하는 자세로 공격한다. 앞 턴에서 기술이 빗나갔다면 위력이 배가 된다.",
     "desc_lang": "ko",
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "やけっぱち"
   },
   {
     "id": 916,
@@ -14957,7 +15849,8 @@
       "recoil_move"
     ],
     "contact": true,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "サンダーダイブ"
   },
   {
     "id": 917,
@@ -14976,7 +15869,8 @@
       "sound_move"
     ],
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "サイコノイズ"
   },
   {
     "id": 918,
@@ -14992,7 +15886,8 @@
     "desc": "움직임에 반응하여 손바닥으로 밀쳐서 상대를 풀죽게 한다. 상대가 쓴 기술이 선제공격 기술이 아니면 실패한다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": true
+    "in_champions": true,
+    "ja": "はやてがえし"
   },
   {
     "id": 919,
@@ -15008,7 +15903,8 @@
     "desc": "독으로 된 사슬로 상대를 휘감은 뒤 독소를 흘려보내어 해치운다. 맹독 상태로 만들 때가 있다.",
     "desc_lang": "ko",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "じゃどくのくさり"
   },
   {
     "id": 920,
@@ -15027,7 +15923,8 @@
     "is_gmax": true,
     "pokemon": "이상해꽃",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_vine_lash"
   },
   {
     "id": 921,
@@ -15046,7 +15943,8 @@
     "is_gmax": true,
     "pokemon": "리자몽",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_wildfire"
   },
   {
     "id": 922,
@@ -15065,7 +15963,8 @@
     "is_gmax": true,
     "pokemon": "거북왕",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_cannonade"
   },
   {
     "id": 923,
@@ -15084,7 +15983,8 @@
     "is_gmax": true,
     "pokemon": "버터플",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_befuddle"
   },
   {
     "id": 924,
@@ -15103,7 +16003,8 @@
     "is_gmax": true,
     "pokemon": "피카츄",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_volt_crash"
   },
   {
     "id": 925,
@@ -15122,7 +16023,8 @@
     "is_gmax": true,
     "pokemon": "페르시온",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_gold_rush"
   },
   {
     "id": 926,
@@ -15141,7 +16043,8 @@
     "is_gmax": true,
     "pokemon": "괴력몬",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_chi_strike"
   },
   {
     "id": 927,
@@ -15160,7 +16063,8 @@
     "is_gmax": true,
     "pokemon": "팬텀",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_terror"
   },
   {
     "id": 928,
@@ -15179,7 +16083,8 @@
     "is_gmax": true,
     "pokemon": "킹드라",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_foam_burst"
   },
   {
     "id": 929,
@@ -15198,7 +16103,8 @@
     "is_gmax": true,
     "pokemon": "라프라스",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_resonance"
   },
   {
     "id": 930,
@@ -15217,7 +16123,8 @@
     "is_gmax": true,
     "pokemon": "이브이",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_cuddle"
   },
   {
     "id": 931,
@@ -15236,7 +16143,8 @@
     "is_gmax": true,
     "pokemon": "잠만보",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_replenish"
   },
   {
     "id": 932,
@@ -15255,7 +16163,8 @@
     "is_gmax": true,
     "pokemon": "더스트나",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_malodor"
   },
   {
     "id": 933,
@@ -15274,7 +16183,8 @@
     "is_gmax": true,
     "pokemon": "멜메탈",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_meltdown"
   },
   {
     "id": 934,
@@ -15293,7 +16203,8 @@
     "is_gmax": true,
     "pokemon": "고릴타",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_drum_solo"
   },
   {
     "id": 935,
@@ -15312,7 +16223,8 @@
     "is_gmax": true,
     "pokemon": "에이스번",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_fireball"
   },
   {
     "id": 936,
@@ -15331,7 +16243,8 @@
     "is_gmax": true,
     "pokemon": "인텔리레온",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_hydrosnipe"
   },
   {
     "id": 937,
@@ -15350,7 +16263,8 @@
     "is_gmax": true,
     "pokemon": "아머까오",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_wind_rage"
   },
   {
     "id": 938,
@@ -15369,7 +16283,8 @@
     "is_gmax": true,
     "pokemon": "스트린더",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_gravitas"
   },
   {
     "id": 939,
@@ -15388,7 +16303,8 @@
     "is_gmax": true,
     "pokemon": "대왕끼리동",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_stonesurge"
   },
   {
     "id": 940,
@@ -15407,7 +16323,8 @@
     "is_gmax": true,
     "pokemon": "석탄산",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_volcalith"
   },
   {
     "id": 941,
@@ -15426,7 +16343,8 @@
     "is_gmax": true,
     "pokemon": "플라프나",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_tartness"
   },
   {
     "id": 942,
@@ -15445,7 +16363,8 @@
     "is_gmax": true,
     "pokemon": "아마갓사",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_sweetness"
   },
   {
     "id": 943,
@@ -15464,7 +16383,8 @@
     "is_gmax": true,
     "pokemon": "사다이사",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_sandblast"
   },
   {
     "id": 944,
@@ -15483,7 +16403,8 @@
     "is_gmax": true,
     "pokemon": "스트린더",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_stun_shock"
   },
   {
     "id": 945,
@@ -15502,7 +16423,8 @@
     "is_gmax": true,
     "pokemon": "왕지네",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_centiferno"
   },
   {
     "id": 946,
@@ -15521,7 +16443,8 @@
     "is_gmax": true,
     "pokemon": "해터렘",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_smite"
   },
   {
     "id": 947,
@@ -15540,7 +16463,8 @@
     "is_gmax": true,
     "pokemon": "브리무온",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_snooze"
   },
   {
     "id": 948,
@@ -15559,7 +16483,8 @@
     "is_gmax": true,
     "pokemon": "마휘핑",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_finale"
   },
   {
     "id": 949,
@@ -15578,7 +16503,8 @@
     "is_gmax": true,
     "pokemon": "코뿌리",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_steelsurge"
   },
   {
     "id": 950,
@@ -15597,7 +16523,8 @@
     "is_gmax": true,
     "pokemon": "두랄루돈",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_depletion"
   },
   {
     "id": 951,
@@ -15616,7 +16543,8 @@
     "is_gmax": true,
     "pokemon": "우라오스 (일격)",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_one_blow"
   },
   {
     "id": 952,
@@ -15635,6 +16563,7 @@
     "is_gmax": true,
     "pokemon": "우라오스 (연격)",
     "contact": false,
-    "in_champions": false
+    "in_champions": false,
+    "ja": "g_max_rapid_flow"
   }
 ]
