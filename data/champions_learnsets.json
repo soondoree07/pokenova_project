@@ -6572,6 +6572,12 @@
         "ko": "퀵턴",
         "method": "tutor",
         "level": 0
+      },
+      {
+        "en": "aqua_jet",
+        "ko": "아쿠아제트",
+        "method": "level-up",
+        "level": 12
       }
     ]
   },
@@ -42907,253 +42913,6 @@
     ]
   },
   {
-    "id": 670,
-    "ko": "플라엣테",
-    "en": "floette",
-    "moves": [
-      {
-        "en": "safeguard",
-        "ko": "신비의부적",
-        "method": "level-up",
-        "level": 10
-      },
-      {
-        "en": "wish",
-        "ko": "희망사항",
-        "method": "level-up",
-        "level": 20
-      },
-      {
-        "en": "magical_leaf",
-        "ko": "매지컬리프",
-        "method": "level-up",
-        "level": 25
-      },
-      {
-        "en": "grassy_terrain",
-        "ko": "그래스필드",
-        "method": "level-up",
-        "level": 27
-      },
-      {
-        "en": "petal_blizzard",
-        "ko": "꽃보라",
-        "method": "level-up",
-        "level": 33
-      },
-      {
-        "en": "synthesis",
-        "ko": "광합성",
-        "method": "level-up",
-        "level": 38
-      },
-      {
-        "en": "misty_terrain",
-        "ko": "미스트필드",
-        "method": "level-up",
-        "level": 43
-      },
-      {
-        "en": "moonblast",
-        "ko": "문포스",
-        "method": "level-up",
-        "level": 46
-      },
-      {
-        "en": "petal_dance",
-        "ko": "꽃잎댄스",
-        "method": "level-up",
-        "level": 51
-      },
-      {
-        "en": "solar_beam",
-        "ko": "솔라빔",
-        "method": "level-up",
-        "level": 58
-      },
-      {
-        "en": "psychic",
-        "ko": "사이코키네시스",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "light_screen",
-        "ko": "빛의장막",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "swift",
-        "ko": "스피드스타",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "rest",
-        "ko": "잠자기",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "substitute",
-        "ko": "대타출동",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "protect",
-        "ko": "방어",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "giga_drain",
-        "ko": "기가드레인",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "endure",
-        "ko": "버티기",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "charm",
-        "ko": "애교부리기",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "sleep_talk",
-        "ko": "잠꼬대",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "baton_pass",
-        "ko": "배턴터치",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "rain_dance",
-        "ko": "비바라기",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "sunny_day",
-        "ko": "쾌청",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "facade",
-        "ko": "객기",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "helping_hand",
-        "ko": "도우미",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "trick",
-        "ko": "트릭",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "endeavor",
-        "ko": "죽기살기",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "skill_swap",
-        "ko": "스킬스왑",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "calm_mind",
-        "ko": "명상",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "seed_bomb",
-        "ko": "씨폭탄",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "energy_ball",
-        "ko": "에너지볼",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "grass_knot",
-        "ko": "풀묶기",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "stored_power",
-        "ko": "어시스트파워",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "draining_kiss",
-        "ko": "드레인키스",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "dazzling_gleam",
-        "ko": "매지컬샤인",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "pollen_puff",
-        "ko": "꽃가루경단",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "tera_blast",
-        "ko": "테라버스트",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "trailblaze",
-        "ko": "개척하기",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "chilling_water",
-        "ko": "찬물끼얹기",
-        "method": "machine",
-        "level": 0
-      },
-      {
-        "en": "alluring_voice",
-        "ko": "매혹의보이스",
-        "method": "machine",
-        "level": 0
-      }
-    ]
-  },
-  {
     "id": 671,
     "ko": "플라제스",
     "en": "florges",
@@ -51406,7 +51165,7 @@
   },
   {
     "id": 745,
-    "ko": "루가루암 한낮의 모습",
+    "ko": "루가루암",
     "en": "lycanroc",
     "moves": [
       {
@@ -59542,7 +59301,7 @@
   },
   {
     "id": 902,
-    "ko": "대쓰여너 (수컷)",
+    "ko": "대쓰여너",
     "en": "basculegion",
     "moves": [
       {
