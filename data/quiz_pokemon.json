@@ -81,7 +81,7 @@
         "abilities": [
           {
             "ko": "두꺼운지방",
-            "en": "thick fat",
+            "en": "thick_fat",
             "hidden": false
           }
         ]
@@ -191,7 +191,7 @@
         "abilities": [
           {
             "ko": "단단한발톱",
-            "en": "tough claws",
+            "en": "tough_claws",
             "hidden": false
           }
         ]
@@ -230,7 +230,7 @@
           },
           {
             "ko": "선파워",
-            "en": "solar power",
+            "en": "solar_power",
             "hidden": true
           }
         ]
@@ -316,7 +316,7 @@
         "abilities": [
           {
             "ko": "메가런처",
-            "en": "mega launcher",
+            "en": "mega_launcher",
             "hidden": false
           }
         ]
@@ -337,7 +337,7 @@
           },
           {
             "ko": "젖은접시",
-            "en": "rain dish",
+            "en": "rain_dish",
             "hidden": true
           }
         ]
@@ -420,12 +420,12 @@
         "abilities": [
           {
             "ko": "복안",
-            "en": "compound eyes",
+            "en": "compound_eyes",
             "hidden": false
           },
           {
             "ko": "색안경",
-            "en": "tinted lens",
+            "en": "tinted_lens",
             "hidden": true
           }
         ]
@@ -615,7 +615,7 @@
         "abilities": [
           {
             "ko": "노가드",
-            "en": "no guard",
+            "en": "no_guard",
             "hidden": false
           }
         ]
@@ -671,7 +671,7 @@
           },
           {
             "ko": "두꺼운지방",
-            "en": "thick fat",
+            "en": "thick_fat",
             "hidden": true
           }
         ]
@@ -727,7 +727,7 @@
           },
           {
             "ko": "두꺼운지방",
-            "en": "thick fat",
+            "en": "thick_fat",
             "hidden": true
           }
         ]
@@ -876,7 +876,7 @@
           },
           {
             "ko": "피뢰침",
-            "en": "lightning rod",
+            "en": "lightning_rod",
             "hidden": true
           }
         ]
@@ -917,7 +917,7 @@
         "abilities": [
           {
             "ko": "서핑테일",
-            "en": "surge surfer",
+            "en": "surge_surfer",
             "hidden": false
           }
         ]
@@ -982,12 +982,12 @@
         "abilities": [
           {
             "ko": "눈숨기",
-            "en": "snow cloak",
+            "en": "snow_cloak",
             "hidden": false
           },
           {
             "ko": "눈치우기",
-            "en": "slush rush",
+            "en": "slush_rush",
             "hidden": true
           }
         ]
@@ -1028,12 +1028,12 @@
         "abilities": [
           {
             "ko": "눈숨기",
-            "en": "snow cloak",
+            "en": "snow_cloak",
             "hidden": false
           },
           {
             "ko": "눈치우기",
-            "en": "slush rush",
+            "en": "slush_rush",
             "hidden": true
           }
         ]
@@ -1277,7 +1277,7 @@
         "abilities": [
           {
             "ko": "매직미러",
-            "en": "magic bounce",
+            "en": "magic_bounce",
             "hidden": false
           }
         ]
@@ -1317,12 +1317,12 @@
         "abilities": [
           {
             "ko": "눈숨기",
-            "en": "snow cloak",
+            "en": "snow_cloak",
             "hidden": false
           },
           {
             "ko": "눈퍼뜨리기",
-            "en": "snow warning",
+            "en": "snow_warning",
             "hidden": true
           }
         ]
@@ -1363,12 +1363,12 @@
         "abilities": [
           {
             "ko": "눈숨기",
-            "en": "snow cloak",
+            "en": "snow_cloak",
             "hidden": false
           },
           {
             "ko": "눈퍼뜨리기",
-            "en": "snow warning",
+            "en": "snow_warning",
             "hidden": true
           }
         ]
@@ -1708,17 +1708,17 @@
         "abilities": [
           {
             "ko": "모래숨기",
-            "en": "sand veil",
+            "en": "sand_veil",
             "hidden": false
           },
           {
             "ko": "컬리헤어",
-            "en": "tangling hair",
+            "en": "tangling_hair",
             "hidden": false
           },
           {
             "ko": "모래의힘",
-            "en": "sand force",
+            "en": "sand_force",
             "hidden": true
           }
         ]
@@ -1764,17 +1764,17 @@
         "abilities": [
           {
             "ko": "모래숨기",
-            "en": "sand veil",
+            "en": "sand_veil",
             "hidden": false
           },
           {
             "ko": "컬리헤어",
-            "en": "tangling hair",
+            "en": "tangling_hair",
             "hidden": false
           },
           {
             "ko": "모래의힘",
-            "en": "sand force",
+            "en": "sand_force",
             "hidden": true
           }
         ]
@@ -1850,7 +1850,7 @@
           },
           {
             "ko": "단단한발톱",
-            "en": "tough claws",
+            "en": "tough_claws",
             "hidden": false
           },
           {
@@ -1926,7 +1926,7 @@
         "abilities": [
           {
             "ko": "퍼코트",
-            "en": "fur coat",
+            "en": "fur_coat",
             "hidden": false
           },
           {
@@ -2099,12 +2099,12 @@
           },
           {
             "ko": "타오르는불꽃",
-            "en": "flash fire",
+            "en": "flash_fire",
             "hidden": false
           },
           {
             "ko": "돌머리",
-            "en": "rock head",
+            "en": "rock_head",
             "hidden": true
           }
         ]
@@ -2155,12 +2155,12 @@
           },
           {
             "ko": "타오르는불꽃",
-            "en": "flash fire",
+            "en": "flash_fire",
             "hidden": false
           },
           {
             "ko": "돌머리",
-            "en": "rock head",
+            "en": "rock_head",
             "hidden": true
           }
         ]
@@ -2452,7 +2452,7 @@
           },
           {
             "ko": "노가드",
-            "en": "no guard",
+            "en": "no_guard",
             "hidden": false
           },
           {
@@ -2547,7 +2547,7 @@
         "abilities": [
           {
             "ko": "내용물분출",
-            "en": "innards out",
+            "en": "innards_out",
             "hidden": false
           }
         ]
@@ -2652,7 +2652,7 @@
         "abilities": [
           {
             "ko": "자력",
-            "en": "magnet pull",
+            "en": "magnet_pull",
             "hidden": false
           },
           {
@@ -2709,7 +2709,7 @@
         "abilities": [
           {
             "ko": "자력",
-            "en": "magnet pull",
+            "en": "magnet_pull",
             "hidden": false
           },
           {
@@ -2766,7 +2766,7 @@
         "abilities": [
           {
             "ko": "자력",
-            "en": "magnet pull",
+            "en": "magnet_pull",
             "hidden": false
           },
           {
@@ -2821,12 +2821,12 @@
         "abilities": [
           {
             "ko": "도주",
-            "en": "run away",
+            "en": "run_away",
             "hidden": false
           },
           {
             "ko": "파스텔베일",
-            "en": "pastel veil",
+            "en": "pastel_veil",
             "hidden": false
           },
           {
@@ -2877,12 +2877,12 @@
         "abilities": [
           {
             "ko": "도주",
-            "en": "run away",
+            "en": "run_away",
             "hidden": false
           },
           {
             "ko": "파스텔베일",
-            "en": "pastel veil",
+            "en": "pastel_veil",
             "hidden": false
           },
           {
@@ -2938,7 +2938,7 @@
           },
           {
             "ko": "마이페이스",
-            "en": "own tempo",
+            "en": "own_tempo",
             "hidden": false
           },
           {
@@ -2990,7 +2990,7 @@
         "abilities": [
           {
             "ko": "조가비갑옷",
-            "en": "shell armor",
+            "en": "shell_armor",
             "hidden": false
           }
         ]
@@ -3007,12 +3007,12 @@
         "abilities": [
           {
             "ko": "퀵드로",
-            "en": "quick draw",
+            "en": "quick_draw",
             "hidden": false
           },
           {
             "ko": "마이페이스",
-            "en": "own tempo",
+            "en": "own_tempo",
             "hidden": false
           },
           {
@@ -3287,7 +3287,7 @@
         "abilities": [
           {
             "ko": "독수",
-            "en": "poison touch",
+            "en": "poison_touch",
             "hidden": false
           },
           {
@@ -3297,7 +3297,7 @@
           },
           {
             "ko": "과학의힘",
-            "en": "power of alchemy",
+            "en": "power_of_alchemy",
             "hidden": true
           }
         ]
@@ -3343,7 +3343,7 @@
         "abilities": [
           {
             "ko": "독수",
-            "en": "poison touch",
+            "en": "poison_touch",
             "hidden": false
           },
           {
@@ -3353,7 +3353,7 @@
           },
           {
             "ko": "과학의힘",
-            "en": "power of alchemy",
+            "en": "power_of_alchemy",
             "hidden": true
           }
         ]
@@ -3485,7 +3485,7 @@
         "abilities": [
           {
             "ko": "그림자밟기",
-            "en": "shadow tag",
+            "en": "shadow_tag",
             "hidden": false
           }
         ]
@@ -3502,7 +3502,7 @@
         "abilities": [
           {
             "ko": "저주받은바디",
-            "en": "cursed body",
+            "en": "cursed_body",
             "hidden": false
           }
         ]
@@ -3660,17 +3660,17 @@
         "abilities": [
           {
             "ko": "괴력집게",
-            "en": "hyper cutter",
+            "en": "hyper_cutter",
             "hidden": false
           },
           {
             "ko": "조가비갑옷",
-            "en": "shell armor",
+            "en": "shell_armor",
             "hidden": false
           },
           {
             "ko": "우격다짐",
-            "en": "sheer force",
+            "en": "sheer_force",
             "hidden": true
           }
         ]
@@ -3927,17 +3927,17 @@
         "abilities": [
           {
             "ko": "저주받은바디",
-            "en": "cursed body",
+            "en": "cursed_body",
             "hidden": false
           },
           {
             "ko": "피뢰침",
-            "en": "lightning rod",
+            "en": "lightning_rod",
             "hidden": false
           },
           {
             "ko": "돌머리",
-            "en": "rock head",
+            "en": "rock_head",
             "hidden": true
           }
         ]
@@ -4100,12 +4100,12 @@
           },
           {
             "ko": "화학변화가스",
-            "en": "neutralizing gas",
+            "en": "neutralizing_gas",
             "hidden": false
           },
           {
             "ko": "미스트메이커",
-            "en": "misty surge",
+            "en": "misty_surge",
             "hidden": true
           }
         ]
@@ -4264,7 +4264,7 @@
         "abilities": [
           {
             "ko": "부자유친",
-            "en": "parental bond",
+            "en": "parental_bond",
             "hidden": false
           }
         ]
@@ -4451,7 +4451,7 @@
         "abilities": [
           {
             "ko": "천하장사",
-            "en": "huge power",
+            "en": "huge_power",
             "hidden": false
           }
         ]
@@ -4498,17 +4498,17 @@
         "abilities": [
           {
             "ko": "의기양양",
-            "en": "vital spirit",
+            "en": "vital_spirit",
             "hidden": false
           },
           {
             "ko": "배리어프리",
-            "en": "screen cleaner",
+            "en": "screen_cleaner",
             "hidden": false
           },
           {
             "ko": "아이스바디",
-            "en": "ice body",
+            "en": "ice_body",
             "hidden": true
           }
         ]
@@ -4708,12 +4708,12 @@
           },
           {
             "ko": "분노의경혈",
-            "en": "anger point",
+            "en": "anger_point",
             "hidden": false
           },
           {
             "ko": "되새김질",
-            "en": "cud chew",
+            "en": "cud_chew",
             "hidden": true
           }
         ]
@@ -4735,12 +4735,12 @@
           },
           {
             "ko": "분노의경혈",
-            "en": "anger point",
+            "en": "anger_point",
             "hidden": false
           },
           {
             "ko": "되새김질",
-            "en": "cud chew",
+            "en": "cud_chew",
             "hidden": true
           }
         ]
@@ -4762,12 +4762,12 @@
           },
           {
             "ko": "분노의경혈",
-            "en": "anger point",
+            "en": "anger_point",
             "hidden": false
           },
           {
             "ko": "되새김질",
-            "en": "cud chew",
+            "en": "cud_chew",
             "hidden": true
           }
         ]
@@ -4832,7 +4832,7 @@
         "abilities": [
           {
             "ko": "틀깨기",
-            "en": "mold breaker",
+            "en": "mold_breaker",
             "hidden": false
           }
         ]
@@ -4879,12 +4879,12 @@
         "abilities": [
           {
             "ko": "저수",
-            "en": "water absorb",
+            "en": "water_absorb",
             "hidden": false
           },
           {
             "ko": "조가비갑옷",
-            "en": "shell armor",
+            "en": "shell_armor",
             "hidden": false
           },
           {
@@ -4957,7 +4957,7 @@
         "abilities": [
           {
             "ko": "도주",
-            "en": "run away",
+            "en": "run_away",
             "hidden": false
           },
           {
@@ -5227,7 +5227,7 @@
         "abilities": [
           {
             "ko": "단단한발톱",
-            "en": "tough claws",
+            "en": "tough_claws",
             "hidden": false
           }
         ]
@@ -5277,7 +5277,7 @@
           },
           {
             "ko": "두꺼운지방",
-            "en": "thick fat",
+            "en": "thick_fat",
             "hidden": false
           },
           {
@@ -5663,7 +5663,7 @@
         "abilities": [
           {
             "ko": "메가솔라",
-            "en": "mega solar",
+            "en": "mega_solar",
             "hidden": false
           }
         ]
@@ -5842,7 +5842,7 @@
         "abilities": [
           {
             "ko": "드래곤스킨",
-            "en": "dragon skin",
+            "en": "dragon_skin",
             "hidden": false
           }
         ]
@@ -6436,7 +6436,7 @@
         "abilities": [
           {
             "ko": "틀깨기",
-            "en": "mold breaker",
+            "en": "mold_breaker",
             "hidden": false
           }
         ]
@@ -6820,12 +6820,12 @@
         "abilities": [
           {
             "ko": "독가시",
-            "en": "poison point",
+            "en": "poison_point",
             "hidden": false
           },
           {
             "ko": "저수",
-            "en": "water absorb",
+            "en": "water_absorb",
             "hidden": false
           },
           {
@@ -6981,12 +6981,12 @@
         "abilities": [
           {
             "ko": "기묘한약",
-            "en": "curious medicine",
+            "en": "curious_medicine",
             "hidden": false
           },
           {
             "ko": "마이페이스",
-            "en": "own tempo",
+            "en": "own_tempo",
             "hidden": false
           },
           {
@@ -7230,7 +7230,7 @@
         "abilities": [
           {
             "ko": "모래의힘",
-            "en": "sand force",
+            "en": "sand_force",
             "hidden": false
           }
         ]
@@ -7333,12 +7333,12 @@
         "abilities": [
           {
             "ko": "독가시",
-            "en": "poison point",
+            "en": "poison_point",
             "hidden": false
           },
           {
             "ko": "쓱쓱",
-            "en": "swift swim",
+            "en": "swift_swim",
             "hidden": false
           },
           {
@@ -7466,7 +7466,7 @@
         "abilities": [
           {
             "ko": "스킬링크",
-            "en": "skill link",
+            "en": "skill_link",
             "hidden": false
           }
         ]
@@ -7513,12 +7513,12 @@
         "abilities": [
           {
             "ko": "정신력",
-            "en": "inner focus",
+            "en": "inner_focus",
             "hidden": false
           },
           {
             "ko": "날카로운눈",
-            "en": "keen eye",
+            "en": "keen_eye",
             "hidden": false
           },
           {
@@ -7740,12 +7740,12 @@
         "abilities": [
           {
             "ko": "깨어진갑옷",
-            "en": "weak armor",
+            "en": "weak_armor",
             "hidden": false
           },
           {
             "ko": "저주받은바디",
-            "en": "cursed body",
+            "en": "cursed_body",
             "hidden": true
           }
         ]
@@ -7982,7 +7982,7 @@
         "abilities": [
           {
             "ko": "선파워",
-            "en": "solar power",
+            "en": "solar_power",
             "hidden": false
           }
         ]
@@ -8485,7 +8485,7 @@
         "abilities": [
           {
             "ko": "모래날림",
-            "en": "sand stream",
+            "en": "sand_stream",
             "hidden": false
           }
         ]
@@ -8642,7 +8642,7 @@
         "abilities": [
           {
             "ko": "피뢰침",
-            "en": "lightning rod",
+            "en": "lightning_rod",
             "hidden": false
           }
         ]
@@ -8731,7 +8731,7 @@
         "abilities": [
           {
             "ko": "가속",
-            "en": "speed boost",
+            "en": "speed_boost",
             "hidden": false
           }
         ]
@@ -8820,7 +8820,7 @@
         "abilities": [
           {
             "ko": "쓱쓱",
-            "en": "swift swim",
+            "en": "swift_swim",
             "hidden": false
           }
         ]
@@ -8932,7 +8932,7 @@
           },
           {
             "ko": "속보",
-            "en": "quick feet",
+            "en": "quick_feet",
             "hidden": true
           }
         ]
@@ -8988,7 +8988,7 @@
           },
           {
             "ko": "속보",
-            "en": "quick feet",
+            "en": "quick_feet",
             "hidden": true
           }
         ]
@@ -9990,7 +9990,7 @@
         "abilities": [
           {
             "ko": "매직미러",
-            "en": "magic bounce",
+            "en": "magic_bounce",
             "hidden": false
           }
         ]
@@ -10037,7 +10037,7 @@
         "abilities": [
           {
             "ko": "천하장사",
-            "en": "huge power",
+            "en": "huge_power",
             "hidden": false
           }
         ]
@@ -10207,7 +10207,7 @@
         "abilities": [
           {
             "ko": "순수한힘",
-            "en": "pure power",
+            "en": "pure_power",
             "hidden": false
           }
         ]
@@ -10533,7 +10533,7 @@
         "abilities": [
           {
             "ko": "옹골찬턱",
-            "en": "strong jaw",
+            "en": "strong_jaw",
             "hidden": false
           }
         ]
@@ -10665,7 +10665,7 @@
         "abilities": [
           {
             "ko": "우격다짐",
-            "en": "sheer force",
+            "en": "sheer_force",
             "hidden": false
           }
         ]
@@ -11664,7 +11664,7 @@
         "abilities": [
           {
             "ko": "매직미러",
-            "en": "magic bounce",
+            "en": "magic_bounce",
             "hidden": false
           }
         ]
@@ -12159,7 +12159,7 @@
         "abilities": [
           {
             "ko": "단단한발톱",
-            "en": "tough claws",
+            "en": "tough_claws",
             "hidden": false
           }
         ]
@@ -12343,7 +12343,7 @@
         "abilities": [
           {
             "ko": "시작의 바다",
-            "en": "primordial-sea",
+            "en": "primordial_sea",
             "hidden": false
           }
         ]
@@ -12380,7 +12380,7 @@
         "abilities": [
           {
             "ko": "끝의 대지",
-            "en": "desolate-land",
+            "en": "desolate_land",
             "hidden": false
           }
         ]
@@ -12417,7 +12417,7 @@
         "abilities": [
           {
             "ko": "델타스트림",
-            "en": "delta stream",
+            "en": "delta_stream",
             "hidden": false
           }
         ]
@@ -13200,7 +13200,7 @@
         "abilities": [
           {
             "ko": "탈피",
-            "en": "shed skin",
+            "en": "shed_skin",
             "hidden": false
           },
           {
@@ -13221,7 +13221,7 @@
         "abilities": [
           {
             "ko": "탈피",
-            "en": "shed skin",
+            "en": "shed_skin",
             "hidden": false
           },
           {
@@ -13243,7 +13243,7 @@
         "abilities": [
           {
             "ko": "탈피",
-            "en": "shed skin",
+            "en": "shed_skin",
             "hidden": false
           },
           {
@@ -14205,7 +14205,7 @@
         "abilities": [
           {
             "ko": "모래의힘",
-            "en": "sand force",
+            "en": "sand_force",
             "hidden": false
           }
         ]
@@ -14664,7 +14664,7 @@
         "abilities": [
           {
             "ko": "눈퍼뜨리기",
-            "en": "snow warning",
+            "en": "snow_warning",
             "hidden": false
           }
         ]
@@ -15085,7 +15085,7 @@
         "abilities": [
           {
             "ko": "정신력",
-            "en": "inner focus",
+            "en": "inner_focus",
             "hidden": false
           }
         ]
@@ -15179,7 +15179,7 @@
         "abilities": [
           {
             "ko": "눈퍼뜨리기",
-            "en": "snow warning",
+            "en": "snow_warning",
             "hidden": false
           }
         ]
@@ -15687,7 +15687,7 @@
         "abilities": [
           {
             "ko": "자연회복",
-            "en": "natural cure",
+            "en": "natural_cure",
             "hidden": false
           }
         ]
@@ -15704,7 +15704,7 @@
         "abilities": [
           {
             "ko": "하늘의은총",
-            "en": "serene grace",
+            "en": "serene_grace",
             "hidden": false
           }
         ]
@@ -15901,7 +15901,7 @@
         "abilities": [
           {
             "ko": "틀깨기",
-            "en": "mold breaker",
+            "en": "mold_breaker",
             "hidden": false
           }
         ]
@@ -16743,7 +16743,7 @@
         "abilities": [
           {
             "ko": "관통드릴",
-            "en": "drill pierce",
+            "en": "drill_pierce",
             "hidden": false
           }
         ]
@@ -17345,7 +17345,7 @@
           },
           {
             "ko": "리프가드",
-            "en": "leaf guard",
+            "en": "leaf_guard",
             "hidden": true
           }
         ]
@@ -17401,7 +17401,7 @@
           },
           {
             "ko": "틀깨기",
-            "en": "mold breaker",
+            "en": "mold_breaker",
             "hidden": true
           }
         ]
@@ -17417,7 +17417,7 @@
         "abilities": [
           {
             "ko": "돌머리",
-            "en": "rock head",
+            "en": "rock_head",
             "hidden": false
           },
           {
@@ -17427,7 +17427,7 @@
           },
           {
             "ko": "틀깨기",
-            "en": "mold breaker",
+            "en": "mold_breaker",
             "hidden": true
           }
         ]
@@ -17453,7 +17453,7 @@
           },
           {
             "ko": "틀깨기",
-            "en": "mold breaker",
+            "en": "mold_breaker",
             "hidden": true
           }
         ]
@@ -17585,7 +17585,7 @@
           },
           {
             "ko": "정신력",
-            "en": "inner focus",
+            "en": "inner_focus",
             "hidden": true
           }
         ]
@@ -17626,7 +17626,7 @@
         "abilities": [
           {
             "ko": "달마모드",
-            "en": "zen mode",
+            "en": "zen_mode",
             "hidden": false
           }
         ]
@@ -17642,12 +17642,12 @@
         "abilities": [
           {
             "ko": "무아지경",
-            "en": "gorilla tactics",
+            "en": "gorilla_tactics",
             "hidden": false
           },
           {
             "ko": "달마모드",
-            "en": "zen mode",
+            "en": "zen_mode",
             "hidden": true
           }
         ]
@@ -17665,7 +17665,7 @@
         "abilities": [
           {
             "ko": "달마모드",
-            "en": "zen mode",
+            "en": "zen_mode",
             "hidden": false
           }
         ]
@@ -17888,7 +17888,7 @@
         "abilities": [
           {
             "ko": "떠도는영혼",
-            "en": "wandering spirit",
+            "en": "wandering_spirit",
             "hidden": false
           }
         ]
@@ -18080,7 +18080,7 @@
           },
           {
             "ko": "깨어진갑옷",
-            "en": "weak armor",
+            "en": "weak_armor",
             "hidden": false
           },
           {
@@ -18576,12 +18576,12 @@
           },
           {
             "ko": "초식",
-            "en": "sap sipper",
+            "en": "sap_sipper",
             "hidden": false
           },
           {
             "ko": "하늘의은총",
-            "en": "serene grace",
+            "en": "serene_grace",
             "hidden": true
           }
         ]
@@ -18603,12 +18603,12 @@
           },
           {
             "ko": "초식",
-            "en": "sap sipper",
+            "en": "sap_sipper",
             "hidden": false
           },
           {
             "ko": "하늘의은총",
-            "en": "serene grace",
+            "en": "serene_grace",
             "hidden": true
           }
         ]
@@ -18630,12 +18630,12 @@
           },
           {
             "ko": "초식",
-            "en": "sap sipper",
+            "en": "sap_sipper",
             "hidden": false
           },
           {
             "ko": "하늘의은총",
-            "en": "serene grace",
+            "en": "serene_grace",
             "hidden": true
           }
         ]
@@ -18688,12 +18688,12 @@
           },
           {
             "ko": "초식",
-            "en": "sap sipper",
+            "en": "sap_sipper",
             "hidden": false
           },
           {
             "ko": "하늘의은총",
-            "en": "serene grace",
+            "en": "serene_grace",
             "hidden": true
           }
         ]
@@ -18715,12 +18715,12 @@
           },
           {
             "ko": "초식",
-            "en": "sap sipper",
+            "en": "sap_sipper",
             "hidden": false
           },
           {
             "ko": "하늘의은총",
-            "en": "serene grace",
+            "en": "serene_grace",
             "hidden": true
           }
         ]
@@ -18742,12 +18742,12 @@
           },
           {
             "ko": "초식",
-            "en": "sap sipper",
+            "en": "sap_sipper",
             "hidden": false
           },
           {
             "ko": "하늘의은총",
-            "en": "serene grace",
+            "en": "serene_grace",
             "hidden": true
           }
         ]
@@ -18924,12 +18924,12 @@
         "abilities": [
           {
             "ko": "저수",
-            "en": "water absorb",
+            "en": "water_absorb",
             "hidden": false
           },
           {
             "ko": "저주받은바디",
-            "en": "cursed body",
+            "en": "cursed_body",
             "hidden": false
           },
           {
@@ -18951,12 +18951,12 @@
         "abilities": [
           {
             "ko": "저수",
-            "en": "water absorb",
+            "en": "water_absorb",
             "hidden": false
           },
           {
             "ko": "저주받은바디",
-            "en": "cursed body",
+            "en": "cursed_body",
             "hidden": false
           },
           {
@@ -19009,12 +19009,12 @@
         "abilities": [
           {
             "ko": "저수",
-            "en": "water absorb",
+            "en": "water_absorb",
             "hidden": false
           },
           {
             "ko": "저주받은바디",
-            "en": "cursed body",
+            "en": "cursed_body",
             "hidden": false
           },
           {
@@ -19036,12 +19036,12 @@
         "abilities": [
           {
             "ko": "저수",
-            "en": "water absorb",
+            "en": "water_absorb",
             "hidden": false
           },
           {
             "ko": "저주받은바디",
-            "en": "cursed body",
+            "en": "cursed_body",
             "hidden": false
           },
           {
@@ -19908,7 +19908,7 @@
         "abilities": [
           {
             "ko": "보이지않는주먹",
-            "en": "unseen fist",
+            "en": "unseen_fist",
             "hidden": false
           }
         ]
@@ -20070,17 +20070,17 @@
         "abilities": [
           {
             "ko": "날카로운눈",
-            "en": "keen eye",
+            "en": "keen_eye",
             "hidden": false
           },
           {
             "ko": "우격다짐",
-            "en": "sheer force",
+            "en": "sheer_force",
             "hidden": false
           },
           {
             "ko": "색안경",
-            "en": "tinted lens",
+            "en": "tinted_lens",
             "hidden": true
           }
         ]
@@ -20489,7 +20489,7 @@
         "abilities": [
           {
             "ko": "축전",
-            "en": "volt absorb",
+            "en": "volt_absorb",
             "hidden": false
           }
         ]
@@ -20573,12 +20573,12 @@
         "abilities": [
           {
             "ko": "모래의힘",
-            "en": "sand force",
+            "en": "sand_force",
             "hidden": false
           },
           {
             "ko": "우격다짐",
-            "en": "sheer force",
+            "en": "sheer_force",
             "hidden": true
           }
         ]
@@ -20745,7 +20745,7 @@
         "abilities": [
           {
             "ko": "하늘의은총",
-            "en": "serene grace",
+            "en": "serene_grace",
             "hidden": false
           }
         ]
@@ -20762,7 +20762,7 @@
         "abilities": [
           {
             "ko": "하늘의은총",
-            "en": "serene grace",
+            "en": "serene_grace",
             "hidden": false
           }
         ]
@@ -21418,7 +21418,7 @@
         "abilities": [
           {
             "ko": "플라워베일",
-            "en": "flower veil",
+            "en": "flower_veil",
             "hidden": false
           },
           {
@@ -21439,7 +21439,7 @@
         "abilities": [
           {
             "ko": "페어리오라",
-            "en": "fairy aura",
+            "en": "fairy_aura",
             "hidden": false
           }
         ]
@@ -21657,7 +21657,7 @@
         "abilities": [
           {
             "ko": "날카로운눈",
-            "en": "keen eye",
+            "en": "keen_eye",
             "hidden": false
           },
           {
@@ -21683,7 +21683,7 @@
         "abilities": [
           {
             "ko": "날카로운눈",
-            "en": "keen eye",
+            "en": "keen_eye",
             "hidden": false
           },
           {
@@ -21785,7 +21785,7 @@
         "abilities": [
           {
             "ko": "배틀스위치",
-            "en": "stance change",
+            "en": "stance_change",
             "hidden": false
           }
         ]
@@ -21802,7 +21802,7 @@
         "abilities": [
           {
             "ko": "배틀스위치",
-            "en": "stance change",
+            "en": "stance_change",
             "hidden": false
           }
         ]
@@ -22370,7 +22370,7 @@
         "abilities": [
           {
             "ko": "노가드",
-            "en": "no guard",
+            "en": "no_guard",
             "hidden": false
           }
         ]
@@ -22497,12 +22497,12 @@
         "abilities": [
           {
             "ko": "초식",
-            "en": "sap sipper",
+            "en": "sap_sipper",
             "hidden": false
           },
           {
             "ko": "조가비갑옷",
-            "en": "shell armor",
+            "en": "shell_armor",
             "hidden": false
           },
           {
@@ -22553,12 +22553,12 @@
         "abilities": [
           {
             "ko": "초식",
-            "en": "sap sipper",
+            "en": "sap_sipper",
             "hidden": false
           },
           {
             "ko": "조가비갑옷",
-            "en": "shell armor",
+            "en": "shell_armor",
             "hidden": false
           },
           {
@@ -22777,12 +22777,12 @@
         "abilities": [
           {
             "ko": "옹골찬턱",
-            "en": "strong jaw",
+            "en": "strong_jaw",
             "hidden": false
           },
           {
             "ko": "아이스바디",
-            "en": "ice body",
+            "en": "ice_body",
             "hidden": false
           },
           {
@@ -22922,7 +22922,7 @@
         "abilities": [
           {
             "ko": "오라브레이크",
-            "en": "aura break",
+            "en": "aura_break",
             "hidden": false
           }
         ]
@@ -22939,7 +22939,7 @@
         "abilities": [
           {
             "ko": "오라브레이크",
-            "en": "aura break",
+            "en": "aura_break",
             "hidden": false
           }
         ]
@@ -22956,7 +22956,7 @@
         "abilities": [
           {
             "ko": "스웜체인지",
-            "en": "power construct",
+            "en": "power_construct",
             "hidden": false
           }
         ]
@@ -23007,7 +23007,7 @@
         "abilities": [
           {
             "ko": "매직미러",
-            "en": "magic bounce",
+            "en": "magic_bounce",
             "hidden": false
           }
         ]
@@ -23576,7 +23576,7 @@
         "abilities": [
           {
             "ko": "철주먹",
-            "en": "iron fist",
+            "en": "iron_fist",
             "hidden": false
           }
         ]
@@ -23797,12 +23797,12 @@
         "abilities": [
           {
             "ko": "날카로운눈",
-            "en": "keen eye",
+            "en": "keen_eye",
             "hidden": false
           },
           {
             "ko": "모래헤치기",
-            "en": "sand rush",
+            "en": "sand_rush",
             "hidden": false
           },
           {
@@ -23823,17 +23823,17 @@
         "abilities": [
           {
             "ko": "날카로운눈",
-            "en": "keen eye",
+            "en": "keen_eye",
             "hidden": false
           },
           {
             "ko": "의기양양",
-            "en": "vital spirit",
+            "en": "vital_spirit",
             "hidden": false
           },
           {
             "ko": "노가드",
-            "en": "no guard",
+            "en": "no_guard",
             "hidden": true
           }
         ]
@@ -23849,7 +23849,7 @@
         "abilities": [
           {
             "ko": "단단한발톱",
-            "en": "tough claws",
+            "en": "tough_claws",
             "hidden": false
           }
         ]
@@ -25238,7 +25238,7 @@
         "abilities": [
           {
             "ko": "프리즘아머",
-            "en": "prism armor",
+            "en": "prism_armor",
             "hidden": false
           }
         ]
@@ -25255,7 +25255,7 @@
         "abilities": [
           {
             "ko": "프리즘아머",
-            "en": "prism armor",
+            "en": "prism_armor",
             "hidden": false
           }
         ]
@@ -25322,7 +25322,7 @@
         "abilities": [
           {
             "ko": "소울하트",
-            "en": "soul-heart",
+            "en": "soul_heart",
             "hidden": false
           }
         ]
@@ -25508,7 +25508,7 @@
         "abilities": [
           {
             "ko": "철주먹",
-            "en": "iron fist",
+            "en": "iron_fist",
             "hidden": false
           }
         ]
@@ -25600,7 +25600,7 @@
           },
           {
             "ko": "그래스메이커",
-            "en": "grassy surge",
+            "en": "grassy_surge",
             "hidden": true
           }
         ]
@@ -25941,7 +25941,7 @@
           },
           {
             "ko": "미러아머",
-            "en": "mirror armor",
+            "en": "mirror_armor",
             "hidden": true
           }
         ]
@@ -26298,17 +26298,17 @@
         "abilities": [
           {
             "ko": "옹골찬턱",
-            "en": "strong jaw",
+            "en": "strong_jaw",
             "hidden": false
           },
           {
             "ko": "조가비갑옷",
-            "en": "shell armor",
+            "en": "shell_armor",
             "hidden": false
           },
           {
             "ko": "쓱쓱",
-            "en": "swift swim",
+            "en": "swift_swim",
             "hidden": true
           }
         ]
@@ -26458,17 +26458,17 @@
         "abilities": [
           {
             "ko": "증기기관",
-            "en": "steam engine",
+            "en": "steam_engine",
             "hidden": false
           },
           {
             "ko": "불꽃몸",
-            "en": "flame body",
+            "en": "flame_body",
             "hidden": false
           },
           {
             "ko": "타오르는불꽃",
-            "en": "flash fire",
+            "en": "flash_fire",
             "hidden": true
           }
         ]
@@ -26611,7 +26611,7 @@
           },
           {
             "ko": "두꺼운지방",
-            "en": "thick fat",
+            "en": "thick_fat",
             "hidden": true
           }
         ]
@@ -26684,17 +26684,17 @@
         "abilities": [
           {
             "ko": "모래뿜기",
-            "en": "sand spit",
+            "en": "sand_spit",
             "hidden": false
           },
           {
             "ko": "탈피",
-            "en": "shed skin",
+            "en": "shed_skin",
             "hidden": false
           },
           {
             "ko": "모래숨기",
-            "en": "sand veil",
+            "en": "sand_veil",
             "hidden": true
           }
         ]
@@ -26836,7 +26836,7 @@
         "abilities": [
           {
             "ko": "펑크록",
-            "en": "punk rock",
+            "en": "punk_rock",
             "hidden": false
           },
           {
@@ -26863,7 +26863,7 @@
         "abilities": [
           {
             "ko": "펑크록",
-            "en": "punk rock",
+            "en": "punk_rock",
             "hidden": false
           },
           {
@@ -26890,7 +26890,7 @@
         "abilities": [
           {
             "ko": "펑크록",
-            "en": "punk rock",
+            "en": "punk_rock",
             "hidden": false
           },
           {
@@ -26976,17 +26976,17 @@
         "abilities": [
           {
             "ko": "타오르는불꽃",
-            "en": "flash fire",
+            "en": "flash_fire",
             "hidden": false
           },
           {
             "ko": "하얀연기",
-            "en": "white smoke",
+            "en": "white_smoke",
             "hidden": false
           },
           {
             "ko": "불꽃몸",
-            "en": "flame body",
+            "en": "flame_body",
             "hidden": true
           }
         ]
@@ -27191,7 +27191,7 @@
           },
           {
             "ko": "매직미러",
-            "en": "magic bounce",
+            "en": "magic_bounce",
             "hidden": true
           }
         ]
@@ -27526,12 +27526,12 @@
         "abilities": [
           {
             "ko": "스위트베일",
-            "en": "sweet veil",
+            "en": "sweet_veil",
             "hidden": false
           },
           {
             "ko": "아로마베일",
-            "en": "aroma veil",
+            "en": "aroma_veil",
             "hidden": true
           }
         ]
@@ -27722,7 +27722,7 @@
         "abilities": [
           {
             "ko": "정신력",
-            "en": "inner focus",
+            "en": "inner_focus",
             "hidden": false
           },
           {
@@ -27732,7 +27732,7 @@
           },
           {
             "ko": "사이코메이커",
-            "en": "psychic surge",
+            "en": "psychic_surge",
             "hidden": true
           }
         ]
@@ -27749,7 +27749,7 @@
         "abilities": [
           {
             "ko": "마이페이스",
-            "en": "own tempo",
+            "en": "own_tempo",
             "hidden": false
           },
           {
@@ -27759,7 +27759,7 @@
           },
           {
             "ko": "사이코메이커",
-            "en": "psychic surge",
+            "en": "psychic_surge",
             "hidden": true
           }
         ]
@@ -27841,12 +27841,12 @@
         "abilities": [
           {
             "ko": "우격다짐",
-            "en": "sheer force",
+            "en": "sheer_force",
             "hidden": false
           },
           {
             "ko": "헤비메탈",
-            "en": "heavy metal",
+            "en": "heavy_metal",
             "hidden": true
           }
         ]
@@ -28009,12 +28009,12 @@
         "abilities": [
           {
             "ko": "라이트메탈",
-            "en": "light metal",
+            "en": "light_metal",
             "hidden": false
           },
           {
             "ko": "헤비메탈",
-            "en": "heavy metal",
+            "en": "heavy_metal",
             "hidden": false
           },
           {
@@ -28143,7 +28143,7 @@
         "abilities": [
           {
             "ko": "불요의검",
-            "en": "intrepid sword",
+            "en": "intrepid_sword",
             "hidden": false
           }
         ]
@@ -28181,7 +28181,7 @@
         "abilities": [
           {
             "ko": "불굴의방패",
-            "en": "dauntless shield",
+            "en": "dauntless_shield",
             "hidden": false
           }
         ]
@@ -28277,7 +28277,7 @@
         "abilities": [
           {
             "ko": "보이지않는주먹",
-            "en": "unseen fist",
+            "en": "unseen_fist",
             "hidden": false
           }
         ]
@@ -28294,7 +28294,7 @@
         "abilities": [
           {
             "ko": "보이지않는주먹",
-            "en": "unseen fist",
+            "en": "unseen_fist",
             "hidden": false
           }
         ]
@@ -28311,7 +28311,7 @@
         "abilities": [
           {
             "ko": "보이지않는주먹",
-            "en": "unseen fist",
+            "en": "unseen_fist",
             "hidden": false
           }
         ]
@@ -28328,7 +28328,7 @@
         "abilities": [
           {
             "ko": "보이지않는주먹",
-            "en": "unseen fist",
+            "en": "unseen_fist",
             "hidden": false
           }
         ]
@@ -28366,7 +28366,7 @@
         "abilities": [
           {
             "ko": "리프가드",
-            "en": "leaf guard",
+            "en": "leaf_guard",
             "hidden": false
           }
         ]
@@ -28480,7 +28480,7 @@
         "abilities": [
           {
             "ko": "혼연일체",
-            "en": "as one",
+            "en": "as_one",
             "hidden": false,
             "desc": "버드렉스의 긴장감과 블리자포스의 백의울음 두 가지 특성을 겸비한다."
           }
@@ -28498,7 +28498,7 @@
         "abilities": [
           {
             "ko": "혼연일체",
-            "en": "as one",
+            "en": "as_one",
             "hidden": false
           }
         ]
@@ -28609,7 +28609,7 @@
         "abilities": [
           {
             "ko": "심안",
-            "en": "mind's eye",
+            "en": "minds_eye",
             "hidden": false
           }
         ]
@@ -28660,7 +28660,7 @@
         "abilities": [
           {
             "ko": "쓱쓱",
-            "en": "swift swim",
+            "en": "swift_swim",
             "hidden": false
           },
           {
@@ -28670,7 +28670,7 @@
           },
           {
             "ko": "틀깨기",
-            "en": "mold breaker",
+            "en": "mold_breaker",
             "hidden": true
           }
         ]
@@ -28777,7 +28777,7 @@
         "abilities": [
           {
             "ko": "헤롱헤롱바디",
-            "en": "cute charm",
+            "en": "cute_charm",
             "hidden": false
           },
           {
@@ -29085,7 +29085,7 @@
         "abilities": [
           {
             "ko": "가시지않는향기",
-            "en": "lingering aroma",
+            "en": "lingering_aroma",
             "hidden": false
           },
           {
@@ -29095,7 +29095,7 @@
           },
           {
             "ko": "두꺼운지방",
-            "en": "thick fat",
+            "en": "thick_fat",
             "hidden": true
           }
         ]
@@ -29111,7 +29111,7 @@
         "abilities": [
           {
             "ko": "아로마베일",
-            "en": "aroma veil",
+            "en": "aroma_veil",
             "hidden": false
           },
           {
@@ -29121,7 +29121,7 @@
           },
           {
             "ko": "두꺼운지방",
-            "en": "thick fat",
+            "en": "thick_fat",
             "hidden": true
           }
         ]
@@ -30075,7 +30075,7 @@
         "abilities": [
           {
             "ko": "하바네로분출",
-            "en": "habanero burst",
+            "en": "habanero_burst",
             "hidden": false
           }
         ]
@@ -30404,7 +30404,7 @@
         "abilities": [
           {
             "ko": "마이티체인지",
-            "en": "zero to hero",
+            "en": "zero_to_hero",
             "hidden": false
           }
         ]
@@ -30420,7 +30420,7 @@
         "abilities": [
           {
             "ko": "마이티체인지",
-            "en": "zero to hero",
+            "en": "zero_to_hero",
             "hidden": false
           }
         ]
@@ -30812,7 +30812,7 @@
           },
           {
             "ko": "마중물",
-            "en": "storm drain",
+            "en": "storm_drain",
             "hidden": true
           }
         ]
@@ -30834,7 +30834,7 @@
           },
           {
             "ko": "마중물",
-            "en": "storm drain",
+            "en": "storm_drain",
             "hidden": true
           }
         ]
@@ -30856,7 +30856,7 @@
           },
           {
             "ko": "마중물",
-            "en": "storm drain",
+            "en": "storm_drain",
             "hidden": true
           }
         ]
@@ -31001,12 +31001,12 @@
         "abilities": [
           {
             "ko": "하늘의은총",
-            "en": "serene grace",
+            "en": "serene_grace",
             "hidden": false
           },
           {
             "ko": "도주",
-            "en": "run away",
+            "en": "run_away",
             "hidden": false
           },
           {
@@ -31795,7 +31795,7 @@
         "abilities": [
           {
             "ko": "저수",
-            "en": "water absorb",
+            "en": "water_absorb",
             "hidden": false
           }
         ]
@@ -31812,7 +31812,7 @@
         "abilities": [
           {
             "ko": "틀깨기",
-            "en": "mold breaker",
+            "en": "mold_breaker",
             "hidden": false
           }
         ]
@@ -32004,7 +32004,7 @@
         "abilities": [
           {
             "ko": "테라셸",
-            "en": "tera shell",
+            "en": "tera_shell",
             "hidden": false
           }
         ]
@@ -32020,7 +32020,7 @@
         "abilities": [
           {
             "ko": "제로포밍",
-            "en": "teraform zero",
+            "en": "teraform_zero",
             "hidden": false
           }
         ]
