@@ -1,5 +1,16 @@
 # Pokenova Project
 
+## 게임/도메인 명칭 규칙
+
+포켓몬 이름, 특성·기술·아이템 등 **게임 내 고유 명칭은 반드시 DB/데이터 파일에서 가져온다.**
+
+- 코드에 한국어/영어 명칭을 직접 하드코딩하지 않는다
+- 명칭이 필요하면 → 먼저 관련 데이터 파일(`data/quiz_*.json` 등)을 확인하고 거기서 가져온다
+- 데이터에서 가져올 수 없는 구조라면, 명칭을 파라미터로 받아서 사용하는 방식으로 설계한다
+- 임의로 추측한 명칭을 코드에 넣지 않는다
+
+자세한 이유는 메모리 `feedback_no_arbitrary_names.md` 참조.
+
 ## 도메인
 - **프로덕션 URL**: `https://pokenova.pochams.com`
 - **구 URL (리다이렉트)**: `https://pokenova.vercel.app` → `pokenova.pochams.com`으로 301 리다이렉트
