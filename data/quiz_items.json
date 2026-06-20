@@ -2359,7 +2359,7 @@
     "desc_lang": "ko",
     "sprite": "sprites/items/master__sprites__items__wide-lens.png",
     "category": "held-items",
-    "in_champions": false,
+    "in_champions": true,
     "champions_category": null,
     "ja": "こうかくレンズ"
   },
@@ -2371,7 +2371,7 @@
     "desc_lang": "ko",
     "sprite": "sprites/items/master__sprites__items__muscle-band.png",
     "category": "held-items",
-    "in_champions": false,
+    "in_champions": true,
     "champions_category": null,
     "ja": "ちからのハチマキ"
   },
@@ -2383,7 +2383,7 @@
     "desc_lang": "ko",
     "sprite": "sprites/items/master__sprites__items__wise-glasses.png",
     "category": "held-items",
-    "in_champions": false,
+    "in_champions": true,
     "champions_category": null,
     "ja": "ものしりメガネ"
   },
@@ -2395,7 +2395,7 @@
     "desc_lang": "ko",
     "sprite": "sprites/items/master__sprites__items__expert-belt.png",
     "category": "held-items",
-    "in_champions": false,
+    "in_champions": true,
     "champions_category": null,
     "ja": "たつじんのおび"
   },
@@ -2407,7 +2407,7 @@
     "desc_lang": "ko",
     "sprite": "sprites/items/master__sprites__items__light-clay.png",
     "category": "held-items",
-    "in_champions": false,
+    "in_champions": true,
     "champions_category": null,
     "ja": "ひかりのねんど"
   },
@@ -2419,7 +2419,7 @@
     "desc_lang": "ko",
     "sprite": "sprites/items/master__sprites__items__life-orb.png",
     "category": "held-items",
-    "in_champions": false,
+    "in_champions": true,
     "champions_category": null,
     "ja": "いのちのたま"
   },
@@ -2495,7 +2495,7 @@
     "desc_lang": "ko",
     "sprite": "sprites/items/master__sprites__items__zoom-lens.png",
     "category": "held-items",
-    "in_champions": false,
+    "in_champions": true,
     "champions_category": null,
     "ja": "フォーカスレンズ"
   },
@@ -2507,7 +2507,7 @@
     "desc_lang": "ko",
     "sprite": "sprites/items/master__sprites__items__metronome.png",
     "category": "held-items",
-    "in_champions": false,
+    "in_champions": true,
     "champions_category": null,
     "ja": "メトロノーム"
   },
@@ -2519,7 +2519,7 @@
     "desc_lang": "ko",
     "sprite": "sprites/items/master__sprites__items__iron-ball.png",
     "category": "bad-held-items",
-    "in_champions": false,
+    "in_champions": true,
     "champions_category": null,
     "ja": "くろいてっきゅう"
   },
@@ -2567,7 +2567,7 @@
     "desc_lang": "ko",
     "sprite": "sprites/items/master__sprites__items__icy-rock.png",
     "category": "held-items",
-    "in_champions": false,
+    "in_champions": true,
     "champions_category": null,
     "ja": "つめたいいわ"
   },
@@ -2579,7 +2579,7 @@
     "desc_lang": "ko",
     "sprite": "sprites/items/master__sprites__items__smooth-rock.png",
     "category": "held-items",
-    "in_champions": false,
+    "in_champions": true,
     "champions_category": null,
     "ja": "さらさらいわ"
   },
@@ -2591,7 +2591,7 @@
     "desc_lang": "ko",
     "sprite": "sprites/items/master__sprites__items__heat-rock.png",
     "category": "held-items",
-    "in_champions": false,
+    "in_champions": true,
     "champions_category": null,
     "ja": "あついいわ"
   },
@@ -2603,7 +2603,7 @@
     "desc_lang": "ko",
     "sprite": "sprites/items/master__sprites__items__damp-rock.png",
     "category": "held-items",
-    "in_champions": false,
+    "in_champions": true,
     "champions_category": null,
     "ja": "しめったいわ"
   },
@@ -2727,7 +2727,7 @@
     "desc_lang": "ko",
     "sprite": "sprites/items/master__sprites__items__shed-shell.png",
     "category": "held-items",
-    "in_champions": false,
+    "in_champions": true,
     "champions_category": null,
     "ja": "きれいなぬけがら"
   },
@@ -2739,7 +2739,7 @@
     "desc_lang": "ko",
     "sprite": "sprites/items/master__sprites__items__big-root.png",
     "category": "held-items",
-    "in_champions": false,
+    "in_champions": true,
     "champions_category": null,
     "ja": "おおきなねっこ"
   },
@@ -5203,8 +5203,8 @@
     "mega_ko": "메가번치코",
     "mega_en": "blaziken_mega",
     "base_id": 257,
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "mega_stone",
     "ja": "バシャーモナイト"
   },
   {
@@ -5458,8 +5458,8 @@
     "mega_ko": "메가입치트",
     "mega_en": "mawile_mega",
     "base_id": 303,
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "mega_stone",
     "ja": "クチートナイト"
   },
   {
@@ -5665,8 +5665,8 @@
     "mega_ko": "메가대짱이",
     "mega_en": "swampert_mega",
     "base_id": 260,
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "mega_stone",
     "ja": "ラグラージナイト"
   },
   {
@@ -5680,8 +5680,8 @@
     "mega_ko": "메가나무킹",
     "mega_en": "sceptile_mega",
     "base_id": 254,
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "mega_stone",
     "ja": "ジュカインナイト"
   },
   {
@@ -5755,8 +5755,8 @@
     "mega_ko": "메가메타그로스",
     "mega_en": "metagross_mega",
     "base_id": 376,
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "mega_stone",
     "ja": "メタグロスナイト"
   },
   {
@@ -7772,8 +7772,8 @@
     "mega_ko": "메가펜드라",
     "mega_en": "scolipede_mega",
     "base_id": 545,
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "mega_stone",
     "ja": "きょうかポケット"
   },
   {
@@ -7787,8 +7787,8 @@
     "mega_ko": "메가곤율거니",
     "mega_en": "scrafty_mega",
     "base_id": 560,
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "mega_stone",
     "ja": "おきがえトランク"
   },
   {
@@ -7802,8 +7802,8 @@
     "mega_ko": "메가저리더프",
     "mega_en": "eelektross_mega",
     "base_id": 604,
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "mega_stone",
     "ja": "ほかくポケット"
   },
   {
@@ -7877,8 +7877,8 @@
     "mega_ko": "메가화염레오",
     "mega_en": "pyroar_mega",
     "base_id": 668,
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "mega_stone",
     "ja": "きんのナナのみ"
   },
   {
@@ -7907,8 +7907,8 @@
     "mega_ko": "메가칼라마네로",
     "mega_en": "malamar_mega",
     "base_id": 687,
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "mega_stone",
     "ja": "きんのパイルのみ"
   },
   {
@@ -7922,8 +7922,8 @@
     "mega_ko": "메가거북손데스",
     "mega_en": "barbaracle_mega",
     "base_id": 689,
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "mega_stone",
     "ja": "ひみつのカギ"
   },
   {
@@ -7937,8 +7937,8 @@
     "mega_ko": "메가드래캄",
     "mega_en": "dragalge_mega",
     "base_id": 691,
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "mega_stone",
     "ja": "ふねのチケット"
   },
   {
@@ -7997,8 +7997,8 @@
     "mega_ko": "메가대여르",
     "mega_en": "falinks_mega",
     "base_id": 870,
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "mega_stone",
     "ja": "チョークいし"
   },
   {
@@ -8057,8 +8057,8 @@
     "mega_ko": "메가라이츄 X",
     "mega_en": "raichu_mega_x",
     "base_id": 26,
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "mega_stone",
     "ja": "きんのはっぱ"
   },
   {
@@ -8072,8 +8072,8 @@
     "mega_ko": "메가라이츄 Y",
     "mega_en": "raichu_mega_y",
     "base_id": 26,
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "mega_stone",
     "ja": "ぎんのはっぱ"
   },
   {
@@ -8117,8 +8117,8 @@
     "mega_ko": "메가찌르호크",
     "mega_en": "staraptor_mega",
     "base_id": 398,
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "mega_stone",
     "ja": "このはのおてがみ"
   },
   {
