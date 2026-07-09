@@ -1,5 +1,5 @@
 {
-  "_comment": "포챔스에 노출되는 포켓몬 목록 (단일 원천). seed.ts와 regen_champions_learnsets.py가 함께 읽음. 시즌마다 여기만 수정하면 됨.",
+  "_comment": "생성물 — 직접 편집 금지. 원천은 pokedex.json의 inChampions 플래그. 재생성: python3 pochams_project/scripts/champions_from_pokedex.py (또는 npm run sync)",
   "baseIds": [
     3,
     6,
