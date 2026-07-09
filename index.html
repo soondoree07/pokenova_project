@@ -1268,7 +1268,7 @@ function hasKorean(str) { return /[\uAC00-\uD7A3]/.test(str); }
 async function loadAllData() {
   const POCHAMS_API = 'https://pochams.com';
   const [p, m, a, i, zm, statsRaw, canonicalMegaArr] = await Promise.all([
-    fetch(POCHAMS_API + '/api/data/pokemon').then(r => r.json()),
+    fetch('data/pokedex.json').then(r => r.json()),   // 포케노바 마스터 전체 도감(1025 + 폼)
     fetch(POCHAMS_API + '/api/data/moves').then(r => r.json()),
     fetch(POCHAMS_API + '/api/data/abilities').then(r => r.json()),
     fetch(POCHAMS_API + '/api/data/items').then(r => r.json()),

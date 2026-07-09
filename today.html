@@ -542,7 +542,7 @@ async function loadData() {
   try {
     const POCHAMS_API = 'https://pochams.com';
     const [raw, statsRaw] = await Promise.all([
-      fetch(POCHAMS_API + '/api/data/pokemon').then(r => r.json()),
+      fetch('data/pokedex.json').then(r => r.json()),   // 포케노바 마스터 전체 도감(1025 + 폼)
       fetch('data/pokemon_stats.json').then(r => r.json()),
     ]);
     pokemonDB = raw.filter(p => p.id && p.id <= 1025);
