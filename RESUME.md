@@ -22,6 +22,12 @@
    - `.assetsignore`(신규): .git·node_modules·*.bak·스크립트·*.py 등 제외 → 25MiB 파일 한도 빌드에러 해결.
    - `_redirects`는 생성했다가 **삭제**(Cloudflare 기본 clean-URL과 충돌해 리다이렉트 루프).
 
+## 2026-07-12 추가 — 이로치 도감 폼 shiny 275/284
+
+- 기본 1025 외에 **폼 284개**도 shiny 채움. `download_form_shiny_sprites.js`(za_ 폼명→PokeAPI 이름 변환 다운로드). 공식243·홈4·base26·necrozma리맵2 = **275/284**.
+- **남은 9개**(공식 shiny 아트워크 부재 → 정규 폴백): deerling·sawsbuck 계절 6, frillish·jellicent 암컷 2, **메가냐오닉스**(ZA 신규 메가) 1. 필요하면 나무위키/포켓몬위키에서 수동 확보.
+- `build_pokedex.js` 재생성 시 base·폼 `shinySprite` 보존하도록 수정(재실행해도 shiny 안 날아감).
+
 ## 현재 막힌 지점 / 결정 대기
 
 - 없음. 모든 변경 커밋·푸시 완료(main). Cloudflare가 GitHub main push 시 자동 재배포.
