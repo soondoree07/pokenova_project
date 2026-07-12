@@ -43,12 +43,17 @@ function main() {
   // 기존 편집 보존 (pokedex.json이 마스터)
   const prevBase = new Map();
   const prevForm = new Map();
+  // 이로치(shiny) 스프라이트 보존 — download_shiny_sprites.js / download_form_shiny_sprites.js 로 채운 값
+  const prevBaseShiny = new Map();
+  const prevFormShiny = new Map();
   const outPath = path.join(DATA, "pokedex.json");
   if (fs.existsSync(outPath)) {
     for (const p of readJson(outPath)) {
       prevBase.set(p.id, p.inChampions);
+      if (p.shinySprite) prevBaseShiny.set(p.id, p.shinySprite);
       for (const f of p.forms || []) {
         if (f.name_en) prevForm.set(f.name_en, f.inChampions);
+        if (f.name_en && f.shinySprite) prevFormShiny.set(f.name_en, f.shinySprite);
       }
     }
   }
@@ -81,6 +86,7 @@ function main() {
             abilities: f.abilities || [],
             ...(f.regionType ? { regionType: f.regionType } : {}),
             inChampions,
+            ...(prevFormShiny.has(f.name_en) ? { shinySprite: prevFormShiny.get(f.name_en) } : {}),
           };
         });
 
@@ -95,6 +101,7 @@ function main() {
         abilities: p.abilities || [],
         forms,
         inChampions: baseChamp,
+        ...(prevBaseShiny.has(p.id) ? { shinySprite: prevBaseShiny.get(p.id) } : {}),
       };
       if (HISUI_NATIVE.has(p.id)) {
         entry.regionType = "hisui";
