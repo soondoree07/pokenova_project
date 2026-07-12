@@ -8,3 +8,6 @@ data/learnsets_sv_cache.json
 # Misc
 data/verify_result.json
 .vercel
+
+# Local backups
+*.bak

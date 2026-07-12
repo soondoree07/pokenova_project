@@ -1,0 +1,8 @@
+# Cloudflare Pages 라우팅 (vercel.json rewrites 이식)
+# 상태 200 = URL 유지한 채 .html 서빙 (clean URL). 쿼리스트링(?shiny=1)은 그대로 전달됨.
+/pokedex   /pokedex.html   200
+/movedex   /movedex.html   200
+/itemdex   /itemdex.html   200
+/entry     /entry.html     200
+/admin     /admin.html     200
+/record    /record.html    200
