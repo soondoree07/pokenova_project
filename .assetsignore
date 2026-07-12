@@ -1,0 +1,25 @@
+# Cloudflare 정적 자산 업로드 제외 (gitignore 문법)
+# 핵심: .git 팩 파일이 25MiB 초과 → 빌드 실패 원인. 웹에 불필요한 것들도 함께 제외.
+.git
+node_modules
+.vercel
+.wrangler
+*.bak
+*.tmp
+
+# 개발용 스크립트·백업 (사이트가 안 쓰는 것)
+scripts
+backups
+*.py
+collect-data.js
+download_sprites.js
+download_shiny_sprites.js
+apply-translations.js
+data/learnsets_backup.json
+data/learnsets_cache.json
+
+# 문서
+PROGRESS_LOG.md
+CLAUDE.md
+README.md
+AGENTS.md
