@@ -202,14 +202,14 @@ h1{font-size:1.3rem;font-weight:700;margin-bottom:18px;color:#fff}
     </a>
     <button class="hamburger-btn" id="hamburger-btn" onclick="toggleMobileNav()" aria-label="메뉴">☰</button>
     <nav class="site-nav">
-      <a href="index.html"   class="site-nav-btn"><img src="sprites/items/master__sprites__items__poke-ball.png" style="width:24px;height:24px;vertical-align:middle;margin-right:3px"> 퀴즈</a>
+      <!-- 임시숨김(퀴즈·기록·오늘의포켓몬): <a href="index.html"   class="site-nav-btn"><img src="sprites/items/master__sprites__items__poke-ball.png" style="width:24px;height:24px;vertical-align:middle;margin-right:3px"> 퀴즈</a> -->
       <a href="pokedex.html" class="site-nav-btn"><img src="sprites/items/master__sprites__items__great-ball.png" style="width:24px;height:24px;vertical-align:middle;margin-right:3px"> 포켓몬 도감</a>
       <a href="pokedex.html?shiny=1" class="site-nav-btn"><span style="font-size:18px;vertical-align:middle;margin-right:3px">✨</span>이로치 도감</a>
       <a href="movedex.html"  class="site-nav-btn active"><img src="sprites/items/master__sprites__items__ultra-ball.png" style="width:24px;height:24px;vertical-align:middle;margin-right:3px"> 기술 도감</a>
       <a href="itemdex.html"  class="site-nav-btn"><img src="sprites/items/master__sprites__items__master-ball.png" style="width:24px;height:24px;vertical-align:middle;margin-right:3px"> 아이템 도감</a>
       <a href="entry.html"    class="site-nav-btn"><img src="sprites/items/master__sprites__items__quick-ball.png" style="width:24px;height:24px;vertical-align:middle;margin-right:3px"> 배틀팀</a>
-      <a href="record.html"   class="site-nav-btn"><img src="sprites/items/master__sprites__items__repeat-ball.png" style="width:24px;height:24px;vertical-align:middle;margin-right:3px"> 기록</a>
-      <a href="today.html"    class="site-nav-btn">오늘의 포켓몬</a>
+      <!-- 임시숨김(퀴즈·기록·오늘의포켓몬): <a href="record.html"   class="site-nav-btn"><img src="sprites/items/master__sprites__items__repeat-ball.png" style="width:24px;height:24px;vertical-align:middle;margin-right:3px"> 기록</a> -->
+      <!-- 임시숨김(퀴즈·기록·오늘의포켓몬): <a href="today.html"    class="site-nav-btn">오늘의 포켓몬</a> -->
     </nav>
   </div>
 </header>
@@ -371,7 +371,7 @@ async function fetchWithCache(url, key) {
 async function init() {
   try {
     [allMoves, allPokemon, learnsets, allZmoves] = await Promise.all([
-      fetchWithCache(POCHAMS_API + '/api/data/moves',   'pkdex_moves_v2'),
+      fetch('data/quiz_moves.json').then(r => r.json()).catch(() => []),  // 기술: 로컬 파일 사용(pochams API 의존 제거)
       fetch('data/pokedex.json').then(r => r.json()),      // 포케노바 마스터 전체 도감(1025 + 폼)
       fetch('data/learnsets.json').then(r => r.json()),    // 전체 배우는기술(1285)
       fetch('data/quiz_zmoves.json').then(r => r.json()),
