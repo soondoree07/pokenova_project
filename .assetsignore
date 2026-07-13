@@ -23,3 +23,7 @@ PROGRESS_LOG.md
 CLAUDE.md
 README.md
 AGENTS.md
+
+# 퀴즈 임시 다운 (2026-07-13) — pochams API 봇차단으로 로딩 실패 + 전체정복 판정 버그.
+# 소스는 레포에 보존, 배포만 제외한다. 고치면 이 줄을 지우고 index/네비 링크를 되살릴 것.
+quiz.html

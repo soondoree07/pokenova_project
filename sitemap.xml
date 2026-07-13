@@ -16,12 +16,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pokenova.pochams.com/entry</loc>
+    <loc>https://pokenova.pochams.com/itemdex</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pokenova.pochams.com/itemdex</loc>
+    <loc>https://pokenova.pochams.com/entry</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

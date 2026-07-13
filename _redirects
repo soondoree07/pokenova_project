@@ -1,0 +1,4 @@
+# 루트(/) = 이로치 도감. 리다이렉트가 아니라 200 rewrite라 주소가 그대로 유지되고,
+# clean-URL과 충돌하지 않는다(과거 _redirects 삭제 원인이던 리다이렉트 루프 회피).
+# pokedex.html은 location.pathname 이 루트면 이로치 모드로 켜진다.
+/    /pokedex.html    200
