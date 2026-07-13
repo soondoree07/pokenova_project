@@ -52,6 +52,30 @@
 - **평균색 비교로 이로치 여부를 판별하지 말 것.** 메가 93개 검사에서 21개가 "색차 거의 없음"으로 잡혔지만 전부 정상이었다. 얼음귀신 메가는 눈 색만 청록→주황으로 바뀌는 등 **변화 면적이 작은 이로치**가 많다. 판별은 파일 md5를 PokéAPI shiny 원본과 대조하는 쪽이 확실하다.
 - **포켓몬 이름은 반드시 `data/pokedex.json`에서 확인할 것.** 이번에 바라철록을 "메꾸리", 탱탱겔을 "프리지오"로 잘못 부른 오기가 있었다.
 
+## 2026-07-13 — 이로치 도감을 메인(/)으로, 퀴즈 배포 제외 (커밋 4ccd9e6 · 7cb4ce9)
+
+### 구조가 바뀌었다
+
+- **루트(`/`) = 이로치 도감.** `index.html` 은 **`pokedex.html` 의 자동 생성 사본**이다.
+  - ⚠️ **`pokedex.html` 을 고치면 반드시 `node scripts/build_index.js` 를 다시 돌릴 것.** 안 그러면 루트만 옛 버전이 된다.
+  - 이로치 모드 판정: `IS_ROOT`(경로가 `/`) **또는** `?shiny=1`. 구 링크 호환 유지.
+  - `/pokedex` 는 그대로 일반 도감.
+- **퀴즈는 배포 제외.** `index.html` → **`quiz.html`** 로 이름이 바뀌었고 `.assetsignore` 에 등록돼 Cloudflare 에 안 올라간다(`/quiz`·`/quiz.html` 모두 404). **소스는 레포에 그대로 있다.**
+
+### 퀴즈를 내린 이유 (고치면 되살릴 수 있다)
+
+1. **로딩 자체가 실패** — `quiz.html` 이 아직 pochams API(`/api/data/{moves,abilities,items}`)를 쓰는데, 포챔스 DDoS 때 켠 **Vercel 봇 차단**에 걸려 JSON 대신 `429` + Security Checkpoint HTML 이 온다. `r.json()` 실패 → `Promise.all` fail-fast → `loadAllData()` 에 catch 가 없어 퀴즈 5종 전부 로딩에서 멈춘다.
+   - **고치는 법**: movedex/itemdex 와 똑같이 로컬 파일로 교체. `data/quiz_moves.json`·`quiz_abilities.json`·`quiz_items.json` 이 이미 있고 필터도 그대로 통과한다. 헤드리스로 확인했을 때 에러 0, 정상 로드됐다.
+2. **전체정복 판정 버그 2건**
+   - 특성: `aAnsweredSet.add(a.en)` 인데 **혼연일체 2건의 `en` 이 둘 다 `as_one`** → 집합 최대 309 < 조건 310 → 영원히 정복 불가.
+   - 포켓몬: `bAnsweredSet.add(p.id)` 인데 **폼이 `base.id` 를 공유**(리자몽·메가X·메가Y·거다이 전부 id=6) → 최대 1025 < 조건 1309. 진행률도 폼을 맞히면 기본형까지 카운트돼 틀린다.
+   - **고치는 법**: 정복 판정 키를 고유값(배열 인덱스, 또는 `id + 폼명`)으로 바꾼다.
+   - 기술·도구·능력치 퀴즈는 이상 없음. 하드모드 Z기술도 `catastropika` 가 PP 필터에 걸려 빠지므로 충돌 없음.
+
+### ⚠️ `_redirects` 는 쓰지 말 것 (이번에 또 당했다)
+
+`/ → /pokedex.html 200` rewrite 를 넣었더니 **루트가 404** 났다. Cloudflare 정적 자산이 `/pokedex.html` 을 clean-URL(`/pokedex`)로 **307 리다이렉트**하기 때문에 rewrite 대상이 리다이렉트로 튕긴다. 위 07-12 기록의 "`_redirects` 는 clean-URL 과 충돌" 이 바로 이것. **루트에 실물 파일을 두는 방식(`build_index.js`)으로 해결했다.**
+
 ## 현재 막힌 지점 / 결정 대기
 
 - 없음. 모든 변경 커밋·푸시 완료(main). Cloudflare가 GitHub main push 시 자동 재배포(반영까지 수 분 걸릴 수 있음).
