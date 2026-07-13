@@ -1,0 +1,1536 @@
+<!--
+  ⚠️ 자동 생성 파일 — 직접 고치지 마세요.
+  이 파일은 pokedex.html 의 사본입니다. 루트(/)를 이로치 도감으로 쓰기 위한 것이고,
+  pokedex.html 의 IS_ROOT 판정이 경로가 '/' 일 때 이로치 모드를 켭니다.
+  수정은 pokedex.html 에서 하고, 아래 명령으로 다시 생성하세요.
+      node scripts/build_index.js
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-42TMREJVJT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-42TMREJVJT');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>포켓몬 도감 — Pokénova</title>
+  <meta name="description" content="포켓몬 이로치 도감. 1025마리 전 포켓몬과 리전폼·메가진화·거다이맥스까지 이로치 색을 한눈에 볼 수 있어요. 포켓몬·기술·아이템 도감도 함께 제공해요.">
+  <meta name="keywords" content="포켓몬, 이로치, 색이 다른 포켓몬, 포켓몬 도감, 이로치 도감, 기술 도감, 아이템 도감, pokenova">
+  <meta property="og:title" content="Pokénova — 포켓몬 이로치 도감">
+  <meta property="og:description" content="1025마리 전 포켓몬의 이로치 색을 한눈에">
+  <meta property="og:url" content="https://pokenova.pochams.com/">
+  <meta property="og:image" content="https://pokenova.pochams.com/og-image.png">
+  <meta property="og:type" content="website">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { overflow-x: hidden; }
+
+    body {
+      font-family: 'Noto Sans KR', 'Segoe UI', sans-serif;
+      background: #0a0a0a;
+      color: #f0f0f0;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ─── HEADER ─── */
+    .site-header {
+      background: #141414;
+      padding: 0 24px;
+      border-bottom: 1px solid #252525;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      gap: 16px;
+    }
+    .site-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .logo-ball {
+      width:28px; height:28px; background:#f0f0f0;
+      border-radius:50%; position:relative; overflow:hidden;
+      border:2.5px solid #555; flex-shrink:0;
+    }
+    .logo-ball::before { content:''; position:absolute; top:0;left:0;right:0; height:50%; background:#e53935; }
+    .logo-ball::after {
+      content:''; position:absolute; top:50%;left:50%;
+      transform:translate(-50%,-50%); width:9px;height:9px;
+      background:#f0f0f0; border-radius:50%; border:2px solid #555; z-index:1;
+    }
+    .logo-text {
+      color: #f0f0f0;
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+    }
+    .logo-text span { color: #e53935; }
+    .site-nav { display: flex; gap: 6px; flex-wrap: wrap; flex-shrink: 0; }
+    .site-nav-btn {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 7px 14px; border-radius: 9px;
+      background: #1e1e1e; color: #bbb;
+      font-size: 0.82rem; font-weight: 600;
+      text-decoration: none; white-space: nowrap;
+      border: 1.5px solid #333;
+      transition: background .15s, color .15s, border-color .15s;
+    }
+    .site-nav-btn:hover { background: #2a2a2a; color: #fff; border-color: #555; }
+    .site-nav-btn.active { background: #e53935; color: #fff; border-color: #e53935; }
+    .search-wrap {
+      flex: 1;
+      max-width: 480px;
+      position: relative;
+    }
+    .search-input {
+      width: 100%;
+      padding: 10px 44px 10px 18px;
+      border: 1.5px solid #252525;
+      border-radius: 50px;
+      font-size: 15px;
+      font-family: inherit;
+      outline: none;
+      background: #0f0f0f;
+      color: #f0f0f0;
+      transition: border-color .2s;
+    }
+    .search-input::placeholder { color: #444; }
+    .search-input:focus { border-color: #e53935; }
+    .search-icon {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 18px;
+      pointer-events: none;
+      opacity: 0.4;
+    }
+    .total-count {
+      color: #666;
+      font-size: 13px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* ─── GRID ─── */
+    .grid-section {
+      max-width: 1400px;
+      margin: 24px auto;
+      padding: 0 16px;
+    }
+    .pokemon-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 12px;
+    }
+    .pokemon-card {
+      background: #141414;
+      border-radius: 14px;
+      padding: 14px 8px 10px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+      border: 1.5px solid #252525;
+      position: relative;
+      overflow: hidden;
+    }
+    .pokemon-card::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 70px;
+      height: 70px;
+      background: rgba(255,255,255,0.02);
+      border-radius: 50%;
+    }
+    .pokemon-card:hover {
+      transform: translateY(-4px);
+      border-color: #e53935;
+    }
+    .pokemon-card:active { transform: translateY(-1px); }
+    .pokemon-card.hidden { display: none; }
+    .card-img {
+      width: 88px;
+      height: 88px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 6px;
+    }
+    .card-number {
+      font-size: 11px;
+      color: #444;
+      margin-bottom: 2px;
+      font-weight: 500;
+    }
+    .card-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: #f0f0f0;
+      margin-bottom: 7px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      line-height: 1.35;
+      word-break: keep-all;
+    }
+    .card-types {
+      display: flex;
+      gap: 3px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .type-tag {
+      font-size: 10px;
+      font-weight: 700;
+      color: white;
+      padding: 2px 9px;
+      border-radius: 20px;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+
+    /* ─── NO RESULTS ─── */
+    .no-results {
+      text-align: center;
+      padding: 80px 20px;
+      color: #444;
+      display: none;
+      grid-column: 1 / -1;
+    }
+    .no-results p { font-size: 18px; margin-bottom: 8px; }
+    .no-results small { font-size: 14px; }
+
+    /* ─── MODAL ─── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      z-index: 500;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      backdrop-filter: blur(4px);
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-box {
+      background: #141414;
+      border: 1px solid #252525;
+      border-radius: 24px;
+      width: 100%;
+      max-width: 480px;
+      max-height: 85vh;
+      overflow-y: auto;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+      animation: modalIn 0.2s ease;
+      position: relative;
+    }
+    @keyframes modalIn {
+      from { transform: scale(0.92) translateY(20px); opacity: 0; }
+      to   { transform: scale(1) translateY(0); opacity: 1; }
+    }
+    .modal-header {
+      border-radius: 24px 24px 0 0;
+      padding: 32px 28px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      position: relative;
+    }
+    .modal-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 30px;
+      height: 30px;
+      background: rgba(255,255,255,0.15);
+      border: none;
+      border-radius: 50%;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      line-height: 1;
+      transition: background 0.15s;
+    }
+    .modal-close:hover { background: rgba(255,255,255,0.3); }
+    .modal-sprite {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      flex-shrink: 0;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5));
+    }
+    .modal-title { flex: 1; }
+    .modal-number { color: rgba(255,255,255,0.6); font-size: 13px; font-weight: 500; margin-bottom: 4px; }
+    .modal-name-ko { color: white; font-size: 26px; font-weight: 900; line-height: 1.1; margin-bottom: 3px; }
+    .modal-name-en { color: rgba(255,255,255,0.5); font-size: 14px; margin-bottom: 12px; }
+    .modal-types { display: flex; gap: 6px; flex-wrap: wrap; }
+    .modal-type-tag {
+      font-size: 12px;
+      font-weight: 700;
+      color: white;
+      padding: 4px 14px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.15);
+      border: 1.5px solid rgba(255,255,255,0.3);
+    }
+
+    .modal-body { padding: 20px 28px 28px; }
+    .info-section { margin-bottom: 22px; }
+    .info-section:last-child { margin-bottom: 0; }
+    .section-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: #555;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    .stats-table { width: 100%; border-collapse: collapse; }
+    .stats-table th { font-size: 11px; font-weight: 700; color: #888; text-align: center; padding: 4px 0 6px; }
+    .stats-table td { font-size: 15px; font-weight: 700; color: #f0f0f0; text-align: center; padding: 6px 0 4px; border-top: 1px solid #222; }
+    .stat-total { margin-top: 8px; text-align: right; font-size: 11px; color: #555; }
+    .stat-total span { color: #aaa; font-weight: 700; }
+    .ability-list { display: flex; flex-direction: column; gap: 8px; }
+    .ability-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      background: #1c1c1c;
+      border: 1px solid #252525;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .ability-item:hover { border-color: #e53935; background: #222; }
+    .ability-name { font-weight: 700; font-size: 14px; color: #f0f0f0; }
+    .ability-en { font-size: 12px; color: #666; line-height: 1.4; }
+    .ability-hidden {
+      margin-left: auto;
+      font-size: 10px;
+      color: white;
+      background: #444;
+      padding: 2px 7px;
+      border-radius: 10px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .forms-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+      gap: 10px;
+    }
+    .form-card {
+      background: #1c1c1c;
+      border: 1px solid #252525;
+      border-radius: 10px;
+      padding: 10px 6px 8px;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.15s, transform 0.15s;
+    }
+    .form-card:hover { border-color: #e53935; transform: translateY(-2px); }
+    .form-card img {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 5px;
+    }
+    .form-card-name { font-size: 10px; font-weight: 700; color: #aaa; line-height: 1.3; }
+    .form-types { display: flex; gap: 3px; justify-content: center; flex-wrap: wrap; margin-top: 4px; }
+    .form-type { font-size: 9px; font-weight: 700; color: white; padding: 1px 6px; border-radius: 12px; }
+
+    /* ─── TYPE COLORS ─── */
+    .t-노말  { background: #A8A77A; }
+    .t-불꽃  { background: #EE8130; }
+    .t-물    { background: #6390F0; }
+    .t-전기  { background: #F7D02C; color: #333 !important; }
+    .t-풀    { background: #7AC74C; }
+    .t-얼음  { background: #96D9D6; color: #333 !important; }
+    .t-격투  { background: #C22E28; }
+    .t-독    { background: #A33EA1; }
+    .t-땅    { background: #E2BF65; color: #333 !important; }
+    .t-비행  { background: #A98FF3; }
+    .t-에스퍼{ background: #F95587; }
+    .t-벌레  { background: #A6B91A; }
+    .t-바위  { background: #B6A136; }
+    .t-고스트 { background: #4b0082; color: white !important; }
+    .t-드래곤{ background: #6F35FC; }
+    .t-악    { background: #705746; }
+    .t-강철  { background: #B7B7CE; color: #333 !important; }
+    .t-페어리{ background: #D685AD; }
+
+    /* ─── FILTER BAR ─── */
+    .filter-bar {
+      background: #141414;
+      border-bottom: 1px solid #252525;
+      padding: 12px 24px;
+    }
+    .filter-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .filter-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .filter-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      min-width: 36px;
+      flex-shrink: 0;
+    }
+    .filter-group {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1.5px solid #303030;
+      background: transparent;
+      color: #666;
+      cursor: pointer;
+      transition: all 0.12s;
+      white-space: nowrap;
+    }
+    .filter-btn:hover { border-color: #555; color: #ccc; }
+    .filter-btn.active-cat { background: #e53935; color: white; border-color: #e53935; }
+    .filter-btn.active-gen { background: #2563eb; color: white; border-color: #2563eb; }
+    .filter-btn.active-type { color: white; border-color: transparent; }
+
+    /* ─── SECTION HEADER ─── */
+    .section-divider {
+      max-width: 1400px;
+      margin: 32px auto 16px;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .section-divider h2 {
+      font-size: 20px;
+      font-weight: 900;
+      color: #f0f0f0;
+      white-space: nowrap;
+    }
+    .section-badge {
+      font-size: 12px;
+      font-weight: 700;
+      color: white;
+      padding: 3px 12px;
+      border-radius: 20px;
+    }
+    .section-badge.mega { background: #b8860b; }
+    .section-badge.gmax { background: #8b0000; }
+    .section-line {
+      flex: 1;
+      height: 1px;
+      background: #252525;
+      border-radius: 2px;
+    }
+    .card-badge {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      font-size: 9px;
+      font-weight: 700;
+      color: white;
+      padding: 1px 6px;
+      border-radius: 8px;
+      line-height: 1.4;
+    }
+    .card-badge.mega   { background: #b8860b; }
+    .card-badge.gmax   { background: #8b0000; }
+    .card-badge.alola  { background: #1a6b2b; }
+    .card-badge.galar  { background: #1a3a7a; }
+    .card-badge.hisui  { background: #6b3a1a; }
+    .card-badge.paldea { background: #5a1a6b; }
+    .card-badge.form-label { left: auto; right: 6px; background: #3a3a3a; }
+
+    /* 거다이 전용기 */
+    .gmax-move-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      background: linear-gradient(135deg, #1a0808 0%, #2a0a0a 100%);
+      border-radius: 10px;
+      border: 1px solid #5a1a1a;
+    }
+    .gmax-move-icon {
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+    .gmax-move-name {
+      font-weight: 700;
+      font-size: 15px;
+      color: #ff6b6b;
+    }
+    .gmax-move-label {
+      font-size: 11px;
+      color: #666;
+      margin-top: 1px;
+    }
+    .gmax-move-desc {
+      font-size: 12px;
+      color: #aaa;
+      margin-top: 5px;
+      line-height: 1.5;
+    }
+
+    /* ─── SCROLL ─── */
+    .modal-box::-webkit-scrollbar { width: 5px; }
+    .modal-box::-webkit-scrollbar-track { background: transparent; }
+    .modal-box::-webkit-scrollbar-thumb { background: #303030; border-radius: 10px; }
+
+    /* ══ 퀴즈 버튼 ══ */
+    .btn-quiz { display: none; }
+
+    @media (max-width: 768px) {
+      /* 헤더: 검색창을 두 번째 줄로 */
+      .site-header { padding: 0 14px; }
+      .header-inner {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 0;
+        gap: 8px;
+      }
+      .search-wrap {
+        order: 3;
+        max-width: 100%;
+        flex: 1 1 100%;
+      }
+      /* iOS zoom 방지: 검색 font-size 반드시 1rem(16px) 이상 */
+      .search-input { font-size: 1rem; }
+      .btn-quiz { font-size: 0.8rem; padding: 6px 12px; }
+      .logo-text { font-size: 17px; }
+      .site-nav-btn { padding: 5px 10px; font-size: 0.78rem; }
+
+      /* 필터바 */
+      .filter-bar { padding: 10px 12px; }
+      .filter-row { flex-direction: column; align-items: flex-start; gap: 6px; }
+      .filter-label { margin-bottom: 0; }
+      .filter-group { flex-wrap: wrap; overflow-x: visible; gap: 6px; }
+      .filter-group::-webkit-scrollbar { height: 0; }
+      /* 필터 버튼 터치 영역 확보 */
+      .filter-btn { padding: 7px 12px; min-height: 36px; font-size: 12px; }
+
+      /* 그리드 */
+      .pokemon-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 8px; }
+      .card-img { width: 72px; height: 72px; }
+
+      /* 섹션 헤더 */
+      .section-divider { margin: 20px auto 12px; }
+      .section-divider h2 { font-size: 16px; }
+
+      /* 모달 */
+      .modal-overlay { padding: 12px; }
+    }
+
+    @media (max-width: 480px) {
+      .site-header { padding: 0 12px; }
+      .logo-text { font-size: 15px; }
+      .site-nav-btn { padding: 5px 8px; font-size: 0.74rem; }
+      .pokemon-grid { grid-template-columns: repeat(auto-fill, minmax(88px, 1fr)); gap: 6px; }
+      .pokemon-card { padding: 10px 6px 8px; }
+      .card-img { width: 64px; height: 64px; }
+      .card-name { font-size: 12px; }
+
+      /* 모달 */
+      .modal-box { border-radius: 18px; }
+      .modal-header { padding: 24px 18px 16px; gap: 14px; }
+      .modal-sprite { width: 90px; height: 90px; }
+      .modal-name-ko { font-size: 22px; }
+      .modal-body { padding: 16px 18px 22px; }
+      .forms-grid { grid-template-columns: repeat(auto-fill, minmax(76px, 1fr)); gap: 8px; }
+    }
+
+    @media (max-width: 380px) {
+      .site-nav-btn { padding: 4px 6px; font-size: 0.7rem; }
+      .filter-btn { padding: 6px 8px; font-size: 11px; }
+    }
+    .site-footer {
+      width: 100%; max-width: 700px; margin: 60px auto 0;
+      padding: 24px 16px 8px; border-top: 1px solid #252525;
+      text-align: center; color: #555; font-size: 0.78rem; line-height: 1.9;
+    }
+    .site-footer a { color: #777; text-decoration: none; transition: color .2s; }
+    .site-footer a:hover { color: #e53935; }
+    .site-footer .footer-name { color: #888; font-weight: 600; }
+
+    /* ── 오류 신고 ── */
+    .btn-report { width:100%; background:transparent; color:#555; border:1.5px solid #252525; padding:9px; font-size:0.78rem; border-radius:10px; cursor:pointer; transition:border-color .15s,color .15s; }
+    .btn-report:hover { border-color:#ff9800; color:#ff9800; }
+    .report-type-btn { padding:8px 14px; border-radius:8px; border:1.5px solid #252525; background:transparent; color:#888; font-size:0.82rem; cursor:pointer; transition:all .15s; }
+    .report-type-btn:hover { border-color:#ff9800; color:#ff9800; }
+    .report-type-btn.selected { border-color:#ff9800; background:rgba(255,152,0,.1); color:#ff9800; }
+
+    /* ── 햄버거 메뉴 ── */
+    .hamburger-btn {
+      display: none; flex-shrink: 0;
+      background: none; border: 1.5px solid #333; border-radius: 8px;
+      cursor: pointer; padding: 5px 10px;
+      color: #bbb; font-size: 20px; line-height: 1;
+      transition: border-color .15s, color .15s;
+    }
+    .hamburger-btn:hover { border-color: #555; color: #fff; }
+    @media (max-width: 600px) {
+      .hamburger-btn { display: flex; align-items: center; justify-content: center; }
+      .site-nav {
+        display: none;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: #141414; border-bottom: 1px solid #252525;
+        flex-direction: column; padding: 10px 16px 16px; gap: 6px;
+        z-index: 99; box-shadow: 0 8px 24px rgba(0,0,0,.5);
+      }
+      .site-nav.open { display: flex; }
+      .site-nav-btn { width: 100%; padding: 11px 16px; font-size: 0.9rem; border-radius: 10px; justify-content: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── HEADER ─── -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="site-logo" href="/">
+      <div class="logo-ball"></div>
+      <span class="logo-text">Poké<span>nova</span></span>
+    </a>
+    <div class="search-wrap">
+      <input class="search-input" id="search-input" type="text"
+             placeholder="포켓몬 이름으로 검색..." autocomplete="off">
+      <span class="search-icon">🔍</span>
+    </div>
+    <button class="hamburger-btn" id="hamburger-btn" onclick="toggleMobileNav()" aria-label="메뉴">☰</button>
+    <nav class="site-nav">
+      <!-- 임시숨김(퀴즈=배포제외·기록·오늘의포켓몬): <a href="quiz.html"   class="site-nav-btn"><img src="sprites/items/master__sprites__items__poke-ball.png" style="width:24px;height:24px;vertical-align:middle;margin-right:3px"> 퀴즈</a> -->
+      <a href="pokedex.html" class="site-nav-btn active" data-nav="pokedex"><img src="sprites/items/master__sprites__items__great-ball.png" style="width:24px;height:24px;vertical-align:middle;margin-right:3px"> 포켓몬 도감</a>
+      <a href="/" class="site-nav-btn" data-nav="shiny"><span style="font-size:18px;vertical-align:middle;margin-right:3px">✨</span>이로치 도감</a>
+      <a href="movedex.html"  class="site-nav-btn"><img src="sprites/items/master__sprites__items__ultra-ball.png" style="width:24px;height:24px;vertical-align:middle;margin-right:3px"> 기술 도감</a>
+      <a href="itemdex.html"  class="site-nav-btn"><img src="sprites/items/master__sprites__items__master-ball.png" style="width:24px;height:24px;vertical-align:middle;margin-right:3px"> 아이템 도감</a>
+      <a href="entry.html"    class="site-nav-btn"><img src="sprites/items/master__sprites__items__quick-ball.png" style="width:24px;height:24px;vertical-align:middle;margin-right:3px"> 배틀팀</a>
+      <!-- 임시숨김(퀴즈·기록·오늘의포켓몬): <a href="record.html"   class="site-nav-btn"><img src="sprites/items/master__sprites__items__repeat-ball.png" style="width:24px;height:24px;vertical-align:middle;margin-right:3px"> 기록</a> -->
+      <!-- 임시숨김(퀴즈·기록·오늘의포켓몬): <a href="today.html"    class="site-nav-btn">오늘의 포켓몬</a> -->
+    </nav>
+  </div>
+</header>
+
+<!-- ─── FILTER BAR ─── -->
+<div class="filter-bar">
+  <div class="filter-inner">
+    <div class="filter-row">
+      <span class="filter-label">분류</span>
+      <div class="filter-group" id="cat-group">
+        <button class="filter-btn active-cat" data-cat="all">전체</button>
+        <button class="filter-btn" data-cat="normal">일반</button>
+        <button class="filter-btn" data-cat="region">리전폼</button>
+        <button class="filter-btn" data-cat="mega">메가진화</button>
+        <button class="filter-btn" data-cat="gmax">거다이맥스</button>
+        <button class="filter-btn" id="champions-btn" data-cat="champions" style="border-color:#f5c518;color:#f5c518">⚔️ 포챔스</button>
+      </div>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">세대</span>
+      <div class="filter-group" id="gen-group">
+        <button class="filter-btn" data-gen="1">1세대</button>
+        <button class="filter-btn" data-gen="2">2세대</button>
+        <button class="filter-btn" data-gen="3">3세대</button>
+        <button class="filter-btn" data-gen="4">4세대</button>
+        <button class="filter-btn" data-gen="5">5세대</button>
+        <button class="filter-btn" data-gen="6">6세대</button>
+        <button class="filter-btn" data-gen="7">7세대</button>
+        <button class="filter-btn" data-gen="8">8세대</button>
+        <button class="filter-btn" data-gen="9">9세대</button>
+      </div>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">타입</span>
+      <div class="filter-group" id="type-group"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── GRID ─── -->
+<main class="grid-section">
+  <div class="pokemon-grid" id="pokemon-grid">
+    <div class="no-results" id="no-results">
+      <p>검색 결과가 없습니다</p>
+      <small>다른 이름으로 검색해보세요</small>
+    </div>
+  </div>
+</main>
+
+<!-- ─── 메가진화 ─── -->
+<div class="section-divider" id="mega-section-header">
+  <h2>메가진화</h2>
+  <span class="section-badge mega" id="mega-count"></span>
+  <div class="section-line"></div>
+</div>
+<div class="grid-section">
+  <div class="pokemon-grid" id="mega-grid"></div>
+</div>
+
+<!-- ─── 거다이맥스 ─── -->
+<div class="section-divider" id="gmax-section-header">
+  <h2>거다이맥스</h2>
+  <span class="section-badge gmax" id="gmax-count"></span>
+  <div class="section-line"></div>
+</div>
+<div class="grid-section">
+  <div class="pokemon-grid" id="gmax-grid"></div>
+</div>
+
+<!-- ─── ABILITY MODAL ─── -->
+<div class="modal-overlay" id="ability-modal-overlay">
+  <div class="modal-box" id="ability-modal-box">
+    <button class="modal-close" id="ability-modal-close" style="position:absolute;top:14px;right:14px">✕</button>
+    <div style="padding:28px 28px 20px">
+      <div id="ability-modal-name" style="font-size:22px;font-weight:900;color:#f0f0f0;margin-bottom:4px;padding-right:32px"></div>
+      <div id="ability-modal-en" style="font-size:12px;color:#666;margin-bottom:12px"></div>
+      <div id="ability-modal-desc" style="font-size:13px;color:#ccc;background:#1c1c1c;border-radius:10px;padding:10px 14px;margin-bottom:20px;line-height:1.6"></div>
+      <div style="font-size:11px;font-weight:700;color:#888;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px">이 특성을 가진 포켓몬 (<span id="ability-modal-count">0</span>)</div>
+      <div id="ability-modal-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:8px"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── MODAL ─── -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal-box" id="modal-box">
+    <div class="modal-header" id="modal-header">
+      <button class="modal-close" id="modal-close">✕</button>
+      <img class="modal-sprite" id="modal-sprite" src="" alt="">
+      <div class="modal-title">
+        <div class="modal-number" id="modal-number"></div>
+        <div class="modal-name-ko" id="modal-name-ko"></div>
+        <div class="modal-form-label" id="modal-form-label" style="display:none;color:rgba(255,255,255,0.65);font-size:13px;font-weight:600;margin-top:1px;margin-bottom:2px"></div>
+        <div class="modal-name-en" id="modal-name-en"></div>
+        <div id="modal-ub-badge" style="display:none;margin-bottom:8px">
+          <span style="background:#4a0080;color:white;font-size:11px;font-weight:700;padding:2px 10px;border-radius:10px;letter-spacing:0.5px">울트라비스트</span>
+        </div>
+        <div id="modal-paradox-badge" style="display:none;margin-bottom:8px">
+          <span style="background:#8b1a1a;color:white;font-size:11px;font-weight:700;padding:2px 10px;border-radius:10px;letter-spacing:0.5px">패러독스</span>
+        </div>
+        <div class="modal-types" id="modal-types"></div>
+      </div>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+    <div id="modal-report-wrap" style="padding:0 28px 24px;display:none">
+      <button class="btn-report" onclick="openReport()">⚠️ 오류 신고</button>
+    </div>
+  </div>
+</div>
+
+<!-- 오류 신고 모달 -->
+<div id="report-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:1000;align-items:center;justify-content:center;backdrop-filter:blur(6px)" onclick="if(event.target===this)closeReportModal()">
+  <div style="background:#141414;border:1px solid #252525;border-radius:20px;padding:32px;width:90%;max-width:400px;display:flex;flex-direction:column;gap:16px">
+    <div style="font-size:1.1rem;font-weight:900;color:#ff9800">⚠️ 오류 신고</div>
+    <div style="font-size:0.82rem;color:#555;line-height:1.5" id="report-context-label"></div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div style="font-size:0.7rem;color:#555;letter-spacing:1px">신고 유형</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="report-type-btn" onclick="selectReportType(this,'정보 오류')">정보 오류</button>
+        <button class="report-type-btn" onclick="selectReportType(this,'이미지 오류')">이미지 오류</button>
+        <button class="report-type-btn" onclick="selectReportType(this,'기타')">기타</button>
+      </div>
+      <div style="font-size:0.7rem;color:#555;letter-spacing:1px;margin-top:2px">메모 (선택)</div>
+      <textarea id="report-memo" rows="3" placeholder="자세한 내용을 입력해주세요..." style="background:#0f0f0f;border:1.5px solid #252525;border-radius:10px;color:#f0f0f0;font-size:0.88rem;padding:10px 14px;resize:none;outline:none;width:100%;font-family:inherit"></textarea>
+    </div>
+    <div style="display:flex;gap:8px">
+      <button onclick="closeReportModal()" style="flex:1;padding:11px;border-radius:12px;border:1.5px solid #252525;background:transparent;color:#888;cursor:pointer;font-family:inherit">취소</button>
+      <button id="report-submit-btn" onclick="submitReport()" disabled style="flex:1;padding:11px;border-radius:12px;border:none;background:#ff9800;color:#fff;font-weight:700;cursor:pointer;opacity:0.5;font-family:inherit">신고하기</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleMobileNav() {
+  const nav = document.querySelector('.site-nav');
+  const btn = document.getElementById('hamburger-btn');
+  const isOpen = nav.classList.toggle('open');
+  btn.textContent = isOpen ? '✕' : '☰';
+}
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.site-header')) {
+    const nav = document.querySelector('.site-nav');
+    const btn = document.getElementById('hamburger-btn');
+    if (nav && nav.classList.contains('open')) {
+      nav.classList.remove('open');
+      if (btn) btn.textContent = '☰';
+    }
+  }
+});
+
+const TYPE_BG = {
+  '노말':'#A8A77A','불꽃':'#EE8130','물':'#6390F0','전기':'#F7D02C',
+  '풀':'#7AC74C','얼음':'#96D9D6','격투':'#C22E28','독':'#A33EA1',
+  '땅':'#E2BF65','비행':'#A98FF3','에스퍼':'#F95587','벌레':'#A6B91A',
+  '바위':'#B6A136','고스트':'#4b0082','드래곤':'#6F35FC','악':'#705746',
+  '강철':'#B7B7CE','페어리':'#D685AD'
+};
+const TYPE_LIGHT = new Set(['전기','얼음','땅','강철']);
+
+function typeBadge(t, cls='type-tag') {
+  const light = TYPE_LIGHT.has(t) ? 'color:#555;' : '';
+  return `<span class="${cls} t-${t}" style="${light}">${t}</span>`;
+}
+function typeColor(t) { return TYPE_BG[t] || '#888'; }
+function typeGradient(types) {
+  if (!types || !types.length) return 'linear-gradient(135deg,#888,#555)';
+  const c1 = typeColor(types[0]);
+  const c2 = types[1] ? typeColor(types[1]) : shadeColor(c1, -20);
+  return `linear-gradient(135deg,${c1},${c2})`;
+}
+function shadeColor(hex, p) {
+  const n = parseInt(hex.replace('#',''),16);
+  const r=Math.min(255,Math.max(0,(n>>16)+p)), g=Math.min(255,Math.max(0,((n>>8)&0xff)+p)), b=Math.min(255,Math.max(0,(n&0xff)+p));
+  return `rgb(${r},${g},${b})`;
+}
+function padId(id) { return 'No.' + String(id).padStart(4,'0'); }
+
+// ─── 세대 ID 범위 ───
+const GEN_RANGE = {1:[1,151],2:[152,251],3:[252,386],4:[387,493],5:[494,649],6:[650,721],7:[722,809],8:[810,905],9:[906,1025]};
+function getGen(id) {
+  for (const [g,[lo,hi]] of Object.entries(GEN_RANGE)) if (id>=lo && id<=hi) return +g;
+  return 0;
+}
+
+// ─── 실제 게임 메가진화 목록 (data/canonical_mega.json에서 로드) ───
+let CANONICAL_MEGA = new Set();
+
+// ─── 거다이맥스 전용기 (공식 한국어 이름) ───
+const GMAX_MOVES = {
+  'venusaur-gmax':              { ko: '거다이편달',         en: 'G-Max Vine Lash',    desc: '풀 타입이 아닌 상대 포켓몬에게 4턴간 지속 대미지를 입힌다.' },
+  'charizard-gmax':             { ko: '거다이옥염',         en: 'G-Max Wildfire',     desc: '불꽃 타입이 아닌 상대 포켓몬에게 4턴간 최대 HP의 1/6 지속 대미지를 입힌다.' },
+  'blastoise-gmax':             { ko: '거다이포격',         en: 'G-Max Cannonade',    desc: '물 타입이 아닌 상대 포켓몬에게 4턴간 지속 대미지를 입힌다.' },
+  'butterfree-gmax':            { ko: '거다이고혹',         en: 'G-Max Befuddle',     desc: '상대를 잠듦, 마비, 독 중 하나의 상태로 만든다.' },
+  'pikachu-gmax':               { ko: '거다이만뢰',         en: 'G-Max Volt Crash',   desc: '상대 포켓몬 전원을 마비 상태로 만든다.' },
+  'meowth-gmax':                { ko: '거다이금화',         en: 'G-Max Gold Rush',    desc: '인접한 모든 상대를 혼란 상태로 만든다.' },
+  'machamp-gmax':               { ko: '거다이회심격',       en: 'G-Max Chi Strike',   desc: '아군의 급소율을 1랭크 올린다.' },
+  'gengar-gmax':                { ko: '거다이환영',         en: 'G-Max Terror',       desc: '상대는 도망칠 수 없다.' },
+  'kingler-gmax':               { ko: '거다이포말',         en: 'G-Max Foam Burst',   desc: '상대 전원의 스피드를 2랭크 낮춘다.' },
+  'lapras-gmax':                { ko: '거다이선율',         en: 'G-Max Resonance',    desc: '5턴간 아군의 피해를 절반으로 줄이는 오로라베일을 설치한다.' },
+  'eevee-gmax':                 { ko: '거다이포옹',         en: 'G-Max Cuddle',       desc: '성별이 다른 상대 포켓몬 전원을 헤롱헤롱 상태로 만든다.' },
+  'snorlax-gmax':               { ko: '거다이재생',         en: 'G-Max Replenish',    desc: '같은 편 포켓몬이 배틀 중에 먹은 나무열매를 재생한다.' },
+  'garbodor-gmax':              { ko: '거다이악취',         en: 'G-Max Malodor',      desc: '상대 포켓몬 전원을 독 상태로 만든다.' },
+  'melmetal-gmax':              { ko: '거다이융격',         en: 'G-Max Meltdown',     desc: '같은 기술을 2회 연속으로 쓰지 못하게 한다.' },
+  'rillaboom-gmax':             { ko: '거다이난타',         en: 'G-Max Drum Solo',    desc: '상대의 특성을 무시하고 공격한다.' },
+  'cinderace-gmax':             { ko: '거다이화염구',       en: 'G-Max Fireball',     desc: '상대의 특성을 무시하고 공격한다.' },
+  'inteleon-gmax':              { ko: '거다이저격',         en: 'G-Max Hydrosnipe',   desc: '상대의 특성을 무시하고 공격한다.' },
+  'corviknight-gmax':           { ko: '거다이풍격',         en: 'G-Max Wind Rage',    desc: '상대의 필드 설치기를 제거한다.' },
+  'orbeetle-gmax':              { ko: '거다이천도',         en: 'G-Max Gravitas',     desc: '5턴간 비행·부유 포켓몬이 땅타입에 맞게 되고 공중 기술 사용 불가.' },
+  'drednaw-gmax':               { ko: '거다이암진',         en: 'G-Max Stonesurge',   desc: '교체해서 나온 상대 포켓몬에게 스텔스록 유사 바위 대미지를 입힌다.' },
+  'coalossal-gmax':             { ko: '거다이분석',         en: 'G-Max Volcalith',    desc: '바위 타입이 아닌 상대 전원에게 4턴간 매 턴 최대 HP의 1/6 대미지를 입힌다.' },
+  'flapple-gmax':               { ko: '거다이산격',         en: 'G-Max Tartness',     desc: '상대 전원의 회피율을 1랭크 떨어뜨린다.' },
+  'appletun-gmax':              { ko: '거다이감로',         en: 'G-Max Sweetness',    desc: '아군 전원의 상태이상을 회복한다.' },
+  'sandaconda-gmax':            { ko: '거다이사진',         en: 'G-Max Sandblast',    desc: '4~5턴간 상대 전원을 모래에 가둬 매 턴 HP 1/6 대미지와 교체 불가 상태로 만든다.' },
+  'toxtricity-amped-gmax':      { ko: '거다이감전',         en: 'G-Max Stun Shock',   desc: '상대를 마비 또는 독 상태로 만든다.' },
+  'toxtricity-low-key-gmax':    { ko: '거다이감전',         en: 'G-Max Stun Shock',   desc: '상대를 마비 또는 독 상태로 만든다.' },
+  'centiskorch-gmax':           { ko: '거다이백화',         en: 'G-Max Centiferno',   desc: '상대 전원을 회오리불꽃 상태로 만든다.' },
+  'hatterene-gmax':             { ko: '거다이천벌',         en: 'G-Max Smite',        desc: '상대 전체를 혼란 상태로 만든다.' },
+  'grimmsnarl-gmax':            { ko: '거다이수마',         en: 'G-Max Snooze',       desc: '상대 전원을 50% 확률로 1턴 후 잠듦 상태로 만든다.' },
+  'alcremie-gmax':              { ko: '거다이단원',         en: 'G-Max Finale',       desc: '아군 전원의 HP를 1/6만큼 회복한다.' },
+  'copperajah-gmax':            { ko: '거다이강철진',       en: 'G-Max Steelsurge',   desc: '적 진영에 강철 타입 상성에 따라 위력이 달라지는 함정을 설치한다.' },
+  'duraludon-gmax':             { ko: '거다이감쇠',         en: 'G-Max Depletion',    desc: '상대 전원이 마지막으로 사용한 기술의 PP를 감소시킨다.' },
+  'urshifu-single-strike-gmax': { ko: '거다이일격',         en: 'G-Max One Blow',     desc: '방어와 다이월을 무시하고 공격한다.' },
+  'urshifu-rapid-strike-gmax':  { ko: '거다이연격',         en: 'G-Max Rapid Flow',   desc: '방어와 다이월을 무시하고 공격한다.' },
+};
+
+// 우라오스 두 폼 구분 이름
+const GMAX_NAME_OVERRIDE = {
+  'urshifu-single-strike-gmax': '거다이맥스 우라오스 (일격)',
+  'urshifu-rapid-strike-gmax':  '거다이맥스 우라오스 (연격)',
+};
+// 중복 제거 (Toxtricity low-key는 amped와 동일)
+const GMAX_SKIP = new Set(['toxtricity-low-key-gmax']);
+
+let DB = [], totalAll = 0;
+const SIBLING_MAP = {}; // id → 같은 ID를 가진 모든 렌더된 엔트리
+
+// ─── 이로치(shiny) 모드 ───
+// 루트(/)는 _redirects 200 rewrite로 이 파일을 서빙하며, 이로치 도감이 메인이다.
+// /pokedex 로 들어오면 일반 도감. ?shiny=1 은 기존 링크 호환용으로 계속 지원한다.
+const IS_ROOT = ['/', '/index.html'].includes(location.pathname);
+const SHINY = IS_ROOT || new URLSearchParams(location.search).get('shiny') === '1';
+function spriteOf(p) {
+  // 기본 종은 shinySprite 보유. 폼(메가/거다이맥스/리전 등)은 없으면 일반 아트로 폴백
+  return (SHINY && p && p.shinySprite) ? p.shinySprite : (p ? p.sprite : '');
+}
+if (SHINY) {
+  document.title = '이로치 도감 — Pokénova';
+  document.querySelectorAll('.site-nav-btn').forEach(a => {
+    if (a.dataset.nav === 'pokedex') a.classList.remove('active');
+    if (a.dataset.nav === 'shiny')   a.classList.add('active');
+  });
+}
+let activeTypes = new Set(), activeGens = new Set(), activeCats = new Set();
+let championsOnly = false;
+const ALL_CATS = ['normal','region','mega','gmax'];
+const ALL_GENS = [1,2,3,4,5,6,7,8,9];
+
+// ─── CARD 생성 ───
+function buildCard(p) {
+  const card = document.createElement('div');
+  card.className = 'pokemon-card';
+  card.dataset.ko  = p.ko.toLowerCase();
+  card.dataset.en  = (p.en || '').toLowerCase();
+  card.dataset.gen = p.genNum !== undefined ? p.genNum : getGen(p.id);
+  card.dataset.cat = p.formType || 'normal';
+  card.dataset.champions = p.inChampions ? '1' : '0';
+  const types = p.types || [];
+  card.dataset.types = types.join(',');
+  const bg = typeColor(types[0] || '노말');
+  const REGION_LABEL = { alola:'알로라', galar:'가라르', hisui:'히스이', paldea:'팔데아' };
+
+  // 왼쪽 뱃지: 메가/거다이/리전
+  let leftBadge = '';
+  if (p.formType === 'mega') leftBadge = '<span class="card-badge mega">MEGA</span>';
+  else if (p.formType === 'gmax') leftBadge = '<span class="card-badge gmax">거다이</span>';
+  else if (p.formType === 'region' || p.regionType) {
+    leftBadge = `<span class="card-badge ${p.regionType}">${REGION_LABEL[p.regionType] || ''}</span>`;
+  }
+
+  // 오른쪽 뱃지: 폼 라벨 (baseKo가 있는 폼 또는 formLabel 직접 지정)
+  let rightBadge = '';
+  if (p.formLabel) {
+    rightBadge = `<span class="card-badge form-label">${p.formLabel}</span>`;
+  } else if (p.baseKo && p.formType !== 'mega' && p.formType !== 'gmax') {
+    let label = p.ko;
+    const base = p.baseKo;
+    if (label.startsWith(base + ' ')) label = label.slice(base.length + 1);
+    else if (label.endsWith(' ' + base)) label = label.slice(0, -(base.length + 1));
+    label = label.replace(/^\(|\)$/g, '').trim();
+    if (p.regionType) {
+      const rn = REGION_LABEL[p.regionType] || '';
+      if (rn && label.startsWith(rn + ' ')) label = label.slice(rn.length + 1);
+      if (label === rn) label = '';
+    }
+    if (label) rightBadge = `<span class="card-badge form-label">${label}</span>`;
+  }
+
+  const displayName = p.baseKo || p.ko;
+
+  card.innerHTML = `
+    ${leftBadge}
+    ${rightBadge}
+    <img class="card-img" src="${spriteOf(p)}" alt="${displayName}" loading="lazy">
+    <div class="card-number">${padId(p.id)}</div>
+    <div class="card-name">${displayName}</div>
+    <div class="card-types">${types.map(t=>typeBadge(t)).join('')}</div>
+  `;
+  card.style.borderColor = bg + '44';
+  card.addEventListener('click', () => openModal(p));
+  return card;
+}
+
+function renderAll(data) {
+  const grid = document.getElementById('pokemon-grid');
+  const noRes = document.getElementById('no-results');
+  const SKIP_EN = new Set(['pikachu-alola-cap']);
+  const REGION_BASE = { alola: true, galar: true, hisui: true, paldea: true };
+  const REGION_GEN  = { alola: 7, galar: 8, hisui: 8, paldea: 9 };
+
+  const entries = [];
+
+  const formCounters = {};
+  // 기본형만 처리 (메가 100000+, 알트폼 200000+ 별도 행은 forms 배열로 인라인 렌더링되므로 스킵)
+  data.filter(p => p.id < 100000).forEach(p => {
+    entries.push({ ...p, displayId: p.id });
+    if (!p.forms) return;
+    const seenKo = new Set();
+    p.forms.forEach(f => {
+      // 합체폼(primal) / 달마모드(zen) / 오리진폼(origin) / 기타 대체폼(alt): 원종 옆에 표시
+      if (f.type === 'primal' || f.type === 'zen' || f.type === 'origin' || f.type === 'alt') {
+        if (!f.name_ko || !f.sprite) return;
+        if (seenKo.has(f.name_ko)) return;
+        seenKo.add(f.name_ko);
+        if (!formCounters[p.id]) formCounters[p.id] = 0;
+        entries.push({
+          id: p.id, ko: f.name_ko, en: f.name_en,
+          baseKo: p.ko,
+          sprite: f.sprite, shinySprite: f.shinySprite,
+          types: f.types || p.types,
+          abilities: f.abilities || p.abilities,
+          formType: 'fusion',
+          regionType: f.regionType || null,
+          genNum: getGen(p.id),
+          inChampions: f.inChampions !== undefined ? f.inChampions : p.inChampions,
+          displayId: p.id + (++formCounters[p.id]) * 0.001
+        });
+        return;
+      }
+      // 리전폼: 원종 옆에 표시 (genNum은 리전 세대 유지)
+      if (!REGION_BASE[f.type]) return;
+      if (!f.name_ko || !f.sprite) return;
+      if (f.name_en && (f.name_en.includes('totem') || SKIP_EN.has(f.name_en))) return;
+      if (seenKo.has(f.name_ko)) return;
+      seenKo.add(f.name_ko);
+      if (!formCounters[p.id]) formCounters[p.id] = 0;
+      entries.push({
+        id: p.id, ko: f.name_ko, en: f.name_en,
+        baseKo: p.ko,
+        sprite: f.sprite, shinySprite: f.shinySprite,
+        types: f.types || p.types,
+        abilities: f.abilities || p.abilities,
+        formType: 'region', regionType: f.type,
+        genNum: REGION_GEN[f.type],
+        inChampions: f.inChampions !== undefined ? f.inChampions : p.inChampions,
+        displayId: p.id + (++formCounters[p.id]) * 0.001
+      });
+    });
+  });
+
+  entries.sort((a, b) => a.displayId - b.displayId);
+
+  const frag = document.createDocumentFragment();
+  entries.forEach(e => {
+    if (!SIBLING_MAP[e.id]) SIBLING_MAP[e.id] = [];
+    SIBLING_MAP[e.id].push(e);
+    frag.appendChild(buildCard(e));
+  });
+  grid.insertBefore(frag, noRes);
+}
+
+function renderForms(data) {
+  const megaGrid = document.getElementById('mega-grid');
+  const gmaxGrid = document.getElementById('gmax-grid');
+  let megaCount = 0, gmaxCount = 0;
+
+  data.forEach(base => {
+    if (!base.forms) return;
+    base.forms.forEach(f => {
+      if (!f.sprite || !f.name_ko) return;
+
+      if (f.type === 'mega') {
+        if (!CANONICAL_MEGA.has(f.name_en)) return;
+        const entry = {
+          id: base.id, ko: f.name_ko, en: f.name_en,
+          sprite: f.sprite, shinySprite: f.shinySprite,
+          types: f.types || base.types,
+          abilities: f.abilities || base.abilities, formType: 'mega',
+          inChampions: base.inChampions
+        };
+        if (!SIBLING_MAP[entry.id]) SIBLING_MAP[entry.id] = [];
+        SIBLING_MAP[entry.id].push(entry);
+        megaGrid.appendChild(buildCard(entry));
+        megaCount++;
+      } else if (f.type === 'gmax') {
+        if (GMAX_SKIP.has(f.name_en)) return;
+        const ko = GMAX_NAME_OVERRIDE[f.name_en] || f.name_ko;
+        const entry = {
+          id: base.id, ko, en: f.name_en,
+          sprite: f.sprite, shinySprite: f.shinySprite,
+          types: f.types || base.types,
+          abilities: f.abilities || base.abilities,
+          gmaxMove: GMAX_MOVES[f.name_en], formType: 'gmax',
+          inChampions: false
+        };
+        if (!SIBLING_MAP[entry.id]) SIBLING_MAP[entry.id] = [];
+        SIBLING_MAP[entry.id].push(entry);
+        gmaxGrid.appendChild(buildCard(entry));
+        gmaxCount++;
+      }
+    });
+  });
+
+  document.getElementById('mega-count').textContent = megaCount + '종';
+  document.getElementById('gmax-count').textContent = gmaxCount + '종';
+  return megaCount + gmaxCount;
+}
+
+// ─── 필터 적용 ───
+function updateCount(shown) {}
+
+function applyFilters() {
+  const q = document.getElementById('search-input').value.trim().toLowerCase();
+  const cards = document.querySelectorAll('.pokemon-card');
+  let shown = 0;
+
+  cards.forEach(c => {
+    const matchText = !q || c.dataset.ko.includes(q) || c.dataset.en.includes(q);
+
+    // 타입: 선택된 타입 모두 포함해야 통과
+    const cardTypes = c.dataset.types.split(',');
+    const matchType = activeTypes.size === 0 || [...activeTypes].every(t => cardTypes.includes(t));
+
+    // 세대: 선택된 세대 중 하나면 통과 (전체 선택 = 필터 없음)
+    const matchGen = activeGens.size === 0 || activeGens.has(+c.dataset.gen);
+
+    // 분류: 선택된 분류 중 하나면 통과 (전체 선택 = 필터 없음)
+    const cat = c.dataset.cat;
+    const normalCats = new Set(['normal','fusion','origin','alt']);
+    const matchCat = activeCats.size === 0
+      || (activeCats.has('normal') && normalCats.has(cat))
+      || (activeCats.has('region') && cat === 'region')
+      || (activeCats.has('mega')   && cat === 'mega')
+      || (activeCats.has('gmax')   && cat === 'gmax');
+
+    const matchChampions = !championsOnly || c.dataset.champions === '1';
+    const visible = matchText && matchType && matchGen && matchCat && matchChampions;
+    c.classList.toggle('hidden', !visible);
+    if (visible) shown++;
+  });
+
+  ['mega','gmax'].forEach(type => {
+    const grid   = document.getElementById(type + '-grid');
+    const header = document.getElementById(type + '-section-header');
+    const hasVisible = [...grid.querySelectorAll('.pokemon-card')].some(c => !c.classList.contains('hidden'));
+    header.style.display = hasVisible ? '' : 'none';
+  });
+
+  const hasAnyFilter = q || activeTypes.size || activeGens.size || activeCats.size;
+  document.getElementById('no-results').style.display = (shown === 0 && hasAnyFilter) ? 'block' : 'none';
+  updateCount(shown);
+}
+
+document.getElementById('search-input').addEventListener('input', applyFilters);
+
+// 분류 필터 (다중 최대 3개 / 4개 전체 선택 시 초기화)
+document.getElementById('cat-group').addEventListener('click', e => {
+  const btn = e.target.closest('[data-cat]');
+  if (!btn) return;
+  const cat = btn.dataset.cat;
+
+  if (cat === 'champions') {
+    championsOnly = !championsOnly;
+    btn.classList.toggle('active-champions', championsOnly);
+    btn.style.background = championsOnly ? '#f5c518' : '';
+    btn.style.color = championsOnly ? '#000' : '#f5c518';
+    btn.style.borderColor = '#f5c518';
+    applyFilters();
+    return;
+  }
+
+  if (cat === 'all') {
+    activeCats.clear();
+  } else {
+    if (activeCats.has(cat)) activeCats.delete(cat);
+    else {
+      if (activeCats.size >= 3) return;
+      activeCats.add(cat);
+    }
+    if (ALL_CATS.every(c => activeCats.has(c))) activeCats.clear();
+  }
+  document.querySelectorAll('#cat-group [data-cat]:not([data-cat="champions"])').forEach(b => {
+    if (b.dataset.cat === 'all') b.classList.toggle('active-cat', activeCats.size === 0);
+    else b.classList.toggle('active-cat', activeCats.has(b.dataset.cat));
+  });
+  applyFilters();
+});
+
+// 세대 필터 (다중 / 전체 선택 시 초기화)
+document.getElementById('gen-group').addEventListener('click', e => {
+  const btn = e.target.closest('[data-gen]');
+  if (!btn) return;
+  const g = +btn.dataset.gen;
+  if (activeGens.has(g)) activeGens.delete(g);
+  else activeGens.add(g);
+  if (ALL_GENS.every(n => activeGens.has(n))) activeGens.clear();
+  document.querySelectorAll('#gen-group .filter-btn').forEach(b => {
+    b.classList.toggle('active-gen', activeGens.has(+b.dataset.gen));
+  });
+  applyFilters();
+});
+
+// 타입 필터 (최대 2개)
+document.getElementById('type-group').addEventListener('click', e => {
+  const btn = e.target.closest('[data-type]');
+  if (!btn) return;
+  const t = btn.dataset.type;
+  if (activeTypes.has(t)) activeTypes.delete(t);
+  else {
+    if (activeTypes.size >= 2) return;
+    activeTypes.add(t);
+  }
+  document.querySelectorAll('#type-group .filter-btn').forEach(b => {
+    const on = activeTypes.has(b.dataset.type);
+    b.style.opacity = (activeTypes.size === 0 || on) ? '1' : '0.45';
+    b.style.outline = on ? '2px solid #fff' : '';
+  });
+  applyFilters();
+});
+
+// ─── MODAL ───
+function getFormLabel(p) {
+  if (!p.baseKo) return p.formLabel || p.ko;
+  return p.ko;
+}
+
+function openModal(p) {
+  const types = p.types || [];
+  document.getElementById('modal-header').style.background = typeGradient(types);
+  document.getElementById('modal-sprite').src = spriteOf(p);
+  document.getElementById('modal-sprite').alt = p.ko;
+  document.getElementById('modal-number').textContent = padId(p.id);
+  document.getElementById('modal-name-ko').textContent = p.baseKo || p.ko;
+  // Form label in parentheses
+  (function() {
+    const REGION_LABEL = { alola:'알로라', galar:'가라르', hisui:'히스이', paldea:'팔데아' };
+    let formLabelText = '';
+    if (p.baseKo) {
+      let label = p.ko;
+      const base = p.baseKo;
+      if (label.startsWith(base + ' ')) label = label.slice(base.length + 1);
+      else if (label.endsWith(' ' + base)) label = label.slice(0, -(base.length + 1));
+      label = label.replace(/^\(|\)$/g, '').trim();
+      if (p.regionType) {
+        const rn = REGION_LABEL[p.regionType] || '';
+        if (rn && label.startsWith(rn + ' ')) label = label.slice(rn.length + 1);
+        if (label === rn) label = '';
+      }
+      if (label) formLabelText = '(' + label + ')';
+    } else if (p.formLabel) {
+      formLabelText = '(' + p.formLabel + ')';
+    }
+    const el = document.getElementById('modal-form-label');
+    el.textContent = formLabelText;
+    el.style.display = formLabelText ? 'block' : 'none';
+  })();
+  document.getElementById('modal-name-en').textContent = p.en || '';
+  document.getElementById('modal-types').innerHTML = types.map(t =>
+    `<span class="modal-type-tag">${t}</span>`
+  ).join('');
+  document.getElementById('modal-ub-badge').style.display = p.is_ub ? 'block' : 'none';
+  document.getElementById('modal-paradox-badge').style.display = p.is_paradox ? 'block' : 'none';
+
+  const body = document.getElementById('modal-body');
+  body.innerHTML = '';
+
+  // 거다이맥스: 전용기술 표시
+  if (p.formType === 'gmax' && p.gmaxMove) {
+    const sec = document.createElement('div');
+    sec.className = 'info-section';
+    sec.innerHTML = `<div class="section-title">전용기술</div>
+      <div class="gmax-move-box">
+        <div class="gmax-move-icon">⚡</div>
+        <div>
+          <div class="gmax-move-name">${p.gmaxMove.ko}</div>
+          <div class="gmax-move-label">${p.gmaxMove.en}</div>
+          ${p.gmaxMove.desc ? `<div class="gmax-move-desc">${p.gmaxMove.desc}</div>` : ''}
+        </div>
+      </div>`;
+    body.appendChild(sec);
+  } else if (p.abilities && p.abilities.length) {
+    // 일반/메가: 특성 표시
+    const sec = document.createElement('div');
+    sec.className = 'info-section';
+    sec.innerHTML = `<div class="section-title">특성</div>`;
+    const list = document.createElement('div');
+    list.className = 'ability-list';
+    p.abilities.forEach(a => {
+      const name   = typeof a === 'string' ? a : (a.ko || a.en || '');
+      const en     = typeof a === 'object' ? (a.en || '') : '';
+      const hidden = typeof a === 'object' ? a.hidden : false;
+      const koDesc = (typeof a === 'object' && a.desc) ? a.desc : (ABILITY_DESC[name] || '');
+      const subLine = koDesc
+        ? `<div class="ability-en">${koDesc}</div>`
+        : (en ? `<div class="ability-en">${en}</div>` : '');
+      const item = document.createElement('div');
+      item.className = 'ability-item';
+      item.innerHTML = `
+        <div style="flex:1">
+          <div class="ability-name">${name}</div>
+          ${subLine}
+        </div>
+        ${hidden ? '<span class="ability-hidden">숨겨진 특성</span>' : ''}`;
+      item.addEventListener('click', () => openAbilityModal(name, en));
+      list.appendChild(item);
+    });
+    sec.appendChild(list);
+    body.appendChild(sec);
+  }
+
+  // 기본 스탯 표시
+  const statsEntry = STATS_MAP[p.en || ''];
+  if (statsEntry && statsEntry.stats) {
+    const st = statsEntry.stats;
+    const STAT_KEYS = ['H','A','B','C','D','S'];
+    const total = STAT_KEYS.reduce((s, k) => s + (st[k]||0), 0);
+    const sec = document.createElement('div');
+    sec.className = 'info-section';
+    sec.innerHTML = `<div class="section-title">기본 스탯</div>
+      <table class="stats-table">
+        <tr>${STAT_KEYS.map(k => `<th>${k}</th>`).join('')}</tr>
+        <tr>${STAT_KEYS.map(k => `<td>${st[k]||0}</td>`).join('')}</tr>
+      </table>
+      <div class="stat-total">합계 <span>${total}</span></div>`;
+    body.appendChild(sec);
+  }
+
+  // 다른 폼 표시 (클릭 가능)
+  const siblings = (SIBLING_MAP[p.id] || []).filter(s => s.ko !== p.ko);
+  if (siblings.length) {
+    const sec = document.createElement('div');
+    sec.className = 'info-section';
+    sec.innerHTML = `<div class="section-title">다른 폼</div>`;
+    const grid = document.createElement('div');
+    grid.className = 'forms-grid';
+    siblings.forEach(s => {
+      const ft = s.types || [];
+      const card = document.createElement('div');
+      card.className = 'form-card';
+      card.innerHTML = `
+        <img src="${spriteOf(s)}" alt="${getFormLabel(s)}" loading="lazy">
+        <div class="form-card-name">${getFormLabel(s)}</div>
+        <div class="form-types">${ft.map(t=>`<span class="form-type t-${t}">${t}</span>`).join('')}</div>`;
+      card.addEventListener('click', () => openModal(s));
+      grid.appendChild(card);
+    });
+    sec.appendChild(grid);
+    body.appendChild(sec);
+  }
+
+  _reportCtx = { mode: 'pokedex', label: '포켓몬 도감', ko: p.ko, en: p.en };
+  document.getElementById('modal-report-wrap').style.display = '';
+  document.getElementById('modal-overlay').classList.add('open');
+  document.getElementById('modal-box').scrollTop = 0;
+}
+
+document.getElementById('modal-close').addEventListener('click', closeModal);
+document.getElementById('modal-overlay').addEventListener('click', e => {
+  if (e.target === document.getElementById('modal-overlay')) closeModal();
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.getElementById('modal-report-wrap').style.display = 'none';
+}
+
+/* ── 오류 신고 ── */
+let _reportCtx = {}, _reportType = '';
+function openReport() {
+  document.getElementById('report-context-label').textContent =
+    `${_reportCtx.ko}${_reportCtx.en ? ' / ' + _reportCtx.en : ''} — ${_reportCtx.label}`;
+  _reportType = '';
+  document.querySelectorAll('.report-type-btn').forEach(b => b.classList.remove('selected'));
+  document.getElementById('report-memo').value = '';
+  document.getElementById('report-submit-btn').disabled = true;
+  document.getElementById('report-submit-btn').style.opacity = '0.5';
+  document.getElementById('report-modal').style.display = 'flex';
+}
+function closeReportModal() { document.getElementById('report-modal').style.display = 'none'; }
+function selectReportType(btn, type) {
+  _reportType = type;
+  document.querySelectorAll('.report-type-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  document.getElementById('report-submit-btn').disabled = false;
+  document.getElementById('report-submit-btn').style.opacity = '1';
+}
+function submitReport() {
+  const report = {
+    id: Date.now().toString(36) + Math.random().toString(36).slice(2),
+    mode: _reportCtx.mode, modeLabel: _reportCtx.label,
+    ko: _reportCtx.ko, en: _reportCtx.en,
+    type: _reportType, memo: document.getElementById('report-memo').value.trim(),
+    ts: Date.now(), resolved: false
+  };
+  const arr = JSON.parse(localStorage.getItem('pq_reports') || '[]');
+  arr.unshift(report);
+  if (arr.length > 500) arr.length = 500;
+  localStorage.setItem('pq_reports', JSON.stringify(arr));
+  closeReportModal();
+}
+
+// ─── 타입 버튼 초기화 ───
+function buildTypeButtons() {
+  const types = ['노말','불꽃','물','전기','풀','얼음','격투','독','땅','비행','에스퍼','벌레','바위','고스트','드래곤','악','강철','페어리'];
+  const group = document.getElementById('type-group');
+  types.forEach(t => {
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn t-' + t;
+    btn.dataset.type = t;
+    btn.textContent = t;
+    // 타입 색상을 기본 배경으로 적용
+    btn.style.background = TYPE_BG[t] || '#888';
+    btn.style.borderColor = 'transparent';
+    btn.style.color = TYPE_LIGHT.has(t) ? '#555' : 'white';
+    btn.style.opacity = '0.55';
+    group.appendChild(btn);
+  });
+}
+
+// ─── LOAD ───
+buildTypeButtons();
+let ABILITY_DESC = {};
+let ABILITY_EN = {};
+let ABILITY_POKEMON_MAP = {}; // abilityKo → [{ko, en, sprite, id, baseKo}]
+let STATS_MAP = {}; // en.toLowerCase() → {ko, en, form_type, stats}
+
+function buildAbilityPokemonMap(pokemonData) {
+  ABILITY_POKEMON_MAP = {};
+  const add = (abilityKo, entry) => {
+    if (!abilityKo) return;
+    if (!ABILITY_POKEMON_MAP[abilityKo]) ABILITY_POKEMON_MAP[abilityKo] = [];
+    ABILITY_POKEMON_MAP[abilityKo].push(entry);
+  };
+  pokemonData.forEach(p => {
+    const base = { ko: p.ko, en: p.en, sprite: p.sprite, shinySprite: p.shinySprite, id: p.id };
+    (p.abilities || []).forEach(a => {
+      if (typeof a === 'object') add(a.ko, base);
+    });
+    (p.forms || []).forEach(f => {
+      if (!f.sprite) return;
+      const fEntry = { ko: f.name_ko || p.ko, en: f.name_en || p.en, sprite: f.sprite, shinySprite: f.shinySprite, id: p.id, baseKo: p.ko };
+      (f.abilities || []).forEach(a => {
+        if (typeof a === 'object') add(a.ko, fEntry);
+      });
+    });
+  });
+}
+
+function openAbilityModal(abilityKo, abilityEn) {
+  closeModal();
+  const desc = ABILITY_DESC[abilityKo] || '';
+  const en   = abilityEn || ABILITY_EN[abilityKo] || '';
+  const list = ABILITY_POKEMON_MAP[abilityKo] || [];
+
+  document.getElementById('ability-modal-name').textContent  = abilityKo;
+  document.getElementById('ability-modal-en').textContent    = en;
+  document.getElementById('ability-modal-desc').textContent  = desc || '설명 없음';
+  document.getElementById('ability-modal-count').textContent = list.length;
+
+  const grid = document.getElementById('ability-modal-grid');
+  grid.innerHTML = '';
+  list.forEach(p => {
+    const card = document.createElement('div');
+    card.style.cssText = 'background:#1c1c1c;border:1px solid #252525;border-radius:10px;padding:8px 4px;text-align:center;cursor:pointer;transition:border-color .15s,transform .15s';
+    card.innerHTML = `<img src="${spriteOf(p)}" alt="${p.ko}" loading="lazy" style="width:64px;height:64px;object-fit:contain">
+      <div style="font-size:11px;color:#ccc;margin-top:4px;line-height:1.3;word-break:keep-all">${p.baseKo || p.ko}</div>`;
+    card.addEventListener('mouseenter', () => { card.style.borderColor='#e53935'; card.style.transform='translateY(-2px)'; });
+    card.addEventListener('mouseleave', () => { card.style.borderColor='#252525'; card.style.transform=''; });
+    card.addEventListener('click', () => {
+      closeAbilityModal();
+      // find entry in SIBLING_MAP or DB
+      const dbEntry = DB.find(x => x.id === p.id && x.ko === p.ko);
+      if (dbEntry) openModal(dbEntry);
+      else {
+        const siblings = SIBLING_MAP[p.id] || [];
+        const match = siblings.find(s => s.ko === p.ko);
+        if (match) openModal(match);
+        else if (siblings.length) openModal(siblings[0]);
+      }
+    });
+    grid.appendChild(card);
+  });
+
+  document.getElementById('ability-modal-overlay').classList.add('open');
+  document.getElementById('ability-modal-box').scrollTop = 0;
+}
+
+function closeAbilityModal() {
+  document.getElementById('ability-modal-overlay').classList.remove('open');
+}
+
+document.getElementById('ability-modal-close').addEventListener('click', closeAbilityModal);
+document.getElementById('ability-modal-overlay').addEventListener('click', e => {
+  if (e.target === document.getElementById('ability-modal-overlay')) closeAbilityModal();
+});
+
+const POCHAMS_API = 'https://pochams.com';
+const CACHE_TTL = 6 * 60 * 60 * 1000; // 6시간
+
+function getCached(key) {
+  try {
+    const raw = localStorage.getItem(key);
+    if (!raw) return null;
+    const { ts, data } = JSON.parse(raw);
+    if (Date.now() - ts > CACHE_TTL) return null;
+    return data;
+  } catch(e) { return null; }
+}
+
+function setCache(key, data) {
+  try { localStorage.setItem(key, JSON.stringify({ ts: Date.now(), data })); } catch(e) {}
+}
+
+async function fetchWithCache(url, key) {
+  const cached = getCached(key);
+  if (cached) return cached;
+  const data = await fetch(url).then(r => r.json());
+  setCache(key, data);
+  return data;
+}
+
+function initDex([pokemonData, abilitiesData, statsData, canonicalMegaArr]) {
+  CANONICAL_MEGA = new Set(canonicalMegaArr);
+  statsData.forEach(s => { STATS_MAP[s.en || ''] = s; });
+  abilitiesData.forEach(a => {
+    const name = a.ko || a.en || '';
+    if (name && a.desc && /[\uAC00-\uD7A3]/.test(a.desc)) {
+      ABILITY_DESC[name] = a.desc;
+    }
+    if (name && a.en) ABILITY_EN[name] = a.en;
+  });
+  buildAbilityPokemonMap(pokemonData);
+  DB = pokemonData;
+  renderAll(DB);
+  const formCount = renderForms(pokemonData);
+  const regionCount = document.querySelectorAll('.pokemon-card[data-cat="region"]').length;
+  totalAll = document.querySelectorAll('.pokemon-card').length;
+  updateCount(totalAll);
+  // 데이터 로딩 전에 누른 필터가 있으면 즉시 적용
+  applyFilters();
+}
+
+Promise.all([
+  fetch('data/pokedex.json').then(r => r.json()),   // 포케노바 마스터 전체 도감(1025 + 폼 + inChampions)
+  fetch('data/quiz_abilities.json').then(r => r.json()).catch(() => []),  // 특성: 로컬 파일 사용(pochams API 의존 제거)
+  fetch('data/pokemon_stats.json').then(r => r.json()),
+  fetch('data/canonical_mega.json').then(r => r.json()),
+])
+  .then(initDex)
+  .catch(() => {
+    document.getElementById('pokemon-grid').innerHTML =
+      '<p style="padding:40px;color:#999;text-align:center">데이터를 불러올 수 없습니다.</p>';
+  });
+</script>
+
+<footer class="site-footer">
+  <div>Made by <span class="footer-name">잉짱</span></div>
+  <div style="margin-top:6px; font-size:0.72rem; color:#444;">
+    Pokémon and all related names are trademarks of Nintendo / Game Freak / Creatures Inc.<br>
+    This site is a fan-made project and is not affiliated with or endorsed by Nintendo.
+  </div>
+  <div style="margin-top:8px; font-size:0.72rem;">© 2026 Pokénova</div>
+</footer>
+</body>
+</html>
