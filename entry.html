@@ -691,6 +691,7 @@ let pendingPokemon = null;  // 포켓몬 선택 후 특성 선택 전 임시 저
 let itemModalPrevStep  = 'pokemon'; // 'pokemon' | 'ability'
 let itemModalShowBack  = false;
 let abilityModalShowBack = false;
+let abilityModalIsNewSelection = false;  // 새 포켓몬 선택 흐름에서 특성 모달을 연 경우
 
 let pokeTypeFilter = '전체';
 let pokeFiltered   = [];
@@ -1021,7 +1022,14 @@ function openPokeModal(section, idx) {
   pokeTypeFilter = '전체';
 
   document.querySelectorAll('#poke-type-filters .filter-btn').forEach(b => {
-    b.classList.toggle('active', b.dataset.type === '전체');
+    const isAll = b.dataset.type === '전체';
+    b.classList.toggle('active', isAll);
+    // 이전에 선택했던 타입 버튼의 색상 표시를 지워 '전체' 상태와 일치시킨다
+    if (!isAll) {
+      b.style.background  = '';
+      b.style.borderColor = '';
+      b.style.color       = '';
+    }
   });
   document.getElementById('poke-search').value = '';
   document.getElementById('poke-modal-title').textContent =
@@ -1114,6 +1122,7 @@ function onPokeSelected(p) {
 // ══════════════════════════════════════════
 function openAbilitySelectModal(p) {
   // 새 포켓몬 선택 후 특성 고르기
+  abilityModalIsNewSelection = true;
   const list = document.getElementById('ability-list');
   list.innerHTML = '';
   document.getElementById('ability-modal-title').textContent = `${p.ko} — 특성 선택`;
@@ -1126,6 +1135,7 @@ function openAbilitySelectModal(p) {
       ${isHiddenAbility(ab) ? '<span class="ab-hidden">숨겨진 특성</span>' : ''}
     `;
     item.onclick = () => {
+      abilityModalIsNewSelection = false;
       closeAbilityModal();
       applyPokemonToSlot(pendingPokemon, ab);
     };
@@ -1143,6 +1153,7 @@ function openAbilitySelectModal(p) {
 // 이미 있는 슬롯의 특성만 변경할 때
 function openAbilityModal(section, idx, e) {
   if (e) e.stopPropagation();
+  abilityModalIsNewSelection = false;
   activeSection = section;
   activeSlotIdx = idx;
   // 슬롯에서 직접 열 때는 뒤로 버튼 없음
@@ -1175,9 +1186,19 @@ function openAbilityModal(section, idx, e) {
 
 function closeAbilityModal() {
   document.getElementById('ability-modal').classList.add('hidden');
+  // 새 포켓몬 선택 중 특성을 안 고르고 닫아도 슬롯에는 등록한다 (특성 미선택 상태)
+  if (abilityModalIsNewSelection && pendingPokemon) {
+    const existing = getEntry(activeSection, activeSlotIdx);
+    const alreadyPlaced = existing && existing.pokemon.en === pendingPokemon.en;
+    if (!alreadyPlaced) {
+      applyPokemonToSlot(pendingPokemon, null, false);
+    }
+    pendingPokemon = null;
+  }
+  abilityModalIsNewSelection = false;
 }
 
-function applyPokemonToSlot(p, ability) {
+function applyPokemonToSlot(p, ability, continueFlow = true) {
   const existing = getEntry(activeSection, activeSlotIdx);
 
   // 메가진화 포켓몬이면 대응하는 메가스톤 자동 지정
@@ -1200,6 +1221,12 @@ function applyPokemonToSlot(p, ability) {
     moves: autoMoves,
   });
   renderGrids();
+
+  // 특성 미선택 등록처럼 흐름을 이어가지 않는 경우 여기서 끝낸다 (도구/기술 모달 안 염)
+  if (!continueFlow) {
+    pendingPokemon = null;
+    return;
+  }
 
   // 메가스톤이 자동 지정된 경우 도구 모달 스킵 → 바로 기술 선택
   if (autoStone) {
@@ -1454,6 +1481,8 @@ function goBackFromItem() {
   }
 }
 function goBackFromAbility() {
+  // '뒤로'는 포켓몬 재선택으로 돌아가는 것이므로 등록하지 않는다
+  abilityModalIsNewSelection = false;
   closeAbilityModal();
   openPokeModal(activeSection, activeSlotIdx);
 }
