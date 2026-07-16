@@ -83,6 +83,7 @@ h1{font-size:1.3rem;font-weight:700;margin-bottom:18px;color:#fff}
 .cat-열매{background:#388e3c;color:#fff}
 .cat-메가스톤{background:#6a1b9a;color:#fff}
 .cat-전용도구{background:#bf360c;color:#fff}
+.cat-진화{background:#f9a825;color:#000}
 .cat-볼{background:#00838f;color:#fff}
 .cat-기타{background:#546e7a;color:#fff}
 
@@ -197,7 +198,7 @@ let activeTab = '전체';
 let championsOnly = false;
 
 // ── 탭 정의 ──
-const TABS = ['전체','지닌도구','열매','메가스톤','전용도구','볼','기타'];
+const TABS = ['전체','지닌도구','열매','메가스톤','전용도구','진화','볼','기타'];
 
 // 탭별 카테고리 집합
 const TAB_CATS = {
@@ -205,15 +206,16 @@ const TAB_CATS = {
     'bad-held-items','in-a-pinch']),
   '메가스톤': new Set(['mega-stones']),
   '전용도구': new Set(['plates','memories','species-specific','z-crystals']),
+  '진화':    new Set(['evolution']),
   '볼':      new Set(['standard-balls','special-balls','apricorn-balls']),
   '기타':    new Set(['scarves','stat-boosts','effort-training','effort-drop','training','flutes','pp-recovery',
     'spelunking','healing','medicine','picky-healing','revival',
-    'status-cures','vitamins','fossil','for-sell','other','evolution']),
+    'status-cures','vitamins','fossil','for-sell','other']),
 };
 
-// 아이템이 속하는 탭 반환 (열매 우선)
+// 아이템이 속하는 탭 반환 (열매 우선, 단 나무열매쥬스는 회복아이템이라 제외 → 기타)
 function getItemTab(item) {
-  if ((item.ko || '').includes('열매')) return '열매';
+  if ((item.ko || '').includes('열매') && item.en !== 'berry_juice') return '열매';
   for (const [tab, cats] of Object.entries(TAB_CATS)) {
     if (cats.has(item.category)) return tab;
   }
@@ -372,7 +374,7 @@ function render() {
 
 function buildItemCard(it) {
   const tab    = getItemTab(it);
-  const catKo  = (it.ko || '').includes('열매') ? '열매' : (CAT_KO[it.category] || it.category);
+  const catKo  = ((it.ko || '').includes('열매') && it.en !== 'berry_juice') ? '열매' : (CAT_KO[it.category] || it.category);
   const sprite = it.sprite
     ? `<img class="item-sprite" src="${it.sprite}" alt="${it.ko}" onerror="this.style.opacity=0.2">`
     : `<div class="item-sprite-placeholder"></div>`;
