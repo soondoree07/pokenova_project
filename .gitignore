@@ -16,3 +16,8 @@ data/verify_result.json
 preview_items.html
 item_icons_qa.html
 .name_cache/
+
+# 한 번 만들고 아무 데서도 안 쓰는 구조 정리 문서 (2026-04-06 생성).
+# 코드·문서 어디에서도 참조하지 않고 값도 낡았다 — 특성 308(실제 313)·기술폭 1286(실제 1285).
+# 구조 설명은 CLAUDE.md 가 최신이다.
+pokenova_structure.json
