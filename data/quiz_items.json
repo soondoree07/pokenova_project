@@ -2287,8 +2287,8 @@
     "desc_lang": "ko",
     "sprite": "sprites/items/master__sprites__items__stick.png",
     "category": "species-specific",
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "hold_item",
     "ja": "ながねぎ"
   },
   {
@@ -4528,8 +4528,8 @@
     "desc_lang": "ko",
     "sprite": "sprites/items/bulba__rocky_helmet.png",
     "category": "held-items",
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "hold_item",
     "ja": "ゴツゴツメット"
   },
   {
@@ -4540,8 +4540,8 @@
     "desc_lang": "ko",
     "sprite": "sprites/items/bulba__air_balloon.png",
     "category": "held-items",
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "hold_item",
     "ja": "ふうせん"
   },
   {
@@ -4552,8 +4552,8 @@
     "desc_lang": "ko",
     "sprite": "sprites/items/bulba__red_card.png",
     "category": "held-items",
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "hold_item",
     "ja": "レッドカード"
   },
   {
@@ -4576,8 +4576,8 @@
     "desc_lang": "ko",
     "sprite": "sprites/items/bulba__binding_band.png",
     "category": "held-items",
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "hold_item",
     "ja": "しめつけバンド"
   },
   {
@@ -4612,8 +4612,8 @@
     "desc_lang": "ko",
     "sprite": "sprites/items/bulba__eject_button.png",
     "category": "held-items",
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "hold_item",
     "ja": "だっしゅつボタン"
   },
   {
@@ -4960,8 +4960,8 @@
     "desc_lang": "ko",
     "sprite": "sprites/items/bulba__normal_gem.png",
     "category": "jewels",
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "hold_item",
     "ja": "ノーマルジュエル"
   },
   {
@@ -5890,8 +5890,8 @@
     "mega_ko": "메가보만다",
     "mega_en": "salamence_mega",
     "base_id": 373,
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "mega_stone",
     "ja": "ボーマンダナイト"
   },
   {
@@ -6361,8 +6361,8 @@
     "desc_lang": "ko",
     "sprite": "sprites/items/bulba__terrain_extender.png",
     "category": "held-items",
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "hold_item",
     "ja": "グランドコート"
   },
   {
@@ -6385,8 +6385,8 @@
     "desc_lang": "ko",
     "sprite": "sprites/items/bulba__electric_seed.png",
     "category": "held-items",
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "hold_item",
     "ja": "エレキシード"
   },
   {
@@ -6397,8 +6397,8 @@
     "desc_lang": "ko",
     "sprite": "sprites/items/bulba__psychic_seed.png",
     "category": "held-items",
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "hold_item",
     "ja": "サイコシード"
   },
   {
@@ -6409,8 +6409,8 @@
     "desc_lang": "ko",
     "sprite": "sprites/items/bulba__misty_seed.png",
     "category": "held-items",
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "hold_item",
     "ja": "ミストシード"
   },
   {
@@ -6421,8 +6421,8 @@
     "desc_lang": "ko",
     "sprite": "sprites/items/bulba__grassy_seed.png",
     "category": "held-items",
-    "in_champions": false,
-    "champions_category": null,
+    "in_champions": true,
+    "champions_category": "hold_item",
     "ja": "グラスシード"
   },
   {
@@ -8102,9 +8102,9 @@
     "mega_ko": "메가앱솔 Z",
     "mega_en": "absol_mega_z",
     "base_id": 359,
-    "in_champions": false,
-    "champions_category": null,
-    "ja": "なんごくかいがら"
+    "in_champions": true,
+    "champions_category": "mega_stone",
+    "ja": "アブソルナイトZ"
   },
   {
     "id": 1033,
@@ -8132,9 +8132,9 @@
     "mega_ko": "메가한카리아스 Z",
     "mega_en": "garchomp_mega_z",
     "base_id": 445,
-    "in_champions": false,
-    "champions_category": null,
-    "ja": "このはのおてがみ"
+    "in_champions": true,
+    "champions_category": "mega_stone",
+    "ja": "ガブリアスナイトZ"
   },
   {
     "id": 1035,
@@ -8147,9 +8147,9 @@
     "mega_ko": "메가루카리오 Z",
     "mega_en": "lucario_mega_z",
     "base_id": 448,
-    "in_champions": false,
-    "champions_category": null,
-    "ja": "ちいさなはなたば"
+    "in_champions": true,
+    "champions_category": "mega_stone",
+    "ja": "ルカリオナイトZ"
   },
   {
     "id": 1036,
@@ -8207,9 +8207,9 @@
     "mega_ko": "메가갑주무사",
     "mega_en": "golisopod_mega",
     "base_id": 768,
-    "in_champions": false,
-    "champions_category": null,
-    "ja": "ニビあられ"
+    "in_champions": true,
+    "champions_category": "mega_stone",
+    "ja": "グソクムシャナイト"
   },
   {
     "id": 1040,
@@ -8252,9 +8252,9 @@
     "mega_ko": "메가드닐레이브",
     "mega_en": "baxcalibur_mega",
     "base_id": 998,
-    "in_champions": false,
-    "champions_category": null,
-    "ja": "まもりのアメ"
+    "in_champions": true,
+    "champions_category": "mega_stone",
+    "ja": "セグレイブナイト"
   },
   {
     "id": 1043,
