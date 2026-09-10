@@ -15924,7 +15924,7 @@
     "pokemon": "이상해꽃",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_vine_lash"
+    "ja": "キョダイベンタツ"
   },
   {
     "id": 921,
@@ -15944,7 +15944,7 @@
     "pokemon": "리자몽",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_wildfire"
+    "ja": "キョダイゴクエン"
   },
   {
     "id": 922,
@@ -15964,7 +15964,7 @@
     "pokemon": "거북왕",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_cannonade"
+    "ja": "キョダイホウゲキ"
   },
   {
     "id": 923,
@@ -15984,7 +15984,7 @@
     "pokemon": "버터플",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_befuddle"
+    "ja": "キョダイコワク"
   },
   {
     "id": 924,
@@ -16004,7 +16004,7 @@
     "pokemon": "피카츄",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_volt_crash"
+    "ja": "キョダイバンライ"
   },
   {
     "id": 925,
@@ -16024,7 +16024,7 @@
     "pokemon": "페르시온",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_gold_rush"
+    "ja": "キョダイコバン"
   },
   {
     "id": 926,
@@ -16044,7 +16044,7 @@
     "pokemon": "괴력몬",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_chi_strike"
+    "ja": "キョダイシンゲキ"
   },
   {
     "id": 927,
@@ -16064,7 +16064,7 @@
     "pokemon": "팬텀",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_terror"
+    "ja": "キョダイゲンエイ"
   },
   {
     "id": 928,
@@ -16084,7 +16084,7 @@
     "pokemon": "킹드라",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_foam_burst"
+    "ja": "キョダイホウマツ"
   },
   {
     "id": 929,
@@ -16104,7 +16104,7 @@
     "pokemon": "라프라스",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_resonance"
+    "ja": "キョダイセンリツ"
   },
   {
     "id": 930,
@@ -16124,7 +16124,7 @@
     "pokemon": "이브이",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_cuddle"
+    "ja": "キョダイホーヨー"
   },
   {
     "id": 931,
@@ -16144,7 +16144,7 @@
     "pokemon": "잠만보",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_replenish"
+    "ja": "キョダイサイセイ"
   },
   {
     "id": 932,
@@ -16164,7 +16164,7 @@
     "pokemon": "더스트나",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_malodor"
+    "ja": "キョダイシュウキ"
   },
   {
     "id": 933,
@@ -16184,7 +16184,7 @@
     "pokemon": "멜메탈",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_meltdown"
+    "ja": "キョダイユウゲキ"
   },
   {
     "id": 934,
@@ -16204,7 +16204,7 @@
     "pokemon": "고릴타",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_drum_solo"
+    "ja": "キョダイコランダ"
   },
   {
     "id": 935,
@@ -16224,7 +16224,7 @@
     "pokemon": "에이스번",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_fireball"
+    "ja": "キョダイカキュウ"
   },
   {
     "id": 936,
@@ -16244,7 +16244,7 @@
     "pokemon": "인텔리레온",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_hydrosnipe"
+    "ja": "キョダイソゲキ"
   },
   {
     "id": 937,
@@ -16264,7 +16264,7 @@
     "pokemon": "아머까오",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_wind_rage"
+    "ja": "キョダイフウゲキ"
   },
   {
     "id": 938,
@@ -16284,7 +16284,7 @@
     "pokemon": "스트린더",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_gravitas"
+    "ja": "キョダイテンドウ"
   },
   {
     "id": 939,
@@ -16304,7 +16304,7 @@
     "pokemon": "대왕끼리동",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_stonesurge"
+    "ja": "キョダイガンジン"
   },
   {
     "id": 940,
@@ -16324,7 +16324,7 @@
     "pokemon": "석탄산",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_volcalith"
+    "ja": "キョダイフンセキ"
   },
   {
     "id": 941,
@@ -16344,7 +16344,7 @@
     "pokemon": "플라프나",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_tartness"
+    "ja": "キョダイサンゲキ"
   },
   {
     "id": 942,
@@ -16364,7 +16364,7 @@
     "pokemon": "아마갓사",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_sweetness"
+    "ja": "キョダイカンロ"
   },
   {
     "id": 943,
@@ -16384,7 +16384,7 @@
     "pokemon": "사다이사",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_sandblast"
+    "ja": "キョダイサジン"
   },
   {
     "id": 944,
@@ -16404,7 +16404,7 @@
     "pokemon": "스트린더",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_stun_shock"
+    "ja": "キョダイカンデン"
   },
   {
     "id": 945,
@@ -16424,7 +16424,7 @@
     "pokemon": "왕지네",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_centiferno"
+    "ja": "キョダイヒャッカ"
   },
   {
     "id": 946,
@@ -16444,7 +16444,7 @@
     "pokemon": "해터렘",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_smite"
+    "ja": "キョダイテンバツ"
   },
   {
     "id": 947,
@@ -16464,7 +16464,7 @@
     "pokemon": "브리무온",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_snooze"
+    "ja": "キョダイスイマ"
   },
   {
     "id": 948,
@@ -16484,7 +16484,7 @@
     "pokemon": "마휘핑",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_finale"
+    "ja": "キョダイダンエン"
   },
   {
     "id": 949,
@@ -16504,7 +16504,7 @@
     "pokemon": "코뿌리",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_steelsurge"
+    "ja": "キョダイコウジン"
   },
   {
     "id": 950,
@@ -16524,7 +16524,7 @@
     "pokemon": "두랄루돈",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_depletion"
+    "ja": "キョダイゲンスイ"
   },
   {
     "id": 951,
@@ -16544,7 +16544,7 @@
     "pokemon": "우라오스 (일격)",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_one_blow"
+    "ja": "キョダイイチゲキ"
   },
   {
     "id": 952,
@@ -16564,6 +16564,6 @@
     "pokemon": "우라오스 (연격)",
     "contact": false,
     "in_champions": false,
-    "ja": "g_max_rapid_flow"
+    "ja": "キョダイレンゲキ"
   }
 ]

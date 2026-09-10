@@ -12,18 +12,20 @@
   → 지금은 **이름(슬러그)으로** 묻는다. 번호로 묻는 곳은 포켓몬뿐인데,
     포켓몬은 우리 id 가 곧 전국도감 번호이고 PokeAPI species 번호와 같다(확인함).
 
-출처 두 곳을 대조한다
-  PokeAPI    공식 게임 텍스트. 여기에 값이 있으면 이것을 쓴다
-  포켓몬위키  PokeAPI 에 없는 것(챔피언스 신규 메가스톤 34종)을 채우고,
-             값이 바뀌는 항목을 한 번 더 확인하는 용도
+출처 세 곳을 순서대로 본다
+  PokeAPI     공식 게임 텍스트. 여기에 값이 있으면 이것을 쓴다
+  포켓몬위키   PokeAPI 에 없는 것(챔피언스 신규 메가스톤 34종)을 채우고,
+              값이 바뀌는 항목을 한 번 더 확인하는 용도
+  Bulbapedia  앞의 두 곳에 아예 없을 때만. 지금은 **거다이맥스 기술 33종**뿐이다 —
+              PokeAPI 기술 목록에 거다이맥스 기술이 없고(맥스 기술만 있다)
+              포켓몬위키에도 기술별 문서가 없다. 문서를 잘못 짚지 않도록
+              그 문서의 영어 이름(`|name=`)이 기대와 같은지 확인하고 쓴다
   둘이 다르면 **PokeAPI 를 쓰고 불일치를 화면에 남긴다.** 실측해 보니 어긋난
   세 건(달콤한꿀·꿀맛사과·녹슨방패)이 전부 위키 쪽 문제였다 — 문서 첫 줄 서식이
   달라 잘못 끊기거나(달콤한꿀·꿀맛사과), 아예 다른 도구 이름이 적혀 있었다(녹슨방패).
   PokeAPI 가 틀린 것이 확인되면 WIKI_OVERRIDE 에 그 항목만 적는다.
 
-어느 쪽에도 없으면 **건드리지 않고 보고한다.** 이름을 지어내지 않는다.
-거다이맥스 기술 33종이 그렇다 — PokeAPI 에 항목이 없고(맥스 기술만 있다)
-포켓몬위키에도 기술별 문서가 없어서, 일본어 이름을 넣을 근거가 아직 없다.
+어느 곳에도 없으면 **건드리지 않고 보고한다.** 이름을 지어내지 않는다.
 """
 import json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 
@@ -82,6 +84,49 @@ def pokeapi_ja(data):
     return text.strip() if text else None
 
 
+BULBA_NAME = re.compile(r'\|\s*name\s*=\s*([^\n|]+)')
+BULBA_JNAME = re.compile(r'\|\s*jname\s*=\s*([^\n|]+)')
+
+
+def bulba_ja(title, expected_name):
+    """Bulbapedia 문서의 일본어 이름. 문서의 영어 이름이 기대와 다르면 None.
+
+    리다이렉트를 따라가다 엉뚱한 문서에 닿을 수 있어서, 값을 쓰기 전에
+    그 문서가 정말 그 기술인지 확인한다."""
+    def fetch():
+        params = urllib.parse.urlencode({
+            'action': 'query', 'prop': 'revisions', 'rvprop': 'content',
+            'rvslots': 'main', 'format': 'json', 'titles': title, 'redirects': '1'})
+        req = urllib.request.Request(
+            f'https://bulbapedia.bulbagarden.net/w/api.php?{params}',
+            headers={'User-Agent': 'pokenova/1.0 (personal fan tool)'})
+        body = json.loads(urllib.request.urlopen(req, timeout=25).read().decode())
+        for key, page in body['query']['pages'].items():
+            if key == '-1':
+                return None
+            return page['revisions'][0]['slots']['main']['*']
+        return None
+    text = _cached(f'bulba__{title}', fetch)
+    if not text:
+        return None
+    name = BULBA_NAME.search(text)
+    if not name or name.group(1).strip() != expected_name:
+        return None
+    jname = BULBA_JNAME.search(text)
+    return jname.group(1).strip() if jname else None
+
+
+def gmax_move_title(row):
+    """거다이맥스 기술만 Bulbapedia 로 간다. 나머지는 앞의 두 출처로 충분하다.
+
+    g_max_vine_lash -> ("G-Max Vine Lash (move)", "G-Max Vine Lash")"""
+    words = row['en'].split('_')
+    if words[:2] != ['g', 'max']:
+        return None
+    name = 'G-Max ' + ' '.join(w.capitalize() for w in words[2:])
+    return f'{name} (move)', name
+
+
 WIKI_PATTERNS = (
     re.compile(r'\|\s*일칭\s*=\s*([^|\n}]+)'),          # 특성·기술 정보상자
     re.compile(r'\(\s*일\s*:\s*(.+?)\s*(?:,|\)|영\s*:)'),  # 도구 문서 첫 줄
@@ -112,8 +157,8 @@ def wiki_ja(title):
     return None
 
 
-def resolve(row, api_data):
-    """PokeAPI 와 위키를 대조해 최종 이름과 사유를 돌려준다."""
+def resolve(row, api_data, fallback=None):
+    """세 출처를 대조해 최종 이름과 사유를 돌려준다."""
     api = pokeapi_ja(api_data)
     current = (row.get('ja') or '').strip()
     # 값이 그대로면 굳이 위키까지 묻지 않는다 (요청 수를 줄인다)
@@ -124,17 +169,27 @@ def resolve(row, api_data):
         if row['en'] in WIKI_OVERRIDE:
             return wiki, f"{row['ko']} 불일치 — PokeAPI {api!r} / 위키 {wiki!r} → 위키 채택(확인함)"
         return api, f"{row['ko']} 불일치 — PokeAPI {api!r} / 위키 {wiki!r} → PokeAPI 채택"
-    return (api or wiki), None
+    if api or wiki:
+        return (api or wiki), None
+    # 앞의 두 곳에 아예 없을 때만 Bulbapedia 를 본다
+    target = fallback(row) if fallback else None
+    if not target:
+        return None, None
+    title, expected = target
+    found = bulba_ja(title, expected)
+    if not found:
+        return None, None
+    return found, f"{row['ko']} — 앞의 두 출처에 없어 Bulbapedia({title})에서 받음"
 
 
-def run(kind, filename, slug_of):
+def run(kind, filename, slug_of, fallback=None):
     path = os.path.join(DATA, filename)
     rows = json.load(open(path, encoding='utf-8'))
     changed, missing, notes = [], [], []
     for row in rows:
         slug = slug_of(row)
         api_data = pokeapi(kind, slug) if slug else None
-        name, note = resolve(row, api_data)
+        name, note = resolve(row, api_data, fallback)
         if note:
             notes.append(note)
         if not name:
@@ -150,7 +205,7 @@ TARGETS = {
     # 포켓몬만 번호로 묻는다. 우리 id = 전국도감 번호 = PokeAPI species 번호.
     'pokemon': ('pokemon-species', 'quiz_pokemon.json',
                 lambda r: str(r['id']) if r['id'] <= 1025 else None),
-    'moves': ('move', 'quiz_moves.json', lambda r: MOVE_SLUG.get(r['en'], to_slug(r['en']))),
+    'moves': ('move', 'quiz_moves.json', lambda r: MOVE_SLUG.get(r['en'], to_slug(r['en'])), gmax_move_title),
     'items': ('item', 'quiz_items.json',
               lambda r: ITEM_SLUG.get(r['en'], to_slug(r['en']))),
     'abilities': ('ability', 'quiz_abilities.json',
@@ -163,8 +218,8 @@ def main():
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
     check_only = '--check' in sys.argv
     for target in (args or TARGETS):
-        kind, filename, slug_of = TARGETS[target]
-        rows, path, changed, missing, notes = run(kind, filename, slug_of)
+        kind, filename, slug_of, *rest = TARGETS[target]
+        rows, path, changed, missing, notes = run(kind, filename, slug_of, rest[0] if rest else None)
         print(f'\n[{target}] {len(rows)}개 — 바뀜 {len(changed)} · 못 찾음 {len(missing)}')
         for ko, before, after in changed:
             print(f'   {ko}: {before!r} -> {after!r}')
