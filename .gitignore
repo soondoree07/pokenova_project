@@ -21,3 +21,7 @@ item_icons_qa.html
 # 코드·문서 어디에서도 참조하지 않고 값도 낡았다 — 특성 308(실제 313)·기술폭 1286(실제 1285).
 # 구조 설명은 CLAUDE.md 가 최신이다.
 pokenova_structure.json
+
+# 파이썬 바이트코드 (import 로 스크립트를 부르면 생긴다)
+__pycache__/
+*.pyc
