@@ -1029,7 +1029,9 @@
     "category": "medicine",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "クラボのみ"
+    "ja": "クラボのみ",
+    "desc_en": "A Berry to be consumed by Pokémon. If a Pokémon holds one, it can recover from paralysis on its own in battle.",
+    "desc_ja": "ポケモンに 持たせると まひを 回復する。"
   },
   {
     "id": 127,
@@ -1041,7 +1043,9 @@
     "category": "medicine",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "カゴのみ"
+    "ja": "カゴのみ",
+    "desc_en": "A Berry to be consumed by Pokémon. If a Pokémon holds one, it can recover from sleep on its own in battle.",
+    "desc_ja": "ポケモンに 持たせると 眠りを 回復する。"
   },
   {
     "id": 128,
@@ -1053,7 +1057,9 @@
     "category": "medicine",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "モモンのみ"
+    "ja": "モモンのみ",
+    "desc_en": "A Berry to be consumed by Pokémon. If a Pokémon holds one, it can recover from poisoning on its own in battle.",
+    "desc_ja": "ポケモンに 持たせると 毒を 回復する。"
   },
   {
     "id": 129,
@@ -1065,7 +1071,9 @@
     "category": "medicine",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "チーゴのみ"
+    "ja": "チーゴのみ",
+    "desc_en": "A Berry to be consumed by Pokémon. If a Pokémon holds one, it can recover from a burn on its own in battle.",
+    "desc_ja": "ポケモンに 持たせると やけどを 回復する。"
   },
   {
     "id": 130,
@@ -1077,7 +1085,9 @@
     "category": "medicine",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "ナナシのみ"
+    "ja": "ナナシのみ",
+    "desc_en": "A Berry to be consumed by Pokémon. If a Pokémon holds one, it can recover from being frozen on its own in battle.",
+    "desc_ja": "ポケモンに 持たせると こおりを 回復する。"
   },
   {
     "id": 131,
@@ -1089,7 +1099,9 @@
     "category": "medicine",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "ヒメリのみ"
+    "ja": "ヒメリのみ",
+    "desc_en": "A Berry to be consumed by Pokémon. If a Pokémon holds one, it can restore 10 PP to a depleted move during battle.",
+    "desc_ja": "ポケモンに 持たせると ＰＰを １０だけ 回復する。"
   },
   {
     "id": 132,
@@ -1101,7 +1113,9 @@
     "category": "medicine",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "オレンのみ"
+    "ja": "オレンのみ",
+    "desc_en": "A Berry to be consumed by Pokémon. If a Pokémon holds one, it can restore its own HP by 10 points during battle.",
+    "desc_ja": "ポケモンに 持たせると ＨＰを １０だけ 回復する。"
   },
   {
     "id": 133,
@@ -1113,7 +1127,9 @@
     "category": "medicine",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "キーのみ"
+    "ja": "キーのみ",
+    "desc_en": "A Berry to be consumed by Pokémon. If a Pokémon holds one, it can recover from confusion on its own in battle.",
+    "desc_ja": "ポケモンに 持たせると 混乱を 回復する。"
   },
   {
     "id": 134,
@@ -1125,7 +1141,9 @@
     "category": "medicine",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "ラムのみ"
+    "ja": "ラムのみ",
+    "desc_en": "A Berry to be consumed by Pokémon. If a Pokémon holds one, it can recover from any status condition during battle.",
+    "desc_ja": "ポケモンに 持たせると すべての 状態異常を 回復する。"
   },
   {
     "id": 135,
@@ -1137,7 +1155,9 @@
     "category": "medicine",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "オボンのみ"
+    "ja": "オボンのみ",
+    "desc_en": "A Berry to be consumed by Pokémon. If a Pokémon holds one, it can restore its own HP by a small amount during battle.",
+    "desc_ja": "ポケモンに 持たせると ＨＰを 少しだけ 回復する。"
   },
   {
     "id": 136,
@@ -1281,7 +1301,9 @@
     "category": "type-protection",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "オッカのみ"
+    "ja": "オッカのみ",
+    "desc_en": "If held by a Pokémon, this Berry will lessen the damage taken from one supereffective Fire-type attack.",
+    "desc_ja": "ポケモンに 持たせると 効果バツグンの ほのお技を 受けたとき 威力が 弱まる。"
   },
   {
     "id": 162,
@@ -1293,7 +1315,9 @@
     "category": "type-protection",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "イトケのみ"
+    "ja": "イトケのみ",
+    "desc_en": "If held by a Pokémon, this Berry will lessen the damage taken from one supereffective Water-type attack.",
+    "desc_ja": "ポケモンに 持たせると 効果バツグンの みず技を 受けたとき 威力が 弱まる。"
   },
   {
     "id": 163,
@@ -1305,7 +1329,9 @@
     "category": "type-protection",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "ソクノのみ"
+    "ja": "ソクノのみ",
+    "desc_en": "If held by a Pokémon, this Berry will lessen the damage taken from one supereffective Electric-type attack.",
+    "desc_ja": "ポケモンに 持たせると 効果バツグンの でんき技を 受けたとき 威力が 弱まる。"
   },
   {
     "id": 164,
@@ -1317,7 +1343,9 @@
     "category": "type-protection",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "リンドのみ"
+    "ja": "リンドのみ",
+    "desc_en": "If held by a Pokémon, this Berry will lessen the damage taken from one supereffective Grass-type attack.",
+    "desc_ja": "ポケモンに 持たせると 効果バツグンの くさ技を 受けたとき 威力が 弱まる。"
   },
   {
     "id": 165,
@@ -1329,7 +1357,9 @@
     "category": "type-protection",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "ヤチェのみ"
+    "ja": "ヤチェのみ",
+    "desc_en": "If held by a Pokémon, this Berry will lessen the damage taken from one supereffective Ice-type attack.",
+    "desc_ja": "ポケモンに 持たせると 効果バツグンの こおり技を 受けたとき 威力が 弱まる。"
   },
   {
     "id": 166,
@@ -1341,7 +1371,9 @@
     "category": "type-protection",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "ヨプのみ"
+    "ja": "ヨプのみ",
+    "desc_en": "If held by a Pokémon, this Berry will lessen the damage taken from one supereffective Fighting-type attack.",
+    "desc_ja": "ポケモンに 持たせると 効果バツグンの かくとう技を 受けたとき 威力が 弱まる。"
   },
   {
     "id": 167,
@@ -1353,7 +1385,9 @@
     "category": "type-protection",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "ビアーのみ"
+    "ja": "ビアーのみ",
+    "desc_en": "If held by a Pokémon, this Berry will lessen the damage taken from one supereffective Poison-type attack.",
+    "desc_ja": "ポケモンに 持たせると 効果バツグンの どく技を 受けたとき 威力が 弱まる。"
   },
   {
     "id": 168,
@@ -1365,7 +1399,9 @@
     "category": "type-protection",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "シュカのみ"
+    "ja": "シュカのみ",
+    "desc_en": "If held by a Pokémon, this Berry will lessen the damage taken from one supereffective Ground-type attack.",
+    "desc_ja": "ポケモンに 持たせると 効果バツグンの じめん技を 受けたとき 威力が 弱まる。"
   },
   {
     "id": 169,
@@ -1377,7 +1413,9 @@
     "category": "type-protection",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "バコウのみ"
+    "ja": "バコウのみ",
+    "desc_en": "If held by a Pokémon, this Berry will lessen the damage taken from one supereffective Flying-type attack.",
+    "desc_ja": "ポケモンに 持たせると 効果バツグンの ひこう技を 受けたとき 威力が 弱まる。"
   },
   {
     "id": 170,
@@ -1389,7 +1427,9 @@
     "category": "type-protection",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "ウタンのみ"
+    "ja": "ウタンのみ",
+    "desc_en": "If held by a Pokémon, this Berry will lessen the damage taken from one supereffective Psychic-type attack.",
+    "desc_ja": "ポケモンに 持たせると 効果バツグンの エスパー技を 受けたとき 威力が 弱まる。"
   },
   {
     "id": 171,
@@ -1401,7 +1441,9 @@
     "category": "type-protection",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "タンガのみ"
+    "ja": "タンガのみ",
+    "desc_en": "If held by a Pokémon, this Berry will lessen the damage taken from one supereffective Bug-type attack.",
+    "desc_ja": "ポケモンに 持たせると 効果バツグンの むし技を 受けたとき 威力が 弱まる。"
   },
   {
     "id": 172,
@@ -1413,7 +1455,9 @@
     "category": "type-protection",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "ヨロギのみ"
+    "ja": "ヨロギのみ",
+    "desc_en": "If held by a Pokémon, this Berry will lessen the damage taken from one supereffective Rock-type attack.",
+    "desc_ja": "ポケモンに 持たせると 効果バツグンの いわ技を 受けたとき 威力が 弱まる。"
   },
   {
     "id": 173,
@@ -1425,7 +1469,9 @@
     "category": "type-protection",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "カシブのみ"
+    "ja": "カシブのみ",
+    "desc_en": "If held by a Pokémon, this Berry will lessen the damage taken from one supereffective Ghost-type attack.",
+    "desc_ja": "ポケモンに 持たせると 効果バツグンの ゴースト技を 受けたとき 威力が 弱まる。"
   },
   {
     "id": 174,
@@ -1437,7 +1483,9 @@
     "category": "type-protection",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "ハバンのみ"
+    "ja": "ハバンのみ",
+    "desc_en": "If held by a Pokémon, this Berry will lessen the damage taken from one supereffective Dragon-type attack.",
+    "desc_ja": "ポケモンに 持たせると 効果バツグンの ドラゴン技を 受けたとき 威力が 弱まる。"
   },
   {
     "id": 175,
@@ -1449,7 +1497,9 @@
     "category": "type-protection",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "ナモのみ"
+    "ja": "ナモのみ",
+    "desc_en": "If held by a Pokémon, this Berry will lessen the damage taken from one supereffective Dark-type attack.",
+    "desc_ja": "ポケモンに 持たせると 効果バツグンの あく技を 受けたとき 威力が 弱まる。"
   },
   {
     "id": 176,
@@ -1461,7 +1511,9 @@
     "category": "type-protection",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "リリバのみ"
+    "ja": "リリバのみ",
+    "desc_en": "If held by a Pokémon, this Berry will lessen the damage taken from one supereffective Steel-type attack.",
+    "desc_ja": "ポケモンに 持たせると 効果バツグンの はがね技を 受けたとき 威力が 弱まる。"
   },
   {
     "id": 177,
@@ -1473,7 +1525,9 @@
     "category": "type-protection",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "ホズのみ"
+    "ja": "ホズのみ",
+    "desc_en": "If held by a Pokémon, this Berry will lessen the damage taken from one Normal-type attack.",
+    "desc_ja": "ポケモンに 持たせると ノーマル技を 受けたとき 威力が 弱まる。"
   },
   {
     "id": 178,
@@ -1633,7 +1687,9 @@
       "effect": "evasion_down",
       "desc_ko": "상대 명중률 하락"
     },
-    "ja": "ひかりのこな"
+    "ja": "ひかりのこな",
+    "desc_en": "An item to be held by a Pokémon. It casts a tricky glare that lowers the opposing Pokémon’s accuracy.",
+    "desc_ja": "キラキラ 光る粉。 持たせると 光が 相手を 惑わして 技が 命中しにくくなる。"
   },
   {
     "id": 191,
@@ -1649,7 +1705,9 @@
       "effect": "restore_lowered_once",
       "desc_ko": "하락한 능력 회복 (1회)"
     },
-    "ja": "しろいハーブ"
+    "ja": "しろいハーブ",
+    "desc_en": "An item to be held by a Pokémon. It will restore any lowered stat in battle. It can be used only once.",
+    "desc_ja": "持たせた ポケモンの 能力が さがったとき １度だけ もとの 状態に 戻す。"
   },
   {
     "id": 192,
@@ -1689,7 +1747,9 @@
       "effect": "priority_chance",
       "desc_ko": "낮은 확률로 먼저 행동"
     },
-    "ja": "せんせいのツメ"
+    "ja": "せんせいのツメ",
+    "desc_en": "An item to be held by a Pokémon. This light, sharp claw lets the bearer move first occasionally.",
+    "desc_ja": "軽くて 鋭い ツメ。 持たせると 相手より 先に 行動できることが ある。"
   },
   {
     "id": 195,
@@ -1717,7 +1777,9 @@
       "effect": "cure_attraction",
       "desc_ko": "속박/집착 해소 (1회)"
     },
-    "ja": "メンタルハーブ"
+    "ja": "メンタルハーブ",
+    "desc_en": "An item to be held by a Pokémon. The holder shakes off move-binding effects to move freely. It can be used only once.",
+    "desc_ja": "持たせた ポケモンが 自由に 技を だせなくなったときに １度だけ 回復する。"
   },
   {
     "id": 197,
@@ -1745,7 +1807,9 @@
       "effect": "flinch_chance",
       "desc_ko": "공격 시 낮은 확률로 풀죽음"
     },
-    "ja": "おうじゃのしるし"
+    "ja": "おうじゃのしるし",
+    "desc_en": "An item to be held by a Pokémon. When the holder successfully inflicts damage, the target may also flinch.",
+    "desc_ja": "持たせると 攻撃して ダメージを 与えたときに 相手を ひるませることが ある。"
   },
   {
     "id": 199,
@@ -1761,7 +1825,9 @@
       "type_boost": "bug",
       "multiplier": 1.2
     },
-    "ja": "ぎんのこな"
+    "ja": "ぎんのこな",
+    "desc_en": "An item to be held by a Pokémon. It’s a shiny silver powder that will boost the power of Bug-type moves.",
+    "desc_ja": "銀色に 輝く 粉。 持たせると むしタイプの 技の 威力が あがる。"
   },
   {
     "id": 200,
@@ -1861,7 +1927,9 @@
       "effect": "endure_chance",
       "desc_ko": "빈사 시 낮은 확률로 HP 1 유지"
     },
-    "ja": "きあいのハチマキ"
+    "ja": "きあいのハチマキ",
+    "desc_en": "An item to be held by a Pokémon. The holder may endure a potential KO attack, leaving it with just 1 HP.",
+    "desc_ja": "持たせると ひんしに なりそうな 技を 受けても ＨＰを １だけ 残して 耐えることが ある。"
   },
   {
     "id": 208,
@@ -1889,7 +1957,9 @@
       "effect": "crit_rate_up1",
       "desc_ko": "급소율 +1단계"
     },
-    "ja": "ピントレンズ"
+    "ja": "ピントレンズ",
+    "desc_en": "An item to be held by a Pokémon. It’s a lens for scoping out weak points. It boosts the holder’s critical-hit ratio.",
+    "desc_ja": "弱点が みえる レンズ。 持たせた ポケモンの 技が 急所に 当たりやすくなる。"
   },
   {
     "id": 210,
@@ -1905,7 +1975,9 @@
       "type_boost": "steel",
       "multiplier": 1.2
     },
-    "ja": "メタルコート"
+    "ja": "メタルコート",
+    "desc_en": "An item to be held by a Pokémon. It’s a special metallic film that can boost the power of Steel-type moves.",
+    "desc_ja": "特殊な 金属の 膜。 持たせると はがねタイプの 技の 威力が あがる。"
   },
   {
     "id": 211,
@@ -1921,7 +1993,9 @@
       "effect": "heal_1_16",
       "desc_ko": "매 턴 최대 HP 1/16 회복"
     },
-    "ja": "たべのこし"
+    "ja": "たべのこし",
+    "desc_en": "An item to be held by a Pokémon. The holder’s HP is slowly but steadily restored throughout every battle.",
+    "desc_ja": "持たせると ポケモンの ＨＰが 戦闘の あいだ 少しずつ 回復する。"
   },
   {
     "id": 212,
@@ -1949,7 +2023,9 @@
       "effect": "pikachu_atk_spa_x2",
       "desc_ko": "피카츄 전용: 공격·특공 ×2"
     },
-    "ja": "でんきだま"
+    "ja": "でんきだま",
+    "desc_en": "An item to be held by Pikachu. It’s a puzzling orb that boosts its Attack and Sp. Atk stats.",
+    "desc_ja": "ピカチュウに 持たせると 攻撃と 特攻の 威力が あがる 不思議な 玉。"
   },
   {
     "id": 214,
@@ -1965,7 +2041,9 @@
       "type_boost": "ground",
       "multiplier": 1.2
     },
-    "ja": "やわらかいすな"
+    "ja": "やわらかいすな",
+    "desc_en": "An item to be held by a Pokémon. It’s a loose, silky sand that boosts the power of Ground-type moves.",
+    "desc_ja": "さわると サラサラする 砂。 持たせると じめんタイプの 技の 威力が あがる。"
   },
   {
     "id": 215,
@@ -1981,7 +2059,9 @@
       "type_boost": "rock",
       "multiplier": 1.2
     },
-    "ja": "かたいいし"
+    "ja": "かたいいし",
+    "desc_en": "An item to be held by a Pokémon. It’s a durable stone that boosts the power of Rock-type moves.",
+    "desc_ja": "絶対に 割れない 石。 持たせると いわタイプの 技の 威力が あがる。"
   },
   {
     "id": 216,
@@ -1997,7 +2077,9 @@
       "type_boost": "grass",
       "multiplier": 1.2
     },
-    "ja": "きせきのタネ"
+    "ja": "きせきのタネ",
+    "desc_en": "An item to be held by a Pokémon. It’s a seed imbued with life-force that boosts the power of Grass-type moves.",
+    "desc_ja": "生命が 宿る タネ。 持たせると くさタイプの 技の 威力が あがる。"
   },
   {
     "id": 217,
@@ -2013,7 +2095,9 @@
       "type_boost": "dark",
       "multiplier": 1.2
     },
-    "ja": "くろいメガネ"
+    "ja": "くろいメガネ",
+    "desc_en": "An item to be held by a Pokémon. It’s a pair of shady-looking glasses that boost the power of Dark-type moves.",
+    "desc_ja": "怪しく みえる メガネ。 持たせると あくタイプの 技の 威力が あがる。"
   },
   {
     "id": 218,
@@ -2029,7 +2113,9 @@
       "type_boost": "fighting",
       "multiplier": 1.2
     },
-    "ja": "くろおび"
+    "ja": "くろおび",
+    "desc_en": "An item to be held by a Pokémon. This belt helps the wearer to focus and boosts the power of Fighting-type moves.",
+    "desc_ja": "気が ひきしまる 帯。 持たせると かくとうタイプの 技の 威力が あがる。"
   },
   {
     "id": 219,
@@ -2045,7 +2131,9 @@
       "type_boost": "electric",
       "multiplier": 1.2
     },
-    "ja": "じしゃく"
+    "ja": "じしゃく",
+    "desc_en": "An item to be held by a Pokémon. It’s a powerful magnet that boosts the power of Electric-type moves.",
+    "desc_ja": "強力な 磁石。 持たせると でんきタイプの 技の 威力が あがる。"
   },
   {
     "id": 220,
@@ -2061,7 +2149,9 @@
       "type_boost": "water",
       "multiplier": 1.2
     },
-    "ja": "しんぴのしずく"
+    "ja": "しんぴのしずく",
+    "desc_en": "An item to be held by a Pokémon. This teardrop-shaped gem boosts the power of Water-type moves.",
+    "desc_ja": "しずくの 形の 宝石。 持たせると みずタイプの 技の 威力が あがる。"
   },
   {
     "id": 221,
@@ -2077,7 +2167,9 @@
       "type_boost": "flying",
       "multiplier": 1.2
     },
-    "ja": "するどいくちばし"
+    "ja": "するどいくちばし",
+    "desc_en": "An item to be held by a Pokémon. It’s a long, sharp beak that boosts the power of Flying-type moves.",
+    "desc_ja": "長く とがった くちばし。 持たせると ひこうタイプの 技の 威力が あがる。"
   },
   {
     "id": 222,
@@ -2093,7 +2185,9 @@
       "type_boost": "poison",
       "multiplier": 1.2
     },
-    "ja": "どくバリ"
+    "ja": "どくバリ",
+    "desc_en": "An item to be held by a Pokémon. This small, poisonous barb boosts the power of Poison-type moves.",
+    "desc_ja": "どくのある ちいさな ハリ。 持たせると どくタイプの 技の 威力が あがる。"
   },
   {
     "id": 223,
@@ -2109,7 +2203,9 @@
       "type_boost": "ice",
       "multiplier": 1.2
     },
-    "ja": "とけないこおり"
+    "ja": "とけないこおり",
+    "desc_en": "An item to be held by a Pokémon. It’s a heat- repelling piece of ice that boosts the power of Ice-type moves.",
+    "desc_ja": "熱を よせつけない 氷。 持たせると こおりタイプの 技の 威力が あがる。"
   },
   {
     "id": 224,
@@ -2125,7 +2221,9 @@
       "type_boost": "ghost",
       "multiplier": 1.2
     },
-    "ja": "のろいのおふだ"
+    "ja": "のろいのおふだ",
+    "desc_en": "An item to be held by a Pokémon. It’s a sinister, eerie tag that boosts the power of Ghost-type moves.",
+    "desc_ja": "怪しくて 不気味な お札。 持たせると ゴーストタイプの 技の 威力が あがる。"
   },
   {
     "id": 225,
@@ -2141,7 +2239,9 @@
       "type_boost": "psychic",
       "multiplier": 1.2
     },
-    "ja": "まがったスプーン"
+    "ja": "まがったスプーン",
+    "desc_en": "An item to be held by a Pokémon. This spoon is imbued with telekinetic power and boosts Psychic-type moves.",
+    "desc_ja": "念力を こめた スプーン。 持たせると エスパータイプの 技の 威力が あがる。"
   },
   {
     "id": 226,
@@ -2157,7 +2257,9 @@
       "type_boost": "fire",
       "multiplier": 1.2
     },
-    "ja": "もくたん"
+    "ja": "もくたん",
+    "desc_en": "An item to be held by a Pokémon. It’s a combustible fuel that boosts the power of Fire-type moves.",
+    "desc_ja": "ものを 燃やす 燃料。 持たせると ほのおタイプの 技の 威力が あがる。"
   },
   {
     "id": 227,
@@ -2173,7 +2275,9 @@
       "type_boost": "dragon",
       "multiplier": 1.2
     },
-    "ja": "りゅうのキバ"
+    "ja": "りゅうのキバ",
+    "desc_en": "An item to be held by a Pokémon. This hard and sharp fang boosts the power of Dragon-type moves.",
+    "desc_ja": "硬くて 鋭い キバ。 持たせると ドラゴンタイプの 技の 威力が あがる。"
   },
   {
     "id": 228,
@@ -2189,7 +2293,9 @@
       "type_boost": "normal",
       "multiplier": 1.2
     },
-    "ja": "シルクのスカーフ"
+    "ja": "シルクのスカーフ",
+    "desc_en": "An item to be held by a Pokémon. It’s a sumptuous scarf that boosts the power of Normal-type moves.",
+    "desc_ja": "はだざわりの よい スカーフ。 持たせると ノーマルタイプの 技の 威力が あがる。"
   },
   {
     "id": 229,
@@ -2217,7 +2323,9 @@
       "effect": "heal_1_8_dmg",
       "desc_ko": "준 데미지의 1/8 HP 회복"
     },
-    "ja": "かいがらのすず"
+    "ja": "かいがらのすず",
+    "desc_en": "An item to be held by a Pokémon. The holder restores a little HP every time it inflicts damage on others.",
+    "desc_ja": "持たせた ポケモンが 攻撃して 相手に ダメージを あたえたとき ＨＰを 少し 回復できる。"
   },
   {
     "id": 231,
@@ -2289,7 +2397,9 @@
     "category": "species-specific",
     "in_champions": true,
     "champions_category": "hold_item",
-    "ja": "ながねぎ"
+    "ja": "ながねぎ",
+    "desc_en": "An item to be held by Farfetch’d. This very long and stiff stalk of leek boosts its critical-hit ratio.",
+    "desc_ja": "とても 長くて 硬い クキ。 カモネギに 持たせると 技が 急所に 当たりやすくなる。"
   },
   {
     "id": 237,
@@ -2361,7 +2471,9 @@
     "category": "held-items",
     "in_champions": true,
     "champions_category": "hold_item",
-    "ja": "こうかくレンズ"
+    "ja": "こうかくレンズ",
+    "desc_en": "An item to be held by a Pokémon. It’s a magnifying lens that slightly boosts the accuracy of moves.",
+    "desc_ja": "ものが 大きく みえる レンズ。 持たせると 技の 命中率が 少し あがる。"
   },
   {
     "id": 243,
@@ -2373,7 +2485,9 @@
     "category": "held-items",
     "in_champions": true,
     "champions_category": "hold_item",
-    "ja": "ちからのハチマキ"
+    "ja": "ちからのハチマキ",
+    "desc_en": "An item to be held by a Pokémon. This headband exudes strength, slightly boosting the power of physical moves.",
+    "desc_ja": "ちからが わいてくる ハチマキ。 持たせると 物理技の 威力が 少し あがる。"
   },
   {
     "id": 244,
@@ -2385,7 +2499,9 @@
     "category": "held-items",
     "in_champions": true,
     "champions_category": "hold_item",
-    "ja": "ものしりメガネ"
+    "ja": "ものしりメガネ",
+    "desc_en": "An item to be held by a Pokémon. This thick pair of glasses slightly boosts the power of special moves.",
+    "desc_ja": "ぶあつい レンズの ついた メガネ。 持たせると 特殊技の 威力が 少し あがる。"
   },
   {
     "id": 245,
@@ -2397,7 +2513,9 @@
     "category": "held-items",
     "in_champions": true,
     "champions_category": "hold_item",
-    "ja": "たつじんのおび"
+    "ja": "たつじんのおび",
+    "desc_en": "An item to be held by a Pokémon. It’s a well-worn belt that slightly boosts the power of supereffective moves.",
+    "desc_ja": "使いこまれた 黒い 帯。 持たせると 効果バツグンの とき 技の 威力が 少し あがる。"
   },
   {
     "id": 246,
@@ -2409,7 +2527,9 @@
     "category": "held-items",
     "in_champions": true,
     "champions_category": "hold_item",
-    "ja": "ひかりのねんど"
+    "ja": "ひかりのねんど",
+    "desc_en": "An item to be held by a Pokémon. Protective moves like Light Screen and Reflect will be effective longer.",
+    "desc_ja": "持たせた ポケモンが ひかりのかべや リフレクターを 使ったとき いつもよりも 長く 残る。"
   },
   {
     "id": 247,
@@ -2421,7 +2541,9 @@
     "category": "held-items",
     "in_champions": true,
     "champions_category": "hold_item",
-    "ja": "いのちのたま"
+    "ja": "いのちのたま",
+    "desc_en": "An item to be held by a Pokémon. It boosts the power of moves but at the cost of some HP on each hit.",
+    "desc_ja": "持たせると 攻撃する たびに ＨＰが 少し 減ってしまうが 技の 威力が あがる。"
   },
   {
     "id": 248,
@@ -2485,7 +2607,9 @@
       "effect": "endure_once",
       "desc_ko": "HP 최대 시 빈사 공격을 HP 1로 버팀 (1회)"
     },
-    "ja": "きあいのタスキ"
+    "ja": "きあいのタスキ",
+    "desc_en": "An item to be held by a Pokémon. If the holder has full HP, it will endure a potential KO attack with 1 HP. The item then disappears.",
+    "desc_ja": "持たせると ＨＰが 満タンのとき ひんしになりそうな 技を 受けても ＨＰ１で １度だけ 耐える。"
   },
   {
     "id": 253,
@@ -2497,7 +2621,9 @@
     "category": "held-items",
     "in_champions": true,
     "champions_category": "hold_item",
-    "ja": "フォーカスレンズ"
+    "ja": "フォーカスレンズ",
+    "desc_en": "An item to be held by a Pokémon. If the holder moves after its target moves, its accuracy will be boosted.",
+    "desc_ja": "持たせた ポケモンが 相手よりも 行動するのが 遅いとき 技が 命中しやすくなる。"
   },
   {
     "id": 254,
@@ -2509,7 +2635,9 @@
     "category": "held-items",
     "in_champions": true,
     "champions_category": "hold_item",
-    "ja": "メトロノーム"
+    "ja": "メトロノーム",
+    "desc_en": "An item to be held by a Pokémon. It boosts moves used consecutively but only until a different move is used.",
+    "desc_ja": "持たせると 同じ技を 連続で 使ったとき 威力が あがる。 やめると 威力は もどる。"
   },
   {
     "id": 255,
@@ -2521,7 +2649,9 @@
     "category": "bad-held-items",
     "in_champions": true,
     "champions_category": "hold_item",
-    "ja": "くろいてっきゅう"
+    "ja": "くろいてっきゅう",
+    "desc_en": "An item to be held by a Pokémon. It lowers Speed and allows Ground-type moves to hit Flying types and holders that are levitating.",
+    "desc_ja": "持たせると 素早さが さがる。 ひこうタイプや ふゆう ポケモンは じめん技が 当たってしまう。"
   },
   {
     "id": 256,
@@ -2569,7 +2699,9 @@
     "category": "held-items",
     "in_champions": true,
     "champions_category": "hold_item",
-    "ja": "つめたいいわ"
+    "ja": "つめたいいわ",
+    "desc_en": "An item to be held by a Pokémon. It extends the duration of the move Hail when used by the holder.",
+    "desc_ja": "持たせた ポケモンが あられを 使うと いつもより あられの 時間が 長くなる。"
   },
   {
     "id": 260,
@@ -2581,7 +2713,9 @@
     "category": "held-items",
     "in_champions": true,
     "champions_category": "hold_item",
-    "ja": "さらさらいわ"
+    "ja": "さらさらいわ",
+    "desc_en": "An item to be held by a Pokémon. It extends the duration of the move Sandstorm when used by the holder.",
+    "desc_ja": "持たせた ポケモンが すなあらしを 使うと いつもより すなあらしの 時間が 長くなる。"
   },
   {
     "id": 261,
@@ -2593,7 +2727,9 @@
     "category": "held-items",
     "in_champions": true,
     "champions_category": "hold_item",
-    "ja": "あついいわ"
+    "ja": "あついいわ",
+    "desc_en": "An item to be held by a Pokémon. It extends the duration of the move Sunny Day when used by the holder.",
+    "desc_ja": "持たせた ポケモンが にほんばれを 使うと いつもより はれの 時間が 長くなる。"
   },
   {
     "id": 262,
@@ -2605,7 +2741,9 @@
     "category": "held-items",
     "in_champions": true,
     "champions_category": "hold_item",
-    "ja": "しめったいわ"
+    "ja": "しめったいわ",
+    "desc_en": "An item to be held by a Pokémon. It extends the duration of the move Rain Dance when used by the holder.",
+    "desc_ja": "持たせた ポケモンが あまごいを 使うと いつもより あめの 時間が 長くなる。"
   },
   {
     "id": 263,
@@ -2633,7 +2771,9 @@
       "effect": "speed_x1.5_lock",
       "desc_ko": "스피드 ×1.5 / 기술 1가지만"
     },
-    "ja": "こだわりスカーフ"
+    "ja": "こだわりスカーフ",
+    "desc_en": "An item to be held by a Pokémon. This curious scarf boosts Speed but only allows the use of one move.",
+    "desc_ja": "ちょっと こだわった スカーフ。 持たせると 素早さは あがるが 同じ 技しか だせなくなる。"
   },
   {
     "id": 265,
@@ -2729,7 +2869,9 @@
     "category": "held-items",
     "in_champions": true,
     "champions_category": "hold_item",
-    "ja": "きれいなぬけがら"
+    "ja": "きれいなぬけがら",
+    "desc_en": "An item to be held by a Pokémon. This discarded carapace enables the holder to switch out of battle without fail.",
+    "desc_ja": "丈夫で 硬い ぬけがら。 持たせた ポケモンは 控えの ポケモンと 必ず いれかわれる。"
   },
   {
     "id": 273,
@@ -2741,7 +2883,9 @@
     "category": "held-items",
     "in_champions": true,
     "champions_category": "hold_item",
-    "ja": "おおきなねっこ"
+    "ja": "おおきなねっこ",
+    "desc_en": "An item to be held by a Pokémon. It boosts the amount of HP the holder restores from HP-stealing moves.",
+    "desc_ja": "持たせると ＨＰを 吸いとる 技で いつもより おおく 自分の ＨＰを 回復できる。"
   },
   {
     "id": 274,
@@ -4530,7 +4674,9 @@
     "category": "held-items",
     "in_champions": true,
     "champions_category": "hold_item",
-    "ja": "ゴツゴツメット"
+    "ja": "ゴツゴツメット",
+    "desc_en": "An item to be held by a Pokémon. If the holder is hit, the attacker will also be damaged upon contact.",
+    "desc_ja": "ポケモンに 持たせると 打撃技を 受けたとき 相手にも ダメージを 与える。"
   },
   {
     "id": 584,
@@ -4542,7 +4688,9 @@
     "category": "held-items",
     "in_champions": true,
     "champions_category": "hold_item",
-    "ja": "ふうせん"
+    "ja": "ふうせん",
+    "desc_en": "An item to be held by a Pokémon. The holder will float in the air until hit. Once the holder is hit, this item will burst.",
+    "desc_ja": "ポケモンに 持たせると ポケモンが 宙に 浮く。 攻撃を 受けると 割れてしまう。"
   },
   {
     "id": 585,
@@ -4554,7 +4702,9 @@
     "category": "held-items",
     "in_champions": true,
     "champions_category": "hold_item",
-    "ja": "レッドカード"
+    "ja": "レッドカード",
+    "desc_en": "An item to be held by a Pokémon. When the holder is hit by an attack, the attacker is removed from battle.",
+    "desc_ja": "不思議な ちからのある カード。 持たせると 技を 使ってきた 相手を 退場させることが できる。"
   },
   {
     "id": 586,
@@ -4578,7 +4728,9 @@
     "category": "held-items",
     "in_champions": true,
     "champions_category": "hold_item",
-    "ja": "しめつけバンド"
+    "ja": "しめつけバンド",
+    "desc_en": "An item to be held by a Pokémon. It’s a band that increases the power of binding moves used by the holder.",
+    "desc_ja": "締めつける技を 補助する バンド。 持たせると 締めつける技の 威力が 強くなる。"
   },
   {
     "id": 588,
@@ -4614,7 +4766,9 @@
     "category": "held-items",
     "in_champions": true,
     "champions_category": "hold_item",
-    "ja": "だっしゅつボタン"
+    "ja": "だっしゅつボタン",
+    "desc_en": "An item to be held by a Pokémon. If the holder is hit by an attack, it will be switched out of battle.",
+    "desc_ja": "持たせて 技を 受けると 戦闘から 脱出して 手持ちと 入れ替わる ことができる。"
   },
   {
     "id": 591,
@@ -4962,7 +5116,9 @@
     "category": "jewels",
     "in_champions": true,
     "champions_category": "hold_item",
-    "ja": "ノーマルジュエル"
+    "ja": "ノーマルジュエル",
+    "desc_en": "A gem with an ordinary essence. When held, it strengthens the power of a Normal-type move one time.",
+    "desc_ja": "ノーマルの タイプの ジュエル。 持たせると １度だけ ノーマルの 技の 威力が 強まる。"
   },
   {
     "id": 682,
@@ -5085,7 +5241,9 @@
     "base_id": 94,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ゲンガナイト"
+    "ja": "ゲンガナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Gengar hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ゲンガーに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 696,
@@ -5100,7 +5258,9 @@
     "base_id": 282,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "サーナイトナイト"
+    "ja": "サーナイトナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Gardevoir hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "サーナイトに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 697,
@@ -5115,7 +5275,9 @@
     "base_id": 181,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "デンリュウナイト"
+    "ja": "デンリュウナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Ampharos hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "デンリュウに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 698,
@@ -5130,7 +5292,9 @@
     "base_id": 3,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "フシギバナイト"
+    "ja": "フシギバナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Venusaur hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "フシギバナに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 699,
@@ -5145,7 +5309,9 @@
     "base_id": 6,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "リザードナイトＸ"
+    "ja": "リザードナイトＸ",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Charizard hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "リザードンに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 700,
@@ -5160,7 +5326,9 @@
     "base_id": 9,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "カメックスナイト"
+    "ja": "カメックスナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Blastoise hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "カメックスに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 701,
@@ -5205,7 +5373,9 @@
     "base_id": 257,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "バシャーモナイト"
+    "ja": "バシャーモナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Blaziken hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "バシャーモに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 704,
@@ -5220,7 +5390,9 @@
     "base_id": 308,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "チャーレムナイト"
+    "ja": "チャーレムナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Medicham hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "チャーレムに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 705,
@@ -5235,7 +5407,9 @@
     "base_id": 229,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ヘルガナイト"
+    "ja": "ヘルガナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Houndoom hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ヘルガーに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 706,
@@ -5250,7 +5424,9 @@
     "base_id": 306,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ボスゴドラナイト"
+    "ja": "ボスゴドラナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Aggron hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ボスゴドラに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 707,
@@ -5265,7 +5441,9 @@
     "base_id": 354,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ジュペッタナイト"
+    "ja": "ジュペッタナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Banette hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ジュペッタに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 708,
@@ -5280,7 +5458,9 @@
     "base_id": 248,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "バンギラスナイト"
+    "ja": "バンギラスナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Tyranitar hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "バンギラスに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 709,
@@ -5295,7 +5475,9 @@
     "base_id": 212,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ハッサムナイト"
+    "ja": "ハッサムナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Scizor hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ハッサムに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 710,
@@ -5310,7 +5492,9 @@
     "base_id": 127,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "カイロスナイト"
+    "ja": "カイロスナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Pinsir hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "カイロスに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 711,
@@ -5325,7 +5509,9 @@
     "base_id": 142,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "プテラナイト"
+    "ja": "プテラナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Aerodactyl hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "プテラに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 712,
@@ -5340,7 +5526,9 @@
     "base_id": 448,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ルカリオナイト"
+    "ja": "ルカリオナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Lucario hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ルカリオに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 713,
@@ -5355,7 +5543,9 @@
     "base_id": 460,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ユキノオナイト"
+    "ja": "ユキノオナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Abomasnow hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ユキノオーに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 714,
@@ -5370,7 +5560,9 @@
     "base_id": 115,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ガルーラナイト"
+    "ja": "ガルーラナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Kangaskhan hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ガルーラに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 715,
@@ -5385,7 +5577,9 @@
     "base_id": 130,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ギャラドスナイト"
+    "ja": "ギャラドスナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Gyarados hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ギャラドスに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 716,
@@ -5400,7 +5594,9 @@
     "base_id": 359,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "アブソルナイト"
+    "ja": "アブソルナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Absol hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "アブソルに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 717,
@@ -5415,7 +5611,9 @@
     "base_id": 6,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "リザードナイトＹ"
+    "ja": "リザードナイトＹ",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Charizard hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "リザードンに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 718,
@@ -5430,7 +5628,9 @@
     "base_id": 65,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "フーディナイト"
+    "ja": "フーディナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Alakazam hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "フーディンに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 719,
@@ -5445,7 +5645,9 @@
     "base_id": 214,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ヘラクロスナイト"
+    "ja": "ヘラクロスナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Heracross hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ヘラクロスに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 720,
@@ -5460,7 +5662,9 @@
     "base_id": 303,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "クチートナイト"
+    "ja": "クチートナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Mawile hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "クチートに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 721,
@@ -5475,7 +5679,9 @@
     "base_id": 310,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ライボルトナイト"
+    "ja": "ライボルトナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Manectric hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ライボルトに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 722,
@@ -5490,7 +5696,9 @@
     "base_id": 445,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ガブリアスナイト"
+    "ja": "ガブリアスナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Garchomp hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ガブリアスに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 723,
@@ -5502,7 +5710,9 @@
     "category": "type-protection",
     "in_champions": true,
     "champions_category": "berry",
-    "ja": "ロゼルのみ"
+    "ja": "ロゼルのみ",
+    "desc_en": "If held by a Pokémon, this Berry will lessen the damage taken from one supereffective Fairy-type attack.",
+    "desc_ja": "ポケモンに 持たせると 効果バツグンの フェアリー技を 受けたとき 威力が 弱まる。"
   },
   {
     "id": 724,
@@ -5667,7 +5877,9 @@
     "base_id": 260,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ラグラージナイト"
+    "ja": "ラグラージナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Swampert hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ラグラージに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 794,
@@ -5682,7 +5894,9 @@
     "base_id": 254,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ジュカインナイト"
+    "ja": "ジュカインナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Sceptile hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ジュカインに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 795,
@@ -5697,7 +5911,9 @@
     "base_id": 302,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ヤミラミナイト"
+    "ja": "ヤミラミナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Sableye hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ヤミラミに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 796,
@@ -5712,7 +5928,9 @@
     "base_id": 334,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "チルタリスナイト"
+    "ja": "チルタリスナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Altaria hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "チルタリスに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 797,
@@ -5727,7 +5945,9 @@
     "base_id": 475,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "エルレイドナイト"
+    "ja": "エルレイドナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Gallade hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "エルレイドに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 798,
@@ -5742,7 +5962,9 @@
     "base_id": 531,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "タブンネナイト"
+    "ja": "タブンネナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Audino hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "タブンネに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 799,
@@ -5757,7 +5979,9 @@
     "base_id": 376,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "メタグロスナイト"
+    "ja": "メタグロスナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Metagross hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "メタグロスに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 800,
@@ -5772,7 +5996,9 @@
     "base_id": 319,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "サメハダナイト"
+    "ja": "サメハダナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Sharpedo hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "サメハダーに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 801,
@@ -5787,7 +6013,9 @@
     "base_id": 80,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ヤドランナイト"
+    "ja": "ヤドランナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Slowbro hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ヤドランに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 802,
@@ -5802,7 +6030,9 @@
     "base_id": 208,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ハガネールナイト"
+    "ja": "ハガネールナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Steelix hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ハガネールに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 803,
@@ -5817,7 +6047,9 @@
     "base_id": 18,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ピジョットナイト"
+    "ja": "ピジョットナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Pidgeot hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ピジョットに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 804,
@@ -5832,7 +6064,9 @@
     "base_id": 362,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "オニゴーリナイト"
+    "ja": "オニゴーリナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Glalie hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "オニゴーリに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 805,
@@ -5862,7 +6096,9 @@
     "base_id": 323,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "バクーダナイト"
+    "ja": "バクーダナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Camerupt hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "バクーダに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 809,
@@ -5877,7 +6113,9 @@
     "base_id": 428,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ミミロップナイト"
+    "ja": "ミミロップナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Lopunny hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ミミロップに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 810,
@@ -5892,7 +6130,9 @@
     "base_id": 373,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ボーマンダナイト"
+    "ja": "ボーマンダナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Salamence hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ボーマンダに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 811,
@@ -5907,7 +6147,9 @@
     "base_id": 15,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "スピアナイト"
+    "ja": "スピアナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Beedrill hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "スピアーに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 817,
@@ -6363,7 +6605,9 @@
     "category": "held-items",
     "in_champions": true,
     "champions_category": "hold_item",
-    "ja": "グランドコート"
+    "ja": "グランドコート",
+    "desc_en": "An item to be held by a Pokémon. It extends the duration of the terrain caused by the holder’s move or Ability.",
+    "desc_ja": "持たせた ポケモンが 技や 特性で フィールドを 張ったとき いつもよりも 長く 残る。"
   },
   {
     "id": 897,
@@ -6387,7 +6631,9 @@
     "category": "held-items",
     "in_champions": true,
     "champions_category": "hold_item",
-    "ja": "エレキシード"
+    "ja": "エレキシード",
+    "desc_en": "An item to be held by a Pokémon. It boosts Defense on Electric Terrain. It can only be used once.",
+    "desc_ja": "ポケモンに 持たせると エレキフィールドのときに 使って 防御が あがる。"
   },
   {
     "id": 899,
@@ -6399,7 +6645,9 @@
     "category": "held-items",
     "in_champions": true,
     "champions_category": "hold_item",
-    "ja": "サイコシード"
+    "ja": "サイコシード",
+    "desc_en": "An item to be held by a Pokémon. It boosts Sp. Def on Psychic Terrain. It can only be used once.",
+    "desc_ja": "ポケモンに 持たせると サイコフィールドのときに 使って 特防が あがる。"
   },
   {
     "id": 900,
@@ -6411,7 +6659,9 @@
     "category": "held-items",
     "in_champions": true,
     "champions_category": "hold_item",
-    "ja": "ミストシード"
+    "ja": "ミストシード",
+    "desc_en": "An item to be held by a Pokémon. It boosts Sp. Def on Misty Terrain. It can only be used once.",
+    "desc_ja": "ポケモンに 持たせると ミストフィールドのときに 使って 特防が あがる。"
   },
   {
     "id": 901,
@@ -6423,7 +6673,9 @@
     "category": "held-items",
     "in_champions": true,
     "champions_category": "hold_item",
-    "ja": "グラスシード"
+    "ja": "グラスシード",
+    "desc_en": "An item to be held by a Pokémon. It boosts Defense on Grassy Terrain. It can only be used once.",
+    "desc_ja": "ポケモンに 持たせると グラスフィールドのときに 使って 防御が あがる。"
   },
   {
     "id": 902,
@@ -7624,7 +7876,9 @@
     "base_id": 36,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "みっけポン"
+    "ja": "みっけポン",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Clefable hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ピクシーに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1001,
@@ -7639,7 +7893,9 @@
     "base_id": 71,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "かくれポン"
+    "ja": "かくれポン",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Victreebel hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ウツボットに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1002,
@@ -7654,7 +7910,9 @@
     "base_id": 121,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ＨＰかいふくポン"
+    "ja": "ＨＰかいふくポン",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Starmie hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "スターミーに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1003,
@@ -7669,7 +7927,9 @@
     "base_id": 149,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ＰＰかいふくポン"
+    "ja": "ＰＰかいふくポン",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Dragonite hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "カイリューに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1004,
@@ -7684,7 +7944,9 @@
     "base_id": 154,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "おうえんポン"
+    "ja": "おうえんポン",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Meganium hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "メガニウムに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1005,
@@ -7699,7 +7961,9 @@
     "base_id": 160,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "つかまえポン"
+    "ja": "つかまえポン",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Feraligatr hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "オーダイルに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1006,
@@ -7714,7 +7978,9 @@
     "base_id": 227,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "マチスのサイン"
+    "ja": "マチスのサイン",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Skarmory hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "エアームドに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1007,
@@ -7729,7 +7995,9 @@
     "base_id": 478,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ポケモンボックス"
+    "ja": "ポケモンボックス",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Froslass hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ユキメノコに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1008,
@@ -7744,7 +8012,9 @@
     "base_id": 500,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "かいふくポケット"
+    "ja": "かいふくポケット",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Emboar hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "エンブオーに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1009,
@@ -7759,7 +8029,9 @@
     "base_id": 530,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "アメボトル"
+    "ja": "アメボトル",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Excadrill hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ドリュウズに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1010,
@@ -7774,7 +8046,9 @@
     "base_id": 545,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "きょうかポケット"
+    "ja": "きょうかポケット",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Scolipede hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ペンドラーに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1011,
@@ -7789,7 +8063,9 @@
     "base_id": 560,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "おきがえトランク"
+    "ja": "おきがえトランク",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Scrafty hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ズルズキンに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1012,
@@ -7804,7 +8080,9 @@
     "base_id": 604,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ほかくポケット"
+    "ja": "ほかくポケット",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Eelektross hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "シビルドンに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1013,
@@ -7819,7 +8097,9 @@
     "base_id": 609,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "バトルポケット"
+    "ja": "バトルポケット",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Chandelure hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "シャンデラに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1014,
@@ -7834,7 +8114,9 @@
     "base_id": 652,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ぎんのズリのみ"
+    "ja": "ぎんのズリのみ",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Chesnaught hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ブリガロンに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1015,
@@ -7849,7 +8131,9 @@
     "base_id": 655,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "きんのズリのみ"
+    "ja": "きんのズリのみ",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Delphox hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "マフォクシーに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1016,
@@ -7864,7 +8148,9 @@
     "base_id": 658,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ぎんのナナのみ"
+    "ja": "ぎんのナナのみ",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Greninja hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ゲッコウガに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1017,
@@ -7879,7 +8165,9 @@
     "base_id": 668,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "きんのナナのみ"
+    "ja": "きんのナナのみ",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Pyroar hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "カエンジシに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1018,
@@ -7894,7 +8182,9 @@
     "base_id": 670,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ぎんのパイルのみ"
+    "ja": "ぎんのパイルのみ",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Floette hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "フラエッテに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1019,
@@ -7909,7 +8199,9 @@
     "base_id": 687,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "きんのパイルのみ"
+    "ja": "きんのパイルのみ",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Malamar hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "カラマネロに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1020,
@@ -7924,7 +8216,9 @@
     "base_id": 689,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ひみつのカギ"
+    "ja": "ひみつのカギ",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Barbaracle hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ガメノデスに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1021,
@@ -7939,7 +8233,9 @@
     "base_id": 691,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ふねのチケット"
+    "ja": "ふねのチケット",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Dragalge hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ドラミドロに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1022,
@@ -7954,7 +8250,9 @@
     "base_id": 701,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "おとどけもの"
+    "ja": "おとどけもの",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Hawlucha hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ルチャブルに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1023,
@@ -7984,7 +8282,9 @@
     "base_id": 780,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "のびたバネ"
+    "ja": "のびたバネ",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Drampa hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ジジーロンに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1025,
@@ -7999,7 +8299,9 @@
     "base_id": 870,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "チョークいし"
+    "ja": "チョークいし",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Falinks hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "タイレーツに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1026,
@@ -8059,7 +8361,9 @@
     "base_id": 26,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "きんのはっぱ"
+    "ja": "きんのはっぱ",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Raichu hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ライチュウに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1030,
@@ -8074,7 +8378,9 @@
     "base_id": 26,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ぎんのはっぱ"
+    "ja": "ぎんのはっぱ",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Raichu hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ライチュウに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1031,
@@ -8089,7 +8395,9 @@
     "base_id": 358,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ピカピカだんご"
+    "ja": "ピカピカだんご",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Chimecho hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "チリーンに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1032,
@@ -8104,7 +8412,9 @@
     "base_id": 359,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "アブソルナイトZ"
+    "ja": "アブソルナイトZ",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Absol hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "アブソルに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1033,
@@ -8119,7 +8429,9 @@
     "base_id": 398,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "このはのおてがみ"
+    "ja": "このはのおてがみ",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Staraptor hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ムクホークに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1034,
@@ -8134,7 +8446,9 @@
     "base_id": 445,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ガブリアスナイトZ"
+    "ja": "ガブリアスナイトZ",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Garchomp hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ガブリアスに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1035,
@@ -8149,7 +8463,9 @@
     "base_id": 448,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ルカリオナイトZ"
+    "ja": "ルカリオナイトZ",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Lucario hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ルカリオに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1036,
@@ -8164,7 +8480,9 @@
     "base_id": 623,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "むしよせコロン"
+    "ja": "むしよせコロン",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Golurk hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ゴルーグに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1037,
@@ -8179,7 +8497,9 @@
     "base_id": 678,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "シルバーコロン"
+    "ja": "シルバーコロン",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Meowstic hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ニャオニクスに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1038,
@@ -8194,7 +8514,9 @@
     "base_id": 740,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ゴールドコロン"
+    "ja": "ゴールドコロン",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Crabominable hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "ケケンカニに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1039,
@@ -8209,7 +8531,9 @@
     "base_id": 768,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "グソクムシャナイト"
+    "ja": "グソクムシャナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Golisopod hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "グソクムシャに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1040,
@@ -8239,7 +8563,9 @@
     "base_id": 952,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ちからのアメ"
+    "ja": "ちからのアメ",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Scovillain hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "スコヴィランに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1042,
@@ -8254,7 +8580,9 @@
     "base_id": 998,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "セグレイブナイト"
+    "ja": "セグレイブナイト",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Baxcalibur hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "セグレイブに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1043,
@@ -8284,7 +8612,9 @@
     "base_id": 970,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "こころのアメ"
+    "ja": "こころのアメ",
+    "desc_en": "One of a variety of mysterious Mega Stones. Have Glimmora hold it, and this stone will enable it to Mega Evolve during battle.",
+    "desc_ja": "キラフロルに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
   {
     "id": 1045,
