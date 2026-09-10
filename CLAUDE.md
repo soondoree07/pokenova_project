@@ -65,3 +65,31 @@ npm run seed
 
 포켓몬(quiz_pokemon.json), 기술(quiz_moves.json), 배우는기술(learnsets.json) 수정 시 seed 후 champions_learnsets.json도 재생성한다.
 재생성 명령은 pochams_project/CLAUDE.md의 "champions_learnsets.json 자동 갱신" 섹션 참고.
+
+### 외부에서 데이터를 받아올 때 — 우리 id 로 묻지 않는다
+
+PokeAPI 는 **이름(슬러그)으로 묻는다.** 번호는 우리 것과 다르다.
+
+2026-09-10 에 도구 일본어 이름 124개가 통째로 밀려 있던 것을 찾았다. 옛
+스크립트가 `/api/v2/item/{우리 id}` 로 물어서, 583번 도구(요정의깃털)를
+물으면 PokeAPI 583번(루가루암 Z)이 돌아왔다. 349번 이후가 전부 어긋나
+화석·가면·메가스톤이 엉뚱한 Z크리스탈 이름을 달고 있었다.
+
+- 번호로 물어도 되는 곳은 **포켓몬뿐**이다. 우리 id 가 곧 전국도감 번호이고
+  PokeAPI species 번호와 같다(전수 확인함).
+- 도구·특성은 이름이 다른 것이 있다. 대응표는
+  `scripts/fetch_japanese_names.py` 의 `ITEM_SLUG`·`ABILITY_SLUG`·`MOVE_SLUG` 에
+  적어 둔다. 추측해서 넣지 말고 확인한 것만 적는다.
+- 폼도 마찬가지다. `squawkabilly` 가 아니라 `squawkabilly-green-plumage` 다.
+  `learnsets.json` 26종이 빈 채로 있던 이유가 이것이고,
+  `scripts/fill_missing_learnsets.py` 에 그 대응표가 있다.
+
+```bash
+python3 scripts/fetch_japanese_names.py --check     # 저장 없이 무엇이 바뀔지 본다
+python3 scripts/fetch_japanese_names.py items       # 일부만 반영
+python3 scripts/fill_missing_learnsets.py --check   # 빈 기술폭 점검
+```
+
+출처는 **PokeAPI 우선, 없으면 포켓몬위키**다. 둘이 어긋나면 PokeAPI 를 쓰고
+화면에 남긴다(실측 3건이 전부 위키 오류였다). 어느 쪽에도 없으면 **건드리지
+않고 보고한다.** 이름을 지어내지 않는다.
