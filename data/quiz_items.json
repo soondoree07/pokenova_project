@@ -2360,7 +2360,7 @@
     "sprite": "sprites/items/bulba__wide_lens.png",
     "category": "held-items",
     "in_champions": true,
-    "champions_category": null,
+    "champions_category": "hold_item",
     "ja": "こうかくレンズ"
   },
   {
@@ -2372,7 +2372,7 @@
     "sprite": "sprites/items/bulba__muscle_band.png",
     "category": "held-items",
     "in_champions": true,
-    "champions_category": null,
+    "champions_category": "hold_item",
     "ja": "ちからのハチマキ"
   },
   {
@@ -2384,7 +2384,7 @@
     "sprite": "sprites/items/bulba__wise_glasses.png",
     "category": "held-items",
     "in_champions": true,
-    "champions_category": null,
+    "champions_category": "hold_item",
     "ja": "ものしりメガネ"
   },
   {
@@ -2396,7 +2396,7 @@
     "sprite": "sprites/items/bulba__expert_belt.png",
     "category": "held-items",
     "in_champions": true,
-    "champions_category": null,
+    "champions_category": "hold_item",
     "ja": "たつじんのおび"
   },
   {
@@ -2408,7 +2408,7 @@
     "sprite": "sprites/items/bulba__light_clay.png",
     "category": "held-items",
     "in_champions": true,
-    "champions_category": null,
+    "champions_category": "hold_item",
     "ja": "ひかりのねんど"
   },
   {
@@ -2420,7 +2420,7 @@
     "sprite": "sprites/items/bulba__life_orb.png",
     "category": "held-items",
     "in_champions": true,
-    "champions_category": null,
+    "champions_category": "hold_item",
     "ja": "いのちのたま"
   },
   {
@@ -2496,7 +2496,7 @@
     "sprite": "sprites/items/bulba__zoom_lens.png",
     "category": "held-items",
     "in_champions": true,
-    "champions_category": null,
+    "champions_category": "hold_item",
     "ja": "フォーカスレンズ"
   },
   {
@@ -2508,7 +2508,7 @@
     "sprite": "sprites/items/bulba__metronome.png",
     "category": "held-items",
     "in_champions": true,
-    "champions_category": null,
+    "champions_category": "hold_item",
     "ja": "メトロノーム"
   },
   {
@@ -2520,7 +2520,7 @@
     "sprite": "sprites/items/bulba__iron_ball.png",
     "category": "bad-held-items",
     "in_champions": true,
-    "champions_category": null,
+    "champions_category": "hold_item",
     "ja": "くろいてっきゅう"
   },
   {
@@ -2568,7 +2568,7 @@
     "sprite": "sprites/items/bulba__icy_rock.png",
     "category": "held-items",
     "in_champions": true,
-    "champions_category": null,
+    "champions_category": "hold_item",
     "ja": "つめたいいわ"
   },
   {
@@ -2580,7 +2580,7 @@
     "sprite": "sprites/items/bulba__smooth_rock.png",
     "category": "held-items",
     "in_champions": true,
-    "champions_category": null,
+    "champions_category": "hold_item",
     "ja": "さらさらいわ"
   },
   {
@@ -2592,7 +2592,7 @@
     "sprite": "sprites/items/bulba__heat_rock.png",
     "category": "held-items",
     "in_champions": true,
-    "champions_category": null,
+    "champions_category": "hold_item",
     "ja": "あついいわ"
   },
   {
@@ -2604,7 +2604,7 @@
     "sprite": "sprites/items/bulba__damp_rock.png",
     "category": "held-items",
     "in_champions": true,
-    "champions_category": null,
+    "champions_category": "hold_item",
     "ja": "しめったいわ"
   },
   {
@@ -2728,7 +2728,7 @@
     "sprite": "sprites/items/bulba__shed_shell.png",
     "category": "held-items",
     "in_champions": true,
-    "champions_category": null,
+    "champions_category": "hold_item",
     "ja": "きれいなぬけがら"
   },
   {
@@ -2740,7 +2740,7 @@
     "sprite": "sprites/items/bulba__big_root.png",
     "category": "held-items",
     "in_champions": true,
-    "champions_category": null,
+    "champions_category": "hold_item",
     "ja": "おおきなねっこ"
   },
   {
