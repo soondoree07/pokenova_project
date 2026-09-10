@@ -21,7 +21,9 @@
   달라 잘못 끊기거나(달콤한꿀·꿀맛사과), 아예 다른 도구 이름이 적혀 있었다(녹슨방패).
   PokeAPI 가 틀린 것이 확인되면 WIKI_OVERRIDE 에 그 항목만 적는다.
 
-어느 쪽에도 없으면 **비워 두고 보고한다.** 이름을 지어내지 않는다.
+어느 쪽에도 없으면 **건드리지 않고 보고한다.** 이름을 지어내지 않는다.
+거다이맥스 기술 33종이 그렇다 — PokeAPI 에 항목이 없고(맥스 기술만 있다)
+포켓몬위키에도 기술별 문서가 없어서, 일본어 이름을 넣을 근거가 아직 없다.
 """
 import json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 
@@ -30,6 +32,7 @@ CACHE = os.path.join(os.path.dirname(DATA), '.name_cache')
 
 # PokeAPI 슬러그가 우리와 다른 것. 확인한 것만 적는다.
 ITEM_SLUG = {'leek': 'stick'}                        # 대파는 PokeAPI 가 아직 구 이름
+MOVE_SLUG = {'10,000,000_volt_thunderbolt': '10-000-000-volt-thunderbolt'}  # 쉼표는 하이픈
 ABILITY_SLUG_BY_ID = {266: 'as-one-glastrier',       # 혼연일체는 우리 데이터가 두 항목
                       267: 'as-one-spectrier'}
 ABILITY_SLUG = {'drill_pierce': 'piercing-drill', 'dragon_skin': 'dragonize',
@@ -147,7 +150,7 @@ TARGETS = {
     # 포켓몬만 번호로 묻는다. 우리 id = 전국도감 번호 = PokeAPI species 번호.
     'pokemon': ('pokemon-species', 'quiz_pokemon.json',
                 lambda r: str(r['id']) if r['id'] <= 1025 else None),
-    'moves': ('move', 'quiz_moves.json', lambda r: to_slug(r['en'])),
+    'moves': ('move', 'quiz_moves.json', lambda r: MOVE_SLUG.get(r['en'], to_slug(r['en']))),
     'items': ('item', 'quiz_items.json',
               lambda r: ITEM_SLUG.get(r['en'], to_slug(r['en']))),
     'abilities': ('ability', 'quiz_abilities.json',
