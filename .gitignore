@@ -15,3 +15,4 @@ data/verify_result.json
 # 로컬 QA 미리보기(커밋 제외)
 preview_items.html
 item_icons_qa.html
+.name_cache/

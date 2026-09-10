@@ -4458,7 +4458,7 @@
     "needs_ko": true,
     "in_champions": false,
     "champions_category": null,
-    "ja": "hm08"
+    "ja": "ひでんマシン０８"
   },
   {
     "id": 442,
@@ -6891,7 +6891,7 @@
     "category": "for-sell",
     "in_champions": false,
     "champions_category": null,
-    "ja": "じてんしゃ"
+    "ja": "きんのたま"
   },
   {
     "id": 920,
@@ -6903,7 +6903,7 @@
     "category": "for-sell",
     "in_champions": false,
     "champions_category": null,
-    "ja": "そうこのカギ"
+    "ja": "ほしのすな"
   },
   {
     "id": 921,
@@ -6915,7 +6915,7 @@
     "category": "for-sell",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ちかのかぎ"
+    "ja": "ほしのかけら"
   },
   {
     "id": 922,
@@ -6927,7 +6927,7 @@
     "category": "for-sell",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ライブキャスター"
+    "ja": "ちいさなキノコ"
   },
   {
     "id": 923,
@@ -6939,7 +6939,7 @@
     "category": "for-sell",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ライブキャスター"
+    "ja": "しんじゅ"
   },
   {
     "id": 924,
@@ -6951,7 +6951,7 @@
     "category": "for-sell",
     "in_champions": false,
     "champions_category": null,
-    "ja": "いでんしのくさび"
+    "ja": "おおきなキノコ"
   },
   {
     "id": 925,
@@ -6963,7 +6963,7 @@
     "category": "for-sell",
     "in_champions": false,
     "champions_category": null,
-    "ja": "いでんしのくさび"
+    "ja": "おおきなしんじゅ"
   },
   {
     "id": 926,
@@ -6975,7 +6975,7 @@
     "category": "for-sell",
     "in_champions": false,
     "champions_category": null,
-    "ja": "わすれもの"
+    "ja": "きちょうなホネ"
   },
   {
     "id": 927,
@@ -6987,7 +6987,7 @@
     "category": "for-sell",
     "in_champions": false,
     "champions_category": null,
-    "ja": "わすれもの"
+    "ja": "あまいミツ"
   },
   {
     "id": 928,
@@ -6999,7 +6999,7 @@
     "category": "for-sell",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ホロキャスター"
+    "ja": "きれいなハネ"
   },
   {
     "id": 929,
@@ -7011,7 +7011,7 @@
     "category": "for-sell",
     "in_champions": false,
     "champions_category": null,
-    "ja": "じてんしゃ"
+    "ja": "かおるキノコ"
   },
   {
     "id": 930,
@@ -7023,7 +7023,7 @@
     "category": "for-sell",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ホロキャスター"
+    "ja": "すいせいのかけら"
   },
   {
     "id": 931,
@@ -7035,7 +7035,7 @@
     "category": "for-sell",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ちかのカギ"
+    "ja": "でかいきんのたま"
   },
   {
     "id": 932,
@@ -7047,7 +7047,7 @@
     "category": "for-sell",
     "in_champions": false,
     "champions_category": null,
-    "ja": "そうこのカギ"
+    "ja": "おだんごしんじゅ"
   },
   {
     "id": 933,
@@ -7059,7 +7059,7 @@
     "category": "for-sell",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ふねのチケット"
+    "ja": "ちいさなタケノコ"
   },
   {
     "id": 934,
@@ -7071,7 +7071,7 @@
     "category": "for-sell",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ライブドレス"
+    "ja": "おおきなタケノコ"
   },
   {
     "id": 935,
@@ -7083,7 +7083,7 @@
     "category": "evolution",
     "in_champions": false,
     "champions_category": null,
-    "ja": "いんせき"
+    "ja": "ガラナツブレス"
   },
   {
     "id": 936,
@@ -7095,7 +7095,7 @@
     "category": "evolution",
     "in_champions": false,
     "champions_category": null,
-    "ja": "いんせき"
+    "ja": "ガラナツリース"
   },
   {
     "id": 937,
@@ -7107,7 +7107,7 @@
     "category": "evolution",
     "in_champions": false,
     "champions_category": null,
-    "ja": "いんせき"
+    "ja": "つながりのヒモ"
   },
   {
     "id": 938,
@@ -7119,7 +7119,7 @@
     "category": "evolution",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ノーマルＺ"
+    "ja": "くろのきせき"
   },
   {
     "id": 939,
@@ -7131,7 +7131,7 @@
     "category": "evolution",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ホノオＺ"
+    "ja": "ピートブロック"
   },
   {
     "id": 940,
@@ -7143,7 +7143,7 @@
     "category": "evolution",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ミズＺ"
+    "ja": "おはなアメざいく"
   },
   {
     "id": 941,
@@ -7155,7 +7155,7 @@
     "category": "evolution",
     "in_champions": false,
     "champions_category": null,
-    "ja": "デンキＺ"
+    "ja": "よつばアメざいく"
   },
   {
     "id": 942,
@@ -7167,7 +7167,7 @@
     "category": "evolution",
     "in_champions": false,
     "champions_category": null,
-    "ja": "クサＺ"
+    "ja": "いちごアメざいく"
   },
   {
     "id": 943,
@@ -7179,7 +7179,7 @@
     "category": "evolution",
     "in_champions": false,
     "champions_category": null,
-    "ja": "コオリＺ"
+    "ja": "リボンアメざいく"
   },
   {
     "id": 944,
@@ -7191,7 +7191,7 @@
     "category": "evolution",
     "in_champions": false,
     "champions_category": null,
-    "ja": "カクトウＺ"
+    "ja": "ベリーアメざいく"
   },
   {
     "id": 945,
@@ -7203,7 +7203,7 @@
     "category": "evolution",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ドクＺ"
+    "ja": "スターアメざいく"
   },
   {
     "id": 946,
@@ -7215,7 +7215,7 @@
     "category": "evolution",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ジメンＺ"
+    "ja": "ハートアメざいく"
   },
   {
     "id": 947,
@@ -7227,7 +7227,7 @@
     "category": "evolution",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ヒコウＺ"
+    "ja": "われたポット"
   },
   {
     "id": 948,
@@ -7239,7 +7239,7 @@
     "category": "evolution",
     "in_champions": false,
     "champions_category": null,
-    "ja": "エスパーＺ"
+    "ja": "かけたポット"
   },
   {
     "id": 949,
@@ -7251,7 +7251,7 @@
     "category": "evolution",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ムシＺ"
+    "ja": "あくのかけじく"
   },
   {
     "id": 950,
@@ -7263,7 +7263,7 @@
     "category": "evolution",
     "in_champions": false,
     "champions_category": null,
-    "ja": "イワＺ"
+    "ja": "みずのかけじく"
   },
   {
     "id": 951,
@@ -7275,7 +7275,7 @@
     "category": "evolution",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ゴーストＺ"
+    "ja": "ノロイノヨロイ"
   },
   {
     "id": 952,
@@ -7287,7 +7287,7 @@
     "category": "evolution",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ドラゴンＺ"
+    "ja": "イワイノヨロイ"
   },
   {
     "id": 953,
@@ -7299,7 +7299,7 @@
     "category": "evolution",
     "in_champions": false,
     "champions_category": null,
-    "ja": "アクＺ"
+    "ja": "みついりりんご"
   },
   {
     "id": 954,
@@ -7311,7 +7311,7 @@
     "category": "evolution",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ハガネＺ"
+    "ja": "ボンサクのちゃわん"
   },
   {
     "id": 955,
@@ -7323,7 +7323,7 @@
     "category": "evolution",
     "in_champions": false,
     "champions_category": null,
-    "ja": "フェアリーＺ"
+    "ja": "ケッサクのちゃわん"
   },
   {
     "id": 956,
@@ -7335,7 +7335,7 @@
     "category": "evolution",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ピカチュウＺ"
+    "ja": "ふくごうきんぞく"
   },
   {
     "id": 957,
@@ -7349,7 +7349,7 @@
     "base_id": 1017,
     "in_champions": false,
     "champions_category": null,
-    "ja": "ジュナイパーＺ"
+    "ja": "いしずえのめん"
   },
   {
     "id": 958,
@@ -7363,7 +7363,7 @@
     "base_id": 1017,
     "in_champions": false,
     "champions_category": null,
-    "ja": "ガオガエンＺ"
+    "ja": "いどのめん"
   },
   {
     "id": 959,
@@ -7377,7 +7377,7 @@
     "base_id": 1017,
     "in_champions": false,
     "champions_category": null,
-    "ja": "アシレーヌＺ"
+    "ja": "かまどのめん"
   },
   {
     "id": 960,
@@ -7389,7 +7389,7 @@
     "category": "species-specific",
     "in_champions": false,
     "champions_category": null,
-    "ja": "カプＺ"
+    "ja": "だいこんごうだま"
   },
   {
     "id": 961,
@@ -7401,7 +7401,7 @@
     "category": "species-specific",
     "in_champions": false,
     "champions_category": null,
-    "ja": "マーシャドーＺ"
+    "ja": "だいしらたま"
   },
   {
     "id": 962,
@@ -7413,7 +7413,7 @@
     "category": "species-specific",
     "in_champions": false,
     "champions_category": null,
-    "ja": "アロライＺ"
+    "ja": "だいはっきんだま"
   },
   {
     "id": 963,
@@ -7425,7 +7425,7 @@
     "category": "species-specific",
     "in_champions": false,
     "champions_category": null,
-    "ja": "カビゴンＺ"
+    "ja": "くちたけん"
   },
   {
     "id": 964,
@@ -7437,7 +7437,7 @@
     "category": "species-specific",
     "in_champions": false,
     "champions_category": null,
-    "ja": "イーブイＺ"
+    "ja": "くちたたて"
   },
   {
     "id": 965,
@@ -7449,7 +7449,7 @@
     "category": "species-specific",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ミュウＺ"
+    "ja": "グラシデアのはな"
   },
   {
     "id": 966,
@@ -7461,7 +7461,7 @@
     "category": "species-specific",
     "in_champions": false,
     "champions_category": null,
-    "ja": "サトピカＺ"
+    "ja": "うつしかがみ"
   },
   {
     "id": 967,
@@ -7473,7 +7473,7 @@
     "category": "species-specific",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ソルガレオＺ"
+    "ja": "いでんしのくさび"
   },
   {
     "id": 968,
@@ -7485,7 +7485,7 @@
     "category": "species-specific",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ルナアーラＺ"
+    "ja": "いましめのツボ"
   },
   {
     "id": 969,
@@ -7497,7 +7497,7 @@
     "category": "species-specific",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ウルトラネクロＺ"
+    "ja": "ネクロプラスルナ"
   },
   {
     "id": 970,
@@ -7509,7 +7509,7 @@
     "category": "species-specific",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ミミッキュＺ"
+    "ja": "ネクロプラスソル"
   },
   {
     "id": 971,
@@ -7525,7 +7525,7 @@
       "type_boost": "fairy",
       "multiplier": 1.2
     },
-    "ja": "ルガルガンＺ"
+    "ja": "ようせいのハネ"
   },
   {
     "id": 972,
@@ -7537,7 +7537,7 @@
     "category": "fossil",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ジャラランガＺ"
+    "ja": "かいのカセキ"
   },
   {
     "id": 973,
@@ -7549,7 +7549,7 @@
     "category": "fossil",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ソルガレオＺ"
+    "ja": "こうらのカセキ"
   },
   {
     "id": 974,
@@ -7561,7 +7561,7 @@
     "category": "fossil",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ルナアーラＺ"
+    "ja": "ひみつのコハク"
   },
   {
     "id": 975,
@@ -7573,7 +7573,7 @@
     "category": "fossil",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ウルトラネクロＺ"
+    "ja": "ねっこのカセキ"
   },
   {
     "id": 976,
@@ -7585,7 +7585,7 @@
     "category": "fossil",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ミミッキュＺ"
+    "ja": "ツメのカセキ"
   },
   {
     "id": 977,
@@ -7597,7 +7597,7 @@
     "category": "fossil",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ルガルガンＺ"
+    "ja": "ずがいのカセキ"
   },
   {
     "id": 978,
@@ -7609,7 +7609,7 @@
     "category": "fossil",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ジャラランガＺ"
+    "ja": "たてのカセキ"
   },
   {
     "id": 979,
@@ -7621,7 +7621,7 @@
     "category": "fossil",
     "in_champions": false,
     "champions_category": null,
-    "ja": "Ｚパワーリング"
+    "ja": "ふたのカセキ"
   },
   {
     "id": 980,
@@ -7633,7 +7633,7 @@
     "category": "fossil",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ももいろはなびら"
+    "ja": "はねのカセキ"
   },
   {
     "id": 981,
@@ -7645,7 +7645,7 @@
     "category": "fossil",
     "in_champions": false,
     "champions_category": null,
-    "ja": "だいだいはなびら"
+    "ja": "アゴのカセキ"
   },
   {
     "id": 982,
@@ -7657,7 +7657,7 @@
     "category": "fossil",
     "in_champions": false,
     "champions_category": null,
-    "ja": "あおのはなびら"
+    "ja": "ヒレのカセキ"
   },
   {
     "id": 983,
@@ -7669,7 +7669,7 @@
     "category": "fossil",
     "in_champions": false,
     "champions_category": null,
-    "ja": "あかのはなびら"
+    "ja": "カセキのトリ"
   },
   {
     "id": 984,
@@ -7681,7 +7681,7 @@
     "category": "fossil",
     "in_champions": false,
     "champions_category": null,
-    "ja": "みどりのはなびら"
+    "ja": "カセキのサカナ"
   },
   {
     "id": 985,
@@ -7693,7 +7693,7 @@
     "category": "fossil",
     "in_champions": false,
     "champions_category": null,
-    "ja": "きいろのはなびら"
+    "ja": "カセキのリュウ"
   },
   {
     "id": 986,
@@ -7705,7 +7705,7 @@
     "category": "fossil",
     "in_champions": false,
     "champions_category": null,
-    "ja": "むらさきはなびら"
+    "ja": "カセキのクビナガ"
   },
   {
     "id": 987,
@@ -7717,7 +7717,7 @@
     "category": "held-items",
     "in_champions": false,
     "champions_category": null,
-    "ja": "にじいろのはな"
+    "ja": "だっしゅつパック"
   },
   {
     "id": 988,
@@ -7729,7 +7729,7 @@
     "category": "held-items",
     "in_champions": false,
     "champions_category": null,
-    "ja": "だいだいバッジ"
+    "ja": "いかさまダイス"
   },
   {
     "id": 989,
@@ -7741,7 +7741,7 @@
     "category": "held-items",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ネクロプラスソル"
+    "ja": "ものまねハーブ"
   },
   {
     "id": 990,
@@ -7753,7 +7753,7 @@
     "category": "held-items",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ネクロプラスルナ"
+    "ja": "ばんのうがさ"
   },
   {
     "id": 991,
@@ -7765,7 +7765,7 @@
     "category": "held-items",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ネクロプラスソル"
+    "ja": "のどスプレー"
   },
   {
     "id": 992,
@@ -7777,7 +7777,7 @@
     "category": "held-items",
     "in_champions": false,
     "champions_category": null,
-    "ja": "ネクロプラスルナ"
+    "ja": "あつぞこブーツ"
   },
   {
     "id": 993,
@@ -7789,7 +7789,7 @@
     "category": "held-items",
     "in_champions": false,
     "champions_category": null,
-    "ja": "イリマノーマルＺ"
+    "ja": "からぶりほけん"
   },
   {
     "id": 994,
@@ -7801,7 +7801,7 @@
     "category": "held-items",
     "in_champions": false,
     "champions_category": null,
-    "ja": "のこされたボール"
+    "ja": "ルームサービス"
   },
   {
     "id": 995,
@@ -7813,7 +7813,7 @@
     "category": "held-items",
     "in_champions": false,
     "champions_category": null,
-    "ja": "タマゴふかポン"
+    "ja": "パンチグローブ"
   },
   {
     "id": 996,
@@ -7825,7 +7825,7 @@
     "category": "held-items",
     "in_champions": false,
     "champions_category": null,
-    "ja": "やすうりポン"
+    "ja": "とくせいガード"
   },
   {
     "id": 997,
@@ -7837,7 +7837,7 @@
     "category": "held-items",
     "in_champions": false,
     "champions_category": null,
-    "ja": "おこづかいポン"
+    "ja": "クリアチャーム"
   },
   {
     "id": 998,
@@ -7849,7 +7849,7 @@
     "category": "held-items",
     "in_champions": false,
     "champions_category": null,
-    "ja": "けいけんポン"
+    "ja": "おんみつマント"
   },
   {
     "id": 999,
@@ -7861,7 +7861,7 @@
     "category": "held-items",
     "in_champions": false,
     "champions_category": null,
-    "ja": "なつきポン"
+    "ja": "ブーストエナジー"
   },
   {
     "id": 1000,
@@ -7876,7 +7876,7 @@
     "base_id": 36,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "みっけポン",
+    "ja": "ピクシナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Clefable hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "ピクシーに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -7893,7 +7893,7 @@
     "base_id": 71,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "かくれポン",
+    "ja": "ウツボットナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Victreebel hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "ウツボットに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -7910,7 +7910,7 @@
     "base_id": 121,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ＨＰかいふくポン",
+    "ja": "スターミナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Starmie hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "スターミーに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -7927,7 +7927,7 @@
     "base_id": 149,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ＰＰかいふくポン",
+    "ja": "カイリュナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Dragonite hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "カイリューに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -7944,7 +7944,7 @@
     "base_id": 154,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "おうえんポン",
+    "ja": "メガニウムナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Meganium hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "メガニウムに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -7961,7 +7961,7 @@
     "base_id": 160,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "つかまえポン",
+    "ja": "オーダイルナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Feraligatr hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "オーダイルに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -7978,7 +7978,7 @@
     "base_id": 227,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "マチスのサイン",
+    "ja": "エアームドナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Skarmory hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "エアームドに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -7995,7 +7995,7 @@
     "base_id": 478,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ポケモンボックス",
+    "ja": "ユキメノコナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Froslass hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "ユキメノコに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -8012,7 +8012,7 @@
     "base_id": 500,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "かいふくポケット",
+    "ja": "エンブオナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Emboar hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "エンブオーに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -8029,7 +8029,7 @@
     "base_id": 530,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "アメボトル",
+    "ja": "ドリュウズナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Excadrill hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "ドリュウズに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -8046,7 +8046,7 @@
     "base_id": 545,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "きょうかポケット",
+    "ja": "ペンドラナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Scolipede hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "ペンドラーに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -8063,7 +8063,7 @@
     "base_id": 560,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "おきがえトランク",
+    "ja": "ズルズキナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Scrafty hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "ズルズキンに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -8080,7 +8080,7 @@
     "base_id": 604,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ほかくポケット",
+    "ja": "シビルドナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Eelektross hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "シビルドンに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -8097,7 +8097,7 @@
     "base_id": 609,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "バトルポケット",
+    "ja": "シャンデラナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Chandelure hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "シャンデラに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -8114,7 +8114,7 @@
     "base_id": 652,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ぎんのズリのみ",
+    "ja": "ブリガロナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Chesnaught hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "ブリガロンに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -8131,7 +8131,7 @@
     "base_id": 655,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "きんのズリのみ",
+    "ja": "マフォクシナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Delphox hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "マフォクシーに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -8148,7 +8148,7 @@
     "base_id": 658,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ぎんのナナのみ",
+    "ja": "ゲッコウガナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Greninja hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "ゲッコウガに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -8165,7 +8165,7 @@
     "base_id": 668,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "きんのナナのみ",
+    "ja": "カエンジシナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Pyroar hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "カエンジシに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -8182,7 +8182,7 @@
     "base_id": 670,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ぎんのパイルのみ",
+    "ja": "フラエッテナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Floette hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "フラエッテに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -8199,7 +8199,7 @@
     "base_id": 687,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "きんのパイルのみ",
+    "ja": "カラマネナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Malamar hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "カラマネロに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -8216,7 +8216,7 @@
     "base_id": 689,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ひみつのカギ",
+    "ja": "ガメノデスナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Barbaracle hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "ガメノデスに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -8233,7 +8233,7 @@
     "base_id": 691,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ふねのチケット",
+    "ja": "ドラミドナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Dragalge hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "ドラミドロに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -8250,7 +8250,7 @@
     "base_id": 701,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "おとどけもの",
+    "ja": "ルチャブルナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Hawlucha hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "ルチャブルに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -8267,7 +8267,7 @@
     "base_id": 718,
     "in_champions": false,
     "champions_category": null,
-    "ja": "カードキー"
+    "ja": "ジガルデナイト"
   },
   {
     "id": 1024,
@@ -8282,7 +8282,7 @@
     "base_id": 780,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "のびたバネ",
+    "ja": "ジジーロナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Drampa hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "ジジーロンに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -8299,7 +8299,7 @@
     "base_id": 870,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "チョークいし",
+    "ja": "タイレーツナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Falinks hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "タイレーツに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -8316,7 +8316,7 @@
     "base_id": 485,
     "in_champions": false,
     "champions_category": null,
-    "ja": "ビーだま"
+    "ja": "ヒードラナイト"
   },
   {
     "id": 1027,
@@ -8331,7 +8331,7 @@
     "base_id": 491,
     "in_champions": false,
     "champions_category": null,
-    "ja": "かたっぽピアス"
+    "ja": "ダークライナイト"
   },
   {
     "id": 1028,
@@ -8346,7 +8346,7 @@
     "base_id": 807,
     "in_champions": false,
     "champions_category": null,
-    "ja": "うみべのガラス"
+    "ja": "ゼラオラナイト"
   },
   {
     "id": 1029,
@@ -8361,7 +8361,7 @@
     "base_id": 26,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "きんのはっぱ",
+    "ja": "ライチュウナイトＸ",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Raichu hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "ライチュウに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -8378,7 +8378,7 @@
     "base_id": 26,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ぎんのはっぱ",
+    "ja": "ライチュウナイトＹ",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Raichu hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "ライチュウに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -8395,7 +8395,7 @@
     "base_id": 358,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ピカピカだんご",
+    "ja": "チリーンナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Chimecho hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "チリーンに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -8429,7 +8429,7 @@
     "base_id": 398,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "このはのおてがみ",
+    "ja": "ムクホークナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Staraptor hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "ムクホークに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -8480,7 +8480,7 @@
     "base_id": 623,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "むしよせコロン",
+    "ja": "ゴルーグナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Golurk hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "ゴルーグに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -8497,7 +8497,7 @@
     "base_id": 678,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "シルバーコロン",
+    "ja": "ニャオニクスナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Meowstic hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "ニャオニクスに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -8514,7 +8514,7 @@
     "base_id": 740,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ゴールドコロン",
+    "ja": "ケケンカニナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Crabominable hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "ケケンカニに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -8548,7 +8548,7 @@
     "base_id": 801,
     "in_champions": false,
     "champions_category": null,
-    "ja": "げんきのアメ"
+    "ja": "マギアナイト"
   },
   {
     "id": 1041,
@@ -8563,7 +8563,7 @@
     "base_id": 952,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "ちからのアメ",
+    "ja": "スコヴィラナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Scovillain hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "スコヴィランに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -8597,7 +8597,7 @@
     "base_id": 978,
     "in_champions": false,
     "champions_category": null,
-    "ja": "ちしきのアメ"
+    "ja": "シャリタツナイト"
   },
   {
     "id": 1044,
@@ -8612,7 +8612,7 @@
     "base_id": 970,
     "in_champions": true,
     "champions_category": "mega_stone",
-    "ja": "こころのアメ",
+    "ja": "キラフロルナイト",
     "desc_en": "One of a variety of mysterious Mega Stones. Have Glimmora hold it, and this stone will enable it to Mega Evolve during battle.",
     "desc_ja": "キラフロルに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。"
   },
@@ -8629,7 +8629,7 @@
     "base_id": 382,
     "in_champions": false,
     "champions_category": null,
-    "ja": "はやさのアメ"
+    "ja": "あいいろのたま"
   },
   {
     "id": 1046,
@@ -8644,6 +8644,6 @@
     "base_id": 383,
     "in_champions": false,
     "champions_category": null,
-    "ja": "げんきのアメＬ"
+    "ja": "べにいろのたま"
   }
 ]

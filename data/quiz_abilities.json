@@ -4558,7 +4558,7 @@
       "과미르",
       "과미드라"
     ],
-    "ja": "supersweet_syrup",
+    "ja": "かんろなミツ",
     "desc_en": "Lowers the evasion of opposing Pokémon by 1 stage when first sent into battle",
     "desc_ja": "最初に 登場 したとき 甘ったるい 蜜の香りを ふりまいて 相手の 回避率を 下げる。"
   },
@@ -4668,7 +4668,7 @@
     "pokemon": [
       "메가장크로다일"
     ],
-    "ja": "dragon_skin",
+    "ja": "ドラゴンスキン",
     "desc_en": "The Pokémon's Normal-type moves become Dragon-type moves and their power is boosted by 20%.",
     "desc_ja": "ノーマルタイプの技がドラゴンタイプになり 威力が1.2倍になる。"
   },
@@ -4681,7 +4681,7 @@
     "pokemon": [
       "메가메가니움"
     ],
-    "ja": "mega_solar",
+    "ja": "メガソーラー",
     "desc_en": "Even when the sunlight has not turned harsh, the Pokémon can use its moves as if the weather were harsh sunlight.",
     "desc_ja": "天気が にほんばれ状態でなくても にほんばれ状態として 技を使うことができる。"
   },
@@ -4694,7 +4694,7 @@
     "pokemon": [
       "메가몰드류"
     ],
-    "ja": "drill_pierce",
+    "ja": "かんつうドリル",
     "desc_en": "When the Pokémon uses contact moves, it can hit even targets that are protecting themselves, dealing 1/4 of the damage that the move would otherwise deal. Everything aside from the target's protective effects is still triggered.",
     "desc_ja": "接触技を使う時 相手の守りの効果を無視して 本来の1/4のダメージを与える。 相手の守りの効果以外は発動される。"
   },
@@ -4707,7 +4707,7 @@
     "pokemon": [
       "메가스코빌런"
     ],
-    "ja": "habanero_burst",
+    "ja": "とびだすハバネロ",
     "desc_en": "When the Pokémon takes damage from a move, it burns the attacker.",
     "desc_ja": "技のダメージを受けると 相手をやけど状態にする。"
   },
