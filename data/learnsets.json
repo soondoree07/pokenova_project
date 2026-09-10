@@ -34797,8 +34797,80 @@
       "level": 0
     }
   ],
-  "burmy_sandy": [],
-  "burmy_trash": [],
+  "burmy_sandy": [
+    {
+      "en": "protect",
+      "method": "level-up",
+      "level": 0
+    },
+    {
+      "en": "tackle",
+      "method": "level-up",
+      "level": 10
+    },
+    {
+      "en": "bug_bite",
+      "method": "level-up",
+      "level": 15
+    },
+    {
+      "en": "protect",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "bug_bite",
+      "method": "tutor",
+      "level": 0
+    },
+    {
+      "en": "electroweb",
+      "method": "tutor",
+      "level": 0
+    },
+    {
+      "en": "snore",
+      "method": "tutor",
+      "level": 0
+    }
+  ],
+  "burmy_trash": [
+    {
+      "en": "protect",
+      "method": "level-up",
+      "level": 0
+    },
+    {
+      "en": "tackle",
+      "method": "level-up",
+      "level": 10
+    },
+    {
+      "en": "bug_bite",
+      "method": "level-up",
+      "level": 15
+    },
+    {
+      "en": "protect",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "bug_bite",
+      "method": "tutor",
+      "level": 0
+    },
+    {
+      "en": "electroweb",
+      "method": "tutor",
+      "level": 0
+    },
+    {
+      "en": "snore",
+      "method": "tutor",
+      "level": 0
+    }
+  ],
   "butterfree": [
     {
       "en": "gust",
@@ -65883,7 +65955,348 @@
       "level": 0
     }
   ],
-  "darmanitan": [],
+  "darmanitan": [
+    {
+      "en": "hammer_arm",
+      "method": "level-up",
+      "level": 0
+    },
+    {
+      "en": "tackle",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "bite",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "ember",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "taunt",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "incinerate",
+      "method": "level-up",
+      "level": 12
+    },
+    {
+      "en": "work_up",
+      "method": "level-up",
+      "level": 16
+    },
+    {
+      "en": "fire_fang",
+      "method": "level-up",
+      "level": 20
+    },
+    {
+      "en": "headbutt",
+      "method": "level-up",
+      "level": 24
+    },
+    {
+      "en": "fire_punch",
+      "method": "level-up",
+      "level": 28
+    },
+    {
+      "en": "uproar",
+      "method": "level-up",
+      "level": 32
+    },
+    {
+      "en": "belly_drum",
+      "method": "level-up",
+      "level": 38
+    },
+    {
+      "en": "flare_blitz",
+      "method": "level-up",
+      "level": 44
+    },
+    {
+      "en": "thrash",
+      "method": "level-up",
+      "level": 50
+    },
+    {
+      "en": "superpower",
+      "method": "level-up",
+      "level": 56
+    },
+    {
+      "en": "mega_punch",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "mega_kick",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "body_slam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "flamethrower",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "hyper_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "solar_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "fire_spin",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "earthquake",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "dig",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "psychic",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "focus_energy",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "fire_blast",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rest",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rock_slide",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "substitute",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thief",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "snore",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "reversal",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "protect",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endure",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "attract",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sleep_talk",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "encore",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sunny_day",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "future_sight",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "heat_wave",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "will_o_wisp",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "facade",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "trick",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "brick_break",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "overheat",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rock_tomb",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "iron_defense",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "bulk_up",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "gyro_ball",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "u_turn",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "payback",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "fling",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "power_swap",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "guard_swap",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "focus_blast",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "giga_impact",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "zen_headbutt",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "iron_head",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "stone_edge",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "grass_knot",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "round",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "bulldoze",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "mystical_fire",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "body_press",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "expanding_force",
+      "method": "tutor",
+      "level": 0
+    },
+    {
+      "en": "burning_jealousy",
+      "method": "tutor",
+      "level": 0
+    },
+    {
+      "en": "lash_out",
+      "method": "tutor",
+      "level": 0
+    }
+  ],
   "darmanitan_galar_standard": [
     {
       "en": "icicle_crash",
@@ -68984,9 +69397,687 @@
       "level": 0
     }
   ],
-  "deerling_autumn": [],
-  "deerling_summer": [],
-  "deerling_winter": [],
+  "deerling_autumn": [
+    {
+      "en": "tackle",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "growl",
+      "method": "level-up",
+      "level": 4
+    },
+    {
+      "en": "sand_attack",
+      "method": "level-up",
+      "level": 7
+    },
+    {
+      "en": "double_kick",
+      "method": "level-up",
+      "level": 10
+    },
+    {
+      "en": "leech_seed",
+      "method": "level-up",
+      "level": 13
+    },
+    {
+      "en": "bullet_seed",
+      "method": "level-up",
+      "level": 16
+    },
+    {
+      "en": "take_down",
+      "method": "level-up",
+      "level": 20
+    },
+    {
+      "en": "zen_headbutt",
+      "method": "level-up",
+      "level": 24
+    },
+    {
+      "en": "energy_ball",
+      "method": "level-up",
+      "level": 28
+    },
+    {
+      "en": "charm",
+      "method": "level-up",
+      "level": 32
+    },
+    {
+      "en": "double_edge",
+      "method": "level-up",
+      "level": 37
+    },
+    {
+      "en": "solar_beam",
+      "method": "level-up",
+      "level": 42
+    },
+    {
+      "en": "body_slam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thunder_wave",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "dig",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "light_screen",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rest",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "substitute",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "protect",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "giga_drain",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endure",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rain_dance",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sunny_day",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "shadow_ball",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "facade",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "helping_hand",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endeavor",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "magical_leaf",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "seed_bomb",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "leaf_storm",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "grass_knot",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "bulldoze",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "wild_charge",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "grassy_terrain",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "play_rough",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "grassy_glide",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "tera_blast",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "trailblaze",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "headbutt",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "agility",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "sleep_talk",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "baton_pass",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "synthesis",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "fake_tears",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "worry_seed",
+      "method": "egg",
+      "level": 0
+    }
+  ],
+  "deerling_summer": [
+    {
+      "en": "tackle",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "growl",
+      "method": "level-up",
+      "level": 4
+    },
+    {
+      "en": "sand_attack",
+      "method": "level-up",
+      "level": 7
+    },
+    {
+      "en": "double_kick",
+      "method": "level-up",
+      "level": 10
+    },
+    {
+      "en": "leech_seed",
+      "method": "level-up",
+      "level": 13
+    },
+    {
+      "en": "bullet_seed",
+      "method": "level-up",
+      "level": 16
+    },
+    {
+      "en": "take_down",
+      "method": "level-up",
+      "level": 20
+    },
+    {
+      "en": "zen_headbutt",
+      "method": "level-up",
+      "level": 24
+    },
+    {
+      "en": "energy_ball",
+      "method": "level-up",
+      "level": 28
+    },
+    {
+      "en": "charm",
+      "method": "level-up",
+      "level": 32
+    },
+    {
+      "en": "double_edge",
+      "method": "level-up",
+      "level": 37
+    },
+    {
+      "en": "solar_beam",
+      "method": "level-up",
+      "level": 42
+    },
+    {
+      "en": "body_slam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thunder_wave",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "dig",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "light_screen",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rest",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "substitute",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "protect",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "giga_drain",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endure",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rain_dance",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sunny_day",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "shadow_ball",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "facade",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "helping_hand",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endeavor",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "magical_leaf",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "seed_bomb",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "leaf_storm",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "grass_knot",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "bulldoze",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "wild_charge",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "grassy_terrain",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "play_rough",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "grassy_glide",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "tera_blast",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "trailblaze",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "headbutt",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "agility",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "sleep_talk",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "baton_pass",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "synthesis",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "fake_tears",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "worry_seed",
+      "method": "egg",
+      "level": 0
+    }
+  ],
+  "deerling_winter": [
+    {
+      "en": "tackle",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "growl",
+      "method": "level-up",
+      "level": 4
+    },
+    {
+      "en": "sand_attack",
+      "method": "level-up",
+      "level": 7
+    },
+    {
+      "en": "double_kick",
+      "method": "level-up",
+      "level": 10
+    },
+    {
+      "en": "leech_seed",
+      "method": "level-up",
+      "level": 13
+    },
+    {
+      "en": "bullet_seed",
+      "method": "level-up",
+      "level": 16
+    },
+    {
+      "en": "take_down",
+      "method": "level-up",
+      "level": 20
+    },
+    {
+      "en": "zen_headbutt",
+      "method": "level-up",
+      "level": 24
+    },
+    {
+      "en": "energy_ball",
+      "method": "level-up",
+      "level": 28
+    },
+    {
+      "en": "charm",
+      "method": "level-up",
+      "level": 32
+    },
+    {
+      "en": "double_edge",
+      "method": "level-up",
+      "level": 37
+    },
+    {
+      "en": "solar_beam",
+      "method": "level-up",
+      "level": 42
+    },
+    {
+      "en": "body_slam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thunder_wave",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "dig",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "light_screen",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rest",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "substitute",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "protect",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "giga_drain",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endure",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rain_dance",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sunny_day",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "shadow_ball",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "facade",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "helping_hand",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endeavor",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "magical_leaf",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "seed_bomb",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "leaf_storm",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "grass_knot",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "bulldoze",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "wild_charge",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "grassy_terrain",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "play_rough",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "grassy_glide",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "tera_blast",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "trailblaze",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "headbutt",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "agility",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "sleep_talk",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "baton_pass",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "synthesis",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "fake_tears",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "worry_seed",
+      "method": "egg",
+      "level": 0
+    }
+  ],
   "deino": [
     {
       "en": "tackle",
@@ -84053,7 +85144,438 @@
       "level": 0
     }
   ],
-  "dudunsparce": [],
+  "dudunsparce": [
+    {
+      "en": "defense_curl",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "flail",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "mud_slap",
+      "method": "level-up",
+      "level": 4
+    },
+    {
+      "en": "rollout",
+      "method": "level-up",
+      "level": 8
+    },
+    {
+      "en": "glare",
+      "method": "level-up",
+      "level": 12
+    },
+    {
+      "en": "screech",
+      "method": "level-up",
+      "level": 16
+    },
+    {
+      "en": "ancient_power",
+      "method": "level-up",
+      "level": 20
+    },
+    {
+      "en": "drill_run",
+      "method": "level-up",
+      "level": 24
+    },
+    {
+      "en": "yawn",
+      "method": "level-up",
+      "level": 28
+    },
+    {
+      "en": "hyper_drill",
+      "method": "level-up",
+      "level": 32
+    },
+    {
+      "en": "roost",
+      "method": "level-up",
+      "level": 36
+    },
+    {
+      "en": "dragon_rush",
+      "method": "level-up",
+      "level": 40
+    },
+    {
+      "en": "coil",
+      "method": "level-up",
+      "level": 44
+    },
+    {
+      "en": "double_edge",
+      "method": "level-up",
+      "level": 48
+    },
+    {
+      "en": "endeavor",
+      "method": "level-up",
+      "level": 52
+    },
+    {
+      "en": "hurricane",
+      "method": "level-up",
+      "level": 56
+    },
+    {
+      "en": "boomburst",
+      "method": "level-up",
+      "level": 62
+    },
+    {
+      "en": "body_slam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "take_down",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "flamethrower",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "ice_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "blizzard",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "hyper_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "solar_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thunderbolt",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thunder",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "earthquake",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "dig",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "toxic",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "agility",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "fire_blast",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "amnesia",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rest",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rock_slide",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "substitute",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thief",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "curse",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "spite",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "protect",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "scary_face",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "outrage",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sandstorm",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endure",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sleep_talk",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "pain_split",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "baton_pass",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rain_dance",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sunny_day",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "psych_up",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "shadow_ball",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "uproar",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "facade",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "helping_hand",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "hyper_voice",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rock_tomb",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "mud_shot",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "poison_tail",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "calm_mind",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "gyro_ball",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "tailwind",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "poison_jab",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "air_slash",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "earth_power",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "giga_impact",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "zen_headbutt",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "stone_edge",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "stealth_rock",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "heavy_slam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "stored_power",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "hex",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "bulldoze",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "dragon_tail",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "wild_charge",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "throat_chop",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "lunge",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "smart_strike",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "stomping_tantrum",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "body_press",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "breaking_swipe",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "scale_shot",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "skitter_smack",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "dual_wingbeat",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "tera_blast",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "ice_spinner",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "pounce",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "chilling_water",
+      "method": "machine",
+      "level": 0
+    }
+  ],
   "dugtrio": [
     {
       "en": "sand_tomb",
@@ -88538,7 +90060,253 @@
       "level": 0
     }
   ],
-  "eiscue": [],
+  "eiscue": [
+    {
+      "en": "tackle",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "powder_snow",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "mist",
+      "method": "level-up",
+      "level": 6
+    },
+    {
+      "en": "weather_ball",
+      "method": "level-up",
+      "level": 12
+    },
+    {
+      "en": "icy_wind",
+      "method": "level-up",
+      "level": 18
+    },
+    {
+      "en": "headbutt",
+      "method": "level-up",
+      "level": 24
+    },
+    {
+      "en": "amnesia",
+      "method": "level-up",
+      "level": 30
+    },
+    {
+      "en": "freeze_dry",
+      "method": "level-up",
+      "level": 36
+    },
+    {
+      "en": "snowscape",
+      "method": "level-up",
+      "level": 42
+    },
+    {
+      "en": "aurora_veil",
+      "method": "level-up",
+      "level": 48
+    },
+    {
+      "en": "surf",
+      "method": "level-up",
+      "level": 54
+    },
+    {
+      "en": "blizzard",
+      "method": "level-up",
+      "level": 60
+    },
+    {
+      "en": "ice_punch",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "body_slam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "take_down",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "hydro_pump",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "ice_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "hyper_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "agility",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "reflect",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "waterfall",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rest",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "substitute",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "reversal",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "protect",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endure",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sleep_talk",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rain_dance",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "whirlpool",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "facade",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "feather_dance",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "icicle_spear",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "iron_defense",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "water_pulse",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "giga_impact",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "avalanche",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "zen_headbutt",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "iron_head",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "liquidation",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "flip_turn",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "tera_blast",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "ice_spinner",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "chilling_water",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "double_edge",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "belly_drum",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "aqua_ring",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "head_smash",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "soak",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "icicle_crash",
+      "method": "egg",
+      "level": 0
+    }
+  ],
   "ekans": [
     {
       "en": "wrap",
@@ -97376,7 +99144,308 @@
       "level": 0
     }
   ],
-  "farfetchd": [],
+  "farfetchd": [
+    {
+      "en": "sand_attack",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "peck",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "leer",
+      "method": "level-up",
+      "level": 5
+    },
+    {
+      "en": "fury_cutter",
+      "method": "level-up",
+      "level": 10
+    },
+    {
+      "en": "cut",
+      "method": "level-up",
+      "level": 15
+    },
+    {
+      "en": "aerial_ace",
+      "method": "level-up",
+      "level": 20
+    },
+    {
+      "en": "air_cutter",
+      "method": "level-up",
+      "level": 25
+    },
+    {
+      "en": "knock_off",
+      "method": "level-up",
+      "level": 30
+    },
+    {
+      "en": "false_swipe",
+      "method": "level-up",
+      "level": 35
+    },
+    {
+      "en": "slash",
+      "method": "level-up",
+      "level": 40
+    },
+    {
+      "en": "swords_dance",
+      "method": "level-up",
+      "level": 45
+    },
+    {
+      "en": "air_slash",
+      "method": "level-up",
+      "level": 50
+    },
+    {
+      "en": "leaf_blade",
+      "method": "level-up",
+      "level": 55
+    },
+    {
+      "en": "agility",
+      "method": "level-up",
+      "level": 60
+    },
+    {
+      "en": "brave_bird",
+      "method": "level-up",
+      "level": 65
+    },
+    {
+      "en": "fly",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "body_slam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "focus_energy",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "swift",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rest",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "substitute",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thief",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "snore",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "protect",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endure",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "steel_wing",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "attract",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sleep_talk",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "baton_pass",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "iron_tail",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sunny_day",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "uproar",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "heat_wave",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "facade",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "helping_hand",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "revenge",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "u_turn",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "close_combat",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "poison_jab",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "round",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "acrobatics",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "retaliate",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "work_up",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "solar_blade",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "throat_chop",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "brutal_swing",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "gust",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "quick_attack",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "sky_attack",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "curse",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "flail",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "feather_dance",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "covet",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "roost",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "feint",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "night_slash",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "simple_beam",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "final_gambit",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "first_impression",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "dual_wingbeat",
+      "method": "tutor",
+      "level": 0
+    }
+  ],
   "farigiraf": [
     {
       "en": "tackle",
@@ -100988,7 +103057,233 @@
       "level": 0
     }
   ],
-  "flabébé": [],
+  "flabébé": [
+    {
+      "en": "vine_whip",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "tackle",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "fairy_wind",
+      "method": "level-up",
+      "level": 6
+    },
+    {
+      "en": "safeguard",
+      "method": "level-up",
+      "level": 10
+    },
+    {
+      "en": "razor_leaf",
+      "method": "level-up",
+      "level": 15
+    },
+    {
+      "en": "wish",
+      "method": "level-up",
+      "level": 20
+    },
+    {
+      "en": "magical_leaf",
+      "method": "level-up",
+      "level": 22
+    },
+    {
+      "en": "grassy_terrain",
+      "method": "level-up",
+      "level": 24
+    },
+    {
+      "en": "petal_blizzard",
+      "method": "level-up",
+      "level": 28
+    },
+    {
+      "en": "synthesis",
+      "method": "level-up",
+      "level": 33
+    },
+    {
+      "en": "misty_terrain",
+      "method": "level-up",
+      "level": 37
+    },
+    {
+      "en": "moonblast",
+      "method": "level-up",
+      "level": 41
+    },
+    {
+      "en": "petal_dance",
+      "method": "level-up",
+      "level": 45
+    },
+    {
+      "en": "solar_beam",
+      "method": "level-up",
+      "level": 48
+    },
+    {
+      "en": "psychic",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "light_screen",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "swift",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rest",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "substitute",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "protect",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "giga_drain",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endure",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "charm",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sleep_talk",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "baton_pass",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rain_dance",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sunny_day",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "facade",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "helping_hand",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "calm_mind",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "seed_bomb",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "energy_ball",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "grass_knot",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "stored_power",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "disarming_voice",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "draining_kiss",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "dazzling_gleam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "pollen_puff",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "tera_blast",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "trailblaze",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "chilling_water",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "alluring_voice",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endeavor",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "copycat",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "tearful_look",
+      "method": "egg",
+      "level": 0
+    }
+  ],
   "flamigo": [
     {
       "en": "peck",
@@ -198034,7 +200329,303 @@
       "level": 0
     }
   ],
-  "meowstic_mega": [],
+  "meowstic_mega": [
+    {
+      "en": "hyper_beam",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "thunderbolt",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "thunder_wave",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "dig",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "psychic",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "light_screen",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "reflect",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "rest",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "substitute",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "snore",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "protect",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "endure",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "charm",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "mean_look",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "sleep_talk",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "safeguard",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "baton_pass",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "iron_tail",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "rain_dance",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "sunny_day",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "psych_up",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "shadow_ball",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "fake_out",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "facade",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "helping_hand",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "trick",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "role_play",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "wish",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "yawn",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "skill_swap",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "imprison",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "fake_tears",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "tickle",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "covet",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "calm_mind",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "gravity",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "payback",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "sucker_punch",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "dark_pulse",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "energy_ball",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "giga_impact",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "nasty_plot",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "zen_headbutt",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "trick_room",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "charge_beam",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "wonder_room",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "psyshock",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "magic_room",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "round",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "stored_power",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "quick_guard",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "tail_slap",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "misty_terrain",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "play_rough",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "psychic_terrain",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "expanding_force",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "trailblaze",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "alluring_voice",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "psychic_noise",
+      "method": "train",
+      "level": 0
+    }
+  ],
   "meowth": [
     {
       "en": "growl",
@@ -205869,7 +208460,248 @@
       "level": 0
     }
   ],
-  "minior": [],
+  "minior": [
+    {
+      "en": "tackle",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "defense_curl",
+      "method": "level-up",
+      "level": 3
+    },
+    {
+      "en": "rollout",
+      "method": "level-up",
+      "level": 8
+    },
+    {
+      "en": "confuse_ray",
+      "method": "level-up",
+      "level": 10
+    },
+    {
+      "en": "swift",
+      "method": "level-up",
+      "level": 15
+    },
+    {
+      "en": "ancient_power",
+      "method": "level-up",
+      "level": 17
+    },
+    {
+      "en": "self_destruct",
+      "method": "level-up",
+      "level": 22
+    },
+    {
+      "en": "stealth_rock",
+      "method": "level-up",
+      "level": 24
+    },
+    {
+      "en": "take_down",
+      "method": "level-up",
+      "level": 29
+    },
+    {
+      "en": "rock_polish",
+      "method": "level-up",
+      "level": 31
+    },
+    {
+      "en": "cosmic_power",
+      "method": "level-up",
+      "level": 36
+    },
+    {
+      "en": "power_gem",
+      "method": "level-up",
+      "level": 38
+    },
+    {
+      "en": "double_edge",
+      "method": "level-up",
+      "level": 43
+    },
+    {
+      "en": "shell_smash",
+      "method": "level-up",
+      "level": 45
+    },
+    {
+      "en": "explosion",
+      "method": "level-up",
+      "level": 50
+    },
+    {
+      "en": "hyper_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "solar_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "earthquake",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "psychic",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "light_screen",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "reflect",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rest",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rock_slide",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "substitute",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "protect",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sandstorm",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endure",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sleep_talk",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "facade",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endeavor",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rock_tomb",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "calm_mind",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rock_blast",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "gravity",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "gyro_ball",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "u_turn",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "earth_power",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "giga_impact",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "zen_headbutt",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "iron_head",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "stone_edge",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "charge_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "acrobatics",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "bulldoze",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "dazzling_gleam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "meteor_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "scorching_sands",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "tera_blast",
+      "method": "machine",
+      "level": 0
+    }
+  ],
   "minun": [
     {
       "en": "growl",
@@ -209229,7 +212061,418 @@
       "level": 0
     }
   ],
-  "mr_mime": [],
+  "mr_mime": [
+    {
+      "en": "pound",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "baton_pass",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "encore",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "copycat",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "power_swap",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "guard_swap",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "wide_guard",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "quick_guard",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "confusion",
+      "method": "level-up",
+      "level": 12
+    },
+    {
+      "en": "role_play",
+      "method": "level-up",
+      "level": 16
+    },
+    {
+      "en": "protect",
+      "method": "level-up",
+      "level": 20
+    },
+    {
+      "en": "recycle",
+      "method": "level-up",
+      "level": 24
+    },
+    {
+      "en": "psybeam",
+      "method": "level-up",
+      "level": 28
+    },
+    {
+      "en": "mimic",
+      "method": "level-up",
+      "level": 32
+    },
+    {
+      "en": "light_screen",
+      "method": "level-up",
+      "level": 36
+    },
+    {
+      "en": "reflect",
+      "method": "level-up",
+      "level": 36
+    },
+    {
+      "en": "safeguard",
+      "method": "level-up",
+      "level": 36
+    },
+    {
+      "en": "sucker_punch",
+      "method": "level-up",
+      "level": 40
+    },
+    {
+      "en": "dazzling_gleam",
+      "method": "level-up",
+      "level": 44
+    },
+    {
+      "en": "psychic",
+      "method": "level-up",
+      "level": 48
+    },
+    {
+      "en": "teeter_dance",
+      "method": "level-up",
+      "level": 52
+    },
+    {
+      "en": "mega_punch",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "fire_punch",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "ice_punch",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thunder_punch",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "mega_kick",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "body_slam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "hyper_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "solar_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thunderbolt",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thunder_wave",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thunder",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "metronome",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rest",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "substitute",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thief",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "snore",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "icy_wind",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endure",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "charm",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "attract",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sleep_talk",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rain_dance",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sunny_day",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "shadow_ball",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "future_sight",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "uproar",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "facade",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "taunt",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "helping_hand",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "trick",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "brick_break",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "skill_swap",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "iron_defense",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "magical_leaf",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "calm_mind",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "payback",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "fling",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "drain_punch",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "focus_blast",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "energy_ball",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "giga_impact",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "nasty_plot",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "zen_headbutt",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "trick_room",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "grass_knot",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "wonder_room",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "psyshock",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "magic_room",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "foul_play",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "round",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "stored_power",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "ally_switch",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "misty_terrain",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "mystical_fire",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "psychic_terrain",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "hypnosis",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "confuse_ray",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "fake_out",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "tickle",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "power_split",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "expanding_force",
+      "method": "tutor",
+      "level": 0
+    }
+  ],
   "mr_rime": [
     {
       "en": "mist",
@@ -213757,8 +217000,670 @@
       "level": 0
     }
   ],
-  "necrozma_dawn_wings": [],
-  "necrozma_dusk_mane": [],
+  "necrozma_dawn_wings": [
+    {
+      "en": "confusion",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "metal_claw",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "morning_sun",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "moonlight",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "charge_beam",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "stealth_rock",
+      "method": "level-up",
+      "level": 8
+    },
+    {
+      "en": "slash",
+      "method": "level-up",
+      "level": 16
+    },
+    {
+      "en": "night_slash",
+      "method": "level-up",
+      "level": 24
+    },
+    {
+      "en": "psycho_cut",
+      "method": "level-up",
+      "level": 32
+    },
+    {
+      "en": "stored_power",
+      "method": "level-up",
+      "level": 40
+    },
+    {
+      "en": "rock_blast",
+      "method": "level-up",
+      "level": 48
+    },
+    {
+      "en": "iron_defense",
+      "method": "level-up",
+      "level": 56
+    },
+    {
+      "en": "power_gem",
+      "method": "level-up",
+      "level": 64
+    },
+    {
+      "en": "photon_geyser",
+      "method": "level-up",
+      "level": 72
+    },
+    {
+      "en": "gravity",
+      "method": "level-up",
+      "level": 80
+    },
+    {
+      "en": "prismatic_laser",
+      "method": "level-up",
+      "level": 88
+    },
+    {
+      "en": "swords_dance",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "body_slam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "hyper_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "solar_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "earthquake",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "psychic",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "light_screen",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "reflect",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "swift",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rest",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rock_slide",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "substitute",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thief",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "protect",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "scary_face",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "outrage",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sandstorm",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endure",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sleep_talk",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sunny_day",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "future_sight",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "heat_wave",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "facade",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "brick_break",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "knock_off",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "imprison",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "hyper_voice",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rock_tomb",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "aerial_ace",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "calm_mind",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "dragon_dance",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "gyro_ball",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "fling",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "dark_pulse",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "x_scissor",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "dragon_pulse",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "earth_power",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "giga_impact",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "shadow_claw",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "flash_cannon",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "trick_room",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "iron_head",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "stone_edge",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "psyshock",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "bulldoze",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "smart_strike",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "psychic_fangs",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "expanding_force",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "meteor_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "tera_blast",
+      "method": "machine",
+      "level": 0
+    }
+  ],
+  "necrozma_dusk_mane": [
+    {
+      "en": "confusion",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "metal_claw",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "morning_sun",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "moonlight",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "charge_beam",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "stealth_rock",
+      "method": "level-up",
+      "level": 8
+    },
+    {
+      "en": "slash",
+      "method": "level-up",
+      "level": 16
+    },
+    {
+      "en": "night_slash",
+      "method": "level-up",
+      "level": 24
+    },
+    {
+      "en": "psycho_cut",
+      "method": "level-up",
+      "level": 32
+    },
+    {
+      "en": "stored_power",
+      "method": "level-up",
+      "level": 40
+    },
+    {
+      "en": "rock_blast",
+      "method": "level-up",
+      "level": 48
+    },
+    {
+      "en": "iron_defense",
+      "method": "level-up",
+      "level": 56
+    },
+    {
+      "en": "power_gem",
+      "method": "level-up",
+      "level": 64
+    },
+    {
+      "en": "photon_geyser",
+      "method": "level-up",
+      "level": 72
+    },
+    {
+      "en": "gravity",
+      "method": "level-up",
+      "level": 80
+    },
+    {
+      "en": "prismatic_laser",
+      "method": "level-up",
+      "level": 88
+    },
+    {
+      "en": "swords_dance",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "body_slam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "hyper_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "solar_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "earthquake",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "psychic",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "light_screen",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "reflect",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "swift",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rest",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rock_slide",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "substitute",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thief",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "protect",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "scary_face",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "outrage",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sandstorm",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endure",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sleep_talk",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sunny_day",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "future_sight",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "heat_wave",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "facade",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "brick_break",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "knock_off",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "imprison",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "hyper_voice",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rock_tomb",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "aerial_ace",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "calm_mind",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "dragon_dance",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "gyro_ball",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "fling",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "dark_pulse",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "x_scissor",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "dragon_pulse",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "earth_power",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "giga_impact",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "shadow_claw",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "flash_cannon",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "trick_room",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "iron_head",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "stone_edge",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "psyshock",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "bulldoze",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "smart_strike",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "psychic_fangs",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "expanding_force",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "meteor_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "tera_blast",
+      "method": "machine",
+      "level": 0
+    }
+  ],
   "necrozma_ultra": [
     {
       "en": "confusion",
@@ -243787,7 +247692,263 @@
       "level": 0
     }
   ],
-  "pumpkaboo": [],
+  "pumpkaboo": [
+    {
+      "en": "astonish",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "trick_or_treat",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "shadow_sneak",
+      "method": "level-up",
+      "level": 4
+    },
+    {
+      "en": "confuse_ray",
+      "method": "level-up",
+      "level": 8
+    },
+    {
+      "en": "razor_leaf",
+      "method": "level-up",
+      "level": 12
+    },
+    {
+      "en": "leech_seed",
+      "method": "level-up",
+      "level": 16
+    },
+    {
+      "en": "bullet_seed",
+      "method": "level-up",
+      "level": 20
+    },
+    {
+      "en": "scary_face",
+      "method": "level-up",
+      "level": 24
+    },
+    {
+      "en": "worry_seed",
+      "method": "level-up",
+      "level": 28
+    },
+    {
+      "en": "seed_bomb",
+      "method": "level-up",
+      "level": 32
+    },
+    {
+      "en": "shadow_ball",
+      "method": "level-up",
+      "level": 36
+    },
+    {
+      "en": "trick",
+      "method": "level-up",
+      "level": 40
+    },
+    {
+      "en": "pain_split",
+      "method": "level-up",
+      "level": 44
+    },
+    {
+      "en": "flamethrower",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "solar_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "psychic",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "light_screen",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "fire_blast",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rest",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rock_slide",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "substitute",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thief",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "snore",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "protect",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sludge_bomb",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "giga_drain",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endure",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "attract",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sleep_talk",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "safeguard",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sunny_day",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "will_o_wisp",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "facade",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "skill_swap",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "imprison",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "gyro_ball",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "dark_pulse",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "energy_ball",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "trick_room",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "grass_knot",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "foul_play",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "round",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "ally_switch",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "hex",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "mystical_fire",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "disable",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "curse",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "destiny_bond",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "grassy_glide",
+      "method": "tutor",
+      "level": 0
+    },
+    {
+      "en": "skitter_smack",
+      "method": "tutor",
+      "level": 0
+    },
+    {
+      "en": "poltergeist",
+      "method": "tutor",
+      "level": 0
+    }
+  ],
   "pupitar": [
     {
       "en": "iron_defense",
@@ -244601,7 +248762,253 @@
       "level": 0
     }
   ],
-  "pyroar_mega": [],
+  "pyroar_mega": [
+    {
+      "en": "body_slam",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "double_edge",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "roar",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "flamethrower",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "hyper_beam",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "solar_beam",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "fire_spin",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "dig",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "fire_blast",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "rest",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "substitute",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "thief",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "snore",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "protect",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "mud_slap",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "endure",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "sleep_talk",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "iron_tail",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "rain_dance",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "sunny_day",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "crunch",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "heat_wave",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "will_o_wisp",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "facade",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "taunt",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "helping_hand",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "yawn",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "endeavor",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "hyper_voice",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "overheat",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "payback",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "flare_blitz",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "dark_pulse",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "giga_impact",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "thunder_fang",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "fire_fang",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "flame_charge",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "entrainment",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "round",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "acrobatics",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "bulldoze",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "wild_charge",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "snarl",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "noble_roar",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "psychic_fangs",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "burning_jealousy",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "scorching_sands",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "trailblaze",
+      "method": "train",
+      "level": 0
+    },
+    {
+      "en": "temper_flare",
+      "method": "train",
+      "level": 0
+    }
+  ],
   "pyukumuku": [
     {
       "en": "harden",
@@ -268474,9 +272881,807 @@
       "level": 0
     }
   ],
-  "sawsbuck_autumn": [],
-  "sawsbuck_summer": [],
-  "sawsbuck_winter": [],
+  "sawsbuck_autumn": [
+    {
+      "en": "horn_leech",
+      "method": "level-up",
+      "level": 0
+    },
+    {
+      "en": "sand_attack",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "tackle",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "growl",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "megahorn",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "double_kick",
+      "method": "level-up",
+      "level": 10
+    },
+    {
+      "en": "leech_seed",
+      "method": "level-up",
+      "level": 13
+    },
+    {
+      "en": "bullet_seed",
+      "method": "level-up",
+      "level": 16
+    },
+    {
+      "en": "take_down",
+      "method": "level-up",
+      "level": 20
+    },
+    {
+      "en": "zen_headbutt",
+      "method": "level-up",
+      "level": 24
+    },
+    {
+      "en": "energy_ball",
+      "method": "level-up",
+      "level": 28
+    },
+    {
+      "en": "charm",
+      "method": "level-up",
+      "level": 36
+    },
+    {
+      "en": "double_edge",
+      "method": "level-up",
+      "level": 44
+    },
+    {
+      "en": "solar_beam",
+      "method": "level-up",
+      "level": 52
+    },
+    {
+      "en": "swords_dance",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "body_slam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "hyper_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thunder_wave",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "dig",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "agility",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "light_screen",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rest",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "substitute",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "curse",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "protect",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "giga_drain",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endure",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sleep_talk",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "baton_pass",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rain_dance",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sunny_day",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "shadow_ball",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "facade",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "helping_hand",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endeavor",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "fake_tears",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "magical_leaf",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "seed_bomb",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "giga_impact",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "leaf_storm",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "grass_knot",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "bulldoze",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "wild_charge",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "petal_blizzard",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "grassy_terrain",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "play_rough",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "high_horsepower",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "throat_chop",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "smart_strike",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "stomping_tantrum",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "grassy_glide",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "tera_blast",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "trailblaze",
+      "method": "machine",
+      "level": 0
+    }
+  ],
+  "sawsbuck_summer": [
+    {
+      "en": "horn_leech",
+      "method": "level-up",
+      "level": 0
+    },
+    {
+      "en": "sand_attack",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "tackle",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "growl",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "megahorn",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "double_kick",
+      "method": "level-up",
+      "level": 10
+    },
+    {
+      "en": "leech_seed",
+      "method": "level-up",
+      "level": 13
+    },
+    {
+      "en": "bullet_seed",
+      "method": "level-up",
+      "level": 16
+    },
+    {
+      "en": "take_down",
+      "method": "level-up",
+      "level": 20
+    },
+    {
+      "en": "zen_headbutt",
+      "method": "level-up",
+      "level": 24
+    },
+    {
+      "en": "energy_ball",
+      "method": "level-up",
+      "level": 28
+    },
+    {
+      "en": "charm",
+      "method": "level-up",
+      "level": 36
+    },
+    {
+      "en": "double_edge",
+      "method": "level-up",
+      "level": 44
+    },
+    {
+      "en": "solar_beam",
+      "method": "level-up",
+      "level": 52
+    },
+    {
+      "en": "swords_dance",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "body_slam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "hyper_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thunder_wave",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "dig",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "agility",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "light_screen",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rest",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "substitute",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "curse",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "protect",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "giga_drain",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endure",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sleep_talk",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "baton_pass",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rain_dance",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sunny_day",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "shadow_ball",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "facade",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "helping_hand",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endeavor",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "fake_tears",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "magical_leaf",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "seed_bomb",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "giga_impact",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "leaf_storm",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "grass_knot",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "bulldoze",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "wild_charge",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "petal_blizzard",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "grassy_terrain",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "play_rough",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "high_horsepower",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "throat_chop",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "smart_strike",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "stomping_tantrum",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "grassy_glide",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "tera_blast",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "trailblaze",
+      "method": "machine",
+      "level": 0
+    }
+  ],
+  "sawsbuck_winter": [
+    {
+      "en": "horn_leech",
+      "method": "level-up",
+      "level": 0
+    },
+    {
+      "en": "sand_attack",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "tackle",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "growl",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "megahorn",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "double_kick",
+      "method": "level-up",
+      "level": 10
+    },
+    {
+      "en": "leech_seed",
+      "method": "level-up",
+      "level": 13
+    },
+    {
+      "en": "bullet_seed",
+      "method": "level-up",
+      "level": 16
+    },
+    {
+      "en": "take_down",
+      "method": "level-up",
+      "level": 20
+    },
+    {
+      "en": "zen_headbutt",
+      "method": "level-up",
+      "level": 24
+    },
+    {
+      "en": "energy_ball",
+      "method": "level-up",
+      "level": 28
+    },
+    {
+      "en": "charm",
+      "method": "level-up",
+      "level": 36
+    },
+    {
+      "en": "double_edge",
+      "method": "level-up",
+      "level": 44
+    },
+    {
+      "en": "solar_beam",
+      "method": "level-up",
+      "level": 52
+    },
+    {
+      "en": "swords_dance",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "body_slam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "hyper_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thunder_wave",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "dig",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "agility",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "light_screen",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rest",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "substitute",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "curse",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "protect",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "giga_drain",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endure",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sleep_talk",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "baton_pass",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rain_dance",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sunny_day",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "shadow_ball",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "facade",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "helping_hand",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endeavor",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "fake_tears",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "magical_leaf",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "seed_bomb",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "giga_impact",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "leaf_storm",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "grass_knot",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "bulldoze",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "wild_charge",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "petal_blizzard",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "grassy_terrain",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "play_rough",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "high_horsepower",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "throat_chop",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "smart_strike",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "stomping_tantrum",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "grassy_glide",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "tera_blast",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "trailblaze",
+      "method": "machine",
+      "level": 0
+    }
+  ],
   "scatterbug": [
     {
       "en": "tackle",
@@ -298299,7 +303504,243 @@
       "level": 0
     }
   ],
-  "squawkabilly": [],
+  "squawkabilly": [
+    {
+      "en": "growl",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "peck",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "mimic",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "quick_attack",
+      "method": "level-up",
+      "level": 6
+    },
+    {
+      "en": "torment",
+      "method": "level-up",
+      "level": 10
+    },
+    {
+      "en": "aerial_ace",
+      "method": "level-up",
+      "level": 13
+    },
+    {
+      "en": "fury_attack",
+      "method": "level-up",
+      "level": 17
+    },
+    {
+      "en": "taunt",
+      "method": "level-up",
+      "level": 20
+    },
+    {
+      "en": "uproar",
+      "method": "level-up",
+      "level": 24
+    },
+    {
+      "en": "copycat",
+      "method": "level-up",
+      "level": 27
+    },
+    {
+      "en": "fly",
+      "method": "level-up",
+      "level": 30
+    },
+    {
+      "en": "facade",
+      "method": "level-up",
+      "level": 34
+    },
+    {
+      "en": "swagger",
+      "method": "level-up",
+      "level": 38
+    },
+    {
+      "en": "brave_bird",
+      "method": "level-up",
+      "level": 42
+    },
+    {
+      "en": "roost",
+      "method": "level-up",
+      "level": 47
+    },
+    {
+      "en": "reversal",
+      "method": "level-up",
+      "level": 52
+    },
+    {
+      "en": "take_down",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "hyper_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rest",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "substitute",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thief",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "protect",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "scary_face",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endure",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sleep_talk",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sunny_day",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "heat_wave",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "helping_hand",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endeavor",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "feather_dance",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "hyper_voice",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "fake_tears",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "air_cutter",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "tailwind",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "u_turn",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "air_slash",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "giga_impact",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "foul_play",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "hurricane",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "lash_out",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "dual_wingbeat",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "tera_blast",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "pounce",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "double_edge",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "flatter",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "final_gambit",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "parting_shot",
+      "method": "egg",
+      "level": 0
+    }
+  ],
   "squirtle": [
     {
       "en": "tackle",
@@ -311023,7 +316464,188 @@
       "level": 0
     }
   ],
-  "tatsugiri_stretchy_mega": [],
+  "tatsugiri_stretchy_mega": [
+    {
+      "en": "water_gun",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "splash",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "harden",
+      "method": "level-up",
+      "level": 6
+    },
+    {
+      "en": "helping_hand",
+      "method": "level-up",
+      "level": 12
+    },
+    {
+      "en": "water_pulse",
+      "method": "level-up",
+      "level": 17
+    },
+    {
+      "en": "soak",
+      "method": "level-up",
+      "level": 23
+    },
+    {
+      "en": "taunt",
+      "method": "level-up",
+      "level": 28
+    },
+    {
+      "en": "memento",
+      "method": "level-up",
+      "level": 34
+    },
+    {
+      "en": "muddy_water",
+      "method": "level-up",
+      "level": 39
+    },
+    {
+      "en": "nasty_plot",
+      "method": "level-up",
+      "level": 43
+    },
+    {
+      "en": "mirror_coat",
+      "method": "level-up",
+      "level": 47
+    },
+    {
+      "en": "dragon_pulse",
+      "method": "level-up",
+      "level": 52
+    },
+    {
+      "en": "take_down",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "hydro_pump",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "surf",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "hyper_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rest",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "substitute",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "protect",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "icy_wind",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "outrage",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endure",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sleep_talk",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rain_dance",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "whirlpool",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "facade",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "dragon_dance",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "giga_impact",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "draco_meteor",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "lunge",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "tera_blast",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "chilling_water",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "dragon_cheer",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "counter",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "baton_pass",
+      "method": "egg",
+      "level": 0
+    },
+    {
+      "en": "rapid_spin",
+      "method": "egg",
+      "level": 0
+    }
+  ],
   "tauros": [
     {
       "en": "tackle",
@@ -322791,7 +328413,403 @@
       "level": 0
     }
   ],
-  "toxtricity_amped_gmax": [],
+  "toxtricity_amped_gmax": [
+    {
+      "en": "belch",
+      "method": "level-up",
+      "level": 0
+    },
+    {
+      "en": "tearful_look",
+      "method": "level-up",
+      "level": 0
+    },
+    {
+      "en": "nuzzle",
+      "method": "level-up",
+      "level": 0
+    },
+    {
+      "en": "growl",
+      "method": "level-up",
+      "level": 0
+    },
+    {
+      "en": "flail",
+      "method": "level-up",
+      "level": 0
+    },
+    {
+      "en": "acid",
+      "method": "level-up",
+      "level": 0
+    },
+    {
+      "en": "thunder_shock",
+      "method": "level-up",
+      "level": 0
+    },
+    {
+      "en": "acid_spray",
+      "method": "level-up",
+      "level": 0
+    },
+    {
+      "en": "leer",
+      "method": "level-up",
+      "level": 0
+    },
+    {
+      "en": "noble_roar",
+      "method": "level-up",
+      "level": 0
+    },
+    {
+      "en": "spark",
+      "method": "level-up",
+      "level": 0
+    },
+    {
+      "en": "charge",
+      "method": "level-up",
+      "level": 4
+    },
+    {
+      "en": "shock_wave",
+      "method": "level-up",
+      "level": 8
+    },
+    {
+      "en": "scary_face",
+      "method": "level-up",
+      "level": 12
+    },
+    {
+      "en": "taunt",
+      "method": "level-up",
+      "level": 16
+    },
+    {
+      "en": "screech",
+      "method": "level-up",
+      "level": 24
+    },
+    {
+      "en": "swagger",
+      "method": "level-up",
+      "level": 28
+    },
+    {
+      "en": "toxic",
+      "method": "level-up",
+      "level": 32
+    },
+    {
+      "en": "discharge",
+      "method": "level-up",
+      "level": 36
+    },
+    {
+      "en": "poison_jab",
+      "method": "level-up",
+      "level": 40
+    },
+    {
+      "en": "overdrive",
+      "method": "level-up",
+      "level": 44
+    },
+    {
+      "en": "boomburst",
+      "method": "level-up",
+      "level": 48
+    },
+    {
+      "en": "shift_gear",
+      "method": "level-up",
+      "level": 52
+    },
+    {
+      "en": "take_down",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "charm",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "scary_face",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "protect",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thunder_fang",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "acid_spray",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thief",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "trailblaze",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "charge_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "facade",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "poison_tail",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "hex",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "snarl",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "swift",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "stored_power",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "fling",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "venoshock",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endure",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "volt_switch",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sunny_day",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rain_dance",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "brick_break",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "fire_punch",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thunder_punch",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sleep_talk",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "electro_ball",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "drain_punch",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "metronome",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thunder_wave",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "poison_jab",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rest",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "taunt",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "toxic_spikes",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "eerie_impulse",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "gunk_shot",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "substitute",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "hyper_voice",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "encore",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thunderbolt",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "helping_hand",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "electric_terrain",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "wild_charge",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sludge_bomb",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "giga_impact",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "hyper_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thunder",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "tera_blast",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "charge",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "toxic",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "uproar",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endeavor",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "electroweb",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sludge_wave",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "throat_chop",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "metal_sound",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "psychic_noise",
+      "method": "machine",
+      "level": 0
+    }
+  ],
   "toxtricity_low_key": [
     {
       "en": "spark",
@@ -331105,8 +337123,660 @@
       "level": 0
     }
   ],
-  "urshifu_rapid_strike_gmax": [],
-  "urshifu_single_strike_gmax": [],
+  "urshifu_rapid_strike_gmax": [
+    {
+      "en": "surging_strikes",
+      "method": "level-up",
+      "level": 0
+    },
+    {
+      "en": "leer",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "focus_energy",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "endure",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "rock_smash",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "aqua_jet",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "aerial_ace",
+      "method": "level-up",
+      "level": 12
+    },
+    {
+      "en": "scary_face",
+      "method": "level-up",
+      "level": 16
+    },
+    {
+      "en": "headbutt",
+      "method": "level-up",
+      "level": 20
+    },
+    {
+      "en": "brick_break",
+      "method": "level-up",
+      "level": 24
+    },
+    {
+      "en": "detect",
+      "method": "level-up",
+      "level": 28
+    },
+    {
+      "en": "bulk_up",
+      "method": "level-up",
+      "level": 32
+    },
+    {
+      "en": "iron_head",
+      "method": "level-up",
+      "level": 36
+    },
+    {
+      "en": "dynamic_punch",
+      "method": "level-up",
+      "level": 40
+    },
+    {
+      "en": "counter",
+      "method": "level-up",
+      "level": 44
+    },
+    {
+      "en": "close_combat",
+      "method": "level-up",
+      "level": 48
+    },
+    {
+      "en": "focus_punch",
+      "method": "level-up",
+      "level": 52
+    },
+    {
+      "en": "fire_punch",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "ice_punch",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thunder_punch",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "swords_dance",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "body_slam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "take_down",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "double_edge",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "low_kick",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "dig",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "waterfall",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "swift",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rest",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rock_slide",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "substitute",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "reversal",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "protect",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "false_swipe",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sleep_talk",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rain_dance",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "whirlpool",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "facade",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "taunt",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "helping_hand",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rock_tomb",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "iron_defense",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "u_turn",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "fling",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "aura_sphere",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "poison_jab",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "drain_punch",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "focus_blast",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "giga_impact",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "zen_headbutt",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "stone_edge",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "low_sweep",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "acrobatics",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "liquidation",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "body_press",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "coaching",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "tera_blast",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "ice_spinner",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "trailblaze",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "chilling_water",
+      "method": "machine",
+      "level": 0
+    }
+  ],
+  "urshifu_single_strike_gmax": [
+    {
+      "en": "sucker_punch",
+      "method": "level-up",
+      "level": 0
+    },
+    {
+      "en": "rock_smash",
+      "method": "level-up",
+      "level": 0
+    },
+    {
+      "en": "leer",
+      "method": "level-up",
+      "level": 0
+    },
+    {
+      "en": "endure",
+      "method": "level-up",
+      "level": 0
+    },
+    {
+      "en": "focus_energy",
+      "method": "level-up",
+      "level": 0
+    },
+    {
+      "en": "wicked_blow",
+      "method": "level-up",
+      "level": 0
+    },
+    {
+      "en": "aerial_ace",
+      "method": "level-up",
+      "level": 12
+    },
+    {
+      "en": "scary_face",
+      "method": "level-up",
+      "level": 16
+    },
+    {
+      "en": "headbutt",
+      "method": "level-up",
+      "level": 20
+    },
+    {
+      "en": "brick_break",
+      "method": "level-up",
+      "level": 24
+    },
+    {
+      "en": "detect",
+      "method": "level-up",
+      "level": 28
+    },
+    {
+      "en": "bulk_up",
+      "method": "level-up",
+      "level": 32
+    },
+    {
+      "en": "iron_head",
+      "method": "level-up",
+      "level": 36
+    },
+    {
+      "en": "dynamic_punch",
+      "method": "level-up",
+      "level": 40
+    },
+    {
+      "en": "counter",
+      "method": "level-up",
+      "level": 44
+    },
+    {
+      "en": "close_combat",
+      "method": "level-up",
+      "level": 48
+    },
+    {
+      "en": "focus_punch",
+      "method": "level-up",
+      "level": 52
+    },
+    {
+      "en": "take_down",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "scary_face",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "protect",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "low_kick",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "acrobatics",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "trailblaze",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "facade",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "aerial_ace",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "snarl",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "metal_claw",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "swift",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rock_tomb",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "low_sweep",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "fling",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endure",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "dig",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "false_swipe",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "brick_break",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "zen_headbutt",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "u_turn",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "foul_play",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "bulk_up",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "body_slam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "fire_punch",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "thunder_punch",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "ice_punch",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sleep_talk",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "drain_punch",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "poison_jab",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rest",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rock_slide",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "taunt",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "swords_dance",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "body_press",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "dark_pulse",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "iron_head",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "substitute",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "iron_defense",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "crunch",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "aura_sphere",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "helping_hand",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "reversal",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "stone_edge",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "giga_impact",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "focus_blast",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "close_combat",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "tera_blast",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "roar",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "focus_punch",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "lash_out",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "double_edge",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "coaching",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "throat_chop",
+      "method": "machine",
+      "level": 0
+    }
+  ],
   "uxie": [
     {
       "en": "confusion",
@@ -357102,5 +363772,271 @@
       "level": 0
     }
   ],
-  "zygarde_mega": []
+  "zygarde_mega": [
+    {
+      "en": "bind",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "bite",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "dragon_breath",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "bulldoze",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "thousand_arrows",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "thousand_waves",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "core_enforcer",
+      "method": "level-up",
+      "level": 1
+    },
+    {
+      "en": "haze",
+      "method": "level-up",
+      "level": 8
+    },
+    {
+      "en": "dig",
+      "method": "level-up",
+      "level": 16
+    },
+    {
+      "en": "safeguard",
+      "method": "level-up",
+      "level": 24
+    },
+    {
+      "en": "crunch",
+      "method": "level-up",
+      "level": 32
+    },
+    {
+      "en": "dragon_pulse",
+      "method": "level-up",
+      "level": 40
+    },
+    {
+      "en": "lands_wrath",
+      "method": "level-up",
+      "level": 48
+    },
+    {
+      "en": "glare",
+      "method": "level-up",
+      "level": 56
+    },
+    {
+      "en": "sandstorm",
+      "method": "level-up",
+      "level": 64
+    },
+    {
+      "en": "coil",
+      "method": "level-up",
+      "level": 72
+    },
+    {
+      "en": "earthquake",
+      "method": "level-up",
+      "level": 80
+    },
+    {
+      "en": "outrage",
+      "method": "level-up",
+      "level": 88
+    },
+    {
+      "en": "body_slam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "hyper_beam",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "swift",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rest",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "rock_slide",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "substitute",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "snore",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "reversal",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "protect",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "endure",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sleep_talk",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "iron_tail",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sunny_day",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "facade",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "superpower",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "brick_break",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "hyper_voice",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "dragon_dance",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "payback",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "focus_blast",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "earth_power",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "giga_impact",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "zen_headbutt",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "stone_edge",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "grass_knot",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "sludge_wave",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "round",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "retaliate",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "high_horsepower",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "stomping_tantrum",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "breaking_swipe",
+      "method": "machine",
+      "level": 0
+    },
+    {
+      "en": "draco_meteor",
+      "method": "tutor",
+      "level": 0
+    },
+    {
+      "en": "scale_shot",
+      "method": "tutor",
+      "level": 0
+    },
+    {
+      "en": "skitter_smack",
+      "method": "tutor",
+      "level": 0
+    },
+    {
+      "en": "scorching_sands",
+      "method": "tutor",
+      "level": 0
+    }
+  ]
 }
