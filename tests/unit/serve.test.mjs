@@ -1,6 +1,6 @@
 import path from 'node:path'
 import { describe, expect, it } from 'vitest'
-import { resolveFile } from '../serve.mjs'
+import { resolveFile, stripAnalytics } from '../serve.mjs'
 import { ROOT } from './helpers.mjs'
 
 // 검증용 서버가 배포처럼 깨끗한 주소를 보여 주는지
@@ -13,4 +13,11 @@ describe('검증용 서버 주소 풀이', () => {
   it('데이터 파일은 그대로', () => expect(rel('/data/pokedex.json')).toBe(path.join('data', 'pokedex.json')))
   it('없는 주소는 null', () => expect(rel('/no-such-page')).toBeNull())
   it('폴더 밖으로 나가는 주소는 null', () => expect(rel('/../../etc/passwd')).toBeNull())
+})
+
+describe('검증용 서버 구글 통계 빼기', () => {
+  it('구글 통계 불러오기 태그만 지운다', () => {
+    const html = '<head><script async src="https://www.googletagmanager.com/gtag/js?id=G-TEST"></script><title>도감</title></head>'
+    expect(stripAnalytics(html)).toBe('<head><!-- 검증 서버: 구글 통계 뺌 --><title>도감</title></head>')
+  })
 })

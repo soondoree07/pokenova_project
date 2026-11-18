@@ -31,4 +31,5 @@ admin.html ─> Firebase (운영) · quiz.html ─> pochams API (배포 제외)
 ## 시험
 - 단위: `tests/unit/*.test.mjs` (Vitest) — `index.html` 사본 일치 · 데이터 정합 · 검증 서버 주소 풀이
 - 흐름: `tests/e2e/*.spec.mjs` (Playwright) — 공개 페이지 7개가 뜨는지 · 도감 3종에 카드가 그려지는지, PC · 390px. 바깥 주소는 막는다
-- 서버: `tests/serve.mjs` (의존성 없음). 검증 포트는 E2E 4150 고정
+- 서버: `tests/serve.mjs` (의존성 없음, 구글 통계 태그는 빼고 보냄). 검증 포트는 E2E 4150 고정
+- 화면 캡처(`harness.json` `pages`)에서 `/today` 는 뺐다: 헤드리스 Chromium 이 mp4 영상 요청을 스스로 끊어 실패로 잡힘
