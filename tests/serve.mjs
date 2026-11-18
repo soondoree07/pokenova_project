@@ -16,7 +16,8 @@ const TYPES = {
 
 // 주소 → 보여 줄 파일 (없으면 null)
 export function resolveFile(urlPath) {
-  const clean = decodeURIComponent(urlPath.split('?')[0]).replace(/\/+$/, '') || '/index'
+  let clean
+  try { clean = decodeURIComponent(urlPath.split('?')[0]).replace(/\/+$/, '') || '/index' } catch { return null } // 깨진 주소에 서버가 죽지 않게
   const candidates = [clean, `${clean}.html`, `${clean}/index.html`]
   for (const candidate of candidates) {
     const file = path.join(root, candidate)
@@ -48,5 +49,5 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     if (file.endsWith('.html')) { res.writeHead(200, { 'content-type': type }).end(stripAnalytics(fs.readFileSync(file, 'utf8'))); return }
     res.writeHead(200, { 'content-type': type, 'accept-ranges': 'bytes' })
     fs.createReadStream(file).pipe(res)
-  }).listen(port, () => console.log(`http://localhost:${port}`))
+  }).listen(port, 'localhost', () => console.log(`http://localhost:${port}`)) // 내 PC 안에서만
 }
