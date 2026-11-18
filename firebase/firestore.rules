@@ -1,0 +1,38 @@
+rules_version = '2';
+
+// 포케노바 Firestore 보안 규칙 (프로젝트 pokenova-f17e7)
+// 저장소에 두는 원본이다. 적용은 Firebase 콘솔 > Firestore Database > 규칙 에 붙여 넣고 게시한다.
+// 관리자 페이지(/admin)는 구글 로그인만 하고, 누가 관리자인지는 여기서만 정한다.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // 관리자 UID 목록. 콘솔 Authentication > 사용자 의 "사용자 UID" 를 넣는다.
+    // 자리표시를 그대로 두면 아무도 관리자가 아니다(닫힌 쪽으로 실패).
+    function isAdmin() {
+      return request.auth != null
+        && request.auth.uid in ['ADMIN_UID_HERE'];
+    }
+
+    // 퀴즈(quiz.html)가 남기는 기록: 누구나 남기고, 읽기 · 고치기 · 지우기는 관리자만
+    match /sessions/{id} {
+      allow create: if true;
+      allow read, update, delete: if isAdmin();
+    }
+
+    match /reports/{id} {
+      allow create: if true;
+      allow read, update, delete: if isAdmin();
+    }
+
+    // 순위표는 퀴즈 화면이 읽어서 보여 준다
+    match /leaderboard/{id} {
+      allow read, create: if true;
+      allow update, delete: if isAdmin();
+    }
+
+    // 그 밖의 문서는 막는다
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

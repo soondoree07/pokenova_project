@@ -306,14 +306,8 @@
     <div class="login-logo">🛡️</div>
     <div class="login-title">관리자 패널</div>
     <div class="login-sub">Pokénova</div>
-    <div>
-      <div class="login-label">비밀번호</div>
-      <input type="password" class="login-input" id="pw-input"
-        placeholder="••••••••"
-        onkeydown="if(event.key==='Enter') doLogin()">
-    </div>
     <div class="login-error" id="login-error"></div>
-    <button class="login-btn" onclick="doLogin()">입장</button>
+    <button class="login-btn" onclick="doLogin()">구글로 로그인</button>
   </div>
 </div>
 
@@ -492,49 +486,55 @@
 </div><!-- /#screen-dashboard -->
 
 <script>
-/* ══ 관리자 비밀번호 ══ */
-const ADMIN_PASSWORD = "qkrwjdgur07";
-
 /* ══ 상태 ══ */
 let reportFilter  = 'pending';
 let sessionFilter = 'all';
 let lbFilter      = 'all';
 
-/* ══ 로그인 ══ */
-function doLogin() {
-  const val = document.getElementById('pw-input').value;
-  const errEl = document.getElementById('login-error');
-  const box   = document.getElementById('login-box');
+/* ══ 로그인 ══
+ * 구글 계정으로 로그인만 한다. 누가 관리자인지는 Firestore 보안 규칙
+ * (firebase/firestore.rules)이 정하고, 아니면 데이터를 읽을 때 permission-denied 가 난다.
+ * 화면 코드에 비밀 값을 두지 않는다 (공개 주소라 누구나 소스를 본다).
+ */
+function showDashboard(on) {
+  document.getElementById('screen-login').style.display = on ? 'none' : 'flex';
+  document.getElementById('screen-dashboard').style.display = on ? 'block' : 'none';
+}
 
-  if (val === ADMIN_PASSWORD) {
-    sessionStorage.setItem('admin_auth', '1');
-    document.getElementById('screen-login').style.display = 'none';
-    document.getElementById('screen-dashboard').style.display = 'block';
-    loadDashboard();
-  } else {
-    errEl.textContent = '비밀번호가 올바르지 않습니다.';
-    box.classList.remove('login-shake');
-    void box.offsetWidth;
-    box.classList.add('login-shake');
-    document.getElementById('pw-input').value = '';
-    document.getElementById('pw-input').focus();
+function showLoginError(msg) {
+  const box = document.getElementById('login-box');
+  document.getElementById('login-error').textContent = msg;
+  box.classList.remove('login-shake');
+  void box.offsetWidth;
+  box.classList.add('login-shake');
+}
+
+async function doLogin() {
+  document.getElementById('login-error').textContent = '';
+  try {
+    await window._adminSignIn();
+  } catch (e) {
+    if (e && e.code === 'auth/popup-closed-by-user') return;
+    console.warn('admin sign-in:', e);
+    showLoginError('로그인하지 못했어요. 잠시 후 다시 시도해 주세요.');
   }
 }
 
-function doLogout() {
-  sessionStorage.removeItem('admin_auth');
-  document.getElementById('screen-dashboard').style.display = 'none';
-  document.getElementById('screen-login').style.display = 'flex';
-  document.getElementById('pw-input').value = '';
-  document.getElementById('login-error').textContent = '';
+async function doLogout() {
+  await window._adminSignOut();
 }
 
-/* 세션 유지 */
-if (sessionStorage.getItem('admin_auth') === '1') {
-  document.getElementById('screen-login').style.display = 'none';
-  document.getElementById('screen-dashboard').style.display = 'block';
-  // Firebase 모듈 초기화 완료 후 loadDashboard 호출됨 (아래 module 스크립트에서)
-  window._pendingDashboardLoad = true;
+/* Firebase 로그인 상태가 바뀔 때마다 (모듈 스크립트가 부른다) */
+async function onAdminAuth(user) {
+  if (!user) { showDashboard(false); return; }
+  showDashboard(true);
+  try {
+    await loadDashboard();
+  } catch (e) {
+    if (!e || e.code !== 'permission-denied') throw e;
+    await window._adminSignOut();
+    showLoginError('관리자 계정이 아니에요. 다른 계정으로 로그인해 주세요.');
+  }
 }
 
 /* ══ 시간 포맷 ══ */
@@ -570,19 +570,19 @@ function esc(s) {
 /* ══ 데이터 로드 (Firestore 우선, localStorage 백업) ══ */
 async function getSessions() {
   if (window._adminGetSessions) {
-    try { return await window._adminGetSessions(); } catch(e) { console.warn('Firestore sessions:', e); }
+    try { return await window._adminGetSessions(); } catch(e) { if (e.code === 'permission-denied') throw e; console.warn('Firestore sessions:', e); }
   }
   return JSON.parse(localStorage.getItem('pq_sessions') || '[]');
 }
 async function getReports() {
   if (window._adminGetReports) {
-    try { return await window._adminGetReports(); } catch(e) { console.warn('Firestore reports:', e); }
+    try { return await window._adminGetReports(); } catch(e) { if (e.code === 'permission-denied') throw e; console.warn('Firestore reports:', e); }
   }
   return JSON.parse(localStorage.getItem('pq_reports') || '[]');
 }
 async function getLeaderboard() {
   if (window._adminGetLeaderboard) {
-    try { return await window._adminGetLeaderboard(); } catch(e) { console.warn('Firestore leaderboard:', e); }
+    try { return await window._adminGetLeaderboard(); } catch(e) { if (e.code === 'permission-denied') throw e; console.warn('Firestore leaderboard:', e); }
   }
   return JSON.parse(localStorage.getItem('pq_lb') || '[]');
 }
@@ -871,6 +871,9 @@ async function clearAllData() {
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
   import {
+    getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged
+  } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-auth.js";
+  import {
     getFirestore, collection, getDocs, doc,
     query, orderBy, where, updateDoc, deleteDoc
   } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-firestore.js";
@@ -887,6 +890,10 @@ async function clearAllData() {
 
   const app = initializeApp(firebaseConfig);
   const db  = getFirestore(app);
+  const auth = getAuth(app);
+
+  window._adminSignIn  = () => signInWithPopup(auth, new GoogleAuthProvider());
+  window._adminSignOut = () => signOut(auth);
 
   window._adminGetSessions = async () => {
     const snap = await getDocs(query(collection(db, 'sessions'), orderBy('ts', 'desc')));
@@ -935,11 +942,8 @@ async function clearAllData() {
     banner.querySelector('.firebase-banner-icon').textContent = '✅';
   }
 
-  // 세션 유지로 자동 로그인된 경우 Firebase 초기화 완료 후 대시보드 로드
-  if (window._pendingDashboardLoad) {
-    window._pendingDashboardLoad = false;
-    loadDashboard();
-  }
+  // 로그인 상태(새로 고쳐도 유지됨)에 따라 화면을 고른다
+  onAuthStateChanged(auth, onAdminAuth);
 </script>
 </body>
 </html>
