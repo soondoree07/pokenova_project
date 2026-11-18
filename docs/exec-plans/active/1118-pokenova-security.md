@@ -41,9 +41,23 @@ created: 2026-11-18
 - 11-18 이로치 1장은 스크립트 전체 대신 같은 URL 로 1장만 받음(pokedex.json 서식 · PokeAPI 280회 호출 피함)
 - 11-18 옛 주소는 vercel.json 만 고침. Vercel 쪽 재배포 여부는 정혁님 확인
 
+- 11-18 (리뷰 1회차 막음 3건 반영) 공개 create 에 키 · 길이 · 범위 검사. 정답 상한은 리뷰 예시 500 대신 2000: 능력치 문제 1287 · 포켓몬 1025 라 500 이면 정상 기록이 막힘. 오답 상한 100000(쉬움은 목숨 무한)
+- 11-18 순위표 목록은 200개 제한. 정답 순 200개를 받으려고 orderBy(correct) 를 넣어 복합 인덱스(mode ↑ · correct ↓)가 필요해짐. quiz.html 은 배포 제외라 지금은 영향 없음, 퀴즈를 되살릴 때 인덱스 만들기(정혁님)
+- 11-18 관리자 XSS: 신고 버튼은 data-id + 표 하나의 click 리스너, esc 에 ' 추가, 숫자 칸은 num() 으로 강제 변환
+- 11-18 PROGRESS_LOG 의 옛 비밀번호 값 지움. git 기록에는 남는다
+
+## 정혁님 할 일 (합친 뒤)
+1. Firebase 콘솔 > Authentication > 로그인 방법: Google 사용 설정, 설정 > 승인된 도메인에 `pokenova.pochams.com` 추가
+2. `/admin` 에서 한 번 로그인 → Authentication > 사용자 에서 UID 복사
+3. Firestore Database > 규칙: `firebase/firestore.rules` 붙여 넣고 **`ADMIN_UID_HERE` 를 꼭 UID 로 바꾼 뒤** 게시
+4. 옛 비밀번호는 공개 저장소 git 기록에 남음 → 같은 값을 다른 곳에 쓰면 바꾸기
+5. Vercel 이 아직 GitHub 연결로 배포되는지 확인(옛 주소 루트 이동)
+6. 퀴즈를 되살릴 때: Firestore 복합 인덱스 leaderboard (mode ↑, correct ↓)
+
 ## 오류 기록
 - 첫 커밋에서 pre-commit 이 아직 고치지 않은 `security.test.mjs` 실패로 막음 → 데이터 커밋 동안 파일을 잠시 빼 두고 다음 커밋에 같이 넣음
 
 ## 검증 결과
 - 단위 28개 통과(새 시험 11개), 관리자 페이지 헤드리스 확인: 로그인 화면 · 구글 로그인 버튼 · 콘솔 오류 0 (`logs/.../admin-login.png`)
-- verify-task 1회차: 검사 8가지 통과, 계획 파일 미커밋으로만 실패 → 커밋 뒤 2회차
+- verify-task 1회차: 검사 8가지 통과, 계획 파일 미커밋으로만 실패 → 커밋 뒤 2회차 통과
+- 리뷰 반영 뒤 단위 38개 통과(새 9개), 헤드리스로 악성 신고 id 를 넣어도 버튼이 같은 id 로 동작 · 대화창 0 · img 0
