@@ -4,7 +4,7 @@ project: P001
 type: 설정
 branch: claude/1118-harness-p001
 port: 4100
-status: 진행 중
+status: 완료
 created: 2026-11-18
 ---
 
