@@ -3,6 +3,12 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/",
+      "has": [{ "type": "host", "value": "pokenova.vercel.app" }],
+      "destination": "https://pokenova.pochams.com/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "pokenova.vercel.app" }],
       "destination": "https://pokenova.pochams.com/:path*",

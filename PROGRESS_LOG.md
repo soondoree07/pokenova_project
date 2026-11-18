@@ -267,7 +267,7 @@ node apply-translations.js
 - [x] Firestore `reports` 컬렉션에 저장
 
 ### 관리자 페이지 재설계 (`admin.html`)
-- [x] 비밀번호 로그인 유지 (qkrwjdgur07)
+- [x] 비밀번호 로그인 유지 (값은 지움 2026-11-18, 지금은 구글 로그인)
 - [x] Firebase 연결 시 Firestore에서 실시간 데이터 읽기
 - [x] 섹션: 개요 통계 / 퀴즈별 통계 / 오류 신고 로그 / 게임 세션 테이블
 - [x] 오류 신고 처리완료/삭제 기능 (Firestore + localStorage 동기화)

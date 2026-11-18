@@ -1,0 +1,76 @@
+rules_version = '2';
+
+// 포케노바 Firestore 보안 규칙 (프로젝트 pokenova-f17e7)
+// 저장소에 두는 원본이다. 적용은 Firebase 콘솔 > Firestore Database > 규칙 에 붙여 넣고 게시한다.
+// 관리자 페이지(/admin)는 구글 로그인만 하고, 누가 관리자인지는 여기서만 정한다.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // 관리자 UID 목록. ★ 게시 전에 꼭 바꾼다 ★
+    // 콘솔 Authentication > 사용자 의 "사용자 UID" 를 넣는다.
+    // 자리표시를 그대로 두면 아무도 관리자가 아니다(닫힌 쪽으로 실패).
+    function isAdmin() {
+      return request.auth != null
+        && request.auth.uid in ['ADMIN_UID_HERE'];
+    }
+
+    // ── 퀴즈(quiz.html)가 남기는 기록의 모양 ──
+    // 키는 quiz.html 이 실제로 쓰는 것만, 값은 종류 · 길이 · 범위를 본다.
+    // 정답 수 상한 2000 = 가장 큰 문제 수(능력치 1287 · 포켓몬 1025)보다 넉넉하게.
+    // 오답 수는 쉬움 모드에서 목숨이 무한이라 상한을 크게 둔다.
+    function str(v, max) { return v is string && v.size() <= max; }
+    function count(v, max) { return v is int && v >= 0 && v <= max; }
+    function stamp(v) { return v is int && v > 0 && v <= request.time.toMillis() + 86400000; }
+    function quizMode(v) { return v in ['pokemon', 'move', 'ability', 'item', 'stats']; }
+    function difficulty(v) { return v in ['easy', 'normal', 'hard', '-']; }
+
+    function validSession(d) {
+      return d.keys().hasOnly(['mode', 'modeLabel', 'difficulty', 'correct', 'wrong', 'ts'])
+        && d.keys().hasAll(['mode', 'modeLabel', 'difficulty', 'correct', 'wrong', 'ts'])
+        && quizMode(d.mode) && str(d.modeLabel, 20) && difficulty(d.difficulty)
+        && count(d.correct, 2000) && count(d.wrong, 100000) && stamp(d.ts);
+    }
+
+    function validReport(d) {
+      return d.keys().hasOnly(['id', 'mode', 'modeLabel', 'ko', 'en', 'type', 'memo', 'ts', 'resolved'])
+        && d.keys().hasAll(['id', 'mode', 'modeLabel', 'ko', 'en', 'type', 'memo', 'ts', 'resolved'])
+        && str(d.id, 40) && quizMode(d.mode) && str(d.modeLabel, 20)
+        && str(d.ko, 60) && str(d.en, 60)
+        && d.type in ['문제 오류', '정답 오류', '기타']
+        && str(d.memo, 300) && stamp(d.ts) && d.resolved == false;
+    }
+
+    function validLeaderboard(d) {
+      return d.keys().hasOnly(['mode', 'modeLabel', 'nickname', 'correct', 'wrong', 'difficulty', 'ts'])
+        && d.keys().hasAll(['mode', 'modeLabel', 'nickname', 'correct', 'wrong', 'difficulty', 'ts'])
+        && quizMode(d.mode) && str(d.modeLabel, 20)
+        && d.nickname is string && d.nickname.matches('^[a-zA-Z0-9가-힣]{1,10}$')
+        && count(d.correct, 2000) && count(d.wrong, 100000)
+        && difficulty(d.difficulty) && stamp(d.ts);
+    }
+
+    // 퀴즈 기록: 모양이 맞으면 누구나 남기고, 읽기 · 고치기 · 지우기는 관리자만
+    match /sessions/{id} {
+      allow create: if validSession(request.resource.data);
+      allow read, update, delete: if isAdmin();
+    }
+
+    match /reports/{id} {
+      allow create: if validReport(request.resource.data);
+      allow read, update, delete: if isAdmin();
+    }
+
+    // 순위표는 퀴즈 화면이 읽는다. 목록은 한 번에 200개까지(관리자는 전부)
+    match /leaderboard/{id} {
+      allow create: if validLeaderboard(request.resource.data);
+      allow get: if true;
+      allow list: if isAdmin() || request.query.limit <= 200;
+      allow update, delete: if isAdmin();
+    }
+
+    // 그 밖의 문서는 막는다
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

@@ -43,47 +43,35 @@
 
 ## 데이터 수정 규칙
 
-pokenova는 포켓몬·기술·도구·특성·배우는기술 데이터를 **Neon PostgreSQL DB**에서 가져온다 (pochams API 경유).
-데이터를 수정할 때는 소스 JSON 파일을 수정한 뒤 pochams seed를 재실행한다.
+**원천은 이 저장소의 `data/*.json` 이다.** 화면은 서버 없이 이 파일을 `fetch('data/...')` 로 바로 읽는다(2026-07-12 부터, pochams API 의존 제거).
+데이터를 고치면 이 저장소에 커밋 · push 하는 것으로 사이트에 반영된다(Cloudflare 자동 배포, 코드 변경과 같이 L3).
 
-### 소스 파일 위치
+### 파일과 화면
 
-| 데이터 | 소스 파일 | DB 테이블 |
+| 데이터 | 파일 | 읽는 화면 |
 |---|---|---|
-| 포켓몬 | `data/quiz_pokemon.json` + `data/pokemon_stats.json` | `pokemon_data` |
-| 기술 | `data/quiz_moves.json` | `move_data` |
-| 도구 | `data/quiz_items.json` | `item_data` |
-| 특성 | `data/quiz_abilities.json` | `ability_data` |
-| 배우는 기술 | `data/learnsets.json` | `pokemon_learnset` |
+| 도감(포켓몬 + 폼 + 이로치 + `inChampions`) | `data/pokedex.json` | `pokedex` · `index` · `today` · `movedex` |
+| 종족값 | `data/pokemon_stats.json` | `pokedex` · `today` |
+| 포켓몬 원본 | `data/quiz_pokemon.json` | 화면은 안 읽음. `pokedex.json` 생성 원본(`node scripts/build_pokedex.js`) · 포챔스가 읽음 |
+| 기술 | `data/quiz_moves.json` · `data/quiz_zmoves.json` | `movedex` |
+| 도구 | `data/quiz_items.json` | `itemdex` |
+| 특성 | `data/quiz_abilities.json` | `pokedex` 특성 설명 |
+| 배우는 기술 | `data/learnsets.json` | `movedex` |
 
-### 수정 절차
+- `pokedex.json` 은 `quiz_pokemon.json` 에서 만든다. 둘 다 고칠 때는 같이 맞춘다(단위 시험이 특성 참조를 잡는다)
+- 아직 pochams API 를 부르는 곳: `quiz.html`(배포 제외) · `entry.html`(네비에서 숨김)
 
-**원칙: JSON 수정 후 반드시 DB에 반영한다. 반영 없이 JSON만 수정하고 끝내지 않는다.**
+### 포챔스(pochams_project)로 넘기기
 
-#### 1개~몇 개만 수정할 때 → upsert (1~2초)
-
-```bash
-cd /home/soondoree07/pochams_project
-npm run upsert move <en>        # 기술 1개
-npm run upsert item <en>        # 도구 1개
-npm run upsert ability <en>     # 특성 1개
-npm run upsert pokemon <en>     # 포켓몬 1개 (기본형+메가+알트폼 전부)
-npm run upsert learnset <en>    # 포켓몬 배우는기술
-```
-
-#### 대량 추가·구조 변경할 때 → 전체 seed (20~40초)
+포챔스는 이 `data/` 를 읽어 자기 DB(Neon)를 만든다. 포케노바에서 데이터를 고쳤고 포챔스에도 반영해야 하면 포챔스 쪽에서 돌린다(운영 DB 쓰기라 정혁님 확인 뒤):
 
 ```bash
 cd /home/soondoree07/pochams_project
-npm run seed
+npm run sync          # pokedex.json → 포챔스 소스 재생성 → seed (scripts/sync-data.sh)
+npm run upsert ability <en>   # 한두 개만이면 upsert
 ```
 
-> pokenova 자체에는 배포가 필요 없다. upsert 또는 seed 재실행만으로 DB가 업데이트되고 pochams API가 즉시 반영된다.
-
-### champions_learnsets.json 갱신
-
-포켓몬(quiz_pokemon.json), 기술(quiz_moves.json), 배우는기술(learnsets.json) 수정 시 seed 후 champions_learnsets.json도 재생성한다.
-재생성 명령은 pochams_project/CLAUDE.md의 "champions_learnsets.json 자동 갱신" 섹션 참고.
+자세한 순서는 `pochams_project/CLAUDE.md`.
 
 ### 외부에서 데이터를 받아올 때 — 우리 id 로 묻지 않는다
 

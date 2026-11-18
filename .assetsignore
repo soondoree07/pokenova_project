@@ -32,6 +32,8 @@ LAST_CHAT.md
 quiz.html
 
 # 하네스 · 테스트 (2026-11-18). 개발용이라 사이트에 올리지 않는다
+# firebase = Firestore 보안 규칙 원본(콘솔에 붙여 넣는 용도)
+firebase
 tests
 docs
 logs

@@ -28540,7 +28540,7 @@
         "abilities": [
           {
             "ko": "혼연일체",
-            "en": "as_one",
+            "en": "as_one_glastrier",
             "hidden": false,
             "desc": "버드렉스의 긴장감과 블리자포스의 백의울음 두 가지 특성을 겸비한다."
           }
@@ -28558,7 +28558,7 @@
         "abilities": [
           {
             "ko": "혼연일체",
-            "en": "as_one",
+            "en": "as_one_spectrier",
             "hidden": false
           }
         ]

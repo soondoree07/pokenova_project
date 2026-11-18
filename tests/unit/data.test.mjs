@@ -33,3 +33,24 @@ describe('퀴즈 · 도감 이름 데이터', () => {
     })
   }
 })
+
+describe('폼 · 특성 데이터 맞물림 (2026-11-18 첫 검사)', () => {
+  it('폼은 전부 이로치 그림이 있다', () => {
+    expect(forms.filter((f) => !f.shinySprite).map((f) => f.name_en)).toEqual([])
+  })
+
+  // 퀴즈 "완전 정복"은 맞힌 특성 영어 이름 개수로 판정한다. 겹치면 끝까지 판정이 안 난다
+  it('특성 영어 이름이 겹치지 않는다', () => {
+    const ens = readJson('data/quiz_abilities.json').map((a) => a.en)
+    expect(ens.filter((en, i) => ens.indexOf(en) !== i)).toEqual([])
+  })
+
+  for (const name of ['pokedex', 'quiz_pokemon']) {
+    it(`${name}.json 의 특성 영어 이름이 전부 특성 목록에 있다`, () => {
+      const known = new Set(readJson('data/quiz_abilities.json').map((a) => a.en))
+      const list = readJson(`data/${name}.json`)
+      const used = list.flatMap((p) => [p, ...(p.forms ?? [])]).flatMap((x) => x.abilities ?? [])
+      expect(used.filter((a) => typeof a === 'object' && !known.has(a.en)).map((a) => a.en)).toEqual([])
+    })
+  }
+})
