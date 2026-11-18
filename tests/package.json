@@ -1,0 +1,14 @@
+{
+  "name": "pokenova-tests",
+  "private": true,
+  "description": "개발용 테스트 도구만. 사이트 배포와 상관없다(루트에 package.json 을 두지 않으려고 여기 둔다)",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "vitest": "^4.1.12"
+  }
+}

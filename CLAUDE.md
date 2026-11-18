@@ -1,7 +1,20 @@
-# Pokenova Project
+# P001 포케노바 — 프로젝트 규칙
 
-## 게임/도메인 명칭 규칙
+> 전역 규칙(~/.claude/CLAUDE.md) 위에 이 프로젝트만의 것만 적는다. 길어지면 docs/ 로 뺀다.
 
+## 한 줄 소개
+정적 HTML 포켓몬 도감 사이트(루트 = 이로치 도감 · 기술 · 아이템 도감). 서버 없음, 데이터는 `data/*.json`. https://pokenova.pochams.com
+
+## 실행
+- 개발 서버: `harness.json` 의 `dev` (`node tests/serve.mjs <포트>`, 의존성 없음 · 배포처럼 깨끗한 주소)
+- 검증: `verify-task` (단위 `cd tests && npx vitest run` · 흐름 `cd tests && npx playwright test` = 공개 페이지 · PC · 390px). 처음엔 `cd tests && npm ci`
+- 배포: main 에 push 하면 Cloudflare Workers(정적 자산)가 자동 배포. **배포 중이라 코드 변경은 L3**
+- 테스트 도구는 `tests/package.json` 에만 둔다. **루트에 `package.json` 을 만들지 않는다**(배포가 의존성 설치 · 빌드 감지를 시작할 수 있음)
+- 사이트에 올리지 않을 파일은 `.assetsignore` 에 넣는다(Cloudflare 업로드 제외)
+
+## 이 프로젝트만의 규칙
+
+### 게임/도메인 명칭 규칙
 포켓몬 이름, 특성·기술·아이템 등 **게임 내 고유 명칭은 반드시 DB/데이터 파일에서 가져온다.**
 
 - 코드에 한국어/영어 명칭을 직접 하드코딩하지 않는다
@@ -10,6 +23,12 @@
 - 임의로 추측한 명칭을 코드에 넣지 않는다
 
 자세한 이유는 메모리 `feedback_no_arbitrary_names.md` 참조.
+
+### 구조 주의
+- `index.html` 은 `pokedex.html` 의 자동 생성 사본. `pokedex.html` 을 고치면 `node scripts/build_index.js` (단위 테스트가 어긋나면 잡는다)
+- `_redirects` 는 쓰지 않는다(Cloudflare clean URL 과 충돌해 루트 404, RESUME 2026-07-13)
+- 폼 관련 필드를 데이터에 넣으면 `pokedex.html` 의 엔트리 생성 4곳(리전 · 합체 · 메가 · 거다이)에도 넘긴다
+- `admin.html` · `quiz.html` 은 E2E 에서 뺀다(운영 Firebase · 배포 제외)
 
 ## 도메인
 - **프로덕션 URL**: `https://pokenova.pochams.com`
@@ -93,3 +112,11 @@ python3 scripts/fill_missing_learnsets.py --check   # 빈 기술폭 점검
 출처는 **PokeAPI 우선, 없으면 포켓몬위키**다. 둘이 어긋나면 PokeAPI 를 쓰고
 화면에 남긴다(실측 3건이 전부 위키 오류였다). 어느 쪽에도 없으면 **건드리지
 않고 보고한다.** 이름을 지어내지 않는다.
+
+## 빠른 참조
+| 목적 | 문서 |
+|---|---|
+| 구조 · 데이터 흐름 · 시험 위치 | `ARCHITECTURE.md` |
+| 이어하기 · 지난 기록 | `RESUME.md` · `PROGRESS_LOG.md` |
+| 진행 중 · 끝난 작업 | `docs/exec-plans/` |
+| 미뤄 둔 문제 · 100줄 기준선 | `docs/exec-plans/tech-debt-tracker.md` |

@@ -1,0 +1,11 @@
+{
+  "stack": "static",
+  "test": "cd tests && npx vitest run",
+  "test_quick": "cd tests && npx vitest run",
+  "dev": "node tests/serve.mjs {port}",
+  "pages": ["/", "/pokedex", "/movedex", "/itemdex", "/entry", "/record"],
+  "dark": false,
+  "deploy": "cloudflare",
+  "e2e": "cd tests && npx playwright test",
+  "auth": null
+}
