@@ -25,3 +25,11 @@ pokenova_structure.json
 # 파이썬 바이트코드 (import 로 스크립트를 부르면 생긴다)
 __pycache__/
 *.pyc
+
+# 하네스 검증 로그
+logs/
+test-results/
+playwright-report/
+
+# 테스트 도구 (tests/package.json 의 개발용 의존성)
+node_modules/
