@@ -1184,7 +1184,7 @@
         <button class="report-type-btn" onclick="selectReportType(this,'기타')">기타</button>
       </div>
       <div style="font-size:0.7rem;color:#555;letter-spacing:1px;text-transform:uppercase;margin-top:2px">메모 (선택)</div>
-      <textarea id="report-memo" class="report-textarea" rows="3" placeholder="자세한 내용을 입력해주세요..."></textarea>
+      <textarea id="report-memo" class="report-textarea" rows="3" maxlength="300" placeholder="자세한 내용을 입력해주세요..."></textarea>
     </div>
     <div style="display:flex;gap:8px;width:100%">
       <button class="btn-ghost" style="flex:1" onclick="closeReportModal()">취소</button>
@@ -2973,19 +2973,23 @@ async function renderLb(prefix) {
     const d = new Date(ts);
     return `${d.getMonth()+1}/${d.getDate()}`;
   };
+  // 순위표 기록은 누구나 쓸 수 있어서 그대로 innerHTML 에 넣지 않는다
+  const escLb = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  const numLb = v => (Number.isFinite(Number(v)) ? Number(v) : 0);
 
   listEl.innerHTML = `
     <table class="lb-table">
       <thead><tr><th>순위</th><th>닉네임</th><th>정답</th><th>오답</th><th>정확도</th><th>날짜</th></tr></thead>
       <tbody>${rows.map((r, i) => {
-        const total = (r.correct||0) + (r.wrong||0);
-        const acc = total > 0 ? Math.round(r.correct/total*100) : 0;
+        const correct = numLb(r.correct), wrong = numLb(r.wrong);
+        const total = correct + wrong;
+        const acc = total > 0 ? Math.round(correct/total*100) : 0;
         const medal = i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : '';
         return `<tr class="${i<3?'lb-top3':''}">
           <td>${medal || (i+1)}</td>
-          <td style="font-weight:600">${r.nickname||'—'}</td>
-          <td style="color:#4caf50">${r.correct||0}</td>
-          <td style="color:#f44336">${r.wrong||0}</td>
+          <td style="font-weight:600">${escLb(r.nickname||'—')}</td>
+          <td style="color:#4caf50">${correct}</td>
+          <td style="color:#f44336">${wrong}</td>
           <td>${acc}%</td>
           <td style="color:#666;font-size:0.78rem">${fmtDate(r.ts)}</td>
         </tr>`;
@@ -3120,10 +3124,14 @@ loadAllData();
   };
 
   window._lbGet = async (mode, diff) => {
-    // 복합 인덱스 없이 mode만 Firestore 필터링, difficulty·정렬은 클라이언트에서 처리
+    // 보안 규칙이 한 번에 200개까지만 읽게 한다(request.query.limit <= 200).
+    // 정답 많은 순 200개를 받으려면 복합 인덱스(mode 오름차순 + correct 내림차순)가 필요하다.
+    // 인덱스가 없으면 이 쿼리가 실패하고 화면은 이 기기 기록(localStorage)으로 넘어간다
     const snap = await getDocs(query(
       collection(firestoreDb, 'leaderboard'),
-      where('mode', '==', mode)
+      where('mode', '==', mode),
+      orderBy('correct', 'desc'),
+      limit(200)
     ));
     let rows = snap.docs.map(d => d.data());
     if (diff) rows = rows.filter(r => r.difficulty === diff);

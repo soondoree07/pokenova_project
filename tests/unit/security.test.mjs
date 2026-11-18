@@ -53,3 +53,43 @@ describe('옛 주소 이동 (vercel.json)', () => {
     expect(toNew.some((r) => r.source === '/:path*')).toBe(true)
   })
 })
+
+// quiz.html 이 Firestore 에 쓰는 객체의 키 = 규칙이 허용하는 키 (2026-11-18 리뷰)
+describe('보안 규칙 ↔ 퀴즈가 쓰는 모양', () => {
+  const rules = readText('firebase/firestore.rules')
+  const quiz = readText('quiz.html')
+  const keysOf = (literal) =>
+    literal.replace(/\/\/.*$/gm, '').split(',').map((s) => s.trim().split(/[\s:]/)[0]).filter(Boolean).sort()
+  const allowed = (fn) => {
+    const body = rules.match(new RegExp(`function ${fn}\\(d\\) \\{[\\s\\S]*?hasOnly\\(\\[([^\\]]*)\\]`))[1]
+    return body.split(',').map((s) => s.trim().replace(/'/g, '')).sort()
+  }
+  const cases = {
+    validSession: /const session = \{([^}]*)\}/,
+    validReport: /const report = \{([^}]*)\}/,
+    validLeaderboard: /const entry = \{([^}]*)\}/,
+  }
+
+  for (const [fn, re] of Object.entries(cases)) {
+    it(`${fn}: 키가 quiz.html 과 정확히 같다`, () => {
+      expect(allowed(fn)).toEqual(keysOf(quiz.match(re)[1]))
+    })
+  }
+
+  it('공개 create 는 전부 모양 검사를 거친다', () => {
+    expect(rules).not.toMatch(/allow create: if true/)
+    expect(rules).toMatch(/d\.nickname\.matches\('\^\[a-zA-Z0-9가-힣\]\{1,10\}\$'\)/)
+    expect(rules).toMatch(/str\(d\.memo, 300\)/)
+    expect(rules).toMatch(/count\(d\.correct, 2000\)/)
+    expect(rules).toMatch(/function stamp\(v\) \{ return v is int/)
+  })
+
+  it('순위표 목록은 200개까지만 읽고, 퀴즈 쿼리도 200개로 자른다', () => {
+    expect(rules).toMatch(/allow list: if isAdmin\(\) \|\| request\.query\.limit <= 200/)
+    expect(quiz).toMatch(/collection\(firestoreDb, 'leaderboard'\),[\s\S]{0,120}limit\(200\)/)
+  })
+
+  it('신고 메모 입력도 300자로 막는다', () => {
+    expect(quiz).toMatch(/id="report-memo"[^>]*maxlength="300"/)
+  })
+})
