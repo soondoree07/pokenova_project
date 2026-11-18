@@ -4,7 +4,7 @@ project: P001
 type: 수정
 branch: claude/1118-pokenova-security
 port: 4103
-status: 진행 중
+status: 완료
 created: 2026-11-18
 ---
 
