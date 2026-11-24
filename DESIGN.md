@@ -468,7 +468,7 @@ components:
 - 코드는 `rem` 을 쓴다(`0.82rem` 등). 여기서는 `px` 로 바꿔 적었다(드코가 `em` · `rem` 을 못 읽음)
 - 입력칸은 `input` 스타일 16px(아이폰 확대 방지, DESIGN_RULES). 지금 16px 아래인 칸은 맨 아래 표에
 - 버튼 글씨는 14px 아래로 내리지 않는다(DESIGN_RULES). 지금 메뉴 버튼 13.12px · 칩 12.48px 은 규칙에 못 미침
-- 버튼 · 입력칸은 `font-family: inherit` 가 없는 곳이 많아 시스템 글꼴(윈도우 Arial 등)로 그려진다. 새로 만들 땐 `button, input, textarea { font: inherit; }`
+- 버튼 · 입력칸은 `font-family: inherit` 가 없는 곳이 많아 브라우저 기본 글꼴로 그려진다. 새로 만들 땐 `button, input, textarea { font: inherit; }`
 - 한글 줄바꿈: `word-break: keep-all` 은 포켓몬 카드 이름 · 특성 창 이름에만 있다. 새 화면은 `body` 에 둔다(DESIGN_RULES)
 
 ## Layout
@@ -482,7 +482,7 @@ components:
 
 층은 바탕 색 차이(`surface` → `surface-muted` → `surface-raised`)와 `outline` 선으로 나눈다. 그림자는 떠 있는 것에만: 창(`0 20px 60px` 검정 80%), 폰 메뉴(`0 8px 24px` 검정 50%), 토스트. 창 뒤는 검정 75% 막과 흐림 4px(포켓몬 도감 기준).
 
-창은 페이지마다 다르다: 기술 상세 창은 막 70% · 흐림 없음 · 그림자 없음, 배틀팀 창은 막 88% · 흐림 8px · 그림자 `0 30px 80px` 검정 90%, 오늘의 포켓몬 창은 막 82% · 흐림 6px. 새로 만들 땐 포켓몬 도감 값으로.
+창은 페이지마다 다르다: 기술 상세 창은 막 70% · 흐림 없음 · 그림자 없음, 배틀팀 창은 막 88% · 흐림 8px · 그림자 `0 30px 80px` 검정 90%, 오늘의 포켓몬 교체 창은 막 82% · 흐림 6px, 컬렉션 포켓몬 창은 막 75%. 새로 만들 땐 포켓몬 도감 값으로.
 
 ## Shapes
 
@@ -492,7 +492,7 @@ components:
 
 ## Motion & Micro-interaction
 
-- 마우스 올림 · 눌림 `state-change`(코드 `.15s`, 곡선 지정 없음 = ease), 탭 · 칸 바뀜 `selection`(`.2s`), 창 열림 `surface-enter`(포켓몬 도감 `modalIn .2s ease`, 작게 + 아래에서 커지며 나타남). 기술 · 배틀팀 창은 열림 움직임 없음, 오늘의 포켓몬 창은 `reveal` 곡선 .35s
+- 마우스 올림 · 눌림 `state-change`(코드 `.15s`, 곡선 지정 없음 = ease), 탭 · 칸 바뀜 `selection`(`.2s`), 창 열림 `surface-enter`(포켓몬 도감 `modalIn .2s ease`, 작게 + 아래에서 커지며 나타남). 기술 · 배틀팀 창은 열림 움직임 없음, 오늘의 포켓몬 컬렉션 포켓몬 창은 `reveal` 곡선 .35s(교체 창은 움직임 없음)
 - 창 닫힘 · 화면 전환 움직임 없음(`surface-exit` · `screen-enter` · `screen-exit` 은 틀 값). 페이지가 따로따로라 화면 전환이 없다
 - `reveal`: 오늘의 포켓몬 카드가 튀어나오는 움직임(살짝 넘쳤다 돌아오는 곡선). `toast-enter`: 토스트가 아래에서 튀어 오름
 - 포켓몬 카드에 마우스를 올리면 4px 위로 뜨고 둘레가 빨강
@@ -546,7 +546,7 @@ components:
 | 빨강 글자 | `#e53935`(내 기록 점수 · 꽉 찬 개수 배지 · 오류 문구, 카드 위 4.36:1) | `primary-text` `#FF6B6B` |
 | 흰 글자 on 주황 | "신고하기" 버튼 `#fff` on `#ff9800` 2.16:1 | 고친다면 글자를 검정으로(`#000` on `#ff9800` 9.7:1) |
 | 16px 아래 입력칸 | 오류 신고 메모 14.08px(폰에서도), 기술 · 아이템 PC 검색칸 14.4px, 아이템 신고 검색칸 14.4px, 포켓몬 도감 PC 검색칸 15px | `input` 16px |
-| 버튼 · 입력칸 글꼴 | `font-family: inherit` 가 없어 시스템 글꼴(Arial 등) | 본문과 같은 글꼴 |
+| 버튼 · 입력칸 글꼴 | `font-family: inherit` 가 없어 브라우저 기본 글꼴 | 본문과 같은 글꼴 |
 | 창 | 페이지마다 바탕 · 너비(480 · 680 · 640px) · 모서리 · 막 · 움직임이 다름(Elevation 참고) | `dialog` 하나 |
 | 작은 버튼 높이 · 글씨 | "전체 해제" 28px · PC 칩 27~30px, 글씨 12~13px | 36px · 14px(DESIGN_RULES) |
 | 폰 창 | 가운데 뜨는 창 | DESIGN_RULES 는 폰에서 아래 시트 |
