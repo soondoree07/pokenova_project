@@ -435,7 +435,7 @@ components:
 
 화면은 페이지마다 인라인 `<style>` 로 따로 쓰여 있고 CSS 변수가 없다. 이 파일은 그 값들을 모아 하나로 정한 기준이다. 비슷한 값이 섞여 있던 곳은 하나로 묶었고(아래 Colors), 지금 코드와 다른 값은 맨 아래 "지금 코드와 다른 곳"에 모았다.
 
-`admin.html`(관리자)은 남색 바탕 · 노랑 강조로 따로 만든 화면이라 이 기준 밖이다(배포 화면 아님).
+`admin.html`(관리자)은 남색 바탕 · 노랑 강조로 따로 만든 화면이라 이 기준 밖이다(배포되어 `/admin` 으로 열리지만 관리자만 씀).
 
 ## Colors
 
@@ -447,39 +447,42 @@ components:
 - **warning** `#FF9800`: 오류 신고(버튼 · 고른 신고 유형 · 숨겨진 특성 표시). **success**: 저장 완료 글자 · 놓아주기
 - **error**: 사이트에 따로 된 오류 색이 없어 `primary` 와 같은 빨강. 위험 버튼(초기화 · 지우기)은 평소 회색, 마우스를 올리면 빨강
 - **surface** 페이지 바탕, **surface-muted** 헤더 · 카드 · 창, **surface-raised** 메뉴 버튼 · 칩 · 개수 배지 · 창 안 항목, **surface-sunken** 입력칸 · 오늘의 포켓몬 안쪽 칸 · 배틀팀 슬롯
-  - 코드에는 `#1a1a1a` · `#1c1c1c` · `#1e1e1e` 와 `#0d0d0d` · `#0f0f0f` · `#111` 이 섞여 있다. 각각 `surface-raised` · `surface-sunken` 으로 묶었다
+  - 코드에는 `#1a1a1a` · `#1c1c1c` · `#1e1e1e` 와 `#0d0d0d` · `#0f0f0f` · `#111` 이 섞여 있다. 각각 `surface-raised` · `surface-sunken` 으로 묶었다. 기술 상세 창 바탕 `#181818` · 오늘의 포켓몬 창 `#111` 은 `surface-muted` 로
 - **on-surface** 본문 글자, **on-surface-variant** 메뉴 버튼 글자(`#bbb`), **on-surface-muted** 라벨 · 개수 · 영어 이름
 - **outline** 카드 · 헤더 · 창 둘레, **outline-strong** 메뉴 버튼 · 칩 · 기술 도감 검색칸 테두리
 - **primary-text · error-text** `#FF6B6B`: 어두운 바탕 위 빨강 글자. `#E53935` 는 카드 바탕(`#141414`) 위 4.36:1 로 모자라 코드에 있던 밝은 빨강(거다이 전용기 이름)을 씀(카드 위 6.6:1)
 - **inverse-surface**: 뒤집힌 색이 아니라 토스트 바탕(오늘의 포켓몬 토스트 `#1e1e1e`). 툴팁도 같은 색으로
 - **chart-1~6**: 그래프 없음(틀 값). **chart-grid** 는 능력치 막대 바탕(`#252525`)
-- **타입 색 · 지역 배지 색**은 게임 데이터 색이라 토큰에 넣지 않았다. 다만 포켓몬 도감(`#EE8130` 불꽃 등)과 기술 · 오늘의 포켓몬(`#e53935` 불꽃 등)이 서로 다른 18색을 쓴다. 맞출 때는 포켓몬 도감 쪽 하나로
+- **타입 색 · 지역 배지 색**은 게임 데이터 색이라 토큰에 넣지 않았다. 다만 타입 18색이 세 벌이다: 포켓몬 도감 · 배틀팀(불꽃 `#EE8130`), 기술 도감(불꽃 `#e53935`), 오늘의 포켓몬(불꽃 `#F08030`). 맞출 때는 포켓몬 도감 쪽 하나로
 - 글자와 바탕 대비 4.5:1 이상(본문), 3:1 이상(큰 제목 · 아이콘)
 
 ## Typography
 
 | 글꼴 | 출처 · 라이선스 | 쓰는 곳 | 파일 |
 |---|---|---|---|
-| Noto Sans KR | Google Fonts (SIL OFL 1.1, 상업 · 웹 사용 가능) | 한글 · 영어 전체 | 파일 없음. `pokedex` · `index` · `entry` 가 Google Fonts 주소(`family=Noto+Sans+KR:wght@400;500;700;900`)로 부른다 |
+| Noto Sans KR | Google Fonts (SIL OFL 1.1, 상업 · 웹 사용 가능) | 한글 · 영어 전체 | 파일 없음. `pokedex` · `index` · `entry` 가 Google Fonts 주소(`family=Noto+Sans+KR:wght@400;500;700;900`)로 부른다. 600 · 800 굵기는 불러오지 않아 브라우저가 가까운 굵기로 그린다 |
 | Segoe UI | 윈도우 기본 글꼴(Microsoft, 내려받아 싣지 않음) | 두 번째 글꼴 | 없음. `movedex` · `itemdex` · `today` · `record` 는 Segoe UI 가 먼저이고 Noto Sans KR 을 부르지 않아 맥 · 폰에서는 기기 기본 글꼴로 보인다 |
 
 - 공개 저장소라 Fontshare Closed Source 글꼴(Satoshi 등) 파일은 올리지 않는다. 쓰게 되면 Fontshare 웹 주소로(DESIGN_SYSTEM.md "Fontshare")
 - 굵기는 400 · 500 · 600 · 700 · 900. 이름 · 제목은 900, 버튼 · 칩 600~700
 - 코드는 `rem` 을 쓴다(`0.82rem` 등). 여기서는 `px` 로 바꿔 적었다(드코가 `em` · `rem` 을 못 읽음)
-- 입력칸은 `input` 스타일 16px(아이폰 확대 방지, DESIGN_RULES). PC 검색칸은 지금 15px
+- 입력칸은 `input` 스타일 16px(아이폰 확대 방지, DESIGN_RULES). 지금 16px 아래인 칸은 맨 아래 표에
 - 버튼 글씨는 14px 아래로 내리지 않는다(DESIGN_RULES). 지금 메뉴 버튼 13.12px · 칩 12.48px 은 규칙에 못 미침
-- 한글 줄바꿈: `word-break: keep-all` 은 포켓몬 카드 이름에만 있다. 새 화면은 `body` 에 둔다(DESIGN_RULES)
+- 버튼 · 입력칸은 `font-family: inherit` 가 없는 곳이 많아 시스템 글꼴(윈도우 Arial 등)로 그려진다. 새로 만들 땐 `button, input, textarea { font: inherit; }`
+- 한글 줄바꿈: `word-break: keep-all` 은 포켓몬 카드 이름 · 특성 창 이름에만 있다. 새 화면은 `body` 에 둔다(DESIGN_RULES)
 
 ## Layout
 
 - 본문 최대 폭: 포켓몬 도감 그리드 1400px, 헤더 · 기술 · 도구 도감 1200px, 배틀팀 960px, 오늘의 포켓몬 520px, 바닥글 700px
 - 포켓몬 카드 그리드는 칸 최소 130px(폰 100px · 480px 아래 88px), 간격 12px(폰 8px). 기술 · 도구 카드는 칸 최소 300px, 폰은 한 줄
-- 간격은 `spacing` 값만 쓴다. 헤더 좌우 `lg`(폰 12px), 카드 사이 12px, 절 사이 `xl`
-- 끊는 폭: 768px(헤더 검색칸이 두 번째 줄로), 600px(햄버거 메뉴), 480px · 380px(글자 · 칸 줄임)
+- 간격 단계는 틀 값(4 · 8 · 16 · 24 · 32 · 48). 코드는 10 · 12 · 14px 간격도 많이 쓴다. 새로 만들 땐 단계 값으로. 헤더 좌우 `lg`(폰 12px), 카드 사이 12px, 절 사이 `xl`
+- 끊는 폭(포켓몬 도감 기준): 768px(헤더 검색칸이 두 번째 줄로), 600px(햄버거 메뉴), 480px · 380px(글자 · 칸 줄임). 배틀팀은 700 · 460 · 360px, 오늘의 포켓몬 햄버거는 640px
 
 ## Elevation & Depth
 
-층은 바탕 색 차이(`surface` → `surface-muted` → `surface-raised`)와 `outline` 선으로 나눈다. 그림자는 떠 있는 것에만: 창(`0 20px 60px` 검정 80%), 폰 메뉴(`0 8px 24px` 검정 50%), 토스트. 창 뒤는 검정 75% 막과 흐림 4px.
+층은 바탕 색 차이(`surface` → `surface-muted` → `surface-raised`)와 `outline` 선으로 나눈다. 그림자는 떠 있는 것에만: 창(`0 20px 60px` 검정 80%), 폰 메뉴(`0 8px 24px` 검정 50%), 토스트. 창 뒤는 검정 75% 막과 흐림 4px(포켓몬 도감 기준).
+
+창은 페이지마다 다르다: 기술 상세 창은 막 70% · 흐림 없음 · 그림자 없음, 배틀팀 창은 막 88% · 흐림 8px · 그림자 `0 30px 80px` 검정 90%, 오늘의 포켓몬 창은 막 82% · 흐림 6px. 새로 만들 땐 포켓몬 도감 값으로.
 
 ## Shapes
 
@@ -489,7 +492,7 @@ components:
 
 ## Motion & Micro-interaction
 
-- 마우스 올림 · 눌림 `state-change`(코드 `.15s`, 곡선 지정 없음 = ease), 탭 · 칸 바뀜 `selection`(`.2s`), 창 열림 `surface-enter`(`modalIn .2s ease`, 작게 + 아래에서 커지며 나타남)
+- 마우스 올림 · 눌림 `state-change`(코드 `.15s`, 곡선 지정 없음 = ease), 탭 · 칸 바뀜 `selection`(`.2s`), 창 열림 `surface-enter`(포켓몬 도감 `modalIn .2s ease`, 작게 + 아래에서 커지며 나타남). 기술 · 배틀팀 창은 열림 움직임 없음, 오늘의 포켓몬 창은 `reveal` 곡선 .35s
 - 창 닫힘 · 화면 전환 움직임 없음(`surface-exit` · `screen-enter` · `screen-exit` 은 틀 값). 페이지가 따로따로라 화면 전환이 없다
 - `reveal`: 오늘의 포켓몬 카드가 튀어나오는 움직임(살짝 넘쳤다 돌아오는 곡선). `toast-enter`: 토스트가 아래에서 튀어 오름
 - 포켓몬 카드에 마우스를 올리면 4px 위로 뜨고 둘레가 빨강
@@ -514,8 +517,8 @@ components:
 
 | 묶음 | 컴포넌트 | 쓰는 곳 |
 |---|---|---|
-| 버튼 | `button-primary`(+ `-pressed` · `-disabled`) · `button-secondary` · `button-ghost` · `button-danger` · `button-small` · `button-icon` · `fab` | 주 버튼 = 배틀팀 "저장하기". secondary = 헤더 메뉴 버튼(`.site-nav-btn`). ghost = "전체 초기화" · 창 "취소". small = "전체 해제"(`.btn-clear-section`). icon = 햄버거. 채운 위험 버튼 · FAB 없음(틀 값) |
-| 입력 | `input` · `input-error` · `textarea` · `search-field` · `select` · `checkbox` · `radio` · `switch-on` · `switch-off` · `slider` | search-field = 포켓몬 도감 헤더 검색칸 · 배틀팀 창 검색칸. textarea = 오류 신고 메모. 선택 상자 · 체크 · 스위치 · 슬라이더 없음(틀 값), 입력칸 오류 문구 없음 |
+| 버튼 | `button-primary`(+ `-pressed` · `-disabled`) · `button-secondary` · `button-ghost` · `button-danger` · `button-small` · `button-icon` · `fab` | 주 버튼 = 배틀팀 "저장하기". secondary = 헤더 메뉴 버튼(`.site-nav-btn`). ghost = "전체 초기화" · 창 "취소". small = "전체 해제"(`.btn-clear-section`). icon = 햄버거(지금 40×32, 오늘의 포켓몬은 44×44 테두리 없음). 채운 위험 버튼 · FAB 없음(틀 값) |
+| 입력 | `input` · `input-error` · `textarea` · `search-field` · `select` · `checkbox` · `radio` · `switch-on` · `switch-off` · `slider` | search-field = 포켓몬 도감 헤더 검색칸 · 배틀팀 창 검색칸. textarea = 오류 신고 메모. input = 아이템 신고 창 도구 검색칸(`.report-item-search`)에 가깝고 높이 · 여백은 틀 값. 기술 · 아이템 도감 검색칸은 지금 `#1a1a1a` 바탕 · 8px 모서리 · 높이 34px(폰 44px). 선택 상자 · 체크 · 스위치 · 슬라이더 없음(틀 값), 입력칸 오류 문구 없음 |
 | 표시 | `chip` · `chip-selected` · `badge` · `avatar` · `tooltip` · `progress-bar` · `progress-track` · `skeleton` · `divider` | chip = 분류 · 세대 · 타입 거르기(`.filter-btn` · `.chip`). 세대 칩은 고르면 파랑(`#2563eb`), 타입 칩은 그 타입 색. badge = 개수(`0 / 6` · 컬렉션 `0마리`). progress = 오늘의 포켓몬 능력치 막대(채움 색은 능력치마다 다름). skeleton = 도구 그림 자리. 아바타 · 툴팁 없음(틀 값) |
 | 묶음 | `card` · `card-muted` · `list-item` · `empty-state` · `stat` | card = 포켓몬 카드. card-muted = 창 안 특성 줄 · 폼 카드. list-item = 내 기록 게임 줄. empty-state = "검색 결과 없음" · 기록 없음. stat = 내 기록 최고 점수 카드(점수는 빨강) |
 | 이동 | `top-app-bar` · `bottom-tab-bar` · `bottom-tab-item-active` · `tabs` · `tab-active` · `segmented-control` · `segmented-item-active` · `pagination` | top-app-bar = 헤더(로고 · 검색 · 메뉴 버튼, 600px 아래 햄버거). 오늘의 포켓몬 · 내 기록은 52px 고정 헤더(반투명 + 흐림). tabs = 배틀팀1~3 탭(고르면 빨강 둘레). 하단 탭 · 나눔 버튼 · 쪽 번호 없음(틀 값) |
@@ -539,7 +542,12 @@ components:
 | 무엇 | 지금 코드 | 이 파일 |
 |---|---|---|
 | 흰 글자 on 빨강 버튼 대비 | 4.23:1 (`#fff` on `#e53935`, 4.5:1 미달) | 값은 그대로. 고친다면 버튼 바탕을 `primary-pressed` 쪽으로 |
-| 흐린 글자 | `#555` · `#444` · `#666`(빈 화면 · 바닥글 · 초기화 버튼 · 탭, 바탕 대비 2.3~3.5:1) | `on-surface-muted` `#888`(5.6:1) |
+| 흐린 글자 | `#555` · `#444` · `#666`(빈 화면 · 바닥글 · 초기화 버튼 · 탭, 바탕 대비 2.0~3.5:1, 카드 위 `#444` 는 1.9:1) | `on-surface-muted` `#888`(5.6:1) |
+| 빨강 글자 | `#e53935`(내 기록 점수 · 꽉 찬 개수 배지 · 오류 문구, 카드 위 4.36:1) | `primary-text` `#FF6B6B` |
+| 흰 글자 on 주황 | "신고하기" 버튼 `#fff` on `#ff9800` 2.16:1 | 고친다면 글자를 검정으로(`#000` on `#ff9800` 9.7:1) |
+| 16px 아래 입력칸 | 오류 신고 메모 14.08px(폰에서도), 기술 · 아이템 PC 검색칸 14.4px, 아이템 신고 검색칸 14.4px, 포켓몬 도감 PC 검색칸 15px | `input` 16px |
+| 버튼 · 입력칸 글꼴 | `font-family: inherit` 가 없어 시스템 글꼴(Arial 등) | 본문과 같은 글꼴 |
+| 창 | 페이지마다 바탕 · 너비(480 · 680 · 640px) · 모서리 · 막 · 움직임이 다름(Elevation 참고) | `dialog` 하나 |
 | 작은 버튼 높이 · 글씨 | "전체 해제" 28px · PC 칩 27~30px, 글씨 12~13px | 36px · 14px(DESIGN_RULES) |
 | 폰 창 | 가운데 뜨는 창 | DESIGN_RULES 는 폰에서 아래 시트 |
 | 테두리 대비 | `outline-strong` `#333`(바탕 대비 1.6:1, 3:1 미달) | 값은 그대로. 입력칸 테두리를 고칠 때 `#555` 이상 |
