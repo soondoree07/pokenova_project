@@ -4,7 +4,7 @@ project: P001
 type: 문서
 branch: claude/1124-design-system
 port: 4102
-status: 진행 중
+status: 완료
 created: 2026-11-24
 ---
 
