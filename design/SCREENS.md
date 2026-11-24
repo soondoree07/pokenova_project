@@ -1,4 +1,4 @@
-띄우는 명령: node tests/serve.mjs 4102
+띄우는 명령: node tests/serve.mjs 4201
 
 <!-- P001 포케노바 화면 목록(2026-11-24). 드코(P024)가 이 표를 읽어 화면을 가져온다.
      정적 사이트라 `npm run dev` 가 없다(루트 package.json 을 만들지 않는 프로젝트, CLAUDE.md). 위 명령이 배포처럼 /pokedex → pokedex.html 로 보여 준다.
